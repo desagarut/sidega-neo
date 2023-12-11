@@ -114,7 +114,7 @@ class Beranda extends Admin_Controller {
         $data['data_ktp'] = $this->header_model->rekap_ktp();
 	
 		$this->set_minsidebar(1);
-		$this->render('home/desa', $data);
+		$this->render('home/beranda', $data);
 	}
 	
 	public function dialog_pengaturan()

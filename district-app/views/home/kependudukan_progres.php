@@ -22,8 +22,8 @@
               <div class="my-0 text-muted small">Elektronik</div>
             </div>
             <div class="col-auto">
-              <small><?= $d->ktp_el_ya ?>/<?= $d->penduduk_total ?></small><br/>
-              <strong><?= $d->persentase_ktp_el ?>%</strong>
+              <small><?= $d->ktp_el_ya ?>/<?= $d->penduduk_total ?></small><br />
+              <strong><?= round($d->persentase_ktp_el, 2) ?>%</strong>
             </div>
             <div class="col-3">
               <div class="progress" style="height: 4px;">
@@ -37,7 +37,8 @@
               <div class="my-0 text-muted small">Penduduk</div>
             </div>
             <div class="col-auto">
-              <strong>+75%</strong>
+              <small><?= $d->foto_y ?>/<?= $d->penduduk_total ?></small><br />
+              <strong><?= round($d->persentase_foto, 2) ?>%</strong>
             </div>
             <div class="col-3">
               <div class="progress" style="height: 4px;">
@@ -65,7 +66,8 @@
               <div class="my-0 text-muted small">Rumah</div>
             </div>
             <div class="col-auto">
-              <strong><?= $d->persentase_lokasi ?>%</strong>
+              <small><?= $d->lokasi_y ?>/<?= $d->penduduk_total ?></small><br />
+              <strong><?= round($d->persentase_lokasi, 2) ?>%</strong>
             </div>
             <div class="col-3">
               <div class="progress" style="height: 4px;">

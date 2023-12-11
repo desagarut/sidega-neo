@@ -58,7 +58,7 @@ switch (ENVIRONMENT) {
 
 /*
  *---------------------------------------------------------------
- * DESA DIRECTORY NAME
+ * DATA INSTANSI DIRECTORY NAME
  *---------------------------------------------------------------
  *
  * This variable must contain the name of your "instansi" directory.

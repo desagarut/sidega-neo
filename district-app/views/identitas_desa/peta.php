@@ -32,9 +32,9 @@
         kantorDesa = new google.maps.Marker({
             position: center,
             map: PetaDesa,
-           // title: 'Kantor <?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?>'.true,
-           // icon: '<?= gambar_desa($main['logo']); ?>',
-           content: "Tampilan Info Window",
+            // title: 'Kantor <?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?>'.true,
+            // icon: '<?= gambar_desa($main['logo']); ?>',
+            content: "Tampilan Info Window",
 
         });
 
@@ -61,7 +61,7 @@
             batasWilayah.setMap(PetaDesa)
 
             var infowindow = new google.maps.InfoWindow({
-                content: "<div class='media text-center'><img src='<?= gambar_desa($main['kantor_desa'], TRUE); ?>' width='140px' height='100px'><br/> <p>Kantor <?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?></p></div>"
+                content: "<div class='avatar avatar-xl'><img src='<?= gambar_desa($main['kantor_desa'], TRUE); ?>' class='avatar-img'><br/> <p><?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?></p></div>"
             });
             infowindow.open(PetaDesa, kantorDesa);
 
@@ -70,8 +70,8 @@
     }
 </script>
 
-<div class='row'>
-    <div class="pad">
+<div class="mb-4 align-items-center" style="position: relative;">
+    <div class="map-box" style="height:450px; overflow:hidden">
         <div id="peta_wilayah_desa" style="height: 300px"></div>
     </div>
 </div>

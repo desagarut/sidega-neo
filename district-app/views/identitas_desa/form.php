@@ -1,66 +1,68 @@
-<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
-	<section class="content-header">
-		<h1>Identitas <?= $desa; ?></h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url('identitas_desa'); ?>"></i> Identitas <?= $desa; ?></a></li>
-			<li class="active">Ubah Identitas <?= $desa; ?></li>
-		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<form id="mainform" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal" id="validasi">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h2 class="h3 mb-4 page-title">Identitas <?= $desa; ?></h2>
+			</div>
+		</div>
+		<form id="mainform" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal" id="validasi">
+			<div class="row">
 				<div class="col-md-3">
-					<div class="box box-primary">
-						<div class="box-body box-profile">
-							<img class="profile-user-img img-responsive img-circle" src="<?= gambar_desa($main['logo']); ?>" alt="Logo">
-							<br/>
+					<div class="card">
+						<div class="card-body">
+							<div class="col-md-3 text-center mb-5">
+								<div class="avatar avatar-xl">
+									<img class="avatar-img rounded-circle" src="<?= gambar_desa($main['logo']); ?>" alt="Logo">
+								</div>
+							</div>
 							<p class="text-center text-bold">Lambang <?= $desa; ?></p>
 							<p class="text-muted text-center text-red">(Kosongkan, jika logo tidak berubah)</p>
-							<br/>
+							<br />
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" id="file_path" >
+								<input type="text" class="form-control" id="file_path">
 								<input type="file" class="hidden" id="file" name="logo">
 								<input type="hidden" name="old_logo" value="<?= $main['logo']; ?>">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-card" id="file_browser"><i class="fa fa-search"></i> Browse</button>
 								</span>
 							</div>
 						</div>
 					</div>
-					<div class="box box-primary">
-						<div class="box-body box-profile">
-							<img class="img-responsive" src="<?= gambar_desa($main['kantor_desa'], TRUE); ?>" alt="Kantor <?= $desa; ?>">
-							<br/>
+					<div class="card">
+						<div class="card-body">
+							<div class="avatar avatar-xl">
+								<img class="avatar-img" src="<?= gambar_desa($main['kantor_desa'], TRUE); ?>" alt="Kantor <?= $desa; ?>">
+							</div>
+							<br />
 							<p class="text-center text-bold">Kantor <?= $desa; ?></p>
 							<p class="text-muted text-center text-red">(Kosongkan, jika kantor <?= $desa; ?> tidak berubah)</p>
-							<br/>
+							<br />
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" id="file_path2" >
+								<input type="text" class="form-control" id="file_path2">
 								<input type="file" class="hidden" id="file2" name="kantor_desa">
 								<input type="hidden" name="old_kantor_desa" value="<?= $main['kantor_desa']; ?>">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-box" id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-card" id="file_browser2"><i class="fa fa-search"></i> Browse</button>
 								</span>
 							</div>
 						</div>
 					</div>
-					<div class="box box-primary">
-						<div class="box-body box-profile">
-						<iframe height="200px" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $main["video"]; ?>" title="Profile Desa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<br/>
+					<div class="card card-primary">
+						<div class="card-body card-profile">
+							<iframe height="200px" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $main["video"]; ?>" title="Profile Desa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<br />
 							<p class="text-center text-bold">Channel Youtube <?= $desa; ?></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-primary">
-						<div class="box-header with-border">
-							<a href="<?= site_url('identitas_desa'); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data <?= $desa; ?>"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Data Identitas <?= $desa; ?></a>
+					<div class="card card-primary">
+						<div class="card-header with-border">
+							<a href="<?= site_url('identitas_desa'); ?>" class="btn btn-social btn-card btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data <?= $desa; ?>"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Data Identitas <?= $desa; ?></a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="col-sm-3 control-label" for="nama">Nama <?= $desa; ?></label>
 								<div class="col-sm-8">
@@ -70,7 +72,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label" for="kode_desa">Kode <?= $desa; ?></label>
 								<div class="col-sm-2">
-									<input id="kode_desa" name="kode_desa" class="form-control input-sm bilangan required"  minlength="10" maxlength="10" type="text" placeholder="Kode <?= $desa; ?>" value="<?= $main["kode_desa"]; ?>" ></input>
+									<input id="kode_desa" name="kode_desa" class="form-control input-sm bilangan required" minlength="10" maxlength="10" type="text" placeholder="Kode <?= $desa; ?>" value="<?= $main["kode_desa"]; ?>"></input>
 								</div>
 							</div>
 							<div class="form-group">
@@ -82,11 +84,11 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label" for="nama_kepala_desa">Kepala <?= $desa; ?></label>
 								<div class="col-sm-8">
-									<input id="nama_kepala_desa" name="nama_kepala_desa" class="form-control input-sm nama required" maxlength="50" type="text" placeholder="Kepala <?= $desa; ?>" value="<?= $main["nama_kepala_desa"]?>"></input>
+									<input id="nama_kepala_desa" name="nama_kepala_desa" class="form-control input-sm nama required" maxlength="50" type="text" placeholder="Kepala <?= $desa; ?>" value="<?= $main["nama_kepala_desa"] ?>"></input>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label" for="nip_kepala_desa">NIP Kepala <?=$desa; ?></label>
+								<label class="col-sm-3 control-label" for="nip_kepala_desa">NIP Kepala <?= $desa; ?></label>
 								<div class="col-sm-8">
 									<input id="nip_kepala_desa" name="nip_kepala_desa" class="form-control input-sm nomor_sk" maxlength="50" type="text" placeholder="NIP Kepala <?= $desa; ?>" value="<?= $main["nip_kepala_desa"]; ?>"></input>
 								</div>
@@ -100,7 +102,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label" for="email_desa">E-Mail <?= $desa; ?></label>
 								<div class="col-sm-8">
-									<input id="email_desa" name="email_desa" class="form-control input-sm email" maxlength="50" type="text" placeholder="E-Mail <?= $desa; ?>" value="<?= $main["email_desa"]?>"></input>
+									<input id="email_desa" name="email_desa" class="form-control input-sm email" maxlength="50" type="text" placeholder="E-Mail <?= $desa; ?>" value="<?= $main["email_desa"] ?>"></input>
 								</div>
 							</div>
 							<div class="form-group">
@@ -131,11 +133,11 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label" for="kode_kecamatan">Kode <?= $kecamatan; ?></label>
 								<div class="col-sm-2">
-									<input id="kode_kecamatan" name="kode_kecamatan" class="form-control input-sm bilangan required" type="text" minlength="6" maxlength="6" placeholder="Kode <?= $kecamatan; ?>" value="<?= $main['kode_kecamatan']; ?>" ></input>
+									<input id="kode_kecamatan" name="kode_kecamatan" class="form-control input-sm bilangan required" type="text" minlength="6" maxlength="6" placeholder="Kode <?= $kecamatan; ?>" value="<?= $main['kode_kecamatan']; ?>"></input>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label" for="nama_kecamatan">Nama <?= ucwords($this->setting->sebutan_camat)?></label>
+								<label class="col-sm-3 control-label" for="nama_kecamatan">Nama <?= ucwords($this->setting->sebutan_camat) ?></label>
 								<div class="col-sm-8">
 									<input id="nama_kepala_camat" name="nama_kepala_camat" class="form-control input-sm nama required" maxlength="50" type="text" placeholder="Nama <?= ucwords($this->setting->sebutan_camat); ?>" value="<?= $main["nama_kepala_camat"]; ?>"></input>
 								</div>
@@ -143,7 +145,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label" for="nip_kepala_camat">NIP <?= ucwords($this->setting->sebutan_camat); ?></label>
 								<div class="col-sm-4">
-									<input id="nip_kepala_camat" name="nip_kepala_camat" class="form-control input-sm nomor_sk" maxlength="50" type="text" placeholder="NIP <?= ucwords($this->setting->sebutan_camat)?>" value="<?= $main["nip_kepala_camat"]; ?>"></input>
+									<input id="nip_kepala_camat" name="nip_kepala_camat" class="form-control input-sm nomor_sk" maxlength="50" type="text" placeholder="NIP <?= ucwords($this->setting->sebutan_camat) ?>" value="<?= $main["nip_kepala_camat"]; ?>"></input>
 								</div>
 							</div>
 							<div class="form-group">
@@ -163,7 +165,7 @@
 								<div class="col-sm-4">
 									<select name="nama_propinsi" class="form-control select2 input-sm required" onchange="$('input[name=kode_propinsi]').val($(this).find(':selected').data('kode'));" style="width: 100%;">
 										<option value="">Pilih Provinsi</option>
-										<?php foreach ($list_provinsi AS $data): ?>
+										<?php foreach ($list_provinsi as $data) : ?>
 											<option value="<?= $data['nama']; ?>" data-kode="<?= $data['kode']; ?>" <?= selected(strtolower($main['nama_propinsi']), strtolower($data['nama'])); ?>><?= $data['nama']; ?></option>
 										<?php endforeach; ?>
 									</select>
@@ -260,13 +262,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='box-footer'>
-							<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-							<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+						<div class="card-footer">
+							<button type='reset' class='btn btn-social btn-card btn-danger btn-sm'><i class='fa fa-times'></i> Batal</button>
+							<button type='submit' class='btn btn-social btn-card btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
 						</div>
 					</div>
 				</div>
-			</form>
-		</div>
-	</section>
-</div>
+			</div>
+		</form>
+
+	</div>
+</main>

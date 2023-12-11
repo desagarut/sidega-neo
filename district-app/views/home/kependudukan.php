@@ -4,6 +4,71 @@ $penduduk_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
 $keluarga_laki = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_penduduk WHERE status_dasar = 1 and sex = 1 and kk_level = 1')->result_array()[0]['jumlah'];
 $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_penduduk WHERE status_dasar = 1 and sex = 2 and kk_level = 1')->result_array()[0]['jumlah'];
 ?>
+
+<div class="row">
+  <div class="col-md-4 mb-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col">
+            <?php foreach ($penduduk as $data) : ?>
+              <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
+            <?php endforeach; ?>
+            <p class="small text-dark mb-0">Penduduk</p>
+            <span class="badge badge-pill badge-success">L : <?= number_format($penduduk_laki, 0, '', '.') ?> </span>
+            <span class="badge badge-pill badge-warning"> P : <?= number_format($penduduk_perempuan, 0, '', '.') ?></span>
+            <a href="<?= site_url('penduduk/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+          </div>
+          <div class="col-auto">
+            <span class="fe fe-32 fe-user text-dark mb-0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col">
+            <?php foreach ($keluarga as $data) : ?>
+              <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
+            <?php endforeach; ?>
+            <p class="small text-dark mb-0">Keluarga</p>
+            <span class="badge badge-pill badge-success">L : <?= number_format($keluarga_laki, 0, '', '.') ?></span>
+            <span class="badge badge-pill badge-warning"> P : <?= number_format($keluarga_perempuan, 0, '', '.') ?></span>
+            <a href="<?= site_url('keluarga/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+          </div>
+          <div class="col-auto">
+            <span class="fe fe-32 fe-users text-dark mb-0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col">
+          <?php foreach ($rtm as $data) : ?>
+              <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
+            <?php endforeach; ?>
+            <p class="small text-dark mb-0">Rumah Tangga</p>
+            <span class="badge badge-pill badge-success">L : <?= number_format($rtm_laki, 0, '', '.') ?></span>
+            <span class="badge badge-pill badge-warning"> P : <?= number_format($rtm_perempuan, 0, '', '.') ?></span>
+            <a href="<?= site_url('rtm/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+          </div>
+          <div class="col-auto">
+            <span class="fe fe-32 fe-users text-dark mb-0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="pcoded-content">
   <div class="col-xl-4 col-md-12">
     <a href="<?= site_url('sid_core') ?>">
@@ -14,7 +79,7 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
               <?php foreach ($dusun as $data) : ?>
                 <h3><?= $data['jumlah'] ?></h3>
               <?php endforeach; ?>
-              <h6 class="text-muted m-b-0">Wilayah Dusun<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
+              <h6 class="text-dark m-b-0">Wilayah Dusun<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
             </div>
             <div class="col-6">
               <div id="seo-chart1" class="d-flex align-items-end"></div>
@@ -84,4 +149,4 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
       <a class="btn btn-outline-primary" href="<?= site_url('gis') ?>"> <i class="fa fa-gift"></i> Maps </a>
     </div>
   </div>
-</div>
+</div>-->
