@@ -1,5 +1,5 @@
-<div class="box box-primary">
-	<div class="box-body box-profile">
+<div class="card shadow">
+	<div class="card-body">
 		<img class="penduduk profile-user-img img-responsive img-circle" id="foto" src="<?= AmbilFoto($foto, '', $id_sex); ?>" alt="Foto">
 		<br/>
 		<div class="input-group input-group-sm text-center">

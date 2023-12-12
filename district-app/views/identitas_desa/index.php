@@ -31,42 +31,38 @@
     <div class="row justify-content-center">
       <div class="col-12">
         <!-- <h2>Section title</h2> -->
-        <h2 class="h5 page-title">Identitas Instansi</h2>
-        <p class="text-muted">This primitive is meant to make it easy to display both user-centric or activity-centric actions in your app. Sometimes it makes sense to even blend both in a single timeline, which works perfectly.</p>
+        <h2 class="h5 page-title">Identitas <?= $desa; ?></h2>
+        <p class="text-muted">Gambaran spesifik, ringkas dan mendalam tentang profil <?= $desa; ?> yang menjadi pembeda berdasarkan karakteristik wilayah, demografi, topologi dan ciri khas lainnya. </p>
         <div class="row">
           <form id="mainform" name="mainform" action="" method="post">
-            <div class="box box-info">
-              <div class="box-header with-border">
-                <div class="col-md-12">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <?php $this->load->view('identitas_desa/peta.php'); ?><br />
-                      <div class="pull-right">
-                        <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                          <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-social btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Data"><i class="fa fa-edit"></i> Ubah Data
-                            <?= $desa; ?>
-                          </a> <a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-social btn-box btn-info btn-sm" title="Ubah Lokasi Kantor Desa"><i class='fa fa-map-marker'></i> Lokasi Kantor
-                            <?= $desa; ?>
-                          </a>
-                          <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>-->
-                          <a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-primary btn-sm" title="Ubah Wilayah Desa"><i class='fa fa-google'></i> Peta Google </a>
-                          <a href="<?= site_url('identitas_desa/maps_openstreet/wilayah'); ?>" class="btn btn-social btn-box bg-blue btn-sm" title="Ubah Wilayah Desa"><i class='fa fa-map'></i> Peta Openstreet</a>
-                        <?php endif; ?>
-                      </div>
-
-                    </div>
-                    <div class="col-md-6">
-                      <?php $this->load->view('identitas_desa/video.php'); ?><br />
-                    </div>
+            <div class="card">
+              <div class="card-header with-border">
+                <div class="row">
+                  <div class="col-md-6">
+                    <?php $this->load->view('identitas_desa/peta.php'); ?><br />
+                  </div>
+                  <div class="col-md-6">
+                    <?php $this->load->view('identitas_desa/video.php'); ?><br />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <?php if ($this->CI->cek_hak_akses('h')) : ?>
+                      <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-sm mb-2 btn-warning" title="Ubah Data"><i class="fe fe-edit fe-16 mr-2"></i> Ubah Data</a>
+                      <a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-sm mb-2 btn-info" title="Ubah Lokasi Kantor Desa"><i class="fe fe-map-pin fe-16 mr-2 text-light"></i> Lokasi Kantor</a>
+                      <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>-->
+                      <a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-sm mb-2 btn-primary" title="Ubah Wilayah Desa"><i class="fe fe-map fe-16 mr-2 text-danger"></i> Peta Google </a>
+                      <a href="<?= site_url('identitas_desa/maps_openstreet/wilayah'); ?>" class="btn btn-sm mb-2 btn-secondary" title="Ubah Wilayah Desa"><i class="fe fe-map fe-16 mr-2 text-light"></i> Peta OSM</a>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>
-              <div class="box-body">
+              <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-bordered table-striped table-hover tabel-rincian">
+                  <table class="table">
                     <tbody>
                       <tr>
-                        <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
+                        <th colspan="3" class="bg-info text-muted"><strong>
                             <?= strtoupper($desa); ?>
                           </strong></th>
                       </tr>
@@ -125,7 +121,7 @@
                         <td><?= $main['website']; ?></td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
+                        <th colspan="3" class="bg-info text-muted"><strong>
                             <?= strtoupper($kecamatan); ?>
                           </strong></th>
                       </tr>
@@ -154,7 +150,7 @@
                         <td><?= $main['nip_kepala_camat']; ?></td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
+                        <th colspan="3" class="bg-info text-muted"><strong>
                             <?= strtoupper($kabupaten); ?>
                           </strong></th>
                       </tr>
@@ -171,7 +167,7 @@
                         <td><?= kode_wilayah($main['kode_kabupaten']); ?></td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
+                        <th colspan="3" class="bg-info text-muted"><strong>
                             PROVINSI</strong></th>
                       </tr>
                       <tr>
@@ -185,7 +181,7 @@
                         <td><?= kode_wilayah($main['kode_propinsi']); ?></td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
+                        <th colspan="3" class="bg-info text-muted"><strong>
                             BATAS WILAYAH</strong></th>
                       </tr>
                       <tr>
@@ -230,12 +226,12 @@
                         <td>:</td>
                         <td><?= $main['lat']; ?></td>
                       </tr>
-                      <!--<tr>
-                  <td>Koordinat Wilayah 
-                    <?= $desa; ?></td>
-                  <td>:</td>
-                  <td><?= $main['path']; ?></td>
-                </tr>-->
+                      <tr>
+                        <td>Koordinat Wilayah
+                          <?= $desa; ?></td>
+                        <td>:</td>
+                        <td><?= $main['path']; ?></td>
+                      </tr>
                       <tr>
                         <td>Ketinggian Diatas Permukaan Laut</td>
                         <td>:</td>
@@ -262,7 +258,7 @@
                         <td><?= $main['terluar_kec']; ?></td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
+                        <th colspan="3" class="bg-info text-muted"><strong>
                             PROFIL SINGKAT</strong></th>
                       </tr>
                       <tr>

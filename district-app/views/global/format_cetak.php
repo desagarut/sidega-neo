@@ -16,7 +16,7 @@
 	<head>
 		<title><?= ucwords($file); ?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="<?= base_url('assets/css/report.css'); ?>" rel="stylesheet">
+		<link href="<?= base_url('assets/tiny/css/report.css'); ?>" rel="stylesheet">
 	</head>
 	<body>
 		<div id="container">

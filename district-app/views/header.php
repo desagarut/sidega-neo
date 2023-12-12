@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/jquery.steps.css">
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/jquery.timepicker.css">
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/quill.snow.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/dataTables.bootstrap4.css">
 	<!-- Date Range Picker CSS -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/daterangepicker.css">
 	<!-- App CSS -->

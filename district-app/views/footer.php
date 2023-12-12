@@ -17,6 +17,8 @@
 <script src="<?= base_url() ?>assets/tiny/js/datamaps-zoomto.js"></script>
 <script src="<?= base_url() ?>assets/tiny/js/datamaps.custom.js"></script>
 <script src="<?= base_url() ?>assets/tiny/js/Chart.min.js"></script>
+<script src="<?= base_url() ?>assets/tiny/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>assets/tiny/js/dataTables.bootstrap4.min.js"></script>
 <script>
   /* defind global options */
   Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
@@ -28,13 +30,13 @@
 <script src="<?= base_url() ?>assets/tiny/js/apexcharts.custom.js"></script>
 <script src="<?= base_url() ?>assets/tiny/js/apps.js"></script>
 
-<script src="<?= base_url()?>assets/tiny/js/validasi.js"></script> 
-<script src="<?= base_url()?>assets/tiny/js/jquery.validate.min.js"></script> 
-<script src="<?= base_url()?>assets/tiny/js/localization/messages_id.js"></script> 
-<!-- Numeral js --> 
-<script src="<?= base_url()?>assets/tiny/js/numeral.min.js"></script> 
-<!-- Script--> 
-<script src="<?= base_url()?>assets/tiny/js/script.js"></script> 
+<script src="<?= base_url() ?>assets/tiny/js/validasi.js"></script>
+<script src="<?= base_url() ?>assets/tiny/js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/tiny/js/messages_id.js"></script>
+<!-- Numeral js -->
+<script src="<?= base_url() ?>assets/tiny/js/numeral.min.js"></script>
+<!-- Script-->
+<script src="<?= base_url() ?>assets/tiny/js/script.js"></script>
 
 
 <!-- NOTIFICATION-->

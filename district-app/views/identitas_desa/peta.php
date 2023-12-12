@@ -71,7 +71,7 @@
 </script>
 
 <div class="mb-4 align-items-center" style="position: relative;">
-    <div class="map-box" style="height:450px; overflow:hidden">
+    <div class="map-box" style="overflow:hidden">
         <div id="peta_wilayah_desa" style="height: 300px"></div>
     </div>
 </div>
