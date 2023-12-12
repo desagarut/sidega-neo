@@ -20,86 +20,61 @@
 	<!-- Icons CSS -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/feather.css">
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/feather.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/select2.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/dropzone.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/uppy.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/jquery.steps.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/jquery.timepicker.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/quill.snow.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/select2.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/dropzone.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/uppy.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/jquery.steps.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/jquery.timepicker.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/quill.snow.css">
 	<!-- Date Range Picker CSS -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/daterangepicker.css">
 	<!-- App CSS -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/app-light.css" id="lightTheme">
 	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/app-dark.css" id="darkTheme" disabled>
 
-	<!-- Bootstrap 3.3.7 -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/bootstrap.min.css"> -->
-	<!-- Jquery UI -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/jquery-ui.min.css"> -->
-	<!-- Font Awesome -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/font-awesome.min.css"> -->
-	<!-- Ionicons -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/ionicons.min.css"> -->
-	<!-- DataTables -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/dataTables.bootstrap.min.css"> -->
-	<!-- bootstrap wysihtml5 - text editor -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/bootstrap3-wysihtml5.min.css"> -->
-	<!-- Select2 -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/select2.min.css"> -->
-	<!-- Bootstrap Color Picker -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/bootstrap-colorpicker.min.css">
-	<!-- bootstrap datepicker -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/bootstrap-datepicker.min.css">
-	<!-- Theme style -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/css/AdminLTE.min.css">
-	<!-- AdminLTE Skins. -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/css/skins/_all-skins.min.css">
-	<!-- Style Admin Modification Css -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/css/admin-style.css">
-
 	<!-- OpenStreetMap Css -->
-	<!--	<link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet-geoman.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/L.Control.Locate.min.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/MarkerCluster.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/MarkerCluster.Default.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet-measure-path.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/mapbox-gl.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/L.Control.Shapefile.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet.groupedlayercontrol.min.css" />
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/peta.css">
-	<link rel="stylesheet" href="<?= base_url() ?>assets/css/toastr.min.css">
-	-->
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/leaflet.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/leaflet-geoman.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/L.Control.Locate.min.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/MarkerCluster.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/MarkerCluster.Default.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/leaflet-measure-path.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/mapbox-gl.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/L.Control.Shapefile.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/leaflet.groupedlayercontrol.min.css" />
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/peta.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/osm/toastr.min.css">
+
 	<!-- Untuk ubahan style desa -->
 	<?php if (is_file("instansi/css/insidega.css")) : ?>
 		<link type='text/css' href="<?= base_url() ?>instansi/css/insidega.css" rel='Stylesheet' />
 	<?php endif; ?>
 	<!-- Diperlukan untuk script jquery khusus halaman -->
-		<script src="<?= base_url() ?>assets/bootstrap/js/jquery.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/bootstrap/js/jquery.min.js"></script>
 
 	<!-- OpenStreetMap Js-->
-	<!--	<script src="<?= base_url() ?>assets/js/leaflet.js"></script>
-	<script src="<?= base_url() ?>assets/js/turf.min.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet-geoman.min.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.filelayer.js"></script>
-	<script src="<?= base_url() ?>assets/js/togeojson.js"></script>
-	<script src="<?= base_url() ?>assets/js/togpx.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet-providers.js"></script>
-	<script src="<?= base_url() ?>assets/js/L.Control.Locate.min.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.markercluster.js"></script>
-	<script src="<?= base_url() ?>assets/js/peta.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet-measure-path.js"></script>
-	<script src="<?= base_url() ?>assets/js/apbdes_manual.js"></script>
-	<script src="<?= base_url() ?>assets/js/mapbox-gl.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet-mapbox-gl.js"></script>
-	<script src="<?= base_url() ?>assets/js/shp.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.shpfile.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.groupedlayercontrol.min.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.browser.print.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.browser.print.utils.js"></script>
-	<script src="<?= base_url() ?>assets/js/leaflet.browser.print.sizes.js"></script>
-	<script src="<?= base_url() ?>assets/js/dom-to-image.min.js"></script>
-	<script src="<?= base_url() ?>assets/js/toastr.min.js"></script>-->
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/turf.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet-geoman.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.filelayer.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/togeojson.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/togpx.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet-providers.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/L.Control.Locate.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.markercluster.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/peta.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet-measure-path.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/apbdes_manual.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/mapbox-gl.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet-mapbox-gl.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/shp.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.shpfile.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.groupedlayercontrol.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.browser.print.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.browser.print.utils.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/leaflet.browser.print.sizes.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/dom-to-image.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/osm/toastr.min.js"></script>
 
 	<!-- Diperlukan untuk global automatic base_url oleh external js file -->
 	<script type="text/javascript">
@@ -108,13 +83,13 @@
 	</script>
 
 	<!-- Highcharts JS -->
-	<!--	<script src="<?= base_url() ?>assets/js/highcharts/highcharts.js"></script>
-	<script src="<?= base_url() ?>assets/js/highcharts/highcharts-3d.js"></script>
-	<script src="<?= base_url() ?>assets/js/highcharts/exporting.js"></script>
-	<script src="<?= base_url() ?>assets/js/highcharts/highcharts-more.js"></script>
-	<script src="<?= base_url() ?>assets/js/highcharts/sankey.js"></script>
-	<script src="<?= base_url() ?>assets/js/highcharts/organization.js"></script>
-	<script src="<?= base_url() ?>assets/js/highcharts/accessibility.js"></script>-->
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/highcharts.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/highcharts-3d.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/exporting.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/highcharts-more.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/sankey.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/organization.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/js/highcharts/accessibility.js"></script>
 
 	<?php require __DIR__ . '/head_tags.php' ?>
 
@@ -212,7 +187,7 @@
 				</div>
 			</nav>
 		</header>
-		<code>$(document).ajaxStart(function() { Pace.restart(); });</code>
+		<code>$(document).ajaxStart(function() { Pace.restart(); });</code>-->
 		<input id="success-code" type="hidden" value="<?= $_SESSION['success'] ?>">
 		<!-- Untuk menampilkan modal bootstrap umum -->
 		<!--

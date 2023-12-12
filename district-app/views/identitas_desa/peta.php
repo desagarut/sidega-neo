@@ -51,17 +51,17 @@
             //Style polygon batas wilayah desa
             var batasWilayah = new google.maps.Polygon({
                 paths: polygon_desa,
-                strokeColor: '#c31b68',
+                strokeColor: '#007bff',
                 strokeOpacity: 0.5,
                 strokeWeight: 3,
-                fillColor: '#fd7e14',
+                fillColor: '<?= $desa['warna'] ?>',
                 fillOpacity: 0.25
             });
 
             batasWilayah.setMap(PetaDesa)
 
             var infowindow = new google.maps.InfoWindow({
-                content: "<div class='avatar avatar-xl'><img src='<?= gambar_desa($main['kantor_desa'], TRUE); ?>' class='avatar-img'><br/> <p><?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?></p></div>"
+                content: "<div class='avatar avatar-xl'><img src='<?= gambar_desa($main['kantor_desa'], TRUE); ?>' class='avatar-img'><br/> <p class='text-center'><?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($main['nama_desa']) ?></p></div>"
             });
             infowindow.open(PetaDesa, kantorDesa);
 

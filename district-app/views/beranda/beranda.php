@@ -23,12 +23,12 @@
 						</form>
 					</div>
 				</div>
-				<?php $this->load->view('home/kependudukan.php'); ?>
+				<?php $this->load->view('beranda/kependudukan.php'); ?>
 
 				<div class="row">
 					<div class="col-md-4">
-						<?php $this->load->view('home/kependudukan_progres.php'); ?>
-						<?php $this->load->view('home/rekap_sppt.php'); ?>
+						<?php $this->load->view('beranda/kependudukan_progres.php'); ?>
+						<?php $this->load->view('beranda/rekap_sppt.php'); ?>
 
 						<div class="card shadow mb-4">
 							<div class="card-body">
@@ -207,6 +207,8 @@
 						</div> <!-- .col-md -->
 					</div> <!-- ./col -->
 					<div class="col-md-8">
+						<?php $this->load->view('beranda/peta.php'); ?>
+						<?php $this->load->view('beranda/pengunjung.php'); ?>
 						<div class="row">
 							<div class="col-md-4 mb-4">
 								<div class="card shadow">
@@ -254,90 +256,89 @@
 								</div>
 							</div>
 						</div> <!-- end section -->
-						<?php $this->load->view('home/peta.php'); ?>
 					</div> <!-- .col-md -->
 				</div>
 			</div>
 			<div class="row btn-page">
 				<div class="col-lg-8 col-md-12">
-					<?php //$this->load->view('home/peta.php'); 
+					<?php //$this->load->view('beranda/peta.php'); 
 					?>
-					<?php $this->load->view('home/umkm.php'); ?>
+					<?php $this->load->view('beranda/umkm.php'); ?>
 				</div>
 				<div class="col-lg-4 col-md-12">
-					<?php //$this->load->view('home/kependudukan_2.php'); 
+					<?php //$this->load->view('beranda/kependudukan_2.php'); 
 					?>
 
-					<?php //$this->load->view('home/link_tupoksi.php'); 
+					<?php //$this->load->view('beranda/link_tupoksi.php'); 
 					?>
-					<?php // $this->load->view('home/umkm.php'); 
+					<?php // $this->load->view('beranda/umkm.php'); 
 					?>
-					<?php // $this->load->view('home/layanan.php'); 
+					<?php // $this->load->view('beranda/layanan.php'); 
 					?>
 				</div>
 			</div>
 			<div class="row btn-page">
 				<div class="col-lg-12 col-md-12">
-					<?php $this->load->view('home/layanan.php'); ?>
+					<?php $this->load->view('beranda/layanan.php'); ?>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					<?php //$this->load->view('home/rekap_sppt.php'); 
+					<?php //$this->load->view('beranda/rekap_sppt.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php //$this->load->view('home/pertanahan.php'); 
+					<?php //$this->load->view('beranda/pertanahan.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php //$this->load->view('home/kependudukan_2.php'); 
+					<?php //$this->load->view('beranda/kependudukan_2.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php //$this->load->view('home/pembangunan.php'); 
-					?>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<?php // $this->load->view('home/artikel.php'); 
-					?>
-				</div>
-				<div class="col-md-3">
-					<?php // $this->load->view('home/gallery.php'); 
-					?>
-				</div>
-				<div class="col-md-3">
-					<?php // $this->load->view('home/gallery_youtube.php'); 
-					?>
-				</div>
-				<div class="col-md-3">
-					<?php // $this->load->view('home/cctv.php'); 
+					<?php //$this->load->view('beranda/pembangunan.php'); 
 					?>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					<?php // $this->load->view('home/helpdesk.php'); 
+					<?php // $this->load->view('beranda/artikel.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php // $this->load->view('home/aparat_login.php'); 
+					<?php // $this->load->view('beranda/gallery.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php // $this->load->view('home/warga_login.php'); 
+					<?php // $this->load->view('beranda/gallery_youtube.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php // $this->load->view('home/pengunjung.php'); 
+					<?php // $this->load->view('beranda/cctv.php'); 
 					?>
-					<?php //$this->load->view('home/artikel.php'); 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<?php // $this->load->view('beranda/helpdesk.php'); 
 					?>
-					<?php // $this->load->view('home/changelog.php'); 
+				</div>
+				<div class="col-md-3">
+					<?php // $this->load->view('beranda/aparat_login.php'); 
 					?>
-					<?php //$this->load->view('home/video.php'); 
+				</div>
+				<div class="col-md-3">
+					<?php // $this->load->view('beranda/warga_login.php'); 
+					?>
+				</div>
+				<div class="col-md-3">
+					<?php //$this->load->view('beranda/pengunjung.php'); 
+					?>
+					<?php //$this->load->view('beranda/artikel.php'); 
+					?>
+					<?php // $this->load->view('beranda/changelog.php'); 
+					?>
+					<?php //$this->load->view('beranda/video.php'); 
 					?>
 
 				</div>

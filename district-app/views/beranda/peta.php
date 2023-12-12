@@ -31,8 +31,9 @@
     kantorDesa = new google.maps.Marker({
       position: center,
       map: map,
-      title: 'Kantor <?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?>',
-      animation: google.maps.Animation.BOUNCE
+      //title: 'Kantor <?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?>',
+      animation: google.maps.Animation.BOUNCE,
+      content: "Tampilan Info Window",
     });
 
     <?php if (!empty($desa['path'])) : ?>
@@ -48,7 +49,7 @@
       //Style polygon
       var batasWilayah = new google.maps.Polygon({
         paths: polygon_desa,
-        strokeColor: '<?= $desa['warna_garis'] ?>',
+        strokeColor: '#007bff',
         strokeOpacity: 1,
         strokeWeight: 3,
         fillColor: '<?= $desa['warna'] ?>',
@@ -56,6 +57,12 @@
       });
 
       batasWilayah.setMap(map)
+
+      var infowindow = new google.maps.InfoWindow({
+                content: "<div class='avatar avatar-xl'><img src='<?= gambar_desa($desa['kantor_desa'], TRUE); ?>' class='avatar-img'><br/> <p class='text-center'><?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?></p></div>"
+            });
+            infowindow.open(map, kantorDesa);
+
     <?php endif; ?>
   }
 </script>

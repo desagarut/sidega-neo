@@ -6,7 +6,25 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
 ?>
 
 <div class="row">
-  <div class="col-md-4 mb-4">
+  <div class="col-md-3 mb-3">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col">
+            <?php foreach ($dusun as $data) : ?>
+              <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
+            <?php endforeach; ?>
+            <p class="small text-dark mb-0">Wilayah</p>
+            <a href="<?= site_url('sid_core') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+          </div>
+          <div class="col-auto">
+            <span class="fe fe-32 fe-map text-primary mb-0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 mb-3">
     <div class="card shadow">
       <div class="card-body">
         <div class="row align-items-center">
@@ -20,13 +38,13 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
             <a href="<?= site_url('penduduk/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
           </div>
           <div class="col-auto">
-            <span class="fe fe-32 fe-user text-dark mb-0"></span>
+            <span class="fe fe-32 fe-user text-success mb-0"></span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-md-4 mb-4">
+  <div class="col-md-3 mb-3">
     <div class="card shadow">
       <div class="card-body">
         <div class="row align-items-center">
@@ -40,18 +58,18 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
             <a href="<?= site_url('keluarga/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
           </div>
           <div class="col-auto">
-            <span class="fe fe-32 fe-users text-dark mb-0"></span>
+            <span class="fe fe-32 fe-users text-danger mb-0"></span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-md-4 mb-4">
+  <div class="col-md-3 mb-3">
     <div class="card shadow">
       <div class="card-body">
         <div class="row align-items-center">
           <div class="col">
-          <?php foreach ($rtm as $data) : ?>
+            <?php foreach ($rtm as $data) : ?>
               <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
             <?php endforeach; ?>
             <p class="small text-dark mb-0">Rumah Tangga</p>
@@ -60,7 +78,7 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
             <a href="<?= site_url('rtm/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
           </div>
           <div class="col-auto">
-            <span class="fe fe-32 fe-users text-dark mb-0"></span>
+            <span class="fe fe-32 fe-home text-warning mb-0"></span>
           </div>
         </div>
       </div>

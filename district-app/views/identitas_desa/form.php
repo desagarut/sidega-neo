@@ -60,7 +60,7 @@
 				<div class="col-md-9">
 					<div class="card card-primary">
 						<div class="card-header with-border">
-							<a href="<?= site_url('identitas_desa'); ?>" class="btn btn-social btn-card btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data <?= $desa; ?>"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Data Identitas <?= $desa; ?></a>
+							<a href="<?= site_url('identitas'); ?>" class="btn btn-social btn-card btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data <?= $desa; ?>"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Data Identitas <?= $desa; ?></a>
 						</div>
 						<div class="card-body">
 							<div class="form-group">

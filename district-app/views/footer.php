@@ -28,8 +28,16 @@
 <script src="<?= base_url() ?>assets/tiny/js/apexcharts.custom.js"></script>
 <script src="<?= base_url() ?>assets/tiny/js/apps.js"></script>
 
-<!-- NOTIFICATION-->
+<script src="<?= base_url()?>assets/tiny/js/validasi.js"></script> 
+<script src="<?= base_url()?>assets/tiny/js/jquery.validate.min.js"></script> 
+<script src="<?= base_url()?>assets/tiny/js/localization/messages_id.js"></script> 
+<!-- Numeral js --> 
+<script src="<?= base_url()?>assets/tiny/js/numeral.min.js"></script> 
+<!-- Script--> 
+<script src="<?= base_url()?>assets/tiny/js/script.js"></script> 
 
+
+<!-- NOTIFICATION-->
 <script type="text/javascript">
   $('document').ready(function() {
     setTimeout(function() {

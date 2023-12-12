@@ -114,7 +114,7 @@ class Beranda extends Admin_Controller {
         $data['data_ktp'] = $this->header_model->rekap_ktp();
 	
 		$this->set_minsidebar(1);
-		$this->render('home/beranda', $data);
+		$this->render('beranda/beranda', $data);
 	}
 	
 	public function dialog_pengaturan()
@@ -122,7 +122,7 @@ class Beranda extends Admin_Controller {
 		$data['list_program_bantuan'] = $this->program_bantuan_model->list_program();
 		$data['sasaran'] = unserialize(SASARAN);
 		$data['form_action'] = site_url("beranda/ubah_program_bantuan");
-		$this->load->view('home/pengaturan_form', $data);
+		$this->load->view('beranda/pengaturan_form', $data);
 	}
 
 	public function ubah_program_bantuan()
