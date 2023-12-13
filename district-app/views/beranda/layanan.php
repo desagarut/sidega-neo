@@ -1,6 +1,6 @@
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.js" integrity="sha512-/F8GvcdSUiYuL8wFMLRspx/PemIOOZBMiro7M9Wwn9V/wfzIH+RwIauASTQdJqaaZdSHBP4lmtq6VH5bbTNaJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 
-<div class="card">
+<div class="card shadow">
   <div class="card-body">
     <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('web') ?><?php endif; ?>" title="Tulis Berita">
       <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-edit"></i>Tulis Berita</button>

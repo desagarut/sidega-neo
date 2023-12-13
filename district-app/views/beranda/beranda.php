@@ -28,6 +28,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<?php $this->load->view('beranda/kependudukan_progres.php'); ?>
+						<?php $this->load->view('beranda/pertanahan.php'); ?>
 						<?php $this->load->view('beranda/rekap_sppt.php'); ?>
 
 						<div class="card shadow mb-4">
@@ -56,6 +57,63 @@
 								</div>
 							</div> <!-- .card-body -->
 						</div> <!-- .card -->
+					</div>
+					<div class="col-md-8">
+						<?php $this->load->view('beranda/peta.php'); ?>
+						<?php $this->load->view('beranda/pengunjung.php'); ?>
+						<?php $this->load->view('beranda/layanan.php'); ?>
+
+						<div class="row">
+							<div class="col-md-4 mb-4">
+								<div class="card shadow">
+									<div class="card-body">
+										<div class="row align-items-center">
+											<div class="col">
+												<h4 class="mb-0">15%</h4>
+												<p class="small text-muted mb-0">Cpu Usage</p>
+											</div>
+											<div class="col-5">
+												<div id="gauge1" class="gauge-container"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 mb-4">
+								<div class="card shadow">
+									<div class="card-body">
+										<div class="row align-items-center">
+											<div class="col">
+												<h4 class="mb-0">65%</h4>
+												<p class="small text-muted mb-0">Ram Usage</p>
+											</div>
+											<div class="col-5">
+												<div id="gauge2" class="gauge-container"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 mb-4">
+								<div class="card shadow">
+									<div class="card-body">
+										<div class="row align-items-center">
+											<div class="col">
+												<p class="small text-muted mb-0">Network</p>
+												<h4 class="mb-0">20%</h4>
+											</div>
+											<div class="col-5">
+												<div id="gauge3" class="gauge-container"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end section -->
+					</div> <!-- .col-md -->
+				</div>
+				<div class="row">
+					<div class="col-md-12">
 						<div class="card shadow mb-4">
 							<div class="card-body">
 								<div class="chart-box">
@@ -206,57 +264,6 @@
 							</div> <!-- .card -->
 						</div> <!-- .col-md -->
 					</div> <!-- ./col -->
-					<div class="col-md-8">
-						<?php $this->load->view('beranda/peta.php'); ?>
-						<?php $this->load->view('beranda/pengunjung.php'); ?>
-						<div class="row">
-							<div class="col-md-4 mb-4">
-								<div class="card shadow">
-									<div class="card-body">
-										<div class="row align-items-center">
-											<div class="col">
-												<h4 class="mb-0">15%</h4>
-												<p class="small text-muted mb-0">Cpu Usage</p>
-											</div>
-											<div class="col-5">
-												<div id="gauge1" class="gauge-container"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 mb-4">
-								<div class="card shadow">
-									<div class="card-body">
-										<div class="row align-items-center">
-											<div class="col">
-												<h4 class="mb-0">65%</h4>
-												<p class="small text-muted mb-0">Ram Usage</p>
-											</div>
-											<div class="col-5">
-												<div id="gauge2" class="gauge-container"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 mb-4">
-								<div class="card shadow">
-									<div class="card-body">
-										<div class="row align-items-center">
-											<div class="col">
-												<p class="small text-muted mb-0">Network</p>
-												<h4 class="mb-0">20%</h4>
-											</div>
-											<div class="col-5">
-												<div id="gauge3" class="gauge-container"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> <!-- end section -->
-					</div> <!-- .col-md -->
 				</div>
 			</div>
 			<div class="row btn-page">
@@ -266,15 +273,10 @@
 					<?php $this->load->view('beranda/umkm.php'); ?>
 				</div>
 				<div class="col-lg-4 col-md-12">
-					<?php //$this->load->view('beranda/kependudukan_2.php'); 
-					?>
-
-					<?php //$this->load->view('beranda/link_tupoksi.php'); 
-					?>
-					<?php // $this->load->view('beranda/umkm.php'); 
-					?>
-					<?php // $this->load->view('beranda/layanan.php'); 
-					?>
+					<?php //$this->load->view('beranda/kependudukan_2.php'); ?>
+					<?php //$this->load->view('beranda/link_tupoksi.php'); ?>
+					<?php // $this->load->view('beranda/umkm.php'); ?>
+					<?php // $this->load->view('beranda/layanan.php'); ?>
 				</div>
 			</div>
 			<div class="row btn-page">
@@ -288,16 +290,14 @@
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php //$this->load->view('beranda/pertanahan.php'); 
-					?>
+					<?php //$this->load->view('beranda/pertanahan.php'); ?>
 				</div>
 				<div class="col-md-3">
 					<?php //$this->load->view('beranda/kependudukan_2.php'); 
 					?>
 				</div>
 				<div class="col-md-3">
-					<?php //$this->load->view('beranda/pembangunan.php'); 
-					?>
+					<?php //$this->load->view('beranda/pembangunan.php'); ?>
 				</div>
 			</div>
 			<div class="row">

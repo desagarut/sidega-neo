@@ -1,3 +1,4 @@
+
 <div class="card shadow mb-4">
 	<div class="card-body">
 		<?php
@@ -13,7 +14,10 @@
 				</div>
 				<div class="col-md-6 my-4 text-center">
 					<div lass="chart-box mx-4">
-						<canvas id="pieChartjs" width="400" height="300"></canvas>
+						<div id="canvas-holder">
+							<!--<canvas id="chart-area" width="400" height="300"></canvas>-->
+							<canvas id="chart-area" width="50" height="50" />
+						</div>
 					</div>
 				</div>
 				<div class="col-md-6 border-top pt-3">
@@ -32,3 +36,45 @@
 		?>
 	</div>
 </div>
+<script src="<?= base_url() ?>assets/tiny/js/Chart.js"></script>
+<script>
+	var doughnutData = [{
+			value: "<?= $d->pajak_terhutang ?>",
+			color: "red",
+			highlight: "#FF5A5E",
+			label: "Belum Bayar"
+		},
+		{
+			value: "<?= $d->pajak_lunas ?>",
+			color: "aqua",
+			highlight: "#5AD3D1",
+			label: "Lunas"
+		},
+		{
+			value: 100,
+			color: "#FDB45C",
+			highlight: "#FFC870",
+			label: "Yellow"
+		},
+		{
+			value: 40,
+			color: "#949FB1",
+			highlight: "#A8B3C5",
+			label: "Grey"
+		},
+		{
+			value: 120,
+			color: "#4D5360",
+			highlight: "#616774",
+			label: "Dark Grey"
+		}
+
+	];
+
+	window.onload = function() {
+		var ctx = document.getElementById("chart-area").getContext("2d");
+		window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+			responsive: true
+		});
+	};
+</script>

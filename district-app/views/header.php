@@ -159,7 +159,7 @@
 						<?php if (ENVIRONMENT == 'development') : ?>
 							<li> <a> <i class="fa fa-cog fa-lg" title="Development"></i><span class="badge">Development</span> </a> </li>
 						<?php endif; ?>
-						<li><span><?php $this->load->view('jam.php'); ?></span></li>
+						<li><span><?php //$this->load->view('jam.php'); ?></span></li>
 						<?php if ($this->CI->cek_hak_akses('b', 'permohonan_surat_admin')) : ?>
 							<li> <a href="<?= site_url('permohonan_surat_admin/clear'); ?>"> <span><i class="fa fa-print fa-lg" title="Permohonan Surat"></i>&nbsp;</span> <span class="badge" id="b_permohonan_surat" style="display: none;"></span> </a> </li>
 						<?php endif; ?>
@@ -221,10 +221,10 @@
 									<a href="<?= site_url('mailbox'); ?>">
 										<div class="row align-items-center">
 											<div class="col-auto">
-												<span class="fe fe-box fe-24"></span>
+												<span class="fe fe-mail fe-24"></span>
 											</div>
 											<div class="col">
-												<span><i class="fe fe-envelope-o fe-lg" title="Pesan Masuk"></i></span>
+												<span id="b_inbox" style="display: none;"><i class="fe fe-envelope-o fe-lg" title="Pesan Masuk"></i></span>
 												<small><strong>Package has uploaded successfull</strong></small>
 												<div class="my-0 text-muted small">Package is zipped and uploaded</div>
 												<small class="badge badge-pill badge-light text-muted">1m ago</small>
@@ -282,7 +282,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="defaultModalLabel">Shortcuts</h5>
+						<h5 class="modal-title" id="defaultModalLabel">Akses Cepat</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -290,30 +290,38 @@
 					<div class="modal-body px-5">
 						<div class="row align-items-center">
 							<div class="col-6 text-center">
+							<a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('surat') ?><?php endif; ?>" title="Tulis Berita" class="btn">
 								<div class="squircle bg-success justify-content-center">
-									<i class="fe fe-cpu fe-32 align-self-center text-white"></i>
+									<i class="fe fe-mail fe-32 align-self-center text-white"></i>
 								</div>
-								<p>Control area</p>
+								<p>Buat Surat</p>
+								</a>
 							</div>
 							<div class="col-6 text-center">
+								<a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('web') ?><?php endif; ?>" title="Tulis Berita" class="btn">
 								<div class="squircle bg-primary justify-content-center">
-									<i class="fe fe-activity fe-32 align-self-center text-white"></i>
+									<i class="fe fe-edit fe-32 align-self-center text-white"></i>
 								</div>
-								<p>Activity</p>
+								<p>Tulis Berita</p>
+								</a>
 							</div>
 						</div>
 						<div class="row align-items-center">
 							<div class="col-6 text-center">
+							<a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('surat_masuk') ?><?php endif; ?>" title="Tulis Berita" class="btn">
 								<div class="squircle bg-primary justify-content-center">
-									<i class="fe fe-droplet fe-32 align-self-center text-white"></i>
+									<i class="fe fe-log-in fe-32 align-self-center text-white"></i>
 								</div>
-								<p>Droplet</p>
+								<p>Surat Masuk</p>
+							</a>
 							</div>
 							<div class="col-6 text-center">
-								<div class="squircle bg-primary justify-content-center">
-									<i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
+							<a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('surat_keluar') ?><?php endif; ?>" title="Tulis Berita" class="btn">
+								<div class="squircle bg-warning justify-content-center">
+									<i class="fe fe-log-out fe-32 align-self-center text-white"></i>
 								</div>
-								<p>Upload</p>
+								<p>Surat Keluar</p>
+							</a>
 							</div>
 						</div>
 						<div class="row align-items-center">
@@ -335,3 +343,33 @@
 			</div>
 		</div>
 	</div>
+
+	<!--
+		<div class="card">
+  <div class="card-body">
+    <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('web') ?><?php endif; ?>" title="Tulis Berita">
+      <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-edit"></i>Tulis Berita</button>
+    </a>
+    <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('surat') ?><?php endif; ?>" title="Buat Surat">
+      <button type="button" class="btn btn-outline-primary"><i class="feather mr-2 icon-folder"></i>Buat Surat</button>
+    </a>
+    <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('permohonan_surat_admin') ?><?php endif; ?>" title="permohonan surat online">
+      <button type="button" class="btn btn-outline-success"><i class="feather mr-2 icon-check-circle"></i>Permohonan</button>
+    </a>
+    <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('mailbox') ?><?php endif; ?>" title="Pesan Masuk">
+      <button type="button" class="btn btn-outline-warning"><i class="feather mr-2 icon-message-square"></i>Pesan</button>
+    </a>
+    <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('surat_masuk') ?><?php endif; ?>" title="Surat Masuk">
+      <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-mail"></i>Surat Masuk</button>
+    </a>
+    <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('mandiri') ?><?php endif; ?>" title="Pembuatan PIN Layanan Masyarakat">
+      <button type="button" class="btn btn-outline-danger"><i class="feather mr-2 icon-command"></i>PIN</button>
+    </a>
+    <a class="btn btn-app" href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('komentar') ?><?php endif; ?>">
+        <button type="button" class="btn btn-info"><i class="feather mr-2 icon-info"></i>Info</button>
+      </a>
+	  <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('komentar') ?><?php endif; ?>">
+      <button type="button" class="btn btn-info"><i class="feather mr-2 icon-info"></i>Info</button>
+    </a>
+  </div>
+</div>-->
