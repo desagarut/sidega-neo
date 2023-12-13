@@ -1,15 +1,11 @@
-<div class="card">
+<div class="card shadow mb-4">
 	<div class="card-header">
-		<h5>Pertanahan</h5>
-		<div class="card-header-right">
-			<div class="btn-group card-option">
-				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
-				<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-					<li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-					<li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-					<li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-					<li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-				</ul>
+		<div class="row align-items-center">
+			<div class="col">
+				<h3 class="h6 mb-0">Pertanahan</h3>
+			</div>
+			<div class="col-auto">
+				<a class="small text-muted" href="<?= site_url('letterc'); ?>">View all</a>
 			</div>
 		</div>
 	</div>

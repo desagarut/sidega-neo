@@ -22,7 +22,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex">
 	<!-- Jquery UI -->
-	<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/bootstrap/css/jquery-ui.min.css">
 	<!-- Font Awesome -->
 	<!--<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?= base_url() ?>assets/css/login-style.css" media="screen" type="text/css" />
@@ -40,8 +40,8 @@
 	<link rel="stylesheet" href="<?= base_url("assets/css/keyboard.min.css") ?>">
 	<link rel="stylesheet" href="<?= base_url("assets/front/css/mandiri-keyboard.css") ?>">
 
-	<script src="<?= base_url() ?>assets/bootstrap/js/jquery.min.js"></script>
-	<script src="<?= base_url() ?>assets/bootstrap/js/jquery-ui.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/bootstrap/js/jquery.min.js"></script>
+	<script src="<?= base_url() ?>assets/tiny/bootstrap/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/validasi.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/localization/messages_id.js"></script>
@@ -80,13 +80,13 @@
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block w-100" src="<?= base_url() ?>assets/bootstrap/1.png" alt="First slide">
+									<img class="d-block w-100" src="<?= base_url() ?>assets/tiny/bootstrap/1.png" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="<?= base_url() ?>assets/bootstrap/2.png" alt="Second slide">
+									<img class="d-block w-100" src="<?= base_url() ?>assets/tiny/bootstrap/2.png" alt="Second slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="<?= base_url() ?>assets/bootstrap/3.png" alt="Third slide">
+									<img class="d-block w-100" src="<?= base_url() ?>assets/tiny/bootstrap/3.png" alt="Third slide">
 								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -141,10 +141,10 @@
 							</form>
 
 							<h4 class="col-md-12 text-center">
-								|<a href="https://wa.me/+62<?= $header['telepon'] ?>?text=Assalamu'alaikum%2C%20Perkenalkan%20saya%20warga%20desa%20<?= $header['nama_desa'] ?>%2C%20Saya%20ingin%20mengakses%20layanan%20masyarakat%2C%20Apakah%20Bapak/Ibu%20dapat%20membantu%3F%20" target="_blank" title="Hubungi via whatsapp"> <i class="fa fa-whatsapp"></i> Hubungi </a> | 
-								<a href="<?= site_url('insidega'); ?>">Login Manajemen</a> |</br>
-								|<a href="<?= site_url('first'); ?>"> Ke Beranda</a> |
-									</h4>
+								<a href="https://wa.me/+62<?= $header['telepon'] ?>?text=Assalamu'alaikum%2C%20Perkenalkan%20saya%20warga%20desa%20<?= $header['nama_desa'] ?>%2C%20Saya%20ingin%20mengakses%20layanan%20masyarakat%2C%20Apakah%20Bapak/Ibu%20dapat%20membantu%3F%20" target="_blank" title="Hubungi via whatsapp"> <i class="fa fa-whatsapp"></i> Hubungi </a><br />
+								<a href="<?= site_url('first'); ?>" class="btn btn-sm btn-success"> Halaman Depan</a>&nbsp<a href="<?= site_url('insidega'); ?>" class="btn btn-sm btn-primary">Login Manajemen</a>
+
+							</h4>
 						</div>
 					</div>
 				</div>

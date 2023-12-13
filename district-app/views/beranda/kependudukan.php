@@ -15,7 +15,9 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
               <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
             <?php endforeach; ?>
             <p class="small text-dark mb-0">Wilayah</p>
-            <a href="<?= site_url('sid_core') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+            <a href="<?= site_url('sid_core') ?>">
+              <span class="badge badge-pill badge-primary"> Detail</span>
+            </a>
           </div>
           <div class="col-auto">
             <span class="fe fe-32 fe-map text-primary mb-0"></span>
@@ -33,9 +35,11 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
               <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
             <?php endforeach; ?>
             <p class="small text-dark mb-0">Penduduk</p>
-            <span class="badge badge-pill badge-success">L : <?= number_format($penduduk_laki, 0, '', '.') ?> </span>
-            <span class="badge badge-pill badge-warning"> P : <?= number_format($penduduk_perempuan, 0, '', '.') ?></span>
-            <a href="<?= site_url('penduduk/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+            <a href="<?= site_url('penduduk/clear') ?>">
+              <span class="badge badge-pill badge-success">L : <?= number_format($penduduk_laki, 0, '', '.') ?> </span>
+              <span class="badge badge-pill badge-warning"> P : <?= number_format($penduduk_perempuan, 0, '', '.') ?></span>
+              <!--<span class="badge badge-pill badge-primary"> Detail</span>-->
+            </a>
           </div>
           <div class="col-auto">
             <span class="fe fe-32 fe-user text-success mb-0"></span>
@@ -53,9 +57,11 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
               <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
             <?php endforeach; ?>
             <p class="small text-dark mb-0">Keluarga</p>
-            <span class="badge badge-pill badge-success">L : <?= number_format($keluarga_laki, 0, '', '.') ?></span>
-            <span class="badge badge-pill badge-warning"> P : <?= number_format($keluarga_perempuan, 0, '', '.') ?></span>
-            <a href="<?= site_url('keluarga/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+            <a href="<?= site_url('keluarga/clear') ?>">
+              <span class="badge badge-pill badge-success">L : <?= number_format($keluarga_laki, 0, '', '.') ?></span>
+              <span class="badge badge-pill badge-warning"> P : <?= number_format($keluarga_perempuan, 0, '', '.') ?></span>
+              <!--<span class="badge badge-pill badge-primary"> Detail</span>-->
+            </a>
           </div>
           <div class="col-auto">
             <span class="fe fe-32 fe-users text-danger mb-0"></span>
@@ -73,9 +79,11 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
               <span class="h2 mb-0"><?= $data['jumlah'] ?></span>
             <?php endforeach; ?>
             <p class="small text-dark mb-0">Rumah Tangga</p>
-            <span class="badge badge-pill badge-success">L : <?= number_format($rtm_laki, 0, '', '.') ?></span>
-            <span class="badge badge-pill badge-warning"> P : <?= number_format($rtm_perempuan, 0, '', '.') ?></span>
-            <a href="<?= site_url('rtm/clear') ?>"><span class="badge badge-pill badge-primary"> Detail</span></a>
+            <a href="<?= site_url('rtm/clear') ?>">
+              <span class="badge badge-pill badge-success">L : <?= number_format($rtm_laki, 0, '', '.') ?></span>
+              <span class="badge badge-pill badge-warning"> P : <?= number_format($rtm_perempuan, 0, '', '.') ?></span>
+              <!--<span class="badge badge-pill badge-primary"> Detail</span>-->
+            </a>
           </div>
           <div class="col-auto">
             <span class="fe fe-32 fe-home text-warning mb-0"></span>

@@ -69,12 +69,27 @@
 	<a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
 		<i class="fe fe-x"><span class="sr-only"></span></i>
 	</a>
+
 	<nav class="vertnav navbar navbar-light">
 		<!-- nav bar -->
 		<div class="w-100 mb-4 d-flex">
+			<div class="row align-items-center">
+				<div class="col-3 text-center">
+					<span class="circle circle-sm bg-primary">
+						<i class="fe fe-16 fe-activity text-white mb-0"></i>
+					</span>
+				</div>
+				<div class="col">
+					<p class="small text-muted mb-0">AVG Orders</p>
+					<span class="h3 mb-0">$80</span>
+				</div>
+			</div>
+<!--
 			<a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="<?= site_url('beranda') ?>">
 				<img src="<?= gambar_desa($desa['logo']); ?>" style="width:50px" class="img-circle" alt="<?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?>">
 			</a>
+			<span class="navbar-brand mx-auto mt-2 flex-fill text-center"><?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?></span><br />
+								-->
 		</div>
 		<p class="text-muted nav-heading mt-4 mb-1">
 			<span>menu</span>

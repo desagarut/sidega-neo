@@ -50,17 +50,21 @@
 </script>
 
 <!-- Highcharts -->
-<script src="<?//= base_url() ?>assets/tiny/js/highcharts/exporting.js"></script>
-<script src="<?//= base_url() ?>assets/tiny/js/highcharts/highcharts-more.js"></script>
+<script src="<?= base_url(); ?>assets/tiny/js/highcharts/exporting.js"></script>
+<script src="<?= base_url(); ?>assets/tiny/js/highcharts/highcharts-more.js"></script>
 
 <div class="card shadow mb-4">
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col">
+				<h3 class="h6 mb-0">Pengunjung</h3>
+			</div>
+			<div class="col-auto">
+				<a class="small text-muted" href="#!">View all</a>
+			</div>
+		</div>
+	</div>
 	<div class="card-body">
-		<div class="">
-			<strong class="card-title">Pengunjung</strong>
-			<a class="float-right small text-muted" href="#!">View all</a>
-		</div>
-		<div class="row">
-			<div id="chart" style="height:150px"> </div>
-		</div>
+		<div id="chart" style="height:280px; width:260px"> </div>
 	</div>
 </div>
