@@ -35,63 +35,32 @@
     </div>
 </div>
                     -->
-<div class="row">
-                <!-- Log -->
-                <div class="col-md-12 mb-4">
-                  <div class="card shadow">
-                    <div class="card-header">
-                      <strong class="card-title">Logging</strong>
-                      <a class="float-right small text-muted" href="#!">View all</a>
-                    </div>
-                    <div class="card-body">
-                      <div class="list-group list-group-flush my-n3">
-                        <div class="list-group-item">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <span class="circle circle-sm bg-warning"><i class="fe fe-shield-off fe-16 text-white"></i></span>
-                            </div>
-                            <div class="col">
-                              <small><strong>11:00 April 16, 2020</strong></small>
-                              <div class="mb-2 text-muted small">Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Integer dignissim nulla eu quam cursus placerat. Vivamus non odio ullamcorper, lacinia ante nec, blandit leo. </div>
-                              <span class="badge badge-pill badge-warning">Security</span>
-                            </div>
-                            <div class="col-auto pr-0">
-                              <small class="fe fe-more-vertical fe-16 text-muted"></small>
-                            </div>
-                          </div> <!-- / .row -->
-                        </div><!-- / .list-group-item -->
-                        <div class="list-group-item">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <span class="circle circle-sm bg-success"><i class="fe fe-database fe-16 text-white"></i></span>
-                            </div>
-                            <div class="col">
-                              <small><strong>17:00 April 15, 2020</strong></small>
-                              <div class="mb-2 text-muted small">Proin porta vel erat suscipit luctus. Cras rhoncus felis sed magna commodo, in <a href="#!">pretium</a> mauris faucibus. Cras rhoncus felis sed magna commodo, in pretium mauris faucibus.</div>
-                              <span class="badge badge-pill badge-success">System Update</span>
-                            </div>
-                            <div class="col-auto pr-0">
-                              <small class="fe fe-more-vertical fe-16 text-muted"></small>
-                            </div>
-                          </div> <!-- / .row -->
-                        </div><!-- / .list-group-item -->
-                        <div class="list-group-item">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <span class="circle circle-sm bg-secondary"><i class="fe fe-user-plus fe-16 text-white"></i></span>
-                            </div>
-                            <div class="col">
-                              <small><strong>17:00 April 10, 2020</strong></small>
-                              <div class="mb-2 text-muted small"> Morbi id arcu convallis, eleifend justo tristique, tincidunt nisl. Morbi euismod fermentum quam, at fringilla elit posuere a. <strong>Aliquam</strong> accumsan mi venenatis risus fermentum, at sagittis velit fermentum.</div>
-                              <span class="badge badge-pill badge-secondary">Users</span>
-                            </div>
-                            <div class="col-auto pr-0">
-                              <small class="fe fe-more-vertical fe-16 text-muted"></small>
-                            </div>
-                          </div> <!-- / .row -->
-                        </div><!-- / .list-group-item -->
-                      </div> <!-- / .list-group -->
-                    </div> <!-- / .card-body -->
-                  </div> <!-- / .card -->
-                </div> <!-- / .col -->
-              </div> <!-- end section -->
+<div class="col-md-12 col-lg-12 mb-4">
+  <div class="card timeline shadow">
+    <div class="card-header">
+      <strong class="card-title">Warga Login</strong>
+      <a class="float-right small text-muted" href="<?php echo site_url('mandiri'); ?>">View all</a>
+    </div>
+    <div class="card-body" data-simplebar style="height:355px; overflow-y: auto; overflow-x: hidden;">
+      <?php foreach ($last_login as $key => $data) { ?>
+        <div class="pb-3 timeline-item item-success">
+          <div class="pl-5">
+            <div class="row">
+              <div class="col-md-2">
+                <?php if ($data['foto']) : ?>
+                  <img class="avatar-img rounded-circle" src="<?= AmbilFoto($data['foto']) ?>" alt="<?= $data['nama'] ?>" style="width:40px">
+                <?php else : ?>
+                  <img class="avatar-img rounded-circle" src="<?= base_url() ?>assets/tiny/files/user_pict/kuser.png" alt="<?= $data['nama'] ?>" style="width:40px">
+                <?php endif; ?>
+              </div>
+              <div class="col-md-10">
+                <div class="mb-1"><a class="users-list-name" href="<?php echo site_url('penduduk/detail/1/0/' . $data['id']); ?>"><strong>@<?= $data['nama'] ?></strong></a><span class="text-muted small mx-2"></span><small>terakhir </small><span class="badge badge-warning"><?= $data['last_login'] ?></div>
+                <p class="small text-muted">Warga Dusun <?= strtoupper($data['dusun']); ?> RW. <?= strtolower($data['rw']); ?> RT. <?= strtolower($data['rt']); ?> <?= strtolower($data['alamat_sekarang']); ?></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+        </div>
+    </div>
+  </div>

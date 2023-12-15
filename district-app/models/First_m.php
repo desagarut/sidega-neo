@@ -87,7 +87,7 @@ class First_m extends CI_Model {
     public function last_login(int $limit = 2)
     {
         $query = "
-            SELECT tweb_penduduk.id, tweb_penduduk.nama, tweb_penduduk.nik, tweb_wil_clusterdesa.dusun
+            SELECT tweb_penduduk_mandiri.*, tweb_penduduk.id, tweb_penduduk.*, tweb_wil_clusterdesa.dusun, tweb_wil_clusterdesa.rw, tweb_wil_clusterdesa.rt
             FROM tweb_penduduk_mandiri
             JOIN tweb_penduduk
             ON tweb_penduduk_mandiri.id_pend = tweb_penduduk.id

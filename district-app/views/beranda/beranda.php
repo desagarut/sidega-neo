@@ -46,8 +46,8 @@
 										</span>
 									</div>
 									<div class="col">
-										<p class="small text-muted mb-0">AVG Orders</p>
-										<span class="h3 mb-0">$80</span>
+										<p class="small text-muted mb-0">Layanan Surat</p>
+										<span class="h3 mb-0">80</span>
 									</div>
 								</div>
 							</div>
@@ -63,8 +63,8 @@
 										</span>
 									</div>
 									<div class="col">
-										<p class="small text-muted mb-0">AVG Orders</p>
-										<span class="h3 mb-0">$80</span>
+										<p class="small text-muted mb-0">Surat Masuk</p>
+										<span class="h3 mb-0">80</span>
 									</div>
 								</div>
 							</div>
@@ -80,8 +80,8 @@
 										</span>
 									</div>
 									<div class="col">
-										<p class="small text-muted mb-0">AVG Orders</p>
-										<span class="h3 mb-0">$80</span>
+										<p class="small text-muted mb-0">Surat Keluar</p>
+										<span class="h3 mb-0">80</span>
 									</div>
 								</div>
 							</div>
@@ -98,7 +98,7 @@
 									</div>
 									<div class="col">
 										<p class="small text-muted mb-0">AVG Orders</p>
-										<span class="h3 mb-0">$80</span>
+										<span class="h3 mb-0">80</span>
 									</div>
 								</div>
 							</div>
@@ -121,10 +121,16 @@
 					<div class="col-md-4">
 						<?php $this->load->view('beranda/rekap_sppt.php'); ?>
 					</div>
+					<div class="col-md-4">
+						<?php $this->load->view('beranda/pertanahan.php'); ?>
+					</div>
+					<div class="col-md-4">
 					<?php $this->load->view('beranda/pertanahan.php'); ?>
+
+					</div>
 				</div>
 			</div>
-
+			<!--
 			<div class="card shadow mb-4">
 				<div class="card-header">
 					<strong class="card-title">Notification List</strong>
@@ -228,83 +234,77 @@
 				</div>
 			</div>
 		</div>
-	</div>-->
 	</div>
-	<div class="row btn-page">
-		<div class="col-lg-8 col-md-12">
-			<?php //$this->load->view('beranda/peta.php'); 
-			?>
-			<?php //$this->load->view('beranda/umkm.php'); 
-			?>
-		</div>
-		<div class="col-lg-4 col-md-12">
-			<?php //$this->load->view('beranda/kependudukan_2.php'); 
-			?>
-		</div>
-	</div>
-	<div class="row btn-page">
-		<div class="col-lg-12 col-md-12">
-			<?php //$this->load->view('beranda/layanan.php'); 
-			?>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<?php //$this->load->view('beranda/rekap_sppt.php'); 
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php //$this->load->view('beranda/pertanahan.php'); 
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php //$this->load->view('beranda/kependudukan_2.php'); 
-			?>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/artikel.php');
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/gallery.php');
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/gallery_youtube.php');
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/cctv.php');
-			?>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/helpdesk.php');
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/aparat_login.php');
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php $this->load->view('beranda/warga_login.php');
-			?>
-		</div>
-		<div class="col-md-3">
-			<?php //$this->load->view('beranda/pengunjung.php'); 
-			?>
-			<?php $this->load->view('beranda/artikel.php');
-			?>
-			<?php $this->load->view('beranda/changelog.php');
-			?>
-			<?php $this->load->view('beranda/video.php');
-			?>
-
-		</div>
-	</div>
-	</div>
-	</div>
+-->
+			<div class="row btn-page">
+				<div class="col-lg-8 col-md-12">
+					<?php //$this->load->view('beranda/peta.php'); 
+					?>
+					<?php //$this->load->view('beranda/umkm.php'); 
+					?>
+				</div>
+				<div class="col-lg-4 col-md-12">
+					<?php //$this->load->view('beranda/kependudukan_2.php'); 
+					?>
+				</div>
+			</div>
+			<div class="row btn-page">
+				<div class="col-lg-12 col-md-12">
+					<?php //$this->load->view('beranda/layanan.php'); 
+					?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<?php //$this->load->view('beranda/rekap_sppt.php'); 
+					?>
+				</div>
+				<div class="col-md-3">
+					<?php //$this->load->view('beranda/pertanahan.php'); 
+					?>
+				</div>
+				<div class="col-md-3">
+					<?php //$this->load->view('beranda/kependudukan_2.php');
+					?>
+				</div>
+			</div>
+			<div class="row btn-page">
+				<div class="col-md-3">
+					<?php $this->load->view('beranda/artikel.php');
+					?>
+				</div>
+				<div class="col-md-3">
+					<?php $this->load->view('beranda/gallery.php');
+					?>
+				</div>
+				<div class="col-md-3">
+					<?php $this->load->view('beranda/gallery_youtube.php');
+					?>
+				</div>
+				<div class="col-md-3">
+					<?php $this->load->view('beranda/cctv.php');
+					?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<?php $this->load->view('beranda/aparat_login.php'); ?>
+				</div>
+				<div class="col-md-6">
+					<?php $this->load->view('beranda/warga_login.php'); ?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<?php //$this->load->view('beranda/pengunjung.php');
+					?>
+					<?php $this->load->view('beranda/changelog.php'); ?>
+				</div>
+				<div class="col-md-4">
+					<?php $this->load->view('beranda/video.php'); ?>
+				</div>
+				<div class="col-md-4">
+					<?php $this->load->view('beranda/helpdesk.php'); ?>
+				</div>
+			</div>
 </main>

@@ -108,7 +108,7 @@
 																	<td><?=$data['username']?></td>
 																	<td><?=$data['nama']?></td>
 																	<td><?=$data['grup']?></td>
-																	<td><?=tgl_indo($data['last_login'])?></td>
+																	<td><?=tgl_indo2($data['last_login'])?></td>
 																</tr>
 															<?php endforeach; ?>
 														</tbody>

@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-define('FOTO_DEFAULT_PRIA', base_url() . 'assets/images/pengguna/kuser.png');
-define('FOTO_DEFAULT_WANITA', base_url() . 'assets/images/pengguna/wuser.png');
+define('FOTO_DEFAULT_PRIA', base_url() . 'assets/tiny/images/pengguna/kuser.png');
+define('FOTO_DEFAULT_WANITA', base_url() . 'assets/tiny/images/pengguna/wuser.png');
 
 define('MIME_TYPE_SIMBOL', serialize([
     'image/png',  'image/x-png', ]));
@@ -138,7 +138,7 @@ function UploadFoto($fupload_name, $old_foto, $tipe_file = '')
 
 function UploadGambar($fupload_name, $old_gambar)
 {
-    $vdir_upload = 'assets/front/slide/';
+    $vdir_upload = 'assets/tiny/front/slide/';
     if ($old_gambar != '') {
         unlink($vdir_upload . 'kecil_' . $old_gambar);
     }
@@ -257,7 +257,7 @@ function UploadGallery($fupload_name, $old_foto = '', $tipe_file = '')
 
 function UploadSimbolx($fupload_name, $old_gambar)
 {
-    $vdir_upload = 'assets/gis/simbol';
+    $vdir_upload = 'assets/tiny/gis/simbol';
     if ($old_gambar != '') {
         unlink($vdir_upload . 'kecil_' . $old_gambar);
         unlink($vdir_upload . $old_gambar);
@@ -647,7 +647,7 @@ function UploadResizeImage($lokasi, $dimensi, $jenis_upload, $fupload_name, $nam
 
 function UploadSimbol($fupload_name)
 {
-    $vdir_upload  = 'assets/images/gis/point/';
+    $vdir_upload  = 'assets/tiny/images/gis/point/';
     $vfile_upload = $vdir_upload . $fupload_name;
 
     move_uploaded_file($_FILES['simbol']['tmp_name'], $vfile_upload);

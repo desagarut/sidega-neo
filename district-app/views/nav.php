@@ -72,21 +72,22 @@
 
 	<nav class="vertnav navbar navbar-light">
 		<!-- nav bar -->
-		<div class="w-100 mb-4 d-flex">
-			<div class="row align-items-center">
-				<div class="col-3 text-center">
-					<span class="circle circle-sm bg-primary">
-						<i class="fe fe-16 fe-activity text-white mb-0"></i>
-					</span>
+		<div class="w-100 mb-4 flex-fill text-center">
+			<div class="row">
+				<div class="col-md-2">
+					<img src="<?= gambar_desa($desa['logo']); ?>" style="width:50px" class="img-circle" alt="<?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?>">
 				</div>
-				<div class="col">
-					<p class="small text-muted mb-0">AVG Orders</p>
-					<span class="h3 mb-0">$80</span>
+				<div class="col-md-10 nav-heading">
+					<span class="h5 mb-0 text-center"><?= ucwords($desa['nama_desa']); ?></span>
+					<p class="small text-muted mb-0"><?= ucwords($this->setting->sebutan_kecamatan_singkat . " " . $desa['nama_kecamatan']); ?></p>
+					<p class="small text-muted mb-0"><?= ucwords($this->setting->sebutan_kabupaten_singkat . " " . $desa['nama_kabupaten']); ?></p>
+
 				</div>
 			</div>
-<!--
+			<!--
 			<a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="<?= site_url('beranda') ?>">
-				<img src="<?= gambar_desa($desa['logo']); ?>" style="width:50px" class="img-circle" alt="<?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?>">
+				<img src="<? //= gambar_desa($desa['logo']); 
+							?>" style="width:50px" class="img-circle" alt="<?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?>">
 			</a>
 			<span class="navbar-brand mx-auto mt-2 flex-fill text-center"><?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?></span><br />
 								-->
