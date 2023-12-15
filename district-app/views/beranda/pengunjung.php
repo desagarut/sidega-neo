@@ -60,11 +60,13 @@
 				<h3 class="h6 mb-0">Pengunjung</h3>
 			</div>
 			<div class="col-auto">
-				<a class="small text-muted" href="#!">View all</a>
+				<a class="small text-muted" href="<?= site_url('pengunjung'); ?>">View all</a>
 			</div>
 		</div>
 	</div>
 	<div class="card-body">
-		<div id="chart" style="height:280px; width:400px"> </div>
+		<div class="col-auto">
+			<div id="chart" style="height:280px; width:100%"> </div>
+		</div>
 	</div>
 </div>

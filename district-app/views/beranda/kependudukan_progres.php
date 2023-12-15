@@ -7,7 +7,7 @@
             <h3 class="h6 mb-0">Progres Kependudukan</h3>
           </div>
           <div class="col-auto">
-            <a class="small text-muted" href="#!">View all</a>
+            <a class="small text-muted" href="<?= site_url('penduduk/clear'); ?>">View all</a>
           </div>
         </div>
       </div>
