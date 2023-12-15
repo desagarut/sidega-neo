@@ -1,4 +1,4 @@
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.js" integrity="sha512-/F8GvcdSUiYuL8wFMLRspx/PemIOOZBMiro7M9Wwn9V/wfzIH+RwIauASTQdJqaaZdSHBP4lmtq6VH5bbTNaJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
 <div class="card shadow mb-4">
   <div class="card-body">

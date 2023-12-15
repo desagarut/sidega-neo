@@ -1,41 +1,33 @@
-<!-- ======= Gallery Youtube ======= -->
-<div class="card">
-  <div class="card-header">
-    <h5>Gallery Youtube</h5>
-    <div class="card-header-right">
-      <div class="btn-group card-option">
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
-        <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-          <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-          <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-          <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-          <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card-body">
-    <?php foreach ($gallery_youtube as $data) : ?>
-      <?php if ($data['link']) : ?>
-        <ul class="products-list product-list-in-card">
-          <li class="item">
-            <div class="product-img">
-              <img src="<?= base_url("assets/files/logo/youtube.png") ?>" alt="Product Image">
-            </div>
-            <div class="product-info">
-              <a href="<?= site_url("gallery_youtube/sub_gallery/{$data['id']}") ?>" class="product-title" alt="<?= $data['nama'] ?>"><?= $data[nama] ?>
-              </a>
-              <span class="product-description">
-                <?= $data['tgl_upload'] ?>
-              </span>
-            </div>
-          </li>
-        </ul>
-      <?php endif; ?>
-    <?php endforeach; ?>
-  </div>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-  <div class="card-footer text-center">
-    <a href="<?= site_url("gallery_youtube") ?>" class="uppercase">View All Video</a>
+<div class="card shadow mb-4">
+  <div class="card-header">
+    <strong class="card-title">Gallery Youtube</strong>
+    <a class="float-right small text-muted" href="<?= site_url("gallery_youtube") ?>">View all</a>
+  </div>
+  <div class="card-body scrollable">
+    <div class="list-group list-group-flush my-n3">
+      <?php foreach ($gallery_youtube as $data) : ?>
+        <?php if ($data['link']) : ?>
+          <div class="list-group-item">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="<?= base_url("assets/tiny/files/logo/youtube.png") ?>" alt="<?= $data['nama'] ?>" class="avatar-img" style="height:40px">
+              </div>
+              <div class=" col-md-8">
+                <small><strong>
+                    <?php if ($this->CI->cek_hak_akses('u')) : ?>
+                      <a href="<?= site_url("gallery/sub_gallery/{$data['id']}") ?>" class="product-title" alt="<?= strtolower($data['nama']); ?>"><?= strtolower($data['nama']); ?>
+                      </a>
+                    <?php else : ?>
+                      <?= strtolower($data['nama']); ?>
+                    <?php endif; ?></strong></small>
+                <div class="my-0 text-muted small"><?= $data['tgl_upload'] ?></div>
+              </div>
+            </div>
+          </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </div>
   </div>
 </div>

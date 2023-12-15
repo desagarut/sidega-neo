@@ -1,39 +1,22 @@
-<div class="card">
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+
+<div class="card shadow mb-4">
   <div class="card-header">
-    <h5>CCTV</h5>
-    <div class="card-header-right">
-      <div class="btn-group card-option">
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
-        <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-          <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-          <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-          <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-          <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-        </ul>
-      </div>
-    </div>
+    <strong class="card-title">CCTV</strong>
+    <a class="float-right small text-muted" href="<?= site_url("gallery_cctv") ?>">View all</a>
   </div>
-  <div class="card-body">
-    <div class="col-md-12">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <?php foreach ($gallery_cctv as $data) : ?>
-            <?php //if ($data['link']) : 
-            ?>
-            <div class="item active">
-              <iframe width="100%" height="130" src="<?= $data["link"]; ?>" frameborder="0" allowfullscreen></iframe>
-              <div class="carousel-caption">
-                <h6 class="mb-0"><?= strtoupper($data['nama']) ?></h6>
-              </div>
+  <div class="card-body scrollable">
+    <div class="list-group list-group-flush my-n3">
+      <?php foreach ($gallery_cctv as $data) : ?>
+        <div class="list-group-item">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <iframe class="mb-1" width="100%" height="170" src="<?= $data["link"]; ?>" frameborder="0" allowfullscreen></iframe>
+              <h6 class="mb-1"><?= strtoupper($data['nama']) ?></h6>
             </div>
-            <?php //endif; 
-            ?>
-          <?php endforeach; ?>
+          </div>
         </div>
-      </div>
+      <?php endforeach; ?>
     </div>
-  </div>
-  <div class="card-footer text-center scroller">
-    <a href="<?= site_url('gallery_cctv'); ?>"> Semua CCTV</a>
   </div>
 </div>

@@ -187,6 +187,7 @@
 		{
 			$lokasi_file = $_FILES[$gambar]['tmp_name'];
 			$nama_file   = $fp."_".$_FILES[$gambar]['name'];
+			$nama_file = str_replace(' ', '-', $nama_file); // normalkan nama file
 			if (!empty($lokasi_file))
 			{
 				$tipe_file = TipeFile($_FILES[$gambar]);

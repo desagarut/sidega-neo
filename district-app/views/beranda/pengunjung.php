@@ -65,6 +65,6 @@
 		</div>
 	</div>
 	<div class="card-body">
-		<div id="chart" style="height:280px; width:260px"> </div>
+		<div id="chart" style="height:280px; width:400px"> </div>
 	</div>
 </div>

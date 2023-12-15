@@ -25,8 +25,8 @@ class Penduduk extends Admin_Controller
 	public function clear()
 	{
 		$this->clear_session();
-		//redirect('penduduk');
-		redirect($this->controller);
+		redirect('penduduk');
+		//redirect($this->controller);
 	}
 
 	public function index($p = 1, $o = 0)
@@ -68,14 +68,14 @@ class Penduduk extends Admin_Controller
 
 		$data['func'] = 'index';
 		$data['set_page'] = $this->_set_page;
-		$data['paging'] = $this->penduduk_model->paging($p, $o);
-		$data['main'] = $this->penduduk_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+		//$data['paging'] = $this->penduduk_model->paging($p, $o);
+		$data['main'] = $this->penduduk_model->list_data();
 		$data['list_dusun'] = $this->wilayah_model->list_dusun();
 		$data['list_status_dasar'] = $this->referensi_model->list_data('tweb_status_dasar');
 		$data['list_status_penduduk'] = $this->referensi_model->list_data('tweb_penduduk_status');
 		$data['list_jenis_kelamin'] = $this->referensi_model->list_data('tweb_penduduk_sex');
 
-		$this->set_minsidebar(0);
+		$this->set_minsidebar(1);
 
 		$this->render('sid/kependudukan/penduduk', $data);
 	}

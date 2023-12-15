@@ -1,22 +1,18 @@
-<div class="card">
+<div class="card shadow mb-4">
   <div class="card-header">
-    <h5>Video Profil</h5>
-    <div class="card-header-right">
-      <div class="btn-group card-option">
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
-        <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-          <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-          <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-          <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-          <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-        </ul>
+    <strong class="card-title">Video Profil</strong>
+    <a class="float-right small text-muted" href="<?= site_url("web") ?>">View all</a>
+  </div>
+  <div class="card-body" data-simplebar style="height:355px; overflow-y: auto; overflow-x: hidden;">
+    <div class="list-group list-group-flush my-n3">
+      <div class="list-group-item">
+        <div class="row align-items-center">
+          <div class="col-auto text-center">
+            <iframe height="260px" width="355px" class="embed-responsive-item mb-1" src="https://www.youtube.com/embed/<?= $setting_desa["video"]; ?>" title="Profil Desa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-sm btn-success mb-1" title="Ubah Data"><i class="fa fa-edit"></i> Ubah Video</a>
+            </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card-body">
-    <iframe height="160px" width="250px" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $setting_desa["video"]; ?>" title="Profil Desa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div class="card-footer text-center scroller">
-    <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Data"><i class="fa fa-edit"></i> Ubah Video</a>
   </div>
 </div>
