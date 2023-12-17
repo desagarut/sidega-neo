@@ -13,11 +13,14 @@
 		min-height: 275px;
 	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Rincian Persil</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('home') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('home') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('data_persil/clear') ?>"> Daftar Persil</a></li>
 			<li class="active">Rincian Persil</li>
 		</ol>
@@ -28,11 +31,11 @@
 				<?php $this->load->view('data_persil/menu_kiri.php') ?>
 			</div>
 			<div class="col-md-8 col-lg-9">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-header with-border">
-						<a href="<?= site_url('data_persil/clear') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar PersilA"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Persil</a>
+						<a href="<?= site_url('data_persil/clear') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar PersilA"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Persil</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">

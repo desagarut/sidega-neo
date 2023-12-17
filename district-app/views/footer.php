@@ -1,43 +1,66 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<script src="<?= base_url() ?>assets/tiny/js/analytics.js"></script>
+<script src="<?= base_url() ?>assets/js/analytics.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
+<script src="<?= base_url() ?>assets/js/popper.min.js"></script>
+<script src="<?= base_url() ?>assets/js/moment.min.js"></script>
+<script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
+<script src="<?= base_url() ?>assets/js/simplebar.min.js"></script>
+<script src='<?= base_url() ?>assets/js/daterangepicker.js'></script>
+<script src='<?= base_url() ?>assets/js/jquery.stickOnScroll.js'></script>
+<script src="<?= base_url() ?>assets/js/tinycolor-min.js"></script>
+<script src="<?= base_url() ?>assets/js/config.js"></script>
+<script src="<?= base_url() ?>assets/js/d3.min.js"></script>
+<script src="<?= base_url() ?>assets/js/topojson.min.js"></script>
+<script src="<?= base_url() ?>assets/js/datamaps.all.min.js"></script>
+<script src="<?= base_url() ?>assets/js/datamaps-zoomto.js"></script>
+<script src="<?= base_url() ?>assets/js/datamaps.custom.js"></script>
+<script src="<?= base_url() ?>assets/js/Chart.min.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>assets/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url() ?>assets/js/select2.min.js"></script>
 
-<script src="<?= base_url() ?>assets/tiny/js/jquery.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/popper.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/moment.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/bootstrap.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/simplebar.min.js"></script>
-<script src='<?= base_url() ?>assets/tiny/js/daterangepicker.js'></script>
-<script src='<?= base_url() ?>assets/tiny/js/jquery.stickOnScroll.js'></script>
-<script src="<?= base_url() ?>assets/tiny/js/tinycolor-min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/config.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/d3.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/topojson.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/datamaps.all.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/datamaps-zoomto.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/datamaps.custom.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/Chart.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/jquery.dataTables.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/dataTables.bootstrap4.min.js"></script>
 <script>
   /* defind global options */
   Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
   Chart.defaults.global.defaultFontColor = colors.mutedColor;
 </script>
-<script src="<?= base_url() ?>assets/tiny/js/gauge.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/jquery.sparkline.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/apexcharts.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/apexcharts.custom.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/apps.js"></script>
-
-<script src="<?= base_url() ?>assets/tiny/js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/messages_id.js"></script>
+<script src="<?= base_url() ?>assets/js/gauge.min.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery.sparkline.min.js"></script>
+<script src="<?= base_url() ?>assets/js/apexcharts.min.js"></script>
+<script src="<?= base_url() ?>assets/js/apexcharts.custom.js"></script>
+<script src="<?= base_url() ?>assets/js/apps.js"></script>
+<script src="<?= base_url() ?>assets/js/validasi.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/js/messages_id.js"></script>
 <!-- Numeral js -->
-<script src="<?= base_url() ?>assets/tiny/js/numeral.min.js"></script>
+<script src="<?= base_url() ?>assets/js/numeral.min.js"></script>
 <!-- Script-->
-<script src="<?= base_url() ?>assets/tiny/js/script.js"></script>
+<script src="<?= base_url() ?>assets/js/script.js"></script>
 
+<!-- OpenStreetMap Js-->
+<script src="<?= base_url() ?>assets/js/osm/leaflet.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/turf.min.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet-geoman.min.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.filelayer.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/togeojson.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/togpx.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet-providers.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/L.Control.Locate.min.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.markercluster.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/peta.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet-measure-path.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/apbdes_manual.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/mapbox-gl.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet-mapbox-gl.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/shp.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.shpfile.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.groupedlayercontrol.min.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.browser.print.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.browser.print.utils.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.browser.print.sizes.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/dom-to-image.min.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/toastr.min.js"></script>
 
 <!-- NOTIFICATION-->
 <script type="text/javascript">

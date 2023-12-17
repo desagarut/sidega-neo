@@ -1,20 +1,19 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Data Terdata Suplemen</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url("suplemen/rincian/$suplemen[id]"); ?>"></i> Rincian Suplemen</a></li>
 			<li class="active">Data Terdata Suplemen</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url("suplemen/rincian/$suplemen[id]"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Rincian Suplemen</a>
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url("suplemen/rincian/$suplemen[id]"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Rincian Suplemen</a>
 					</div>
 					<div class="box-body ">
 						<h5><b>Rincian Suplemen</b></h5>

@@ -1,11 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Daftar Usulan Program / Kegiatan Tingkat <?= ucwords($this->setting->sebutan_dusun); ?> </h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pembangunan') ?>"> Pembangunan</a></li>
 			<li class="active">Daftar Usulan Program / Kegiatan</li>
 		</ol>
@@ -26,8 +29,8 @@
 											<?php if ($this->CI->cek_hak_akses('u')) : ?>
 												<a href="<?= site_url('pembangunan/form_usulan_masyarakat') ?>" class="btn btn-success btn-sm" title="Tambah Data Baru"><i class="feather icon-plus"></i> Tambah Usulan</a>
 											<?php endif; ?>
-											<a href="<?= site_url($this->controller . '/dialog/cetak'); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Rencana Kerja Pembangunan"><i class="fa fa-print "></i> Cetak</a>
-											<a href="<?= site_url($this->controller . '/dialog/unduh'); ?>" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Rencana Kerja Pembangunan"><i class="fa fa-download"></i> Unduh</a>
+											<a href="<?= site_url($this->controller . '/dialog/cetak'); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Rencana Kerja Pembangunan"><i class="fe fe-printer "></i> Cetak</a>
+											<a href="<?= site_url($this->controller . '/dialog/unduh'); ?>" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Rencana Kerja Pembangunan"><i class="fe fe-download"></i> Unduh</a>
 										</div>
 										<div class="col-sm-2">
 											<select class="form-control input-sm select2 pull-right" id="tahun" name="tahun">
@@ -112,46 +115,46 @@
 					'data': function(data) {
 						let status;
 						if (data.status == 1) {
-							status = `TK. Wilayah: <i class="fa fa-check" style="color: green"></i>`
+							status = `TK. Wilayah: <i class="fe fe-check" style="color: green"></i>`
 						} else {
-							status = `TK. Wilayah: <i class="fa fa-times" style="color: red"></i>`
+							status = `TK. Wilayah: <i class="fe fe-times" style="color: red"></i>`
 						}
 
 						let status_usulan;
 						if (data.status_usulan == 1) {
-							status_usulan = `TK. Des/Kel : <i class="fa fa-check" style="color: green"></i>`
+							status_usulan = `TK. Des/Kel : <i class="fe fe-check" style="color: green"></i>`
 						} else {
-							status_usulan = `TK. Des/Kel : <i class="fa fa-times" style="color: red"></i>`
+							status_usulan = `TK. Des/Kel : <i class="fe fe-times" style="color: red"></i>`
 						}
 
 						let status_vote;
 						if (data.status_vote == 1) {
-							status_vote = `Status prioritas : <i class="fa fa-check" style="color: green"></i>`
+							status_vote = `Status prioritas : <i class="fe fe-check" style="color: green"></i>`
 						} else {
-							status_vote = `Status prioritas : <i class="fa fa-times" style="color: red"></i>`
+							status_vote = `Status prioritas : <i class="fe fe-times" style="color: red"></i>`
 						}
 
 						let status_rkp;
 						if (data.status_rkp == 1) {
-							status_rkp = `Status RKPDes : <i class="fa fa-check" style="color: green"></i>`
+							status_rkp = `Status RKPDes : <i class="fe fe-check" style="color: green"></i>`
 						} else if (data.status_rkp == 0) {
-							status_rkp = `Status RKPDes : <i class="fa fa-times" style="color: red"></i>`
+							status_rkp = `Status RKPDes : <i class="fe fe-times" style="color: red"></i>`
 						} else {
-							status_rkp = `Status RKPDes : <i class="fa fa-minus" style="color: grey"></i>`
+							status_rkp = `Status RKPDes : <i class="fe fe-minus" style="color: grey"></i>`
 						}
 
 						let status_pelaksanaan;
 						if (data.status_pelaksanaan == 1) {
-							status_pelaksanaan = `Pelaksanaan : <i class="fa fa-check" style="color: green"></i>`
+							status_pelaksanaan = `Pelaksanaan : <i class="fe fe-check" style="color: green"></i>`
 						} else if (data.status_pelaksanaan == 0) {
-							status_pelaksanaan = `Pelaksanaan : <i class="fa fa-times" style="color: red"></i>`
+							status_pelaksanaan = `Pelaksanaan : <i class="fe fe-times" style="color: red"></i>`
 						} else {
-							status_pelaksanaan = `Pelaksanaan : <i class="fa fa-minus" style="color: grey"></i>`
+							status_pelaksanaan = `Pelaksanaan : <i class="fe fe-minus" style="color: grey"></i>`
 						}
 
 						return `
 						<div class="btn-group text-center">
-							<a href="#" class="btn btn-block btn-social btn-sm btn-success" data-toggle="dropdown" title="Pilihan Aksi"><i class="fa fa-arrow-down"></i> Pilihan Aksi </a>
+							<a href="#" class="btn btn-block btn-social btn-sm btn-success" data-toggle="dropdown" title="Pilihan Aksi"><i class="fe fe-arrow-down"></i> Pilihan Aksi </a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="<?= site_url('pembangunan/detail_usulan/'); ?>${data.id}">Lihat Usulan</a></li>
 								<li><a href="<?= site_url('pembangunan/form_usulan_masyarakat/'); ?>${data.id}">Ubah Usulan</a></li>

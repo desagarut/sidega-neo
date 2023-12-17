@@ -1,19 +1,18 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Rekam Surat Perseorangan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluar')?>"> Arsip Layanan Surat</a></li>
 			<li class="active">Rekam Surat Perseorangan</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url("keluar")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Wilayah">
-							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Arsip Layanan Surat
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url("keluar")?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali Ke Daftar Wilayah">
+							<i class="fe fe-arrow-circle-left "></i>Kembali Ke Arsip Layanan Surat
            	</a>
 					</div>
 					<div class="box-header with-border">
@@ -58,7 +57,7 @@
 							</table>
 						</div>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -73,28 +72,28 @@
 																<th>Aksi</th>
 																<th>Kode Surat</th>
 																<?php if ($o==2): ?>
-																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/1")?>">No Urut <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/1")?>">No Urut <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==1): ?>
-																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/2")?>">No Urut <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/2")?>">No Urut <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/1")?>">No Urut <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/1")?>">No Urut <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>Jenis Surat</th>
 																<?php if ($o==4): ?>
-																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/3")?>">Nama Penduduk <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/3")?>">Nama Penduduk <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==3): ?>
-																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/4")?>">Nama Penduduk <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/4")?>">Nama Penduduk <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/3")?>">Nama Penduduk <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/3")?>">Nama Penduduk <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>Keterangan</th>
 																<th>Ditandatangani Oleh</th>
 																<?php if ($o==6): ?>
-																	<th nowrap><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/5")?>">Tanggal <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/5")?>">Tanggal <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==5): ?>
-																	<th nowrap><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/6")?>">Tanggal <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/6")?>">Tanggal <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/5")?>">Tanggal <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/perorangan/{$nik['no']}/$p/5")?>">Tanggal <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>User</th>
 															</tr>
@@ -116,14 +115,14 @@
 																	<td nowrap>
 																		<?php
 																			if (is_file($theFile)): ?>
-																				<a href="<?= base_url(LOKASI_ARSIP.$berkas)?>" class="btn btn-social btn-box bg-purple btn-sm" title="Unduh Surat" target="_blank"><i class="fa fa-file-word-o"></i> Surat</a>
+																				<a href="<?= base_url(LOKASI_ARSIP.$berkas)?>" class="btn btn-social btn-box bg-purple btn-sm" title="Unduh Surat" target="_blank"><i class="fe fe-file-word-o"></i> Surat</a>
 																			<?php	endif; ?>
 																		<?php
 																			if (is_file($lampiran)): ?>
-																				<a href="<?= base_url(LOKASI_ARSIP.$data['lampiran'])?>" target="_blank" class="btn btn-social btn-box bg-olive btn-sm" title="Unduh Lampiran"><i class="fa fa-paperclip"></i>  Lampiran</a>
+																				<a href="<?= base_url(LOKASI_ARSIP.$data['lampiran'])?>" target="_blank" class="btn btn-social btn-box bg-olive btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip"></i>  Lampiran</a>
 																			<?php	endif; ?>
-																		<a href="<?= site_url("keluar/edit_keterangan/$data[id]")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i></a>
-																		<a href="#" data-href="<?= site_url("keluar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																		<a href="<?= site_url("keluar/edit_keterangan/$data[id]")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
+																		<a href="#" data-href="<?= site_url("keluar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																	</td>
 																	<td><?= $data['kode_surat']?></td>
 																	<td><?= $data['no_surat']?></td>

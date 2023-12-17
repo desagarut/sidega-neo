@@ -2,21 +2,21 @@
   <section class="content-header">
     <h1>Detil Pemudik</h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="<?= site_url('covid19') ?>"><i class="fa fa-home"></i> Data Pemudik</a></li>
+      <li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
+      <li><a href="<?= site_url('covid19') ?>"><i class="fe fe-home"></i> Data Pemudik</a></li>
       <li class="active">Detil Pemudik</li>
     </ol>
   </section>
   <section class="content" id="maincontent">
     <div class="row">
       <div class="col-md-12">
-        <div class="box box-info">
+        <div class="card card-shadow">
 
           <div class="box-header with-border">
-            <a href="<?= site_url('covid19') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Data Pemudik</a>
+            <a href="<?= site_url('covid19') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Data Pemudik</a>
             <?php if ($penduduk['id_status'] === '2' or $penduduk['id_status'] === '3') : ?>
               <a href="#" class="btn btn-social btn-success btn-sm" data-toggle="modal" data-target="#edit-warga">
-                <i class="fa fa-edit"></i>
+                <i class="fe fe-edit"></i>
                 Ubah Data Penduduk Non Domisili
               </a>
             <?php endif ?>
@@ -101,7 +101,7 @@
     <div class='modal-content'>
       <div class='modal-header'>
         <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-        <h4 class='modal-title' id='myModalLabel'><i class='fa fa-plus text-green'></i> Ubah Penduduk Pendatang / Tidak Tetap</h4>
+        <h4 class='modal-title' id='myModalLabel'><i class='fe fe-plus text-green'></i> Ubah Penduduk Pendatang / Tidak Tetap</h4>
       </div>
 
       <div class='modal-body'>
@@ -111,9 +111,9 @@
       </div>
 
       <div class='modal-footer'>
-        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
         <a class='btn-ok'>
-          <button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fa fa-trash-o'></i> Simpan</button>
+          <button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
         </a>
       </div>
     </div>

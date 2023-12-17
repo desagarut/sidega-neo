@@ -7,7 +7,7 @@
 </style>
 <div class="box box-primary box-solid">
 	<div class="box-header">
-		<h3 class="box-title"><a href="<?= site_url("arsip")?>"><i class="fa fa-archive"></i> Arsip Artikel</a></h3>
+		<h3 class="box-title"><a href="<?= site_url("arsip")?>"><i class="fe fe-archive"></i> Arsip Artikel</a></h3>
 	</div>
 	<div id="arsip_artikel" class="box-body">
 		<ul class="nav nav-tabs">
@@ -30,7 +30,7 @@
 											<img class="img-fluid img-thumbnail" src="<?= base_url("assets/images/404-image-not-found.jpg")?>"/>
 										<?php endif;?>
 										<div align="justify">
-											<small><span class="meta_date"><?= tgl_indo($arsip['tgl_upload']) ?> | <i class="fa fa-eye"></i> <?= hit($arsip['hit']) ?></span><br><font color="green"><?= $arsip['judul']?></font></small>
+											<small><span class="meta_date"><?= tgl_indo($arsip['tgl_upload']) ?> | <i class="fe fe-eye"></i> <?= hit($arsip['hit']) ?></span><br><font color="green"><?= $arsip['judul']?></font></small>
 										</div>
 									</a>
 								</td>

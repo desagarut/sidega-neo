@@ -1,17 +1,20 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Data Peserta Program/Kegiatan Pembinaan Kemasyarakatan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pembinaan_masyarakat')?>"> Pembinaan Kemasyarakatan</a></li>
 			<li><a href="<?= site_url("pembinaan_masyarakat/detail/$detail[id]")?>"> Rincian Program Bantuan</a></li>
 			<li class="active">Data Peserta </li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-header with-border">
-				<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program</a>
+				<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program</a>
 			</div>
 			<div class="box-body">
 				<?php include('district-app/views/pembinaan_masyarakat/rincian.php'); ?>

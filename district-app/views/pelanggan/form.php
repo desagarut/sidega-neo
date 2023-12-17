@@ -5,12 +5,12 @@
 <section class="content-header">
 	<h1>Info Layanan Pelanggan</h1>
 	<ol class="breadcrumb">
-		<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+		<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 		<li class="active">Info Layanan Pelanggan</li>
 	</ol>
 </section>
 <section class="content">
-	<div class="box box-info">
+	<div class="card card-shadow">
 		<div class="box-body">
 			<div class="row">
 				<div class="col-sm-12">

@@ -1,20 +1,23 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-
+<!--
 <link rel="stylesheet" href="<?= base_url()?>assets/bootstrap/css/bootstrap.min.css" media="screen" type="text/css" />
+-->
 <style type="text/css">
 	.table, th {
 		text-align: center;
 	}
 </style>
+
+
 <div class="modal-body">
 	<form id="mainform" name="mainform" action="" method="post">
 		<input type="hidden" id="untuk_web" value="<?= $untuk_web?>">
 		<div class="row">
 			<div class="col-md-12">
-				<h4 class="box-title text-center"><b>Data Kependudukan Menurut <?= ($stat);?></b></h4>
+				<h4 class="box-title text-center"><b>Data Penduduk Menurut <?= ($stat);?></b></h4>
 				<center>
-					<a class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Grafik Data" onclick="grafikType();"><i class="fa fa-bar-chart"></i>&nbsp;&nbsp;Grafik Data&nbsp;&nbsp;</a>
-					<a class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Pie Data" onclick="pieType();"><i class="fa fa-pie-chart"></i>&nbsp;&nbsp;Pie Data&nbsp;&nbsp;</a>
+					<a class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Grafik Data" onclick="grafikType();"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Grafik Data&nbsp;&nbsp;</a>
+					<a class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Pie Data" onclick="pieType();"><i class="fe fe-pie-chart"></i>&nbsp;&nbsp;Pie Data&nbsp;&nbsp;</a>
 				</center>
 				<hr>
 				<div id="chart" hidden="true"> </div>

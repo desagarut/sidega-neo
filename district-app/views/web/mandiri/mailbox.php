@@ -9,7 +9,7 @@
   <section class="content-header">
     <h1> Mailbox </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="#"><i class="fe fe-dashboard"></i> Home</a></li>
       <li class="active">Mailbox</li>
     </ol>
   </section>
@@ -25,14 +25,14 @@
       <!-- /.col -->
 
       <div class="col-md-9">
-        <div class="box box-info">
+        <div class="card card-shadow">
           <div class="box-header">
             <h3 class="box-title">Pesan</h3>
             <div class="box-tools">
               <div class="input-group input-group-sm" style="width: 150px;">
                 <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
                 <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  <button type="submit" class="btn btn-default"><i class="fe fe-search"></i></button>
                 </div>
               </div>
             </div>
@@ -52,12 +52,12 @@
               <?php foreach ($main_list as $data) : ?>
                 <tr class="<?php ($data['status'] != 1) and print('unread') ?>">
                   <td><?= $data['no'] ?></td>
-                  <td nowrap><a href="<?= site_url("mailbox_web/baca_pesan/{$kat}/{$data['id']}") ?>" class="btn btn-social bg-navy btn-box btn-sm" title="Baca pesan"><i class="fa fa-envelope-o"></i> Baca</a>
+                  <td nowrap><a href="<?= site_url("mailbox_web/baca_pesan/{$kat}/{$data['id']}") ?>" class="btn btn-social bg-navy btn-box btn-sm" title="Baca pesan"><i class="fe fe-envelope-o"></i> Baca</a>
                     <?php if ($kat != 2) : ?>
                       <?php if ($data['status'] == 1) : ?>
-                        <a href="<?= site_url('mailbox_web/pesan_unread/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai belum dibaca"><i class="fa fa-envelope-o"></i></a>
+                        <a href="<?= site_url('mailbox_web/pesan_unread/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai belum dibaca"><i class="fe fe-envelope-o"></i></a>
                       <?php else : ?>
-                        <a href="<?= site_url('mailbox_web/pesan_read/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai sudah dibaca"><i class="fa fa-envelope-open-o"></i></a>
+                        <a href="<?= site_url('mailbox_web/pesan_read/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai sudah dibaca"><i class="fe fe-envelope-open-o"></i></a>
                       <?php endif; ?>
                     <?php endif ?>
                   </td>
@@ -85,7 +85,7 @@
 
 			<div class="box-header">
 
-				<a href="<?= site_url('mailbox_web/form') ?>" class="btn text-white btn-box btn-social btn-success btn-md inline-block" title="Tulis Pesan"><i class="fa fa-plus"></i> Tulis Pesan</a>
+				<a href="<?= site_url('mailbox_web/form') ?>" class="btn text-white btn-box btn-social btn-success btn-md inline-block" title="Tulis Pesan"><i class="fe fe-plus"></i> Tulis Pesan</a>
 
 			</div>
 
@@ -145,17 +145,17 @@
 
 									<td nowrap>
 
-										<a href="<?= site_url("mailbox_web/baca_pesan/{$kat}/{$data['id']}") ?>" class="btn bg-navy btn-box btn-sm" title="Baca pesan"><i class="fa fa-list">&nbsp;</i></a>
+										<a href="<?= site_url("mailbox_web/baca_pesan/{$kat}/{$data['id']}") ?>" class="btn bg-navy btn-box btn-sm" title="Baca pesan"><i class="fe fe-list">&nbsp;</i></a>
 
 										<?php if ($kat != 2) : ?>
 
 											<?php if ($data['status'] == 1) : ?>
 
-												<a href="<?= site_url('mailbox_web/pesan_unread/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai belum dibaca"><i class="fa fa-envelope-o"></i></a>
+												<a href="<?= site_url('mailbox_web/pesan_unread/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai belum dibaca"><i class="fe fe-envelope-o"></i></a>
 
 												<?php else : ?>
 
-													<a href="<?= site_url('mailbox_web/pesan_read/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai sudah dibaca"><i class="fa fa-envelope-open-o"></i></a>
+													<a href="<?= site_url('mailbox_web/pesan_read/' . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai sudah dibaca"><i class="fe fe-envelope-open-o"></i></a>
 
 											<?php endif; ?>
 

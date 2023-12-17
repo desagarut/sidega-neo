@@ -1,11 +1,14 @@
 <style type="text/css">
 	.nowrap { white-space: nowrap; }
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Laporan Keuangan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keuangan/laporan')?>">Laporan Keuangan</a></li>
 			<li class="active">Grafik Pelaksanaan Belanja Desa</li>
 		</ol>

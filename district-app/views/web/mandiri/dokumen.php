@@ -21,7 +21,7 @@ table.table th {
       <div class='col-md-12'>
         <div class="box box-info" style="margin-top: 10px;">
           <div class="box-body">
-            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
+            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fe fe-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
                 <thead>
@@ -48,13 +48,13 @@ table.table th {
     <div class="modal-content">
       <div class="modal-header btn-danger">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle"></i> &nbsp;Peringatan</h4>
+        <h4 class="modal-title" id="myModalLabel"><i class="fe fe-exclamation-triangle"></i> &nbsp;Peringatan</h4>
       </div>
       <div class="modal-body">
         <p id="kata_peringatan"></p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+        <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@ table.table th {
                       <input type="text" class="form-control" id="file_path" name="satuan">
                       <input type="file" class="hidden" id="file" name="satuan">
                       <span class="input-group-btn">
-                      <button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+                      <button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
                       </span> </div>
                     <span class="help-block"><code>Kosongkan jika tidak ingin mengubah dokumen.</code></span> </div>
                   <?php if (!empty($kk)): ?>
@@ -128,8 +128,8 @@ table.table th {
           </div>
         </div>
         <div class="modal-footer">
-          <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-          <button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="upload_btn"><i class='fa fa-check'></i> Simpan</button>
+          <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+          <button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="upload_btn"><i class='fe fe-check'></i> Simpan</button>
         </div>
       </form>
     </div>

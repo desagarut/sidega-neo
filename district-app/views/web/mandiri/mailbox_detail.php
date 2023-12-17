@@ -8,7 +8,7 @@
         <small>#</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fe fe-dashboard"></i> Home</a></li>
         <li class="active">Mailbox</li>
       </ol>
     </section>
@@ -19,7 +19,7 @@
                 <?php $this->load->view('web/mandiri/mailbox_menu.php');?>
             </div>
             <div class="col-md-9">
-              <div class="box box-info">
+              <div class="card card-shadow">
                 <div class="box-header">
                     <h3 class="box-title">Balas Pesan</h3>
                     <?php if($pesan) : ?>
@@ -28,8 +28,8 @@
                                 <div class="col-md-12">
                                     <div class="box no-border">
                                         <div class="box-header">
-                                            <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
-                                                <i class="fa fa-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
+                                            <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
+                                                <i class="fe fe-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
                                             </a>
                                         </div>
                                         <div class="box-body">
@@ -61,8 +61,8 @@
                                             </div>
                                         </div>
                                         <div class='box-footer'>
-                                            <div class='col-xs-12'>
-                                                <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-reply'></i> Balas Pesan</button>
+                                            <div class='col-md-12'>
+                                                <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-reply'></i> Balas Pesan</button>
                                             </div>
                                         </div>
                 
@@ -71,7 +71,7 @@
                             </div>
                         </form>
                         <?php else : ?>
-                            <div class="alert alert-danger inline-block"><i class="fa fa-warning"></i> Ups, terjadi kesalahan!</div>
+                            <div class="alert alert-danger inline-block"><i class="fe fe-warning"></i> Ups, terjadi kesalahan!</div>
                     <?php endif ?>
                 </div>
             </div>

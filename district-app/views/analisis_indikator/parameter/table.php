@@ -6,7 +6,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<li><a href="<?= site_url('analisis_master') ?>"> Master Analisis</a></li>
 
@@ -36,15 +36,15 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					<div class="card card-shadow">
 
             <div class="box-header with-border">
 
-							<a href="<?= site_url("analisis_indikator/form_parameter/$analisis_indikator[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Ukuran Ukuran/Nilai Baru"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Parameter"><i class="fa fa-plus"></i> Tambah Ukuran Ukuran/Nilai Baru</a>
+							<a href="<?= site_url("analisis_indikator/form_parameter/$analisis_indikator[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Ukuran Ukuran/Nilai Baru"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Parameter"><i class="fe fe-plus"></i> Tambah Ukuran Ukuran/Nilai Baru</a>
 
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("analisis_indikator/p_delete_all/$analisis_indikator[id]") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("analisis_indikator/p_delete_all/$analisis_indikator[id]") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 
-							<a href="<?= site_url() ?>analisis_indikator" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Indikator Analisis</a>
+							<a href="<?= site_url() ?>analisis_indikator" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Indikator Analisis</a>
 
 						</div>
 
@@ -112,11 +112,11 @@
 
 																			<td nowrap>
 
-																				<a href="<?= site_url("analisis_indikator/form_parameter/$analisis_indikator[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Parameter"><i class='fa fa-edit'></i></a>
+																				<a href="<?= site_url("analisis_indikator/form_parameter/$analisis_indikator[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Parameter"><i class='fe fe-edit'></i></a>
 
 																				<?php if ($analisis_master['jenis']!=1): ?>
 
-																					<a href="#" data-href="<?= site_url("analisis_indikator/p_delete/$analisis_indikator[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																					<a href="#" data-href="<?= site_url("analisis_indikator/p_delete/$analisis_indikator[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 
 																				<?php endif; ?>
 

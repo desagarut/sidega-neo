@@ -36,7 +36,7 @@
 </style>
 <div class="box box-primary box-solid">
 	<div class="box-header">
-		<h3 class="box-title"><i class="fa fa-external-link"></i> Sinergi Program</h3>
+		<h3 class="box-title"><i class="fe fe-external-link"></i> Sinergi Program</h3>
 	</div>
 	<div id="sinergi_program" class="box-body">
 		<table>

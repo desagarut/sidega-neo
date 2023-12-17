@@ -59,11 +59,14 @@
 	}
 
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Simbol Lokasi</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Pengaturan Simbol Lokasi</li>
 		</ol>
 	</section>
@@ -74,11 +77,11 @@
           <?php $this->load->view('plan/nav.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
-							<a href="#" id="btn_ikon" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Simbol Lokasi</a>
+							<a href="#" id="btn_ikon" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i>Tambah Simbol Lokasi</a>
 							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Salin Simbol Default">
-								<i class="fa fa-copy"></i>Salin Simbol Default
+								<i class="fe fe-copy"></i>Salin Simbol Default
             	</a>
 						</div>
 						<div class="box-body">
@@ -91,7 +94,7 @@
 													<label>
 														<img src="<?= base_url(LOKASI_SIMBOL_LOKASI)?><?= $data['simbol']?>">
 														<span class="glyphicon-class"><?= $data['simbol']?></span>
-														<a href="#" data-href="<?= site_url("point/delete_simbol/$data[id]/$data[simbol]")?>" class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+														<a href="#" data-href="<?= site_url("point/delete_simbol/$data[id]/$data[simbol]")?>" class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 													</label>
 												</li>
 											<?php endforeach;?>
@@ -124,7 +127,7 @@
 										<input type="text" class="form-control" id="file_path">
 										<input id="file" type="file" class="hidden" name="simbol">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 							</div>
@@ -132,8 +135,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="simpan"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="simpan"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>

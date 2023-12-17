@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Profil Desa</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('beranda') ?>"></i> Potensi Umum</a></li>
 			<li class="active">Batas Wilayah</li>
 		</ol>
@@ -14,10 +17,10 @@
 					<?php $this->load->view('potensi/menu.php')?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<a href="<?= site_url('potensi_umum/form') ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
-								<i class="fa fa-plus"></i>Tambah Data
+								<i class="fe fe-plus"></i>Tambah Data
 							</a>
 						</div>
 						<div class="box-body">
@@ -102,18 +105,18 @@
 					'data': function(data) {
 						let status;
 						if (data.status == 1) {
-							status = `<a href="<?= site_url('potensi_umum/lock/') ?>${data.id}" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan"><i class="fa fa-unlock"></i></a>`
+							status = `<a href="<?= site_url('potensi_umum/lock/') ?>${data.id}" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan"><i class="fe fe-unlock"></i></a>`
 						} else {
-							status = `<a href="<?= site_url('potensi_umum/unlock/') ?>${data.id}" class="btn bg-navy btn-box btn-sm" title="Aktifkan"><i class="fa fa-lock"></i></a>`
+							status = `<a href="<?= site_url('potensi_umum/unlock/') ?>${data.id}" class="btn bg-navy btn-box btn-sm" title="Aktifkan"><i class="fe fe-lock"></i></a>`
 						}
 
 						return `
-							<a href="<?= site_url('potensi_umum/info_potensi/'); ?>${data.id}" class="btn bg-blue btn-box btn-sm" title="Lihat Ringkasan"><i class="fa fa-search"></i></a>
-							<a href="<?= site_url('potensi_umum/form/'); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i></a>
-							<a href="<?= site_url('potensi_umum/lokasi_maps/'); ?>${data.id}" class="btn bg-olive btn-box btn-sm" title="Lokasi Kantor Desa"><i class="fa fa-map"></i></a>
-							<a href="<?= site_url('potensi_umum_dokumentasi/show/'); ?>${data.id}" class="btn bg-purple btn-box btn-sm" title="Rincian Dokumentasi"><i class="fa fa-list-ol"></i></a>
+							<a href="<?= site_url('potensi_umum/info_potensi/'); ?>${data.id}" class="btn bg-blue btn-box btn-sm" title="Lihat Ringkasan"><i class="fe fe-search"></i></a>
+							<a href="<?= site_url('potensi_umum/form/'); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
+							<a href="<?= site_url('potensi_umum/lokasi_maps/'); ?>${data.id}" class="btn bg-olive btn-box btn-sm" title="Lokasi Kantor Desa"><i class="fe fe-map"></i></a>
+							<a href="<?= site_url('potensi_umum_dokumentasi/show/'); ?>${data.id}" class="btn bg-purple btn-box btn-sm" title="Rincian Dokumentasi"><i class="fe fe-list-ol"></i></a>
 							${status}
-							<a href="#" data-href="<?= site_url('potensi_umum/delete/'); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>							`
+							<a href="#" data-href="<?= site_url('potensi_umum/delete/'); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>							`
 					}
 				},
 				{

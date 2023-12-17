@@ -1,10 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Statistik Kependudukan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Statistik Kependudukan <?= $dusun; ?></li>
 		</ol>
 	</section>
@@ -15,24 +18,24 @@
 					<?php $this->load->view('statistik/side_menu.php'); ?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?=site_url("statistik/dialog/cetak"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan"><i class="fa fa-print "></i>Cetak
+							<a href="<?=site_url("statistik/dialog/cetak"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan"><i class="fe fe-printer "></i>Cetak
 							</a>
-							<a href="<?=site_url("statistik/dialog/unduh"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan"><i class="fa fa-print "></i>Unduh
+							<a href="<?=site_url("statistik/dialog/unduh"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan"><i class="fe fe-printer "></i>Unduh
 							</a>
 							<a class="btn btn-social btn-box bg-orange btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block grafikType" title="Grafik Data" id="grafikType" onclick="grafikType();">
-								<i class="fa fa-bar-chart"></i>Grafik Data
+								<i class="fe fe-bar-chart"></i>Grafik Data
 							</a>
 							<a class="btn btn-social btn-box btn-primary btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block pieType" title="Pie Data" id="pieType" onclick="pieType();">
-								<i class="fa fa-pie-chart"></i>Pie Data
+								<i class="fe fe-pie-chart"></i>Pie Data
 							</a>
 							<?php if ($lap=='13'): ?>
 								<a href="<?=site_url("statistik/rentang_umur"); ?>" class="btn btn-social btn-box bg-olive btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Rentang Umur">
-									<i class="fa fa-arrows-h"></i>Rentang Umur
+									<i class="fe fe-arrows-h"></i>Rentang Umur
 								</a>
 							<?php endif; ?>
-							<a href="<?= site_url("{$this->controller}/clear/$lap") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+							<a href="<?= site_url("{$this->controller}/clear/$lap") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 						</div>
 						<div class="box-body">
 							<?php if ($lap < 50): ?>
@@ -80,32 +83,32 @@
 											<tr>
 												<th>No</th>
 												<?php if ($order_by==2): ?>
-													<th><a href="<?= site_url("statistik/order_by/$lap/1"); ?>"><?= $judul_kelompok; ?><i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th><a href="<?= site_url("statistik/order_by/$lap/1"); ?>"><?= $judul_kelompok; ?><i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($order_by==1): ?>
-													<th><a href="<?= site_url("statistik/order_by/$lap/2"); ?>"><?= $judul_kelompok; ?><i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th><a href="<?= site_url("statistik/order_by/$lap/2"); ?>"><?= $judul_kelompok; ?><i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th><a href="<?= site_url("statistik/order_by/$lap/1"); ?>"><?= $judul_kelompok; ?><i class='fa fa-sort fa-sm'></i></a></th>
+													<th><a href="<?= site_url("statistik/order_by/$lap/1"); ?>"><?= $judul_kelompok; ?><i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 												<?php if ($order_by==6): ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/5"); ?>">Jumlah<i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/5"); ?>">Jumlah<i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($order_by==5): ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/6"); ?>">Jumlah<i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/6"); ?>">Jumlah<i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/5"); ?>">Jumlah<i class='fa fa-sort fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/5"); ?>">Jumlah<i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 												<?php if ($order_by==4): ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/3"); ?>">Laki-Laki<i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/3"); ?>">Laki-Laki<i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($order_by==3): ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/4"); ?>">Laki-Laki<i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/4"); ?>">Laki-Laki<i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/3"); ?>">Laki-Laki<i class='fa fa-sort fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/3"); ?>">Laki-Laki<i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 												<?php if ($order_by==8): ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/7"); ?>">Perempuan<i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/7"); ?>">Perempuan<i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($order_by==7): ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/8"); ?>">Perempuan<i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/8"); ?>">Perempuan<i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/7"); ?>">Perempuan<i class='fa fa-sort fa-sm'></i></a></th>
+													<th colspan="2"><a href="<?= site_url("statistik/order_by/$lap/7"); ?>">Perempuan<i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 											</tr>
 										</thead>

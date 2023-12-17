@@ -1,13 +1,16 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>
 			Pembangunan
 			<small><?= ($main->id ? 'Ubah' : 'Tambah') ?> Data</small>
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('admin_pembangunan') ?>"> Pembangunan</a></li>
 			<li class="active"><?= ($main->id ? 'Ubah' : 'Tambah') ?> Data</li>
 		</ol>
@@ -16,9 +19,9 @@
 		<form action="<?= $form_action; ?>" method="post" id="validasi" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?= site_url('admin_pembangunan') ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Pembangunan</a>
+							<a href="<?= site_url('admin_pembangunan') ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Pembangunan</a>
 						</div>
 						<div class="box-body">
 							<div class="form-group">
@@ -136,17 +139,17 @@
 							</div>
 						</div>
 						<div class="box-footer">
-							<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-							<button type="submit" id="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+							<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+							<button type="submit" id="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">Gambar Utama</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body">
@@ -162,7 +165,7 @@
 										<input type="text" class="form-control" id="file_path">
 										<input type="file" class="hidden" id="file" name="foto">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fa fa-search"></i></button>
+											<button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fe fe-search"></i></button>
 										</span>
 										<span class="input-group-addon" style="background-color: red; border: 1px solid #ccc;">
 											<input type="checkbox" title="Centang Untuk Hapus Gambar" name="hapus_foto" value="hapus">

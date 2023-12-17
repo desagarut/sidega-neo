@@ -18,57 +18,60 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Data Keluarga</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Data Keluarga</li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-header with-border">
 				<div class="btn-group btn-group-vertical">
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
-						<a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah KK Baru</a>
+						<a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fe fe-plus'></i> Tambah KK Baru</a>
 						<ul class="dropdown-menu" role="menu">
 							<li>
-								<a href="<?= site_url('keluarga/form') ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Data KK Baru"><i class="fa fa-plus"></i> Tambah Penduduk Baru</a>
+								<a href="<?= site_url('keluarga/form') ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Data KK Baru"><i class="fe fe-plus"></i> Tambah Penduduk Baru</a>
 							</li>
 							<li>
-								<a href="<?= site_url('keluarga/form_old') ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Data KK dari keluarga yang sudah ter-input" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Kepala Keluarga"><i class="fa fa-plus"></i> Dari Penduduk Sudah Ada</a>
+								<a href="<?= site_url('keluarga/form_old') ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Data KK dari keluarga yang sudah ter-input" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Kepala Keluarga"><i class="fe fe-plus"></i> Dari Penduduk Sudah Ada</a>
 							</li>
 						</ul>
 					<?php endif; ?>
 				</div>
-				<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print"></i> Cetak</a>
-				<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
+				<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
+				<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
 				<div class="btn-group btn-group-vertical">
-					<a class="btn btn-social btn-box bg-maroon btn-sm" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Aksi Data Terpilih</a>
+					<a class="btn btn-social btn-box bg-maroon btn-sm" data-toggle="dropdown"><i class='fe fe-arrow-circle-down'></i> Aksi Data Terpilih</a>
 					<ul class="dropdown-menu" role="menu">
 						<li>
-							<a href="" class="btn btn-social btn-box btn-block btn-sm aksi-terpilih" title="Cetak Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/cetak_kk_all") ?>', '_blank'); return false;"><i class="fa fa-print"></i> Cetak Kartu Keluarga</a>
+							<a href="" class="btn btn-social btn-box btn-block btn-sm aksi-terpilih" title="Cetak Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/cetak_kk_all") ?>', '_blank'); return false;"><i class="fe fe-printer"></i> Cetak Kartu Keluarga</a>
 						</li>
 						<li>
-							<a href="" class="btn btn-social btn-box btn-block btn-sm aksi-terpilih" title="Unduh Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/doc_kk_all") ?>'); return false;"><i class="fa fa-download"></i> Unduh Kartu Keluarga</a>
+							<a href="" class="btn btn-social btn-box btn-block btn-sm aksi-terpilih" title="Unduh Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/doc_kk_all") ?>'); return false;"><i class="fe fe-download"></i> Unduh Kartu Keluarga</a>
 						</li>
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
 							<li>
-								<a href="#confirm-delete" class="btn btn-social btn-box btn-block btn-sm hapus-terpilih" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("keluarga/delete_all") ?>')"><i class="fa fa-trash-o"></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" class="btn btn-social btn-box btn-block btn-sm hapus-terpilih" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("keluarga/delete_all") ?>')"><i class="fe fe-trash-o"></i> Hapus Data Terpilih</a>
 							</li>
 						<?php endif; ?>
 					</ul>
 				</div>
 				<div class="btn-group-vertical">
-					<a class="btn btn-social btn-box btn-info btn-sm" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Pilih Aksi Lainnya</a>
+					<a class="btn btn-social btn-box btn-info btn-sm" data-toggle="dropdown"><i class='fe fe-arrow-circle-down'></i> Pilih Aksi Lainnya</a>
 					<ul class="dropdown-menu" role="menu">
 						<li>
-							<a href="<?= site_url("keluarga/search_kumpulan_kk") ?>" class="btn btn-social btn-box btn-block btn-sm" title="Pilihan Kumpulan KK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan KK"><i class="fa fa-search"></i> Pilihan Kumpulan KK</a>
+							<a href="<?= site_url("keluarga/search_kumpulan_kk") ?>" class="btn btn-social btn-box btn-block btn-sm" title="Pilihan Kumpulan KK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan KK"><i class="fe fe-search"></i> Pilihan Kumpulan KK</a>
 						</li>
 					</ul>
 				</div>
-				<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+				<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 			</div>
 			<div class="box-body">
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -114,7 +117,7 @@
 								<div class="input-group input-group-sm pull-right">
 									<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("keluarga/filter/cari") ?>');$('#'+'mainform').submit();}">
 									<div class="input-group-btn">
-										<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("keluarga/filter/cari") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+										<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("keluarga/filter/cari") ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 									</div>
 								</div>
 							</div>
@@ -131,18 +134,18 @@
 										<th>Aksi</th>
 										<th>Foto</th>
 										<?php if ($o == 2) : ?>
-											<th><a href="<?= site_url("keluarga/index/$p/1") ?>">Nomor KK <i class='fa fa-sort-asc fa-sm'></i></a></th>
+											<th><a href="<?= site_url("keluarga/index/$p/1") ?>">Nomor KK <i class='fe fe-sort-asc fa-sm'></i></a></th>
 										<?php elseif ($o == 1) : ?>
-											<th><a href="<?= site_url("keluarga/index/$p/2") ?>">Nomor KK <i class='fa fa-sort-desc fa-sm'></i></a></th>
+											<th><a href="<?= site_url("keluarga/index/$p/2") ?>">Nomor KK <i class='fe fe-sort-desc fa-sm'></i></a></th>
 										<?php else : ?>
-											<th><a href="<?= site_url("keluarga/index/$p/1") ?>">Nomor KK <i class='fa fa-sort fa-sm'></i></a></th>
+											<th><a href="<?= site_url("keluarga/index/$p/1") ?>">Nomor KK <i class='fe fe-sort fa-sm'></i></a></th>
 										<?php endif; ?>
 										<?php if ($o == 4) : ?>
-											<th nowrap><a href="<?= site_url("keluarga/index/$p/3") ?>">Kepala Keluarga <i class='fa fa-sort-asc fa-sm'></i></a></th>
+											<th nowrap><a href="<?= site_url("keluarga/index/$p/3") ?>">Kepala Keluarga <i class='fe fe-sort-asc fa-sm'></i></a></th>
 										<?php elseif ($o == 3) : ?>
-											<th nowrap><a href="<?= site_url("keluarga/index/$p/4") ?>">Kepala Keluarga <i class='fa fa-sort-desc fa-sm'></i></a></th>
+											<th nowrap><a href="<?= site_url("keluarga/index/$p/4") ?>">Kepala Keluarga <i class='fe fe-sort-desc fa-sm'></i></a></th>
 										<?php else : ?>
-											<th nowrap><a href="<?= site_url("keluarga/index/$p/3") ?>">Kepala Keluarga <i class='fa fa-sort fa-sm'></i></a></th>
+											<th nowrap><a href="<?= site_url("keluarga/index/$p/3") ?>">Kepala Keluarga <i class='fe fe-sort fa-sm'></i></a></th>
 										<?php endif; ?>
 										<th>NIK</th>
 										<th>Tag ID Card</th>
@@ -153,11 +156,11 @@
 										<th>RW</th>
 										<th>RT</th>
 										<?php if ($o == 6) : ?>
-											<th nowrap><a href="<?= site_url("keluarga/index/$p/5") ?>">Tanggal Terdaftar <i class='fa fa-sort-asc fa-sm'></i></a></th>
+											<th nowrap><a href="<?= site_url("keluarga/index/$p/5") ?>">Tanggal Terdaftar <i class='fe fe-sort-asc fa-sm'></i></a></th>
 										<?php elseif ($o == 5) : ?>
-											<th nowrap><a href="<?= site_url("keluarga/index/$p/6") ?>">Tanggal Terdaftar <i class='fa fa-sort-desc fa-sm'></i></a></th>
+											<th nowrap><a href="<?= site_url("keluarga/index/$p/6") ?>">Tanggal Terdaftar <i class='fe fe-sort-desc fa-sm'></i></a></th>
 										<?php else : ?>
-											<th nowrap><a href="<?= site_url("keluarga/index/$p/6") ?>">Tanggal Terdaftar <i class='fa fa-sort fa-sm'></i></a></th>
+											<th nowrap><a href="<?= site_url("keluarga/index/$p/6") ?>">Tanggal Terdaftar <i class='fe fe-sort fa-sm'></i></a></th>
 										<?php endif; ?>
 										<th nowrap>Tanggal Cetak KK</th>
 									</tr>
@@ -169,10 +172,10 @@
 											<td class="padat"><?= $data['no'] ?></td>
 
 											<td class="aksi">
-												<a href="<?= site_url("keluarga/anggota/$p/$o/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Anggota Keluarga (KK)"><i class="fa fa-search"></i></a>
-												<?php if ($this->CI->cek_hak_akses('h')) : ?><a href="<?= site_url("keluarga/form_a/$p/$o/$data[id]") ?>" class="btn btn-success btn-box btn-sm " title="Tambah Anggota Keluarga"><i class="fa fa-plus"></i> </a>
-													<a href="<?= site_url("keluarga/edit_nokk/$p/$o/$data[id]") ?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data KK" class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i></a>
-													<a href="#" data-href="<?= site_url("keluarga/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus/Keluar Dari Daftar Keluarga" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+												<a href="<?= site_url("keluarga/anggota/$p/$o/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Anggota Keluarga (KK)"><i class="fe fe-search"></i></a>
+												<?php if ($this->CI->cek_hak_akses('h')) : ?><a href="<?= site_url("keluarga/form_a/$p/$o/$data[id]") ?>" class="btn btn-success btn-box btn-sm " title="Tambah Anggota Keluarga"><i class="fe fe-plus"></i> </a>
+													<a href="<?= site_url("keluarga/edit_nokk/$p/$o/$data[id]") ?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data KK" class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
+													<a href="#" data-href="<?= site_url("keluarga/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus/Keluar Dari Daftar Keluarga" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 												<?php endif; ?>
 											</td>
 

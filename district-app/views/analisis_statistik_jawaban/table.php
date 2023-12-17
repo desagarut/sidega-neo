@@ -24,7 +24,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<li><a href="<?= site_url('analisis_master'); ?>"> Master Analisis</a></li>
 
@@ -52,25 +52,25 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					<div class="card card-shadow">
 
 						<div class="box-header with-border">
 
 							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
 
-								<i class="fa fa-print"></i>Cetak
+								<i class="fe fe-printer"></i>Cetak
 
 							</a>
 
 							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank">
 
-								<i class="fa fa-download"></i>Unduh
+								<i class="fe fe-download"></i>Unduh
 
 							</a>
 
-							<a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar RW">
+							<a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar RW">
 
-								<i class="fa fa-arrow-circle-left "></i>Kembali Ke <?= $analisis_master['nama']; ?>
+								<i class="fe fe-arrow-circle-left "></i>Kembali Ke <?= $analisis_master['nama']; ?>
 
 							</a>
 
@@ -180,7 +180,7 @@
 
 												<div class="input-group-btn">
 
-													<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("analisis_statistik_jawaban/search"); ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+													<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("analisis_statistik_jawaban/search"); ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 
 												</div>
 
@@ -202,15 +202,15 @@
 
 													<?php if ($o==4): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/3"); ?>">Pertanyaan/Indikator <i class='fa fa-sort-asc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/3"); ?>">Pertanyaan/Indikator <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 													<?php elseif ($o==3): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/4"); ?>">Pertanyaan/Indikator <i class='fa fa-sort-desc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/4"); ?>">Pertanyaan/Indikator <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 													<?php else: ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/3"); ?>">Pertanyaan/Indikator <i class='fa fa-sort fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/3"); ?>">Pertanyaan/Indikator <i class='fe fe-sort fa-sm'></i></a></th>
 
 													<?php endif; ?>
 
@@ -218,15 +218,15 @@
 
 													<?php if ($o==2): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Kode <i class='fa fa-sort-asc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Kode <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 													<?php elseif ($o==1): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/2"); ?>">Kode <i class='fa fa-sort-desc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/2"); ?>">Kode <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 													<?php else: ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Kode <i class='fa fa-sort fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Kode <i class='fe fe-sort fa-sm'></i></a></th>
 
 													<?php endif; ?>
 
@@ -238,43 +238,43 @@
 
 													<?php if ($o==6): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Tipe Pertanyaan <i class='fa fa-sort-asc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Tipe Pertanyaan <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 													<?php elseif ($o==5): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/6"); ?>">Tipe Pertanyaan <i class='fa fa-sort-desc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/6"); ?>">Tipe Pertanyaan <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 													<?php else: ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Tipe Pertanyaan <i class='fa fa-sort fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Tipe Pertanyaan <i class='fe fe-sort fa-sm'></i></a></th>
 
 													<?php endif; ?>
 
 													<?php if ($o==6): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Kategori/Variabel <i class='fa fa-sort-asc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Kategori/Variabel <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 													<?php elseif ($o==5): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/6"); ?>">Kategori/Variabel <i class='fa fa-sort-desc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/6"); ?>">Kategori/Variabel <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 													<?php else: ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Kategori/Variabel <i class='fa fa-sort fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/5"); ?>">Kategori/Variabel <i class='fe fe-sort fa-sm'></i></a></th>
 
 													<?php endif; ?>
 
 													<?php if ($o==2): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Aksi Analisis <i class='fa fa-sort-asc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Aksi Analisis <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 													<?php elseif ($o==1): ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/2"); ?>">Aksi Analisis <i class='fa fa-sort-desc fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/2"); ?>">Aksi Analisis <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 													<?php else: ?>
 
-														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Aksi Analisis <i class='fa fa-sort fa-sm'></i></a></th>
+														<th><a href="<?= site_url("analisis_statistik_jawaban/index/$p/1"); ?>">Aksi Analisis <i class='fe fe-sort fa-sm'></i></a></th>
 
 													<?php endif; ?>
 

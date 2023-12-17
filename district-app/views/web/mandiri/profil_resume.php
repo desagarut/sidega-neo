@@ -62,8 +62,8 @@
                       <td class="text-center"><?= $no + 1; ?></td>
                       <td nowrap>
                         <?php if ($bantuan['no_id_kartu']) : ?>
-                          <button type="button" target="data_peserta" title="Data Peserta" href="<?= site_url("mandiri_web/kartu_peserta/tampil/$bantuan[id]") ?>" onclick="show_kartu_peserta($(this));" class="btn btn-success btn-box btn-sm"><i class="fa fa-eye"></i></button>
-                          <a href="<?= site_url("mandiri_web/kartu_peserta/unduh/$bantuan[id]") ?>" class="btn bg-black btn-box btn-sm" title="Kartu Peserta" <?php empty($bantuan['kartu_peserta']) and print('disabled') ?>><i class="fa fa-download"></i></a>
+                          <button type="button" target="data_peserta" title="Data Peserta" href="<?= site_url("mandiri_web/kartu_peserta/tampil/$bantuan[id]") ?>" onclick="show_kartu_peserta($(this));" class="btn btn-success btn-box btn-sm"><i class="fe fe-eye"></i></button>
+                          <a href="<?= site_url("mandiri_web/kartu_peserta/unduh/$bantuan[id]") ?>" class="btn bg-black btn-box btn-sm" title="Kartu Peserta" <?php empty($bantuan['kartu_peserta']) and print('disabled') ?>><i class="fe fe-download"></i></a>
                         <?php endif; ?>
                       </td>
                       <td nowrap><?= fTampilTgl($bantuan["sdate"], $bantuan["edate"]); ?></td>
@@ -80,9 +80,9 @@
         </div>
       </div>
     </li>
-    <li> <small><a href="#"> Data Awal : <i class="fa fa-clock-o"></i>
+    <li> <small><a href="#"> Data Awal : <i class="fe fe-clock-o"></i>
           <?= tgl_indo2($penduduk['created_at']); ?>
-          -- <i class="fa fa-user"></i>Oleh:
+          -- <i class="fe fe-user"></i>Oleh:
           <?= $penduduk['nama_pendaftar'] ?>
         </a></small> </li>
   </ul>

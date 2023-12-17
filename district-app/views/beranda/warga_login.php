@@ -14,7 +14,8 @@
               <?php if ($data['foto']) : ?>
                 <img class="avatar-img rounded-circle" src="<?= AmbilFoto($data['foto']) ?>" alt="<?= $data['nama'] ?>" style="width:40px">
               <?php else : ?>
-                <img class="avatar-img rounded-circle" src="<?= base_url() ?>assets/tiny/files/user_pict/kuser.png" alt="<?= $data['nama'] ?>" style="width:40px">
+                <img class="avatar-img rounded-circle" src="<?= base_url() ?>assets/
+files/user_pict/kuser.png" alt="<?= $data['nama'] ?>" style="width:40px">
               <?php endif; ?>
             </div>
             <div class="col-md-10">

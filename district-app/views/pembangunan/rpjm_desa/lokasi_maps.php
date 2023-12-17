@@ -135,7 +135,7 @@
 							</div>
 						</div>
 						<div class='card-footer'>
-							<div class='col-xs-12'>
+							<div class='col-md-12'>
 								<div class="form-group">
 									<label class="col-sm-3 control-label" for="lat">Lat</label>
 									<div class="col-sm-9">
@@ -148,10 +148,10 @@
 										<input type="text" class="form-control number" name="lng" id="lng" value="<?= $data->lng ?>" />
 									</div>
 								</div>
-								<a href="<?= site_url('pembangunan') ?>" class="btnbg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-								<a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-								<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
-								<button type='submit' class='btn btn-info btn-sm pull-right' id="simpan_kantor"><i class='fa fa-check'></i> Simpan</button>
+								<a href="<?= site_url('pembangunan') ?>" class="btnbg-purple btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+								<a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+								<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right' id="simpan_kantor"><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</form>

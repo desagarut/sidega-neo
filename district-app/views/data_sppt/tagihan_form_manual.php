@@ -1,9 +1,12 @@
 <?php ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Manual Input Tagihan SPPT PBB</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Input Tagihan SPPT PBB</li>
 		</ol>
 	</section>
@@ -13,7 +16,7 @@
                 <?php $this->load->view('data_sppt/menu.php')?>
             </div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-header">
                         <h3>Tambah Tagihan SPPT PBB</h3>
 					</div>
@@ -135,8 +138,8 @@
                             </div>
             
                             <div class="modal-footer">
-                                <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-                                <button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fa fa-check'></i>Simpan</button>
+                                <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+                                <button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fe fe-check'></i>Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -158,7 +161,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					<div class="card card-shadow"></div>
 
 					<input type="hidden" id="id2" name="id_edit"/>
 
@@ -233,8 +236,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -252,7 +255,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					<div class="card card-shadow"></div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label" >Tahun Anggaran</label>
 						<div class="col-sm-3">
@@ -261,8 +264,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fa fa-check'></i>Salin</button>
+					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fe fe-check'></i>Salin</button>
 				</div>
 			</form>
 		</div>

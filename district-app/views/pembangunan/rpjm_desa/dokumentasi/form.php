@@ -5,7 +5,7 @@
 		<h5 class="m-b-10">Pengaturan Data Dokumentasi Pembangunan</h5>
 		<ul class="breadcrumb">
 			<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
-			<li><a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>"><i class="fa fa-dashboard"></i>Daftar Dokumentasi Pembangunan</a></li>
+			<li><a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>"><i class="fe fe-dashboard"></i>Daftar Dokumentasi Pembangunan</a></li>
 						<li class="breadcrumb-item active">Pengaturan Data Pembangunan</li>
 					</ol>
 				</div>
@@ -21,7 +21,7 @@
 				<div class="col-md-12">
 					
 						<div class="card-header">
-							<a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>" class="btn btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
+							<a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
 						</div>
 						<div class="card-body">
 							<div class="row">
@@ -72,7 +72,7 @@
 												<input type="text" class="form-control " id="file_path" name="gambar">
 												<input id="file" type="file" class="hidden" name="gambar">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+													<button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 												</span>
 											</div>
 											<span class="help-block"><code>(Kosongkan jika tidak ingin mengubah gambar)</code></span>
@@ -89,8 +89,8 @@
 						</div>
 						<div class="card-footer">
 							<div class="col-xs-12">
-								<button type="reset" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-								<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+								<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+								<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</div>

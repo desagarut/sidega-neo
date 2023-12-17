@@ -10,19 +10,22 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pendaftar Layanan Masyarakat</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Pendaftar Layanan Masyarakat</li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
-			<div class="box box-info">
+			<div class="card card-shadow">
 				<div class="box-header with-border">
-					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-social btn-box btn-success btn-sm"><i class="fa fa-plus"></i> Tambah Pengguna</a>
+					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-social btn-box btn-success btn-sm"><i class="fe fe-plus"></i> Tambah Pengguna</a>
 				</div>
 				<div class="box-body">
 					<form id="mainform" name="mainform" action="" method="post">
@@ -31,7 +34,7 @@
 								<div class="input-group input-group-sm pull-right">
 									<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari); ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("mandiri/filter/cari"); ?>');$('#'+'mainform').submit();}">
 									<div class="input-group-btn">
-										<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("mandiri/filter/cari"); ?>');$('#'+'mainform').submit(); "><i class="fa fa-search"></i></button>
+										<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("mandiri/filter/cari"); ?>');$('#'+'mainform').submit(); "><i class="fe fe-search"></i></button>
 									</div>
 								</div>
 							</div>
@@ -47,38 +50,38 @@
 											<th>Aksi</th>
 											<th>
 												<?php if ($order_by == 2): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/1")?>">NIK<i class="fa fa-sort-asc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/1")?>">NIK<i class="fe fe-sort-asc fa-sm"></i></a>
 												<?php elseif ($order_by == 1): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/2")?>">NIK<i class="fa fa-sort-desc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/2")?>">NIK<i class="fe fe-sort-desc fa-sm"></i></a>
 												<?php else: ?>
-													<a href="<?= site_url("mandiri/filter/order_by/1")?>">NIK<i class="fa fa-sort fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/1")?>">NIK<i class="fe fe-sort fa-sm"></i></a>
 												<?php endif; ?>
 											</th>
 											<th width="50%">
 												<?php if ($order_by == 4): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/3")?>">Nama Penduduk<i class="fa fa-sort-asc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/3")?>">Nama Penduduk<i class="fe fe-sort-asc fa-sm"></i></a>
 												<?php elseif ($order_by == 3): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/4")?>">Nama Penduduk<i class="fa fa-sort-desc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/4")?>">Nama Penduduk<i class="fe fe-sort-desc fa-sm"></i></a>
 												<?php else: ?>
-													<a href="<?= site_url("mandiri/filter/order_by/3")?>">Nama Penduduk<i class="fa fa-sort fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/3")?>">Nama Penduduk<i class="fe fe-sort fa-sm"></i></a>
 												<?php endif; ?>
 											</th>
 											<th>
 												<?php if ($order_by == 6): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/5")?>">Tanggal Buat<i class="fa fa-sort-asc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/5")?>">Tanggal Buat<i class="fe fe-sort-asc fa-sm"></i></a>
 												<?php elseif ($order_by == 5): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/6")?>">Tanggal Buat<i class="fa fa-sort-desc fa-sm"></i></a></th>
+													<a href="<?= site_url("mandiri/filter/order_by/6")?>">Tanggal Buat<i class="fe fe-sort-desc fa-sm"></i></a></th>
 												<?php else: ?>
-													<a href="<?= site_url("mandiri/filter/order_by/5")?>">Tanggal Buat<i class="fa fa-sort fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/5")?>">Tanggal Buat<i class="fe fe-sort fa-sm"></i></a>
 												<?php endif; ?>
 											</th>
 											<th>
 												<?php if ($order_by == 8): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/7")?>">Login Terakhir<i class="fa fa-sort-asc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/7")?>">Login Terakhir<i class="fe fe-sort-asc fa-sm"></i></a>
 												<?php elseif ($order_by == 7): ?>
-													<a href="<?= site_url("mandiri/filter/order_by/8")?>">Login Terakhir<i class="fa fa-sort-desc fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/8")?>">Login Terakhir<i class="fe fe-sort-desc fa-sm"></i></a>
 												<?php else: ?>
-													<a href="<?= site_url("mandiri/filter/order_by/7")?>">Login Terakhir<i class="fa fa-sort fa-sm"></i></a>
+													<a href="<?= site_url("mandiri/filter/order_by/7")?>">Login Terakhir<i class="fe fe-sort fa-sm"></i></a>
 												<?php endif; ?>
 											</th>
 										</tr>
@@ -89,9 +92,9 @@
 												<tr <?= jecho($data['telepon'], FALSE, 'class="select-row"'); ?>>
 													<td class="padat"><?= ($key + 1); ?></td>
 													<td class="aksi">
-														<a href="<?= site_url("mandiri/ajax_pin/$data[id_pend]"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ganti PIN Warga" title="Ganti PIN Warga" class="btn btn-box btn-primary btn-sm"><i class="fa fa-key"></i></a>
-														<a href="<?= site_url("mandiri/ajax_hp/$data[id_pend]"); ?>" data-remote="false"  data-toggle="modal" data-target="#modalBox"  data-title="<?= $data['telepon'] ? 'Ubah' : 'Tambah' ?> Telepon Warga" title="<?= $data['telepon'] ? 'Ubah' : 'Tambah' ?> Telepon" class="btn <?= $data['telepon'] ? 'bg-teal' : 'bg-green' ?> btn-box btn-sm" ><i class="fa fa-phone"></i></a>
-														<a href="#" data-href="<?= site_url("mandiri/delete/$data[id_pend]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+														<a href="<?= site_url("mandiri/ajax_pin/$data[id_pend]"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ganti PIN Warga" title="Ganti PIN Warga" class="btn btn-box btn-primary btn-sm"><i class="fe fe-key"></i></a>
+														<a href="<?= site_url("mandiri/ajax_hp/$data[id_pend]"); ?>" data-remote="false"  data-toggle="modal" data-target="#modalBox"  data-title="<?= $data['telepon'] ? 'Ubah' : 'Tambah' ?> Telepon Warga" title="<?= $data['telepon'] ? 'Ubah' : 'Tambah' ?> Telepon" class="btn <?= $data['telepon'] ? 'bg-teal' : 'bg-green' ?> btn-box btn-sm" ><i class="fe fe-phone"></i></a>
+														<a href="#" data-href="<?= site_url("mandiri/delete/$data[id_pend]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 													</td>
 													<td><?= $data['nik']; ?></td>
 													<td><?= $data['nama']; ?></td>
@@ -124,9 +127,9 @@
 										Berikut adalah kode pin yang baru saja di hasilkan, silakan dicatat atau di ingat dengan baik, kode pin ini sangat rahasia, dan hanya bisa dilihat sekali ini lalu setelah itu hanya bisa di reset saja.<br /><h4>Kode PIN : <?= $info['pin']; ?></h4>
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class="fa fa-sign-out"></i> Tutup</button>
+										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class="fe fe-sign-out"></i> Tutup</button>
 										<?php if (cek_koneksi_internet() && $info['pin'] && $info['telepon']): ?>
-											<button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class="fa fa-whatsapp"></i> Kirim</button>
+											<button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class="fe fe-whatsapp"></i> Kirim</button>
 										<?php endif; ?>
 									</div>
 								</form>

@@ -57,12 +57,12 @@ table.table th {
               <small><h4 class="box-title">Ringkasan</h4></small>
             </div>
             <!-- /.box-header -->
-            <div class="box-body"><small> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
+            <div class="box-body"><small> <strong><i class="fe fe-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
               <p class="text-muted">
                 <small><?= strtoupper($penduduk['pendidikan_kk'])?></small>
               </p>
               <hr>
-              <small><strong><i class="fa fa-map-marker margin-r-5"></i> Alamat Sekarang</strong></small>
+              <small><strong><i class="fe fe-map-marker margin-r-5"></i> Alamat Sekarang</strong></small>
               <p class="text-muted"><small>
                 <?= strtoupper($penduduk['alamat'])?>
                 ,
@@ -73,32 +73,32 @@ table.table th {
                 <?= $penduduk['rw']?>
                 , </small></p>
               <hr>
-              <small><strong><i class="fa fa-pencil margin-r-5"></i> Kontak</strong>
-              <p> <span class="label label-info"><i class="fa fa-phone"></i>
+              <small><strong><i class="fe fe-pencil margin-r-5"></i> Kontak</strong>
+              <p> <span class="label label-info"><i class="fe fe-phone"></i>
                 <?= $penduduk['telepon']?>
-                </span> <span class="label label-warning"><i class="fa fa-envelope"></i>
+                </span> <span class="label label-warning"><i class="fe fe-envelope"></i>
                 <?= $penduduk['email']?>
                 </span> </p></small>
               <hr>
-              <small><strong><i class="fa fa-file-text-o margin-r-5"></i> Catatan:</strong> <br>
+              <small><strong><i class="fe fe-file-text-o margin-r-5"></i> Catatan:</strong> <br>
               Biodata Penduduk (NIK :
               <?= $penduduk['nik']?>
               )
               <?php if (!empty($penduduk['nama_pendaftar'])): ?>
-              <p class="kecil"> Terdaftar pada: <i class="fa fa-clock-o"></i>
+              <p class="kecil"> Terdaftar pada: <i class="fe fe-clock-o"></i>
                 <?= tgl_indo2($penduduk['created_at']);?>
-                Oleh: <i class="fa fa-user"></i>
+                Oleh: <i class="fe fe-user"></i>
                 <?= $penduduk['nama_pendaftar']?>
               </p>
               <?php else: ?>
-              <p class="kecil"> Terdaftar sebelum: <i class="fa fa-clock-o"></i>
+              <p class="kecil"> Terdaftar sebelum: <i class="fe fe-clock-o"></i>
                 <?= tgl_indo2($penduduk['created_at']);?>
               </p>
               <?php endif; ?>
               <?php if (!empty($penduduk['nama_pengubah'])): ?>
-              <p class="kecil"> Terakhir diubah: <i class="fa fa-clock-o"></i>
+              <p class="kecil"> Terakhir diubah: <i class="fe fe-clock-o"></i>
                 <?= tgl_indo2($penduduk['updated_at']);?>
-                <i class="fa fa-user"></i>
+                <i class="fe fe-user"></i>
                 <?= $penduduk['nama_pengubah']?>
               </p>
               <?php endif; ?>

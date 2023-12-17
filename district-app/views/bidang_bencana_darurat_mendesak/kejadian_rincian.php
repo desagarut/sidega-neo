@@ -27,7 +27,7 @@
 					<td>Meninggal: <?= $kejadian_bencana["korban_meninggal"]; ?><br/>Luka Berat: <?= $kejadian_bencana["korban_lukaberat"]; ?><br/>Luka Ringan: <?= $kejadian_bencana["korban_ringan"]; ?></td>
 					<td>Sumber Informasi</td>
 					<td width="1%">:</td>
-					<td><i class="fa fa-user" style="color:blueviolet"></i><?= $kejadian_bencana["nama_pelapor"]; ?><br/><i class="fa fa-map-marker" style="color:blueviolet"></i><?= $kejadian_bencana["alamat_pelapor"]; ?><br/><i class="fa fa-phone" style="color:blueviolet"></i><?= $kejadian_bencana["nomor_pelapor"]; ?></td>
+					<td><i class="fe fe-user" style="color:blueviolet"></i><?= $kejadian_bencana["nama_pelapor"]; ?><br/><i class="fe fe-map-marker" style="color:blueviolet"></i><?= $kejadian_bencana["alamat_pelapor"]; ?><br/><i class="fe fe-phone" style="color:blueviolet"></i><?= $kejadian_bencana["nomor_pelapor"]; ?></td>
 				</tr>
 			</tbody>
 		</table>

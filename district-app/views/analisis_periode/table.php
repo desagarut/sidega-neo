@@ -9,11 +9,14 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Periode - <?= $analisis_master['nama']?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('analisis_master')?>"> Master Analisis</a></li>
 			<li><a href="<?= site_url()?>analisis_periode/leave"><?= $analisis_master['nama']?></a></li>
 			<li class="active">Pengaturan Periode</li>
@@ -27,11 +30,11 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
-							<a href="<?= site_url('analisis_periode/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Priode Baru"><i class="fa fa-plus"></i> Tambah Periode Baru</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("analisis_periode/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
-							<a href="<?= site_url()?>analisis_periode/leave" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
+							<a href="<?= site_url('analisis_periode/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Priode Baru"><i class="fe fe-plus"></i> Tambah Periode Baru</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("analisis_periode/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="<?= site_url()?>analisis_periode/leave" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -51,7 +54,7 @@
 													<div class="input-group input-group-sm pull-right">
 														<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("analisis_periode/search")?>');$('#'+'mainform').submit();}">
 														<div class="input-group-btn">
-															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("analisis_periode/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("analisis_periode/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 														</div>
 													</div>
 												</div>
@@ -66,18 +69,18 @@
 																	<th>No</th>
 																	<th>Aksi</th>
 																	<?php if ($o==4): ?>
-																		<th><a href="<?= site_url("analisis_periode/index/$p/3")?>">Periode <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_periode/index/$p/3")?>">Periode <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o==3): ?>
-																		<th><a href="<?= site_url("analisis_periode/index/$p/4")?>">Periode <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_periode/index/$p/4")?>">Periode <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																	<?php else: ?>
-																		<th><a href="<?= site_url("analisis_periode/index/$p/3")?>">Periode <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_periode/index/$p/3")?>">Periode <i class='fe fe-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																	<?php if ($o==2): ?>
-																		<th><a href="<?= site_url("analisis_periode/index/$p/1")?>">Tahun Pelaksanaan <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_periode/index/$p/1")?>">Tahun Pelaksanaan <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o==1): ?>
-																		<th><a href="<?= site_url("analisis_periode/index/$p/2")?>">Tahun Pelaksanaan <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_periode/index/$p/2")?>">Tahun Pelaksanaan <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																	<?php else: ?>
-																		<th><a href="<?= site_url("analisis_periode/index/$p/1")?>">Tahun Pelaksanaan <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_periode/index/$p/1")?>">Tahun Pelaksanaan <i class='fe fe-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																	<th>Tahap Pendataan</th>
 																	<th>Keterangan</th>
@@ -90,8 +93,8 @@
 																		<td><input type="checkbox" name="id_cb[]" value="<?= $data['id']?>" /></td>
 																		<td><?= $data['no']?></td>
 																		<td nowrap>
-																			<a href="<?= site_url("analisis_periode/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data Priode" ><i class='fa fa-edit'></i></a>
-																			<a href="#" data-href="<?= site_url("analisis_periode/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="<?= site_url("analisis_periode/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data Priode" ><i class='fe fe-edit'></i></a>
+																			<a href="#" data-href="<?= site_url("analisis_periode/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		</td>
 																		<td><?= $data['nama']?></td>
 																		<td><?= $data['tahun_pelaksanaan']?></td>

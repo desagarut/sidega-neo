@@ -28,7 +28,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<li><a href="<?= site_url('analisis_master')?>"> Master Analisis</a></li>
 
@@ -56,13 +56,13 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					<div class="card card-shadow">
 
             <div class="box-header with-border">
 
 							<?php if ($analisis_master['lock']==1): ?>
 
-								<a href="<?= site_url('analisis_indikator/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block <?php if ($analisis_master['jenis']==1): ?>disabled<?php endif; ?>" title="Tambah Indikator Baru"><i class="fa fa-plus"></i> Tambah Indikator Baru</a>
+								<a href="<?= site_url('analisis_indikator/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block <?php if ($analisis_master['jenis']==1): ?>disabled<?php endif; ?>" title="Tambah Indikator Baru"><i class="fe fe-plus"></i> Tambah Indikator Baru</a>
 
 								<a href="#confirm-delete" title="Hapus Data"
 
@@ -72,9 +72,9 @@
 
 									<?php endif; ?>
 
-									class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+									class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 
-								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
+								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
 
 							<?php endif; ?>
 
@@ -138,7 +138,7 @@
 
 														<div class="input-group-btn">
 
-															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("analisis_indikator/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("analisis_indikator/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 
 														</div>
 
@@ -168,85 +168,85 @@
 
 																	<?php if ($o==2): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Kode <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Kode <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 																	<?php elseif ($o==1): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/2")?>">Kode <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/2")?>">Kode <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 																	<?php else: ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Kode <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Kode <i class='fe fe-sort fa-sm'></i></a></th>
 
 																	<?php endif; ?>
 
 																	<?php if ($o==4): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/3")?>">Pertanyaan/Indikator <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/3")?>">Pertanyaan/Indikator <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 																	<?php elseif ($o==3): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/4")?>">Pertanyaan/Indikator <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/4")?>">Pertanyaan/Indikator <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 																	<?php else: ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/3")?>">Pertanyaan/Indikator <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/3")?>">Pertanyaan/Indikator <i class='fe fe-sort fa-sm'></i></a></th>
 
 																	<?php endif; ?>
 
 																	<?php if ($o==6): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Tipe Pertanyaan <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Tipe Pertanyaan <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 																	<?php elseif ($o==5): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/6")?>">Tipe Pertanyaan <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/6")?>">Tipe Pertanyaan <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 																	<?php else: ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Tipe Pertanyaan <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Tipe Pertanyaan <i class='fe fe-sort fa-sm'></i></a></th>
 
 																	<?php endif; ?>
 
 																	<?php if ($o==6): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Kategori/Variabel <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Kategori/Variabel <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 																	<?php elseif ($o==5): ?>
 
-																		<th><a href="<?= site_url("analisis_indikator/index/$p/6")?>">Kategori/Variabel <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("analisis_indikator/index/$p/6")?>">Kategori/Variabel <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 																	<?php else: ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Kategori/Variabel <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/5")?>">Kategori/Variabel <i class='fe fe-sort fa-sm'></i></a></th>
 
 																	<?php endif; ?>
 
 																	<?php if ($o==2): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Bobot <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Bobot <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 																	<?php elseif ($o==1): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/2")?>">Bobot <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/2")?>">Bobot <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 																	<?php else: ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Bobot <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Bobot <i class='fe fe-sort fa-sm'></i></a></th>
 
 																	<?php endif; ?>
 
 																	<?php if ($o==2): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Aksi Analisis <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Aksi Analisis <i class='fe fe-sort-asc fa-sm'></i></a></th>
 
 																	<?php elseif ($o==1): ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/2")?>">Aksi Analisis <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/2")?>">Aksi Analisis <i class='fe fe-sort-desc fa-sm'></i></a></th>
 
 																	<?php else: ?>
 
-																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Aksi Analisis <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("analisis_indikator/index/$p/1")?>">Aksi Analisis <i class='fe fe-sort fa-sm'></i></a></th>
 
 																	<?php endif; ?>
 
@@ -274,15 +274,15 @@
 
 																				<?php if ($data['id_tipe']==1 OR $data['id_tipe']==2): ?>
 
-																					<a href="<?= site_url("analisis_indikator/parameter/$data[id]")?>" class="btn bg-purple btn-box btn-sm"  title="Jawaban"><i class='fa fa-list'></i></a>
+																					<a href="<?= site_url("analisis_indikator/parameter/$data[id]")?>" class="btn bg-purple btn-box btn-sm"  title="Jawaban"><i class='fe fe-list'></i></a>
 
 																				<?php endif; ?>
 
-																				<a href="<?= site_url("analisis_indikator/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class='fa fa-edit'></i></a>
+																				<a href="<?= site_url("analisis_indikator/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class='fe fe-edit'></i></a>
 
 																				<?php if ($analisis_master['jenis']!=1): ?>
 
-																					<a href="#" data-href="<?= site_url("analisis_indikator/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																					<a href="#" data-href="<?= site_url("analisis_indikator/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 
 																				<?php endif; ?>
 

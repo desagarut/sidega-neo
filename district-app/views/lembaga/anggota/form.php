@@ -1,20 +1,19 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Data Anggota Lembaga</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('lembaga'); ?>"> Daftar lembaga</a></li>
 			<li class="active">Data Anggota lembaga</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-					<a href="<?= site_url("lembaga/anggota/$lembaga"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Anggota lembaga</a>
+				<div class="card shadow">
+					<div class="card-header">
+					<a href="<?= site_url("lembaga/anggota/$lembaga"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Anggota lembaga</a>
 					</div>
 					<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data"  class="form-horizontal">
 						<div class="col-md-3">
@@ -28,7 +27,7 @@
 									<input type="file" class="hidden" id="file2" name="foto">
 									<input type="hidden" name="old_foto" value="<?= $pend['foto']?>">
 									<span class="input-group-btn">
-										<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+										<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 									</span>
 								</div>
 							</div>
@@ -82,8 +81,8 @@
 						</div>
 						<div class="box-footer">
 							<div class="col-xs-12">
-								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</form>

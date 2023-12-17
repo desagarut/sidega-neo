@@ -3,5 +3,5 @@
 		var csrfParam = '<?=$this->security->get_csrf_token_name()?>';
 		var getCsrfToken = () => document.cookie.match(new RegExp(csrfParam +'=(\\w+)'))[1]
 	</script>
-	<script src="<?= base_url()?>assets/tiny/js/anti-csrf.js"></script>
+	<script src="<?= base_url()?>assets/js/anti-csrf.js"></script>
 <?php endif ?>

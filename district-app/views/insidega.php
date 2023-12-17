@@ -22,30 +22,30 @@
 
 
 	<!-- Simple bar CSS -->
-	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/simplebar.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/simplebar.css">
 	<!-- Fonts CSS -->
 	<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<!-- Icons CSS -->
-	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/feather.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/feather.css">
 	<!-- Date Range Picker CSS -->
-	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/daterangepicker.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/daterangepicker.css">
 	<!-- App CSS -->
-	<link rel="stylesheet" href="<?= base_url() ?>assets/tiny/css/app-light.css" id="lightTheme">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/app-light.css" id="lightTheme">
 
-	<script type="text/javascript" src="<?= base_url() ?>assets/tiny/js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/tiny/js/validasi.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/tiny/js/messages_id.js"></script>
-	<script src="<?= base_url() ?>assets/tiny/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/validasi.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/messages_id.js"></script>
+	<script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
 
-	<script src="<?= base_url() ?>assets/tiny/js/popper.min.js"></script>
-	<script src="<?= base_url() ?>assets/tiny/js/moment.min.js"></script>
-	<script src="<?= base_url() ?>assets/tiny/js/bootstrap.min.js"></script>
-	<script src="<?= base_url() ?>assets/tiny/js/simplebar.min.js"></script>
-	<script src='<?= base_url() ?>assets/tiny/js/daterangepicker.js'></script>
-	<script src='<?= base_url() ?>assets/tiny/js/jquery.stickOnScroll.js'></script>
-	<script src="<?= base_url() ?>assets/tiny/js/tinycolor-min.js"></script>
-	<script src="<?= base_url() ?>assets/tiny/js/config.js"></script>
-	<script src="<?= base_url() ?>assets/tiny/js/apps.js"></script>
+	<script src="<?= base_url() ?>assets/js/popper.min.js"></script>
+	<script src="<?= base_url() ?>assets/js/moment.min.js"></script>
+	<script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
+	<script src="<?= base_url() ?>assets/js/simplebar.min.js"></script>
+	<script src='<?= base_url() ?>assets/js/daterangepicker.js'></script>
+	<script src='<?= base_url() ?>assets/js/jquery.stickOnScroll.js'></script>
+	<script src="<?= base_url() ?>assets/js/tinycolor-min.js"></script>
+	<script src="<?= base_url() ?>assets/js/config.js"></script>
+	<script src="<?= base_url() ?>assets/js/apps.js"></script>
 	<?php require __DIR__ . '/head_tags.php' ?>
 
 </head>
@@ -70,16 +70,16 @@
 						<?php else : ?>
 							<div class="form-group">
 								<label for="username" class="sr-only">Username</label>
-								<input name="username" type="text" class="form-control form-control-lg" placeholder="username" required="" autofocus="" value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
+								<input name="username" type="text" class="form-control" placeholder="username" required="" autofocus="" value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
 							</div>
 							<div class="form-group">
 								<label for="password" class="sr-only">Password</label>
-								<input name="password" id="password" type="password" class="form-control form-control-lg" placeholder="Password" required="" value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
+								<input name="password" id="password" type="password" class="form-control " placeholder="Password" required="" value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
 							</div>
 							<div class="checkbox mb-3">
 								<input type="checkbox" id="checkbox" class="form-checkbox"> Tampilkan kata sandi
 							</div>
-							<button type="submit" class="btn btn-lg btn-primary btn-block">Let me in</button>
+							<button type="submit" class="btn btn-primary btn-block">Let me in</button>
 							<?php if ($this->session->insidega == -1 && $this->session->insidega_try < 4) : ?>
 								<div class="error">
 									<p style="color:red; text-transform:uppercase">Login Gagal.<br />Nama pengguna atau kata sandi yang Anda masukkan salah!<br />

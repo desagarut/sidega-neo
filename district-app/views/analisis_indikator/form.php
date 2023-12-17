@@ -118,7 +118,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<li><a href="<?=site_url('analisis_master')?>"> Master Analisis</a></li>
 
@@ -146,11 +146,11 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					<div class="card card-shadow">
 
             <div class="box-header with-border">
 
-							<a href="<?= site_url()?>analisis_indikator" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Indikator Analisis</a>
+							<a href="<?= site_url()?>analisis_indikator" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Indikator Analisis</a>
 
 						</div>
 
@@ -338,9 +338,9 @@
 
 									<div class="col-xs-12">
 
-										<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" onclick="reset_form($(this).val());"><i class="fa fa-times"></i> Batal</button>
+										<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" onclick="reset_form($(this).val());"><i class="fe fe-times"></i> Batal</button>
 
-										<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+										<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 
 									</div>
 

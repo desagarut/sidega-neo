@@ -7,9 +7,17 @@ class Penduduk extends Admin_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(['penduduk_model', 'keluarga_model', 'wilayah_model', 'referensi_model', 'web_dokumen_model', 'config_model', 'program_bantuan_model', 'lapor_model', 'web_rumah_model']);
+		$this->load->model('penduduk_model'); 
+		$this->load->model('keluarga_model');
+		$this->load->model('wilayah_model');
+		$this->load->model('referensi_model');
+		$this->load->model('web_dokumen_model');
+		$this->load->model('config_model');
+		$this->load->model('program_bantuan_model');
+		$this->load->model('lapor_model');
+		$this->load->model('web_rumah_model');
 
-		$this->modul_ini 		= 2;
+		$this->modul_ini		= 2;
 		$this->sub_modul_ini 	= 21;
 		$this->_set_page 		= ['20', '50', '100'];
 		$this->_list_session 	= ['filter_tahun', 'filter_bulan', 'status_hanya_tetap', 'jenis_peristiwa', 'filter', 'status_dasar', 'sex', 'agama', 'dusun', 'rw', 'rt', 'cari', 'umur_min', 'umur_max', 'umurx', 'pekerjaan_id', 'status', 'pendidikan_sedang_id', 'pendidikan_kk_id', 'status_penduduk', 'judul_statistik', 'cacat', 'cara_kb_id', 'akta_kelahiran', 'status_ktp', 'id_asuransi', 'status_covid', 'penerima_bantuan', 'log', 'warganegara', 'menahun', 'hubungan', 'golongan_darah', 'hamil', 'kumpulan_nik', 'suku', 'bpjs_ketenagakerjaan', 'nik_sementara'];
@@ -25,8 +33,8 @@ class Penduduk extends Admin_Controller
 	public function clear()
 	{
 		$this->clear_session();
-		redirect('penduduk');
-		//redirect($this->controller);
+		//redirect('penduduk');
+		redirect($this->controller);
 	}
 
 	public function index($p = 1, $o = 0)
@@ -66,9 +74,9 @@ class Penduduk extends Admin_Controller
 		if (isset($per_page))
 			$this->session->per_page = $per_page;
 
-		$data['func'] = 'index';
+		//$data['func'] = 'index';
 		$data['set_page'] = $this->_set_page;
-		//$data['paging'] = $this->penduduk_model->paging($p, $o);
+		$data['paging'] = $this->penduduk_model->paging($p, $o);
 		$data['main'] = $this->penduduk_model->list_data();
 		$data['list_dusun'] = $this->wilayah_model->list_dusun();
 		$data['list_status_dasar'] = $this->referensi_model->list_data('tweb_status_dasar');

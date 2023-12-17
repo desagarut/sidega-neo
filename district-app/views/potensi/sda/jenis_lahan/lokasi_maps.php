@@ -104,11 +104,14 @@
 	}
 </style>
 <!-- Menampilkan OpenStreetMap dalam Box modal bootstrap (AdminLTE)  -->
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Lokasi <?= $data->judul ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pembangunan') ?>"> Daftar Pembangunan</a></li>
 			<li class="active">Lokasi <?= $data->judul ?></li>
 		</ol>
@@ -116,7 +119,7 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<form id="validasi1" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class="box-body">
 							<div class="row">
@@ -128,7 +131,7 @@
 							</div>
 						</div>
 						<div class='box-footer'>
-							<div class='col-xs-12'>
+							<div class='col-md-12'>
 								<div class="form-group">
 									<label class="col-sm-3 control-label" for="lat">Lat</label>
 									<div class="col-sm-9">
@@ -141,10 +144,10 @@
 										<input type="text" class="form-control number" name="lng" id="lng" value="<?= $data->lng ?>" />
 									</div>
 								</div>
-								<a href="<?= site_url('pembangunan') ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-								<a href="#" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-								<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
-								<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right' id="simpan_kantor"><i class='fa fa-check'></i> Simpan</button>
+								<a href="<?= site_url('pembangunan') ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+								<a href="#" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+								<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+								<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right' id="simpan_kantor"><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</form>

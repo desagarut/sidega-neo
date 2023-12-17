@@ -12,7 +12,8 @@
           <div class="list-group-item">
             <div class="row align-items-center">
               <div class="col-md-4">
-                <img src="<?= base_url("assets/tiny/files/logo/youtube.png") ?>" alt="<?= $data['nama'] ?>" class="avatar-img" style="height:40px">
+                <img src="<?= base_url("assets/
+files/logo/youtube.png") ?>" alt="<?= $data['nama'] ?>" class="avatar-img" style="height:40px">
               </div>
               <div class=" col-md-8">
                 <small><strong>

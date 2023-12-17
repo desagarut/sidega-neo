@@ -17,7 +17,7 @@
 						<div class="col-xs-6">
 							<a href="<?php echo site_url('layanan_mandiri/lapak/buat'); ?>">
 								<div class="lihat-lapak">
-									<div class="icon-tombol"><i class="fa fa-pencil-square-o"></i></div>
+									<div class="icon-tombol"><i class="fe fe-pencil-square-o"></i></div>
 									<div class="nama-tombol">Buat Lapak</div>
 								</div>
 							</a>
@@ -25,7 +25,7 @@
 						<div class="col-xs-6">
 							<a href="<?php echo site_url('layanan_mandiri/lapak/update'); ?>">
 								<div class="tambah-barang">
-									<div class="icon-tombol"><i class="fa fa-refresh"></i></div>
+									<div class="icon-tombol"><i class="fe fe-refresh"></i></div>
 									<div class="nama-tombol">Update Lapak</div>
 								</div>
 							</a>
@@ -87,7 +87,7 @@
 										<p class="title-widget">Ditampilkan</p>
 									</div>
 									<div class="icon">
-										<i class="fa fa-eye"></i>
+										<i class="fe fe-eye"></i>
 									</div>
 								</div>
 							</div>
@@ -99,7 +99,7 @@
 										<p class="title-widget">Tertunda</p>
 									</div>
 									<div class="icon">
-										<i class="fa fa-eye-slash"></i>
+										<i class="fe fe-eye-slash"></i>
 									</div>
 								</div>
 							</div>
@@ -111,7 +111,7 @@
 										<p class="title-widget">Ditolak</p>
 									</div>
 									<div class="icon">
-										<i class="fa fa-ban"></i>
+										<i class="fe fe-ban"></i>
 									</div>
 								</div>
 							</div>
@@ -123,7 +123,7 @@
 										<p class="title-widget">Semua Barang</p>
 									</div>
 									<div class="icon">
-										<i class="fa fa-cubes"></i>
+										<i class="fe fe-cubes"></i>
 									</div>
 								</div>
 							</div>
@@ -187,31 +187,31 @@
 
 											<td nowrap width="20%">
 												<a href="<?php echo base_url('/layanan_mandiri/lapak/update_barang/'.$item['id']); ?>" class="btn btn-sm bg-blue" style="padding:5px; border-radius:3px;">
-														<i class="fa fa-pencil-square-o"></i>
+														<i class="fe fe-pencil-square-o"></i>
 												</a>
 											<?php if ($item['status'] != 2): ?>
 												<a href="<?php echo base_url('/layanan_mandiri/lapak/tampilkan/'.$item['id']); ?>" class="btn btn-sm bg-green" style="padding:5px; border-radius:3px;">
-														<i class="fa fa-eye"></i>
+														<i class="fe fe-eye"></i>
 												</a>
 											<?php endif ?>
 																		
 											<?php if ($item['status'] == 1 || $item['status'] == 2): ?>
 												<a href="<?php echo base_url('/layanan_mandiri/lapak/sembunyikan/'.$item['id']); ?>" class="btn btn-sm bg-orange" style="padding:5px; border-radius:3px;">
-														<i class="fa fa-eye-slash"></i>
+														<i class="fe fe-eye-slash"></i>
 												</a>
 											<?php endif ?>
 																		 
 												<a href="<?php echo base_url('/layanan_mandiri/lapak/hapus/'.$item['id']); ?>" class="btn btn-sm bg-red" style="padding:5px; border-radius:3px;">
-														<i class="fa fa-trash"></i>
+														<i class="fe fe-trash"></i>
 												</a>
 											</td>
 											<td class="text-center" width="7%">
 											<?php if ($item['status'] == 1): ?>
-												<span class="fa fa-times" style="color:orange;font-size:13px"></span>
+												<span class="fe fe-times" style="color:orange;font-size:13px"></span>
 											<?php elseif ($item['status'] == 2): ?>
-												<span class="fa fa-check" style="color:green;font-size:13px"></span>
+												<span class="fe fe-check" style="color:green;font-size:13px"></span>
 											<?php else: ?>
-												<span class="fa fa-ban" style="color:red;font-size:13px"></span>
+												<span class="fe fe-ban" style="color:red;font-size:13px"></span>
 											<?php endif ?>
 											</td>
 										</tr>

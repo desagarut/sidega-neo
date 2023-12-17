@@ -1,10 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan <?= str_replace('-', ' ', ucwords($media))?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active"> Pengaturan <?= str_replace('-', ' ', ucwords($media))?></li>
 		</ol>
 	</section>
@@ -12,30 +15,30 @@
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">Media Sosial</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">
 							<ul class="nav nav-pills nav-stacked">
 								<?php foreach ($list_sosmed as $list) :?>
 									<?php $nama = str_replace(' ', '-', strtolower($list['nama']))?>
-									<li class="<?php ($media === $nama) and print('active')?>"><a href="<?= site_url("sosmed/tab/$nama")?>"><i class="fa fa-<?= $nama?>"></i> <?= $list['nama']?></a></li>
+									<li class="<?php ($media === $nama) and print('active')?>"><a href="<?= site_url("sosmed/tab/$nama")?>"><i class="fe fe-<?= $nama?>"></i> <?= $list['nama']?></a></li>
 								<?php endforeach;?>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<?php $this->load->view('sosmed/'.$media); ?>
 						<div class='box-footer'>
-							<div class='col-xs-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm reset' onclick="reset_form($(this).val());"><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+							<div class='col-md-12'>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm reset' onclick="reset_form($(this).val());"><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

@@ -2,7 +2,7 @@
 	<div class="box-header with-border">
 		<h3 class="box-title">Pengaturan Analisis</h3>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 	</div>
 	<div class="box-body no-padding">
@@ -18,7 +18,7 @@
 	<div class="box-header with-border">
 		<h3 class="box-title">Input Data Analisis</h3>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 	</div>
 	<div class="box-body no-padding">
@@ -31,7 +31,7 @@
 	<div class="box-header with-border">
 		<h3 class="box-title">Laporan Analisis</h3>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 	</div>
 	<div class="box-body no-padding">

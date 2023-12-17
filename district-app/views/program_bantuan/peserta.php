@@ -3,14 +3,14 @@
 	<section class="content-header">
 		<h1>Profil Penerima Manfaat Program</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('program_bantuan') ?>"> Daftar Program Bantuan</a></li>
 			<li class="active">Profil Penerima Program Bantuan</li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
 		<div class="box-header">
-			<a href="<?= site_url("program_bantuan")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+			<a href="<?= site_url("program_bantuan")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 		</div>
 
 		<div class="row">

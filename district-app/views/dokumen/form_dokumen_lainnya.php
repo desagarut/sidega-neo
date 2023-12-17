@@ -1,27 +1,30 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Form <?= $kat_nama?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<?php if (in_array($kat, array('2', '3'))): ?>
-				<li><a href="<?= $kembali_ke ?: site_url("$this->controller/dokumen/dokumen_lainnya/$kat"); ?>"><i class="fa fa-dashboard"></i> Daftar <?= $kat_nama?></a></li>
+				<li><a href="<?= $kembali_ke ?: site_url("$this->controller/dokumen/dokumen_lainnya/$kat"); ?>"><i class="fe fe-dashboard"></i> Daftar <?= $kat_nama?></a></li>
 			<?php else: ?>
-				<li><a href="<?= site_url("$this->controller/dokumen_lainnya/$kat"); ?>"><i class="fa fa-dashboard"></i> Daftar <?= $kat_nama?></a></li>
+				<li><a href="<?= site_url("$this->controller/dokumen_lainnya/$kat"); ?>"><i class="fe fe-dashboard"></i> Daftar <?= $kat_nama?></a></li>
 			<?php endif; ?>
 			<li class="active">Pengaturan <?= $kat_nama?></li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-			<div class="box box-info">
+			<div class="card card-shadow">
 				<div class="box-header with-border">
 					<?php if (in_array($kat, array('2', '3'))): ?>
-						<a href="<?= $kembali_ke ?: site_url("$this->controller/peraturan_desa/$kat"); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
-							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama?>
+						<a href="<?= $kembali_ke ?: site_url("$this->controller/peraturan_desa/$kat"); ?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
+							<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama?>
 						</a>
 					<?php else: ?>
-						<a href="<?= site_url("$this->controller/dokumen_lainnya/$kat"); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
-							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama?>
+						<a href="<?= site_url("$this->controller/dokumen_lainnya/$kat"); ?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
+							<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama?>
 						</a>
 					<?php endif; ?>
 				</div>
@@ -54,7 +57,7 @@
 								<input type="text" class="form-control <?php empty($dokumen) and print('required')?>" id="file_path" name="satuan">
 								<input id="file" type="file" class="hidden" name="satuan">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 								</span>
 							</div>
 							<?php if ($dokumen): ?>
@@ -73,8 +76,8 @@
 					?>
 				</div>
 				<div class='box-footer'>
-					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</div>
 		</form>

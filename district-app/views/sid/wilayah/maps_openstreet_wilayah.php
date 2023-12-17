@@ -33,7 +33,7 @@
 								<div class="card-body">
 									<div class="row">
 										<div class="col-sm-12">
-										<div class="map-box" style="height:450px; overflow:hidden">
+											<div id="map-box" style="height:355px; overflow:hidden">
 												<input type="hidden" id="path" name="path" value="<?= $wil_ini['path'] ?>">
 												<input type="hidden" name="id" id="id" value="<?= $wil_ini['id'] ?>" />
 												<input type="hidden" name="zoom" id="zoom" value="<?= $wil_ini['zoom'] ?>" />
@@ -41,19 +41,19 @@
 											</div>
 										</div>
 									</div>
-									<div class='card-footer'>
-										<div class='col-xs-12'> <a href="<?= $tautan['link'] ?>" class="btn btn-social btn-card bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-social btn-card btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-											<label class="control-label col-sm-1">Warna</label>
-											<div class="col-sm-2">
-												<div class="input-group my-colorpicker2">
-													<input type="text" id="warna" name="warna" class="form-control input-sm required" placeholder="#FFFFFF" value="<?= $wil_ini['warna'] ?>">
-													<div class="input-group-addon input-sm"> <i></i> </div>
-												</div>
+								</div>
+								<div class='card-footer'>
+									<div class='col-md-12'> <a href="<?= $tautan['link'] ?>" class="btn btn-outline-success btn-sm mb-1" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-social btn-card btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+										<label class="control-label col-sm-1">Warna</label>
+										<div class="col-sm-2">
+											<div class="input-group my-colorpicker2">
+												<input type="text" id="warna" name="warna" class="form-control input-sm required" placeholder="#FFFFFF" value="<?= $wil_ini['warna'] ?>">
+												<div class="input-group-addon input-sm"> <i></i> </div>
 											</div>
-											<button type='reset' class='btn btn-social btn-card btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
-											<button type='submit' class='btn btn-social btn-card btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
-											<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-social btn-card btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fa fa-map'></i> Ubah Wilayah</a>&nbsp;-->
 										</div>
+										<button type='reset' class='btn btn-danger btn-sm mb-1' id="resetme"><i class='fe fe-x'></i> Reset</button>
+										<button type='submit' class='btn btn-success btn-sm mb-1'><i class='fe fe-check'></i> Simpan</button>
+										<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-social btn-card btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fe fe-map'></i> Ubah Wilayah</a>&nbsp;-->
 									</div>
 								</div>
 							</form>
@@ -162,5 +162,5 @@
 
 	}; //EOF window.onload
 </script>
-<script src="<?= base_url() ?>assets/tiny/osm/js/leaflet.filelayer.js"></script>
-<script src="<?= base_url() ?>assets/tiny/osm/js/togeojson.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/leaflet.filelayer.js"></script>
+<script src="<?= base_url() ?>assets/js/osm/togeojson.js"></script>

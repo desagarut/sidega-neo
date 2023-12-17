@@ -35,7 +35,7 @@
             <form id="validasi" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="box-header"> <a href="<?= site_url('pembangunan/kerjasama_pihak_ketiga') ?>" class="btn btn-info"><i class="fa fa-arrow-circle-left"></i> Kembali</a> </div>
+                  <div class="box-header"> <a href="<?= site_url('pembangunan/kerjasama_pihak_ketiga') ?>" class="btn btn-info"><i class="fe fe-arrow-circle-left"></i> Kembali</a> </div>
                   <div class="box-body">
                     <div class="row">
                       <div class="col-md-12">
@@ -189,7 +189,7 @@
                               <input type="text" class="form-control " id="file_path" name="foto">
                               <input id="file" type="file" class="hidden" name="foto">
                               <span class="input-group-btn">
-                                <button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+                                <button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fe fe-search"></i> Browse</button>
                               </span>
                             </div>
                             <span class="help-block"><code>(Kosongkan jika tidak ingin mengubah gambar)</code></span>
@@ -198,8 +198,8 @@
                       </div>
                     </div>
                     <div class="box-footer">
-                      <div class="col-xs-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-danger"><i class="fa fa-times"></i> Batal</a>
-                        <button type="submit" class="btn btn-info pull-right"><i class="fa fa-check"></i> Simpan</button>
+                      <div class="col-xs-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-danger"><i class="fe fe-times"></i> Batal</a>
+                        <button type="submit" class="btn btn-info pull-right"><i class="fe fe-check"></i> Simpan</button>
                       </div>
                     </div>
                   </div>

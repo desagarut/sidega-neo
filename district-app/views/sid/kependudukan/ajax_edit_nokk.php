@@ -88,7 +88,7 @@
 					<label for="tgl_cetak_kk">Tanggal Cetak Kartu Keluarga <code> (Contoh: 31/12/2001 )</code> </label>
 					<div class="input-group input-group-sm date">
 						<div class="input-group-addon">
-							<i class="fa fa-calendar"></i>
+							<i class="fe fe-calendar"></i>
 						</div>
 						<input id="tgl_1" name="tgl_cetak_kk" class="form-control input-sm" type="text" value="<?= $kk['tgl_cetak_kk']?>"/>
 					</div>
@@ -106,7 +106,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 	</div>
 </form>

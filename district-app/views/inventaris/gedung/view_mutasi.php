@@ -1,9 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Rincian Data Mutasi Inventaris Gedung Dan Bangunan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url() ?>inventaris_gedung/mutasi"><i class="fa fa-dashboard"></i>Rincian Data Mutasi Inventaris Gedung Dan Bangunan</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
+			<li><a href="<?= site_url() ?>inventaris_gedung/mutasi"><i class="fe fe-dashboard"></i>Rincian Data Mutasi Inventaris Gedung Dan Bangunan</a></li>
 			<li class="active">Pengaturan Inventaris Tanah</li>
 		</ol>
 	</section>
@@ -14,9 +17,9 @@
 					<?php $this->load->view('inventaris/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
-						<a href="<?= site_url() ?>inventaris_gedung/mutasi" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Mutasi Inventaris Gedung Dan Bangunan</a>
+						<a href="<?= site_url() ?>inventaris_gedung/mutasi" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Mutasi Inventaris Gedung Dan Bangunan</a>
 						</div>
 						<div class="box-body">
 							<div class="row">

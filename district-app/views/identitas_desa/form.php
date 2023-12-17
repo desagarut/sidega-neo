@@ -25,7 +25,7 @@
 								<input type="file" class="hidden" id="file" name="logo">
 								<input type="hidden" name="old_logo" value="<?= $main['logo']; ?>">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-card" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-card" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 								</span>
 							</div>
 						</div>
@@ -44,12 +44,12 @@
 								<input type="file" class="hidden" id="file2" name="kantor_desa">
 								<input type="hidden" name="old_kantor_desa" value="<?= $main['kantor_desa']; ?>">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-card" id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-card" id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 								</span>
 							</div>
 						</div>
 					</div>
-					<div class="card card-primary">
+					<div class="card shadow">
 						<div class="card-body card-profile">
 							<iframe height="200px" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $main["video"]; ?>" title="Profile Desa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<br />
@@ -263,8 +263,8 @@
 							</div>
 						</div>
 						<div class="card-footer">
-							<button type='reset' class='btn btn-social btn-card btn-danger btn-sm'><i class='fa fa-times'></i> Batal</button>
-							<button type='submit' class='btn btn-social btn-card btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+							<button type='reset' class='btn btn-social btn-card btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+							<button type='submit' class='btn btn-success btn-sm mb-1'><i class='fe fe-check'></i> Simpan</button>
 						</div>
 					</div>
 				</div>

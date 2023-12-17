@@ -1,11 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Daftar Pelaksanaan DU RKP</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pembangunan') ?>"> Pembangunan</a></li>
 			<li class="active">Daftar Pelaksanaan DU RKP</li>
 		</ol>
@@ -106,41 +109,41 @@
 					'data': function(data) {
 						let status;
 						if (data.status == 1) {
-							status = `TK. Wilayah: <i class="fa fa-check" style="color: green"></i>`
+							status = `TK. Wilayah: <i class="fe fe-check" style="color: green"></i>`
 						} else {
-							status = `TK. Wilayah: <i class="fa fa-times" style="color: red"></i>`
+							status = `TK. Wilayah: <i class="fe fe-times" style="color: red"></i>`
 						}
 
 						let status_usulan;
 						if (data.status_usulan == 1) {
-							status_usulan = `TK. Des/Kel : <i class="fa fa-check" style="color: green"></i>`
+							status_usulan = `TK. Des/Kel : <i class="fe fe-check" style="color: green"></i>`
 						} else {
-							status_usulan = `TK. Des/Kel : <i class="fa fa-times" style="color: red"></i>`
+							status_usulan = `TK. Des/Kel : <i class="fe fe-times" style="color: red"></i>`
 						}
 
 						let status_vote;
 						if (data.status_vote == 1) {
-							status_vote = `Status prioritas : <i class="fa fa-check" style="color: green"></i>`
+							status_vote = `Status prioritas : <i class="fe fe-check" style="color: green"></i>`
 						} else {
-							status_vote = `Status prioritas : <i class="fa fa-times" style="color: red"></i>`
+							status_vote = `Status prioritas : <i class="fe fe-times" style="color: red"></i>`
 						}
 
 						let status_rkp;
 						if (data.status_rkp == 1) {
-							status_rkp = `Status RKP : <i class="fa fa-check" style="color: green"></i>`
+							status_rkp = `Status RKP : <i class="fe fe-check" style="color: green"></i>`
 						} else if (data.status_rkp == 0) {
-							status_rkp = `Status RKP : <i class="fa fa-times" style="color: red"></i>`
+							status_rkp = `Status RKP : <i class="fe fe-times" style="color: red"></i>`
 						} else {
-							status_rkp = `Status RKP : <i class="fa fa-minus" style="color: yellow"></i>`
+							status_rkp = `Status RKP : <i class="fe fe-minus" style="color: yellow"></i>`
 						}
 
 						let status_pelaksanaan;
 						if (data.status_pelaksanaan == 1) {
-							status_pelaksanaan = `Pelaksanaan : <i class="fa fa-check" style="color: green"></i>`
+							status_pelaksanaan = `Pelaksanaan : <i class="fe fe-check" style="color: green"></i>`
 						} else if (data.status_pelaksanaan == 0) {
-							status_pelaksanaan = `Pelaksanaan : <i class="fa fa-times" style="color: red"></i>`
+							status_pelaksanaan = `Pelaksanaan : <i class="fe fe-times" style="color: red"></i>`
 						} else {
-							status_pelaksanaan = `Pelaksanaan : <i class="fa fa-minus" style="color: yellow"></i>`
+							status_pelaksanaan = `Pelaksanaan : <i class="fe fe-minus" style="color: yellow"></i>`
 						}
 
 						return `

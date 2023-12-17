@@ -14,7 +14,7 @@
 				<div class="box box-danger">
 					<div class="box-body">
 						<div class="form-group">
-							<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-triangle"></i>
+							<div class="alert alert-warning" role="alert"><i class="fe fe-exclamation-triangle"></i>
 								Data yang diimpor berisi data beberapa desa dan akan menyebabkan nilai laporan dan grafik salah. Untuk menghapus data desa lain, pilih desa anda dan klik tombol 'Berishkan'.
 							</div>
 						</div>
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Bersihkan</button>
+		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Bersihkan</button>
 	</div>
 </form>

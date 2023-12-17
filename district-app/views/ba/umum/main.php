@@ -1,26 +1,23 @@
 <style type="text/css">
-  .disabled
-	{
-     pointer-events: none;
-     cursor: default;
-  }
+	.disabled {
+		pointer-events: none;
+		cursor: default;
+	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
-		<h1>Buku Administrasi Umum - <?= $subtitle ?></h1>
-		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li class="active"><?= $subtitle ?></li>
-		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div id="umum-sidebar" class="col-sm-3">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">Buku Administrasi Umum - <?= $subtitle ?></h5>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-3 mb-4">
 				<?php $this->load->view('ba/umum/side') ?>
 			</div>
-			<div id="umum-content" class="col-sm-9">
+			<div class="col-md-9">
 				<?php $this->load->view($main_content) ?>
 			</div>
 		</div>
-	</section>
-</div>
+	</div>
+</main>

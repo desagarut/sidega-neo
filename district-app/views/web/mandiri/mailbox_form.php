@@ -8,7 +8,7 @@
         <small>#</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fe fe-dashboard"></i> Home</a></li>
         <li class="active">Mailbox</li>
       </ol>
     </section>
@@ -21,10 +21,10 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="box box-info">
+          <div class="card card-shadow">
             <div class="box-header">
-                <a href="<?= site_url("mandiri_web/mandiri/1/3")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
-                    <i class="fa fa-arrow-circle-left "></i>Kembali ke halaman Kotak Pesan
+                <a href="<?= site_url("mandiri_web/mandiri/1/3")?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
+                    <i class="fe fe-arrow-circle-left "></i>Kembali ke halaman Kotak Pesan
                 </a>
             </div>
             <div class="box-body">
@@ -59,7 +59,7 @@
                         </div>                
                     <div class='box-footer'>
                         <div class='col-md-12'>
-                            <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Kirim Pesan</button>
+                            <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Kirim Pesan</button>
                         </div>
                     </div>
                 </form> 			

@@ -9,11 +9,14 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Komentar</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Pengaturan Komentar</li>
 		</ol>
 	</section>
@@ -21,9 +24,9 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -43,7 +46,7 @@
 														<div class="input-group input-group-sm pull-right">
 															<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();}">
 															<div class="input-group-btn">
-																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 															</div>
 														</div>
 													</div>
@@ -60,28 +63,28 @@
 																	<th>Aksi</th>
 																	<th>Pengirim</th>
 																	<?php if ($o==6): ?>
-																		<th><a href="<?= site_url("komentar/index/$p/5")?>">Isi Komentar <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("komentar/index/$p/5")?>">Isi Komentar <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o==5): ?>
-																		<th><a href="<?= site_url("komentar/index/$p/6")?>">Isi Komentar <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("komentar/index/$p/6")?>">Isi Komentar <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																	<?php else: ?>
-																		<th><a href="<?= site_url("komentar/index/$p/5")?>">Isi Komentar <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("komentar/index/$p/5")?>">Isi Komentar <i class='fe fe-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																	<th>No. HP Pengirim</th>
 																	<th>Email Pengirim</th>
 																	<th>Judul Artikel</th>
 																	<?php if ($o==8): ?>
-																		<th nowrap><a href="<?= site_url("komentar/index/$p/7")?>">Aktif <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("komentar/index/$p/7")?>">Aktif <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o==7): ?>
-																		<th nowrap><a href="<?= site_url("komentar/index/$p/8")?>">Aktif <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("komentar/index/$p/8")?>">Aktif <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																	<?php else: ?>
-																		<th nowrap><a href="<?= site_url("komentar/index/$p/7")?>">Aktif <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("komentar/index/$p/7")?>">Aktif <i class='fe fe-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																	<?php if ($o==10): ?>
-																		<th nowrap><a href="<?= site_url("komentar/index/$p/9")?>">Dimuat Pada <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("komentar/index/$p/9")?>">Dimuat Pada <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o==9): ?>
-																		<th nowrap><a href="<?= site_url("komentar/index/$p/10")?>">Dimuat Pada <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("komentar/index/$p/10")?>">Dimuat Pada <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																	<?php else: ?>
-																		<th nowrap><a href="<?= site_url("komentar/index/$p/9")?>">Dimuat Pada <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th nowrap><a href="<?= site_url("komentar/index/$p/9")?>">Dimuat Pada <i class='fe fe-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																</tr>
 															</thead>
@@ -91,13 +94,13 @@
 																		<td><input type="checkbox" name="id_cb[]" value="<?=$data['id']?>" /></td>
 																		<td><?=$data['no']?></td>
 																		<td nowrap>
-																			<a href="<?= site_url("komentar/form/$p/$o/$data[id]")?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
+																			<a href="<?= site_url("komentar/form/$p/$o/$data[id]")?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																			<?php if ($data['status'] == '2'): ?>
-																			 <a href="<?= site_url('komentar/komentar_lock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Komentar"><i class="fa fa-lock">&nbsp;</i></a>
+																			 <a href="<?= site_url('komentar/komentar_lock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Komentar"><i class="fe fe-lock">&nbsp;</i></a>
 																			<?php elseif ($data['status'] == '1'): ?>
-																			 <a href="<?= site_url('komentar/komentar_unlock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Komentar"><i class="fa fa-unlock"></i></a>
+																			 <a href="<?= site_url('komentar/komentar_unlock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Komentar"><i class="fe fe-unlock"></i></a>
 																			<?php endif ?>
-																			<a href="#" data-href="<?= site_url("komentar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("komentar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		</td>
 																		<td nowrap><?= $data['owner']?></td>
 																		<td><?= $data['komentar']?></td>
@@ -164,15 +167,15 @@
 									<div class='modal-content'>
 										<div class='modal-header'>
 											<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-											<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> Konfirmasi</h4>
+											<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Konfirmasi</h4>
 										</div>
 										<div class='modal-body btn-info'>
 											Apakah Anda yakin ingin mengarsipkan data ini?
 										</div>
 										<div class='modal-footer'>
-											<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+											<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 											<a class='btn-ok'>
-												<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fa fa-file-archive-o'></i> Arsipkan</button>
+												<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fe fe-file-archive-o'></i> Arsipkan</button>
 											</a>
 										</div>
 									</div>

@@ -7,11 +7,14 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1> Daftar CCTV <?= ucfirst($this->setting->sebutan_desa) ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Daftar CCTV <?= ucfirst($this->setting->sebutan_desa) ?></li>
 		</ol>
 	</section>
@@ -22,12 +25,12 @@
 					<?php $this->load->view('gallery_cctv/menu') ?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">Daftar CCTV <?= ucfirst($this->setting->sebutan_desa) ?></h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
-								<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>
+								<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i> </button>
 							</div>
 
 						</div>
@@ -43,9 +46,9 @@
 													<option value="2" <?php if ($filter == 2) : ?>selected<?php endif ?>>Tidak Aktif</option>
 												</select>
 												<a href="<?= site_url("gallery_cctv/form") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Artikel">
-													<i class="fa fa-plus"></i> Tambah CCTV
+													<i class="fe fe-plus"></i> Tambah CCTV
 												</a>
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_cctv/delete_all/$p/$o") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_cctv/delete_all/$p/$o") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 
 											</div>
 											<div class="col-sm-6">
@@ -53,7 +56,7 @@
 													<div class="input-group input-group-sm pull-right">
 														<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform').attr('action', '<?= site_url('gallery_cctv/search') ?>');$('#'+'mainform').submit();endif">
 														<div class="input-group-btn">
-															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("gallery_cctv/search") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("gallery_cctv/search") ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 														</div>
 													</div>
 												</div>
@@ -69,11 +72,11 @@
 																<th class="text-center">No</th>
 																<th class="text-center">CCTV</th>
 																<?php if ($o == 2) : ?>
-																	<th class="text-center" width=25%><a href="<?= site_url("gallery_cctv/index/$p/1") ?>">Sumber CCTV <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th class="text-center" width=25%><a href="<?= site_url("gallery_cctv/index/$p/1") ?>">Sumber CCTV <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 1) : ?>
-																	<th class="text-center" width=25%><a href="<?= site_url("gallery_cctv/index/$p/2") ?>">Sumber CCTV <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th class="text-center" width=25%><a href="<?= site_url("gallery_cctv/index/$p/2") ?>">Sumber CCTV <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else : ?>
-																	<th class="text-center" width=25%><a href="<?= site_url("gallery_cctv/index/$p/1") ?>">Sumber CCTV <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th class="text-center" width=25%><a href="<?= site_url("gallery_cctv/index/$p/1") ?>">Sumber CCTV <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th width=20% class="text-center">Deskripsi</th>
 																<th>Aksi</th>
@@ -95,23 +98,23 @@
 																		<?= tgl_indo2($data['tgl_upload']) ?>
 																	</td>
 																	<td align="center">
-																		<a href="<?= site_url("gallery_cctv/urut/$data[id]/1") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Bawah"><i class="fa fa-arrow-down"></i></a>
-																		<a href="<?= site_url("gallery_cctv/urut/$data[id]/2") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Atas"><i class="fa fa-arrow-up"></i></a>
-																		<a href="<?= site_url("gallery_cctv/sub_cctv/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Album"><i class="fa fa-bars"></i></a></br>
-																		<a href="<?= site_url("gallery_cctv/form/$p/$o/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
+																		<a href="<?= site_url("gallery_cctv/urut/$data[id]/1") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a>
+																		<a href="<?= site_url("gallery_cctv/urut/$data[id]/2") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
+																		<a href="<?= site_url("gallery_cctv/sub_cctv/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Album"><i class="fe fe-bars"></i></a></br>
+																		<a href="<?= site_url("gallery_cctv/form/$p/$o/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																		<?php // if ($data['slider'] == '1') : ?>
-																			<!--<a href="<?= site_url("gallery_cctv/slider_off/" . $data['id']) ?>" class="btn bg-maroon btn-box btn-sm" title="Keluarkan Dari Slider"><i class="fa fa-play"></i></a>-->
+																			<!--<a href="<?= site_url("gallery_cctv/slider_off/" . $data['id']) ?>" class="btn bg-maroon btn-box btn-sm" title="Keluarkan Dari Slider"><i class="fe fe-play"></i></a>-->
 																		<?php // else : ?>
-																			<!--<a href="<?= site_url("gallery_cctv/slider_on/" . $data['id']) ?>" class="btn bg-gray btn-box btn-sm" title="Tampilkan Di Slider"><i class="fa fa-eject"></i></a>-->
+																			<!--<a href="<?= site_url("gallery_cctv/slider_on/" . $data['id']) ?>" class="btn bg-gray btn-box btn-sm" title="Tampilkan Di Slider"><i class="fe fe-eject"></i></a>-->
 																		<?php // endif; ?>
 																		<?php if ($data['enabled'] == '2') : ?>
-																			<a href="<?= site_url("gallery_cctv/gallery_lock/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Album"><i class="fa fa-lock"></i></a>
+																			<a href="<?= site_url("gallery_cctv/gallery_lock/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Album"><i class="fe fe-lock"></i></a>
 																		<?php elseif ($data['enabled'] == '1') : ?>
-																			<a href="<?= site_url("gallery_cctv/gallery_unlock/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Album"><i class="fa fa-unlock"></i></a>
+																			<a href="<?= site_url("gallery_cctv/gallery_unlock/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Album"><i class="fe fe-unlock"></i></a>
 																		<?php endif ?>
 																		</br>
 																		<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																			<a href="#" data-href="<?= site_url("gallery_cctv/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("gallery_cctv/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		<?php endif; ?>
 																		<!--<a href="<?= $data['link'] ?>" class="btn btn-info btn-box btn-sm" target="_blank" title="Buka Link CCTV">Buka Link CCTV</a>-->
 																	</td>

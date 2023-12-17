@@ -1,8 +1,11 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Daftar Usulan RKP <?= ucwords($this->setting->sebutan_desa); ?></h1>
 		<ol class="breadcrumb float-sm-right">
 			<li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
@@ -23,7 +26,7 @@
 								<div class="box-header">
 									<div class="row">
 										<div class="col-sm-10">
-											<a href="<?= site_url($this->controller . '/dialog_durkpdes/cetak'); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Rencana Kerja Pembangunan"><i class="fa fa-print "></i> Cetak</a>
+											<a href="<?= site_url($this->controller . '/dialog_durkpdes/cetak'); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Rencana Kerja Pembangunan"><i class="fe fe-printer "></i> Cetak</a>
 										</div>
 										<div class="input-group col-md-2">
 											<select class="form-control input-sm select2" id="tahun" name="tahun" style="width:100%;">

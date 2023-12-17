@@ -11,7 +11,7 @@
 																	<p>Proses ini untuk mengubah database SID ke struktur database SIDeGa <?=AmbilVersi()?>.</p>
 																	<p class="text-muted text-red well well-sm no-shadow" style="margin-top: 10px;">
 																		<small>
-																			<strong><i class="fa fa-info-circle text-red"></i> Sebelum melakukan migrasi ini, pastikan database SID anda telah dibackup.</strong>
+																			<strong><i class="fe fe-info-circle text-red"></i> Sebelum melakukan migrasi ini, pastikan database SID anda telah dibackup.</strong>
 																		</small>
 																	</p>
 																	<p>Apabila sesudah melakukan konversi ini, masih ditemukan masalah, laporkan di :</P>
@@ -25,7 +25,7 @@
 																				<td style="padding-top:20px;padding-bottom:10px;">
 																					<div class="form-group">
 																						<div class="col-sm-8 col-lg-4">
-																							<a href="#" class="btn btn-block btn-danger btn-sm ajax"  title="Migrasi DB" onclick="document.getElementById('excell').submit();" data-toggle="modal" data-target="#loading" data-backdrop="false" data-keyboard="false"> <i class="fa fa-spin fa-refresh"></i> Migrasi Database Ke SIDeGa <?= AmbilVersi()?></a>
+																							<a href="#" class="btn btn-block btn-danger btn-sm ajax"  title="Migrasi DB" onclick="document.getElementById('excell').submit();" data-toggle="modal" data-target="#loading" data-backdrop="false" data-keyboard="false"> <i class="fe fe-spin fa-refresh"></i> Migrasi Database Ke SIDeGa <?= AmbilVersi()?></a>
 																						</div>
 																					</div>
 																					<div class="ajax-content"></div>

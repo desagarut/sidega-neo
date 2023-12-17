@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Form CCTV <?= ucfirst($this->setting->sebutan_desa) ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('gallery_cctv') ?>">CCTV <?= ucfirst($this->setting->sebutan_desa) ?></a></li>
 			<li class="active">Form</li>
 		</ol>
@@ -14,10 +17,10 @@
 					<?php $this->load->view('gallery_cctv/menu') ?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?= site_url("gallery_cctv") ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Artikel">
-								<i class="fa fa-arrow-circle-left "></i>Kembali
+							<a href="<?= site_url("gallery_cctv") ?>" class="btn btn-sm btn-outline-info mb-1"title="Tambah Artikel">
+								<i class="fe fe-arrow-circle-left "></i>Kembali
 							</a>
 						</div>
 						<div class="box-body">
@@ -44,9 +47,9 @@
 							</div>
 						</div>
 						<div class='box-footer'>
-							<div class='col-xs-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+							<div class='col-md-12'>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

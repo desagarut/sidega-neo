@@ -18,30 +18,29 @@
 	th.horizontal {width: 20%}
 
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Rincian Mutasi Letter-C</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('home')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('letterc')?>"> Daftar Letter-C</a></li>
 			<li><a href="<?= site_url('letterc/rincian/'.$letterc[id])?>"> Rincian Letter-C</a></li>
 			<li class="active">Mutasi Letter-C</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				<div class="card shadow">
+					<div class="card-header">
 						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])."/".$persil['id']?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
-							<i class="fa fa-plus"></i>Tambah Mutasi Persil
+							<i class="fe fe-plus"></i>Tambah Mutasi Persil
 						</a>
-						<a href="<?=site_url('letterc')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
+						<a href="<?=site_url('letterc')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
 						</a>
-						<a href="<?=site_url('letterc/rincian/'.$letterc[id])?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
+						<a href="<?=site_url('letterc/rincian/'.$letterc[id])?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 						</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -138,11 +137,11 @@
 																<tr>
 																	<td class="text-center"><?= $nomer?></td>
 																	<td nowrap class="text-center">
-																		<a href="<?= site_url("letterc/create_mutasi/$item[id_letterc_masuk]/$item[id_persil]/$item[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
+																		<a href="<?= site_url("letterc/create_mutasi/$item[id_letterc_masuk]/$item[id_persil]/$item[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																		<?php if ($item['jenis_mutasi'] != '9'): ?>
-																			<a href="#" data-href="<?= site_url("letterc/hapus_mutasi/$letterc[id]/$item[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("letterc/hapus_mutasi/$letterc[id]/$item[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		<?php else: ?>
-																			<a href="#" data-href="<?= site_url('letterc/awal_persil/'.$letterc['id'].'/' .$persil['id'].'/1')?>" class="btn bg-maroon btn-box btn-sm"  title="Bukan pemilik awal" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url('letterc/awal_persil/'.$letterc['id'].'/' .$persil['id'].'/1')?>" class="btn bg-maroon btn-box btn-sm"  title="Bukan pemilik awal" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		<?php endif; ?>
 																	</td>
 																	<td><?= $item['no_bidang_persil']?></td>
@@ -175,15 +174,15 @@
 								<div class='modal-content'>
 									<div class='modal-header'>
 										<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-										<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> Konfirmasi</h4>
+										<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Konfirmasi</h4>
 									</div>
 									<div class='modal-body btn-info'>
 										Apakah Anda yakin ingin menghapus data ini?
 									</div>
 									<div class='modal-footer'>
-										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 										<a class='btn-ok'>
-											<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fa fa-trash-o'></i> Hapus</button>
+											<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fe fe-trash-o'></i> Hapus</button>
 										</a>
 									</div>
 								</div>

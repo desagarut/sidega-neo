@@ -31,7 +31,7 @@
 							<label class="control-label">Perubahan sejak tanggal</label>
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right tgl" name="tgl_dari" type="text" value="">
 							</div>
@@ -41,9 +41,9 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+			<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="btn-ok" >
-				<i class='fa fa-download'></i> Unduh
+				<i class='fe fe-download'></i> Unduh
 			</button>
 		</div>
 	</div>

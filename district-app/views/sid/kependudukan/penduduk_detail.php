@@ -2,7 +2,7 @@
   <section class="content-header">
     <h1>Biodata Penduduk</h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
       <li><a href="<?= site_url('penduduk/clear') ?>"> Daftar Penduduk</a></li>
       <li class="active">Biodata Penduduk</li>
     </ol>
@@ -11,20 +11,20 @@
     <form id="mainform" name="mainform" action="" method="post">
       <div class="row">
         <div class="col-md-12">
-          <div class="box box-info">
+          <div class="card card-shadow">
             <div class="box-header">
               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                <a href="<?= site_url("penduduk/dokumen/$penduduk[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Manajemen Dokumen Penduduk"><i class="fa fa-book"></i> Manajemen Dokumen</a>
-                <!--<a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Rumah Penduduk" ><i class="fa fa-book"></i> Rumah Penduduk</a>-->
+                <a href="<?= site_url("penduduk/dokumen/$penduduk[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Manajemen Dokumen Penduduk"><i class="fe fe-book"></i> Manajemen Dokumen</a>
+                <!--<a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Rumah Penduduk" ><i class="fe fe-book"></i> Rumah Penduduk</a>-->
                 <?php if ($penduduk['status_dasar_id'] == 1) : ?>
-                  <a href="<?= site_url("penduduk/form/$p/$o/$penduduk[id]") ?>" class="btn btn-social btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Biodata"><i class="fa fa-edit"></i> Ubah Biodata</a>
+                  <a href="<?= site_url("penduduk/form/$p/$o/$penduduk[id]") ?>" class="btn btn-social btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Biodata"><i class="fe fe-edit"></i> Ubah Biodata</a>
                 <?php endif; ?>
               <?php endif; ?>
-              <a href="<?= site_url("penduduk/cetak_biodata/$penduduk[id]") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Biodata" target="_blank"><i class="fa fa-print"></i>Cetak Biodata</a>
+              <a href="<?= site_url("penduduk/cetak_biodata/$penduduk[id]") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Biodata" target="_blank"><i class="fe fe-printer"></i>Cetak Biodata</a>
               <?php if ($penduduk['status_dasar_id'] == 1 and !empty($penduduk['id_kk'])) : ?>
-                <a href="<?= site_url("keluarga/anggota/$p/$o/$penduduk[id_kk]") ?>" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Anggota Keluarga"><i class="fa fa-users"></i> Anggota Keluarga</a>
+                <a href="<?= site_url("keluarga/anggota/$p/$o/$penduduk[id_kk]") ?>" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Anggota Keluarga"><i class="fe fe-users"></i> Anggota Keluarga</a>
               <?php endif; ?>
-              <a href="<?= site_url("penduduk/clear") ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Penduduk"> <i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Penduduk </a>
+              <a href="<?= site_url("penduduk/clear") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Penduduk"> <i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Penduduk </a>
             </div>
           </div>
           <!-- Main content -->
@@ -74,12 +74,12 @@
                     <h3 class="box-title">Ringkasan</h3>
                   </div>
                   <!-- /.box-header -->
-                  <div class="box-body"> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong>
+                  <div class="box-body"> <strong><i class="fe fe-book margin-r-5"></i> Pendidikan Terakhir</strong>
                     <p class="text-muted">
                       <?= strtoupper($penduduk['pendidikan_kk']) ?>
                     </p>
                     <hr>
-                    <strong><i class="fa fa-map-marker margin-r-5"></i> Alamat Sekarang</strong>
+                    <strong><i class="fe fe-map-marker margin-r-5"></i> Alamat Sekarang</strong>
                     <p class="text-muted">
                       <?= strtoupper($penduduk['alamat']) ?>
                       ,
@@ -90,32 +90,32 @@
                       <?= $penduduk['rw'] ?>
                       , </p>
                     <hr>
-                    <strong><i class="fa fa-pencil margin-r-5"></i> Kontak</strong>
-                    <p> <span class="label label-info"><i class="fa fa-phone"></i>
+                    <strong><i class="fe fe-pencil margin-r-5"></i> Kontak</strong>
+                    <p> <span class="label label-info"><i class="fe fe-phone"></i>
                         <?= $penduduk['telepon'] ?>
-                      </span> <span class="label label-warning"><i class="fa fa-envelope"></i>
+                      </span> <span class="label label-warning"><i class="fe fe-envelope"></i>
                         <?= $penduduk['email'] ?>
                       </span> </p>
                     <hr>
-                    <strong><i class="fa fa-file-text-o margin-r-5"></i> Catatan:</strong> <br>
+                    <strong><i class="fe fe-file-text-o margin-r-5"></i> Catatan:</strong> <br>
                     Biodata Penduduk (NIK :
                     <?= $penduduk['nik'] ?>
                     )
                     <?php if (!empty($penduduk['nama_pendaftar'])) : ?>
-                      <p class="kecil"> Terdaftar pada: <i class="fa fa-clock-o"></i>
+                      <p class="kecil"> Terdaftar pada: <i class="fe fe-clock-o"></i>
                         <?= tgl_indo2($penduduk['created_at']); ?>
-                        Oleh: <i class="fa fa-user"></i>
+                        Oleh: <i class="fe fe-user"></i>
                         <?= $penduduk['nama_pendaftar'] ?>
                       </p>
                     <?php else : ?>
-                      <p class="kecil"> Terdaftar sebelum: <i class="fa fa-clock-o"></i>
+                      <p class="kecil"> Terdaftar sebelum: <i class="fe fe-clock-o"></i>
                         <?= tgl_indo2($penduduk['created_at']); ?>
                       </p>
                     <?php endif; ?>
                     <?php if (!empty($penduduk['nama_pengubah'])) : ?>
-                      <p class="kecil"> Terakhir diubah: <i class="fa fa-clock-o"></i>
+                      <p class="kecil"> Terakhir diubah: <i class="fe fe-clock-o"></i>
                         <?= tgl_indo2($penduduk['updated_at']); ?>
-                        <i class="fa fa-user"></i>
+                        <i class="fe fe-user"></i>
                         <?= $penduduk['nama_pengubah'] ?>
                       </p>
                     <?php endif; ?>
@@ -465,9 +465,9 @@
                             <tr>
                               <td><input type="checkbox" name="id_cb[]" value="<?= $data['id'] ?>"></td>
                               <td><?= $key + 1 ?></td>
-                              <td nowrap><a href="<?= base_url() . LOKASI_DOKUMEN ?><?= urlencode($data['satuan']) ?>" class="btn btn-info btn-box btn-sm" rel=”noopener noreferrer” target="_blank" title="Buka Dokumen"><i class="fa fa-eye"></i></a>
+                              <td nowrap><a href="<?= base_url() . LOKASI_DOKUMEN ?><?= urlencode($data['satuan']) ?>" class="btn btn-info btn-box btn-sm" rel=”noopener noreferrer” target="_blank" title="Buka Dokumen"><i class="fe fe-eye"></i></a>
                                 <?php if (!$data['hidden']) : ?>
-                                  <a href="<?= site_url("penduduk/dokumen_form/$penduduk[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data" title="Ubah Data"><i class="fa fa-edit"></i></a> <a href="#" data-href="<?= site_url("penduduk/delete_dokumen/$penduduk[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+                                  <a href="<?= site_url("penduduk/dokumen_form/$penduduk[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data" title="Ubah Data"><i class="fe fe-edit"></i></a> <a href="#" data-href="<?= site_url("penduduk/delete_dokumen/$penduduk[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
                                 <?php endif ?>
                               </td>
                               <td width="40%">
@@ -482,7 +482,7 @@
                           <?php endforeach; ?>
                         </tbody>
                       </table>
-                      <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/dokumen_form/$penduduk[id]") ?>" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah Dokumen</a> <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("penduduk/delete_all_dokumen/$penduduk[id]") ?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a> </div>
+                      <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/dokumen_form/$penduduk[id]") ?>" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i>Tambah Dokumen</a> <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("penduduk/delete_all_dokumen/$penduduk[id]") ?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> </div>
                     </div>
 
                     <div class="tab-pane" id="bantuan">
@@ -523,10 +523,10 @@
                           <?php foreach ($list_rumah as $key => $data) : ?>
                             <tr>
                               <td class="text-center"><?= $key + 1; ?></td>
-                              <td nowrap><a href="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']) ?>" class="btn bg-info btn-box btn-sm" rel=”noopener noreferrer” target="_blank" title="Buka Rumah"><i class="fa fa-eye"></i></a></br>
+                              <td nowrap><a href="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']) ?>" class="btn bg-info btn-box btn-sm" rel=”noopener noreferrer” target="_blank" title="Buka Rumah"><i class="fe fe-eye"></i></a></br>
                                 <?php if (!$data['hidden']) : ?>
-                                  <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data" title="Ubah Data"><i class="fa fa-edit"></i></a></br>
-                                  <a href="#" data-href="<?= site_url("penduduk/delete_rumah/$penduduk[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+                                  <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data" title="Ubah Data"><i class="fe fe-edit"></i></a></br>
+                                  <a href="#" data-href="<?= site_url("penduduk/delete_rumah/$penduduk[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
                                 <?php endif ?>
                               </td>
                               <td><?= $data['nama'] ?>
@@ -542,7 +542,7 @@
                             </tr>
                           <?php endforeach; ?>
                         </table>
-                        <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fa fa-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah rumah</a> </div>
+                        <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fe fe-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i>Tambah rumah</a> </div>
                       </div>
                     </div>
 
@@ -551,9 +551,9 @@
                       <div class="box box-warning">
                         <div class="box-header with-border">
                           <h3 class="box-title"><a href="#">Lokasi Rumah</a> </h3>
-                          <div class="box-tools pull-right"> <span><a class="btn btn-success btn-xs" href="<?= site_url() ?>gis/clear"><i class="fa fa-map-marker"></i> Peta Desa</a></span>
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
+                          <div class="box-tools pull-right"> <span><a class="btn btn-success btn-xs" href="<?= site_url() ?>gis/clear"><i class="fe fe-map-marker"></i> Peta Desa</a></span>
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i> </button>
                           </div>
                         </div>
                         <div class="box-body">
@@ -564,15 +564,15 @@
                           <input type="text" disabled="disabled" name="lat" id="lat" value="<?= $penduduk_map['lat'] ?>" />
                           <label>Lng: </label>
                           <input type="text" disabled="disabled" name="lng" id="lng" value="<?= $penduduk_map['lng'] ?>" />
-                          <a href="<?= site_url("penduduk/ajax_penduduk_maps_koordinat/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-purple btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Input Koordinat Rumah : <?= strtoupper($penduduk['nama']) ?>"><i class='fa fa-map-marker'></i> Ubah Koordinat</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_openstreet/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-navy btn-sm"><i class='fa fa-map-o'></i> Ubah di Openstreet</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box btn-primary btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fa fa-google'></i> Ubah di GoogleMap</a>
+                          <a href="<?= site_url("penduduk/ajax_penduduk_maps_koordinat/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-purple btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Input Koordinat Rumah : <?= strtoupper($penduduk['nama']) ?>"><i class='fe fe-map-marker'></i> Ubah Koordinat</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_openstreet/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-navy btn-sm"><i class='fe fe-map-o'></i> Ubah di Openstreet</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box btn-primary btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a>
                         </div>
                       </div>
                       <div class="box box-warning">
                         <div class="box-header with-border">
                           <h3 class="box-title"><a href="#">Foto Rumah</a></h3>
                           <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i> </button>
                           </div>
                         </div>
                         <div class="box-body">
@@ -588,10 +588,10 @@
                             <?php foreach ($list_rumah as $key => $data) : ?>
                               <tr>
                                 <td class="text-center"><?= $key + 1; ?></td>
-                                <td nowrap><a href="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']) ?>" class="btn bg-info btn-box btn-sm" rel=”noopener noreferrer” target="_blank" title="Buka Rumah"><i class="fa fa-eye"></i></a></br>
+                                <td nowrap><a href="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']) ?>" class="btn bg-info btn-box btn-sm" rel=”noopener noreferrer” target="_blank" title="Buka Rumah"><i class="fe fe-eye"></i></a></br>
                                   <?php if (!$data['hidden']) : ?>
-                                    <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data" title="Ubah Data"><i class="fa fa-edit"></i></a></br>
-                                    <a href="#" data-href="<?= site_url("penduduk/delete_rumah/$penduduk[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+                                    <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data" title="Ubah Data"><i class="fe fe-edit"></i></a></br>
+                                    <a href="#" data-href="<?= site_url("penduduk/delete_rumah/$penduduk[id]/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
                                   <?php endif ?>
                                 </td>
                                 <td><?= $data['nama'] ?>
@@ -608,14 +608,14 @@
                             <?php endforeach; ?>
                           </table>
                         </div>
-                        <div class="box-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fa fa-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah rumah</a> </div>
+                        <div class="box-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fe fe-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i>Tambah rumah</a> </div>
                       </div>
                       <div class="box box-warning">
                         <div class="box-header with-border">
                           <h3 class="box-title"><a href="#bantuan">Program Bantuan</a></h3>
-                          <div class="box-tools pull-right"> <span class="time"><a class="btn btn-primary btn-xs" href="<?= site_url() ?>program_bantuan"><i class="fa fa-list"></i> Daftar Program Bantuan</a></span>
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
+                          <div class="box-tools pull-right"> <span class="time"><a class="btn btn-primary btn-xs" href="<?= site_url() ?>program_bantuan"><i class="fe fe-list"></i> Daftar Program Bantuan</a></span>
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i> </button>
                           </div>
                         </div>
                         <div class="box-body">
@@ -642,9 +642,9 @@
                       </div>
                       <div class="box box-success">
                         <div class="box-header with-border">
-                          <h3 class="box-title pull-right"><small>Data Awal : <i class="fa fa-clock-o"></i>
+                          <h3 class="box-title pull-right"><small>Data Awal : <i class="fe fe-clock-o"></i>
                               <?= tgl_indo2($penduduk['created_at']); ?>
-                              -- <i class="fa fa-user"></i>Oleh:
+                              -- <i class="fe fe-user"></i>Oleh:
                               <?= $penduduk['nama_pengubah'] ?>
                             </small></h3>
                         </div>

@@ -1,4 +1,4 @@
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-body no-padding">
 							<!-- <h3 class="box-title"> -->
 								<ul class="nav nav-pills nav-stacked">
@@ -11,11 +11,11 @@
 							<!-- </h3> -->
 						</div>
 					</div>
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">Kategori Artikel</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">
@@ -37,11 +37,11 @@
 							</ul>
 						</div>
 					</div>
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">Artikel Statis</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">

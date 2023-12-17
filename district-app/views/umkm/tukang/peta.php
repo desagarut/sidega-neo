@@ -47,11 +47,14 @@ function initMap() {
   }
 </style>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Lokasi : <?=$tukang['nama']?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('tukang') ?>"> Wisata</a></li>
 			<li class="active">Lokasi <?=$tukang['nama']?></li>
 		</ol>
@@ -59,7 +62,7 @@ function initMap() {
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
                 <form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">	
                 <div class='modal-body'>
                     <div class="row">
@@ -68,12 +71,12 @@ function initMap() {
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <div class='col-xs-12'>
-                           <a href="<?= site_url("tukang")?>" class="pull-left"> <button type="#" class="btn btn-social btn-box btn-primary btn-sm"><i class='fa fa-arrow-left'></i> Kembali</button></a>
+                        <div class='col-md-12'>
+                           <a href="<?= site_url("tukang")?>" class="pull-left"> <button type="#" class="btn btn-social btn-box btn-primary btn-sm"><i class='fe fe-arrow-left'></i> Kembali</button></a>
                             <input type="text" name="lat" id="lat" value="<?= $tukang['lat']?>"/>
                             <input type="text" name="lng" id="lng" value="<?= $tukang['lng']?>" />
-                            <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-refresh'></i> Reset</button>
-                            <button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class='fa fa-check'></i> Simpan</button>
+                            <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-refresh'></i> Reset</button>
+                            <button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class='fe fe-check'></i> Simpan</button>
                         </div>
                     </div>
                 </div>

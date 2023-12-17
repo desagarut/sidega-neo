@@ -1,10 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Resume Statistik</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Resume Statistik <?= $dusun; ?></li>
 		</ol>
 	</section>
@@ -12,13 +15,13 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
                 <div class='col-md-12'>
-                    <div class="box box-info">
+                    <div class="card card-shadow">
                         <div class="box-header with-border">
                             <div class="box-tools pull-right">
                                  <a href="<?=site_url()?>penduduk/clear"><span class="label label-info"> Detail</span></a>
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i>
                                 </button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i>
                                 </button>
                             </div>
                             <h3 class="box-title">Kependudukan</h3>
@@ -35,7 +38,7 @@
                                     <div class="icon">
                                         <i class="ion ion-location"></i>
                                     </div>
-                                    <a href="<?=site_url('sid_core')?>" class="small-box-footer">Detail  <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="<?=site_url('sid_core')?>" class="small-box-footer">Detail  <i class="fe fe-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div class="col-sm-2 col-xs-6">
@@ -49,7 +52,7 @@
                                     <div class="icon">
                                         <i class="ion ion-person"></i>
                                     </div>
-                                    <a href="<?=site_url('penduduk/clear')?>" class="small-box-footer">Detail  <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="<?=site_url('penduduk/clear')?>" class="small-box-footer">Detail  <i class="fe fe-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div class="col-sm-2 col-xs-6">
@@ -65,7 +68,7 @@
                                         <i class="ion ion-ios-people"></i>
                                     </div>
     
-                                    <a href="<?=site_url('keluarga/clear')?>" class="small-box-footer">Detail  <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="<?=site_url('keluarga/clear')?>" class="small-box-footer">Detail  <i class="fe fe-arrow-circle-right"></i></a>
     
                                 </div>
                             </div>
@@ -80,7 +83,7 @@
                                     <div class="icon">
                                         <i class="ion ion-android-people"></i>
                                     </div>
-                                    <a href="<?=site_url('kelompok/clear')?>" class="small-box-footer">Detail  <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="<?=site_url('kelompok/clear')?>" class="small-box-footer">Detail  <i class="fe fe-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div class="col-sm-2 col-xs-6">
@@ -94,7 +97,7 @@
                                     <div class="icon">
                                         <i class="ion ion-ios-home"></i>
                                     </div>
-                                    <a href="<?=site_url('rtm/clear')?>" class="small-box-footer">Detail  <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="<?=site_url('rtm/clear')?>" class="small-box-footer">Detail  <i class="fe fe-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -106,9 +109,9 @@
                         <div class="box-header with-border">
                             <div class="box-tools pull-right">
                                  <a href="<?=site_url()?>program_bantuan"><span class="label label-info"> Detail</span></a>
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i>
                                 </button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i>
                                 </button>
                             </div>
                             <h3 class="box-title">Program Bantuan</h3>
@@ -126,9 +129,9 @@
                                         </div>
                                         <div class="small-box-footer">
                                             <?php if ($this->CI->cek_hak_akses('u')): ?>
-                                                <a href="<?= site_url("{$this->controller}/dialog_pengaturan")?>" class="inner text-white pengaturan" title="Pengaturan Program Bantuan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pengaturan Program Bantuan"><i class="fa fa-gear"></i></a>
+                                                <a href="<?= site_url("{$this->controller}/dialog_pengaturan")?>" class="inner text-white pengaturan" title="Pengaturan Program Bantuan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pengaturan Program Bantuan"><i class="fe fe-gear"></i></a>
                                             <?php endif; ?>
-                                            <a href="<?=site_url().$bantuan['link_detail']?>" class="inner text-white">Lihat Detail  <i class="fa fa-arrow-circle-right"></i></a>
+                                            <a href="<?=site_url().$bantuan['link_detail']?>" class="inner text-white">Lihat Detail  <i class="fe fe-arrow-circle-right"></i></a>
                                         </div>
                                     </div>
                                     
@@ -141,7 +144,7 @@
                                       <h3 class="box-title text-danger">Sparkline Pie</h3>
                         
                                       <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fe fe-refresh"></i></button>
                                       </div>
                                     </div>
                                     <!-- /.box-header -->

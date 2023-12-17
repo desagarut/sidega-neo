@@ -23,7 +23,8 @@ define("LOKASI_GAMBAR_WIDGET", 'instansi/upload/widgets/');
 define("LOKASI_KEUANGAN_ZIP", 'instansi/upload/keuangan/');
 define("LOKASI_MEDIA", 'instansi/upload/media/');
 define("LOKASI_SIMBOL_LOKASI", 'instansi/upload/gis/lokasi/point/');
-define("LOKASI_SIMBOL_LOKASI_DEF", 'assets/tiny/images/gis/point/');
+define("LOKASI_SIMBOL_LOKASI_DEF", 'assets/
+images/gis/point/');
 define("LOKASI_RUMAH", 'instansi/upload/dokumen/');
 
 
@@ -572,7 +573,8 @@ function gambar_desa($nama_file, $type = FALSE, $file = FALSE)
 
 	// type FALSE = logo, TRUE = kantor
 	$default = ($type)  ? 'desagarut.jpg' : 'sidega.png';
-	return $logo_desa = ($file ? APPPATH.'../' : base_url()). "assets/tiny/files/logo/$default";
+	return $logo_desa = ($file ? APPPATH.'../' : base_url()). "assets/
+files/logo/$default";
 
 }
 

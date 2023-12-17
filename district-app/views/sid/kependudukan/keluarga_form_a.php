@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Biodata Anggota Keluarga</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
       <li><a href="<?= site_url('keluarga/clear')?>"> Daftar Keluarga</a></li>
 			<li class="active">Biodata Anggota Keluarga</li>
 		</ol>
@@ -28,7 +31,7 @@
                     <input type="file" class="hidden" id="file" name="foto">
                     <input type="hidden" name="old_foto" value="<?= $penduduk['foto']?>">
                     <span class="input-group-btn">
-                      <button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+                      <button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
                     </span>
                   </div>
                 </div>
@@ -37,11 +40,11 @@
             <div class="col-md-9">
               <div class='box box-primary'>
         			  <div class="box-header with-border">
-  								<a href="<?=site_url("keluarga")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
-  									<i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
+  								<a href="<?=site_url("keluarga")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Keluarga">
+  									<i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
   								</a>
-                  <a href="<?=site_url("keluarga/anggota/1/0/$id_kk")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
-                    <i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
+                  <a href="<?=site_url("keluarga/anggota/1/0/$id_kk")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Keluarga">
+                    <i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
                   </a>
   							</div>
                 <div class='box-body'>
@@ -81,9 +84,9 @@
                   <?php $this->load->view('sid/kependudukan/penduduk_form_isian_bersama'); ?>
                 </div>
                 <div class='box-footer'>
-                  <div class='col-xs-12'>
-                    <button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-                    <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+                  <div class='col-md-12'>
+                    <button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+                    <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
                   </div>
                 </div>
                 <div  class="modal fade" id="rumah-penduduk" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -91,7 +94,7 @@
                     <div class='modal-content'>
                       <div class='modal-header'>
                         <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-                        <h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> Cari Lokasi Tempat Tinggal</h4>
+                        <h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Cari Lokasi Tempat Tinggal</h4>
                       </div>
                       <div class="fetched-data"></div>
                     </div>

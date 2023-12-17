@@ -3,7 +3,7 @@
 	<section class="content-header">
 		<h1>Pendataan Vaksin Covid-19</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('covid19_vaksin')?>"> Daftar Peserta Vaksin Covid-19</a></li>
 			<li class="active">Pendataan Vaksin Covid19</li>
 		</ol>
@@ -12,13 +12,13 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-header with-border">
 						<div class="col-md-12">
-							<a href="<?= site_url('covid19_vaksin')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Peserta Vaksin Covid-19</a>
+							<a href="<?= site_url('covid19_vaksin')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Peserta Vaksin Covid-19</a>
 						</div>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="box-header with-border">
@@ -41,7 +41,7 @@
 											</div>
 											<div class="col-sm-4">
 												<a href="#" class="btn btn-social btn-block btn-success btn-sm" data-toggle="modal" data-target="#add-warga">
-													<i class="fa fa-plus"></i>
+													<i class="fe fe-plus"></i>
 													Tambah Penduduk Non Domisili
 												</a>
 												<span id="data_h_plus_msg" class="help-block">
@@ -69,8 +69,8 @@
 									</div>
 									<div class="box-footer">
 										<div class="col-xs-12">
-											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-											<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
+											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+											<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 										</div>
 									</div>
 								</div>
@@ -89,7 +89,7 @@
 		<div class='modal-content'>
 			<div class='modal-header'>
 				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'><i class='fa fa-plus text-green'></i> Tambah Penduduk Pendatang / Tidak Tetap</h4>
+				<h4 class='modal-title' id='myModalLabel'><i class='fe fe-plus text-green'></i> Tambah Penduduk Pendatang / Tidak Tetap</h4>
 			</div>
 			<div class='modal-body'>
 				<div class="row">
@@ -97,9 +97,9 @@
 				</div>
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fa fa-trash-o'></i> Simpan</button>
+					<button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

@@ -1,16 +1,15 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Cetak Layanan Surat</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('hom_sid')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Cetak Layanan Surat</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				<div class="card shadow">
+					<div class="card-header">
 						<form id="main" name="main" action="<?= site_url()?>surat/search" method="post">
 							<div class="row">
 								<div class="col-sm-6">
@@ -50,8 +49,8 @@
 																<tr <?php if ($data['jenis'] != 1): ?>style='background-color:#f8deb5 !important;'<?php endif; ?>>
 																	<td><?= $i; ?></td>
 																	<td class="nostretch">
-																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-social btn-flat bg-olive btn-sm"  title="Buat Surat"><i class="fa fa-file-word-o"></i>Buat Surat</a>
-																		<a href="<?= site_url("surat/favorit/{$data['id']}/{$data['favorit']}")?>" class="btn bg-purple btn-flat btn-sm" title="Keluarkan dari Daftar Favorit" ><i class="fa fa-star"></i></a>
+																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-social btn-flat bg-olive btn-sm"  title="Buat Surat"><i class="fe fe-file-word-o"></i>Buat Surat</a>
+																		<a href="<?= site_url("surat/favorit/{$data['id']}/{$data['favorit']}")?>" class="btn bg-purple btn-flat btn-sm" title="Keluarkan dari Daftar Favorit" ><i class="fe fe-star"></i></a>
 																	</td>
 																	<td><?= $data['nama']?></td>
 																	<td><?= $data['kode_surat']?></td>
@@ -101,9 +100,9 @@
 																<tr <?php if ($data['jenis'] != 1): ?>style='background-color:#f8deb5 !important;'<?php endif; ?>>
 																	<td><?= $nomer; ?></td>
 																	<td class="nostretch">
-																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-social btn-flat bg-purple btn-sm"  title="Buat Surat"><i class="fa fa-file-word-o"></i>Buat Surat</a>
+																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-social btn-flat bg-purple btn-sm"  title="Buat Surat"><i class="fe fe-file-word-o"></i>Buat Surat</a>
 																		<?php if ($this->CI->cek_hak_akses('u')): ?>
-																			<a href="<?= site_url("surat/favorit/{$data['id']}/{$data['favorit']}")?>" class="btn bg-purple btn-flat btn-sm"  title="Tambahkan ke Daftar Favorit" ><i class="fa fa-star-o"></i></a>
+																			<a href="<?= site_url("surat/favorit/{$data['id']}/{$data['favorit']}")?>" class="btn bg-purple btn-flat btn-sm"  title="Tambahkan ke Daftar Favorit" ><i class="fe fe-star-o"></i></a>
 																		<?php endif; ?>
 																	</td>
 																	<td><?= $data['nama']?></td>

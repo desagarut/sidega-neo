@@ -40,12 +40,12 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+			<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok">
 				<?php if (strpos($form_action, '/cetak') !== false): ?>
-					<i class='fa fa-print'></i> Cetak
+					<i class='fe fe-printer'></i> Cetak
 				<?php else: ?>
-					<i class='fa fa-download'></i> Unduh
+					<i class='fe fe-download'></i> Unduh
 				<?php endif; ?>
 			</button>
 		</div>

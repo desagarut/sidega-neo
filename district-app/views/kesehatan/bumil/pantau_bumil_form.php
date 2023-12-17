@@ -118,7 +118,7 @@
 	</div>
 	<div class="box-footer">
 		<div class="box-tools pull-right">
-			<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
+			<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 		</div>
 	</div>
 </div>

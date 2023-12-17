@@ -2,15 +2,15 @@
     <section class='content-header'>
 		<h1>Dokumen Arsip <?= ucwords($this->setting->sebutan_desa) ?></h1>
 		<ol class='breadcrumb'>
-			<li><a href='<?= site_url('hom_sid') ?>'><i class='fa fa-home'></i> Home</a></li>
+			<li><a href='<?= site_url('hom_sid') ?>'><i class='fe fe-home'></i> Home</a></li>
 			<li class='active'>Arsip <?= ucwords($this->setting->sebutan_desa) ?></li>
 		</ol>
 	</section>
     <section class="content" id="maincontent">
         <?php $this->load->view('ba/arsip/navigasi') ?>
-        <div class="box box-info">
+        <div class="card card-shadow">
             <div class="box-header with-border">
-                <a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a>
+                <a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
             </div>
             <div class="box-body with-border">
                 <div class="row">
@@ -41,7 +41,7 @@
                                             <div class="input-group input-group-sm pull-right">
                                                 <input name="cari" id="cari" class="form-control" placeholder="Cari Dokumen..." type="text" value="<?= $this->session->data_filter_cari ?? '' ?>">
                                                 <div class="input-group-btn">
-                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                                    <button type="submit" class="btn btn-default"><i class="fe fe-search"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,15 +70,15 @@
                                                             <td class="aksi">
                                                                 <?php if (isset($data['lampiran'])):?>
                                                                     <?php if ($data['lampiran'] != ''): ?>
-                                                                        <a href="<?= site_url('keluar/unduh/lampiran/') . $data['id']?>" class="btn bg-blue btn-flat btn-sm" title="Unduh Lampiran"><i class="fa fa-paperclip">&nbsp;</i></a>
+                                                                        <a href="<?= site_url('keluar/unduh/lampiran/') . $data['id']?>" class="btn bg-blue btn-flat btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip">&nbsp;</i></a>
                                                                     <?php endif ?>
-                                                                    <a href="<?= site_url('keluar/unduh/rtf/') . $data['id']?>" class="btn bg-black btn-flat btn-sm" title="Unduh Berkas"><i class="fa fa-download">&nbsp;</i></a>
+                                                                    <a href="<?= site_url('keluar/unduh/rtf/') . $data['id']?>" class="btn bg-black btn-flat btn-sm" title="Unduh Berkas"><i class="fe fe-download">&nbsp;</i></a>
                                                                 <?php else: ?>
-                                                                <a href="<?= site_url('ba_arsip/tindakan_lihat/') . $data['kategori'] . '/' . $data['id'] . '/lihat' ?>" target="_blank" class="btn bg-blue btn-flat btn-sm" title="Lihat Berkas"><i class="fa fa-eye">&nbsp;</i></a>
-                                                                <a href="<?= site_url('ba_arsip/tindakan_lihat/') . $data['kategori'] . '/' . $data['id'] . '/unduh' ?>" class="btn bg-black btn-flat btn-sm" title="Unduh Berkas"><i class="fa fa-download">&nbsp;</i></a>
+                                                                <a href="<?= site_url('ba_arsip/tindakan_lihat/') . $data['kategori'] . '/' . $data['id'] . '/lihat' ?>" target="_blank" class="btn bg-blue btn-flat btn-sm" title="Lihat Berkas"><i class="fe fe-eye">&nbsp;</i></a>
+                                                                <a href="<?= site_url('ba_arsip/tindakan_lihat/') . $data['kategori'] . '/' . $data['id'] . '/unduh' ?>" class="btn bg-black btn-flat btn-sm" title="Unduh Berkas"><i class="fe fe-download">&nbsp;</i></a>
                                                                 <?php endif ?>
-                                                                <a href="<?= site_url('ba_arsip/tindakan_ubah/') . $data['kategori'] . '/' . $data['id'] . '/' . $page . '/' . $o?>" class="btn bg-yellow btn-flat btn-sm" title="Ubah Lokasi Arsip" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Arsip"><i class="fa fa-edit">&nbsp;</i></a>
-                                                                <a href="<?= site_url($data['modul_asli'])?>" class="btn bg-green btn-flat btn-sm" title="Tampilkan di modul aslinya"><i class="fa fa-list">&nbsp;</i></a>
+                                                                <a href="<?= site_url('ba_arsip/tindakan_ubah/') . $data['kategori'] . '/' . $data['id'] . '/' . $page . '/' . $o?>" class="btn bg-yellow btn-flat btn-sm" title="Ubah Lokasi Arsip" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Arsip"><i class="fe fe-edit">&nbsp;</i></a>
+                                                                <a href="<?= site_url($data['modul_asli'])?>" class="btn bg-green btn-flat btn-sm" title="Tampilkan di modul aslinya"><i class="fe fe-list">&nbsp;</i></a>
                                                             </td>
                                                             <td class="aksi"><?= $data['nomor_dokumen'] ?? '-' ?></td>
                                                             <td class="aksi"><?= tgl_indo2($data['tanggal_dokumen']) ?></td>

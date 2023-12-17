@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-12">
       <input id="stat" type="hidden" value="<?=$lap?>">
-      <div class="box box-info">
+      <div class="card card-shadow">
         <div class="box-header with-border" style="margin-bottom: 15px;">
           <h3 class="box-title">Daftar <?= $heading ?></h3>
         </div>

@@ -61,8 +61,8 @@
           </div>
         </div>
         <div class="box-footer">
-          <div class="col-xs-12"> <a href="<?= site_url('pembangunan/daftar_usulan_tk_desa') ?>" class="btn btn-danger"><i class="fa fa-times"></i> Batal</a>
-            <button type="submit" class="btn btn-info pull-right"><i class="fa fa-check"></i> Simpan</button>
+          <div class="col-xs-12"> <a href="<?= site_url('pembangunan/daftar_usulan_tk_desa') ?>" class="btn btn-danger"><i class="fe fe-times"></i> Batal</a>
+            <button type="submit" class="btn btn-info pull-right"><i class="fe fe-check"></i> Simpan</button>
           </div>
         </div>
       </form>

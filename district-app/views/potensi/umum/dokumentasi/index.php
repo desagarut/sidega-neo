@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Dokumentasi Potensi Umum</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Dokumentasi Potensi Umum</li>
 		</ol>
 	</section>
@@ -10,14 +13,14 @@
 		<form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<a href="<?= site_url('potensi_umum_dokumentasi/form') ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
-								<i class="fa fa-plus"></i>Tambah Data
+								<i class="fe fe-plus"></i>Tambah Data
 							</a>
-							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fa fa-print "></i> Cetak</a>
-							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fa fa-download "></i> Unduh</a>
-							<a href="<?= site_url('potensi_umum') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-left"></i> Kembali </a>
+							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fe fe-download "></i> Unduh</a>
+							<a href="<?= site_url('potensi_umum') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-left"></i> Kembali </a>
 						</div>
 						<div class="box-body">
 							<h5 class="text-bold">Rincian Dokumen</h5>
@@ -97,8 +100,8 @@
 				{'data': null},
 				{
 					'data': function(data) {
-						return `<a href="<?= site_url("potensi_umum_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i> </a>
-								<a href="#" data-href="<?= site_url("potensi_umum_dokumentasi/delete/{$potensi_umum->id}/"); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+						return `<a href="<?= site_url("potensi_umum_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i> </a>
+								<a href="#" data-href="<?= site_url("potensi_umum_dokumentasi/delete/{$potensi_umum->id}/"); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 							   `
 					}, 'class': 'text-center'
 				},

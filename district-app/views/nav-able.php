@@ -9,7 +9,7 @@
 				<div class="main-menu-header">
 					<img class="img-radius" src="<?= gambar_desa($desa['logo']); ?>" alt="User-Profile-Image">
 					<div class="user-details">
-						<div id="more-details"><?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?> <i class="fa fa-caret-down"></i></div>
+						<div id="more-details"><?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?> <i class="fe fe-caret-down"></i></div>
 					</div>
 				</div>
 				<div class="collapse" id="nav-user-link">

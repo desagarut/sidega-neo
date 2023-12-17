@@ -25,11 +25,11 @@ SIDEGA
 	} );
 </script>
 <?php if ($tgl_lengkap && $tgl_lengkap_aktif == 1): ?>
-	<div class="box box-info">
+	<div class="card card-shadow">
 		<div class="box-header with-border">
-			<a href="<?= site_url($this->controller."/ajax_cetak/$o/cetak"); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Mutasi Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Mutasi Penduduk"><i class="fa fa-print "></i> Cetak</a>
-			<a href="<?= site_url($this->controller."/ajax_cetak/$o/unduh"); ?>?>" title="Unduh Buku Mutasi Penduduk" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Mutasi Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Mutasi Penduduk"><i class="fa fa-download"></i> Unduh</a>
-			<a href="<?= site_url($this->controller."/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a>
+			<a href="<?= site_url($this->controller."/ajax_cetak/$o/cetak"); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Mutasi Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Mutasi Penduduk"><i class="fe fe-printer "></i> Cetak</a>
+			<a href="<?= site_url($this->controller."/ajax_cetak/$o/unduh"); ?>?>" title="Unduh Buku Mutasi Penduduk" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Mutasi Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Mutasi Penduduk"><i class="fe fe-download"></i> Unduh</a>
+			<a href="<?= site_url($this->controller."/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
 		</div>
 		<div class="box-body">
 			<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -53,7 +53,7 @@ SIDEGA
 							<div class="input-group input-group-sm pull-right">
 								<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" title="Pencarian berdasarkan nama penduduk" value="<?=html_escape($cari); ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("ba_penduduk_mutasi/filter/cari"); ?>');$('#'+'mainform').submit();}">
 								<div class="input-group-btn">
-									<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("ba_penduduk_mutasi/filter/cari"); ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+									<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("ba_penduduk_mutasi/filter/cari"); ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 								</div>
 							</div>
 						</div>
@@ -164,7 +164,7 @@ SIDEGA
 		</div>
 	</div>
 <?php else: ?>
-	<div class="box box-info">
+	<div class="card card-shadow">
 		<div class="box-header with-border">
 		</div>
 		<div class="box-body">

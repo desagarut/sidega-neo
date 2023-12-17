@@ -9,9 +9,9 @@
                         <h3 class="box-title">Permohonan Surat</h3>
                         <div class="box-tools pull-right">
                             <a href="<?=site_url("mandiri_web/mandiri_surat")?>""><span class="label label-success"> Buat Surat</span></a>
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i>
                             </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i>
                             </button>
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                                     <tr>
                                       <td class="padat"><?= ($key + 1); ?></td>
                                       <td class="aksi"><?php if ($data['status_id'] == 1): ?>
-                                        <a href="<?= site_url("mandiri_web/mandiri_surat/$data[id]")?>" title="Lengkapi Surat" class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i></a>
+                                        <a href="<?= site_url("mandiri_web/mandiri_surat/$data[id]")?>" title="Lengkapi Surat" class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
                                         <?php endif; ?>
                                         <?php if (in_array($data['status_id'], array('0', '1'))): ?>
-                                        <a href="<?= site_url("permohonan_surat/batalkan/$data[id]")?>" title="Batalkan" class="btn bg-maroon btn-box btn-sm"><i class="fa fa-times"></i></a>
+                                        <a href="<?= site_url("permohonan_surat/batalkan/$data[id]")?>" title="Batalkan" class="btn bg-maroon btn-box btn-sm"><i class="fe fe-times"></i></a>
                                         <?php endif; ?></td>
                                       <td><?=$data['nama']?></td>
                                       <td><?=$data['jenis_surat']?></td>

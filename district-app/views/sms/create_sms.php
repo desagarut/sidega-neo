@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>SMS</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">SMS</li>
 		</ol>
 	</section>
@@ -11,27 +14,27 @@
 			<div class="row">
 				<div class="col-md-3">
 					<a href="<?= site_url('sms/form/0/0/4')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Baru"  class="btn btn-primary btn-block margin-bottom">Tulis Pesan Baru</a>
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">SMS</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="<?= site_url('sms/clear')?>"><i class="fa fa-inbox"></i> Kotak Masuk</a></li>
-								<li class="active"><a href="<?= site_url('sms/outbox')?>"><i class="fa fa-pencil"></i> Tulis Pesan</a></li>
-								<li><a href="<?= site_url('sms/sentitem')?>"><i class="fa fa-envelope-o"></i> Pesan Terkirim</a></li>
-								<li><a href="<?= site_url('sms/pending')?>"><i class="fa fa-file-text-o"></i> Pesan Tertunda</a></li>
+								<li><a href="<?= site_url('sms/clear')?>"><i class="fe fe-inbox"></i> Kotak Masuk</a></li>
+								<li class="active"><a href="<?= site_url('sms/outbox')?>"><i class="fe fe-pencil"></i> Tulis Pesan</a></li>
+								<li><a href="<?= site_url('sms/sentitem')?>"><i class="fe fe-envelope-o"></i> Pesan Terkirim</a></li>
+								<li><a href="<?= site_url('sms/pending')?>"><i class="fe fe-file-text-o"></i> Pesan Tertunda</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
-							<a href="<?= site_url('sms/broadcast/0/0/2')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Broadcast"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-weixin'></i> Tulis Pesan Ke Banyak</a>
+							<a href="<?= site_url('sms/broadcast/0/0/2')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Broadcast"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-weixin'></i> Tulis Pesan Ke Banyak</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -47,19 +50,19 @@
 																	<th>No</th>
                                   <th>Nama</th>
 																	<?php if ($o==2): ?>
-                                    <th><a href="<?= site_url("sms/outbox/$p/1")?>">Nomor HP <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                                    <th><a href="<?= site_url("sms/outbox/$p/1")?>">Nomor HP <i class='fe fe-sort-asc fa-sm'></i></a></th>
                                   <?php elseif ($o==1): ?>
-                                    <th><a href="<?= site_url("sms/outbox/$p/2")?>">Nomor HP <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                                    <th><a href="<?= site_url("sms/outbox/$p/2")?>">Nomor HP <i class='fe fe-sort-desc fa-sm'></i></a></th>
                                   <?php else: ?>
-                                    <th><a href="<?= site_url("sms/outbox/$p/1")?>">Nomor HP <i class='fa fa-sort fa-sm'></i></a></th>
+                                    <th><a href="<?= site_url("sms/outbox/$p/1")?>">Nomor HP <i class='fe fe-sort fa-sm'></i></a></th>
                                   <?php endif; ?>
 																	<th>Isi Pesan</th>
                                   <?php if ($o==6): ?>
-                                    <th nowrap><a href="<?= site_url("sms/outbox/$p/5")?>">Diterima <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                                    <th nowrap><a href="<?= site_url("sms/outbox/$p/5")?>">Diterima <i class='fe fe-sort-asc fa-sm'></i></a></th>
                                   <?php elseif ($o==5): ?>
-                                    <th nowrap><a href="<?= site_url("sms/outbox/$p/6")?>">Diterima <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                                    <th nowrap><a href="<?= site_url("sms/outbox/$p/6")?>">Diterima <i class='fe fe-sort-desc fa-sm'></i></a></th>
                                   <?php else: ?>
-                                    <th nowrap><a href="<?= site_url("sms/outbox/$p/5")?>">Diterima <i class='fa fa-sort fa-sm'></i></a></th>
+                                    <th nowrap><a href="<?= site_url("sms/outbox/$p/5")?>">Diterima <i class='fe fe-sort fa-sm'></i></a></th>
                                   <?php endif; ?>
 																</tr>
 															</thead>

@@ -8,38 +8,41 @@
 	});
 </script>
 <?php $detail = $program[0]; ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Program Bantuan <?= $detail['nama']; ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('program_bantuan') ?>"> Daftar Program Bantuan</a></li>
 			<li class="active">Program Bantuan <?= $detail['nama']; ?></li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" method="post">
-			<div class="box box-info">
+			<div class="card card-shadow">
 				<div class="box-header with-border">
 					<?php if ($detail["status"] == 1) : ?>
 						<div class="btn-group btn-group-vertical">
-							<a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah Peserta Baru</a>
+							<a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fe fe-plus'></i> Tambah Peserta Baru</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
-									<a href="<?= site_url("program_bantuan/aksi/1/" . $detail['id']) ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Satu Peserta Baru "><i class="fa fa-plus"></i> Tambah Satu Peserta Baru</a>
+									<a href="<?= site_url("program_bantuan/aksi/1/" . $detail['id']) ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Satu Peserta Baru "><i class="fe fe-plus"></i> Tambah Satu Peserta Baru</a>
 								</li>
 								<li>
-									<a href="<?= site_url("program_bantuan/aksi/2/" . $detail['id']) ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Beberapa Peserta Baru"><i class="fa fa-plus"></i> Tambah Beberapa Peserta Baru</a>
+									<a href="<?= site_url("program_bantuan/aksi/2/" . $detail['id']) ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Beberapa Peserta Baru"><i class="fe fe-plus"></i> Tambah Beberapa Peserta Baru</a>
 								</li>
 							</ul>
 						</div>
 					<?php endif; ?>
-					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("program_bantuan/delete_all/$detail[id]") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
-					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fa fa-print"></i> Cetak
+					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("program_bantuan/delete_all/$detail[id]") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 					</a>
-					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fa fa-download"></i> Unduh
+					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 					</a>
-					<a href="<?= site_url('program_bantuan') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan
+					<a href="<?= site_url('program_bantuan') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan
 					</a>
 				</div>
 				<div class="box-body">
@@ -57,7 +60,7 @@
 											<div class="input-group input-group-sm pull-right with-border">
 												<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("program_bantuan/search/$detail[id]") ?>');$('#'+'mainform').submit();}">
 												<div class="input-group-btn">
-													<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("program_bantuan/search/$detail[id]") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+													<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("program_bantuan/search/$detail[id]") ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 												</div>
 											</div>
 										</form>
@@ -95,8 +98,8 @@
 																<td class="padat"><input type="checkbox" name="id_cb[]" value="<?= $item['id'] ?>" /></td>
 																<td class="padat"><?= ($key + $paging->offset + 1); ?></td>
 																<td class="padat">
-																	<a href="<?= site_url("program_bantuan/edit_peserta_form/$item[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Peserta"><i class="fa fa-edit"></i></a>
-																	<a href="#" data-href="<?= site_url("program_bantuan/hapus_peserta/$detail[id]/$item[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																	<a href="<?= site_url("program_bantuan/edit_peserta_form/$item[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Peserta"><i class="fe fe-edit"></i></a>
+																	<a href="#" data-href="<?= site_url("program_bantuan/hapus_peserta/$detail[id]/$item[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																</td>
 																<?php $id_peserta = ($detail['sasaran'] == 4) ? $item['peserta'] : $item['nik'] ?>
 																<td nowrap><a href="<?= site_url("program_bantuan/peserta/$detail[sasaran]/$id_peserta") ?>" title="Daftar program untuk peserta"><?= $item["peserta_nama"] ?></a></td>

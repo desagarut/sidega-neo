@@ -26,7 +26,7 @@
 																				<li>Pastikan format excel ber-ekstensi .xlsx (format Excel versi 2007 ke atas)</li>
 																				<li>Data yang dibutuhkan untuk Impor dengan memenuhi urutan format dan aturan data pada tautan di bawah ini :
 																					<div class="timeline-footer row">
-																						<a href="<?= base_url()?>assets/import/FormatImportExcel.xlsm" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" wrap><i class="fa fa-download"></i> Aturan dan contoh format</a>
+																						<a href="<?= base_url()?>assets/import/FormatImportExcel.xlsm" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" wrap><i class="fe fe-download"></i> Aturan dan contoh format</a>
 																					</div>
 																				</li>
 																			</ol>
@@ -49,13 +49,13 @@
 																								<input type="text" class="form-control" id="file_path" name="userfile">
 																								<input type="file" class="hidden" id="file" name="userfile">
 																								<span class="input-group-btn">
-																									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+																									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 																								</span>
 																							</div>
 																							<p class="help-block"><input type="checkbox" name="hapus_data" value="hapus"></input>	Hapus data penduduk sebelum Impor</p>
 																						</div>
 																						<div class="col-sm-12 col-md-5 col-lg-4">
-																							<a href="#" class="btn btn-block btn-success btn-sm" title=" Impor Data Penduduk Hapus data penduduk sebelum impor " onclick="document.getElementById('excell').submit();" data-toggle="modal" data-target="#loading"> <i class="fa fa-spin fa-refresh"></i> Impor Data Penduduk</a>
+																							<a href="#" class="btn btn-block btn-success btn-sm" title=" Impor Data Penduduk Hapus data penduduk sebelum impor " onclick="document.getElementById('excell').submit();" data-toggle="modal" data-target="#loading"> <i class="fe fe-spin fa-refresh"></i> Impor Data Penduduk</a>
 																						</div>
 																					</div>
 																				</td>
@@ -110,8 +110,8 @@
 																				<li>Pastikan format excel ber-ekstensi .xlsx (format Excel versi 2007 ke atas)</li>
 																				<li>Data yang dibutuhkan untuk impor dengan memenuhi aturan data, lihat tautan di bawah ini :
 																					<div class="timeline-footer row">
-																						<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ATURANGRUP.xlsx" ><i class="fa fa-download"></i> Aturan Data</a>
-																						<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ContohGrup.xlsx"><i class="fa fa-download"></i> Contoh Format</a>
+																						<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ATURANGRUP.xlsx" ><i class="fe fe-download"></i> Aturan Data</a>
+																						<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ContohGrup.xlsx"><i class="fe fe-download"></i> Contoh Format</a>
 																					</div>
 																				</li>
 																			</ol>
@@ -129,12 +129,12 @@
 																								<input type="text" class="form-control" id="file_path2" name="userfile">
 																								<input type="file" class="hidden" id="file2" name="userfile">
 																								<span class="input-group-btn">
-																									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+																									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 																								</span>
 																							</div>
 																						</div>
 																						<div class="col-sm-12 col-md-5 col-lg-4">
-																							<a href="#" class="btn btn-block btn-success btn-sm"  title="Impor Data Pengelompokan Rumah Tangga" onclick="document.getElementById('kelompok').submit();" data-toggle="modal" data-target="#loading"> <i class="fa fa-spin fa-refresh"></i> Impor Data Pengelompokan Rumah Tangga</a>
+																							<a href="#" class="btn btn-block btn-success btn-sm"  title="Impor Data Pengelompokan Rumah Tangga" onclick="document.getElementById('kelompok').submit();" data-toggle="modal" data-target="#loading"> <i class="fe fe-spin fa-refresh"></i> Impor Data Pengelompokan Rumah Tangga</a>
 																						</div>
 																					</div>
 																				</td>

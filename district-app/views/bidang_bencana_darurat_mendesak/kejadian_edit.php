@@ -1,17 +1,20 @@
 <?php $data = $program[0]; ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Ubah Laporan Kejadian</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?=site_url('bidang_bencana_darurat_mendesak')?>"> Daftar Laporan Kejadian</a></li>
 			<li class="active">Ubah Laporan Kejadian</li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-header with-border">
-				<a href="<?=site_url('bidang_bencana_darurat_mendesak')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Laporan Kejadian"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Laporan Kejadian</a>
+				<a href="<?=site_url('bidang_bencana_darurat_mendesak')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Laporan Kejadian"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Laporan Kejadian</a>
 			</div>
 			<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<div class="box-body">
@@ -74,7 +77,7 @@
 						<div class="col-sm-4">
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right" id="tgl_1" name="sdate" placeholder="Tgl. Mulai" type="text" value="<?= date("d/m/Y",strtotime($data["sdate"])); ?>">
 							</div>
@@ -82,7 +85,7 @@
 						<div class="col-sm-4">
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right" id="tgl_2" name="edate" placeholder="Tgl. Akhir" type="text" value="<?= date("d/m/Y",strtotime($data["edate"])); ?>">
 							</div>
@@ -101,8 +104,8 @@
 					</div>
 				</div>
 				<div class='box-footer'>
-					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Batal</button>
-					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</div>
 		</div>

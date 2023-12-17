@@ -32,7 +32,7 @@
 								<input type="text" class="form-control required" id="file_path">
 								<input id="file" type="file" class="hidden" name="persil">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 								</span>
 							</div>
 							<p><label class="control-label">(File harus dalam format .xls)</label></p>
@@ -42,8 +42,8 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+			<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 		</div>
 	</div>
 </form>

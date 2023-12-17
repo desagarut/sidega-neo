@@ -1,16 +1,19 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Lokasi <?= $data->judul ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url($this->controller) ?>"> Daftar Pembangunan</a></li>
 			<li class="active">Lokasi <?= $data->judul ?></li>
 		</ol>
 	</section>
 	<section class="content">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<form id="validasi" action="<?= $form_action ?>" method="POST" class="form-horizontal">
 				<div class="box-body">
 					<div id="tampil-map">
@@ -30,11 +33,11 @@
 							<input type="text" class="form-control input-sm lng" name="lng" id="lng" value="<?= $data->lng ?>" />
 						</div>
 					</div>
-					<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-					<a href="#" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="OpenSID.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-					<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
+					<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+					<a href="#" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="OpenSID.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+					<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
 					<?php if ($this->CI->cek_hak_akses('u')): ?>
-						<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+						<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 					<?php endif; ?>
 				</div>
 			</form>

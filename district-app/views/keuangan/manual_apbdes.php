@@ -1,19 +1,22 @@
 <?php ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Manual Input Anggaran dan Realisasi APBDes</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Manual Input APBDes</li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-header">
-						<a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="modal" data-target="#ModalAdd"><i class="fa fa-plus"></i> Tambah Data</a>
-						<a href="#" id="btn_salin" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Data dari Template</a>
+						<a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="modal" data-target="#ModalAdd"><i class="fe fe-plus"></i> Tambah Data</a>
+						<a href="#" id="btn_salin" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i>Tambah Data dari Template</a>
 					</div>
 					<div class="box-header with-border">
 						<form action="<?= site_url('keuangan_manual/set_tahun_terpilih') ?>" method="POST" class="form form-horizontal">
@@ -48,7 +51,7 @@
 										<!-- TAB PENDAPATAN -->
 										<div role="tabpanel" class="tab-pane active" id="pendapatan_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform" name="mainform" action="" method="post">
 												<div class="row">
@@ -78,7 +81,7 @@
 										<!-- TAB BELANJA -->
 										<div role="tabpanel" class="tab-pane" id="belanja_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_bl" name="mainform_bl" action="" method="post">
 												<div class="row">
@@ -108,7 +111,7 @@
 										<!-- TAB PEMBIAYAAN -->
 										<div role="tabpanel" class="tab-pane" id="pembiayaan_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_by" name="mainform_by" action="" method="post">
 												<div class="row">
@@ -159,7 +162,7 @@
 
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					<div class="card card-shadow"></div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label" >Tahun</label>
 						<div class="col-sm-8">
@@ -230,8 +233,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -249,7 +252,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					<div class="card card-shadow"></div>
 
 					<input type="hidden" id="id2" name="id_edit"/>
 
@@ -324,8 +327,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -343,7 +346,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					<div class="card card-shadow"></div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label" >Tahun Anggaran</label>
 						<div class="col-sm-3">
@@ -352,8 +355,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fa fa-check'></i>Salin</button>
+					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fe fe-check'></i>Salin</button>
 				</div>
 			</form>
 		</div>

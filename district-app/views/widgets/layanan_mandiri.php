@@ -5,7 +5,7 @@
 		if($_SESSION['mandiri_wait'] == 1) { ?>
 			<div class="box box-primary box-solid">
 				<div class="box-header">
-					<h3 class="box-title"><i class="fa fa-user"></i> Layanan Mandiri</h3><br />
+					<h3 class="box-title"><i class="fe fe-user"></i> Layanan Mandiri</h3><br />
 					Silakan datang atau hubungi operator <?php echo $this->setting->sebutan_desa?> untuk mendapatkan kode PIN anda.
 				</div>
 				<div class="box-body">
@@ -18,7 +18,7 @@
 		<?php } else { ?>
 			<div class="box box-primary box-solid">
 				<div class="box-header">
-					<h3 class="box-title"><i class="fa fa-user"></i> Layanan Mandiri</h3><br />
+					<h3 class="box-title"><i class="fe fe-user"></i> Layanan Mandiri</h3><br />
 					Silakan datang atau hubungi operator <?php echo $this->setting->sebutan_desa?> untuk mendapatkan kode PIN anda.
 				</div>
 				<div class="box-body">
@@ -45,7 +45,7 @@
 	?>
 		<div class="box box-primary box-solid">
 			<div class="box-header">
-				<h3 class="box-title"><i class="fa fa-user"></i> Layanan Mandiri</h3>
+				<h3 class="box-title"><i class="fe fe-user"></i> Layanan Mandiri</h3>
 			</div>
 			<div class="box-body">
 				<ul id="ul-mandiri">
@@ -86,7 +86,7 @@
 		<?php if(isset($_SESSION['lg']) AND $_SESSION['lg'] == 1) { ?>
 			<div class="box box-primary box-solid">
 				<div class="box-header">
-					<h3 class="box-title"><i class="fa fa-user"></i> Layanan Mandiri</h3><br />
+					<h3 class="box-title"><i class="fe fe-user"></i> Layanan Mandiri</h3><br />
 					Untuk keamanan silahkan ubah kode PIN Anda.
 				</div>
 				<div class="box-body">
@@ -113,7 +113,7 @@
 		<?php } else if(isset($_SESSION['lg']) AND $_SESSION['lg'] == 2) { ?>
 			<div class="box box-primary box-solid">
 				<div class="box-header">
-					<h3 class="box-title"><i class="fa fa-user"></i> Layanan Mandiri</h3><br />
+					<h3 class="box-title"><i class="fe fe-user"></i> Layanan Mandiri</h3><br />
 					Untuk keamanan silahkan ubah kode PIN Anda.
 				</div>
 				<div class="box-body">

@@ -12,7 +12,7 @@
 							<input type="text" class="form-control" id="file_path" name="userfile" required>
 							<input type="file" class="hidden" id="file" name="userfile">
 							<span class="input-group-btn">
-								<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+								<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 							</span>
 						</div>
 						<br/>
@@ -26,12 +26,12 @@
 							<p class="help-block">&emsp;<input type="checkbox" name="rand_kartu_peserta" value="1"/> Acak No. Kartu Peserta Jika Kosong</p>
 						</label>
 						<br/>
-						<a href="<?= base_url("assets/import/format_impor_program_bantuan.xlsx"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block text-center"><i class="fa fa-file-excel-o"></i> Contoh Format Impor Program Bantuan</a>
+						<a href="<?= base_url("assets/import/format_impor_program_bantuan.xlsx"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block text-center"><i class="fe fe-file-excel-o"></i> Contoh Format Impor Program Bantuan</a>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="reset" class="btn btn-social btn-box btn-danger btn-sm pull-left"><i class="fa fa-times"></i> Batal</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class="fa fa-check"></i> Simpan</button>
+					<button type="reset" class="btn btn-social btn-box btn-danger btn-sm pull-left"><i class="fe fe-times"></i> Batal</button>
+					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class="fe fe-check"></i> Simpan</button>
 				</div>
 			</form>
 		</div>

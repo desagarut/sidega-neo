@@ -28,7 +28,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_1" name="attr[tgl_ditetapkan]" class="form-control input-sm required" type="text" value="<?=$dokumen['attr']['tgl_ditetapkan']?>"></input>
     </div>
@@ -39,7 +39,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_2" name="attr[tgl_kesepakatan]" class="form-control input-sm" type="text" value="<?=$dokumen['attr']['tgl_kesepakatan']?>"></input>
     </div>
@@ -56,7 +56,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_3" name="attr[tgl_lapor]" class="form-control input-sm" type="text" value="<?=$dokumen['attr']['tgl_lapor']?>"></input>
     </div>
@@ -73,7 +73,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_4" name="attr[tgl_lembaran_desa]" class="form-control input-sm" type="text" value="<?=$dokumen['attr']['tgl_lembaran_desa']?>"></input>
     </div>
@@ -90,7 +90,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_5" name="attr[tgl_berita_desa]" class="form-control input-sm" type="text" value="<?=$dokumen['attr']['tgl_berita_desa']?>"></input>
     </div>

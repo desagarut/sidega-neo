@@ -1,9 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Data Dokumentasi Pembangunan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>"><i class="fa fa-dashboard"></i>Daftar Dokumentasi Pembangunan</a></li>
+			<li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
+			<li><a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>"><i class="fe fe-dashboard"></i>Daftar Dokumentasi Pembangunan</a></li>
 			<li class="active">Pengaturan Data Pembangunan</li>
 		</ol>
 	</section>
@@ -11,9 +14,9 @@
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
+							<a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -64,7 +67,7 @@
 												<input type="text" class="form-control " id="file_path" name="gambar">
 												<input id="file" type="file" class="hidden" name="gambar">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+													<button type="button" class="btn btn-info btn-flat" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 												</span>
 											</div>
 											<span class="help-block"><code>(Kosongkan jika tidak ingin mengubah gambar)</code></span>
@@ -81,8 +84,8 @@
 						</div>
 						<div class="box-footer">
 							<div class="col-xs-12">
-								<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-								<button type="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+								<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+								<button type="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</div>

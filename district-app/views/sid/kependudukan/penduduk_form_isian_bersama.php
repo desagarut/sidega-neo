@@ -208,7 +208,7 @@
 			<label for="tanggallahir">Tanggal Lahir</label>
 			<div class="input-group input-group-sm date">
 				<div class="input-group-addon">
-					<i class="fa fa-calendar"></i>
+					<i class="fe fe-calendar"></i>
 				</div>
 				<input class="form-control input-sm pull-right required" id="tgl_1" name="tanggallahir" type="text" value="<?= $penduduk['tanggallahir'] ?>">
 			</div>
@@ -219,7 +219,7 @@
 			<label for="waktulahir">Waktu Kelahiran </label>
 			<div class="input-group input-group-sm date">
 				<div class="input-group-addon">
-					<i class="fa fa-calendar"></i>
+					<i class="fe fe-calendar"></i>
 				</div>
 				<input class="form-control input-sm pull-right" id="jammenit_1" name="waktu_lahir" type="text" value="<?= $penduduk['waktu_lahir'] ?>">
 			</div>
@@ -349,7 +349,7 @@
 			<label for="tanggal_akhir_paspor">Tgl Berakhir Paspor</label>
 			<div class="input-group input-group-sm date">
 				<div class="input-group-addon">
-					<i class="fa fa-calendar"></i>
+					<i class="fe fe-calendar"></i>
 				</div>
 				<input class="form-control input-sm pull-right" id="tgl_2" name="tanggal_akhir_paspor" type="text" value="<?= $penduduk['tanggal_akhir_paspor'] ?>">
 			</div>
@@ -445,7 +445,7 @@
 			<label for="lokasi">Lokasi Tempat Tinggal </label>
 			<div class='row'>
 				<div class='col-sm-12'>
-					<a href="<?= site_url("penduduk/ajax_penduduk_maps/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-navy btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fa fa-map-marker'></i> Cari Lokasi Tempat Tinggal</a>
+					<a href="<?= site_url("penduduk/ajax_penduduk_maps/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-navy btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-map-marker'></i> Cari Lokasi Tempat Tinggal</a>
 				</div>
 			</div>
 		</div>
@@ -509,7 +509,7 @@
 			<label for="tanggalperkawinan">Tanggal Perkawinan <code>(Wajib diisi apabila status KAWIN)</code></label>
 			<div class="input-group input-group-sm date">
 				<div class="input-group-addon">
-					<i class="fa fa-calendar"></i>
+					<i class="fe fe-calendar"></i>
 				</div>
 				<input class="form-control input-sm pull-right" id="tgl_3" name="tanggalperkawinan" type="text" value="<?= $penduduk['tanggalperkawinan'] ?>">
 			</div>
@@ -526,7 +526,7 @@
 			<label for="tanggalperceraian">Tanggal Perceraian <code>(Wajib diisi apabila status CERAI)</code></label>
 			<div class="input-group input-group-sm date">
 				<div class="input-group-addon">
-					<i class="fa fa-calendar"></i>
+					<i class="fe fe-calendar"></i>
 				</div>
 				<input class="form-control input-sm pull-right" id="tgl_4" name="tanggalperceraian" type="text" value="<?= $penduduk['tanggalperceraian'] ?>">
 			</div>

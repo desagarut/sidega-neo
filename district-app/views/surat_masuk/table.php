@@ -20,12 +20,12 @@
 		});
 	});
 </script>
-<div class="box box-info">
+<div class="card card-shadow">
   <div class="box-header with-border">
-		<a href="<?= site_url('surat_masuk/form')?>" title="Tambah Surat Masuk Baru" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Surat Masuk Baru</a>
-		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("surat_masuk/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
-		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Masuk"><i class="fa fa-print "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o")?>" title="Unduh Agenda Surat Keluar" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Masuk"><i class="fa fa-download"></i> Unduh</a>
+		<a href="<?= site_url('surat_masuk/form')?>" title="Tambah Surat Masuk Baru" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Surat Masuk Baru</a>
+		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("surat_masuk/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Masuk"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o")?>" title="Unduh Agenda Surat Keluar" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Masuk"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="box-body">
 		<div class="row">
@@ -46,7 +46,7 @@
 									<div class="input-group input-group-sm pull-right">
 										<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?=site_url("surat_masuk/search")?>');$('#'+'mainform').submit();}">
 										<div class="input-group-btn">
-											<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("surat_masuk/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+											<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("surat_masuk/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 										</div>
 									</div>
 								</div>
@@ -60,28 +60,28 @@
 											<tr>
 												<th class="nostretch"><input type="checkbox" id="checkall"/></th>
 												<?php if ($o==2): ?>
-													<th class="nostretch"><a href="<?= site_url("surat_masuk/index/$p/1")?>">No. Urut <i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th class="nostretch"><a href="<?= site_url("surat_masuk/index/$p/1")?>">No. Urut <i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($o==1): ?>
-													<th class="nostretch"><a href="<?= site_url("surat_masuk/index/$p/2")?>">No. Urut <i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th class="nostretch"><a href="<?= site_url("surat_masuk/index/$p/2")?>">No. Urut <i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th class="nostretch"><a href="<?= site_url("surat_masuk/index/$p/1")?>">No. Urut <i class='fa fa-sort fa-sm'></i></a></th>
+													<th class="nostretch"><a href="<?= site_url("surat_masuk/index/$p/1")?>">No. Urut <i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 												<th class="nostretch">Aksi</th>
 												<?php if ($o==4): ?>
-													<th><a href="<?= site_url("surat_masuk/index/$p/3")?>">Tanggal Penerimaan <i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th><a href="<?= site_url("surat_masuk/index/$p/3")?>">Tanggal Penerimaan <i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($o==3): ?>
-													<th><a href="<?= site_url("surat_masuk/index/$p/4")?>">Tanggal Penerimaan <i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th><a href="<?= site_url("surat_masuk/index/$p/4")?>">Tanggal Penerimaan <i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th><a href="<?= site_url("surat_masuk/index/$p/3")?>">Tanggal Penerimaan <i class='fa fa-sort fa-sm'></i></a></th>
+													<th><a href="<?= site_url("surat_masuk/index/$p/3")?>">Tanggal Penerimaan <i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 												<th>Nomor Surat</th>
 												<th>Tanggal Surat</th>
 												<?php if ($o==6): ?>
-													<th nowrap><a href="<?= site_url("surat_masuk/index/$p/5")?>">Pengirim <i class='fa fa-sort-asc fa-sm'></i></a></th>
+													<th nowrap><a href="<?= site_url("surat_masuk/index/$p/5")?>">Pengirim <i class='fe fe-sort-asc fa-sm'></i></a></th>
 												<?php elseif ($o==5): ?>
-													<th nowrap><a href="<?= site_url("surat_masuk/index/$p/6")?>">Pengirim <i class='fa fa-sort-desc fa-sm'></i></a></th>
+													<th nowrap><a href="<?= site_url("surat_masuk/index/$p/6")?>">Pengirim <i class='fe fe-sort-desc fa-sm'></i></a></th>
 												<?php else: ?>
-													<th nowrap><a href="<?= site_url("surat_masuk/index/$p/5")?>">Pengirim <i class='fa fa-sort fa-sm'></i></a></th>
+													<th nowrap><a href="<?= site_url("surat_masuk/index/$p/5")?>">Pengirim <i class='fe fe-sort fa-sm'></i></a></th>
 												<?php endif; ?>
 												<th width="30%">Isi Singkat</th>
 											</tr>
@@ -92,12 +92,12 @@
 													<td><input type="checkbox" name="id_cb[]" value="<?= $data['id']?>" /></td>
 													<td><?= $data['nomor_urut']?></td>
 													<td class="nostretch">
-														<a href="<?= site_url("surat_masuk/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fa fa-edit"></i></a>
+														<a href="<?= site_url("surat_masuk/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
 														<?php if ($data['berkas_scan']): ?>
-															<a href="<?= base_url(LOKASI_ARSIP.$data['berkas_scan'])?>" class="btn bg-purple btn-box btn-sm"  title="Unduh Berkas Surat" target="_blank"><i class="fa fa-download"></i></a>
+															<a href="<?= base_url(LOKASI_ARSIP.$data['berkas_scan'])?>" class="btn bg-purple btn-box btn-sm"  title="Unduh Berkas Surat" target="_blank"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
-														<a href="<?= site_url("surat_masuk/dialog_disposisi/$o/$data[id]")?>" class="btn bg-navy btn-box btn-sm" title="Cetak Lembar Disposisi Surat" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Lembar Disposisi Surat"><i class="fa fa-file-archive-o"></i></a>
-														<a href="#" data-href="<?= site_url("surat_masuk/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+														<a href="<?= site_url("surat_masuk/dialog_disposisi/$o/$data[id]")?>" class="btn bg-navy btn-box btn-sm" title="Cetak Lembar Disposisi Surat" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Lembar Disposisi Surat"><i class="fe fe-file-archive-o"></i></a>
+														<a href="#" data-href="<?= site_url("surat_masuk/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 													</td>
 													<td nowrap><?= tgl_indo_out($data['tanggal_penerimaan'])?></td>
 													<td nowrap><?= $data['nomor_surat']?></td>

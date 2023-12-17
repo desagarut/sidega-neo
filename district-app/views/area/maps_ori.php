@@ -24,7 +24,7 @@
   <section class="content-header">
 		<h1>Peta <?= $area['nama']?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url("area")?>"> Pengaturan Area </a></li>
 			<li class="active">Peta <?= $area['nama']?></li>
 		</ol>
@@ -32,7 +32,7 @@
   <section class="content">
     <div class="row">
       <div class="col-md-12">
-        <div class="box box-info">
+        <div class="card card-shadow">
           <form action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
             <div class="box-body">
               <div class="row">
@@ -45,11 +45,11 @@
               </div>
             </div>
             <div class='box-footer'>
-              <div class='col-xs-12'>
-                <a href="<?= site_url("area")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-                <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right' id="simpan_kantor"><i class='fa fa-check'></i> Simpan</button>
+              <div class='col-md-12'>
+                <a href="<?= site_url("area")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+                <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right' id="simpan_kantor"><i class='fe fe-check'></i> Simpan</button>
               </div>
             </div>
           </form>

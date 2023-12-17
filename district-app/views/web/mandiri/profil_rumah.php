@@ -5,8 +5,8 @@
                       <!-- timeline item -->
                       <ul class="timeline timeline-inverse">
                       <?php foreach ($list_rumah as $key => $data): ?>
-                        <li> <i class="fa fa-camera bg-purple"></i>
-                          <div class="timeline-item"> <span class="time"><i class="fa fa-clock-o"></i>diunggah: <?= tgl_indo2($data['tgl_upload']); ?></span>
+                        <li> <i class="fe fe-camera bg-purple"></i>
+                          <div class="timeline-item"> <span class="time"><i class="fe fe-clock-o"></i>diunggah: <?= tgl_indo2($data['tgl_upload']); ?></span>
                             <h3 class="timeline-header"><a href="#"><?= $key + 1; ?>. Foto <?= $data['nama']?></a></h3>
                             <div class="timeline-body" align="center">
                             	<img class="img-responsive img-circle" src="<?= base_url().LOKASI_RUMAH?><?= urlencode($data['satuan']); ?>" style="max-height:300px" alt="Foto Rumah Penduduk">
@@ -38,7 +38,7 @@
                           </div>
                         </li><?php endforeach;?>
                         <!-- END timeline item -->
-                        <li> <i class="fa fa-clock-o bg-gray"></i> </li>
+                        <li> <i class="fe fe-clock-o bg-gray"></i> </li>
                         
                       </ul>
                     </div>

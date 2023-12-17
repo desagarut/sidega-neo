@@ -53,11 +53,14 @@
 		});
 	</script>
 <?php endif; ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Manajemen <?= $sub_modul ? 'Submodul' : 'Modul';?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<?php if(!$sub_modul): ?>
 				<li class="active">Manajemen Modul</li>
@@ -71,7 +74,7 @@
 		<section class="content" id="maincontent">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<form id="validasi" action="<?= site_url("modul/ubah_server")?>" method="POST" class="form-horizontal">
 							<div class="box-body">
 								<h4>Penggunaan Server</h4>
@@ -142,9 +145,9 @@
 								</div>
 							</div>
 							<div class='box-footer'>
-								<div class='col-xs-12'>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+								<div class='col-md-12'>
+									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 								</div>
 							</div>
 						</form>
@@ -156,13 +159,13 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<?php if(!$sub_modul): ?>
 						<div class="box-body">
 							<h4>Pengaturan Modul</h4>
 							<div class="row">
 								<div class="col-xs-12 text-center">
-									<a href="<?= site_url("modul/default_server")?>" class="btn btn-social btn-box btn-success btn-sm" <?php $this->setting->penggunaan_server or print("disabled='disabled'")?>><i class="fa fa-refresh"></i>Kembalikan ke default penggunaan server</a>
+									<a href="<?= site_url("modul/default_server")?>" class="btn btn-social btn-box btn-success btn-sm" <?php $this->setting->penggunaan_server or print("disabled='disabled'")?>><i class="fe fe-refresh"></i>Kembalikan ke default penggunaan server</a>
 								</div>
 							</div>
 							<div class="row">
@@ -182,7 +185,7 @@
 														<div class="input-group input-group-sm pull-right">
 															<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform').attr('action','<?=site_url('modul/search')?>');$('#'+'mainform').submit();endif;">
 															<div class="input-group-btn">
-																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action','<?= site_url("modul/filter/cari")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action','<?= site_url("modul/filter/cari")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 															</div>
 														</div>
 													</div>
@@ -194,7 +197,7 @@
 							</div>
 					<?php else: ?>
 						<div class="box-header with-border">
-							<a href="<?= site_url('modul/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
+							<a href="<?= site_url('modul/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
 						</div>
 						<div class="box-header with-border">
 						 <strong> Modul Utama : <?=$sub_modul['modul']?></strong>
@@ -219,16 +222,16 @@
 											<tr>
 												<td class="text-center"><?=$data['no']?></td>
 												<td nowrap>
-													<a href="<?=site_url("modul/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data" ><i class="fa fa-edit"></i></a>
+													<a href="<?=site_url("modul/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data" ><i class="fe fe-edit"></i></a>
 														<?php if ($data['aktif'] == '1'): ?>
-															<a href="<?= site_url("modul/lock/$data[id]/2")?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fa fa-unlock"></i></a>
+															<a href="<?= site_url("modul/lock/$data[id]/2")?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
 														<?php elseif ($sub_modul AND $sub_modul['aktif'] != '1'): ?>
 															<!-- Jika parrent menu tdk aktif, maka tdk ada aksi lock -->
 														<?php else: ?>
-															<a href="<?= site_url("modul/lock/$data[id]/1")?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fa fa-lock">&nbsp;</i></a>
+															<a href="<?= site_url("modul/lock/$data[id]/1")?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fe fe-lock">&nbsp;</i></a>
 														<?php endif ?>
 													<?php if (count($data['submodul'])>0): ?>
-														<a href="<?=site_url("modul/sub_modul/$data[id]")?>" class="btn bg-olive btn-box btn-sm" title="Lihat Sub Modul" ><i class="fa fa-list"></i></a>
+														<a href="<?=site_url("modul/sub_modul/$data[id]")?>" class="btn bg-olive btn-box btn-sm" title="Lihat Sub Modul" ><i class="fe fe-list"></i></a>
 													<?php endif; ?>
 												</td>
 												<td><?=$data['modul']?></td>

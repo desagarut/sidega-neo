@@ -6,8 +6,8 @@
         <?php if ($this->CI->cek_hak_akses('h')) : ?>
           <a href="<?= site_url('penduduk') ?>"><span class="label label-info"> Detail</span></a>
         <?php endif; ?>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i></button>
       </div>
     </div>
 

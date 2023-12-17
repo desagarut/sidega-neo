@@ -23,13 +23,13 @@ $(document).ready(function()
 });
 
 </script>
-<div class="box box-info">
+<div class="card card-shadow">
   <div class="box-header with-border">
 		<a href="<?= site_url("{$this->controller}/dialog_daftar/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
-			<i class="fa fa-print"></i>Cetak
+			<i class="fe fe-printer"></i>Cetak
   	</a>
 		<a href="<?= site_url("{$this->controller}/dialog_daftar/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
-			<i class="fa fa-download"></i>Unduh
+			<i class="fe fe-download"></i>Unduh
   	</a>
 	</div>
 	<div class="box-body">
@@ -56,7 +56,7 @@ $(document).ready(function()
 									<div class="input-group input-group-sm pull-right">
 										<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();}">
 										<div class="input-group-btn">
-											<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+											<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 										</div>
 									</div>
 								</div>
@@ -71,28 +71,28 @@ $(document).ready(function()
 												<th>No</th>
 												<th>Aksi</th>
 												<?php if ($o==2): ?>
-                          <th><a href="<?= site_url("{$this->controller}/index/$p/1")?>">Judul <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                          <th><a href="<?= site_url("{$this->controller}/index/$p/1")?>">Judul <i class='fe fe-sort-asc fa-sm'></i></a></th>
                         <?php elseif ($o==1): ?>
-                          <th><a href="<?= site_url("{$this->controller}/index/$p/2")?>">Judul <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                          <th><a href="<?= site_url("{$this->controller}/index/$p/2")?>">Judul <i class='fe fe-sort-desc fa-sm'></i></a></th>
                         <?php else: ?>
-                          <th><a href="<?= site_url("{$this->controller}/index/$p/1")?>">Judul <i class='fa fa-sort fa-sm'></i></a></th>
+                          <th><a href="<?= site_url("{$this->controller}/index/$p/1")?>">Judul <i class='fe fe-sort fa-sm'></i></a></th>
                         <?php endif; ?>
 												<th>Jenis Peraturan</th>
 												<th>No./Tgl Ditetapkan</th>
 												<th>Uraian Singkat</th>
                         <?php if ($o==4): ?>
-                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/3")?>">Aktif <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/3")?>">Aktif <i class='fe fe-sort-asc fa-sm'></i></a></th>
                         <?php elseif ($o==3): ?>
-                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/4")?>">Aktif <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/4")?>">Aktif <i class='fe fe-sort-desc fa-sm'></i></a></th>
                         <?php else: ?>
-                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/3")?>">Aktif <i class='fa fa-sort fa-sm'></i></a></th>
+                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/3")?>">Aktif <i class='fe fe-sort fa-sm'></i></a></th>
                         <?php endif; ?>
 												<?php if ($o==6): ?>
-                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/5")?>">Dimuat Pada <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/5")?>">Dimuat Pada <i class='fe fe-sort-asc fa-sm'></i></a></th>
                         <?php elseif ($o==5): ?>
-                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/6")?>">Dimuat Pada <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/6")?>">Dimuat Pada <i class='fe fe-sort-desc fa-sm'></i></a></th>
                         <?php else: ?>
-                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/5")?>">Dimuat Pada <i class='fa fa-sort fa-sm'></i></a></th>
+                          <th nowrap><a href="<?= site_url("{$this->controller}/index/$p/5")?>">Dimuat Pada <i class='fe fe-sort fa-sm'></i></a></th>
                         <?php endif; ?>
 											</tr>
 										</thead>
@@ -101,16 +101,16 @@ $(document).ready(function()
 												<tr>
 													<td><?=$data['no']?></td>
 													<td nowrap>
-														<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]")?>" class="btn btn-warning btn-box btn-sm"  title="Ubah"><i class="fa fa-edit"></i></a>
+														<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]")?>" class="btn btn-warning btn-box btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
 														<?php if ($data['enabled'] == '2'): ?>
-															<a href="<?= site_url($this->controller.'/lock/'.$data['id'].'/1')?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fa fa-lock">&nbsp;</i></a>
+															<a href="<?= site_url($this->controller.'/lock/'.$data['id'].'/1')?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fe fe-lock">&nbsp;</i></a>
 														<?php elseif ($data['enabled'] == '1'): ?>
-															<a href="<?= site_url($this->controller.'/lock/'.$data['id'].'/2')?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fa fa-unlock"></i></a>
+															<a href="<?= site_url($this->controller.'/lock/'.$data['id'].'/2')?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
                             <?php endif ?>
                             <?php if (!empty($data['satuan'])): ?>
-															<a href='<?= site_url("dokumen/unduh_berkas/{$data[id]}") ?>' class="btn bg-purple btn-box btn-sm" title="Unduh"><i class="fa fa-download"></i></a>
+															<a href='<?= site_url("dokumen/unduh_berkas/{$data[id]}") ?>' class="btn bg-purple btn-box btn-sm" title="Unduh"><i class="fe fe-download"></i></a>
 														<?php else: ?>
-															<a class="btn bg-purple btn-box btn-sm" disabled title="Unduh"><i class="fa fa-download"></i></a>
+															<a class="btn bg-purple btn-box btn-sm" disabled title="Unduh"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
 												  </td>
 													<td width="20%"><?= $data['nama']?></td>

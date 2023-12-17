@@ -5,7 +5,7 @@
 				<h5 class="mb-2 page-title">Form <?= ucwords($this->setting->sebutan_dusun) ?></h5>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url("sid_core") ?>" class="btn btn-info btn-sm mb-1" title="Kembali Ke Daftar Wilayah <?= ucwords($this->setting->sebutan_dusun) ?>">Kembali Ke <?= ucwords($this->setting->sebutan_dusun) ?></a>
+						<a href="<?= site_url("sid_core") ?>" class="btn btn-outline-info btn-sm mb-1" title="Kembali Ke Daftar Wilayah <?= ucwords($this->setting->sebutan_dusun) ?>">Kembali Ke <?= ucwords($this->setting->sebutan_dusun) ?></a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -50,8 +50,8 @@
 										</div>
 									</div>
 									<div class="card-footer">
-										<div class='col-xs-12'>
-											<button type='reset' class='btn btn-danger btn-sm mb-1'><i class='fe fe-refresh'></i> Reset</button>
+										<div class='col-md-12'>
+											<button type='reset' class='btn btn-danger btn-sm mb-1'><i class='fe fe-x'></i> Reset</button>
 											<button type='submit' class='btn btn-success btn-sm mb-1 text-right'><i class='fe fe-check'></i> Simpan</button>
 										</div>
 									</div>
@@ -62,8 +62,8 @@
 				</div>
 			</div>
 		</div>
-		</section>
 	</div>
+</main>
 	</div>
 </main>
 <script src="<?= base_url() ?>assets/js/validasi.js"></script>

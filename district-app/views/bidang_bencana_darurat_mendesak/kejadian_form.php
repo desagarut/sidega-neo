@@ -1,18 +1,21 @@
 <script src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
 <script src="<?= base_url() ?>assets/js/localization/messages_id.js"></script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Form Laporan Kejadian</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>"> Daftar Laporan Kejadian</a></li>
 			<li class="active">Form </li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-header with-border">
-				<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Kejadian"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Kejadian</a>
+				<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Kejadian"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Kejadian</a>
 			</div>
 			<form id="validasi" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<div class="box-body">
@@ -43,7 +46,7 @@
 						<div class="col-sm-2">
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right required" id="tgl_1" name="tanggal_kejadian" placeholder="Tanggal Kejadian" type="text" value="<?= $laporan_kejadian_bencana['tanggal_kejadian'] ?>">
 							</div>
@@ -51,7 +54,7 @@
 						<div class="col-sm-2">
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right required" id="jam_1" name="waktu_kejadian" placeholder="Waktu Kejadian" type="text" value="<?= $laporan_kejadian_bencana['waktu_kejadian'] ?>">
 							</div>
@@ -260,7 +263,7 @@
 								<input type="text" class="form-control" id="file_path">
 								<input type="file" class="hidden" id="file" name="foto">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-box" id="file_browser" value="<?= $laporan_kejadian_bencana['foto'] ?>"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-box" id="file_browser" value="<?= $laporan_kejadian_bencana['foto'] ?>"><i class="fe fe-search"></i> Browse</button>
 								</span>
 							</div>
 							<span class="help-block"><code> Kosongkan jika tidak ingin mengunggah gambar</code></span>
@@ -271,7 +274,7 @@
 						<div class="col-sm-3">
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right required" id="tgl_2" name="tanggal_tutup_laporan" placeholder="Tgl. Akhir" type="text" value="<?= $laporan_kejadian_bencana['tanggal_tutup_laporan'] ?>">
 							</div>
@@ -290,8 +293,8 @@
 					</div>
 				</div>
 				<div class='box-footer'>
-					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Batal</button>
-					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</form>
 		</div>

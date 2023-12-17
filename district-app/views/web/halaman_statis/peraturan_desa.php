@@ -35,7 +35,7 @@
   				</div>
   			</div>
         <div class="col-md-3">
-          <button type="submit" class="btn btn-info" style="margin-top: 2.5rem;"><i class="fa fa-search"></i> Cari</button>
+          <button type="submit" class="btn btn-info" style="margin-top: 2.5rem;"><i class="fe fe-search"></i> Cari</button>
         </div>
       </form>
 		</div>

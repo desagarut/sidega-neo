@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengelolaan Sebab Dan Tanggal Perubahan Persil</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('home')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('data_persil/clear')?>"> Daftar Persil</a></li>
 			<li class="active">Pengelolaan Sebab Dan Tanggal Perubahan Persil</li>
 		</ol>
@@ -13,7 +16,7 @@
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-header">
 							<?php if ($persil_detail["id"]): ?>
 								<h4 class="text-center"><strong>Sebab Dan Tanggal Perubahan Persil <?= $persil_detail["nopersil"] ?> / Letter-C <?= $persil_detail["letterc"] ?></strong></h4>
@@ -40,7 +43,7 @@
 								<div class="col-sm-4">
 									<div class="input-group input-group-sm date">
 										<div class="input-group-addon">
-											<i class="fa fa-calendar"></i>
+											<i class="fe fe-calendar"></i>
 										</div>
 										<input class="form-control input-sm pull-right" id="tgl_1" name="tanggalmutasi" type="text" value="<?= $persil_mutasi["tanggalmutasi"]?>">
 									</div>
@@ -85,9 +88,9 @@
 							</div>
 						</div>	
 						<div class='box-footer'>
-							<div class='col-xs-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+							<div class='col-md-12'>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</form>

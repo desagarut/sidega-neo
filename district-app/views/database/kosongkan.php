@@ -13,7 +13,7 @@
 																<p>Sebelum memasukkan data <?= $this->setting->sebutan_desa ?> yang sebenarnya ke dalam database SID, data contoh tersebut perlu dikosongkan dulu.</p>
 																<p>Klik tombol <em>Kosongkan DB</em> di bawah untuk mengosongkan database SID siap untuk diisi dengan data <?= $this->setting->sebutan_desa ?>.</p>
 																<p class="text-muted text-red well well-sm no-shadow" style="margin-top: 10px;">
-																	<small><strong><i class="fa fa-info-circle text-red"></i> Sebelum melalukan proses ini, backup dulu database SID.</strong></small>
+																	<small><strong><i class="fe fe-info-circle text-red"></i> Sebelum melalukan proses ini, backup dulu database SID.</strong></small>
 																</p>
 																<form id="kosongkan" action="<?= site_url("database/kosongkan_db")?>" method="post" class="form-horizontal">
 																	<table class="table table-bordered">
@@ -23,7 +23,7 @@
 																					<div class="form-group">
 																						<label for="file" class="col-md-4 col-lg-3 control-label">Kosongkan Database SID</label>
 																						<div class="col-sm-12 col-md-3 col-lg-2">
-																							<a href="#" form="kosongkan" class="btn btn-social btn-box btn-block btn-danger btn-sm"  title="Kosongkan DB" data-toggle="modal" data-target="#confirmsubmit"><i class="fa fa-trash-o"></i> Kosongkan DB</a>
+																							<a href="#" form="kosongkan" class="btn btn-social btn-box btn-block btn-danger btn-sm"  title="Kosongkan DB" data-toggle="modal" data-target="#confirmsubmit"><i class="fe fe-trash-o"></i> Kosongkan DB</a>
 																						</div>
 																						<p class="help-block col-sm-12 col-md-5 col-lg-5"><input type="checkbox" name="kosongkan_menu" value='kosongkan'></input>	Juga kosongkan contoh menu statis dan dinamis</p>
 																					</div>
@@ -41,13 +41,13 @@
 														<div class='modal-content'>
 															<div class='modal-header'>
 																<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-																<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> &nbsp;Konfirmasi</h4>
+																<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> &nbsp;Konfirmasi</h4>
 															</div>
 															<div class='modal-body btn-danger'>
 																Apakah anda yakin? Proses ini akan menghapus semua data penduduk dan data masukan lainnya.
 															</div>
 															<div class='modal-footer'>
-																<button type='button' class='btn btn-social btn-box btn-warning btn-sm' data-dismiss='modal'><i class='fa fa-sign-out'></i> Tutup</button> <a href="#" id="submit" class='btn btn-social btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Hapus</a>
+																<button type='button' class='btn btn-social btn-box btn-warning btn-sm' data-dismiss='modal'><i class='fe fe-sign-out'></i> Tutup</button> <a href="#" id="submit" class='btn btn-social btn-box btn-danger btn-sm'><i class='fe fe-times'></i> Hapus</a>
 															</div>
 														</div>
 													</div>

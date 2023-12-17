@@ -37,9 +37,9 @@
 									<div class="col-md-12">
 										<div class="row">
 											<a href="<?= site_url('rpjm_desa/form') ?>" class="btn btn-success btn-sm mb-2 mr-2" title="Tambah Data Baru"><i class="feather icon-plus"></i> Tambah Usulan</a>
-											<a href="<?= site_url("rpjm_desa/dialog_daftar/{$desa_dpurpp->id}/cetak") ?>" class="btn btn-secondary btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" title="Cetak Data <?= $desa_dpurpp->judul ?> "><i class="fa fa-print "></i> Cetak</a>
-											<a href="<?= site_url("rpjm_desa/dialog_daftar/{$desa_dpurpp->id}/unduh") ?>" class="btn btn-secondary btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_dpurpp->judul ?> "><i class="fa fa-download "></i> Unduh</a>
-											<!--<a href="<?= site_url('rpjm_desa') ?>" class="btn btn-info btn-sm mb-2 mr-2" title="Kembali Ke Daftar Pembagunan"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>-->
+											<a href="<?= site_url("rpjm_desa/dialog_daftar/{$desa_dpurpp->id}/cetak") ?>" class="btn btn-secondary btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" title="Cetak Data <?= $desa_dpurpp->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
+											<a href="<?= site_url("rpjm_desa/dialog_daftar/{$desa_dpurpp->id}/unduh") ?>" class="btn btn-secondary btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_dpurpp->judul ?> "><i class="fe fe-download "></i> Unduh</a>
+											<!--<a href="<?= site_url('rpjm_desa') ?>" class="btn btn-info btn-sm mb-2 mr-2" title="Kembali Ke Daftar Pembagunan"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>-->
 											<div class="col-md-3">
 												<div class="input-group">
 													<select class="form-control" id="tahun" name="tahun" style="width:100%;">

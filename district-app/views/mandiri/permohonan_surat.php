@@ -14,7 +14,7 @@
   <section class="content-header">
     <h1>Permohonan Surat</h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
       <li class="active">Daftar Permohonan Surat</li>
     </ol>
   </section>
@@ -22,7 +22,7 @@
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
   <div class="col-md-12">
-  <div class="box box-info">
+  <div class="card card-shadow">
   <div class="box-body">
   <div class="row">
     <div class="col-sm-3">
@@ -39,7 +39,7 @@
       <div class="input-group input-group-sm">
         <input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();}">
         <div class="input-group-btn">
-          <button type="submit" class="btn btn-success" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+          <button type="submit" class="btn btn-success" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
         </div>
       </div>
     </div>
@@ -78,15 +78,15 @@
                   <?=$data['status']?>
                   </a></br>
                   <?php if (in_array($data['status_id'], array(0, 1))): ?>
-                  <a href="<?=site_url("{$this->controller}/periksa/$data[id]")?>" class="btn bg-yellow btn-box btn-sm"  title="Periksa Permohonan"><i class="fa fa-question-circle"></i> Periksa</a>
+                  <a href="<?=site_url("{$this->controller}/periksa/$data[id]")?>" class="btn bg-yellow btn-box btn-sm"  title="Periksa Permohonan"><i class="fe fe-question-circle"></i> Periksa</a>
                   <?php endif; ?>
                   <?php if ($data['status_id'] == 2): ?>
-                  <a href="<?= site_url("{$this->controller}/update_status/$data[id]/3")?>" title="Ubah SIAP DIAMBIL" class="btn bg-green btn-box btn-sm"><i class="fa fa-check"></i> TTD Slesai </a>
+                  <a href="<?= site_url("{$this->controller}/update_status/$data[id]/3")?>" title="Ubah SIAP DIAMBIL" class="btn bg-green btn-box btn-sm"><i class="fe fe-check"></i> TTD Slesai </a>
                   <?php elseif ($data['status_id'] == 3): ?>
-                  <a href="<?= site_url("{$this->controller}/update_status/$data[id]/4")?>" title="Ubah SUDAH DIAMBIL" class="btn bg-blue btn-box btn-sm"><i class="fa fa-arrow-circle-right"></i> Ambil</a>
+                  <a href="<?= site_url("{$this->controller}/update_status/$data[id]/4")?>" title="Ubah SUDAH DIAMBIL" class="btn bg-blue btn-box btn-sm"><i class="fe fe-arrow-circle-right"></i> Ambil</a>
                   <?php endif; ?>
                   <?php if (in_array($data['status_id'], array(0, 1))): ?>
-                  <a href="#" data-href="<?=site_url("{$this->controller}/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+                  <a href="#" data-href="<?=site_url("{$this->controller}/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
                   <?php endif; ?></td>
               </tr>
               <?php endforeach; ?>
@@ -152,7 +152,7 @@
         <?=$_SESSION['pin'];?>
       </div>
       <div class='modal-footer'>
-        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>

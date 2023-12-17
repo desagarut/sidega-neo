@@ -48,7 +48,7 @@
 								<label for="tgl_peristiwa">Tanggal Peristiwa</label>
 								<div class="input-group input-group-sm date">
 									<div class="input-group-addon">
-										<i class="fa fa-calendar"></i>
+										<i class="fe fe-calendar"></i>
 									</div>
 									<input class="form-control input-sm pull-right required tgl_minimal" id="tgl_1" name="tgl_peristiwa" type="text" data-tgl-lebih-besar="#tgl_lapor" value="<?= $log_status_dasar['tgl_peristiwa']; ?>">
 								</div>
@@ -57,7 +57,7 @@
 								<label for="tgl_lapor">Tanggal Lapor</label>
 								<div class="input-group input-group-sm date">
 									<div class="input-group-addon">
-										<i class="fa fa-calendar"></i>
+										<i class="fe fe-calendar"></i>
 									</div>
 									<input class="form-control input-sm pull-right tgl_indo required" id="tgl_lapor" name="tgl_lapor" type="text" value="<?= $log_status_dasar['tgl_lapor']; ?>">
 								</div>
@@ -72,8 +72,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-				<button type="submit" class="btn btn-social btn-flat btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+				<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="submit" class="btn btn-social btn-flat btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 			</div>
 		</div>
 	</form>

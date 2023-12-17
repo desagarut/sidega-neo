@@ -4,11 +4,14 @@
 	}
 </style>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pendataan Peserta Vaksin Covid19</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Data Peserta Vaksin Covid19</li>
 		</ol>
 	</section>
@@ -19,15 +22,15 @@
 				<?php $this->load->view('kesehatan/covid19/menu') ?>
 			</div>
 			<div class="col-md-10">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-header with-border">
-						<a href="<?= site_url("covid19_vaksin/form_peserta_vaksin") ?>" title="Tambah Data Warga" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Data Warga Vaksin</a>
-						<a href="<?= site_url("covid19_vaksin/daftar/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fa fa-print"></i> Cetak
+						<a href="<?= site_url("covid19_vaksin/form_peserta_vaksin") ?>" title="Tambah Data Warga" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Data Warga Vaksin</a>
+						<a href="<?= site_url("covid19_vaksin/daftar/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 						</a>
-						<a href="<?= site_url("covid19_vaksin/daftar/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fa fa-download"></i> Unduh
+						<a href="<?= site_url("covid19_vaksin/daftar/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 						</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -64,9 +67,9 @@
 																<tr>
 																	<td align="center" width="2"><?= $nomer; ?></td>
 																	<td nowrap>
-																		<a href="<?= site_url('covid19_vaksin/edit_peserta_vaksin_form/' . $item[id]) ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Peserta Vaksin" title="Ubah Data Peserta Vaksin" class="btn btn-warning btn-box btn-sm"><i class="fa fa-edit"></i></a>
-																		<a href="#" data-href="<?= site_url('covid19_vaksin/hapus_peserta_vaksin/' . $item[id]) ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
-																		<a href="<?= site_url('covid19_vaksin/detil_peserta_vaksin/' . $item[id]) ?>" title="Detil Data Warga" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-eye"></i></a>
+																		<a href="<?= site_url('covid19_vaksin/edit_peserta_vaksin_form/' . $item[id]) ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Peserta Vaksin" title="Ubah Data Peserta Vaksin" class="btn btn-warning btn-box btn-sm"><i class="fe fe-edit"></i></a>
+																		<a href="#" data-href="<?= site_url('covid19_vaksin/hapus_peserta_vaksin/' . $item[id]) ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																		<a href="<?= site_url('covid19_vaksin/detil_peserta_vaksin/' . $item[id]) ?>" title="Detil Data Warga" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-eye"></i></a>
 																	</td>
 																	<td><?= $item["terdata_nama"] ?></td>
 																	<td nowrap><a href="<?= site_url('covid19_vaksin/detil_peserta_vaksin/' . $item["id"]) ?>" title="Data terdata"><?= $item['terdata_info']; ?></a></td>

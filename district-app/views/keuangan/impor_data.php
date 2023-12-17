@@ -1,11 +1,14 @@
 <style type="text/css">
 	.nowrap { white-space: nowrap; }
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Impor Data Siskeudes</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Impor Data Siskeudes</li>
 		</ol>
 	</section>
@@ -25,7 +28,7 @@
 											<input type="text" class="form-control" id="file_path2">
 											<input type="file" class="hidden" id="file2" name="keuangan">
 											<span class="input-group-btn">
-												<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+												<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 											</span>
 										</div>
 										<p class="help-block small">Pastikan format berkas .zip berisi data Siskeudes dalam format .csv</p>
@@ -33,7 +36,7 @@
 								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok" onclick="simpan()"><i class='fa fa-check'></i> Simpan</button>
+								<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok" onclick="simpan()"><i class='fe fe-check'></i> Simpan</button>
 							</div>
 
 							<hr>
@@ -57,9 +60,9 @@
 														<td><?=$data['no']?></td>
 														<td nowrap>
 															<?php if (count($data['desa_ganda']) > 1): ?>
-																<a href="<?= site_url("keuangan/pilih_desa/{$data['id']}")?>" title="Bersihkan desa ganda" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Bersihkan Desa Ganda" class="btn bg-orange btn-box btn-sm"><i class="fa fa-minus-square"></i></a>
+																<a href="<?= site_url("keuangan/pilih_desa/{$data['id']}")?>" title="Bersihkan desa ganda" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Bersihkan Desa Ganda" class="btn bg-orange btn-box btn-sm"><i class="fe fe-minus-square"></i></a>
 															<?php endif; ?>
-															<a href="#" data-href="<?= site_url("keuangan/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+															<a href="#" data-href="<?= site_url("keuangan/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 														<td><?=$data['versi_database']?></td>
 														<td>
 															<?=$data['tahun_anggaran']?>
@@ -89,15 +92,15 @@
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span></button>
-				<h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle text-red"></i> &nbsp;Konfirmasi</h4>
+				<h4 class="modal-title" id="myModalLabel"><i class="fe fe-exclamation-triangle text-red"></i> &nbsp;Konfirmasi</h4>
 			</div>
 			<div class="modal-body btn-info">
 				<p>Data tahun anggaran <span id="tahun"></span> sudah ada pada sistem</p>
 				<p>Apakah anda ingin melanjutkan proses impor untuk menindih datanya?</p>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-				<button type="button" class="btn btn-social btn-box btn-info btn-sm" onclick="simpanDataUpdate()"><i class='fa fa-check'></i> Lanjutkan impor</button>
+				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-social btn-box btn-info btn-sm" onclick="simpanDataUpdate()"><i class='fe fe-check'></i> Lanjutkan impor</button>
 			</div>
 		</div>
 	</div>
@@ -108,13 +111,13 @@
 			<div class="modal-header btn-danger">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span></button>
-				<h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle"></i> &nbsp;Peringatan</h4>
+				<h4 class="modal-title" id="myModalLabel"><i class="fe fe-exclamation-triangle"></i> &nbsp;Peringatan</h4>
 			</div>
 			<div class="modal-body">
 				<p id="kata_peringatan"></p>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			</div>
 		</div>
 	</div>

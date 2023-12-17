@@ -111,7 +111,8 @@ function strip_kosong($str)
 function buat_pdf($isi, $file, $style = null, $orientation = 'P', $page_size = 'A4')
 {
     // CSS perlu ditambahkan secara eksplisit
-    $style     = $style ?: APPPATH . '../assets/tiny/css/report.css';
+    $style     = $style ?: APPPATH . '../assets/
+css/report.css';
     $style_isi = "<style>\n " . file_get_contents($style) . "</style>\n" . $isi;
 
     // Konversi ke PDF menggunakan html2pdf

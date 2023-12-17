@@ -7,11 +7,14 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Log Penduduk</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('penduduk/clear') ?>"> Daftar Penduduk</a></li>
 			<li class="active">Log Penduduk</li>
 		</ol>
@@ -19,15 +22,15 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<form id="mainform" name="mainform" action="" method="post">
 						<div class="box-header with-border">
 							<div class="row">
 								<div class="col-sm-12">
-									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?= site_url("penduduk_log/kembalikan_status_all") ?>')" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-undo'></i> Kembalikan Status Terpilih</a>
-									<a href="<?= site_url("penduduk_log/cetak/$o") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
+									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?= site_url("penduduk_log/kembalikan_status_all") ?>')" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
+									<a href="<?= site_url("penduduk_log/cetak/$o") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
 									<a href="<?= site_url("penduduk_log/excel/$o") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
-									<a href="<?= site_url('penduduk/clear') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
+									<a href="<?= site_url('penduduk/clear') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
 								</div>
 							</div>
 						</div>
@@ -83,7 +86,7 @@
 												<div class="input-group input-group-sm pull-right">
 													<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url('penduduk_log/search') ?>');$('#'+'mainform').submit();}">
 													<div class="input-group-btn">
-														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url('penduduk_log/search') ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url('penduduk_log/search') ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 													</div>
 												</div>
 											</div>
@@ -98,45 +101,45 @@
 																<th><input type="checkbox" id="checkall" /></th>
 																<th width="85">Aksi</th>
 																<?php if ($o == 2) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/1") ?>">NIK <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/1") ?>">NIK <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 1) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/2") ?>">NIK <i class='fa fa-sort-desc fa-sm'></i></span></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/2") ?>">NIK <i class='fe fe-sort-desc fa-sm'></i></span></a></th>
 																<?php else : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/1") ?>">NIK <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/1") ?>">NIK <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<?php if ($o == 4) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/3") ?>">Nama <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/3") ?>">Nama <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 3) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/4") ?>">Nama <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/4") ?>">Nama <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/3") ?>">Nama <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/3") ?>">Nama <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<?php if ($o == 6) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/5") ?>">No. KK / Nama KK <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/5") ?>">No. KK / Nama KK <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 5) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/6") ?>">No. KK / Nama KK <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/6") ?>">No. KK / Nama KK <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/5") ?>">No. KK / Nama KK <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/5") ?>">No. KK / Nama KK <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th><?= ucwords($this->setting->sebutan_dusun) ?></th>
 																<th>RW</th>
 																<th>RT</th>
 
 																<?php if ($o == 8) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/7") ?>">Umur <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/7") ?>">Umur <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 7) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/8") ?>">Umur <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/8") ?>">Umur <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/7") ?>">Umur <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/7") ?>">Umur <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 
 																<th>Status Menjadi</th>
 																<?php if ($o == 10) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/9") ?>">Tanggal Peristiwa <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/9") ?>">Tanggal Peristiwa <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 9) : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/10") ?>">Tanggal Peristiwa <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/10") ?>">Tanggal Peristiwa <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else : ?>
-																	<th><a href="<?= site_url("penduduk_log/index/$p/9") ?>">Tanggal Peristiwa <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("penduduk_log/index/$p/9") ?>">Tanggal Peristiwa <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>Tanggal Rekam</th>
 																<th>Catatan Peristiwa</th>
@@ -150,8 +153,8 @@
 																		<input type="checkbox" name="id_cb[]" value="<?= $data['id_log'] ?>" />
 																	</td>
 																	<td nowrap>
-																		<a href="<?= site_url("penduduk_log/edit/$p/$o/$data[id_log]") ?>" class="btn bg-orange btn-box btn-sm" title="Edit Log Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Edit Log Penduduk"><i class="fa fa-edit"></i></a>
-																		<a href="#" data-href="<?= site_url("penduduk_log/kembalikan_status/$data[id_log]") ?>" class="btn bg-olive btn-box btn-sm" title="Kembalikan Status" data-remote="false" data-toggle="modal" data-target="#confirm-status"><i class="fa fa-undo"></i></a>
+																		<a href="<?= site_url("penduduk_log/edit/$p/$o/$data[id_log]") ?>" class="btn bg-orange btn-box btn-sm" title="Edit Log Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Edit Log Penduduk"><i class="fe fe-edit"></i></a>
+																		<a href="#" data-href="<?= site_url("penduduk_log/kembalikan_status/$data[id_log]") ?>" class="btn bg-olive btn-box btn-sm" title="Kembalikan Status" data-remote="false" data-toggle="modal" data-target="#confirm-status"><i class="fe fe-undo"></i></a>
 																	</td>
 																	<td>
 																		<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]") ?>" id="test" name="<?= $data['id'] ?>"><?= $data['nik'] ?></a>
@@ -233,15 +236,15 @@
 		<div class='modal-content'>
 			<div class='modal-header'>
 				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> Konfirmasi</h4>
+				<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Konfirmasi</h4>
 			</div>
 			<div class='modal-body btn-info'>
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini?
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-status"><i class='fa fa-check'></i> Simpan</button>
+					<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

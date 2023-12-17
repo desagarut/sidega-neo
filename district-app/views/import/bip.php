@@ -10,18 +10,18 @@
 																<form action="<?= $form_action?>" method="post" enctype="multipart/form-data" id="excell" class="form-horizontal">
 																	<p>Proses ini untuk mengimpor data Buku Induk Penduduk (BIP) yang diperoleh dari Disdukcapil dalam format Excel.</p>
 																	<p>BIP yang dapat dibaca proses ini adalah yang tersusun berdasarkan keluarga, seperti contoh yang dapat dilihat pada tautan berikut :</P>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2012.xls" ><i class="fa fa-download"></i>Contoh BIP 2012</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016.xls" ><i class="fa fa-download"></i>Contoh BIP 2016</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_ektp.xls"><i class="fa fa-download"></i>Contoh BIP eKTP</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016_luwutimur.xls"><i class="fa fa-download"></i>Contoh BIP 2016 Luwu Timur</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_siak.xls"><i class="fa fa-download"></i>Contoh Data SIAK</a>
+																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2012.xls" ><i class="fe fe-download"></i>Contoh BIP 2012</a>
+																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016.xls" ><i class="fe fe-download"></i>Contoh BIP 2016</a>
+																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_ektp.xls"><i class="fe fe-download"></i>Contoh BIP eKTP</a>
+																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016_luwutimur.xls"><i class="fe fe-download"></i>Contoh BIP 2016 Luwu Timur</a>
+																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_siak.xls"><i class="fe fe-download"></i>Contoh Data SIAK</a>
 																	<p></p>
 																	<p>Proses ini mengimpor data keluarga di semua worksheet di berkas BIP. Misalnya, apabila data BIP tersusun menjadi satu worksheet per dusun, proses ini akan mengimpor data semua dusun.</p>
 																	<p class="text-muted text-red well well-sm no-shadow" style="margin-top: 10px;">
 																		<small>
 																			<strong>
-																				<i class="fa fa-info-circle text-red"></i> Pastikan berkas BIP format Excel 2003, ber-ekstensi .xls <br>
-																				<i class="fa fa-info-circle text-red"></i> Sebelum di-impor ganti semua format tanggal (seperti tanggal lahir) menjadi dd/mm/yyyy (misalnya 26/07/1964).
+																				<i class="fe fe-info-circle text-red"></i> Pastikan berkas BIP format Excel 2003, ber-ekstensi .xls <br>
+																				<i class="fe fe-info-circle text-red"></i> Sebelum di-impor ganti semua format tanggal (seperti tanggal lahir) menjadi dd/mm/yyyy (misalnya 26/07/1964).
 																			</strong>
 																		</small>
 																	</p>
@@ -41,13 +41,13 @@
 																								<input type="text" class="form-control" id="file_path2" name="userfile">
 																								<input type="file" class="hidden" id="file2" name="userfile">
 																								<span class="input-group-btn">
-																									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+																									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 																								</span>
 																							</div>
 																							<p class="help-block"><input type="checkbox" name="hapus_data" value="hapus"></input>	Hapus data penduduk sebelum Impor</p>
 																						</div>
 																						<div class="col-md-2">
-																							<a href="#" class="btn btn-block btn-success btn-sm"  title="Impor Database" onclick="document.getElementById('excell').submit();" data-toggle="modal" data-target="#loading"> <i class="fa fa-spin fa-refresh"></i> Impor</a>
+																							<a href="#" class="btn btn-block btn-success btn-sm"  title="Impor Database" onclick="document.getElementById('excell').submit();" data-toggle="modal" data-target="#loading"> <i class="fe fe-spin fa-refresh"></i> Impor</a>
 																						</div>
 																					</div>
 																				</td>

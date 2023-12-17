@@ -1,14 +1,14 @@
 
 
 <div class="col-md-4">
-<div class="card card-primary">
+<div class="card shadow">
 <div class="card-header with-border">
   <h3 class="card-title">Area Chart</h3>
 
   <div class="card-tools pull-right">
-    <button type="button" class="btn btn-card-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+    <button type="button" class="btn btn-card-tool" data-widget="collapse"><i class="fe fe-minus"></i>
     </button>
-    <button type="button" class="btn btn-card-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+    <button type="button" class="btn btn-card-tool" data-widget="remove"><i class="fe fe-times"></i></button>
   </div>
 </div>
 <div class="card-body">

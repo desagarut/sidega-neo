@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
+		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 	</div>
 </div>

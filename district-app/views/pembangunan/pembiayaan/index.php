@@ -2,8 +2,11 @@
 
 <!-- Content Wrapper. Contains page content -->
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Rencana Pembiayaan Pembangunan Desa</h1>
 		<ol class="breadcrumb float-sm-right">
 			<li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
@@ -27,8 +30,8 @@
 									<div class="row">
 										<div class="col-md-4">
 											<a href="<?= site_url('pembangunan_pembiayaan/form') ?>" class="btn btn-success btn-sm" title="Tambah Data Baru"><i class="feather icon-plus"></i> Tambah</a>
-											<a href="#" class="btn btn-info btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" title="Cetak Data <?= $desa_musdus->judul ?> "><i class="fa fa-print "></i> Cetak</a>
-											<a href="#" class="btn bg-navy btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_musdus->judul ?> "><i class="fa fa-download "></i> Unduh</a>
+											<a href="#" class="btn btn-info btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" title="Cetak Data <?= $desa_musdus->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
+											<a href="#" class="btn bg-navy btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_musdus->judul ?> "><i class="fe fe-download "></i> Unduh</a>
 										</div>
 										<div class="col-sm-2">
 											<select class="form-control input-sm select2" disabled hidden id="tahun" name="tahun" style="width:100%;">
@@ -114,7 +117,7 @@
 					'data': function(data) {
 						return `
 						<div class="btn-group mb-2 mr-2">
-						<a href="#" class="btn btn-success btn-box btn-sm" data-toggle="dropdown" title="Pilih Aksi">Aksi <i class="fa fa-circle-o"></i></a>
+						<a href="#" class="btn btn-success btn-box btn-sm" data-toggle="dropdown" title="Pilih Aksi">Aksi <i class="fe fe-circle-o"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="<?= site_url('pembangunan_pembiayaan/detail_program/'); ?>${data.id}" title="Lihat Detail Program Kegiatan">Lihat</a></li>
 								<li><a class="dropdown-item" href="<?= site_url('pembangunan_pembiayaan/form/'); ?>${data.id}">Ubah</a></li>

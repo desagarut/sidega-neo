@@ -78,7 +78,7 @@
 				var content;
 				var point_style = L.icon({
 					iconUrl: '<?= base_url(LOKASI_SIMBOL_LOKASI) ?>penduduk.png',
-				//	iconUrl: '<?= AmbilFoto($penduduk['foto'], '', $penduduk['id_sex']) ?>',
+					//	iconUrl: '<?= AmbilFoto($penduduk['foto'], '', $penduduk['id_sex']) ?>',
 					iconSize: [29, 36],
 					iconAnchor: [13, 36],
 					popupAnchor: [0, -28],
@@ -161,126 +161,187 @@
 <style>
 	#map {
 		width: 100%;
-		height:86vh;
+		height: 86vh;
 	}
 </style>
-<div class="content-wrapper" style="padding: 30px 0px 0px 0px">
-	<form id="mainform_map" name="mainform_map" action="" method="post">
-		<div class="row">
-			<div class="col-md-12">
-				<div id="map">
-					<?php include("district-app/views/gis/cetak_peta.php"); ?>
-					<div class="leaflet-top leaflet-right">
-						<div class="leaflet-control-layers leaflet-bar leaflet-control">
-							<a class="leaflet-control-control icos" href="#" title="Control Panel" role="button" aria-label="Control Panel" onclick="$('#target1').toggle();$('#target1').removeClass('hidden');$('#target2').hide();"><i class="fa fa-gears"></i></a>
-							<a class="leaflet-control-control icos" href="#" title="Legenda" role="button" aria-label="Legenda" onclick="$('#target2').toggle();$('#target2').removeClass('hidden');$('#target1').hide();"><i class="fa fa-list"></i></a>
-						</div>
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<form id="mainform_map" name="mainform_map" action="" method="post">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="map">
+								<?php include("district-app/views/gis/cetak_peta.php"); ?>
+								<div class="leaflet-top leaflet-right">
+									<div class="leaflet-control-layers leaflet-bar leaflet-control">
+										<a class="leaflet-control-control icos" href="#" title="Control Panel" role="button" aria-label="Control Panel" onclick="$('#target1').toggle();$('#target1').removeClass('hidden');$('#target2').hide();"><i class="fe fe-users mb-1"></i></a>
+										<a class="leaflet-control-control icos" href="#" title="Legenda" role="button" aria-label="Legenda" onclick="$('#target2').toggle();$('#target2').removeClass('hidden');$('#target1').hide();"><i class="fe fe-list"></i></a>
+									</div>
 
-						<?php $this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) ?>
-						<?php $this->load->view("gis/content_dusun.php", array('dusun_gis' => $dusun_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
-						<?php $this->load->view("gis/content_rw.php", array('rw_gis' => $rw_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
-						<?php $this->load->view("gis/content_rt.php", array('rt_gis' => $rt_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
+									<?php $this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) ?>
+									<?php $this->load->view("gis/content_dusun.php", array('dusun_gis' => $dusun_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
+									<?php $this->load->view("gis/content_rw.php", array('rw_gis' => $rw_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
+									<?php $this->load->view("gis/content_rt.php", array('rt_gis' => $rt_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
 
-						<div id="target1" class="leaflet-control-layers leaflet-control-layers-expanded leaflet-control hidden" aria-haspopup="true" style="max-width: 250px;">
-							<div class="leaflet-control-layers-overlays">
-								<div class="leaflet-control-layers-group" id="leaflet-control-layers-group-2">
-									<span class="leaflet-control-layers-group-name">CARI PENDUDUK</span>
-									<div class="leaflet-control-layers-separator"></div>
-									<div class="form-group">
-										<label>Status Penduduk</label>
-										<select class="form-control input-sm " name="filter" onchange="formAction('mainform_map','<?= site_url('gis/filter') ?>')">
-											<option value="">Pilih Status Penduduk </option>
-											<?php foreach ($list_status_penduduk as $data) : ?>
-												<option value="<?= $data['id'] ?>" <?= selected($filter, $data['id']); ?>><?= $data['nama'] ?></option>
-											<?php endforeach; ?>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Jenis Kelamin</label>
-										<select class="form-control input-sm " name="sex" onchange="formAction('mainform_map','<?= site_url('gis/sex') ?>')">
-											<option value="">Pilih Jenis Kelamin </option>
-											<?php foreach ($list_jenis_kelamin as $data) : ?>
-												<option value="<?= $data['id'] ?>" <?= selected($sex, $data['id']); ?>><?= $data['nama'] ?></option>
-											<?php endforeach; ?>
-										</select>
-									</div>
-									<div class="form-group">
-										<label><?= ucwords($this->setting->sebutan_dusun) ?></label>
-										<select class="form-control input-sm " name="dusun" onchange="formAction('mainform_map','<?= site_url('gis/dusun') ?>')">
-											<option value="">Pilih Dusun</option>
-											<?php foreach ($list_dusun as $data) : ?>
-												<option value="<?= $data['dusun'] ?>" <?= selected($dusun, $data['dusun']); ?>><?= $data['dusun'] ?></option>
-											<?php endforeach; ?>
-										</select>
-									</div>
-									<?php if ($dusun) : ?>
-										<div class="form-group">
-											<label>RW</label>
-											<select class="form-control input-sm " name="rw" onchange="formAction('mainform_map','<?= site_url('gis/rw') ?>')">
-												<option value="">Pilih RW</option>
-												<?php foreach ($list_rw as $data) : ?>
-													<option value="<?= $data['rw'] ?>" <?= selected($rw, $data['rw']); ?>><?= $data['rw'] ?></option>
-												<?php endforeach; ?>
-											</select>
-										</div>
-										<?php if ($rw) : ?>
-											<div class="form-group">
-												<label>RT</label>
-												<select class="form-control input-sm " name="rt" onchange="formAction('mainform_map','<?= site_url('gis/rt') ?>')">
-													<option value="">Pilih RT</option>
-													<?php foreach ($list_rt as $data) : ?>
-														<option value="<?= $data['rt'] ?>" <?= selected($rt, $data['rt']); ?>><?= $data['rt'] ?></option>
-													<?php endforeach; ?>
-												</select>
-											</div>
-										<?php endif; ?>
-									<?php endif; ?>
-									<div class="col-sm-12">
-										<div class="form-group row">
-											<label>Cari</label>
-											<div class="box-tools">
-												<div class="input-group input-group-sm pull-right">
-													<input name="cari" id="cari" class="form-control" placeholder="cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();endif">
-													<div class="input-group-btn">
-														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();"><i class="fa fa-search"></i></button>
+									<div id="target1" class="leaflet-control-layers leaflet-control-layers-expanded leaflet-control hidden" aria-haspopup="true" style="max-width: 250px;">
+										<div class="leaflet-control-layers-overlays">
+											<div class="leaflet-control-layers-group" id="leaflet-control-layers-group-2">
+												<span class="leaflet-control-layers-group-name">CARI PENDUDUK</span>
+												<div class="leaflet-control-layers-separator"></div>
+												<div class="form-group">
+													<label>Status Penduduk</label>
+													<select class="form-control input-sm " name="filter" onchange="formAction('mainform_map','<?= site_url('gis/filter') ?>')">
+														<option value="">Pilih Status Penduduk </option>
+														<?php foreach ($list_status_penduduk as $data) : ?>
+															<option value="<?= $data['id'] ?>" <?= selected($filter, $data['id']); ?>><?= $data['nama'] ?></option>
+														<?php endforeach; ?>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>Jenis Kelamin</label>
+													<select class="form-control input-sm " name="sex" onchange="formAction('mainform_map','<?= site_url('gis/sex') ?>')">
+														<option value="">Pilih Jenis Kelamin </option>
+														<?php foreach ($list_jenis_kelamin as $data) : ?>
+															<option value="<?= $data['id'] ?>" <?= selected($sex, $data['id']); ?>><?= $data['nama'] ?></option>
+														<?php endforeach; ?>
+													</select>
+												</div>
+												<div class="form-group">
+													<label><?= ucwords($this->setting->sebutan_dusun) ?></label>
+													<select class="form-control input-sm " name="dusun" onchange="formAction('mainform_map','<?= site_url('gis/dusun') ?>')">
+														<option value="">Pilih Dusun</option>
+														<?php foreach ($list_dusun as $data) : ?>
+															<option value="<?= $data['dusun'] ?>" <?= selected($dusun, $data['dusun']); ?>><?= $data['dusun'] ?></option>
+														<?php endforeach; ?>
+													</select>
+												</div>
+												<?php if ($dusun) : ?>
+													<div class="form-group">
+														<label>RW</label>
+														<select class="form-control input-sm " name="rw" onchange="formAction('mainform_map','<?= site_url('gis/rw') ?>')">
+															<option value="">Pilih RW</option>
+															<?php foreach ($list_rw as $data) : ?>
+																<option value="<?= $data['rw'] ?>" <?= selected($rw, $data['rw']); ?>><?= $data['rw'] ?></option>
+															<?php endforeach; ?>
+														</select>
 													</div>
+													<?php if ($rw) : ?>
+														<div class="form-group">
+															<label>RT</label>
+															<select class="form-control input-sm " name="rt" onchange="formAction('mainform_map','<?= site_url('gis/rt') ?>')">
+																<option value="">Pilih RT</option>
+																<?php foreach ($list_rt as $data) : ?>
+																	<option value="<?= $data['rt'] ?>" <?= selected($rt, $data['rt']); ?>><?= $data['rt'] ?></option>
+																<?php endforeach; ?>
+															</select>
+														</div>
+													<?php endif; ?>
+												<?php endif; ?>
+												<div class="col-sm-12">
+													<div class="form-group row">
+														<label>Cari</label>
+														<div class="box-tools">
+															<div class="input-group input-group-sm pull-right">
+																<input name="cari" id="cari" class="form-control" placeholder="cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();endif">
+																<div class="input-group-btn">
+																	<button type="submit" class="btn btn-default" onclick="$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();"><i class="fe fe-search"></i></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<a href="<?= site_url("gis/ajax_adv_search") ?>" class="btn btn-block btn-social bg-olive btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" title="Pencarian Spesifik">
+														<i class="fe fe-search"></i> Pencarian Spesifik
+													</a>
+													<a href="<?= site_url("gis/clear") ?>" class="btn btn-block btn-social bg-orange btn-sm">
+														<i class="fe fe-refresh"></i> Bersihkan
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<a href="<?= site_url("gis/ajax_adv_search") ?>" class="btn btn-block btn-social bg-olive btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" title="Pencarian Spesifik">
-											<i class="fa fa-search"></i> Pencarian Spesifik
-										</a>
-										<a href="<?= site_url("gis/clear") ?>" class="btn btn-block btn-social bg-orange btn-sm">
-											<i class="fa fa-refresh"></i> Bersihkan
-										</a>
+									<div id="target2" class="leaflet-control-layers leaflet-control-layers-expanded leaflet-control hidden" aria-haspopup="true" style="max-height: 315px;">
+										<div class="leaflet-control-layers-overlays">
+											<div class="leaflet-control-layers-group" id="leaflet-control-layers-group-3">
+												<span class="leaflet-control-layers-group-name">LOKASI</span>
+												<div class="leaflet-control-layers-separator"></div>
+												<label>
+													<input class="leaflet-control-layers-selector" type="checkbox" name="layer_penduduk" value="1" onchange="handle_pend(this);" <?php if ($layer_penduduk == 1) : ?>checked<?php endif; ?>>
+													<span> Penduduk </span>
+												</label>
+												<label>
+													<input class="leaflet-control-layers-selector" type="checkbox" name="layer_keluarga" value="1" onchange="handle_kel(this);" <?php if ($layer_keluarga == 1) : ?>checked<?php endif; ?>>
+													<span> Keluarga</span>
+												</label>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div id="target2" class="leaflet-control-layers leaflet-control-layers-expanded leaflet-control hidden" aria-haspopup="true" style="max-height: 315px;">
-							<div class="leaflet-control-layers-overlays">
-								<div class="leaflet-control-layers-group" id="leaflet-control-layers-group-3">
-									<span class="leaflet-control-layers-group-name">LOKASI</span>
-									<div class="leaflet-control-layers-separator"></div>
-									<label>
-										<input class="leaflet-control-layers-selector" type="checkbox" name="layer_penduduk" value="1" onchange="handle_pend(this);" <?php if ($layer_penduduk == 1) : ?>checked<?php endif; ?>>
-										<span> Penduduk </span>
-									</label>
-									<label>
-										<input class="leaflet-control-layers-selector" type="checkbox" name="layer_keluarga" value="1" onchange="handle_kel(this);" <?php if ($layer_keluarga == 1) : ?>checked<?php endif; ?>>
-										<span> Keluarga</span>
-									</label>
-								</div>
-							</div>
-						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
-	</form>
+	</div>
+</main>
+
+<div class="modal fade" id="modalKecil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="fetched-data"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Close</button>
+				<!--<button type="button" class="btn mb-2 btn-primary">Save changes</button>-->
+			</div>
+		</div>
+	</div>
 </div>
+
+<div class="modal fade" id="modalSedang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="fetched-data"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn mb-2 btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--													
+<div class="modal fade" id="modalBesar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="fetched-data"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn mb-2 btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <div class="modal fade" id="modalKecil" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
 	<div class="modal-dialog modal-sm">
@@ -293,7 +354,7 @@
 		</div>
 	</div>
 </div>
-
+													
 <div class="modal fade" id="modalSedang" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
 	<div class="modal-dialog">
 		<div class='modal-content'>
@@ -311,12 +372,12 @@
 		<div class='modal-content'>
 			<div class='modal-header'>
 				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i></h4>
+				<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i></h4>
 			</div>
 			<div class="fetched-data"></div>
 		</div>
 	</div>
-</div>
+</div>-->
 <script>
 	function handle_pend(cb) {
 		formAction('mainform_map', '<?= site_url('gis') ?>/layer_penduduk');

@@ -19,7 +19,7 @@
 	<section class="content-header">
 		<h1>Periksa Surat</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('permohonan_surat_admin/index/1/0')?>"> Daftar Permohonan Surat</a></li>
 			<li class="active">Surat Keterangan</li>
 		</ol>
@@ -27,7 +27,7 @@
 	<section class="content periksa">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				<div class="card card-shadow">
 					<div class="box-body">
 						<form class="form-horizontal">
 						  <div class="form-group">
@@ -58,7 +58,7 @@
 				<div class="box box-warning collapsed-box">
 					<div class="box-header">
 	          <div class="box-tools pull-right">
-	            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+	            <button class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-plus"></i></button>
 	          </div>
 						<h4>Periksa persyaratan</h4>
 					</div>
@@ -79,7 +79,7 @@
 	    <div class="box-header with-border">
 	      <h4 class="box-title">Status Kelengkapan Dokumen</h4>
 	      <div class="box-tools">
-	        <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fa fa-minus"></i></button>
+	        <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fe fe-minus"></i></button>
 	      </div>
 	    </div>
 	    <div class="box-body">
@@ -111,7 +111,7 @@
 				<div class="box box-warning collapsed-box">
 					<div class="box-header">
 	          <div class="box-tools pull-right">
-	            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+	            <button class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-plus"></i></button>
 	          </div>
 						<h4>Periksa isian form</h4>
 					</div>

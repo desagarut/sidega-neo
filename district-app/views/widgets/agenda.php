@@ -6,7 +6,7 @@
 
 <div class="box box-primary box-solid">
 	<div class="box-header">
-		<h3 class="box-title"><i class="fa fa-calendar"></i> Agenda</a></h3>
+		<h3 class="box-title"><i class="fe fe-calendar"></i> Agenda</a></h3>
 	</div>
 	<div id="agenda" class="box-body">
 		<ul class="nav nav-tabs">

@@ -259,8 +259,8 @@
 							<?php // $this->load->view("gis/covid_peta_local.php") ?>
 						</div>-->
 						<div class="leaflet-control-layers leaflet-bar leaflet-control">
-							<a class="leaflet-control-control icos" href="#" title="Control Panel" role="button" aria-label="Control Panel" onclick="$('#target1').toggle();$('#target1').removeClass('hidden');$('#target2').hide();"><i class="fa fa-gears"></i></a>
-							<a class="leaflet-control-control icos" href="#" title="Legenda" role="button" aria-label="Legenda" onclick="$('#target2').toggle();$('#target2').removeClass('hidden');$('#target1').hide();"><i class="fa fa-list"></i></a>
+							<a class="leaflet-control-control icos" href="#" title="Control Panel" role="button" aria-label="Control Panel" onclick="$('#target1').toggle();$('#target1').removeClass('hidden');$('#target2').hide();"><i class="fe fe-gears"></i></a>
+							<a class="leaflet-control-control icos" href="#" title="Legenda" role="button" aria-label="Legenda" onclick="$('#target2').toggle();$('#target2').removeClass('hidden');$('#target1').hide();"><i class="fe fe-list"></i></a>
 						</div>
 
 						<?php $this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) ?>
@@ -329,7 +329,7 @@
 												<div class="input-group input-group-sm pull-right">
 													<input name="cari" id="cari" class="form-control" placeholder="cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();endif">
 													<div class="input-group-btn">
-														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();"><i class="fa fa-search"></i></button>
+														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform_map').attr('action', '<?= site_url("gis/search") ?>');$('#'+'mainform_map').submit();"><i class="fe fe-search"></i></button>
 													</div>
 												</div>
 											</div>
@@ -337,10 +337,10 @@
 									</div>
 									<div class="form-group">
 										<a href="<?= site_url("gis/ajax_adv_search") ?>" class="btn btn-block btn-social bg-olive btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" title="Pencarian Spesifik">
-											<i class="fa fa-search"></i> Pencarian Spesifik
+											<i class="fe fe-search"></i> Pencarian Spesifik
 										</a>
 										<a href="<?= site_url("gis/clear") ?>" class="btn btn-block btn-social bg-orange btn-sm">
-											<i class="fa fa-refresh"></i> Bersihkan
+											<i class="fe fe-refresh"></i> Bersihkan
 										</a>
 									</div>
 								</div>
@@ -398,7 +398,7 @@
 		<div class='modal-content'>
 			<div class='modal-header'>
 				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i></h4>
+				<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i></h4>
 			</div>
 			<div class="fetched-data"></div>
 		</div>

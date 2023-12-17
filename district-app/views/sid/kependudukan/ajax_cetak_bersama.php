@@ -42,6 +42,6 @@
 	</div>
 </div>
 <div class="modal-footer">
-	<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-	<a href="#" class="btn btn-social btn-box btn-info btn-sm" title="Simpan" target="_blank" onclick="cetak()" id="cetak_data" ><i class="fa fa-check"></i> <?= ucwords($aksi) ?></a>
+	<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+	<a href="#" class="btn btn-social btn-box btn-info btn-sm" title="Simpan" target="_blank" onclick="cetak()" id="cetak_data" ><i class="fe fe-check"></i> <?= ucwords($aksi) ?></a>
 </div>

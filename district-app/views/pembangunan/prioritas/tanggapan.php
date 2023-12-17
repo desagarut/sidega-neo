@@ -125,8 +125,8 @@
           },
           {
             'data': function(data) {
-              return `<a href="<?= site_url("pembangunan_polling/form_tanggapan/"); ?>${data.id}" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tanggapan Anda" class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i> </a>
-								<a href="#" data-href="<?= site_url("pembangunan_polling/delete_tanggapan/{$polling->id}/"); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash"></i></a>
+              return `<a href="<?= site_url("pembangunan_polling/form_tanggapan/"); ?>${data.id}" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tanggapan Anda" class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i> </a>
+								<a href="#" data-href="<?= site_url("pembangunan_polling/delete_tanggapan/{$polling->id}/"); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							   `
             },
             'class': 'text-center'

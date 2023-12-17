@@ -1,18 +1,21 @@
 <script src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
 <script src="<?= base_url() ?>assets/js/localization/messages_id.js"></script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Detail Laporan Kejadian</h1>
 		<ol class="breadcrumb">
-			<tr><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></tr>
+			<tr><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></tr>
 			<tr><a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>"> Daftar Laporan Kejadian</a></tr>
 			<li class="active">Detail </tr>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-header with-border">
-				<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Kejadian"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Kejadian</a>
+				<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Kejadian"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Kejadian</a>
 			</div>
 			<div class="box-body">
 				<div class="row">

@@ -7,7 +7,7 @@
       <?= $desa["nama_desa"];?>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
       <li class="active">Laporan</li>
     </ol>
   </section>
@@ -27,9 +27,9 @@
             <div class="box-header box-info with-border">
               <h3 class="box-title">Laporan Pengelolaan SPPT PBB</h3>
               <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-wrench"></i></button>
+                  <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"> <i class="fe fe-wrench"></i></button>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -38,7 +38,7 @@
                     <li><a href="#">Separated link</a></li>
                   </ul>
                 </div>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fe fe-times"></i></button>
               </div>
             </div>
             
@@ -89,7 +89,7 @@
             <div class="box-footer">
               <div class="row">
                 <div class="col-sm-3 col-xs-6">
-                  <div class="description-block border-right"> <span class="description-percentage text-green"><i class="fa fa-users"></i>
+                  <div class="description-block border-right"> <span class="description-percentage text-green"><i class="fe fe-users"></i>
                     <?=$d->jumlah_nop?>
                     WP</span>
                     <h5 class="description-header">
@@ -100,7 +100,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-3 col-xs-6" id="myTable">
-                  <div class="description-block border-right"> <span class="description-percentage text-yellow"><i class="fa fa-users"></i>
+                  <div class="description-block border-right"> <span class="description-percentage text-yellow"><i class="fe fe-users"></i>
                     <?=$d->lunas?>
                     WP</span>
                     <h5 class="description-header">
@@ -111,7 +111,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-3 col-xs-6">
-                  <div class="description-block border-right"> <span class="description-percentage text-green"><i class="fa fa-users"></i>
+                  <div class="description-block border-right"> <span class="description-percentage text-green"><i class="fe fe-users"></i>
                     <?=$d->terhutang?>
                     WP</span>
                     <h5 class="description-header">
@@ -122,7 +122,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-3 col-xs-6">
-                  <div class="description-block"> <span class="description-percentage text-red"><i class="fa fa-caret-down"></i>
+                  <div class="description-block"> <span class="description-percentage text-red"><i class="fe fe-caret-down"></i>
                     <?=$d->presentase?> %
                     </span>
                     <h5 class="description-header">
@@ -133,7 +133,7 @@
                 </div>
               </div>
               <div class="col-sm-3 col-xs-6">
-                  <div class="description-block"> <span class="description-percentage text-red"><i class="fa fa-caret-down"></i>
+                  <div class="description-block"> <span class="description-percentage text-red"><i class="fe fe-caret-down"></i>
                     <?=$d->presentase?> %
                     </span>
                     <h5 class="description-header">

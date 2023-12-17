@@ -1,4 +1,4 @@
-<div class="box box-info">
+<div class="card card-shadow">
 	<div class="box-header with-border">
 		<table id="judul-laporan" width="100%" style="border: solid 0px black; text-align: center;">
 			<tr>

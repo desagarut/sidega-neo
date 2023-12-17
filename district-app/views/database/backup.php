@@ -13,13 +13,13 @@
 																			<tr>
 																				<td class="col-sm-10"><b>Backup Seluruh Database SID (.sql)</b></td>
 																				<td class="col-sm-2">
-																					<a href="<?= site_url("database/exec_backup")?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fa fa-download"></i> Unduh Database</a>
+																					<a href="<?= site_url("database/exec_backup")?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fe fe-download"></i> Unduh Database</a>
 																				</td>
 																			</tr>
 																			<tr>
 																				<td class="col-sm-10"><b>Backup Seluruh Folder Desa SID (.zip)</b> </td>
 																				<td class="col-sm-2">
-																					<a href="<?= site_url("database/desa_backup"); ?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fa fa-download"></i> Unduh Folder Desa</a>
+																					<a href="<?= site_url("database/desa_backup"); ?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fe fe-download"></i> Unduh Folder Desa</a>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -64,12 +64,12 @@
 																								<input type="text" class="form-control" id="file_path" name="userfile">
 																								<input type="file" class="hidden" id="file" name="userfile" data-submit="restore" accept="application/sql">
 																								<span class="input-group-btn">
-																									<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+																									<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 																								</span>
 																							</div>
 																						</div>
 																						<div class="col-sm-12 col-md-3 col-lg-2">
-																							<button type="submit" id="restore" class="btn btn-block btn-success btn-sm" disabled="disabled"><i class="fa fa-spin fa-refresh"></i>  Restore</button>
+																							<button type="submit" id="restore" class="btn btn-block btn-success btn-sm" disabled="disabled"><i class="fe fe-spin fa-refresh"></i>  Restore</button>
 																						</div>
 																					</div>
 																				</td>

@@ -31,8 +31,8 @@
 					<?php $this->load->view("$folder_themes/partials/bottom_content_right.php"); ?>
 				</div>
 			</div>
-		</section>
 	</div>
+</main>
 </div>
 <footer id="footer">
 	<?php $this->load->view("$folder_themes/partials/footer_top.php"); ?>

@@ -18,7 +18,7 @@
 	<div class="col-sm-4">
 		<div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		        <i class="fa fa-calendar"></i>
+		        <i class="fe fe-calendar"></i>
 		    </div>
 		    <input type="text" class="form-control input-sm pull-right required" id="tanggal_tiba" name="tanggal_tiba" value="<?= $tanggal_datang?>">
 	    </div>

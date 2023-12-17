@@ -45,41 +45,41 @@
 
 
          <div class='card-body'>
-           <!--<a class="btn btn-app" href="<?=site_url('web')?>"><i class="fa fa-edit"></i> Artikel Baru</a>	-->
+           <!--<a class="btn btn-app" href="<?=site_url('web')?>"><i class="fe fe-edit"></i> Artikel Baru</a>	-->
             
             <div class="col-lg-4 col-xs-3">
                 <div class="small-card bg-blue">
-                    <a href="<?=site_url('web')?>" class="small-card-footer"><strong> Posting Berita</strong><i class="fa fa-pencil"></i></a>
+                    <a href="<?=site_url('web')?>" class="small-card-footer"><strong> Posting Berita</strong><i class="fe fe-pencil"></i></a>
                 </div>
             </div>
             
             <div class="col-lg-4 col-xs-3">
                 <div class="small-card bg-yellow">
-                    <a href="<?=site_url('surat')?>" class="small-card-footer"><strong>Buat Surat  </strong><i class="fa fa-book"></i></a>
+                    <a href="<?=site_url('surat')?>" class="small-card-footer"><strong>Buat Surat  </strong><i class="fe fe-book"></i></a>
                 </div>
             </div>
         
             <div class="col-lg-4 col-xs-3">
                 <div class="small-card bg-green">
-                    <a href="<?=site_url('surat_masuk')?>" class="small-card-footer"><strong>Surat Masuk  </strong><i class="fa fa-envelope"></i></a>
+                    <a href="<?=site_url('surat_masuk')?>" class="small-card-footer"><strong>Surat Masuk  </strong><i class="fe fe-envelope"></i></a>
                 </div>
             </div>
             
             <div class="col-lg-4 col-xs-3">
                 <div class="small-card bg-purple">
-                    <a href="<?=site_url('surat_keluar')?>" class="small-card-footer"><strong>Surat Keluar  </strong><i class="fa fa-envelope"></i></a>
+                    <a href="<?=site_url('surat_keluar')?>" class="small-card-footer"><strong>Surat Keluar  </strong><i class="fe fe-envelope"></i></a>
                 </div>
             </div>
             
             <div class="col-lg-4 col-xs-3">
                 <div class="small-card bg-red">
-                    <a href="<?=site_url('mandiri')?>" class="small-card-footer"><strong>Buat PIN  </strong><i class="fa fa-key"></i></a>
+                    <a href="<?=site_url('mandiri')?>" class="small-card-footer"><strong>Buat PIN  </strong><i class="fe fe-key"></i></a>
                 </div>
             </div>
             
             <div class="col-lg-4 col-xs-3">
                 <div class="small-card bg-aqua">
-                    <a href="<?=site_url('status_desa')?>" class="small-card-footer"><strong>Status IDM  </strong><i class="fa fa-lightbulb-o"></i></a>
+                    <a href="<?=site_url('status_desa')?>" class="small-card-footer"><strong>Status IDM  </strong><i class="fe fe-lightbulb-o"></i></a>
                 </div>
             </div>
         </div>

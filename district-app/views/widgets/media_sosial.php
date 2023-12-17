@@ -2,7 +2,7 @@
 
 <div class="box box-primary box-solid">
   <div class="box-header">
-    <h3 class="box-title"><i class="fa fa-globe"></i> Info Media Sosial</h3>
+    <h3 class="box-title"><i class="fe fe-globe"></i> Info Media Sosial</h3>
   </div>
   <div class="box-body">
 		<?php foreach ($sosmed As $data): ?>

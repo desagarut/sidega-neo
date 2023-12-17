@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Daftar Kontak</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Pengaturan Daftar Kontak</li>
 		</ol>
 	</section>
@@ -10,26 +13,26 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">SMS</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="<?= site_url('sms/kontak')?>"><i class="fa fa-phone"></i> Daftar Kontak</a></li>
-               	<li class="active"><a href="<?= site_url('sms/group')?>"><i class="fa fa-list"></i> Group Kontak</a></li>
+								<li><a href="<?= site_url('sms/kontak')?>"><i class="fe fe-phone"></i> Daftar Kontak</a></li>
+               	<li class="active"><a href="<?= site_url('sms/group')?>"><i class="fe fe-list"></i> Group Kontak</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
-							<a href="<?=site_url("sms/form_anggota/$grup[nama_grup]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Group"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i> Tambah Anggota</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("sms/delete_all_anggota/$grup[id_grup]")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="<?=site_url("sms/form_anggota/$grup[nama_grup]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Group"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i> Tambah Anggota</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("sms/delete_all_anggota/$grup[id_grup]")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -42,7 +45,7 @@
 														<div class="input-group input-group-sm pull-right">
 															<input name="cari_anggota" id="cari" class="form-control" placeholder="cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform').attr('action', '<?= site_url('sms/search_anggota/$grup[nama_grup]')?>');$('#'+'mainform').submit();endif">
 															<div class="input-group-btn">
-																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("sms/search_anggota/$grup[nama_grup]")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("sms/search_anggota/$grup[nama_grup]")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 															</div>
 														</div>
 													</div>
@@ -69,7 +72,7 @@
 																		<td><input type="checkbox" name="id_cb[]" value="<?= $data['id_grup_kontak']?>" /></td>
 																		<td><?=$data['no']?></td>
 																		<td nowrap>
-																			<a href="#" data-href="<?=site_url("sms/anggota_delete/$data[id_grup_kontak]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?=site_url("sms/anggota_delete/$data[id_grup_kontak]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		</td>
                                     <td><a href="<?= site_url("penduduk/detail/$p/$o/$data[id]")?>"><?=$data['nama']?></a></td>
 																		<td><?=$data['sex']?></td>

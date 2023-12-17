@@ -1,11 +1,11 @@
 
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="box box-info">
+<div class="card card-shadow">
 	<div class="box-header">
 		<h5 class="box-title">Perencanaan</h5>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 	</div>
 	<div class="box-body no-padding">
@@ -25,7 +25,7 @@
 	<div class="box-header">
 		<h5 class="box-title">Penentuan Prioritas</h5>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 	</div>
 	<div class="box-body no-padding">
@@ -41,7 +41,7 @@
 	<div class="box-header">
 		<h5 class="box-title">Penetapan</h5>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 		</div>
 	<div class="box-body no-padding">
@@ -57,7 +57,7 @@
 	<div class="box-header">
 		<h5 class="box-title">Pelaksanaan</h5>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 		</div>
 	<div class="box-body no-padding">

@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Panduan Data SPPT PBB <?=ucwords($this->setting->sebutan_desa)?> <?= $desa["nama_desa"];?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('data_sppt/clear')?>"> Daftar SPPT PBB</a></li>
 			<li class="active">Panduan SPPT PBB</li>
 		</ol>
@@ -14,7 +17,7 @@
           <?php $this->load->view('data_sppt/menu.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-body">
 							<h4>Keterangan</h4>
 							<p><strong>Modul Data SPPT PBB</strong> adalah modul untuk pengelolaan data tentang kepemilikan lahan, termasuk riwayat kepemilikan.</p>

@@ -37,7 +37,8 @@
 		?>
 	</div>
 </div>
-<script src="<?= base_url() ?>assets/tiny/js/Chart.js"></script>
+<script src="<?= base_url() ?>assets/
+js/Chart.js"></script>
 <script>
 	var doughnutData = [{
 			value: "<?= $d->pajak_terhutang ?>",

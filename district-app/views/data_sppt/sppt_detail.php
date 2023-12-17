@@ -59,7 +59,7 @@ th.horizontal {
   <section class="content-header">
     <h1>Detail DATA SPPT PBB</h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
       <li><a href="<?= site_url('data_sppt')?>"> Daftar SPPT</a></li>
       <li class="active">Detail Data SPPT</li>
     </ol>
@@ -70,13 +70,13 @@ th.horizontal {
         <?php $this->load->view('data_sppt/menu.php')?>
       </div>
       <div class="col-md-8 col-lg-9">
-        <div class="box box-info">
+        <div class="card card-shadow">
           <div class="box-header with-border"> 
             <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
-							<i class="fa fa-plus"></i>Tambah Mutasi SPPT
+							<i class="fe fe-plus"></i>Tambah Mutasi SPPT
 						</a>--> 
-            <a href="<?=site_url('data_sppt')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Daftar SPPT"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar SPPT</a> 
-            <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fa fa-print"></i>Cetak SPPT</a> </div>
+            <a href="<?=site_url('data_sppt')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Daftar SPPT"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar SPPT</a> 
+            <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fe fe-printer"></i>Cetak SPPT</a> </div>
           <div class="box-body">
             <div class="row">
               <div class="col-sm-12">

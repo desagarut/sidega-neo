@@ -1,10 +1,13 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1><?= $judul ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active"><?= $judul ?></li>
 		</ol>
 	</section>
@@ -77,7 +80,7 @@
 											<div class="col-sm-12 col-md-4">
 												<div class="input-group input-group-sm date">
 													<div class="input-group-addon">
-														<i class="fa fa-calendar"></i>
+														<i class="fe fe-calendar"></i>
 													</div>
 													<input class="form-control input-sm pull-right tgl_1" id="<?= $setting->key ?>" name="<?= $setting->key ?>" type="text" value="<?= $setting->value ?>">
 												</div>
@@ -93,9 +96,9 @@
 							<?php endforeach; ?>
 						</div>
 						<div class='box-footer'>
-							<div class='col-xs-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+							<div class='col-md-12'>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

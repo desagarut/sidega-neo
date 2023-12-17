@@ -112,7 +112,7 @@
                         <li class="nav-item"> <a> <i class="feather icon-user" title="Development"></i><span class="badge">Development</span> </a></li>
                 <?php endif; ?>
                 <?php if ($this->CI->cek_hak_akses('b', 'permohonan_surat_admin')) : ?>
-                    <li class="nav-item"> <a href="<?= site_url('permohonan_surat_admin/clear'); ?>"> <span><i class="fa fa-print" title="Permohonan Surat"></i>&nbsp;</span> <span class="badge" id="b_permohonan_surat" ></span> </a> </li>
+                    <li class="nav-item"> <a href="<?= site_url('permohonan_surat_admin/clear'); ?>"> <span><i class="fe fe-printer" title="Permohonan Surat"></i>&nbsp;</span> <span class="badge" id="b_permohonan_surat" ></span> </a> </li>
                 <?php endif; ?>
                 <?php if ($this->CI->cek_hak_akses('b', 'komentar')) : ?>
                         <li class="nav-item"><a href="<?= site_url('komentar'); ?>"> <span><i class="feather icon-user" title="Komentar"></i>&nbsp;</span> <span class="badge" id="b_komentar"></span> </a> </li>

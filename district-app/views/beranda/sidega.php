@@ -2,13 +2,13 @@
 	<section class='content-header'>
 		<h1>Tentang SiDeGa</h1>
 		<ol class='breadcrumb'>
-			<li><a href='<?= site_url()?>'><i class='fa fa-home'></i> Home</a></li>
+			<li><a href='<?= site_url()?>'><i class='fe fe-home'></i> Home</a></li>
 			<li class='active'>SiDeGa</li>
 		</ol>
 	</section>
 	<section class='content'>
 		<div class='row'>
-			<div class='col-xs-12'>
+			<div class='col-md-12'>
 				<div class='card card-danger'>
 					<div class='card-body'>
 						<h4>Apa itu SiDeGa</h4>

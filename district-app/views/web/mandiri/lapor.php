@@ -9,7 +9,7 @@
 		<div class="alert <?= $label?>"><?= $flash_message?></div>
 	<?php endif; ?>
 
-	<p class='text-danger'><i class='fa fa-comments'></i> Silahkan laporkan perubahan data kependudukan anda.</p>
+	<p class='text-danger'><i class='fe fe-comments'></i> Silahkan laporkan perubahan data kependudukan anda.</p>
 
 	<form id="validasi" action="<?= site_url('lapor/insert') ?>" method="POST" onSubmit="return validasi(this);">
 	<div class='form-group'>

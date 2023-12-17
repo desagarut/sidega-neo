@@ -7,19 +7,22 @@
 		position: absolute;
 	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Master Kader Pemberdayaan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('kelompok') ?>"> Daftar Kader Pemberdayaan</a></li>
 			<li class="active"><?php $main ? 'Ubah' : 'Tambah'; ?> Kader Pemberdayaan</li>
 		</ol>
 	</section>
 	<section class="content">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-header with-border">
-				<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Daftar Kader Pemberdayaan</a>
+				<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar Kader Pemberdayaan</a>
 			</div>
 			<form id="validasi" action="<?= $form_action; ?>" method="POST" class="form-horizontal">
 				<div class="box-body">
@@ -67,8 +70,8 @@
 					</div>
 				</div>
 				<div class="box-footer">
-					<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-					<button type="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+					<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+					<button type="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 				</div>
 			</form>
 		</div>

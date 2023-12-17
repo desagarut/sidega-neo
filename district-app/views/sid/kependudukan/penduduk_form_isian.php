@@ -18,7 +18,7 @@
 				<input type="file" class="hidden" id="file" name="foto">
 				<input type="hidden" name="old_foto" value="<?= $penduduk['foto']?>">
 				<span class="input-group-btn">
-					<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+					<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 				</span>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 <div class="col-md-9">
 	<div class='box box-primary'>
 		<div class="box-header with-border">
-			<a href="<?=site_url('penduduk/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Penduduk"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Penduduk</a>
+			<a href="<?=site_url('penduduk/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Penduduk"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Penduduk</a>
 		</div>
 		<div class='box-body'>
       <?php $this->load->view('sid/kependudukan/penduduk_form_isian_bersama'); ?>
@@ -36,9 +36,9 @@
     <?php if($penduduk['status_dasar_id'] == 1 || !isset($penduduk['status_dasar_id'])): ?>
       <div class='box-footer'>
 
-        <div class='col-xs-12'>
-          <button type='reset' class='btn btn-social btn-box btn-danger btn-sm ajax' ><i class='fa fa-times'></i> Batal</button>
-          <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right ajax'><i class='fa fa-check'></i> Simpan</button>
+        <div class='col-md-12'>
+          <button type='reset' class='btn btn-social btn-box btn-danger btn-sm ajax' ><i class='fe fe-times'></i> Batal</button>
+          <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right ajax'><i class='fe fe-check'></i> Simpan</button>
         </div>
       </div>
     <?php endif; ?>
@@ -47,7 +47,7 @@
 				<div class='modal-content'>
 					<div class='modal-header'>
 						<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-						<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> Cari Lokasi Tempat Tinggal</h4>
+						<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Cari Lokasi Tempat Tinggal</h4>
 					</div>
 					<div class="fetched-data"></div>
 				</div>

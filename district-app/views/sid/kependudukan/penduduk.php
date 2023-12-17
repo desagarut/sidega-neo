@@ -52,19 +52,19 @@
 						<div class="row mb-1">
 							<div class="col-md-12">
 								<?php if ($this->CI->cek_hak_akses('h')) : ?>
-									<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-success btn-sm mb-2 text-light" title="Tambah Data"><i class="fa fa-plus"></i> Penduduk Domisili</a>
-									<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')" class="btn btn-danger btn-sm mb-2 text-light hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+									<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-success btn-sm mb-2 text-light" title="Tambah Data"><i class="fe fe-plus"></i> Penduduk Domisili</a>
+									<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')" class="btn btn-danger btn-sm mb-2 text-light hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 								<?php endif; ?>
 
 								<button class="btn btn-sm btn-info mb-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya <span class="text-muted sr-only">Action</span></button>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fa fa-print"></i> Cetak</a>
-									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fa fa-download"></i> Unduh</a>
-									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_adv_search"); ?>" title="Pencarian Spesifik" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik"><i class="fa fa-search"></i> Pencarian Spesifik</a>
-									<a class="dropdown-item" href="<?= site_url("penduduk/search_kumpulan_nik"); ?>" title="Pilihan Kumpulan NIK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan NIK"><i class="fa fa-users"></i> Pilihan Kumpulan NIK</a>
-									<a class="dropdown-item" href="<?= site_url("penduduk_log/clear"); ?>" title="Log Data Penduduk"><i class="fa fa-book"></i> Log Penduduk</a>
+									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer"></i> Cetak</a>
+									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
+									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_adv_search"); ?>" title="Pencarian Spesifik" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik"><i class="fe fe-search"></i> Pencarian Spesifik</a>
+									<a class="dropdown-item" href="<?= site_url("penduduk/search_kumpulan_nik"); ?>" title="Pilihan Kumpulan NIK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan NIK"><i class="fe fe-users"></i> Pilihan Kumpulan NIK</a>
+									<a class="dropdown-item" href="<?= site_url("penduduk_log/clear"); ?>" title="Log Data Penduduk"><i class="fe fe-book"></i> Log Penduduk</a>
 								</div>
-								<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-primary btn-sm mb-2 text-muted"><i class="fa fa-refresh"></i>Bersihkan</a>
+								<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-primary btn-sm mb-2 text-muted"><i class="fe fe-refresh"></i>Bersihkan</a>
 							</div>
 						</div>
 						<div class="row mb-1">
@@ -164,7 +164,7 @@
 																			<a class="dropdown-item" href="<?= site_url("penduduk/form/$p/$o/$data[id]"); ?>">Ubah Biodata Penduduk</a>
 																		<?php endif; ?>
 																		<a class="dropdown-item" href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$data[id]/0"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Lokasi <?= $data['nama'] ?> " data-title="Lokasi <?= $data['nama'] ?> - <?= strtoupper($data['dusun']); ?>, RW <?= $data['rw']; ?> / RT <?= $data['rt']; ?>">Lokasi Tempat Tinggal</a>
-																		<!--<a href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$data[id]/0"); ?>" title="Lokasi <?= $data['nama'] ?> - <?= strtoupper($data['dusun']); ?>, RW <?= $data['rw']; ?> / RT <?= $data['rt']; ?>" class="btn btn-social btn-box btn-block btn-sm"><i class='fa fa-map-marker'></i> Lokasi Tempat Tinggal</a>-->
+																		<!--<a href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$data[id]/0"); ?>" title="Lokasi <?= $data['nama'] ?> - <?= strtoupper($data['dusun']); ?>, RW <?= $data['rw']; ?> / RT <?= $data['rt']; ?>" class="btn btn-social btn-box btn-block btn-sm"><i class='fe fe-map-marker'></i> Lokasi Tempat Tinggal</a>-->
 																		<?php if ($this->CI->cek_hak_akses('h')) : ?>
 																			<a class="dropdown-item" href="<?= site_url("penduduk/edit_status_dasar/$p/$o/$data[id]"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Status Dasar">Ubah Status Dasar</a>
 																		<?php endif; ?>
@@ -205,25 +205,30 @@
 		<div class='modal-content'>
 			<div class='modal-header'>
 				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i> Konfirmasi</h4>
+				<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Konfirmasi</h4>
 			</div>
 			<div class='modal-body btn-info'>
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini?
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-status"><i class='fa fa-check'></i> Simpan</button>
+					<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
 				</a>
 			</div>
 		</div>
 	</div>
 </div>
-<script src="<?= base_url() ?>assets/tiny/js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/messages_id.js"></script>
-<script src='<?= base_url() ?>assets/tiny/js/jquery.dataTables.min.js'></script>
-<script src='<?= base_url() ?>assets/tiny/js/dataTables.bootstrap4.min.js'></script>
+<script src="<?= base_url() ?>assets/
+js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/
+js/validasi.js"></script>
+<script src="<?= base_url() ?>assets/
+js/messages_id.js"></script>
+<script src='<?= base_url() ?>assets/
+js/jquery.dataTables.min.js'></script>
+<script src='<?= base_url() ?>assets/
+js/dataTables.bootstrap4.min.js'></script>
 
 <script>
 	$('#dataTable-1').DataTable({

@@ -23,8 +23,8 @@
 																			<li>Pastikan format excel ber-ekstensi .xls format Excel 2003</li>
 																			<li>Data yang dibutuhkan untuk Impor dengan memenuhi aturan data berikut
 																				<div class="timeline-footer row">
-																					<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ATURANDATA.xls"><i class="fa fa-download"></i>Unduh Aturan data</a>
-																					<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ContohFormat.xls" ><i class="fa fa-download"></i>Unduh Contoh Urutan Format</a>
+																					<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ATURANDATA.xls"><i class="fe fe-download"></i>Unduh Aturan data</a>
+																					<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ContohFormat.xls" ><i class="fe fe-download"></i>Unduh Contoh Urutan Format</a>
 																				</div>
 																			</li>
 																		</ol>
@@ -42,12 +42,12 @@
 																								<input type="text" class="form-control" id="file_path2" name="userfile">
 																								<input type="file" class="hidden" id="file2" name="userfile">
 																								<span class="input-group-btn">
-																									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+																									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 																								</span>
 																							</div>
 																						</div>
 																						<div class="col-sm-12 col-md-2 col-lg-2">
-																							<button type="submit" class="btn btn-block btn-success btn-sm"><i class="fa fa-spin fa-refresh"></i> Impor</button>
+																							<button type="submit" class="btn btn-block btn-success btn-sm"><i class="fe fe-spin fa-refresh"></i> Impor</button>
 																						</div>
 																					</div>
 																				</td>
@@ -63,12 +63,12 @@
 																								<input type="text" class="form-control" id="file_path" name="userfile">
 																								<input type="file" class="hidden" id="file" name="userfile">
 																								<span class="input-group-btn">
-																									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+																									<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 																								</span>
 																							</div>
 																						</div>
 																						<div class="col-sm-12 col-md-2 col-lg-2">
-																							<button type="submit" class="btn btn-block btn-success btn-sm"><i class="fa fa-spin fa-refresh"></i> Impor</button>
+																							<button type="submit" class="btn btn-block btn-success btn-sm"><i class="fe fe-spin fa-refresh"></i> Impor</button>
 																						</div>
 																					</div>
 																				</td>

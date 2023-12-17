@@ -1,23 +1,22 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Arsip Layanan Surat</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?=site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('hom_sid')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Arsip Layanan Surat</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url('keluar/perorangan_clear')?>" class="btn btn-social btn-flat bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-archive"></i> Rekam Surat Perorangan</a>
-						<a href="<?= site_url('keluar/graph')?>" class="btn btn-social btn-flat bg-orange btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-pie-chart"></i> Pie Surat Keluar</a>
-						<a href="<?= site_url('keluar/dialog_cetak/cetak')?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fa fa-print"></i> Cetak</a>
-						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn btn-social btn-flat bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fa fa-download"></i> Unduh</a>
-						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a>
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url('keluar/perorangan_clear')?>" class="btn btn-social btn-flat bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-archive"></i> Rekam Surat Perorangan</a>
+						<a href="<?= site_url('keluar/graph')?>" class="btn btn-social btn-flat bg-orange btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-pie-chart"></i> Pie Surat Keluar</a>
+						<a href="<?= site_url('keluar/dialog_cetak/cetak')?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fe fe-printer"></i> Cetak</a>
+						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn btn-social btn-flat bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fe fe-download"></i> Unduh</a>
+						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -56,7 +55,7 @@
 													<div class="input-group input-group-sm pull-right">
 														<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?=site_url("{$this->controller}/filter/cari")?>');$('#'+'mainform').submit();}">
 														<div class="input-group-btn">
-															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("{$this->controller}/filter/cari")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("{$this->controller}/filter/cari")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 														</div>
 													</div>
 												</div>
@@ -72,28 +71,28 @@
 																<th >Aksi</th>
 																<th nowrap>Kode Surat</th>
 																<?php if ($o == 2): ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/1")?>">No Urut <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/1")?>">No Urut <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 1): ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/2")?>">No Urut <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/2")?>">No Urut <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/1")?>">No Urut <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/1")?>">No Urut <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>Jenis Surat</th>
 																<?php if ($o == 4): ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/3")?>">Nama Penduduk <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/3")?>">Nama Penduduk <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 3): ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/4")?>">Nama Penduduk <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/4")?>">Nama Penduduk <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/3")?>">Nama Penduduk <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/3")?>">Nama Penduduk <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th nowrap>Keterangan</th>
 																<th nowrap>Ditandatangani Oleh</th>
 																<?php if ($o == 6): ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/5")?>">Tanggal <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/5")?>">Tanggal <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o == 5): ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/6")?>">Tanggal <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/6")?>">Tanggal <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/5")?>">Tanggal <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("keluar/index/{$p}/5")?>">Tanggal <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>User</th>
 															</tr>
@@ -113,22 +112,22 @@
 																	<td class="padat"><?= $data['no']?></td>
 																	<td class="aksi">
 																		<?php if ($this->CI->cek_hak_akses('u')): ?>
-																			<a href="<?= site_url("keluar/edit_keterangan/{$data['id']}")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-flat btn-sm"><i class="fa fa-edit"></i></a>
+																			<a href="<?= site_url("keluar/edit_keterangan/{$data['id']}")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-flat btn-sm"><i class="fe fe-edit"></i></a>
 																		<?php endif; ?>
 																		<?php if ($this->CI->cek_hak_akses('h')): ?>
-																			<a href="#" data-href="<?= site_url("keluar/delete/{$p}/{$o}/{$data['id']}")?>" class="btn bg-maroon btn-flat btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("keluar/delete/{$p}/{$o}/{$data['id']}")?>" class="btn bg-maroon btn-flat btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		<?php endif; ?>
 																		<?php if (is_file($data['file_rtf'])): ?>
-																			<a href="<?= site_url("{$this->controller}/unduh/rtf/{$data['id']}"); ?>" class="btn btn-flat bg-purple btn-sm" title="Unduh Surat RTF" target="_blank"><i class="fa fa-file-word-o"></i></a>
+																			<a href="<?= site_url("{$this->controller}/unduh/rtf/{$data['id']}"); ?>" class="btn btn-flat bg-purple btn-sm" title="Unduh Surat RTF" target="_blank"><i class="fe fe-file-word-o"></i></a>
 																		<?php	endif; ?>
 																		<?php if (is_file($data['file_pdf'])): ?>
-																			<a href="<?= site_url("{$this->controller}/unduh/pdf/{$data['id']}"); ?>" class="btn btn-flat bg-fuchsia btn-sm" title="Cetak Surat PDF" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+																			<a href="<?= site_url("{$this->controller}/unduh/pdf/{$data['id']}"); ?>" class="btn btn-flat bg-fuchsia btn-sm" title="Cetak Surat PDF" target="_blank"><i class="fe fe-file-pdf-o"></i></a>
 																		<?php	endif; ?>
 																		<?php if (is_file($data['file_lampiran'])): ?>
-																			<a href="<?= site_url("{$this->controller}/unduh/lampiran/{$data['id']}"); ?>" target="_blank" class="btn btn-social btn-flat bg-olive btn-sm" title="Unduh Lampiran"><i class="fa fa-paperclip"></i> Lampiran</a>
+																			<a href="<?= site_url("{$this->controller}/unduh/lampiran/{$data['id']}"); ?>" target="_blank" class="btn btn-social btn-flat bg-olive btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip"></i> Lampiran</a>
 																		<?php	endif; ?>
 																		<?php if (is_file($data['file_qr'])): ?>
-																			<a href="#myModal" data-fileqr="<?= base_url($data['file_qr'])?>" data-urlqr="<?= site_url("c1/{$data['id']}"); ?>" title="Lihat QR Code" class="viewQR btn btn-flat bg-aqua btn-sm"><i class="fa fa-qrcode"></i></a>
+																			<a href="#myModal" data-fileqr="<?= base_url($data['file_qr'])?>" data-urlqr="<?= site_url("c1/{$data['id']}"); ?>" title="Lihat QR Code" class="viewQR btn btn-flat bg-aqua btn-sm"><i class="fe fe-qrcode"></i></a>
 																		<?php	endif; ?>
 																	</td>
 																	<td><?= $data['kode_surat']?></td>
@@ -217,7 +216,7 @@
 					<div class="form-group">
 						<center>
 							<img id="image_qr" src="" class="img-thumbnail" >
-							<a id="url_qr" href="" class="btn btn-social btn-flat bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" target="_blank" rel="noopener noreferrer"><i class="fa fa-eye"></i> Lihat</a>
+							<a id="url_qr" href="" class="btn btn-social btn-flat bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" target="_blank" rel="noopener noreferrer"><i class="fe fe-eye"></i> Lihat</a>
 						</center>
 					</div>
 				</div>

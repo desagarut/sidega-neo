@@ -8,11 +8,14 @@
 		default: return null;
 	endswitch;
 ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Laporan Hasil Analisis</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('analisis_master') ?>"> Master Analisis</a></li>
 			<li><a href="<?= site_url() ?>analisis_laporan/leave"><?= $analisis_master['nama']?></a></li>
 			<li class="active">Laporan Hasil Klasifikasi</li>
@@ -26,14 +29,14 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fa fa-print "></i> Cetak</a>
+							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fe fe-printer "></i> Cetak</a>
 
-							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fa fa-download "></i> Unduh</a>
+							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fe fe-download "></i> Unduh</a>
 
-							<a href="<?=site_url("analisis_laporan/clear")."/".$analisis_master['id']?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Laporan Hasil Klasifikasi">
-								<i class="fa fa-arrow-circle-left "></i>Kembali Ke Laporan Hasil Klasifikasi</a>
+							<a href="<?=site_url("analisis_laporan/clear")."/".$analisis_master['id']?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali Ke Laporan Hasil Klasifikasi">
+								<i class="fe fe-arrow-circle-left "></i>Kembali Ke Laporan Hasil Klasifikasi</a>
 						</div>
 						<div class="box-header with-border">
 							<div class="table-responsive">

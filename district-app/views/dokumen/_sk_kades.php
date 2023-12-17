@@ -15,7 +15,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_1" name="attr[tgl_kep_kades]" class="form-control input-sm required" type="text" value="<?=$dokumen['attr']['tgl_kep_kades']?>"></input>
     </div>
@@ -32,7 +32,7 @@
 	<div class="col-sm-6">
     <div class="input-group input-group-sm date">
 			<div class="input-group-addon">
-		  	<i class="fa fa-calendar"></i>
+		  	<i class="fe fe-calendar"></i>
 			</div>
 		  <input id="tgl_2" name="attr[tgl_lapor]" class="form-control input-sm" type="text" value="<?=$dokumen['attr']['tgl_lapor']?>"></input>
     </div>

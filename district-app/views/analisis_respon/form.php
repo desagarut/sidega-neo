@@ -52,7 +52,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<li><a href="<?= site_url('analisis_master')?>"> Master Analisis</a></li>
 
@@ -90,7 +90,7 @@
 
 							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 
-								<i class="fa fa-search-minus"></i>Normal
+								<i class="fe fe-search-minus"></i>Normal
 
             	</a>
 
@@ -98,13 +98,13 @@
 
 							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 
-								<i class="fa fa-search-plus"></i>Full Screen
+								<i class="fe fe-search-plus"></i>Full Screen
 
             	</a>
 
 						<?php endif; ?>
 
-							<a href="<?= site_url()?>analisis_respon" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
+							<a href="<?= site_url()?>analisis_respon" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
 
 						</div>
 
@@ -200,7 +200,7 @@
 
 																			<td nowrap>
 
-																				<a href="<?= site_url("analisis_respon/kuisioner_child/$p/$o/$id/$idc")?>" class="btn bg-purple btn-box btn-sm"  title="Input Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="<?= $ang['nama']?> - [<?= $ang['nik']?>]"><i class='fa fa-check-square-o'></i></a>
+																				<a href="<?= site_url("analisis_respon/kuisioner_child/$p/$o/$id/$idc")?>" class="btn bg-purple btn-box btn-sm"  title="Input Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="<?= $ang['nama']?> - [<?= $ang['nik']?>]"><i class='fe fe-check-square-o'></i></a>
 
 																			</td>
 
@@ -412,7 +412,7 @@
 
 														<span class="input-group-btn">
 
-															<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+															<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 
 														</span>
 
@@ -446,11 +446,11 @@
 
 					<div class='box-footer'>
 
-						<div class='col-xs-12'>
+						<div class='col-md-12'>
 
-							<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
+							<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
 
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 
 							</div>
 

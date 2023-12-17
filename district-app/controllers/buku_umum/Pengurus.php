@@ -38,7 +38,7 @@ class Pengurus extends Admin_Controller {
 		$data['paging'] = $this->pamong_model->paging($p);
 		$data['main'] = $this->pamong_model->list_data($data['paging']->offset, $data['paging']->per_page);
 		$data['keyword'] = $this->pamong_model->autocomplete();
-		$data['main_content'] = 'home/pengurus';
+		$data['main_content'] = 'aparatur/pengurus';
 		$data['subtitle'] = "Buku Aparat Pemerintah Desa";
 		$data['selected_nav'] = 'aparat';
 		$this->set_minsidebar(1);
@@ -47,6 +47,23 @@ class Pengurus extends Admin_Controller {
 		$this->load->view('nav');
 		$this->load->view('ba/umum/main', $data);
 		$this->load->view('footer');
+	}
+
+	public function profile($id = 0)
+	{
+		$id_pend = $this->input->post('id_pend');
+
+		$data['pamong'] = $this->pamong_model->get_data($id);
+		$id_pend = $data['pamong']['id_pend'];
+		$data['atasan'] = $this->pamong_model->list_atasan($id);
+		$data['penduduk'] = $this->pamong_model->list_penduduk();
+		$data['pendidikan_kk'] = $this->referensi_model->list_data('tweb_penduduk_pendidikan_kk');
+		$data['agama'] = $this->referensi_model->list_data('tweb_penduduk_agama');
+		$data['individu'] = $this->penduduk_model->get_penduduk($id_pend);
+		$data['selected_nav'] = 'aparat';
+		$this->set_minsidebar(1);
+
+		$this->render('aparatur/pengurus_profile', $data);
 	}
 
 	public function form($id = 0)
@@ -74,7 +91,10 @@ class Pengurus extends Admin_Controller {
 		else
 			$data['individu'] = NULL;
 
-		$this->render('home/pengurus_form', $data);
+		$data['selected_nav'] = 'aparat';
+		$this->set_minsidebar(1);
+
+		$this->render('aparatur/pengurus_form', $data);
 	}
 
 	public function filter($filter)
@@ -157,7 +177,7 @@ class Pengurus extends Admin_Controller {
 		$data['desa'] = $this->config_model->get_data();
 		$data['main'] = $this->pamong_model->list_data();
 
-		$this->load->view('home/'.$aksi, $data);
+		$this->load->view('aparatur/' . $aksi, $data);
 	}
 
 	public function bagan($ada_bpd = '')
@@ -165,14 +185,14 @@ class Pengurus extends Admin_Controller {
 		$data['desa'] = $this->config_model->get_data();
 		$data['bagan'] = $this->pamong_model->list_bagan();
 		$data['ada_bpd'] = ! empty($ada_bpd);
-		$this->render('home/bagan', $data);
+		$this->render('aparatur/bagan', $data);
 	}
 
 	public function atur_bagan()
 	{
 		$data['atasan'] = $this->pamong_model->list_atasan();
 		$data['form_action'] = site_url("pengurus/update_bagan");
-		$this->load->view('home/ajax_atur_bagan', $data);
+		$this->load->view('aparatur/ajax_atur_bagan', $data);
 	}
 
 	public function update_bagan()
@@ -188,6 +208,6 @@ class Pengurus extends Admin_Controller {
 		$data['list_setting'] = 'list_setting_bagan';
 		$this->setting_model->load_options();
 
-		$this->load->view('home/ajax_atur_bagan_layout', $data);
+		$this->load->view('aparatur/ajax_atur_bagan_layout', $data);
 	}
 }

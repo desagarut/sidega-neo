@@ -105,7 +105,7 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
               <?php foreach ($dusun as $data) : ?>
                 <h3><?= $data['jumlah'] ?></h3>
               <?php endforeach; ?>
-              <h6 class="text-dark m-b-0">Wilayah Dusun<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
+              <h6 class="text-dark m-b-0">Wilayah Dusun<i class="fe fe-caret-down text-c-red m-l-10"></i></h6>
             </div>
             <div class="col-6">
               <div id="seo-chart1" class="d-flex align-items-end"></div>
@@ -130,7 +130,7 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
       </div>
       <div class="icon"> <i class="ion ion-person"></i> </div>
       <a href="<?= site_url('penduduk/clear') ?>" class="small-card-footer" title="Lihat Daftar Penduduk">Penduduk
-        <i class="fa fa-arrow-circle-right"></i></a>
+        <i class="fe fe-arrow-circle-right"></i></a>
     </div>
   </div>
   <div class="col-sm-3 col-xs-6">
@@ -146,7 +146,7 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
         </p>
       </div>
       <div class="icon"> <i class="ion ion-ios-people"></i> </div>
-      <a href="<?= site_url('keluarga/clear') ?>" class="small-card-footer" title="Lihat Daftar Keluarga">Kepala Keluarga<i class="fa fa-arrow-circle-right"></i>
+      <a href="<?= site_url('keluarga/clear') ?>" class="small-card-footer" title="Lihat Daftar Keluarga">Kepala Keluarga<i class="fe fe-arrow-circle-right"></i>
       </a>
     </div>
   </div>
@@ -161,18 +161,18 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
         <p>RTM</p>
       </div>
       <div class="icon"> <i class="ion ion-ios-home"></i> </div>
-      <a href="<?= site_url('rtm/clear') ?>" class="small-card-footer" title="Lihat Daftar Rumah Tangga">Rumah Tangga<i class="fa fa-arrow-circle-right"></i>
+      <a href="<?= site_url('rtm/clear') ?>" class="small-card-footer" title="Lihat Daftar Rumah Tangga">Rumah Tangga<i class="fe fe-arrow-circle-right"></i>
       </a>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 float-center">
-      <a class="btn btn-outline-primary" href="<?= site_url('statistik') ?>"> <i class="fa fa-pie-chart"></i> Statistik </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('program_bantuan') ?>"> <i class="fa fa-gift"></i> Bantuan </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('program_bantuan') ?>"> <i class="fa fa-users"></i> Pokmas </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('laporan_rentan') ?>"> <i class="fa fa-wheelchair"></i>Rentan</a>
-      <a class="btn btn-outline-primary" href="<?= site_url('dpt') ?>"> <i class="fa fa-hand-o-up"></i> DPT </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('gis') ?>"> <i class="fa fa-gift"></i> Maps </a>
+      <a class="btn btn-outline-primary" href="<?= site_url('statistik') ?>"> <i class="fe fe-pie-chart"></i> Statistik </a>
+      <a class="btn btn-outline-primary" href="<?= site_url('program_bantuan') ?>"> <i class="fe fe-gift"></i> Bantuan </a>
+      <a class="btn btn-outline-primary" href="<?= site_url('program_bantuan') ?>"> <i class="fe fe-users"></i> Pokmas </a>
+      <a class="btn btn-outline-primary" href="<?= site_url('laporan_rentan') ?>"> <i class="fe fe-wheelchair"></i>Rentan</a>
+      <a class="btn btn-outline-primary" href="<?= site_url('dpt') ?>"> <i class="fe fe-hand-o-up"></i> DPT </a>
+      <a class="btn btn-outline-primary" href="<?= site_url('gis') ?>"> <i class="fe fe-gift"></i> Maps </a>
     </div>
   </div>
 </div>-->

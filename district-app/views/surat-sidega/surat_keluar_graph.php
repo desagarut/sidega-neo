@@ -52,11 +52,14 @@
 <script src="<?= base_url()?>assets/js/highcharts/highcharts.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Grafik Surat Keluar</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluar')?>"> Daftar Surat Keluar</a></li>
 			<li class="active">Grafik Surat Keluar</li>
 		</ol>
@@ -64,8 +67,8 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-body">
+				<div class="card card-shadow">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div id="container"></div>

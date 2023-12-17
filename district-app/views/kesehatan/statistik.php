@@ -9,7 +9,7 @@ $wisata = $this->db->query('SELECT COUNT(id) AS jumlah FROM tbl_wisata WHERE par
     <section class='content-header'>
         <h1>Statistik Bidang Kesehatan</h1>
         <ol class='breadcrumb'>
-            <li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
             <li class="active">Bidang Kesehatan</li>
         </ol>
     </section>

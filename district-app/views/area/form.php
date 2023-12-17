@@ -1,9 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Area</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url('area')?>"><i class="fa fa-dashboard"></i> Daftar Area</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
+			<li><a href="<?= site_url('area')?>"><i class="fe fe-dashboard"></i> Daftar Area</a></li>
 			<li class="active">Pengaturan Area</li>
 		</ol>
 	</section>
@@ -14,10 +17,10 @@
           <?php $this->load->view('plan/nav.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
 							<a href="<?= site_url("area")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Area
+								<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Area
             	</a>
 						</div>
 						<div class="box-body">
@@ -53,7 +56,7 @@
 										<input type="text" class="form-control" id="file_path">
 										<input id="file" type="file" class="hidden" name="foto">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 									<p class="help-block small text-red">Kosongkan jika tidak ingin mengubah foto.</p>
@@ -78,9 +81,9 @@
 							</div>
 						</div>
 						<div class='box-footer'>
-							<div class='col-xs-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' onclick="reset_form($(this).val());"><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+							<div class='col-md-12'>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' onclick="reset_form($(this).val());"><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

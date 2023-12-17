@@ -56,7 +56,7 @@
 							<label for="tgl_peristiwa">Tanggal Peristiwa</label>
 							<div class="input-group input-group-sm date">
 								<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
+									<i class="fe fe-calendar"></i>
 								</div>
 								<input class="form-control input-sm pull-right" id="tgl_1" name="tgl_peristiwa" type="text" value="<?= $sekarang;?>">
 							</div>
@@ -71,8 +71,8 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+			<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 		</div>
 	</div>
 </form>

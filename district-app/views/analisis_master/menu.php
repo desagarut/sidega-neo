@@ -46,7 +46,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 
 			<li><a href="<?=site_url('analisis_master')?>"> Master Analisis</a></li>
 
@@ -70,11 +70,11 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					<div class="card card-shadow">
 
             <div class="box-header with-border">
 
-							<a href="<?= site_url('analisis_master') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Master Analisis</a>
+							<a href="<?= site_url('analisis_master') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Master Analisis</a>
 
 						</div>
 

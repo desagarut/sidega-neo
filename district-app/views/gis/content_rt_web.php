@@ -14,7 +14,7 @@
 							<?php endforeach; ?>
 						</div>
 					</div>
-					<p><center><a href="<?= site_url("load_aparatur_wilayah/$rt[id_kepala]/3"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-title="Ketua RT" data-remote="false" data-toggle="modal" data-target="#modalKecil"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Ketua RT&nbsp;&nbsp;&nbsp;&nbsp;</a></center></p>
+					<p><center><a href="<?= site_url("load_aparatur_wilayah/$rt[id_kepala]/3"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-title="Ketua RT" data-remote="false" data-toggle="modal" data-target="#modalKecil"><i class="fe fe-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Ketua RT&nbsp;&nbsp;&nbsp;&nbsp;</a></center></p>
 				</div>
 			</div>
 		</div>

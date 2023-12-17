@@ -58,7 +58,7 @@
   <section class="content-header">
     <h1>Peta Lokasi Usulan Kegiatan</h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="<?= site_url('hom_sid') ?>"><i class="fe fe-home"></i> Home</a></li>
       <li class="active"><a href="<?= site_url('hom_sid') ?>">Usulan Masyarakat</a></li>
       <li class="active">Lokasi Usulan Kegiatan</li>
     </ol>
@@ -70,7 +70,7 @@
         <?php $this->load->view('pembangunan/menu'); ?>
       </div>
       <div class="col-md-9">
-        <div class="box box-info">
+        <div class="card card-shadow">
           <form action="<?= $form_action ?>" method="post" id="validasi" enctype="multipart/form-data">
             <div class="box-header">
               <h4>Lokasi Usulan Kegiatan : <?= $lokasi_pembangunan->nama_program_kegiatan ?></h4>
@@ -99,9 +99,9 @@
               <div class="box-footer text-right">
                 <div class="col-sm-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-box bg-purple btn-sm" title="Kembali"> Kembali</a>
                   <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                    <a href="#" class="btn btn-box btn-success btn-sm" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-                    <button type="reset" class="btn btn-box btn-danger btn-sm"><i class='fa fa-sign-out'></i> Tutup</button>
-                    <button type="submit" class="btn btn-box btn-info btn-sm"><i class='fa fa-check'></i> Simpan</button>
+                    <a href="#" class="btn btn-box btn-success btn-sm" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+                    <button type="reset" class="btn btn-box btn-danger btn-sm"><i class='fe fe-sign-out'></i> Tutup</button>
+                    <button type="submit" class="btn btn-box btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
                   <?php endif; ?>
                 </div>
               </div>

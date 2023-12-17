@@ -1,8 +1,11 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Penetapan RKP</h1>
 		<ol class="breadcrumb float-sm-right">
 			<li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
@@ -119,9 +122,9 @@
 
 						return `
 						<div class="btn-group mb-2 mr-2">
-						<a href="#" class="btn btn-block btn-social btn-sm btn-success" data-toggle="dropdown" title="Pilih Aksi"><i class="fa fa-arrow-down"></i> Pilih Aksi Penetapan</a>
+						<a href="#" class="btn btn-block btn-social btn-sm btn-success" data-toggle="dropdown" title="Pilih Aksi"><i class="fe fe-arrow-down"></i> Pilih Aksi Penetapan</a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="<?= site_url('pembangunan/detail_usulan/') ?>${data.id}"><i class="fa fa-eye" style="color: blue"></i>Detail Program/kegiatan</a></li>
+								<li><a href="<?= site_url('pembangunan/detail_usulan/') ?>${data.id}"><i class="fe fe-eye" style="color: blue"></i>Detail Program/kegiatan</a></li>
 								<li class="divider"></li>
 								<li> <a  href="<?= site_url('pembangunan/apbdes_aktiv/'); ?>${data.id}">Tetapkan di RKP Desa</a></li>
 								<li> <a href="<?= site_url('pembangunan/durkp_aktiv/'); ?>${data.id}">Tetapkan di DU-RKP Desa</a><li/>

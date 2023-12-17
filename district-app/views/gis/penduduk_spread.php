@@ -1,10 +1,10 @@
 <!--<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/ionicons.min.css">-->
-<link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet.css" />
-<link rel="stylesheet" href="<?= base_url() ?>assets/css/fonts.googleapis.com.css" />
+<link rel="stylesheet" href="<?= base_url() ?>assets/css/osm/leaflet.css" />
+<!--<link rel="stylesheet" href="<?= base_url() ?>assets/css/fonts.googleapis.com.css" />
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/ace.min.css" />
-<link rel="stylesheet" href="<?= base_url() ?>assets/css/ace-skins.min.css" />
+<link rel="stylesheet" href="<?= base_url() ?>assets/css/ace-skins.min.css" />-->
 
 <!--<script src="<?= base_url() ?>assets/bootstrap/js/jquery.min.js"></script>
 <script src="<?= base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>-->
@@ -12,20 +12,16 @@
 <script src="<?= base_url() ?>assets/js/ace-elements.min.js"></script>
 <script src="<?= base_url() ?>assets/js/ace.min.js"></script>
 
-		<div class="page-content">
-
-			<div class="col-sm-6">
-				<div class="panel panel-success">
-					<div class="panel-heading">Lokasi Pembangunan</div>
-					<div class="panel-body">
-						<div id="map" style="height: 340px;"></div>
-					</div>
-				</div>
+<div class="page-content">
+	<div class="col-sm-6">
+		<div class="panel panel-success">
+			<div class="panel-heading">Lokasi Pembangunan</div>
+			<div class="panel-body">
+				<div id="map" style="height: 340px;"></div>
 			</div>
-
 		</div>
-
-
+	</div>
+</div>
 
 <script>
 	var map = L.map('map').setView([<?= $penduduk['lat'] ?>, <?= $penduduk['lng'] ?>], 18);

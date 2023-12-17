@@ -4,11 +4,14 @@
 	}
 </style>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pemantauan Isolasi Mandiri Saat Pandemi Covid-19</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Data Pemudik</li>
 		</ol>
 	</section>
@@ -21,7 +24,7 @@
 			<div class="col-md-10">
 
 				<div class="col-md-3">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title"><strong>Form Pemantauan</strong></h3>
 						</div>
@@ -105,17 +108,17 @@
 						</div>
 						<div class="box-footer">
 							<div class="box-tools pull-right">
-								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
+								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?= site_url("covid19/daftar/cetak/$filter_tgl/$filter_nik") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fa fa-print"></i> Cetak
+							<a href="<?= site_url("covid19/daftar/cetak/$filter_tgl/$filter_nik") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 							</a>
-							<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fa fa-download"></i> Unduh
+							<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 							</a>
 						</div>
 						<div class="box-body">
@@ -185,7 +188,7 @@
 																		<td align="center" width="2"><?= $nomer; ?></td>
 																		<td nowrap>
 																			<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																				<a href="#" data-href="<?= site_url("$url_delete_front/$item[id]/$url_delete_rare") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a> <?php endif; ?>
+																				<a href="#" data-href="<?= site_url("$url_delete_front/$item[id]/$url_delete_rare") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a> <?php endif; ?>
 																		</td>
 																		<td><?= "H+" . $item["date_diff"] ?></td>
 																		<td><?= $item["tanggal_datang"] ?></td>

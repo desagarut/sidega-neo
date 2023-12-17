@@ -12,7 +12,7 @@
                         <?php endforeach; ?>
                 </span></a>
                     <?php if ($this->CI->cek_hak_akses('u')): ?>
-                    <a href="<?= site_url("{$this->controller}/dialog_pengaturan")?>" class="inner text-white pengaturan" title="Pengaturan Program Bantuan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pengaturan Program Bantuan"><i class="fa fa-gear"></i></a>
+                    <a href="<?= site_url("{$this->controller}/dialog_pengaturan")?>" class="inner text-white pengaturan" title="Pengaturan Program Bantuan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pengaturan Program Bantuan"><i class="fe fe-gear"></i></a>
                     <p> <?=$bantuan['nama']?></p>
                     <?php endif; ?>
                
@@ -27,7 +27,7 @@
                     <b><?php foreach ($kelompok as $data): ?><?=$data['jumlah']?></h3><?php endforeach; ?></b> / 
                     <?php foreach ($penduduk as $data): ?><?=$data['jumlah']?><?php endforeach; ?>
                 </span>
-                    <p><i class="fa fa-eye"></i> Jumlah Pokmas</p>
+                    <p><i class="fe fe-eye"></i> Jumlah Pokmas</p>
                 </a>
                 <div class="progress sm">
                   <div class="progress-bar progress-bar-success" style="width: 4%"></div>

@@ -15,7 +15,8 @@
                 <?php if ($data['gambar']) : ?>
                   <img style="width:100%;height:60px" src="<?= AmbilGaleri($data['gambar'], 'sedang') ?>" alt="<?= $data['nama'] ?>">
                 <?php else : ?>
-                  <img style="width:100%;height:60px" src="<?= base_url() ?>assets/tiny/files/user_pict/kuser.png" alt="<?= $data['nama'] ?>" style="width:40px">
+                  <img style="width:100%;height:60px" src="<?= base_url() ?>assets/
+files/user_pict/kuser.png" alt="<?= $data['nama'] ?>" style="width:40px">
                 <?php endif; ?>
               </div>
               <div class="col-md-7">

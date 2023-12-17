@@ -16,7 +16,7 @@
   <section class="content-header">
     <h1>Detail Toko</h1>
     <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="<?= site_url('beranda') ?>"><i class="fe fe-home"></i> Home</a></li>
       <li><a href="<?= site_url('toko_warga') ?>">Detail Toko</a></li>
       <li class="active">
         <?= $sub['nama'] ?>
@@ -29,11 +29,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-warning">
-            <div class="box-header with-border"> <a href="<?= site_url("toko_warga/form_produk/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Produk"> <i class="fa fa-plus"></i> Tambah Produk </a>
+            <div class="box-header with-border"> <a href="<?= site_url("toko_warga/form_produk/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Produk"> <i class="fe fe-plus"></i> Tambah Produk </a>
               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("toko_warga/delete_all_produk/$gallery") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("toko_warga/delete_all_produk/$gallery") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
               <?php endif; ?>
-              <a href="<?= site_url("toko_warga") ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Toko </a>
+              <a href="<?= site_url("toko_warga") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Toko </a>
             </div>
           </div>
           <div class="row">
@@ -88,14 +88,14 @@
 
             <div class="col-md-6">
               <div class="box box-warning">
-                <div class="box-header"> <i class="fa fa-map"></i>
+                <div class="box-header"> <i class="fe fe-map"></i>
                   <h3 class="box-title"><strong>Lokasi</strong></h3>
                   <!-- tools box -->
                   <div class="pull-right box-tools">
                     <!-- button with a dropdown -->
                     <div class="btn-group"> </div>
-                    <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-plus"></i> </button>
-                    <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i> </button>
+                    <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fe fe-plus"></i> </button>
+                    <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fe fe-times"></i> </button>
                   </div>
                   <!-- /. tools -->
                 </div>
@@ -113,14 +113,14 @@
             
             <div class="col-md-6">
               <div class="box box-warning">
-                <div class="box-header"> <i class="fa fa-calendar"></i>
+                <div class="box-header"> <i class="fe fe-calendar"></i>
                   <h3 class="box-title"><strong>Info</strong></h3>
                   <!-- tools box -->
                   <div class="pull-right box-tools">
                     <!-- button with a dropdown -->
                     <div class="btn-group"> </div>
-                    <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i> </button>
-                    <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i> </button>
+                    <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fe fe-minus"></i> </button>
+                    <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fe fe-times"></i> </button>
                   </div>
                   <!-- /. tools -->
                 </div>
@@ -228,14 +228,14 @@
 
 
       <div class="box box-warning">
-        <div class="box-header with-border"><i class="fa fa-list"></i>
+        <div class="box-header with-border"><i class="fe fe-list"></i>
           <h3 class="box-title"><strong>DETAIL PRODUK</strong></h3>
           <!-- tools box -->
           <div class="pull-right box-tools">
             <!-- button with a dropdown -->
             <div class="btn-group"> </div>
-            <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i> </button>
-            <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i> </button>
+            <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fe fe-minus"></i> </button>
+            <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fe fe-times"></i> </button>
           </div>
           <!-- /. tools -->
         </div>
@@ -258,7 +258,7 @@
                         <div class="input-group input-group-sm pull-right">
                           <input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform').attr('action', '<?= site_url('toko_warga/search/$gallery') ?>');$('#'+'mainform').submit();endif">
                           <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("toko_warga/search/$gallery") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+                            <button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("toko_warga/search/$gallery") ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
                           </div>
                         </div>
                       </div>
@@ -275,28 +275,28 @@
                               <th>Aksi</th>
                               <th>Foto</th>
                               <?php if ($o == 2) : ?>
-                                <th><a href="<?= site_url("toko_warga/produk/$gallery/$p/1") ?>">Nama Produk <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                                <th><a href="<?= site_url("toko_warga/produk/$gallery/$p/1") ?>">Nama Produk <i class='fe fe-sort-asc fa-sm'></i></a></th>
                               <?php elseif ($o == 1) : ?>
-                                <th><a href="<?= site_url("toko_warga/produk/$gallery/$p/2") ?>">Nama Produk <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                                <th><a href="<?= site_url("toko_warga/produk/$gallery/$p/2") ?>">Nama Produk <i class='fe fe-sort-desc fa-sm'></i></a></th>
                               <?php else : ?>
-                                <th><a href="<?= site_url("toko_warga/produk/$gallery/$p/1") ?>">Nama Produk <i class='fa fa-sort fa-sm'></i></a></th>
+                                <th><a href="<?= site_url("toko_warga/produk/$gallery/$p/1") ?>">Nama Produk <i class='fe fe-sort fa-sm'></i></a></th>
                               <?php endif; ?>
                               <th>Harga</th>
                               <th>Diskon</th>
                               <th>Deskripsi</th>
                               <?php if ($o == 4) : ?>
-                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/3") ?>">Aktif <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/3") ?>">Aktif <i class='fe fe-sort-asc fa-sm'></i></a></th>
                               <?php elseif ($o == 3) : ?>
-                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/4") ?>">Aktif <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/4") ?>">Aktif <i class='fe fe-sort-desc fa-sm'></i></a></th>
                               <?php else : ?>
-                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/3") ?>">Aktif <i class='fa fa-sort fa-sm'></i></a></th>
+                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/3") ?>">Aktif <i class='fe fe-sort fa-sm'></i></a></th>
                               <?php endif; ?>
                               <?php if ($o == 6) : ?>
-                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/5") ?>">Dimuat Pada <i class='fa fa-sort-asc fa-sm'></i></a></th>
+                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/5") ?>">Dimuat Pada <i class='fe fe-sort-asc fa-sm'></i></a></th>
                               <?php elseif ($o == 5) : ?>
-                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/6") ?>">Dimuat Pada <i class='fa fa-sort-desc fa-sm'></i></a></th>
+                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/6") ?>">Dimuat Pada <i class='fe fe-sort-desc fa-sm'></i></a></th>
                               <?php else : ?>
-                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/5") ?>">Dimuat Pada <i class='fa fa-sort fa-sm'></i></a></th>
+                                <th nowrap><a href="<?= site_url("toko_warga/produk/$gallery/$p/5") ?>">Dimuat Pada <i class='fe fe-sort fa-sm'></i></a></th>
                               <?php endif; ?>
                             </tr>
                           </thead>
@@ -305,15 +305,15 @@
                               <tr>
                                 <td><input type="checkbox" name="id_cb[]" value="<?= $data['id'] ?>" /></td>
                                 <td><?= $data['no'] ?></td>
-                                <td nowrap><a href="<?= site_url("toko_warga/urut/$data[id]/1/$sub[id]") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Bawah"><i class="fa fa-arrow-down"></i></a> <a href="<?= site_url("toko_warga/urut/$data[id]/2/$sub[id]") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Atas"><i class="fa fa-arrow-up"></i></a>
+                                <td nowrap><a href="<?= site_url("toko_warga/urut/$data[id]/1/$sub[id]") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a> <a href="<?= site_url("toko_warga/urut/$data[id]/2/$sub[id]") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
                                   <?php if ($data['enabled'] == '2') : ?>
-                                    <a href="<?= site_url("toko_warga/gallery_lock/" . $data['id'] . "/$gallery") ?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Gambar"><i class="fa fa-lock">&nbsp;</i></a>
+                                    <a href="<?= site_url("toko_warga/gallery_lock/" . $data['id'] . "/$gallery") ?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Gambar"><i class="fe fe-lock">&nbsp;</i></a>
                                   <?php elseif ($data['enabled'] == '1') : ?>
-                                    <a href="<?= site_url("toko_warga/gallery_unlock/" . $data['id'] . "/$gallery") ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Gambar"><i class="fa fa-unlock"></i></a>
+                                    <a href="<?= site_url("toko_warga/gallery_unlock/" . $data['id'] . "/$gallery") ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Gambar"><i class="fe fe-unlock"></i></a>
                                   <?php endif ?>
                                   <br />
                                   <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                    <a href="<?= site_url("toko_warga/form_produk/$gallery/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fa fa-edit"></i></a> <a href="#" data-href="<?= site_url("toko_warga/delete_produk/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+                                    <a href="<?= site_url("toko_warga/form_produk/$gallery/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a> <a href="#" data-href="<?= site_url("toko_warga/delete_produk/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
                                   <?php endif; ?>
                                 </td>
                                 <td align="center"><label data-rel="popover" data-content="<img width=200 height=200 src=<?= AmbilGaleri($data['gambar'], 'kecil') ?>>"> <img width=50 height=50 class="img-circle" src=<?= AmbilGaleri($data['gambar'], 'kecil') ?>></label></td>

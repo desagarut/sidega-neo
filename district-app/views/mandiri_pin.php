@@ -91,7 +91,7 @@
 								<div class="form-group">
 									<input type="checkbox" id="checkbox" class="form-checkbox"> Tampilkan PIN
 								</div>
-								<button type="submit" id="btnSubmit" class="btn btn-social btn-box btn-info btn-sm"><i class='fa fa-check'></i>Simpan</button>
+								<button type="submit" id="btnSubmit" class="btn btn-social btn-box btn-info btn-sm"><i class='fe fe-check'></i>Simpan</button>
 								<div class="login-footer-top">
 									<br /><h3>Silakan coba login kembali setelah PIN baru berhasil disimpan</h3>
 								</div>

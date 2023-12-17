@@ -13,25 +13,24 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Data Calon Pemilih</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Data Calon Pemilih</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				<div class="card shadow">
+					<div class="card-header">
 						<div class="col-sm-8 col-lg-9">
 							<div class="row">
-								<a href="<?= site_url("dpt/ajax_cetak/$o/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" ><i class="fa fa-print "></i> Cetak</a>
-								<a href="<?= site_url("dpt/ajax_cetak/$o/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
-								<a href="<?= site_url("dpt/ajax_adv_search")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Pencarian Spesifik"><i class='fa fa-search'></i> Pencarian Spesifik</a>
-								<a href="<?= site_url("dpt/clear")?>" class="btn btn-social btn-box btn-default btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Bersihkan Pencarian"><i class="fa fa-refresh"></i>Bersihkan</a>
+								<a href="<?= site_url("dpt/ajax_cetak/$o/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" ><i class="fe fe-printer "></i> Cetak</a>
+								<a href="<?= site_url("dpt/ajax_cetak/$o/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+								<a href="<?= site_url("dpt/ajax_adv_search")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Pencarian Spesifik"><i class='fe fe-search'></i> Pencarian Spesifik</a>
+								<a href="<?= site_url("dpt/clear")?>" class="btn btn-social btn-box btn-default btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Bersihkan Pencarian"><i class="fe fe-refresh"></i>Bersihkan</a>
 							</div>
 						</div>
 						<div class="col-sm-4 col-md-3">
@@ -41,7 +40,7 @@
 										<span class="input-group-addon input-sm">Tanggal Pemilihan</span>
 										<div class="input-group input-group-sm date">
 											<div class="input-group-addon">
-												<i class="fa fa-calendar"></i>
+												<i class="fe fe-calendar"></i>
 											</div>
 											<input class="form-control input-sm datepicker pull-right" onchange="$('#tglform').submit()" name="tanggal_pemilihan" type="text" value="<?= $_SESSION['tanggal_pemilihan']?>">
 										</div>
@@ -53,7 +52,7 @@
 					<div class="box-header">
 						<h4 class="text-center"><strong>DAFTAR CALON PEMILIH UNTUK TANGGAL PEMILIHAN <?= $_SESSION['tanggal_pemilihan']?></strong></h4>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -94,7 +93,7 @@
 												<div class="input-group input-group-sm pull-right">
 													<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari")?>');$('#'+'mainform').submit();}">
 													<div class="input-group-btn">
-														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 													</div>
 												</div>
 											</div>
@@ -107,25 +106,25 @@
 															<tr>
 																<th>No</th>
 																<?php if ($o==2): ?>
-																	<th><a href="<?= site_url("dpt/index/$p/1")?>">NIK <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("dpt/index/$p/1")?>">NIK <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==1): ?>
-																	<th><a href="<?= site_url("dpt/index/$p/2")?>">NIK <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("dpt/index/$p/2")?>">NIK <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th><a href="<?= site_url("dpt/index/$p/1")?>">NIK <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th><a href="<?= site_url("dpt/index/$p/1")?>">NIK <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<?php if ($o==4): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/3")?>">Nama <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/3")?>">Nama <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==3): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/4")?>">Nama <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/4")?>">Nama <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/3")?>">Nama <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/3")?>">Nama <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<?php if ($o==6): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/5")?>">No. KK <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/5")?>">No. KK <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==5): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/6")?>">No. KK <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/6")?>">No. KK <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/5")?>">No. KK <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/5")?>">No. KK <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th>Alamat</th>
 																<th><?= ucwords($this->setting->sebutan_dusun); ?></th>
@@ -133,11 +132,11 @@
 																<th>RT</th>
 																<th nowrap>Pendidikan dalam KK</th>
 																<?php if ($o==8): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/7")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/7")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fe fe-sort-asc fa-sm'></i></a></th>
 																<?php elseif ($o==7): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/8")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/8")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fe fe-sort-desc fa-sm'></i></a></th>
 																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/7")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fa fa-sort fa-sm'></i></a></th>
+																	<th nowrap><a href="<?= site_url("dpt/index/$p/7")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fe fe-sort fa-sm'></i></a></th>
 																<?php endif; ?>
 																<th nowrap>Pekerjaan</th>
 																<th nowrap>Kawin</th>

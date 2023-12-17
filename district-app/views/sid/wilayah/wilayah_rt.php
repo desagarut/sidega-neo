@@ -46,17 +46,16 @@
 												<span class="text-muted sr-only">Action</span>
 											</button>
 											<div class="dropdown-menu dropdown-menu-left">
-												<?php if ($this->CI->cek_hak_akses('h')) : ?>
-													<?php if ($data['rt'] != "-") : ?>
-														<a href="<?= site_url("sid_core/form_rt/$id_dusun/$id_rw/$data[id]") ?>" class="dropdown-item" title="Ubah">Ubah</a>
-														<a href="#" data-href="<?= site_url("sid_core/delete/rt/$data[id]") ?>" class="dropdown-item" title="Hapus" data-toggle="modal" data-target="#confirm-delete">Hapus</a>
-													<?php endif; ?>
-												<?php endif; ?>
 												<?php if ($data['rt'] != "-") : ?>
 													<a href="<?= site_url("sid_core/ajax_kantor_rt_maps/$id_dusun/$id_rw/$data[id]") ?>" class="dropdown-item" title="Lokasi Kantor">Lokasi</a>
 													<a href="<?= site_url("sid_core/ajax_wilayah_rt_google_maps/$id_dusun/$id_rw/$data[id]") ?>" class="dropdown-item" title="Peta Google">Peta Google</a>
 													<a href="<?= site_url("sid_core/ajax_wilayah_rt_openstreet_maps/$id_dusun/$id_rw/$data[id]") ?>" class="dropdown-item" title="Peta Openstreet">Peta OSM</a>
-
+												<?php endif; ?>
+												<?php if ($this->CI->cek_hak_akses('h')) : ?>
+													<?php if ($data['rt'] != "-") : ?>
+														<a href="<?= site_url("sid_core/form_rt/$id_dusun/$id_rw/$data[id]") ?>" class="dropdown-item" title="Ubah">Ubah</a>
+														<a href="#" data-href="<?= site_url("sid_core/delete/rt/$data[id]") ?>" class="dropdown-item bg-danger text-light" title="Hapus" data-toggle="modal" data-target="#confirm-delete">Hapus</a>
+													<?php endif; ?>
 												<?php endif; ?>
 											</div>
 										</td>
@@ -81,11 +80,16 @@
 	</div>
 </main>
 <?php $this->load->view('global/confirm_delete'); ?>
-<script src="<?= base_url() ?>assets/tiny/js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/tiny/js/messages_id.js"></script>
-<script src='<?= base_url() ?>assets/tiny/js/jquery.dataTables.min.js'></script>
-<script src='<?= base_url() ?>assets/tiny/js/dataTables.bootstrap4.min.js'></script>
+<script src="<?= base_url() ?>assets/
+js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/
+js/validasi.js"></script>
+<script src="<?= base_url() ?>assets/
+js/messages_id.js"></script>
+<script src='<?= base_url() ?>assets/
+js/jquery.dataTables.min.js'></script>
+<script src='<?= base_url() ?>assets/
+js/dataTables.bootstrap4.min.js'></script>
 <script>
 	$('#dataTable-1').DataTable({
 		autoWidth: true,

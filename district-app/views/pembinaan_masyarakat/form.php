@@ -3,21 +3,17 @@
 	<section class="content-header">
 		<h1>Peserta Program Bantuan</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pembinaan_masyarakat')?>"> Daftar Program Bantuan</a></li>
 			<li><a href="<?= site_url("pembinaan_masyarakat/detail/$detail[id]")?>"> Rincian Program Bantuan</a></li>
 			<li class="active">Peserta Program Bantuan</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
-						<a href="<?= site_url("pembinaan_masyarakat/detail/$detail[id]")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+						<a href="<?= site_url("pembinaan_masyarakat/detail/$detail[id]")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<?php include('district-app/views/pembinaan_masyarakat/rincian.php'); ?>
@@ -44,7 +40,7 @@
 											<div class="col-sm-6">
 												<div class="box box-info box-solid">
 													<div class="box-header with-border">
-														<i class="fa fa-user"></i>
+														<i class="fe fe-user"></i>
 														<h3 class="box-title">Konfirmasi Peserta</h3>
 													</div>
 													<div class="box-body">
@@ -56,7 +52,7 @@
 										<div class="col-sm-6">
 											<div class="box box-success box-solid">
 												<div class="box-header with-border">
-													<i class="fa fa-credit-card"></i>
+													<i class="fe fe-credit-card"></i>
 													<h3 class="box-title">Identitas Pada Kartu/Sertifikat Peserta</h3>
 												</div>
 												<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -76,7 +72,7 @@
 																	<input type="text" class="form-control" id="file_path">
 																	<input type="file" class="hidden" id="file" name="satuan">
 																	<span class="input-group-btn">
-																		<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+																		<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 																	</span>
 																</div>
 																<span class="help-block"><code> Kosongkan jika tidak ingin mengunggah gambar</code></span>
@@ -105,7 +101,7 @@
 															<div class="col-sm-8">
 																<div class="input-group input-group-sm date">
 																	<div class="input-group-addon">
-																		<i class="fa fa-calendar"></i>
+																		<i class="fe fe-calendar"></i>
 																	</div>
 																	<input class="form-control input-sm pull-right required" id="tgl_1" name="kartu_tanggal_lahir" placeholder="Tgl. Lahir" type="text" value="<?= tgl_indo_out($individu['tanggallahir'])?>">
 																</div>
@@ -119,8 +115,8 @@
 														</div>
 													</div>
 													<div class="box-footer">
-														<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-														<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+														<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+														<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 													</div>
 												</form>
 											</div>

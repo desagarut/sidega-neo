@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Salinan Kartu Keluarga</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluarga/clear')?>"> Daftar Keluarga</a></li>
 			<li><a href="<?= site_url("keluarga/anggota/$p/$o/$id_kk")?>"> Daftar Anggota Keluarga</a></li>
 			<li class="active">Kartu Keluarga</li>
@@ -12,15 +15,15 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?= site_url("keluarga/cetak_kk/$id_kk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fa fa-print "></i> Cetak</a>
-							<a href="<?= site_url("keluarga/doc_kk/$id_kk")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fa fa-download"></i> Unduh</a>
-							<a href="<?=site_url("keluarga/anggota/$p/$o/$id_kk")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Rincian Anggota Keluarga">
-								<i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
+							<a href="<?= site_url("keluarga/cetak_kk/$id_kk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("keluarga/doc_kk/$id_kk")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fe fe-download"></i> Unduh</a>
+							<a href="<?=site_url("keluarga/anggota/$p/$o/$id_kk")?>" class="btn btn-sm btn-outline-info mb-1"title="Rincian Anggota Keluarga">
+								<i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
 							</a>
-							<a href="<?=site_url("keluarga")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Anggota Keluarga">
-								<i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
+							<a href="<?=site_url("keluarga")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Anggota Keluarga">
+								<i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
 							</a>
 						</div>
 						<div class="box-header">

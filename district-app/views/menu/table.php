@@ -9,11 +9,14 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Pengaturan Menu Statis</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Pengaturan Menu Statis</li>
 		</ol>
 	</section>
@@ -24,13 +27,13 @@
 					<?php $this->load->view('kategori/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<a href="<?=site_url("menu/form/$tip")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Menu Baru">
-								<i class="fa fa-plus"></i>Tambah Menu Baru
+								<i class="fe fe-plus"></i>Tambah Menu Baru
 							</a>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("menu/delete_all/$tip/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("menu/delete_all/$tip/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
 						</div>
 						<div class="box-body">
@@ -51,7 +54,7 @@
 														<div class="input-group input-group-sm pull-right">
 															<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13):$('#'+'mainform').attr('action', '<?=site_url("menu/search/$tip")?>');$('#'+'mainform').submit();endif">
 															<div class="input-group-btn">
-																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("menu/search/$tip")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+																<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url("menu/search/$tip")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
 															</div>
 														</div>
 													</div>
@@ -67,11 +70,11 @@
 																	<th>No</th>
 																	<th>Aksi</th>
 																	<?php if ($o==2): ?>
-																		<th><a href="<?= site_url("menu/index/$tip/$p/1")?>">Nama Menu<i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("menu/index/$tip/$p/1")?>">Nama Menu<i class='fe fe-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o==1): ?>
-																		<th><a href="<?= site_url("menu/index/$tip/$p/2")?>">Nama Menu<i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("menu/index/$tip/$p/2")?>">Nama Menu<i class='fe fe-sort-desc fa-sm'></i></a></th>
 																	<?php else: ?>
-																		<th><a href="<?= site_url("menu/index/$tip/$p/1")?>">Nama Menu<i class='fa fa-sort fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("menu/index/$tip/$p/1")?>">Nama Menu<i class='fe fe-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																	<th>Link</th>
 																</tr>
@@ -82,17 +85,17 @@
 																		<td><input type="checkbox" name="id_cb[]" value="<?=$data['id']?>" /></td>
 																		<td><?=$data['no']?></td>
 																		<td nowrap>
-																			<a href="<?= site_url("menu/urut/$tip/$data[id]/1")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Bawah"><i class="fa fa-arrow-down"></i></a>
-																			<a href="<?= site_url("menu/urut/$tip/$data[id]/2")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Atas"><i class="fa fa-arrow-up"></i></a>
-																			<a href="<?= site_url("menu/sub_menu/$tip/$data[id]")?>" class="btn bg-purple btn-box btn-sm"  title="Sub Menu"><i class="fa fa-bars"></i></a>
-																			<a href="<?= site_url("menu/form/$tip/$data[id]")?>" class="btn btn-warning btn-box btn-sm"  title="Ubah"><i class="fa fa-edit"></i></a>
+																			<a href="<?= site_url("menu/urut/$tip/$data[id]/1")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a>
+																			<a href="<?= site_url("menu/urut/$tip/$data[id]/2")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
+																			<a href="<?= site_url("menu/sub_menu/$tip/$data[id]")?>" class="btn bg-purple btn-box btn-sm"  title="Sub Menu"><i class="fe fe-bars"></i></a>
+																			<a href="<?= site_url("menu/form/$tip/$data[id]")?>" class="btn btn-warning btn-box btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
 																			<?php if ($data['enabled'] == '2'): ?>
-																				<a href="<?= site_url("menu/menu_lock/$tip/".$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fa fa-lock">&nbsp;</i></a>
+																				<a href="<?= site_url("menu/menu_lock/$tip/".$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fe fe-lock">&nbsp;</i></a>
 																			<?php elseif ($data['enabled'] == '1'): ?>
-																				<a href="<?= site_url("menu/menu_unlock/$tip/".$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fa fa-unlock"></i></a>
-																				<a href="<?=site_url("menu/ajax_add_sub_menu/$tip/$data[id]")?>" class="btn bg-olive btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Menu" title="Tambah Sub Menu"><i class="fa fa-plus"></i></a>
+																				<a href="<?= site_url("menu/menu_unlock/$tip/".$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
+																				<a href="<?=site_url("menu/ajax_add_sub_menu/$tip/$data[id]")?>" class="btn bg-olive btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Menu" title="Tambah Sub Menu"><i class="fe fe-plus"></i></a>
 																			<?php endif ?>
-																			<a href="#" data-href="<?= site_url("menu/delete/$tip/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("menu/delete/$tip/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 																		</td>
 																		<td nowrap width="40%"><?= $data['nama']?></td>
 																		<td nowrap><a href="<?= $data['link']?>" target="_blank"><?= $data['link']?></a></td>

@@ -34,7 +34,7 @@
         <form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
           <div class="row">
             <div class="col-md-12">
-              <div class="box-header"> <a href="<?= site_url("pembangunan_dok/show/{$id_pembangunan}") ?>" class="btn btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali</a> </div>
+              <div class="box-header"> <a href="<?= site_url("pembangunan_dok/show/{$id_pembangunan}") ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali</a> </div>
               <div class="box-body">
                 <div class="row">
                   <div class="col-md-12">
@@ -85,7 +85,7 @@
                           <input type="text" class="form-control " id="file_path" name="gambar">
                           <input id="file" type="file" class="hidden" name="gambar">
                           <span class="input-group-btn">
-                          <button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+                          <button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
                           </span> </div>
                         <span class="help-block"><code>(Kosongkan jika tidak ingin mengubah gambar)</code></span> </div>
                     </div>
@@ -100,8 +100,8 @@
               </div>
               <div class="box-footer">
                 <div class="col-xs-12">
-                  <button type="reset" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-                  <button type="submit" class="btn btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+                  <button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+                  <button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
                 </div>
               </div>
             </div>

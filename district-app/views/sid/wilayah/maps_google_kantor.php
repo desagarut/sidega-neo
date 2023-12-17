@@ -55,9 +55,9 @@
                 <h2 class="h5 page-title">Kantor <?= $nama_wilayah ?></h2>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
+                        <div class="card shadow">
                             <form action="<?= $form_action ?>" method="post" id="validasi" enctype="multipart/form-data">
-                                <div class='modal-body'>
+                                <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div id="map_lokasi"></div>
@@ -65,12 +65,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <div class='col-sm-12'>
-                                        <div class="row col-sm-7">
-                                            <div class="form-group">
+                                <div class="card-footer">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="form-group row">
                                                 <div class="col-md-6">
-                                                    <label class="col-sm-4 control-label " for="lat">Lat: </label>
+                                                    <label class="col-md-4 control-label " for="lat">Lat: </label>
                                                     <input type="text" class="col-md-6" name="lat" id="lat" value="<?= $wil_ini['lat'] ?>" /><br />
                                                     <label class="col-sm-4 control-label " for="lng"> Lng: </label>
 
@@ -78,10 +78,8 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <label class="col-sm-4" for="zoom"> Zoom: </label>
-
                                                     <input type="text" class="col-md-6" width="5px" name="zoom" id="zoom" value="<?= $wil_ini['zoom'] ?>" /><br />
                                                     <label class="col-sm-4" for="map_tipe"> Map Tipe: </label>
-
                                                     <select class="input-sm pull-left" name="map_tipe" id="map_tipe">
                                                         <option value="ROADMAP" <?php selected($map_tipe, 'ROADMAP'); ?>>ROADMAP</option>
                                                         <option value="SATELLITE" <?php selected($map_tipe, 'SATELLITE'); ?>>SATELLITE</option>
@@ -92,13 +90,15 @@
                                             </div>
                                         </div>
 
-                                        <div class="row col-sm-5">
-                                            <a href="<?= site_url('identitas_desa') ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-                                            <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                                <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-                                                <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-                                                <button type="submit" class="btn btn-social btn-box btn-info btn-sm"><i class='fa fa-check'></i> Simpan</button>
-                                            <?php endif; ?>
+                                        <div class="row align-items-center my-2">
+                                            <div class="col-auto">
+                                                <?php if ($this->CI->cek_hak_akses('h')) : ?>
+                                                    <a href="#" class="btn btn-success btn-sm mb-1 text-light" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+                                                    <button type="reset" class="btn btn-danger btn-sm mb-1" data-dismiss="modal"><i class='fe fe-x'></i> Tutup</button>
+                                                    <button type="submit" class="btn btn-info btn-sm mb-1"><i class='fe fe-check'></i> Simpan</button>
+                                                <?php endif; ?>
+                                                <a href="<?= site_url('identitas_desa') ?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali"><i class="fe fe-arrow-left"></i> Kembali ke Identitas Desa</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

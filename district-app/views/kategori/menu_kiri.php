@@ -1,8 +1,8 @@
-<div class="box box-info">
+<div class="card card-shadow">
 	<div class="box-header with-border">
 		<h3 class="box-title">Kategori Menu</h3>
 		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 		</div>
 	</div>
 	<div class="box-body no-padding">

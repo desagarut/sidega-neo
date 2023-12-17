@@ -161,13 +161,13 @@ $(document).ready(function () {
 	<section class="content-header">
 			<h1>Status IDM <?= ucwords($this->setting->sebutan_desa) . ' ' . $tahun; ?></h1>
 			<ol class="breadcrumb">
-				<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="<?= site_url('hom_sid')?>"><i class="fe fe-home"></i> Home</a></li>
 				<li class="active">Status IDM <?= ucwords($this->setting->sebutan_desa). ' ' . $tahun; ?></li>
 			</ol>
 		</section>
 	<?php endif; ?>
 	<section class="content">
-		<div class="box box-info">
+		<div class="card card-shadow">
 			<div class="box-body">
 				<div class="row">
 					<div class="col-sm-12">

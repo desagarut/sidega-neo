@@ -71,7 +71,7 @@
 						<input type="text" class="form-control" id="file_path">
 						<input type="file" class="hidden" id="file" name="satuan">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+							<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 						</span>
 					</div>
 					<span class="help-block"><code> Kosongkan jika tidak ingin mengunggah gambar</code></span>
@@ -100,7 +100,7 @@
 				<div class="col-sm-7">
 					<div class="input-group input-group-sm date">
 						<div class="input-group-addon">
-							<i class="fa fa-calendar"></i>
+							<i class="fe fe-calendar"></i>
 						</div>
 						<input class="form-control input-sm pull-right required" id="tgl_1" name="kartu_tanggal_lahir" placeholder="Tgl. Lahir" type="text" value="<?= date_format(date_create($kartu_tanggal_lahir),"d-m-Y")?>">
 					</div>
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 	</div>
 </form>

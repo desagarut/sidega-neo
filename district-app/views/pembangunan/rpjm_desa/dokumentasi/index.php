@@ -21,11 +21,11 @@
 					
 						<div class="card-header">
 							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Data Baru">
-								<i class="fa fa-plus"></i>Tambah Data
+								<i class="fe fe-plus"></i>Tambah Data
 							</a>
-							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/cetak")?>" class="btnbg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fa fa-print "></i> Cetak</a>
-							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/unduh")?>" class="btnbg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $pembangunan->judul ?> "><i class="fa fa-download "></i> Unduh</a>
-							<a href="<?= site_url('pembangunan') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Pembagunan"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
+							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/cetak")?>" class="btnbg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/unduh")?>" class="btnbg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $pembangunan->judul ?> "><i class="fe fe-download "></i> Unduh</a>
+							<a href="<?= site_url('pembangunan') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Pembagunan"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
 						</div>
 						<div class="card-body">
 							<h5 class="text-bold">Rincian Dokumentasi Pembangunan</h5>
@@ -110,8 +110,8 @@
 				{'data': null},
 				{
 					'data': function(data) {
-						return `<a href="<?= site_url("pembangunan_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-flat btn-sm"><i class="fa fa-edit"></i> </a>
-								<a href="#" data-href="<?= site_url("pembangunan_dokumentasi/delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash"></i></a>
+						return `<a href="<?= site_url("pembangunan_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-flat btn-sm"><i class="fe fe-edit"></i> </a>
+								<a href="#" data-href="<?= site_url("pembangunan_dokumentasi/delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							   `
 					}, 'class': 'text-center'
 				},

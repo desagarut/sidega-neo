@@ -9,7 +9,7 @@
 
 </style>
 <div class="container" style="width: 100%; background: #fff; color: #222">
-  <div class="box box-info">
+  <div class="card card-shadow">
     <?php foreach ($data_widget as $subdata_name => $subdatas): ?>
       <div class="col-md-4">
         <div align="center"><h4><?= ($subdatas['laporan'])?></h4></div><hr/>

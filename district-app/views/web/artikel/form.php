@@ -36,11 +36,14 @@
 		remove_script_host : false
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Form Artikel <?= $kategori['kategori']; ?></h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url("web"); ?>"> Daftar Artikel</a></li>
 			<li class="active">Form Artikel</li>
 		</ol>
@@ -49,13 +52,13 @@
 		<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-8">
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
-							<a href="<?=site_url("web")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Artikel">
-								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Artikel
+							<a href="<?=site_url("web")?>" class="btn btn-sm btn-outline-info mb-1"title="Tambah Artikel">
+								<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Artikel
 							</a>
 							<?php if ($artikel['slug']): ?>
-								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn btn-social btn-box bg-green btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-eye"></i> Lihat Artikel</a>
+								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn btn-social btn-box bg-green btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-eye"></i> Lihat Artikel</a>
 							<?php endif; ?>
 						</div>
 						<div class="box-body">
@@ -78,7 +81,7 @@
 						<div class="box-header with-border">
 							<h3 class="box-title">Unggah Gambar</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-plus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">
@@ -96,7 +99,7 @@
 										<input type="text" class="form-control" id="file_path">
 										<input type="file" class="hidden" id="file" name="gambar">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 								</div>
@@ -115,7 +118,7 @@
 										<input type="text" class="form-control" id="file_path1">
 										<input type="file" class="hidden" id="file1" name="gambar1">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box" id="file_browser1"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box" id="file_browser1"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 								</div>
@@ -134,7 +137,7 @@
 										<input type="text" class="form-control" id="file_path2">
 										<input type="file" class="hidden" id="file2" name="gambar2">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box" id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box" id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 								</div>
@@ -153,7 +156,7 @@
 										<input type="text" class="form-control" id="file_path3">
 										<input type="file" class="hidden" id="file3" name="gambar3">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box" id="file_browser3"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box" id="file_browser3"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 								</div>
@@ -162,11 +165,11 @@
 					</div>
 					<?php if ($cat == 1000): ?>
 						<input type="hidden" name="id_agenda" value="<?= $artikel['id_agenda']?>">
-						<div class="box box-info">
+						<div class="card card-shadow">
 							<div class="box-header with-border">
 								<h3 class="box-title">Pengaturan Agenda Desa</h3>
 								<div class="box-tools">
-									<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+									<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 								</div>
 							</div>
 							<div class="box-body no-padding">
@@ -175,7 +178,7 @@
 										<label class="control-label" for="tgl_agenda">Tanggal Kegiatan</label>
 										<div class="input-group input-group-sm date">
 											<div class="input-group-addon">
-												<i class="fa fa-calendar-check-o"></i>
+												<i class="fe fe-calendar-check-o"></i>
 											</div>
 											<input class="form-control input-sm pull-right tgl_jam" name="tgl_agenda" type="text" value="<?= $artikel['tgl_agenda']?>">
 										</div>
@@ -183,7 +186,7 @@
 										<label class="control-label" for="lokasi_kegiatan">Lokasi Kegiatan</label>
 										<div class="input-group input-group-sm">
 											<div class="input-group-addon">
-												<i class="fa fa-map-marker"></i>
+												<i class="fe fe-map-marker"></i>
 											</div>
 											<input class="form-control input-sm pull-right" name="lokasi_kegiatan" type="text" placeholder="Masukan lokasi tempat dilakukan kegiatan" value="<?= $artikel['lokasi_kegiatan']?>">
 										</div>
@@ -191,7 +194,7 @@
 										<label class="control-label" for="koordinator_kegiatan">Koordinator Kegiatan</label>
 										<div class="input-group input-group-sm">
 											<div class="input-group-addon">
-												<i class="fa fa-user"></i>
+												<i class="fe fe-user"></i>
 											</div>
 											<input class="form-control input-sm pull-right" name="koordinator_kegiatan" type="text" placeholder="Masukan nama koordinator" value="<?= $artikel['koordinator_kegiatan']?>">
 										</div>
@@ -201,11 +204,11 @@
 							</div>
 						</div>
 					<?php endif; ?>
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-header with-border">
 							<h3 class="box-title">Pengaturan Lainnya</h3>
 							<div class="box-tools">
-								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
 							</div>
 						</div>
 						<div class="box-body no-padding">
@@ -213,7 +216,7 @@
 								<?php if ($artikel['dokumen']): ?>
 									<div class="form-group">
 										<div class="mailbox-attachment-info">
-											<a href="<?= base_url().LOKASI_DOKUMEN.$artikel['dokumen']?>" class="mailbox-attachment-name"><i class="fa fa-paperclip"> </i> <?= $artikel['link_dokumen']?> <div class="btn btn-sm btn-box btn-success pull-right">Unduh Dokumen</div></a>
+											<a href="<?= base_url().LOKASI_DOKUMEN.$artikel['dokumen']?>" class="mailbox-attachment-name"><i class="fe fe-paperclip"> </i> <?= $artikel['link_dokumen']?> <div class="btn btn-sm btn-box btn-success pull-right">Unduh Dokumen</div></a>
 										</div>
 									</div>
 								<?php endif; ?>
@@ -223,7 +226,7 @@
 										<input type="text" class="form-control" id="file_path4">
 										<input type="file" class="hidden" id="file4" name="dokumen">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box" id="file_browser4"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box" id="file_browser4"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 								</div>
@@ -236,7 +239,7 @@
 									<label class="control-label" for="tgl_upload">Tanggal Posting</label>
 									<div class="input-group input-group-sm date">
 										<div class="input-group-addon">
-											<i class="fa fa-calendar"></i>
+											<i class="fe fe-calendar"></i>
 										</div>
 										<input class="form-control input-sm pull-right tgl_jam" name="tgl_upload" type="text" value="<?= $artikel['tgl_upload']?>">
 									</div>
@@ -245,11 +248,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="box box-info">
+					<div class="card card-shadow">
 						<div class="box-body no-padding">
 							<div class='box-footer'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

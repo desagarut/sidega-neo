@@ -1,8 +1,11 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Laporan Asset Yang Dihapus</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?=site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li class="active">Laporan Asset Yang Dihapus</li>
 		</ol>
 	</section>
@@ -13,13 +16,13 @@
 					<?php $this->load->view('inventaris/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					<div class="card card-shadow">
             <div class="box-header with-border">
 							<a href="#" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
-								<i class="fa fa-print"></i>Cetak
+								<i class="fe fe-printer"></i>Cetak
             	</a>
 							<a href="#" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
-								<i class="fa fa-download"></i>Unduh
+								<i class="fe fe-download"></i>Unduh
             	</a>
 						</div>
 						<div class="box-body">
@@ -72,7 +75,7 @@
 																	</td>
 																	<td>
 																		<div class="btn-group" role="group" aria-label="...">
-																			<a href="<?= site_url('inventaris_tanah/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fa fa-eye"></i></a>
+																			<a href="<?= site_url('inventaris_tanah/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fe fe-eye"></i></a>
 																		</div>
 																	</td>
 																</tr>
@@ -97,7 +100,7 @@
 																	</td>
 																	<td>
 																		<div class="btn-group" role="group" aria-label="...">
-																			<a href="<?= site_url('inventaris_peralatan/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fa fa-eye"></i></a>
+																			<a href="<?= site_url('inventaris_peralatan/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fe fe-eye"></i></a>
 																		</div>
 																	</td>
 																</tr>
@@ -122,7 +125,7 @@
 																	</td>
 																	<td>
 																		<div class="btn-group" role="group" aria-label="...">
-																			<a href="<?= site_url('inventaris_gedung/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fa fa-eye"></i></a>
+																			<a href="<?= site_url('inventaris_gedung/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fe fe-eye"></i></a>
 																		</div>
 																	</td>
 																</tr>
@@ -147,7 +150,7 @@
 																	</td>
 																	<td>
 																		<div class="btn-group" role="group" aria-label="...">
-																			<a href="<?= site_url('inventaris_jalan/'.$data->id.'/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fa fa-eye"></i></a>
+																			<a href="<?= site_url('inventaris_jalan/'.$data->id.'/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fe fe-eye"></i></a>
 																		</div>
 																	</td>
 																</tr>
@@ -172,7 +175,7 @@
 																	</td>
 																	<td>
 																		<div class="btn-group" role="group" aria-label="...">
-																			<a href="<?= site_url('inventaris_asset/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fa fa-eye"></i></a>
+																			<a href="<?= site_url('inventaris_asset/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fe fe-eye"></i></a>
 																		</div>
 																	</td>
 																</tr>
@@ -197,7 +200,7 @@
 																	</td>
 																	<td>
 																		<div class="btn-group" role="group" aria-label="...">
-																			<a href="<?= site_url('inventaris_kontruksi/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fa fa-eye"></i></a>
+																			<a href="<?= site_url('inventaris_kontruksi/mutasi'); ?>" title="Lihat Data" type="button" class="btn btn-default btn-sm"><i class="fe fe-eye"></i></a>
 																		</div>
 																	</td>
 																</tr>
@@ -256,8 +259,8 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-												<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="form_download" name="form_download" data-dismiss="modal"><i class='fa fa-check'></i> Unduh</button>
+												<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="form_download" name="form_download" data-dismiss="modal"><i class='fe fe-check'></i> Unduh</button>
 											</div>
 
 										</form>
@@ -299,8 +302,8 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-												<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="form_cetak" name="form_cetak"  data-dismiss="modal"><i class='fa fa-check'></i> Cetak</button>
+												<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="form_cetak" name="form_cetak"  data-dismiss="modal"><i class='fe fe-check'></i> Cetak</button>
 											</div>
 										</form>
 									</div>

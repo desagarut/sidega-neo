@@ -35,7 +35,7 @@
 <div class="box box-primary box-solid">
 	<div class="box-header">
 		<h3 class="box-title">
-			<i class="fa fa-map-marker"></i><?="Lokasi Kantor ".ucwords($this->setting->sebutan_desa)?>
+			<i class="fe fe-map-marker"></i><?="Lokasi Kantor ".ucwords($this->setting->sebutan_desa)?>
 		</h3>
 	</div>
 	<div class="box-body">
@@ -43,8 +43,8 @@
 		<button class="btn btn-success btn-block"><a href="https://www.openstreetmap.org/#map=15/<?=$data_config['lat']."/".$data_config['lng']?>" style="color:#fff;" target="_blank">Buka Peta</a></button>
 		<button class="btn btn-success btn-block" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">
 			Detail
-			<i class="fa fa-chevron-up pull-right"></i>
-			<i class="fa fa-chevron-down pull-right"></i>
+			<i class="fe fe-chevron-up pull-right"></i>
+			<i class="fe fe-chevron-down pull-right"></i>
 		</button>
 		<div id="collapse2" class="panel-collapse collapse">
 			<br>

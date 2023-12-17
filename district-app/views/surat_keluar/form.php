@@ -9,22 +9,21 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<main role="main" class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h5 class="mb-2 page-title">
 		<h1>Surat Keluar</h1>
 		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
+			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
 			<li><a href="<?= site_url('surat_keluar')?>"> Daftar Surat Keluar</a></li>
 			<li class="active">Surat Keluar</li>
 		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url("surat_keluar")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Surat Keluar">
-							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Surat Keluar
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url("surat_keluar")?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali Ke Daftar Surat Keluar">
+							<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Surat Keluar
 						</a>
 					</div>
 					<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal nomor-urut">
@@ -42,7 +41,7 @@
 									<label class="col-sm-3 control-label" for="kode_pos"></label>
 									<div class="col-sm-8">
 										<div class="mailbox-attachment-info">
-											<a href="<?= site_url('/surat_keluar/unduh_berkas_scan/'.$surat_keluar['id']);?>" title=""><i class="fa fa-paperclip"></i> <?= $surat_keluar['berkas_scan'];?></a>
+											<a href="<?= site_url('/surat_keluar/unduh_berkas_scan/'.$surat_keluar['id']);?>" title=""><i class="fe fe-paperclip"></i> <?= $surat_keluar['berkas_scan'];?></a>
 											<p><label class="control-label"><input type="checkbox" name="gambar_hapus" value="<?=  $surat_keluar['berkas_scan']?>" /> Hapus Berkas Lama</label></p>
 										</div>
 									</div>
@@ -55,7 +54,7 @@
 										<input type="text" class="form-control" id="file_path">
 										<input type="file" class="hidden" id="file" name="satuan">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fa fa-search"></i> Browse</button>
+											<button type="button" class="btn btn-info btn-box"  id="file_browser"><i class="fe fe-search"></i> Browse</button>
 										</span>
 									</div>
 									<span class="help-block"><code>(Kosongkan jika tidak ingin mengubah berkas)</code></span>
@@ -83,7 +82,7 @@
 								<div class="col-sm-3">
 									<div class="input-group input-group-sm date">
 										<div class="input-group-addon">
-											<i class="fa fa-calendar"></i>
+											<i class="fe fe-calendar"></i>
 										</div>
 										<input class="form-control input-sm pull-right required" id="tgl_2" name="tanggal_surat" type="text" value="<?= tgl_indo_out($surat_keluar['tanggal_surat'])?>">
 									</div>
@@ -102,9 +101,9 @@
 								</div>
 							</div>
 							<div class='box-footer'>
-								<div class='col-xs-12'>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+								<div class='col-md-12'>
+									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 								</div>
 							</div>
 						</div>

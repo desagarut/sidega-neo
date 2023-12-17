@@ -27,7 +27,7 @@
 								<input type="text" class="form-control" id="file_path2" name="userfile">
 								<input type="file" class="hidden" id="file2" name="userfile">
 								<span class="input-group-btn">
-									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fa fa-search"></i> Browse</button>
+									<button type="button" class="btn btn-info btn-box"  id="file_browser2"><i class="fe fe-search"></i> Browse</button>
 								</span>
 							</div>
 							<p class="help-block small">1. Data yang dibutuhkan untuk Impor dengan memenuhi aturan data sebagai berikut <a href="<?= base_url() ?>assets/import/analisis.xls">Aturan Data</a></p>
@@ -35,8 +35,8 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-						<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+						<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+						<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 					</div>
 				</div>
 			</div>

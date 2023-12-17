@@ -215,20 +215,34 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <div class='col-sm-12'>
-                    <label class="control-label col-sm-2">Warna blok</label>
-                    <div class="col-sm-2">
-                      <div class="input-group my-colorpicker2">
-                        <input type="text" id="warna" name="warna" class="form-control input-sm required" placeholder="#FFFFFF" value="<?= $wil_ini['warna'] ?>">
-                        <div class="input-group-addon input-sm"> <i></i> </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                      <label class="col-md-2 control-label">Warna blok</label>
+                      <div class="col-md-2">
+                        <div class="input-group my-colorpicker2">
+                          <input type="text" id="warna" name="warna" class="form-control input-sm required" placeholder="#FFFFFF" value="<?= $wil_ini['warna'] ?>">
+                          <div class="input-group-addon input-sm"> <i></i> </div>
+                        </div>
+                      </div>
+                    
+                      <label class="col-md-2 control-label" for="zoom"> Zoom </label>
+                      <input type="text" class="col-md-2" width="5px" name="zoom" id="zoom" value="<?= $wil_ini['zoom'] ?>" /><br />
+                      <label class="col-md-2" for="map_tipe"> Map Tipe: </label>
+                      <div class="col-md-2">
+                        <select class="input pull-left" name="map_tipe" id="map_tipe">
+                          <option value="ROADMAP" <?php selected($map_tipe, 'ROADMAP'); ?>>ROADMAP</option>
+                          <option value="SATELLITE" <?php selected($map_tipe, 'SATELLITE'); ?>>SATELLITE</option>
+                          <option value="HYBRID" <?php selected($map_tipe, 'HYBRID'); ?>>HYBRID</option>
+                        </select>
                       </div>
                     </div>
                     <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                      <a href="<?= $tautan['link'] ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeha.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
-                      <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-                      <!--<button type="submit" class="btn btn-social btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fa fa-check'></i> Simpan</button>-->
-                      <button type="submit" class="btn btn-social btn-box btn-info btn-sm"><i class='fa fa-check'></i> Simpan</button>
+                      <button type="reset" class="btn btn-danger btn-sm mb-1" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+                      <!--<button type="submit" class="btn btn-social btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fe fe-check'></i> Simpan</button>-->
+                      <button type="submit" class="btn btn-info btn-sm mb-1"><i class='fe fe-check'></i> Simpan</button>
+                      <a href="#" class="btn btn-success btn-sm mb-1" download="SIDeha.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
                     <?php endif; ?>
+                    <a href="<?= site_url('identitas_desa') ?>" class="btn btn-outline-info btn-sm mb-1" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
                   </div>
                 </div>
               </form>

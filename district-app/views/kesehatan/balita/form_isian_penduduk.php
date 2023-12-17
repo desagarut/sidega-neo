@@ -50,7 +50,7 @@
 			<label for="tanggallahir">Tanggal Lahir</label>
 			<div class="input-group input-group-sm date">
 				<div class="input-group-addon">
-					<i class="fa fa-calendar"></i>
+					<i class="fe fe-calendar"></i>
 				</div>
 				<input class="form-control input-sm pull-right" id="tanggallahir" name="tanggallahir" type="text" value="<?= $penduduk['tanggallahir']?>">
 			</div>
