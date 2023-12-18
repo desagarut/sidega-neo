@@ -3,7 +3,7 @@
 <?php $this->load->view('global/validasi_form'); ?>
 <form id="validasi" action="<?= $form_action; ?>" method="post">
 	<div class="modal-body">
-		<div class="form-group">
+		<div class="form-group row">
 			<label class="control-label" for="pesan">Pesan Singkat Permohonan Surat <?= $judul ?></label>
 			<textarea name="pesan" class="form-control input-sm required" placeholder="Pesan singkat alasan permohonan surat dibatalkan" rows="5"></textarea>
 		</div>

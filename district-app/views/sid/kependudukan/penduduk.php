@@ -219,17 +219,13 @@
 		</div>
 	</div>
 </div>
-<script src="<?= base_url() ?>assets/
-js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/
-js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/
-js/messages_id.js"></script>
-<script src='<?= base_url() ?>assets/
-js/jquery.dataTables.min.js'></script>
-<script src='<?= base_url() ?>assets/
-js/dataTables.bootstrap4.min.js'></script>
-
+<!--
+<script src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/js/validasi.js"></script>
+<script src="<?= base_url() ?>assets/js/messages_id.js"></script>-->
+<script src='<?= base_url() ?>assets/js/jquery.dataTables.min.js'></script>
+<script src='<?= base_url() ?>assets/js/dataTables.bootstrap4.min.js'></script>
+												
 <script>
 	$('#dataTable-1').DataTable({
 		autoWidth: true,

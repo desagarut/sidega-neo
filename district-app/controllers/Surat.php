@@ -31,6 +31,8 @@ class Surat extends Admin_Controller
     public function panduan()
     {
         $this->sub_modul_ini = 33;
+        $data['stat'] = $this->keluar_model->grafik();
+
 
         $this->render('surat/panduan');
     }

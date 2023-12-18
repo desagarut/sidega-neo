@@ -70,7 +70,7 @@ js/mapsJavaScriptAPI.js"></script>-->
 
 <!-- widget Peta Wilayah Desa -->
 
-<div class="mb-4 align-items-center" style="position: relative;">
+<div class="mb-4 align-items-center shadow" style="position: relative;">
   <div class="map-box" style="height:450px; overflow:hidden">
     <div id="peta-desa" style="min-height:450px;"></div>
   </div>

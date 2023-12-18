@@ -21,7 +21,7 @@
   });
 </script>
 
-<div class="form-group tdk-permohonan">
+<div class="form-group row tdk-permohonan">
 	<input type="hidden" name="id_surat" value="<?= $surat['id']?>">
 	<label class="col-sm-3 control-label">Nomor Surat</label>
 	<div class="col-sm-4">
@@ -30,7 +30,7 @@
 	</div>
 	<?php if (! empty($this->setting->format_nomor_surat)): ?>
 		<div class="col-sm-4">
-			<p class="help-block"><em>Format nomor surat: </em><span id="format_nomor"><?= $format_nomor_surat ?></span></p>
+			<p class="help-block"><em>Format nomor surat: </em></br/><span id="format_nomor"><?= $format_nomor_surat ?></span></p>
 		</div>
 	<?php endif; ?>
 </div>
