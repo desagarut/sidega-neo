@@ -17,19 +17,14 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<span class="text-muted sr-only">Action</span>
-								</button>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a href="<?= site_url('keluar/perorangan_clear') ?>">
-										<button type="button" class="dropdown-item btn btn-outline-info btn-sm mb-1"><i class="fe fe-archive"></i> Rekam Surat Perorangan</button>
-									</a>
-									<a href="<?= site_url('keluar/graph') ?>" class="dropdown-item btn btn-outline-info btn-sm mb-1"><i class="fe fe-pie-chart"></i> Pie Surat Keluar</a>
-									<a href="<?= site_url('keluar/dialog_cetak/cetak') ?>" class="dropdown-item btn btn-outline-info btn-sm mb-1" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fe fe-printer"></i> Cetak</a>
-									<a href="<?= site_url('keluar/dialog_cetak/unduh') ?>" class="dropdown-item btn btn-outline-info btn-sm mb-1" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fe fe-download"></i> Unduh</a>
-									<a href="<?= site_url("{$this->controller}/clear") ?>" class="dropdown-item btn btn-outline-info btn-sm mb-1"><i class="fe fe-refresh"></i>Bersihkan</a>
+								<a href="<?= site_url('keluar/perorangan_clear') ?>">
+									<button type="button" class="btn btn-outline-info btn-sm mb-1"><i class="fe fe-archive"></i> Rekam Surat Perorangan</button>
+								</a>
+								<a href="<?= site_url('keluar/graph') ?>" class="btn btn-outline-info btn-sm mb-1"><i class="fe fe-pie-chart"></i> Pie Surat Keluar</a>
+								<a href="<?= site_url('keluar/dialog_cetak/cetak') ?>" class="btn btn-outline-info btn-sm mb-1" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fe fe-printer"></i> Cetak</a>
+								<a href="<?= site_url('keluar/dialog_cetak/unduh') ?>" class="btn btn-outline-info btn-sm mb-1" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fe fe-download"></i> Unduh</a>
+								<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-outline-info btn-sm mb-1"><i class="fe fe-refresh"></i>Bersihkan</a>
 
-								</div>
 							</div>
 						</form>
 					</div>
