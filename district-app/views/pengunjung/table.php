@@ -1,232 +1,243 @@
 <!-- Pengaturan Grafik (Graph) Data Statistik-->
 <script type="text/javascript">
 	var chart;
-	$(document).ready(function()
-	{
-		chart = new Highcharts.Chart(
-		{
-			chart:
-			{
+	$(document).ready(function() {
+		chart = new Highcharts.Chart({
+			chart: {
 				renderTo: 'chart',
 				defaultSeriesType: 'column'
 			},
-			title:
-			{
+			title: {
 				text: ''
 			},
-			xAxis:
-			{
-				title:
-				{
-					text: '<?= ucwords($main['lblx'])?>'
+			xAxis: {
+				title: {
+					text: '<?= ucwords($main['lblx']) ?>'
 				},
-        categories: [
-					<?php foreach ($main['pengunjung']as $data): ?>
-					['<?= ($main['lblx']=='Bulan') ? getBulan($data['Tanggal'])." ".date('Y') : tgl_indo2($data['Tanggal']); ?>', ],
-				<?php endforeach;?>
-					]
+				categories: [
+					<?php foreach ($main['pengunjung'] as $data) : ?>['<?= ($main['lblx'] == 'Bulan') ? getBulan($data['Tanggal']) . " " . date('Y') : tgl_indo2($data['Tanggal']); ?>', ],
+					<?php endforeach; ?>
+				]
 			},
-			yAxis:
-			{
-				title:
-				{
+			yAxis: {
+				title: {
 					text: 'Pengunjung (Orang)'
 				}
 			},
-			legend:
-			{
+			legend: {
 				layout: 'vertical',
-        enabled:false
+				enabled: false
 			},
-			plotOptions:
-			{
-				series:
-				{
-          colorByPoint: true
-        },
-      column:
-			{
-				pointPadding: 0,
-				borderWidth: 0
-			}
-		},
-		series: [
-		{
-			shadow:1,
-			border:1,
-			data: [
-				<?php foreach ($main ['pengunjung']as $data): ?>
-					['<?= ($main['lblx']=='Bulan') ? getBulan($data['Tanggal'])." ".date('Y') : tgl_indo2($data['Tanggal']); ?>',<?= $data['Jumlah']?>],
-				<?php endforeach;?>]
+			plotOptions: {
+				series: {
+					colorByPoint: true
+				},
+				column: {
+					pointPadding: 0,
+					borderWidth: 0
+				}
+			},
+			series: [{
+				shadow: 1,
+				border: 1,
+				data: [
+					<?php foreach ($main['pengunjung'] as $data) : ?>['<?= ($main['lblx'] == 'Bulan') ? getBulan($data['Tanggal']) . " " . date('Y') : tgl_indo2($data['Tanggal']); ?>', <?= $data['Jumlah'] ?>],
+					<?php endforeach; ?>
+				]
 			}]
 		});
 	});
 </script>
 <!-- Highcharts -->
-<script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
-<script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
+<script src="<?= base_url() ?>assets/js/highcharts/exporting.js"></script>
+<script src="<?= base_url() ?>assets/js/highcharts/highcharts-more.js"></script>
 
 <main role="main" class="main-content">
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">
-		<h1>Statistik Pengunjung Website</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?=site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
-			<li class="active">Statistik Pengunjung Website</li>
-		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<form id="mainform" name="mainform" action="" method="post">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-										<div class="row">
-											<div class="col-sm-12">
-												<a href="<?=site_url("pengunjung/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Laporan" target="_blank"><i class="fe fe-printer "></i>Cetak</a>
-												<a href="<?=site_url("pengunjung/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Laporan" target="_blank"><i class="fe fe-printer "></i>Unduh</a>
+				<h5 class="mb-2 page-title">Statistik Pengunjung Website</h5>
+
+				<form id="mainform" name="mainform" action="" method="post">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card shadow">
+								<div class="card-header with-border">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+												<div class="row">
+													<div class="col-sm-12">
+														<a href="<?= site_url("pengunjung/cetak") ?>" class="btn btn-outline-info mb-1" title="Cetak Laporan" target="_blank"><i class="fe fe-printer "></i>Cetak</a>
+														<a href="<?= site_url("pengunjung/unduh") ?>" class="btn btn-outline-info mb-1" title="Unduh Laporan" target="_blank"><i class="fe fe-printer "></i>Unduh</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-4 mb-4">
+											<a href="<?= site_url('pengunjung/detail/1') ?>" class="small-card-footer">
+												<div class="card shadow">
+													<div class="card-body">
+														<div class="row align-items-center">
+															<div class="col">
+																<small class="text-muted mb-1">Today</small>
+																<h3 class="card-title mb-0"><?= ribuan($hari_ini); ?></h3>
+															</div>
+															<div class="col-4 text-right">
+																<div id="gauge1" class="gauge-container"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-4 mb-4">
+											<a href="<?= site_url('pengunjung/detail/2') ?>" class="small-card-footer">
+												<div class="card shadow">
+													<div class="card-body">
+														<div class="row align-items-center">
+															<div class="col">
+																<small class="text-muted mb-1">Yesterday</small>
+																<h3 class="card-title mb-0"><?= ribuan($kemarin); ?></h3>
+															</div>
+															<div class="col-4 text-right">
+																<div id="gauge2" class="gauge-container"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-4 mb-4">
+											<a href="<?= site_url('pengunjung/detail/3') ?>" class="small-card-footer">
+												<div class="card shadow">
+													<div class="card-body">
+														<div class="row align-items-center">
+															<div class="col">
+																<small class="text-muted mb-1">This week</small>
+																<h3 class="card-title mb-0"><?= ribuan($minggu_ini); ?></h3>
+															</div>
+															<div class="col-4 text-right">
+																<div id="gauge3" class="gauge-container"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-4 mb-4">
+											<a href="<?= site_url('pengunjung/detail/4') ?>" class="small-card-footer">
+												<div class="card shadow">
+													<div class="card-body">
+														<div class="row align-items-center">
+															<div class="col">
+																<small class="text-muted mb-1">This Month</small>
+																<h3 class="card-title mb-0"><?= ribuan($bulan_ini); ?></h3>
+															</div>
+															<div class="col-4 text-right">
+																<div id="gauge4" class="gauge-container"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-4 mb-4">
+											<a href="<?= site_url('pengunjung/detail/5') ?>" class="small-card-footer">
+												<div class="card shadow">
+													<div class="card-body">
+														<div class="row align-items-center">
+															<div class="col">
+																<small class="text-muted mb-1">This Year</small>
+																<h3 class="card-title mb-0"><?= ribuan($tahun_ini); ?></h3>
+															</div>
+															<div class="col-4 text-right">
+																<div id="gauge5" class="gauge-container"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-4 mb-4">
+											<a href="<?= site_url('pengunjung/detail') ?>" class="small-card-footer">
+												<div class="card shadow">
+													<div class="card-body">
+														<div class="row align-items-center">
+															<div class="col">
+																<small class="text-muted mb-1">All</small>
+																<h3 class="card-title mb-0"><?= ribuan($jumlah); ?></h3>
+															</div>
+															<div class="col-4 text-right">
+																<div id="gauge6" class="gauge-container"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="card-header mb-4">
+										<hr>
+										<h4 class="text-center"><strong>Statistik Pengunjung Website <?= $main['judul'] ?><strong></h4>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="row">
+												<div class="col-md-8">
+													<div class="card card-shadow">
+														<!-- Ini Grafik -->
+														<br>
+														<div id="chart"> </div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="card card-shadow">
+														<!-- Tabel Data -->
+														<div class="table-responsive">
+															<table class="table table-bordered table-striped table-hover nowrap">
+																<thead class="text-muted">
+																	<tr>
+																		<th class="text-center" width='5%'>No</th>
+																		<th class="text-center"><?= $main['lblx'] ?></th>
+																		<th class="text-center">Pengunjung (Orang)</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<?php $no = 1; ?>
+																	<?php foreach ($main['pengunjung'] as $data) :	?>
+																		<tr>
+																			<td class="text-center"><?= $no++; ?></td>
+																			<td class="text-center">
+																				<?= ($main['lblx'] == 'Bulan') ? getBulan($data['Tanggal']) . " " . date('Y') : tgl_indo2($data['Tanggal']); ?>
+																			</td>
+																			<td class="text-center"><?= ribuan($data['Jumlah']); ?></td>
+																		</tr>
+																	<?php endforeach; ?>
+																</tbody>
+																<tfoot class="bg-gray disabled color-palette">
+																	<tr>
+																		<th colspan="2" class="text-center">Total</th>
+																		<th class="text-center"><?= ribuan($main['Total']); ?></th>
+																	</tr>
+																</tfoot>
+															</table>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="box-body">
-							<div class="row">
-								<div class="col-lg-2 col-xs-6">
-									<div class="small-box bg-red">
-										<div class="inner">
-										  <h3><?= ribuan($hari_ini); ?><sup style="font-size: 20px"></sup></h3>
-										  <p>Hari Ini</p>
-										</div>
-										<div class="icon">
-											<i class="ion ion-stats-bars"></i>
-										</div>
-											<a href="<?=site_url('pengunjung/detail/1')?>" class="small-box-footer">Detail <i class="fe fe-arrow-circle-right"></i></a>
-									  </div>
-								</div>
-								<div class="col-lg-2 col-xs-6">
-									<div class="small-box bg-purple">
-										<div class="inner">
-										  <h3><?= ribuan($kemarin); ?><sup style="font-size: 20px"></sup></h3>
-										  <p>Kemarin</p>
-										</div>
-										<div class="icon">
-											<i class="ion ion-stats-bars"></i>
-										</div>
-											<a href="<?=site_url('pengunjung/detail/2')?>" class="small-box-footer">Detail <i class="fe fe-arrow-circle-right"></i></a>
-									  </div>
-								</div>
-								<div class="col-lg-2 col-xs-6">
-									<div class="small-box bg-green">
-										<div class="inner">
-										  <h3><?= ribuan($minggu_ini); ?><sup style="font-size: 20px"></sup></h3>
-										  <p>Minggu Ini</p>
-										</div>
-										<div class="icon">
-										  <i class="ion ion-stats-bars"></i>
-										</div>
-											<a href="<?=site_url('pengunjung/detail/3')?>" class="small-box-footer">Detail <i class="fe fe-arrow-circle-right"></i></a>
-									  </div>
-								</div>
-								<div class="col-lg-2 col-xs-6">
-									<div class="small-box bg-yellow">
-										<div class="inner">
-										  <h3><?= ribuan($bulan_ini); ?><sup style="font-size: 20px"></sup></h3>
-										  <p>Bulan Ini</p>
-										</div>
-										<div class="icon">
-										  <i class="ion ion-stats-bars"></i>
-										</div>
-											<a href="<?=site_url('pengunjung/detail/4')?>" class="small-box-footer">Detail <i class="fe fe-arrow-circle-right"></i></a>
-									  </div>
-								</div>
-								<div class="col-lg-2 col-xs-6">
-									<div class="small-box bg-gray">
-										<div class="inner">
-										  <h3><?= ribuan($tahun_ini); ?><sup style="font-size: 20px"></sup></h3>
-										  <p>Tahun Ini</p>
-										</div>
-										<div class="icon">
-										  <i class="ion ion-stats-bars"></i>
-										</div>
-											<a href="<?=site_url('pengunjung/detail/5')?>" class="small-box-footer">Detail <i class="fe fe-arrow-circle-right"></i></a>
-									  </div>
-								</div>
-								<div class="col-lg-2 col-xs-6">
-									<div class="small-box bg-blue">
-										<div class="inner">
-										  <h3><?= ribuan($jumlah); ?><sup style="font-size: 20px"></sup></h3>
-										  <p>Jumlah</p>
-										</div>
-										<div class="icon">
-										  <i class="ion ion-stats-bars"></i>
-										</div>
-											<a href="<?=site_url('pengunjung/detail/')?>" class="small-box-footer">Detail <i class="fe fe-arrow-circle-right"></i></a>
-									  </div>
-								</div>
-							</div>
-							<div class="box-header">
-								<hr>
-								<h4 class="text-center"><strong>Statistik Pengunjung Website <?= $main['judul'] ?><strong></h4>
-								<hr>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="row">
-										<div class="col-md-8">
-											<div class="card card-shadow">
-												<!-- Ini Grafik -->
-												<br>
-												<div id="chart"> </div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="card card-shadow">
-											<!-- Tabel Data -->
-												<div class="table-responsive">
-													<table class="table table-bordered table-striped table-hover nowrap">
-														<thead class="bg-gray">
-															<tr>
-																<th class="text-center" width='5%'>No</th>
-																<th class="text-center"><?= $main['lblx']?></th>
-																<th class="text-center">Pengunjung (Orang)</th>
-															</tr>
-														</thead>
-														<tbody>
-														<?php $no = 1; ?>
-														<?php foreach ($main['pengunjung'] as $data):	?>
-															<tr>
-																<td class="text-center"><?= $no++;?></td>
-																<td class="text-center">
-																	<?= ($main['lblx']=='Bulan') ? getBulan($data['Tanggal'])." ".date('Y') : tgl_indo2($data['Tanggal']); ?>
-																</td>
-																<td class="text-center"><?= ribuan($data['Jumlah']);?></td>
-															</tr>
-														<?php endforeach;?>
-														</tbody>
-														<tfoot class="bg-gray disabled color-palette">
-															<tr>
-																<th colspan="2" class="text-center">Total</th>
-																<th class="text-center"><?= ribuan($main['Total']);?></th>
-															</tr>
-														</tfoot>
-													</table>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div>									
-							</div>
-						</div>
 					</div>
-				</div>
+				</form>
 			</div>
-		</form>
-	</section>
-</div>
+		</div>
+	</div>
+</main>

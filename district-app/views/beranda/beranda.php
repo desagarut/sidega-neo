@@ -8,7 +8,7 @@
 					<div class="col">
 						<h2 class="h5 page-title">Selamat Datang <?= $nama ?>!</h2>
 					</div>
-					<div class="col-auto">
+					<!--<div class="col-auto">
 						<form class="form-inline">
 							<div class="form-group d-none d-lg-inline">
 								<label for="reportrange" class="sr-only">Date Ranges</label>
@@ -21,7 +21,7 @@
 								<button type="button" class="btn btn-sm mr-2"><span class="fe fe-filter fe-16 text-muted"></span></button>
 							</div>
 						</form>
-					</div>
+					</div>-->
 				</div>
 				<?php $this->load->view('beranda/kependudukan.php'); ?>
 
