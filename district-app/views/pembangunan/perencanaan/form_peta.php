@@ -70,7 +70,7 @@
         <?php $this->load->view('pembangunan/menu'); ?>
       </div>
       <div class="col-md-9">
-        <div class="card card-shadow">
+        <div class="card shadow">
           <form action="<?= $form_action ?>" method="post" id="validasi" enctype="multipart/form-data">
             <div class="box-header">
               <h4>Lokasi Usulan Kegiatan : <?= $lokasi_pembangunan->nama_program_kegiatan ?></h4>
@@ -97,7 +97,7 @@
                 </div>
               </div>
               <div class="box-footer text-right">
-                <div class="col-sm-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-box bg-purple btn-sm" title="Kembali"> Kembali</a>
+                <div class="col-sm-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-boxbtn-outline-info btn-sm" title="Kembali"> Kembali</a>
                   <?php if ($this->CI->cek_hak_akses('h')) : ?>
                     <a href="#" class="btn btn-box btn-success btn-sm" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
                     <button type="reset" class="btn btn-box btn-danger btn-sm"><i class='fe fe-sign-out'></i> Tutup</button>

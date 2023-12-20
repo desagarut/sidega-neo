@@ -4,7 +4,7 @@
   <!-- Post -->
   <div class="post">
     <div class="user-block">
-      <div class="box-header with-border"><strong>BIODATA PENDUDUK</strong>
+      <div class="card-header"><strong>BIODATA PENDUDUK</strong>
         <div class="text-right">
           <a href="<?= site_url("mandiri_web/cetak_biodata/$penduduk[id]"); ?>" target="_blank">
             <button type="button" class="btn btn-success btn-sm">Cetak Biodata</button>

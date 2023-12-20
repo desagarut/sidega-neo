@@ -16,7 +16,7 @@
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<div class="box-header">
 							<?php if ($persil_detail["id"]): ?>
 								<h4 class="text-center"><strong>Sebab Dan Tanggal Perubahan Persil <?= $persil_detail["nopersil"] ?> / Letter-C <?= $persil_detail["letterc"] ?></strong></h4>
@@ -87,10 +87,10 @@
 								</div>
 							</div>
 						</div>	
-						<div class='box-footer'>
-							<div class='col-md-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
+						<div class="card-footer">
+							<div class="col-md-12">
+								<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</form>

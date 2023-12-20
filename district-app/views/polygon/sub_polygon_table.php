@@ -17,13 +17,13 @@
           <?php $this->load->view('plan/nav.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="<?= site_url("polygon/ajax_add_sub_polygon/$polygon[id]")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Kategori <?= $polygon['nama']?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Kategori <?= $polygon['nama']?>">
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="<?= site_url("polygon/ajax_add_sub_polygon/$polygon[id]")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Kategori <?= $polygon['nama']?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Kategori <?= $polygon['nama']?>">
 								<i class="fe fe-plus"></i>Tambah Kategori <?= $polygon['nama']?>
             	</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("polygon/delete_all_sub_polygon/$polygon[id]")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-							<a href="<?= site_url("polygon")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("polygon/delete_all_sub_polygon/$polygon[id]")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="<?= site_url("polygon")?>" class="btn btn-info btn-sm btn-sm ">
 								<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Tipe Area
             	</a>
 						</div>

@@ -9,12 +9,12 @@
 		});
 	});
 </script>
-<div class="card card-shadow">
-  <div class="box-header with-border">
-		<a href='<?= site_url("{$this->controller}/form")?>' title="Tambah Surat Keluar Baru" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Surat Keluar Baru</a>
-		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Keluar"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o")?>" title="Unduh Agenda Surat Keluar" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Keluar"><i class="fe fe-download"></i> Unduh</a>
+<div class="card shadow">
+  <div class="card-header">
+		<a href='<?= site_url("{$this->controller}/form")?>' title="Tambah Surat Keluar Baru" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Surat Keluar Baru</a>
+		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Keluar"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o")?>" title="Unduh Agenda Surat Keluar" class="btn bg-navy btn-sm " title="Unduh Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Keluar"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="box-body">
 		<div class="row">
@@ -82,7 +82,7 @@
 													<td class="nostretch">
 														<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
 														<?php if ($data['berkas_scan']): ?>
-															<a href='<?= site_url("{$this->controller}/unduh_berkas_scan/$data[id]")?>' class="btn bg-purple btn-box btn-sm" title="Unduh Berkas Surat" target="_blank"><i class="fe fe-download"></i></a>
+															<a href='<?= site_url("{$this->controller}/unduh_berkas_scan/$data[id]")?>' class="btn btn-outline-info btn-sm" title="Unduh Berkas Surat" target="_blank"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
 														<?php if ($data['ekspedisi']): ?>
 															<a href='<?= site_url("ekspedisi/index/")?>' class="btn bg-info btn-box btn-sm" title="Buku Ekspedisi"><i class="fe fe-envelope-open"></i></a>

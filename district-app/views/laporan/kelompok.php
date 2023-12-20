@@ -14,10 +14,10 @@
 		<div class="row">
 			<div class="col-md-12">
 				<form id="mainform" name="mainform" action="<?= site_url('laporan/bulan')?>" method="post" class="form-horizontal">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url("laporan_rentan/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fe fe-printer "></i> Cetak</a>
-							<a href="<?= site_url("laporan_rentan/excel/$lap")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fa  fa-download"></i> Unduh</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url("laporan_rentan/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "  target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("laporan_rentan/excel/$lap")?>" class="btn bg-navy btn-sm "  target="_blank"><i class="fa  fa-download"></i> Unduh</a>
 						</div>
 						<div class="box-header  with-border">
 							<h4 class="text-center"><strong>PEMERINTAH KABUPATEN <?= strtoupper($config['nama_kabupaten'])?></strong></h4>

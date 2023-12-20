@@ -1,5 +1,5 @@
 <div id="penduduk" class="box box-info">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Pengaturan Analisis</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -15,7 +15,7 @@
 	</div>
 </div>
 <div id="penduduk" class="box box-info">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Input Data Analisis</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -28,7 +28,7 @@
 	</div>
 </div>
 <div id="penduduk" class="box box-info">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Laporan Analisis</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>

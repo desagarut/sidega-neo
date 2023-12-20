@@ -23,11 +23,11 @@
 				<?php $this->load->view('kesehatan/bumil/menu') ?>
 			</div>
 			<div class="col-md-10">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
-						<a href="<?= site_url("kesehatan_bumil/form_bumil") ?>" title="Tambah Data Bumil" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Data Bumil</a>
-						<a href="<?= site_url("kesehatan_bumil/daftar/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
-						<a href="<?= site_url("kesehatan_bumil/daftar/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url("kesehatan_bumil/form_bumil") ?>" title="Tambah Data Bumil" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Data Bumil</a>
+						<a href="<?= site_url("kesehatan_bumil/daftar/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
+						<a href="<?= site_url("kesehatan_bumil/daftar/unduh") ?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh</a>
 						<a href="<?= site_url("kesehatan_bumil/pantau") ?>" class="btn btn-box btn-info btn-sm" title="Pemantauan Bumil">Ke Pemantauan Bumil</a>
 					</div>
 					<div class="card-body">

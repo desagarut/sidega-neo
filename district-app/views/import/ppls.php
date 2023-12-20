@@ -1,7 +1,7 @@
 										<div class="tab-pane <?php if ($act_tab==2): ?> active<?php endif ?>">
 											<div class="row">
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Impor Data PPLS</strong></h3>
 													</div>
 													<div class="box-body">
@@ -23,8 +23,8 @@
 																			<li>Pastikan format excel ber-ekstensi .xls format Excel 2003</li>
 																			<li>Data yang dibutuhkan untuk Impor dengan memenuhi aturan data berikut
 																				<div class="timeline-footer row">
-																					<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ATURANDATA.xls"><i class="fe fe-download"></i>Unduh Aturan data</a>
-																					<a class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block margin" href="<?= base_url()?>assets/import/ContohFormat.xls" ><i class="fe fe-download"></i>Unduh Contoh Urutan Format</a>
+																					<a class="btn btn-info btn-sm  margin" href="<?= base_url()?>assets/import/ATURANDATA.xls"><i class="fe fe-download"></i>Unduh Aturan data</a>
+																					<a class="btn btn-info btn-sm  margin" href="<?= base_url()?>assets/import/ContohFormat.xls" ><i class="fe fe-download"></i>Unduh Contoh Urutan Format</a>
 																				</div>
 																			</li>
 																		</ol>

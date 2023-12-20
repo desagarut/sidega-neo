@@ -15,9 +15,9 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
-						<a href="<?= site_url()?>lembaga" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar lembaga</a>
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url()?>lembaga" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar lembaga</a>
 					</div>
 					<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class="box-body">
@@ -64,8 +64,8 @@
 						</div>
 						<div class="box-footer">
 							<div class="col-xs-12">
-								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
+								<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+								<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</form>

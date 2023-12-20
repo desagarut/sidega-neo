@@ -117,10 +117,10 @@
 									<textarea name="keterangan" class="form-control input-sm" placeholder="Keterangan" rows="3" style="resize:none;"><?= $surat_keluar['keterangan']?></textarea>
 								</div>
 							</div>
-							<div class='box-footer'>
-								<div class='col-md-12'>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
+							<div class="card-footer">
+								<div class="col-md-12">
+									<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+									<button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 								</div>
 							</div>
 						</div>

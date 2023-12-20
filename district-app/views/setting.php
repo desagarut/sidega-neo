@@ -3,8 +3,8 @@
 	<div class="modal-body" id="maincontent">
 		<div class="row">
 			<div class="col-md-3">
-				<div class="box box-primary">
-					<div class="box-body box-profile">
+				<div class="card shadow">
+					<div class="card-body card-profile">
 						<?php if ($main['foto']): ?>
 							<img class="profile-user-img img-responsive img-circle" src="<?=AmbilFoto($main['foto'])?>" alt="Foto">
 						<?php else: ?>
@@ -53,8 +53,8 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-			<button id="btnSubmit" type="submit" class="btn btn-social btn-box btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
+			<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+			<button id="btnSubmit" type="submit" class="btn btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
 		</div>
 	</div>
 </form>

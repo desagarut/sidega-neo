@@ -11,7 +11,7 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?=site_url('program_bantuan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+						<a href="<?=site_url('program_bantuan')?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 					</div>
 					<div class="box-body">
 						<h4>Keterangan</h4>

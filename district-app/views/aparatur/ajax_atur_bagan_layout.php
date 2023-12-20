@@ -6,7 +6,7 @@
 </style>
 <form id="validasi" action="<?=site_url('setting/update')?>" method="POST" class="form-horizontal">
 	<div id="atur_bagan" class='modal-body'>
-		<div class="box box-primary">
+		<div class="card shadow">
 			<div class="box-body">
 				<?php foreach ($this->$list_setting as $setting): ?>
 					<?php if ($setting->kategori != 'development' OR ($this->config->item("environment") == 'development' )): ?>
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
+		<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+		<button type="submit" class="btn btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 	</div>
 </form>

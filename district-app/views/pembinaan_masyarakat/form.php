@@ -10,8 +10,8 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
-						<a href="<?= site_url("pembinaan_masyarakat/detail/$detail[id]")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
+						<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-primary btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+						<a href="<?= site_url("pembinaan_masyarakat/detail/$detail[id]")?>" class="btn btn-info btn-sm " title="Kembali Ke Rincian Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -39,7 +39,7 @@
 										<div class="row">
 											<div class="col-sm-6">
 												<div class="box box-info box-solid">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<i class="fe fe-user"></i>
 														<h3 class="box-title">Konfirmasi Peserta</h3>
 													</div>
@@ -51,7 +51,7 @@
 										</form>
 										<div class="col-sm-6">
 											<div class="box box-success box-solid">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<i class="fe fe-credit-card"></i>
 													<h3 class="box-title">Identitas Pada Kartu/Sertifikat Peserta</h3>
 												</div>
@@ -115,8 +115,8 @@
 														</div>
 													</div>
 													<div class="box-footer">
-														<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-														<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
+														<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+														<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 													</div>
 												</form>
 											</div>

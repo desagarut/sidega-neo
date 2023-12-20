@@ -19,9 +19,9 @@
 		<form action="<?= $form_action; ?>" method="post" id="validasi" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-9">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url('admin_pembangunan') ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Pembangunan</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url('admin_pembangunan') ?>" class="btn btn-social btn-flat btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Pembangunan</a>
 						</div>
 						<div class="box-body">
 							<div class="form-group">
@@ -145,8 +145,8 @@
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<h3 class="box-title">Gambar Utama</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>

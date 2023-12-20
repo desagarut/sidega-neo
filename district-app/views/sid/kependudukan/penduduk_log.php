@@ -22,15 +22,15 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<form id="mainform" name="mainform" action="" method="post">
-						<div class="box-header with-border">
+						<div class="card-header">
 							<div class="row">
 								<div class="col-sm-12">
-									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?= site_url("penduduk_log/kembalikan_status_all") ?>')" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
-									<a href="<?= site_url("penduduk_log/cetak/$o") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
-									<a href="<?= site_url("penduduk_log/excel/$o") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
-									<a href="<?= site_url('penduduk/clear') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
+									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?= site_url("penduduk_log/kembalikan_status_all") ?>')" class="btn btn-success btn-sm  hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
+									<a href="<?= site_url("penduduk_log/cetak/$o") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+									<a href="<?= site_url("penduduk_log/excel/$o") ?>" class="btn bg-navy btn-sm " title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
+									<a href="<?= site_url('penduduk/clear') ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
 								</div>
 							</div>
 						</div>
@@ -242,9 +242,9 @@
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini?
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
+					<button type="button" class="btn btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

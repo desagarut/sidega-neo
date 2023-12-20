@@ -20,14 +20,14 @@ table.table th {
           
           <!-- Profile Image -->
           
-          <div class="box box-primary">
-            <div class="box-body box-profile">
+          <div class="card shadow">
+            <div class="card-body card-profile">
               <div align="center">
                 <p class="text-muted text-center"> <small> Assalamu'alaikum,<br/> selamat datang di layanan <?= ucwords($this->setting->sebutan_desa . " " . $desa['nama_desa']); ?>, anda login sebagai </small> </p>
                 <?php if ($penduduk['foto']): ?>
-                <img class="img-responsive img-circle" src="<?= AmbilFoto($penduduk['foto'])?>" alt="Foto Penduduk">
+                <img class="avatar-img rounded-circle" src="<?= AmbilFoto($penduduk['foto'])?>" alt="Foto Penduduk">
                 <?php else: ?>
-                <img class="img-responsive img-circle" src="<?= base_url()?>assets/files/user_pict/kuser.png" alt="Foto Penduduk">
+                <img class="avatar-img rounded-circle" src="<?= base_url()?>assets/files/user_pict/kuser.png" alt="Foto Penduduk">
                 <?php endif; ?>
                 <h3 class="profile-username text-center">
                   <h5 style="color:#06F">
@@ -38,7 +38,7 @@ table.table th {
                   <?= $penduduk['nik']?>
                   </small> </p>
               </div>
-              <small><a href="<?= site_url();?>mandiri_web/mandiri/1/6" class="btn bg-purple btn-block btn-sm"><b>Profil</b></a></small> </div>
+              <small><a href="<?= site_url();?>mandiri_web/mandiri/1/6" class="btnbtn-outline-info btn-block btn-sm"><b>Profil</b></a></small> </div>
             
             <!-- /.box-body --> 
             
@@ -135,8 +135,8 @@ table.table th {
           
           <!-- About Me Box -->
           
-          <div class="box box-primary">
-            <div class="box-header with-border"> <small>
+          <div class="card shadow">
+            <div class="card-header"> <small>
               <h4 class="box-title">Ringkasan</h4>
               </small> </div>
             

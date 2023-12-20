@@ -5,11 +5,11 @@
                       <!-- timeline item -->
                       <ul class="timeline timeline-inverse">
                       <?php foreach ($list_rumah as $key => $data): ?>
-                        <li> <i class="fe fe-camera bg-purple"></i>
+                        <li> <i class="fe fe-camerabtn-outline-info"></i>
                           <div class="timeline-item"> <span class="time"><i class="fe fe-clock-o"></i>diunggah: <?= tgl_indo2($data['tgl_upload']); ?></span>
                             <h3 class="timeline-header"><a href="#"><?= $key + 1; ?>. Foto <?= $data['nama']?></a></h3>
                             <div class="timeline-body" align="center">
-                            	<img class="img-responsive img-circle" src="<?= base_url().LOKASI_RUMAH?><?= urlencode($data['satuan']); ?>" style="max-height:300px" alt="Foto Rumah Penduduk">
+                            	<img class="avatar-img rounded-circle" src="<?= base_url().LOKASI_RUMAH?><?= urlencode($data['satuan']); ?>" style="max-height:300px" alt="Foto Rumah Penduduk">
                                 <p><small>Nama file: <a href="<?= base_url().LOKASI_RUMAH?><?= urlencode($data['satuan']); ?>" target="_blank" >
                                     <?= $data['satuan']; ?>
                                     </a></small></p>

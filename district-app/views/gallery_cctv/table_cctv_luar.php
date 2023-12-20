@@ -25,8 +25,8 @@
 					<?php $this->load->view('gallery_cctv/menu') ?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<h3 class="box-title">CCTV Luar <?= ucfirst($this->setting->sebutan_desa) ?></h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>
@@ -45,10 +45,10 @@
 													<option value="1" <?php if ($filter == 1) : ?>selected<?php endif ?>>Aktif</option>
 													<option value="2" <?php if ($filter == 2) : ?>selected<?php endif ?>>Tidak Aktif</option>
 												</select>
-												<a href="<?= site_url("gallery_cctv/form") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Artikel">
+												<a href="<?= site_url("gallery_cctv/form") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Artikel">
 													<i class="fe fe-plus"></i> Tambah CCTV
 												</a>
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_cctv/delete_all/$p/$o") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_cctv/delete_all/$p/$o") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 
 											</div>
 											<div class="col-sm-6">
@@ -108,7 +108,7 @@
 																	<td>
 																		<a href="<?= site_url("gallery_cctv/urut/$data[id]/1") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a>
 																		<a href="<?= site_url("gallery_cctv/urut/$data[id]/2") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
-																		<a href="<?= site_url("gallery_cctv/sub_gallery/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Album"><i class="fe fe-bars"></i></a></br>
+																		<a href="<?= site_url("gallery_cctv/sub_gallery/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Rincian Album"><i class="fe fe-bars"></i></a></br>
 																		<a href="<?= site_url("gallery_cctv/form/$p/$o/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																		<?php if ($data['slider'] == '1') : ?>
 																			<a href="<?= site_url("gallery_cctv/slider_off/" . $data['id']) ?>" class="btn bg-maroon btn-box btn-sm" title="Keluarkan Dari Slider"><i class="fe fe-play"></i></a>

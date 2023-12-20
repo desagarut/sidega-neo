@@ -22,7 +22,7 @@
 </script>
 <form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 	<div class='modal-body'>
-		<div class="box-header with-border">
+		<div class="card-header">
 			<h3 class="box-title">Rincian Program</h3>
 		</div>
 		<div class="box-body">
@@ -43,7 +43,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="box-header with-border">
+		<div class="card-header">
 			<h3 class="box-title">Identitas Pada Kartu Peserta</h3>
 		</div>
 		<div class="box-body">
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
+		<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+		<button type="submit" class="btn btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 	</div>
 </form>

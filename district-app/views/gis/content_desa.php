@@ -7,7 +7,7 @@
 		</center>
 		<div id="bodyContent">
 			<p>
-				<center><a href="#collapseStatGraph" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Statistik Penduduk" data-toggle="collapse" data-target="#collapseStatGraph" aria-expanded="false" aria-controls="collapseStatGraph"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Statistik Penduduk&nbsp;&nbsp;</a></center>
+				<center><a href="#collapseStatGraph" class="btn bg-navy btn-sm " title="Statistik Penduduk" data-toggle="collapse" data-target="#collapseStatGraph" aria-expanded="false" aria-controls="collapseStatGraph"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Statistik Penduduk&nbsp;&nbsp;</a></center>
 			</p>
 			<div class="collapse box-body no-padding" id="collapseStatGraph">
 				<div class="card card-body">
@@ -17,10 +17,10 @@
 				</div>
 			</div>
 			<p>
-				<center><a href="<?= site_url("load_aparatur_desa"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-title="Aparatur <?= ucwords($this->setting->sebutan_desa) ?>" data-remote="false" data-toggle="modal" data-target="#modalKecil"><i class="fe fe-user"></i>&nbsp;&nbsp;Aparatur <?= ucwords($this->setting->sebutan_desa) ?>&nbsp;&nbsp;</a></center>
+				<center><a href="<?= site_url("load_aparatur_desa"); ?>" class="btn bg-navy btn-sm " data-title="Aparatur <?= ucwords($this->setting->sebutan_desa) ?>" data-remote="false" data-toggle="modal" data-target="#modalKecil"><i class="fe fe-user"></i>&nbsp;&nbsp;Aparatur <?= ucwords($this->setting->sebutan_desa) ?>&nbsp;&nbsp;</a></center>
 			</p>
 			<p>
-				<center><a href="<?= site_url("load_apbdes"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-title="Laporan APBDES 2019 - Grafik" data-remote="false" data-toggle="modal" data-target="#modalSedang"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Grafik Keuangan&nbsp;&nbsp;</a></center>
+				<center><a href="<?= site_url("load_apbdes"); ?>" class="btn bg-navy btn-sm " data-title="Laporan APBDES 2019 - Grafik" data-remote="false" data-toggle="modal" data-target="#modalSedang"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Grafik Keuangan&nbsp;&nbsp;</a></center>
 			</p>
 		</div>
 	</div>

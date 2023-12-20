@@ -127,7 +127,7 @@
 							return `
 						<div class="btn-group mb-2 mr-2">
 						<a href="<?= site_url('desa_dpurpp/info_desa_dpurpp/'); ?>${data.id}" target="_blank" title="Lihat Usulan"><button type="button" class="btn btn-success">Lihat</button></a>
-							<button type="button" class="btn  btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+							<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="<?= site_url('desa_dpurpp/form/'); ?>${data.id}">Edit Data RPJM</a>
 								<a class="dropdown-item" href="<?= site_url('desa_dpurpp/lokasi_maps/'); ?>${data.id}">Peta lokasi</a>

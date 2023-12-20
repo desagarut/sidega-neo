@@ -24,9 +24,9 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -173,9 +173,9 @@
 											Apakah Anda yakin ingin mengarsipkan data ini?
 										</div>
 										<div class='modal-footer'>
-											<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+											<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 											<a class='btn-ok'>
-												<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fe fe-file-archive-o'></i> Arsipkan</button>
+												<button type="button" class="btn btn-danger btn-sm" id="ok-delete"><i class='fe fe-file-archive-o'></i> Arsipkan</button>
 											</a>
 										</div>
 									</div>

@@ -13,14 +13,14 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
+		<div class="card shadow">
+			<div class="card-header">
 				<?php if ($this->CI->cek_hak_akses('h')): ?>
-                <a href="<?= site_url("rtm/ajax_add_anggota/$kk")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Rumah Tangga" title="Tambah Anggota Dari Penduduk Yang Sudah Ada" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i> Tambah Anggota</a>
-				<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all_anggota/$kk")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+                <a href="<?= site_url("rtm/ajax_add_anggota/$kk")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Rumah Tangga" title="Tambah Anggota Dari Penduduk Yang Sudah Ada" class="btn btn-success btn-sm "><i class='fe fe-plus'></i> Tambah Anggota</a>
+				<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all_anggota/$kk")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 				<?php endif;?>
 
-                <a href="<?= site_url("rtm/kartu_rtm/$kk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-book"></i> Kartu Rumah Tangga</a>
+                <a href="<?= site_url("rtm/kartu_rtm/$kk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-book"></i> Kartu Rumah Tangga</a>
 				<a href="<?= site_url("rtm/clear")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Rumah Tangga">
 					<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Rumah Tangga
 				</a>

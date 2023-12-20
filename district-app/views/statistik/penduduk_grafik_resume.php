@@ -159,7 +159,7 @@
 </style>
 
 <div class="box box-danger">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title"> Grafik <?= $heading ?></h3>
 		<div class="box-tools pull-right">
 			<div class="btn-group-xs">
@@ -176,7 +176,7 @@
 </div>
 
 <div class="box box-danger">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Tabel <?= $heading ?></h3>
 	</div>
 	<div class="box-body">

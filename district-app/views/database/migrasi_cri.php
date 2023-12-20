@@ -1,7 +1,7 @@
 										<div class="tab-pane <?php if ($act_tab==5): ?>active<?php endif ?>">
 											<div class="row">
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Migrasi Database Ke SIDeGa <?=AmbilVersi()?></strong></h3>
 													</div>
 													<div class="box-body">

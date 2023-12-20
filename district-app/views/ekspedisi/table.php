@@ -9,10 +9,10 @@
 		});
 	});
 </script>
-<div class="card card-shadow">
-  <div class="box-header with-border">
-		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o")?>" title="Unduh Buku Ekspedisi" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fe fe-download"></i> Unduh</a>
+<div class="card shadow">
+  <div class="card-header">
+		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o")?>" title="Unduh Buku Ekspedisi" class="btn bg-navy btn-sm " title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="box-body">
 		<div class="row">
@@ -74,7 +74,7 @@
 													<td class="nostretch">
 														<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
 														<?php if ($data['tanda_terima']): ?>
-															<a href='<?= site_url("{$this->controller}/unduh_tanda_terima/$data[id]")?>' class="btn bg-purple btn-box btn-sm" title="Unduh Tanda Terima" target="_blank"><i class="fe fe-download"></i></a>
+															<a href='<?= site_url("{$this->controller}/unduh_tanda_terima/$data[id]")?>' class="btn btn-outline-info btn-sm" title="Unduh Tanda Terima" target="_blank"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
 														<a href="<?= site_url("{$this->controller}/bukan_ekspedisi/$p/$o/$data[id]")?>" class="btn bg-olive btn-box btn-sm" title="Keluarkan dari Buku Ekspedisi"><i class="fe fe-undo"></i></a>
 													</td>

@@ -14,12 +14,12 @@
 
 <div class="content-wrapper">
   <section class='content' id="maincontent">
-    <div class='row'>
-      <div class='col-md-12'>
+    <div class="row">
+      <div class="col-md-12">
         <div class="box box-info" style="margin-top: 10px;">
           <div class="box-body">
             <form class="contact_form" id="validasi" action="<?= site_url('permohonan_surat/form/' . $permohonan[id]) ?>" method="POST" enctype="multipart/form-data">
-              <div class="box-header with-border"> <span><strong>LAYANAN PERMOHONAN SURAT</strong></span>
+              <div class="card-header"> <span><strong>LAYANAN PERMOHONAN SURAT</strong></span>
                 <input type="hidden" name="pemohon" value="<?= $_SESSION['nama'] ?>" />
                 <input type="hidden" readonly="readonly" name="nik" value="<?= $_SESSION['nik'] ?>" />
                 <input type="hidden" id="id_permohonan" name="id_permohonan" value="<?= $permohonan['id'] ?>" />
@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="box box-info" style="margin-top: 10px;">
-                <div class="box-header with-border">
+                <div class="card-header">
                   <h4 class="box-title">Lengkapi Dokumen</h4>
                   <div class="box-tools">
                     <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fe fe-minus"></i></button>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="box-footer">
                   <div class="col-xs-12">
-                    <button type="reset" class="btn btn-social btn-box btn-danger btn-sm invisible"><i class="fe fe-times"></i> Batal</button>
+                    <button type="reset" class="btn btn-danger btn-sm invisible"><i class="fe fe-times"></i> Batal</button>
                     <button type="submit" class="btn btn-primary pull-right" id="isi_form"><i class="fe fe-sign-in"></i> Isi Form</button>
                   </div>
                 </div>
@@ -107,14 +107,14 @@
           </div>
         </div>
         <div class="box box-info" style="margin-top: 10px;">
-          <div class="box-header with-border">
+          <div class="card-header">
             <h4 class="box-title">Dokumen tersedia</h4>
             <div class="box-tools">
               <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#dokumen"><i class="fe fe-minus"></i></button>
             </div>
           </div>
           <div class="box-body">
-            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fe fe-plus'></i>Tambah Dokumen</button>
+            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn bg-olive btn-sm " id="tambah_dokumen"><i class='fe fe-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
                 <thead>
@@ -147,7 +147,7 @@
         <p id="kata_peringatan"></p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+        <button class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>
@@ -223,8 +223,8 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-          <button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="upload_btn"><i class='fe fe-check'></i> Simpan</button>
+          <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+          <button type="submit" class="btn btn-info btn-sm" id="upload_btn"><i class='fe fe-check'></i> Simpan</button>
         </div>
       </form>
     </div>

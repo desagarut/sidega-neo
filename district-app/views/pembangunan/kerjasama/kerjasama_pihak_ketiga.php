@@ -133,7 +133,7 @@
 						return `
 						<div class="btn-group mb-2 mr-2">
 						<a href="<?= site_url('pembangunan/detail_kerjasama_pihak_ketiga/'); ?>${data.id}" title="Lihat Detail Program Kegiatan"><button type="button" class="btn btn-info">Lihat</button></a>
-							<button type="button" class="btn  btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+							<button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="<?= site_url('pembangunan/form_kerjasama_pihak_ketiga/'); ?>${data.id}">Ubah</a>
 							</div>

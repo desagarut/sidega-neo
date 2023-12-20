@@ -15,10 +15,10 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-md-12">
-            <div class="card card-shadow">
+            <div class="card shadow">
 
-              <div class="box-header with-border">
-                <a href="<?= site_url('kesehatan_bumil') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Data Bumil</a>
+              <div class="card-header">
+                <a href="<?= site_url('kesehatan_bumil') ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Data Bumil</a>
                 <?php if ($penduduk['id_status'] === '2' or $penduduk['id_status'] === '3') : ?>
                   <a href="#" class="btn btn-social btn-success btn-sm" data-toggle="modal" data-target="#edit-warga">
                     <i class="fe fe-edit"></i>
@@ -27,7 +27,7 @@
                 <?php endif ?>
               </div>
 
-              <div class="box-header with-border">
+              <div class="card-header">
                 <h3 class="box-title">Detil Data Bumil</h3>
               </div>
 
@@ -119,9 +119,9 @@
       </div>
 
       <div class='modal-footer'>
-        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
         <a class='btn-ok'>
-          <button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
+          <button type="submit" class="btn btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
         </a>
       </div>
     </div>

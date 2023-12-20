@@ -30,7 +30,7 @@
   <div class="row">
   <div class="col-md-3">
     <div id="bantuan" class="box box-info">
-      <div class="box-header with-border">
+      <div class="card-header">
         <h3 class="box-title">Kategori Kelompok</h3>
         <div class="box-tools">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-plus"></i></button>
@@ -44,22 +44,22 @@
             <?= $data['kelompok']; ?>
             </a> </li>
           <?php endforeach; ?>
-          <li> <a class="btn btn-box bg-purple btn-sm" href="<?= site_url("kelompok_master/clear"); ?>"><i class="fe fe-plus"></i> Kelola Kategori Kelompok</a> </li>
+          <li> <a class="btn btn-boxbtn-outline-info btn-sm" href="<?= site_url("kelompok_master/clear"); ?>"><i class="fe fe-plus"></i> Kelola Kategori Kelompok</a> </li>
 		<?php endif;?>        
         </ul>
       </div>
     </div>
   </div>
   <div class="col-md-9">
-  <div class="card card-shadow">
-  <div class="box-header with-border"> 
+  <div class="card shadow">
+  <div class="card-header"> 
   	<?php if ($this->CI->cek_hak_akses('h')): ?>
-    <a href="<?= site_url('kelompok/form'); ?>" title="Tambah kelompok Baru" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Kelompok Baru</a> 
-    <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_all"); ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> 
+    <a href="<?= site_url('kelompok/form'); ?>" title="Tambah kelompok Baru" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Kelompok Baru</a> 
+    <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_all"); ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> 
     <?php endif;?>
-    <a href="<?= site_url("kelompok/dialog/cetak"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Kelompok"><i class="fe fe-printer "></i> Cetak</a> 
-    <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fe fe-download"></i> Unduh</a> 
-    <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a> 
+    <a href="<?= site_url("kelompok/dialog/cetak"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Kelompok"><i class="fe fe-printer "></i> Cetak</a> 
+    <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fe fe-download"></i> Unduh</a> 
+    <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> 
 </div>
   <div class="box-body">
   <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -108,7 +108,7 @@
             <td class="padat"><?= ($key + $paging->offset + 1); ?></td>
             
             <td class="aksi">
-            	<a href="<?= site_url("kelompok/anggota/$data[id]"); ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Kelompok"><i class="fe fe-list-ol"></i></a> 
+            	<a href="<?= site_url("kelompok/anggota/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Kelompok"><i class="fe fe-list-ol"></i></a> 
                 <?php if ($this->CI->cek_hak_akses('h')): ?>
                 <a href="<?= site_url("kelompok/form/$p/$o/$data[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data Kelompok"><i class='fe fe-edit'></i></a> 
                 <a href="#" data-href="<?= site_url("kelompok/delete/$data[id]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>

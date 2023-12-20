@@ -11,8 +11,8 @@
     <form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
       <div class="row">
         <div class="col-md-12">
-          <div class="card card-shadow">
-            <div class="box-header with-border"> <a href="<?= site_url('wisata') ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali</a> </div>
+          <div class="card shadow">
+            <div class="card-header"> <a href="<?= site_url('wisata') ?>" class="btn btn-social btn-flat btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali</a> </div>
             <div class="box-body">
               <div class="row">
                 <div class="col-md-12">

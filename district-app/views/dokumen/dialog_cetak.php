@@ -63,8 +63,8 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-			<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="btn-ok" >
+			<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+			<button type="submit" class="btn btn-info btn-sm" id="btn-ok" >
 				<?php if (strpos($form_action, '/cetak') !== false): ?>
 					<i class='fe fe-printer'></i> Cetak
 				<?php else: ?>

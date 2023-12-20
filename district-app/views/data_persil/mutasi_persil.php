@@ -32,12 +32,12 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])."/".$persil['id']?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])."/".$persil['id']?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
 							<i class="fe fe-plus"></i>Tambah Mutasi Persil
 						</a>
-						<a href="<?=site_url('letterc')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
+						<a href="<?=site_url('letterc')?>" class="btn btn-primary btn-sm " title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
 						</a>
-						<a href="<?=site_url('letterc/rincian/'.$letterc[id])?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
+						<a href="<?=site_url('letterc/rincian/'.$letterc[id])?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 						</a>
 					</div>
 					<div class="card-body">
@@ -48,7 +48,7 @@
 										<input type="hidden" name="id" value="<?php echo $this->uri->segment(4) ?>">
 										<div class="row">
 											<div class="col-sm-12">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h3 class="box-title">Rincian Letter-C</h3>
 												</div>
 												<div class="box-body">
@@ -80,7 +80,7 @@
 											</div>
 
 											<div class="col-sm-12">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h3 class="box-title">Rincian Persil</h3>
 												</div>
 												<div class="box-body">
@@ -110,7 +110,7 @@
 											<div class="col-sm-12">
 												<div class="row">
 													<div class="col-sm-9">
-														<div class="box-header with-border">
+														<div class="card-header">
 															<h3 class="box-title">Daftar Mutasi Persil <?= $persil["nomor"]?></h3>
 														</div>
 													</div>
@@ -180,9 +180,9 @@
 										Apakah Anda yakin ingin menghapus data ini?
 									</div>
 									<div class='modal-footer'>
-										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+										<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 										<a class='btn-ok'>
-											<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fe fe-trash-o'></i> Hapus</button>
+											<button type="button" class="btn btn-danger btn-sm" id="ok-delete"><i class='fe fe-trash-o'></i> Hapus</button>
 										</a>
 									</div>
 								</div>

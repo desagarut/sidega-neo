@@ -21,8 +21,8 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url('man_user/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Pengguna Baru</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("man_user/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="<?= site_url('man_user/form')?>" class="btn btn-success btn-sm "><i class="fe fe-plus"></i> Tambah Pengguna Baru</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("man_user/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 					</div>
 					<div class="card-body">
 						<div class="row">

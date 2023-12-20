@@ -1,7 +1,7 @@
 
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="card card-shadow">
+<div class="card shadow">
 	<div class="box-header">
 		<h5 class="box-title">Perencanaan</h5>
 		<div class="box-tools">

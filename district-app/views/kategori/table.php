@@ -27,12 +27,12 @@
           <?php $this->load->view('kategori/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="<?= site_url("kategori/form")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Kategori Baru">
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="<?= site_url("kategori/form")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Kategori Baru">
 								<i class="fe fe-plus"></i>Tambah Kategori Baru
             	</a>
-						  <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("kategori/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						  <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("kategori/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -92,7 +92,7 @@
 																		<td nowrap>
 																			<a href="<?= site_url("kategori/urut/$data[id]/1")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a>
 																			<a href="<?= site_url("kategori/urut/$data[id]/2")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
-																			<a href="<?= site_url("kategori/sub_kategori/$data[id]")?>" class="btn bg-purple btn-box btn-sm"  title="Sub Kategori"><i class="fe fe-bars"></i></a>
+																			<a href="<?= site_url("kategori/sub_kategori/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Sub Kategori"><i class="fe fe-bars"></i></a>
 																			<a href="<?= site_url("kategori/form/$data[id]")?>" class="btn btn-warning btn-box btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
 																			<?php if ($data['enabled'] == '2'): ?>
 																				<a href="<?= site_url("kategori/kategori_lock/".$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fe fe-lock">&nbsp;</i></a>

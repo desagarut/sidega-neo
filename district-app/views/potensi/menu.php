@@ -1,6 +1,6 @@
 
-<div class="card card-shadow">
-	<div class="box-header with-border">
+<div class="card shadow">
+	<div class="card-header">
 		<h3 class="box-title">Potensi Desa</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>

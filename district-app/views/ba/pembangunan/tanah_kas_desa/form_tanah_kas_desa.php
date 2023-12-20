@@ -3,10 +3,10 @@
 <form class="form-horizontal" id="validasi" name="form_tanah_kas" method="post" action="<?= $form_action ?>">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
+			<div class="card shadow">
+				<div class="card-header">
 					<a href="<?= site_url() ?>ba_tanah_kas_desa"
-						class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+						class="btn btn-social btn-flat btn-info btn-sm ">
 						<i class="fe fe-arrow-circle-left"></i> Kembali Ke Buku Tanah Kas Desa</a>
 				</div>
 				<div class="box-body">
@@ -64,7 +64,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Perolehan TKD :</strong></label>
 								</div>
@@ -144,7 +144,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Jenis TKD :</strong></label>
 								</div>
@@ -218,7 +218,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Patok Tanda Batas :</strong></label>
 								</div>
@@ -252,7 +252,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Papan Nama :</strong></label>
 								</div>
@@ -287,7 +287,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Catatan :</strong></label>
 								</div>

@@ -36,7 +36,7 @@
         <div class="row">
           <form id="mainform" name="mainform" action="" method="post">
             <div class="card">
-              <div class="card-header with-border">
+              <div class="card-header">
                 <div class="row">
                   <div class="col-md-6">
                     <?php $this->load->view('identitas_desa/peta.php'); ?><br />
@@ -50,7 +50,7 @@
                     <?php if ($this->CI->cek_hak_akses('h')) : ?>
                       <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-sm mb-2 btn-warning" title="Ubah Data"><i class="fe fe-edit fe-16 mr-2"></i> Ubah Data</a>
                       <a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-sm mb-2 btn-info" title="Ubah Lokasi Kantor Desa"><i class="fe fe-map-pin fe-16 mr-2 text-light"></i> Lokasi Kantor</a>
-                      <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-map'></i> Peta Wilayah <?= $desa; ?></a>-->
+                      <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-info btn-sm btn-sm "><i class='fe fe-map'></i> Peta Wilayah <?= $desa; ?></a>-->
                       <a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-sm mb-2 btn-primary" title="Ubah Wilayah Desa"><i class="fe fe-map fe-16 mr-2 text-danger"></i> Peta Google </a>
                       <a href="<?= site_url('identitas_desa/maps_openstreet/wilayah'); ?>" class="btn btn-sm mb-2 btn-secondary" title="Ubah Wilayah Desa"><i class="fe fe-map fe-16 mr-2 text-light"></i> Peta OSM</a>
                     <?php endif; ?>

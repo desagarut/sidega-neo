@@ -1,7 +1,7 @@
 <?php if ($this->CI->cek_hak_akses('u')) : ?>
 
-  <div class="box box-primary">
-    <div class="box-header with-border">
+  <div class="card shadow">
+    <div class="card-header">
       <h3 class="box-title">Menu</h3>
       <div class="box-tools">
         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>

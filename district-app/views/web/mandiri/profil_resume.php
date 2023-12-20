@@ -28,7 +28,7 @@
               <tr>
                 <td class="text-center"><?= $key + 1; ?></td>
                 <td><?= $data['nama'] ?></td>
-                <td><img class="img-responsive img-circle" src="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']); ?>" alt="Foto Rumah Penduduk"></td>
+                <td><img class="avatar-img rounded-circle" src="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']); ?>" alt="Foto Rumah Penduduk"></td>
                 <td><a href="<?= base_url() . LOKASI_RUMAH ?><?= urlencode($data['satuan']); ?>">
                     <?= $data['satuan']; ?>
                   </a></td>

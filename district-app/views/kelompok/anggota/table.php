@@ -16,25 +16,25 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
                             <div class="btn-group btn-group-vertical">
-								<a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fe fe-plus'></i> Tambah Anggota Kelompok</a>
+								<a class="btn btn-success btn-sm" data-toggle="dropdown"><i class='fe fe-plus'></i> Tambah Anggota Kelompok</a>
 								<ul class="dropdown-menu" role="menu">
 									<li>
-										<a href="<?= site_url("kelompok/aksi/1/".$kelompok['id']); ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Satu Peserta Baru "><i class="fe fe-plus"></i> Tambah Satu Anggota Kelompok</a>
+										<a href="<?= site_url("kelompok/aksi/1/".$kelompok['id']); ?>" class="btn btn-block btn-sm" title="Tambah Satu Peserta Baru "><i class="fe fe-plus"></i> Tambah Satu Anggota Kelompok</a>
 									</li>
 									<li>
-										<a href="<?= site_url("kelompok/aksi/2/".$kelompok['id']); ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Beberapa Peserta Baru"><i class="fe fe-plus"></i> Tambah Beberapa Anggota Kelompok</a>
+										<a href="<?= site_url("kelompok/aksi/2/".$kelompok['id']); ?>" class="btn btn-block btn-sm" title="Tambah Beberapa Peserta Baru"><i class="fe fe-plus"></i> Tambah Beberapa Anggota Kelompok</a>
 									</li>
 								</ul>
                             </div>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_anggota_all/$kelompok[id]"); ?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_anggota_all/$kelompok[id]"); ?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 							<?php endif;?>
-                            <a href="<?= site_url("kelompok/dialog_anggota/cetak/$kelompok[id]"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Daftar Anggota Kelompok <?= $kelompok['nama']; ?>"><i class="fe fe-printer"></i> Cetak</a>
-							<a href="<?= site_url("kelompok/dialog_anggota/unduh/$kelompok[id]"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Daftar Anggota Kelompok <?= $kelompok['nama']; ?>"><i class="fe fe-download"></i> Unduh</a>
-							<a href="<?= site_url("kelompok"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar Kelompok</a>
+                            <a href="<?= site_url("kelompok/dialog_anggota/cetak/$kelompok[id]"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Daftar Anggota Kelompok <?= $kelompok['nama']; ?>"><i class="fe fe-printer"></i> Cetak</a>
+							<a href="<?= site_url("kelompok/dialog_anggota/unduh/$kelompok[id]"); ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Daftar Anggota Kelompok <?= $kelompok['nama']; ?>"><i class="fe fe-download"></i> Unduh</a>
+							<a href="<?= site_url("kelompok"); ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar Kelompok</a>
 						</div>
 						<div class="box-body">
 							<h5><b>Rincian Kelompok</b></h5>

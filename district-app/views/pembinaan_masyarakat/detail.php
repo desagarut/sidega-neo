@@ -22,27 +22,27 @@
 	</section>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" method="post">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
+			<div class="card shadow">
+				<div class="card-header">
 					<?php if ($detail["status"] == 1) : ?>
 						<div class="btn-group btn-group-vertical">
-							<a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fe fe-plus'></i> Tambah Peserta Baru</a>
+							<a class="btn btn-success btn-sm" data-toggle="dropdown"><i class='fe fe-plus'></i> Tambah Peserta Baru</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
-									<a href="<?= site_url("pembinaan_masyarakat/aksi/1/" . $detail['id']) ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Satu Peserta Baru "><i class="fe fe-plus"></i> Tambah Satu Peserta Baru</a>
+									<a href="<?= site_url("pembinaan_masyarakat/aksi/1/" . $detail['id']) ?>" class="btn btn-block btn-sm" title="Tambah Satu Peserta Baru "><i class="fe fe-plus"></i> Tambah Satu Peserta Baru</a>
 								</li>
 								<li>
-									<a href="<?= site_url("pembinaan_masyarakat/aksi/2/" . $detail['id']) ?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Beberapa Peserta Baru"><i class="fe fe-plus"></i> Tambah Beberapa Peserta Baru</a>
+									<a href="<?= site_url("pembinaan_masyarakat/aksi/2/" . $detail['id']) ?>" class="btn btn-block btn-sm" title="Tambah Beberapa Peserta Baru"><i class="fe fe-plus"></i> Tambah Beberapa Peserta Baru</a>
 								</li>
 							</ul>
 						</div>
 					<?php endif; ?>
-					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("pembinaan_masyarakat/delete_all/$detail[id]") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-					<a href="<?= site_url("pembinaan_masyarakat/daftar/$detail[id]/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
+					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("pembinaan_masyarakat/delete_all/$detail[id]") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+					<a href="<?= site_url("pembinaan_masyarakat/daftar/$detail[id]/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 					</a>
-					<a href="<?= site_url("pembinaan_masyarakat/daftar/$detail[id]/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
+					<a href="<?= site_url("pembinaan_masyarakat/daftar/$detail[id]/unduh") ?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 					</a>
-					<a href="<?= site_url('pembinaan_masyarakat') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program
+					<a href="<?= site_url('pembinaan_masyarakat') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Program"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program
 					</a>
 				</div>
 				<div class="box-body">

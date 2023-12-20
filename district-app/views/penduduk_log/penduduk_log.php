@@ -21,18 +21,18 @@
 	</section>
 	<section class="content" id="maincontent">
 		<?php $pertanyaan = 'Apakah Anda yakin ingin mengembalikan status data penduduk ini?'; ?>
-		<div class="card card-shadow">
+		<div class="card shadow">
 			<form id="mainform" name="mainform" method="post">
-				<div class="box-header with-border">
+				<div class="card-header">
 					<div class="row">
 						<div class="col-sm-12">
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-status" title="Kembalikan Status" data-body="<?= $pertanyaan; ?>" onclick="aksiBorongan('mainform', '<?=site_url('penduduk_log/kembalikan_status_all')?>')" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
+								<a href="#confirm-status" title="Kembalikan Status" data-body="<?= $pertanyaan; ?>" onclick="aksiBorongan('mainform', '<?=site_url('penduduk_log/kembalikan_status_all')?>')" class="btn btn-social btn-flat btn-success btn-sm  hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
 							<?php endif; ?>
-							<a href="<?= site_url("penduduk_log/ajax_cetak/{$o}/cetak")?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
-							<a href="<?= site_url("penduduk_log/ajax_cetak/{$o}/unduh")?>" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
-							<a href="<?= site_url('penduduk/clear')?>" class="btn btn-social btn-flat bg-maroon btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
-							<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
+							<a href="<?= site_url("penduduk_log/ajax_cetak/{$o}/cetak")?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("penduduk_log/ajax_cetak/{$o}/unduh")?>" class="btn btn-social btn-flat bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+							<a href="<?= site_url('penduduk/clear')?>" class="btn btn-social btn-flat bg-maroon btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
+							<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@
                                                                                                                                         if ($data['is_log_pergi_terakhir'] && $data['status_dasar'] == 6) {
                                                                                                                                             ?>
 																<a href="#" data-href="<?= site_url("penduduk_log/kembalikan_status/{$data['id_log']}")?>" class="btn bg-olive btn-flat btn-sm" title="Kembalikan Status"  data-remote="false"  data-toggle="modal" data-target="#confirm-status" data-body="<?= $pertanyaan; ?>"><i class="fe fe-undo"></i></a>
-																<a href="<?= site_url("penduduk_log/ajax_kembalikan_status_pergi/{$data['id_log']}")?>" class="btn bg-purple btn-flat btn-sm" title="Datang Kembali"  data-remote="false"  data-toggle="modal" data-target="#modalBox" data-title="Kembalikan Penduduk"><i class="fe fe-angle-double-left"></i></a>
+																<a href="<?= site_url("penduduk_log/ajax_kembalikan_status_pergi/{$data['id_log']}")?>" class="btnbtn-outline-info btn-flat btn-sm" title="Datang Kembali"  data-remote="false"  data-toggle="modal" data-target="#modalBox" data-title="Kembalikan Penduduk"><i class="fe fe-angle-double-left"></i></a>
 														<?php
                                                                                                                                         } elseif ($data['kode_peristiwa'] != 5 && $data['kode_peristiwa'] != 1 && $data['kode_peristiwa'] != 6 && $data['kode_peristiwa']) {
                                                                                                                                             ?>

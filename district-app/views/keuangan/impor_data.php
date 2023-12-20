@@ -36,7 +36,7 @@
 								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok" onclick="simpan()"><i class='fe fe-check'></i> Simpan</button>
+								<button type="button" class="btn btn-info btn-sm" id="ok" onclick="simpan()"><i class='fe fe-check'></i> Simpan</button>
 							</div>
 
 							<hr>
@@ -99,8 +99,8 @@
 				<p>Apakah anda ingin melanjutkan proses impor untuk menindih datanya?</p>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-				<button type="button" class="btn btn-social btn-box btn-info btn-sm" onclick="simpanDataUpdate()"><i class='fe fe-check'></i> Lanjutkan impor</button>
+				<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-info btn-sm" onclick="simpanDataUpdate()"><i class='fe fe-check'></i> Lanjutkan impor</button>
 			</div>
 		</div>
 	</div>
@@ -117,7 +117,7 @@
 				<p id="kata_peringatan"></p>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			</div>
 		</div>
 	</div>

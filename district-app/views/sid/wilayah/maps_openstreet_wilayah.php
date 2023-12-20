@@ -43,7 +43,7 @@
 									</div>
 								</div>
 								<div class='card-footer'>
-									<div class='col-md-12'> <a href="<?= $tautan['link'] ?>" class="btn btn-outline-success btn-sm mb-1" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-social btn-card btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+									<div class="col-md-12"> <a href="<?= $tautan['link'] ?>" class="btn btn-outline-success btn-sm mb-1" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
 										<label class="control-label col-sm-1">Warna</label>
 										<div class="col-sm-2">
 											<div class="input-group my-colorpicker2">
@@ -53,7 +53,7 @@
 										</div>
 										<button type='reset' class='btn btn-danger btn-sm mb-1' id="resetme"><i class='fe fe-x'></i> Reset</button>
 										<button type='submit' class='btn btn-success btn-sm mb-1'><i class='fe fe-check'></i> Simpan</button>
-										<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-social btn-card btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fe fe-map'></i> Ubah Wilayah</a>&nbsp;-->
+										<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fe fe-map'></i> Ubah Wilayah</a>&nbsp;-->
 									</div>
 								</div>
 							</form>

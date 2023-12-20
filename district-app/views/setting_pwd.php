@@ -74,7 +74,7 @@
 									</div>
 								</div>
 								<hr />
-								<button type="submit" id="btnSubmit" class="btn btn-social btn-box btn-info btn-sm"><i class='fe fe-check'></i>Simpan</button>
+								<button type="submit" id="btnSubmit" class="btn btn-info btn-sm"><i class='fe fe-check'></i>Simpan</button>
 							</form>
 							<hr/>
 							<div class="login-footer-bottom"><a href="https://desagarut.net" target="_blank">SiDeGa</a> <?= substr(AmbilVersi(), 0, 11)?></div>

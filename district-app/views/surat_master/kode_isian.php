@@ -13,13 +13,13 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
-				  <div class="box-header with-border">
+				<div class="card shadow">
+				  <div class="card-header">
 						<a href="<?=site_url("surat_master")?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali Ke Daftar Wilayah">
 							<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Format Surat
            	</a>
 					</div>
-					<div class="box-header with-border">
+					<div class="card-header">
 						<h3 class="box-title"><i class="fe fe-info-circle"></i> <strong>Kode Isian Format Surat <?= $surat_master['nama']?></strong></h3>
 					</div>
 					<div class="box-body">

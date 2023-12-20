@@ -36,7 +36,7 @@
 		</div>
 	</div>
 	<div class="col-lg-$ col-xs-4">
-		<div class="small-box bg-purple">
+		<div class="small-boxbtn-outline-info">
 			<div class="inner">
 				<h3><?= $kependudukan['total'] ?></h3>
 				<p><?= $kependudukan['title'] ?></p>

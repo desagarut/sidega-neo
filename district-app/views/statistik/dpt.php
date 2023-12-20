@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
 <div class="box box-danger">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Daftar Calon Pemilih Berdasarkan Wilayah (pada tgl pemilihan <?= $tanggal_pemilihan; ?>)</h3>
 	</div>
 	<div class="box-body">

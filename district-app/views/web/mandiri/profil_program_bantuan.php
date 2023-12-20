@@ -26,7 +26,7 @@
 	}
 </script>
 
-                <div class="box-header with-border">
+                <div class="card-header">
                     <h3 class="box-title">Program Bantuan</h3>
                 </div>
 

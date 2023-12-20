@@ -13,7 +13,7 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url("data_kemiskinan/rincian/$data_kemiskinan[id]"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Rincian Kategori</a>
+						<a href="<?= site_url("data_kemiskinan/rincian/$data_kemiskinan[id]"); ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Rincian Kategori</a>
 					</div>
 					<div class="box-body ">
 						<h5><b>Info Kelompok Data Kemiskinan</b></h5>
@@ -42,8 +42,8 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
+				<div class="card shadow">
+					<div class="card-header">
 						<h5><b>Data Individu Penduduk Terdata</b></h5>
 					</div>
 					<div class="box-body">

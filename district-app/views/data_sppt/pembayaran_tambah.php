@@ -219,8 +219,8 @@
                                     </div>
                                     <div class="box-footer">
 										<div class="col-xs-12">
-											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-											<button type="submit" class="btn btn-social btn-box btn-success btn-sm pull-right"><i class="fe fe-check"></i> Bayar Sekarang</button>
+											<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+											<button type="submit" class="btn btn-success btn-sm pull-right"><i class="fe fe-check"></i> Bayar Sekarang</button>
 										</div>
 									</div>
 								</form>

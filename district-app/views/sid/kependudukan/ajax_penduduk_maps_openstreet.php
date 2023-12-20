@@ -103,7 +103,7 @@ window.onload = function()
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class="box-body">
 							<div class="row">
@@ -113,8 +113,8 @@ window.onload = function()
 								</div>
 							</div>
 						</div>
-						<div class='box-footer'>
-							<div class='col-md-12'>
+						<div class="card-footer">
+							<div class="col-md-12">
 								<div class="form-group">
 									<label class="col-sm-3 control-label" for="lat">Latitude</label>
 									<div class="col-sm-9">
@@ -148,26 +148,26 @@ window.onload = function()
 								</div>
 								<div class="pull-right">
 								<?php switch ($edit): ?><?php case '0': ?>
-									<a href="<?=site_url("penduduk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-									<a href="<?=site_url("penduduk/ajax_penduduk_maps/$p/$o/$id/2")?>" class="btn btn-social btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah"><i class="fe fe-edit"></i> Ubah</a>
+									<a href="<?=site_url("penduduk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+									<a href="<?=site_url("penduduk/ajax_penduduk_maps/$p/$o/$id/2")?>" class="btn btn-warning btn-sm " title="Ubah"><i class="fe fe-edit"></i> Ubah</a>
 									<?php break; ?>
 								<?php case '1': ?>
-									<a href="<?=site_url("penduduk/detail/$p/$o/$id/1")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-									<a href="#" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
-                                    <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn btn-social btn-box bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a> 
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+									<a href="<?=site_url("penduduk/detail/$p/$o/$id/1")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+									<a href="#" class="btn bg-navy btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+                                    <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a> 
+									<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
                                     
 									<?php if ($penduduk['status_dasar'] == 1 || !isset($penduduk['status_dasar'])): ?>
-										<button type='submit' class='btn btn-social btn-box btn-success btn-sm' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
+										<button type='submit' class='btn btn-success btn-sm' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
 									<?php endif; ?>
 									<?php break; ?>
 								<?php case '2': ?>
-									<a href="<?=site_url("penduduk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-									<a href="#" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
-                                    <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn btn-social btn-box bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a> 
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+									<a href="<?=site_url("penduduk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+									<a href="#" class="btn bg-navy btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+                                    <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a> 
+									<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
 									<?php if ($penduduk['status_dasar'] == 1 || !isset($penduduk['status_dasar'])): ?>
-										<button type='submit' class='btn btn-social btn-box btn-success btn-sm' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
+										<button type='submit' class='btn btn-success btn-sm' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
 									<?php endif; ?>
 									<?php break; ?>
 								<?php endswitch ?>

@@ -24,7 +24,7 @@
         </div>
         <div id="umkm" class="col-sm-9">
           <div class="box box-warning">
-            <div class="box-header with-border"> <a href="<?= site_url("tukang/form") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah"> <i class="fe fe-plus"></i> Tambah </a> <a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("tukang/delete_all/$p/$o") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> <a href="<?= site_url("first/tukang_show") ?>" class="btn btn-social btn-box btn-primary btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" target="_blank" title="Lihat Tukang"> <i class="fe fe-eye"></i> Lihat Halaman Depan </a></div>
+            <div class="card-header"> <a href="<?= site_url("tukang/form") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah"> <i class="fe fe-plus"></i> Tambah </a> <a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("tukang/delete_all/$p/$o") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> <a href="<?= site_url("first/tukang_show") ?>" class="btn btn-primary btn-sm btn-sm " target="_blank" title="Lihat Tukang"> <i class="fe fe-eye"></i> Lihat Halaman Depan </a></div>
             <div class="box-body">
               <div class="row">
                 <div class="col-sm-12">
@@ -107,7 +107,7 @@
                                       <?php endif; ?>
                                     </td>
                                     <td align="center">
-                                      <a href="<?= site_url("tukang/layanan/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Data Produk"><i class="fe fe-list"></i></a>
+                                      <a href="<?= site_url("tukang/layanan/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Data Produk"><i class="fe fe-list"></i></a>
                                       <a href="https://wa.me/+62<?= $data['no_hp_tukang'] ?>?text=Assalamu'alaikum%2C%20halo%20saya%20tertarik%20dengan%20layanan%20anda%20yang%20ditawarkan%20di%20website%20desa.%20Apakah%20layanannya%20masih%20tersedia%3F" class="btn bg-green btn-box btn-sm" target="_blank" title="Hubungi"><i class="fe fe-whatsapp"></i></a>
                                       <a href="<?= site_url("tukang/lokasi_maps/" . $data['id']); ?>" data-href="#" class="btn bg-primary btn-box btn-sm" title="Lokasi"><i class="fe fe-map"></i></a>
                                       <?php if ($data['enabled'] == '2') : ?>

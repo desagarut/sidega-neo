@@ -20,17 +20,17 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="<?= site_url("analisis_statistik_jawaban/cetak2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="<?= site_url("analisis_statistik_jawaban/cetak2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
 								<i class="fe fe-printer"></i>Cetak
             	</a>
-						  <a href="<?= site_url("analisis_statistik_jawaban/excel2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank">
+						  <a href="<?= site_url("analisis_statistik_jawaban/excel2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn bg-navy btn-sm btn-sm " title="Unduh" target="_blank">
 								<i class="fe fe-download"></i>Unduh
             	</a>
-							<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
+							<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 							<div class="table-responsive">
 								<table class="table table-bordered table-striped table-hover" >
 									<tr>
@@ -46,7 +46,7 @@
 								</table>
 							</div>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 							<h5><strong>Daftar Responden</strong></h5>
 						</div>
 						<div class="box-body">

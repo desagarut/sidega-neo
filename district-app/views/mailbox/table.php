@@ -14,11 +14,11 @@
 			<div class="row">
 				<?php $this->load->view('mailbox/menu_mailbox') ?>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="<?= site_url('mailbox/form') ?>" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tulis Pesan"><i class="fe fe-plus"></i> Tulis Pesan</a>
-							<a href="#confirm-delete" title="Arsipkan Data" <?php if(!$filter_archived) : ?>onclick="deleteAllBox('mainform','<?=site_url("mailbox/archive_all/$kat/$p/$o")?>')"<?php endif ?> class="btn btn-social btn-flat btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih" <?php $filter_archived and print('disabled') ?>><i class='fe fe-file-archive-o'></i> Arsipkan Data Terpilih</a>
-							<a href="<?= site_url("mailbox/clear/$kat/$p/$o") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan Filter</a>
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="<?= site_url('mailbox/form') ?>" class="btn btn-social btn-flat btn-success btn-sm " title="Tulis Pesan"><i class="fe fe-plus"></i> Tulis Pesan</a>
+							<a href="#confirm-delete" title="Arsipkan Data" <?php if(!$filter_archived) : ?>onclick="deleteAllBox('mainform','<?=site_url("mailbox/archive_all/$kat/$p/$o")?>')"<?php endif ?> class="btn btn-social btn-flat btn-danger btn-sm  hapus-terpilih" <?php $filter_archived and print('disabled') ?>><i class='fe fe-file-archive-o'></i> Arsipkan Data Terpilih</a>
+							<a href="<?= site_url("mailbox/clear/$kat/$p/$o") ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 						</div>
 						<div class="box-body">
 							<div class="row">

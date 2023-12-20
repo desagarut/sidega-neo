@@ -13,12 +13,12 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<div class="box-header">
-						<a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="modal" data-target="#ModalAdd"><i class="fe fe-plus"></i> Tambah Data</a>
-						<a href="#" id="btn_salin" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i>Tambah Data dari Template</a>
+						<a href="#" class="btn btn-success btn-sm " data-toggle="modal" data-target="#ModalAdd"><i class="fe fe-plus"></i> Tambah Data</a>
+						<a href="#" id="btn_salin" class="btn btn-success btn-sm "><i class="fe fe-plus"></i>Tambah Data dari Template</a>
 					</div>
-					<div class="box-header with-border">
+					<div class="card-header">
 						<form action="<?= site_url('keuangan_manual/set_tahun_terpilih') ?>" method="POST" class="form form-horizontal">
 							<div class="row">
 								<div class="col-md-2">
@@ -51,7 +51,7 @@
 										<!-- TAB PENDAPATAN -->
 										<div role="tabpanel" class="tab-pane active" id="pendapatan_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform" name="mainform" action="" method="post">
 												<div class="row">
@@ -81,7 +81,7 @@
 										<!-- TAB BELANJA -->
 										<div role="tabpanel" class="tab-pane" id="belanja_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_bl" name="mainform_bl" action="" method="post">
 												<div class="row">
@@ -111,7 +111,7 @@
 										<!-- TAB PEMBIAYAAN -->
 										<div role="tabpanel" class="tab-pane" id="pembiayaan_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_by" name="mainform_by" action="" method="post">
 												<div class="row">
@@ -162,7 +162,7 @@
 
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="card card-shadow"></div>
+					<div class="card shadow"></div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label" >Tahun</label>
 						<div class="col-sm-8">
@@ -170,7 +170,7 @@
 						</div>
 					</div>
 
-					<div class='form-group'>
+					<div class="form-group">
 						<label class="col-sm-3 control-label" >Jenis Anggaran</label>
 						<div class="col-sm-8">
 							<select class="form-control input-sm " id="Kd_Akun" name="Kd_Akun">
@@ -233,8 +233,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fe fe-check'></i>Simpan</button>
+					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-info btn-sm" id="btn_simpan"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -252,7 +252,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="card card-shadow"></div>
+					<div class="card shadow"></div>
 
 					<input type="hidden" id="id2" name="id_edit"/>
 
@@ -263,7 +263,7 @@
 						</div>
 					</div>
 
-					<div class='form-group'>
+					<div class="form-group">
 						<label class="col-sm-3 control-label" >Jenis Anggaran</label>
 						<div class="col-sm-8">
 							<select class="form-control input-sm " id="Kd_Akun2" name="Kd_Akun_edit" disabled>
@@ -327,8 +327,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fe fe-check'></i>Simpan</button>
+					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-info btn-sm" id="btn_update"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -346,7 +346,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="card card-shadow"></div>
+					<div class="card shadow"></div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label" >Tahun Anggaran</label>
 						<div class="col-sm-3">
@@ -355,8 +355,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fe fe-check'></i>Salin</button>
+					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-info btn-sm" id="btn_salin1"><i class='fe fe-check'></i>Salin</button>
 				</div>
 			</form>
 		</div>

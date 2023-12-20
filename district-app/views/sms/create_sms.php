@@ -14,8 +14,8 @@
 			<div class="row">
 				<div class="col-md-3">
 					<a href="<?= site_url('sms/form/0/0/4')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Baru"  class="btn btn-primary btn-block margin-bottom">Tulis Pesan Baru</a>
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<h3 class="box-title">SMS</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -32,9 +32,9 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="<?= site_url('sms/broadcast/0/0/2')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Broadcast"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-weixin'></i> Tulis Pesan Ke Banyak</a>
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="<?= site_url('sms/broadcast/0/0/2')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Broadcast"  class="btn btn-success btn-sm "><i class='fe fe-weixin'></i> Tulis Pesan Ke Banyak</a>
 						</div>
 						<div class="box-body">
 							<div class="row">

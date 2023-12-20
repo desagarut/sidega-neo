@@ -10,16 +10,16 @@
 	</section>
 	<section class="content" id="maincontent">
 		<div class="box-header">
-			<a href="<?= site_url("program_bantuan")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+			<a href="<?= site_url("program_bantuan")?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 		</div>
 
 		<div class="row">
 			<div class="col-md-3">
 				<!-- Profile Image -->
-				<div class="box box-primary">
-					<div class="box-body box-profile">
+				<div class="card shadow">
+					<div class="card-body card-profile">
 						<div align="center">
-							<img class="img-responsive img-circle" src="<?= AmbilFoto($profil['foto'], '', $profil['id_sex']) ?>" alt="Foto Penduduk">
+							<img class="avatar-img rounded-circle" src="<?= AmbilFoto($profil['foto'], '', $profil['id_sex']) ?>" alt="Foto Penduduk">
 							<h3 class="profile-username text-center">
 								<?= strtoupper($profil['nama']) ?>
 							</h3>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<div class="col-md-9">
-				<div class="box box-primary">
+				<div class="card shadow">
 					<div class="box-body">
 						<h5><b>Profil Penerima Manfaat Program Bantuan</b></h5>
 						<div class="table-responsive">

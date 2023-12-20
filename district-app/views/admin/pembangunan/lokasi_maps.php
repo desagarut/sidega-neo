@@ -13,7 +13,7 @@
 		</ol>
 	</section>
 	<section class="content">
-		<div class="card card-shadow">
+		<div class="card shadow">
 			<form id="validasi" action="<?= $form_action ?>" method="POST" class="form-horizontal">
 				<div class="box-body">
 					<div id="tampil-map">
@@ -33,8 +33,8 @@
 							<input type="text" class="form-control input-sm lng" name="lng" id="lng" value="<?= $data->lng ?>" />
 						</div>
 					</div>
-					<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-					<a href="#" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="OpenSID.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+					<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+					<a href="#" class="btn btn-social btn-flat btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
 					<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
 					<?php if ($this->CI->cek_hak_akses('u')): ?>
 						<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>

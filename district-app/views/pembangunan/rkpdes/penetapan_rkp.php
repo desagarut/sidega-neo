@@ -115,7 +115,7 @@
 						if (data.status_rkp == 1) {
 							status_rkp = `<br/><a href="<?= site_url('pembangunan/apbdes_aktiv/') ?>${data.id}" class="btn btn-success btn-sm disabled" title="APBDes Aktiv">Ditetapkan pada <br/>RKP Desa</a>`
 						} else if (data.status_rkp == 0) {
-							status_rkp = `<br/><a href="<?= site_url('pembangunan/durkp_aktiv/') ?>${data.id}" class="btn  btn-primary btn-sm disabled" title="DURKP Aktiv">Ditetapkan pada<br/>DU-RKP Desa</a>`
+							status_rkp = `<br/><a href="<?= site_url('pembangunan/durkp_aktiv/') ?>${data.id}" class="btn btn-primary btn-sm disabled" title="DURKP Aktiv">Ditetapkan pada<br/>DU-RKP Desa</a>`
 						} else {
 							status_rkp = `<br/><a href="<?= site_url('pembangunan/durkp_aktiv/') ?>${data.id}" class="btn btn-warning btn-sm disabled" title="Silahkan Tetapkan">Silahkan Tetapkan <br/>RKP Desa / DU-RKP Desa</a>`
 						}

@@ -10,13 +10,13 @@ table.table th {
       <div class="col-md-12">
         <div class="col-md-3"> 
           <!-- Profile Image -->
-          <div class="box box-primary">
-            <div class="box-body box-profile">
+          <div class="card shadow">
+            <div class="card-body card-profile">
               <div align="center">
                 <?php if ($penduduk['foto']): ?>
-                <img class="img-responsive img-circle" src="<?= AmbilFoto($penduduk['foto'])?>" alt="Foto Penduduk">
+                <img class="avatar-img rounded-circle" src="<?= AmbilFoto($penduduk['foto'])?>" alt="Foto Penduduk">
                 <?php else: ?>
-                <img class="img-responsive img-circle" src="<?= base_url()?>assets/files/user_pict/kuser.png" alt="Foto Penduduk">
+                <img class="avatar-img rounded-circle" src="<?= base_url()?>assets/files/user_pict/kuser.png" alt="Foto Penduduk">
                 <?php endif; ?>
                 <h3 class="profile-username text-center">
                   <h5><?= strtoupper($penduduk['nama'])?></h5>
@@ -52,8 +52,8 @@ table.table th {
           <!-- /.box --> 
           
           <!-- About Me Box -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
+          <div class="card shadow">
+            <div class="card-header">
               <small><h4 class="box-title">Ringkasan</h4></small>
             </div>
             <!-- /.box-header -->

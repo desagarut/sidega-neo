@@ -1,7 +1,7 @@
 <div class="col-md-12">
 	<!-- MAP & BOX PANE -->
 	<div class="card card-success">
-		<div class="card-header with-border">
+		<div class="card-header">
 			<h3 class="card-title">Usia Penduduk</h3>
 
 			<div class="card-tools pull-right">

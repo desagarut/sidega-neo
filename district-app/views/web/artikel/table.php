@@ -25,11 +25,11 @@
 					<?php $this->load->view('web/artikel/menu');?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
 							<?php if ($cat > 0): ?>
-								<a href="<?= site_url("web/form")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Artikel">
+								<a href="<?= site_url("web/form")?>" class="btn btn-success btn-sm btn-sm " title="Tambah Artikel">
 									<i class="fe fe-plus"></i>Tambah
 									<?php if ($kategori): ?>
 										<?= $kategori['kategori']; ?>
@@ -43,13 +43,13 @@
 								</a>
 							<?php endif; ?>
 							
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("web/delete_all")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("web/delete_all")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 							
 							<?php if ($cat > 0 and $cat < 999): ?>
-								<a href="#confirm-delete" title="Hapus Kategori <?=$kategori['kategori']?>" onclick="deleteAllBox('mainform', '<?= site_url("web/hapus")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-trash-o'></i> Hapus Kategori <?=$kategori['kategori']?></a>
+								<a href="#confirm-delete" title="Hapus Kategori <?=$kategori['kategori']?>" onclick="deleteAllBox('mainform', '<?= site_url("web/hapus")?>')" class="btn btn-danger btn-sm "><i class='fe fe-trash-o'></i> Hapus Kategori <?=$kategori['kategori']?></a>
 							<?php endif; ?>
 							<?php if ($cat == 999): ?>
-								<a href="<?= site_url("web/reset")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Reset Hit" data-toggle="modal" data-target="#reset-hit" data-remote="false"><i class="fe fe-spinner"></i> Reset Hit</a>
+								<a href="<?= site_url("web/reset")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Reset Hit" data-toggle="modal" data-target="#reset-hit" data-remote="false"><i class="fe fe-spinner"></i> Reset Hit</a>
 							<?php endif; ?>
 							<?php endif; ?>
 						</div>
@@ -119,7 +119,7 @@
 																				<?php if ($this->CI->cek_hak_akses('u')): ?>
                                                                                     <a href="<?= site_url("web/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class="fe fe-edit"></i></a>
 																					<a href="#" data-href="<?= site_url("web/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
-                                                                                    <a href="<?= site_url("web/ubah_kategori_form/$data[id]")?>" class="btn bg-purple btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Kategori" title="Ubah Kategori"><i class="fe fe-folder-open"></i></a>
+                                                                                    <a href="<?= site_url("web/ubah_kategori_form/$data[id]")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Kategori" title="Ubah Kategori"><i class="fe fe-folder-open"></i></a>
 																				<?php endif; ?>
 																				<?php if ($data['boleh_komentar'] == 1): ?>
 																					<a href="<?= site_url("web/komentar_lock/$data[id]/2")?>" class="btn bg-info btn-box btn-sm" title="Tutup Komentar Artikel"><i class="fe fe-comment-o"></i></a>
@@ -186,8 +186,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
+					<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button type="submit" class="btn btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</div>
 		</div>

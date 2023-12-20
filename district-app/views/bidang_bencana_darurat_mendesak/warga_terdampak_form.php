@@ -15,10 +15,10 @@
 	</section>
 	
 	<section class="content">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
-				<a href="<?= site_url("bidang_bencana_darurat_mendesak"); ?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar bidang_bencana_darurat_mendesak"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar bidang_bencana_darurat_mendesak</a>
-				<a href="<?= site_url("bidang_bencana_darurat_mendesak/rincian/$bidang_bencana_darurat_mendesak[id]"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Rincian Data bidang_bencana_darurat_mendesak</a>
+		<div class="card shadow">
+			<div class="card-header">
+				<a href="<?= site_url("bidang_bencana_darurat_mendesak"); ?>" class="btn btn-primary btn-sm " title="Kembali Ke Daftar bidang_bencana_darurat_mendesak"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar bidang_bencana_darurat_mendesak</a>
+				<a href="<?= site_url("bidang_bencana_darurat_mendesak/rincian/$bidang_bencana_darurat_mendesak[id]"); ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Rincian Data bidang_bencana_darurat_mendesak</a>
 			</div>
 			<?php $this->load->view('bidang_bencana_darurat_mendesak/rincian'); ?>
 			<div class="box-body">
@@ -60,8 +60,8 @@
 				</div>
 			</div>
 			<div class="box-footer">
-				<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-				<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
+				<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+				<button type="submit" class="btn btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 			</div>
 		</div>
 	</section>

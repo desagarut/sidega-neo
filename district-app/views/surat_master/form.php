@@ -11,8 +11,8 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
+		<div class="card shadow">
+			<div class="card-header">
 				<a href="<?= site_url("surat_master"); ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Wilayah">
 					<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Format Surat
 				</a>
@@ -116,8 +116,8 @@
 					</div>
 				</div>
 				<div class="box-footer">
-					<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" onclick="reset_form($(this).val());"><i class="fe fe-times"></i> Batal</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
+					<button type="reset" class="btn btn-danger btn-sm" onclick="reset_form($(this).val());"><i class="fe fe-times"></i> Batal</button>
+					<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 				</div>
 			</form>
 		</div>

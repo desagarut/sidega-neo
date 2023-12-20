@@ -26,11 +26,11 @@
 		<div class="row" >
 			<form id="validasi" action="<?=$form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<div class="col-md-12">
-					<div class="box box-primary">
-						<div class="box-header with-border">
-							<a href="<?= site_url('modul/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url('modul/clear')?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
 							<?php if ($modul['parent']!='0'): ?>
-								<a href="<?= site_url()?>modul/sub_modul/<?=($modul['parent'])?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Sub Modul</a>
+								<a href="<?= site_url()?>modul/sub_modul/<?=($modul['parent'])?>" class="btn btn-primary btn-sm "><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Sub Modul</a>
 							<?php endif ?>
 						</div>
 						<div class="box-body">
@@ -66,10 +66,10 @@
 							</div>
 
 						</div>
-						<div class='box-footer'>
-							<div class='col-md-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' onclick="reset_form($(this).val());"><i class='fe fe-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
+						<div class="card-footer">
+							<div class="col-md-12">
+								<button type='reset' class='btn btn-danger btn-sm' onclick="reset_form($(this).val());"><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

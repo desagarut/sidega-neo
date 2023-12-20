@@ -1,5 +1,5 @@
 <div class="box box-danger" style="padding-bottom: 2rem;">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title"><?= $heading ?></h3>
 	</div>
   </style>

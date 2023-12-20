@@ -3,10 +3,10 @@
 <form class="form-horizontal" id="validasi" name="form_tanah" method="post" action="<?= $form_action ?>">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
+			<div class="card shadow">
+				<div class="card-header">
 					<a href="<?= site_url() ?>ba_tanah_desa"
-						class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i
+						class="btn btn-social btn-flat btn-info btn-sm "><i
 							class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Buku Tanah di Desa</a>
 				</div>
 				<div class="box-body">
@@ -67,12 +67,12 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Status Hak Tanah :</strong></label>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group">
 									<label class="control-label" style="text-align:right;" for="hak_milik">Sertifikat</label>
 								</div>
@@ -137,7 +137,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group">
 									<label class="control-label" style="text-align:right;" for="hak_milik">Belum Sertifikat</label>
 								</div>
@@ -166,7 +166,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-4'>
+							<div class="col-sm-4">
 								<div class="form-group">
 									<label class="col-sm-12 control-label" style="text-align:left;" for="hak_verponding">Hak Verponding Indonesia (Milik Pribumi)</label>
 									<div class="col-sm-9">
@@ -178,12 +178,12 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Penggunaan Tanah :</strong></label>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group">
 									<label class="control-label" style="text-align:right;" for="hak_milik">Non Pertanian</label>
 								</div>
@@ -248,7 +248,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group">
 									<label class="control-label" style="text-align:right;" for="hak_milik">Pertanian</label>
 								</div>
@@ -349,7 +349,7 @@
 									</div>
 								</div>
 							</div>
-							<div class='col-sm-12'>
+							<div class="col-sm-12">
 								<div class="form-group subtitle_head">
 									<label class="text-right"><strong>Catatan :</strong></label>
 								</div>

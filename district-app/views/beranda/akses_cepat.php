@@ -5,7 +5,7 @@
             </div>
 <!--        <div class='card-body'>
  		<div class="row">
-            <div class='col-md-12'>
+            <div class="col-md-12">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="card-body">
                             <a href="https://kecamatancisompet.id" target="_blank" class="btn btn-block btn-social btn-info">
@@ -66,7 +66,7 @@
             </div>
             
             <div class="col-lg-4 col-xs-3">
-                <div class="small-card bg-purple">
+                <div class="small-cardbtn-outline-info">
                     <a href="<?=site_url('surat_keluar')?>" class="small-card-footer"><strong>Surat Keluar  </strong><i class="fe fe-envelope"></i></a>
                 </div>
             </div>

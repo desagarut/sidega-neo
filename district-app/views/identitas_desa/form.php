@@ -59,7 +59,7 @@
 				</div>
 				<div class="col-md-9">
 					<div class="card shadow">
-						<div class="card-header with-border">
+						<div class="card-header">
 							<a href="<?= site_url('identitas_desa'); ?>" class="btn btn-sm mb-2 btn-success" title="Kembali Ke Identitas"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Identitas</a>
 						</div>
 						<div class="card-body">
@@ -263,7 +263,7 @@
 							</div>
 						</div>
 						<div class="card-footer">
-							<button type='reset' class='btn btn-social btn-card btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+							<button type='reset' class='btn btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
 							<button type='submit' class='btn btn-success btn-sm mb-1'><i class='fe fe-check'></i> Simpan</button>
 						</div>
 					</div>

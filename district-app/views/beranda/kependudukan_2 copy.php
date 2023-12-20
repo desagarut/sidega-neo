@@ -1,5 +1,5 @@
   <div class="box box-warning">
-    <div class="box-header with-border">
+    <div class="card-header">
       <h3 class="box-title">Progres Kependudukan</h3>
       <div class="box-tools pull-right">
         <a href="#"><span class="label label-danger"> New</span></a>

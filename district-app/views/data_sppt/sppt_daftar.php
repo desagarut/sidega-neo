@@ -38,15 +38,15 @@
           <?php $this->load->view('data_sppt/menu.php') ?>
         </div>
         <div class="col-md-8 col-lg-9">
-          <div class="card card-shadow">
+          <div class="card shadow">
             <div class="box-header">
-              <div class="box-header with-border">
-                <a href="<?= site_url("data_sppt/sppt_form/") ?>" class="btn btn-social btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data SPPT"> <i class="fe fe-plus"></i>Tambah SPPT </a>
-                <a href="<?= site_url("data_sppt/cetak") ?>" class="btn btn-social bg-blue btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"> <i class="fe fe-printer"></i> Cetak </a>
-                <a href="<?= site_url("data_sppt/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank"> <i class="fe fe-download"></i>Unduh </a>
+              <div class="card-header">
+                <a href="<?= site_url("data_sppt/sppt_form/") ?>" class="btn btn-social btn-success btn-sm btn-sm " title="Tambah Data SPPT"> <i class="fe fe-plus"></i>Tambah SPPT </a>
+                <a href="<?= site_url("data_sppt/cetak") ?>" class="btn btn-social bg-blue btn-sm btn-sm " title="Cetak Data" target="_blank"> <i class="fe fe-printer"></i> Cetak </a>
+                <a href="<?= site_url("data_sppt/unduh") ?>" class="btn bg-navy btn-sm btn-sm " title="Unduh Data" target="_blank"> <i class="fe fe-download"></i>Unduh </a>
 
-                <a href="<?= site_url('data_sppt/import') ?>" class="btn btn-social bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unggah Data SPPT" title="Unggah Data SPPT"> <i class="fe fe-upload"></i>Unggah </a>
-                <a href="<?= site_url("data_sppt/clear") ?>" class="btn btn-social bg-yellow btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
+                <a href="<?= site_url('data_sppt/import') ?>" class="btn btn-social bg-teal btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unggah Data SPPT" title="Unggah Data SPPT"> <i class="fe fe-upload"></i>Unggah </a>
+                <a href="<?= site_url("data_sppt/clear") ?>" class="btn btn-social bg-yellow btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
               </div>
             </div>
             <div class="box-body">
@@ -99,7 +99,7 @@
                                             <div class="btn-group">
                                               <button type="button" class="btn btn-info btn-box btn-sm dropdown-toggle" data-toggle="dropdown" title="Detail Info Pajak">Detail <span class="fe fe-caret-down"></span></button>
                                               <ul class="dropdown-menu" role="menu">
-                                                <li><a href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>" class="btn btn-social bg-purple btn-box btn-block btn-sm" title="Rincian"><i class="fe fe-eye"></i> Detail</a></li>
+                                                <li><a href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>" class="btn btn-socialbtn-outline-info btn-box btn-block btn-sm" title="Rincian"><i class="fe fe-eye"></i> Detail</a></li>
                                                 <li><a href="<?= site_url("data_sppt/tagihan_tambah/edit/" . $item["id_sppt"]) ?>" class="btn btn-social bg-green btn-box btn-block btn-sm" title="Buat Tagihan Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat Tagihan Pajak"><i class="fe fe-dollar"></i> Buat Tagihan</a> </li>
                                                 <li><a href="<?= site_url("data_sppt/ajax_lokasi_maps/" . $item["id_sppt"]) ?>" class="btn btn-social bg-aqua btn-box btn-sm" title="Lokasi <?= $data['nama'] ?>"><i class="fe fe-map"></i>Peta</a></li>
                                                 <li><a href="<?= site_url("data_sppt/sppt_form/edit/" . $item["id_sppt"]) ?>" class="btn btn-social bg-yellow btn-box btn-block btn-sm" title="Ubah Data"><i class="fe fe-edit"></i> Ubah</a></li>

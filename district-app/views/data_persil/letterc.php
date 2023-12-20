@@ -36,7 +36,7 @@
 					<?php $this->load->view('data_persil/menu_kiri.php') ?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<div class="box-header">
 							<h4 class="text-center"><strong>DAFTAR LETTER C</strong></h4>
 						</div>
@@ -44,16 +44,16 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-										<a href='<?= site_url("letterc/create") ?>' class="btn btn-social btn-box bg-green btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data">
+										<a href='<?= site_url("letterc/create") ?>' class="btn bg-green btn-sm btn-sm " title="Cetak Data">
 											<i class="fe fe-plus"></i>Tambah
 										</a>
-										<a href='<?= site_url("letterc/cetak") ?>' class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+										<a href='<?= site_url("letterc/cetak") ?>' class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
 											<i class="fe fe-printer"></i>Cetak
 										</a>
-										<a href="<?= site_url("letterc/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank">
+										<a href="<?= site_url("letterc/unduh") ?>" class="btn bg-navy btn-sm btn-sm " title="Unduh Data" target="_blank">
 											<i class="fe fe-download"></i>Unduh
 										</a>
-										<a href="<?= site_url("letterc/clear") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
+										<a href="<?= site_url("letterc/clear") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 										<form id="mainform" name="mainform" action="" method="post">
 											<div class="row">
 												<div class="col-sm-12">
@@ -88,7 +88,7 @@
 																	<tr>
 																		<td><?= $item['no'] ?></td>
 																		<td nowrap>
-																			<a href="<?= site_url("letterc/rincian/" . $item["id_letterc"]) ?>" class="btn bg-purple btn-box btn-sm" title="Rincian"><i class="fe fe-bars"></i></a>
+																			<a href="<?= site_url("letterc/rincian/" . $item["id_letterc"]) ?>" class="btn btn-outline-info btn-sm" title="Rincian"><i class="fe fe-bars"></i></a>
 																			<a href="<?= site_url("letterc/create_mutasi/" . $item["id_letterc"]) ?>" class="btn bg-green btn-box btn-sm" title="Tambah Data"><i class="fe fe-plus"></i></a>
 																			<!--<a href="<?= site_url("letterc/create_dokumen/" . $item["id_letterc"]) ?>" class="btn bg-navy btn-box btn-sm" title="Tambah Data"><i class="fe fe-folder"></i></a>-->
 																			<!--<a href="<?= site_url("letterc/form_dokumen/" . $item["id_letterc"]) ?>"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title=" Upload Dokumen" class="btn bg-navy btn-box btn-sm"><i class='fe fe-sign-out'></i> Upload</a>-->

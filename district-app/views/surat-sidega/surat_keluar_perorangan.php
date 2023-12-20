@@ -15,7 +15,7 @@
 							<i class="fe fe-arrow-circle-left "></i>Kembali Ke Arsip Layanan Surat
            	</a>
 					</div>
-					<div class="box-header with-border">
+					<div class="card-header">
 						<div class="table-responsive">
 							<table class="table table-bordered table-striped table-hover" >
 								<tbody>
@@ -115,11 +115,11 @@
 																	<td nowrap>
 																		<?php
 																			if (is_file($theFile)): ?>
-																				<a href="<?= base_url(LOKASI_ARSIP.$berkas)?>" class="btn btn-social btn-box bg-purple btn-sm" title="Unduh Surat" target="_blank"><i class="fe fe-file-word-o"></i> Surat</a>
+																				<a href="<?= base_url(LOKASI_ARSIP.$berkas)?>" class="btn btn-social btn-boxbtn-outline-info btn-sm" title="Unduh Surat" target="_blank"><i class="fe fe-file-word-o"></i> Surat</a>
 																			<?php	endif; ?>
 																		<?php
 																			if (is_file($lampiran)): ?>
-																				<a href="<?= base_url(LOKASI_ARSIP.$data['lampiran'])?>" target="_blank" class="btn btn-social btn-box bg-olive btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip"></i>  Lampiran</a>
+																				<a href="<?= base_url(LOKASI_ARSIP.$data['lampiran'])?>" target="_blank" class="btn bg-olive btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip"></i>  Lampiran</a>
 																			<?php	endif; ?>
 																		<a href="<?= site_url("keluar/edit_keterangan/$data[id]")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
 																		<a href="#" data-href="<?= site_url("keluar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>

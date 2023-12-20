@@ -74,7 +74,7 @@
 		<section class="content" id="maincontent">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<form id="validasi" action="<?= site_url("modul/ubah_server")?>" method="POST" class="form-horizontal">
 							<div class="box-body">
 								<h4>Penggunaan Server</h4>
@@ -144,10 +144,10 @@
 									</div>
 								</div>
 							</div>
-							<div class='box-footer'>
-								<div class='col-md-12'>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
+							<div class="card-footer">
+								<div class="col-md-12">
+									<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+									<button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 								</div>
 							</div>
 						</form>
@@ -159,13 +159,13 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<?php if(!$sub_modul): ?>
 						<div class="box-body">
 							<h4>Pengaturan Modul</h4>
 							<div class="row">
 								<div class="col-xs-12 text-center">
-									<a href="<?= site_url("modul/default_server")?>" class="btn btn-social btn-box btn-success btn-sm" <?php $this->setting->penggunaan_server or print("disabled='disabled'")?>><i class="fe fe-refresh"></i>Kembalikan ke default penggunaan server</a>
+									<a href="<?= site_url("modul/default_server")?>" class="btn btn-success btn-sm" <?php $this->setting->penggunaan_server or print("disabled='disabled'")?>><i class="fe fe-refresh"></i>Kembalikan ke default penggunaan server</a>
 								</div>
 							</div>
 							<div class="row">
@@ -196,10 +196,10 @@
 								</div>
 							</div>
 					<?php else: ?>
-						<div class="box-header with-border">
-							<a href="<?= site_url('modul/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
+						<div class="card-header">
+							<a href="<?= site_url('modul/clear')?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 						 <strong> Modul Utama : <?=$sub_modul['modul']?></strong>
 						</div>
 						<div class="box-body">

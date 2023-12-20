@@ -25,11 +25,11 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
-				<a href="<?= site_url("pemberdayaan_masyarakat/form_peserta/".$pemberdayaan_masyarakat['id'])?>" title="Tambah Data Warga" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Peserta</a>
-				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
-				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
+		<div class="card shadow">
+			<div class="card-header">
+				<a href="<?= site_url("pemberdayaan_masyarakat/form_peserta/".$pemberdayaan_masyarakat['id'])?>" title="Tambah Data Warga" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Peserta</a>
+				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
+				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/unduh")?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
 				<a href="<?= site_url("pemberdayaan_masyarakat")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali">
 					<i class="fe fe-arrow-circle-left "></i>Kembali
 				</a>

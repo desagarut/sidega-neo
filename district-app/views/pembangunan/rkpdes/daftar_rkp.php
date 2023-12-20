@@ -26,7 +26,7 @@
 								<div class="box-header">
 									<div class="row">
 										<div class="col-sm-10">
-											<a href="<?= site_url($this->controller . '/dialog_rkpdes/cetak'); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Rencana Kerja Pembangunan"><i class="fe fe-printer "></i> Cetak</a>
+											<a href="<?= site_url($this->controller . '/dialog_rkpdes/cetak'); ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Cetak Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Rencana Kerja Pembangunan"><i class="fe fe-printer "></i> Cetak</a>
 										</div>
 										<div class="input-group col-md-2">
 											<select class="form-control input-sm select2" id="tahun" name="tahun" style="width:100%;">

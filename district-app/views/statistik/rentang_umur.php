@@ -19,13 +19,13 @@
 					<?php $this->load->view('statistik/side_menu.php')?>
 				</div>
 				<div class="col-md-8">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url("statistik/form_rentang/0")?>" class="btn btn-social btn-box bg-olive btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Rentang Umur" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Rentang Umur">
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url("statistik/form_rentang/0")?>" class="btn bg-olive btn-sm btn-sm " title="Tambah Rentang Umur" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Rentang Umur">
 								<i class="fe fe-plus"></i>Tambah Rentang
 							</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("statistik/delete_all_rentang")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-							<a href="<?= site_url("statistik/clear/13")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("statistik/delete_all_rentang")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="<?= site_url("statistik/clear/13")?>" class="btn btn-info btn-sm btn-sm ">
 								<i class="fe fe-arrow-circle-left "></i>Kembali ke Data Statistik
 							</a>
 						</div>

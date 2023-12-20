@@ -32,7 +32,7 @@
   <section class="content">
     <div class="row">
       <div class="col-md-12">
-        <div class="card card-shadow">
+        <div class="card shadow">
           <form action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
             <div class="box-body">
               <div class="row">
@@ -44,12 +44,12 @@
                 </div>
               </div>
             </div>
-            <div class='box-footer'>
-              <div class='col-md-12'>
-                <a href="<?= site_url("area")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-                <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right' id="simpan_kantor"><i class='fe fe-check'></i> Simpan</button>
+            <div class="card-footer">
+              <div class="col-md-12">
+                <a href="<?= site_url("area")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+                <a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+								<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right' id="simpan_kantor"><i class='fe fe-check'></i> Simpan</button>
               </div>
             </div>
           </form>

@@ -29,9 +29,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-warning">
-            <div class="box-header with-border"> <a href="<?= site_url("tawa/form_layanan/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah layanan"> <i class="fe fe-plus"></i> Tambah layanan </a>
+            <div class="card-header"> <a href="<?= site_url("tawa/form_layanan/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah layanan"> <i class="fe fe-plus"></i> Tambah layanan </a>
               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tawa/delete_all_layanan/$gallery") ?>')" class="btn btn-social btn-box btn-danger btn-sm hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tawa/delete_all_layanan/$gallery") ?>')" class="btn btn-danger btn-sm hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
               <?php endif; ?>
               <a href="<?= site_url("tawa") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali </a>
             </div>
@@ -223,7 +223,7 @@
       </div>
 
       <div class="box box-warning">
-        <div class="box-header with-border"><i class="fe fe-list"></i>
+        <div class="card-header"><i class="fe fe-list"></i>
           <h3 class="box-title"><strong>DETAIL lAYANAN</strong></h3>
           <!-- tools box -->
           <div class="pull-right box-tools">

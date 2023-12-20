@@ -314,7 +314,7 @@ class Penduduk_model extends MY_Model
 			$select_sql .= 'rcb.id as penerima_bantuan,';
 		}
 
-		$select_sql .= "u.*,
+		$select_sql .= "u.id, u.nik, u.tanggallahir, u.tempatlahir, u.foto, u.status, u.status_dasar, u.id_kk, u.nama, u.nama_ayah, u.nama_ibu, a.dusun, a.rw, a.rt, d.alamat, d.no_kk AS no_kk, u.kk_level, u.tag_id_card, u.created_at, u.created_at, rc.id as status_covid,
 			(CASE
 				when u.status_kawin IS NULL then ''
 				when u.status_kawin <> 2 then k.nama

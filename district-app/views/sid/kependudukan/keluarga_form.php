@@ -14,16 +14,16 @@
 						<div class="row">
 							<div id="nik_kepala" name="nik_kepala"></div>
 							<div class="col-md-12">
-								<div class='box box-primary'>
-									<div class="box-header with-border">
+								<div class="card shadow">
+									<div class="card-header">
 										<a href="<?= site_url("keluarga") ?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali Ke Daftar Penduduk">
 											<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 										</a>
 									</div>
-									<div class='box-body'>
+									<div class="card-body">
 										<div class="row">
 											<div class='col-sm-7'>
-												<div class='form-group'>
+												<div class="form-group">
 													<label for="alamat"> Nomor KK</label>
 													<?php
 													// $penduduk dipakai kalau validasi data gagal
@@ -40,7 +40,7 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class='col-sm-12'>
+									<div class="col-sm-12">
 										<div class="form-group bg-primary" style="padding:10px">
 											<strong>DATA KEPALA KELUARGA :</strong>
 										</div>

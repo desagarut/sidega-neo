@@ -21,8 +21,8 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url('surat_master/form')?>" title="Tambah Format Surat" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Format Surat</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_master/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="<?= site_url('surat_master/form')?>" title="Tambah Format Surat" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Format Surat</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_master/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -86,9 +86,9 @@
 																		<?php if ($data['kunci'] == '0'): ?>
 																			<a href="<?= site_url("surat_master/lock/$data[id]/$data[kunci]")?>" class="btn bg-navy btn-box btn-sm" title="Non-Aktifkan Surat" ><i class="fe fe-unlock"></i></a>
 																			<?php if ($data['favorit']==1): ?>
-																				<a href="<?= site_url("surat_master/favorit/$data[id]/$data[favorit]")?>" class="btn bg-purple btn-box btn-sm" title="Keluarkan dari Daftar Favorit" ><i class="fe fe-star"></i></a>
+																				<a href="<?= site_url("surat_master/favorit/$data[id]/$data[favorit]")?>" class="btn btn-outline-info btn-sm" title="Keluarkan dari Daftar Favorit" ><i class="fe fe-star"></i></a>
 																			<?php else: ?>
-																				<a href="<?= site_url("surat_master/favorit/$data[id]/$data[favorit]")?>" class="btn bg-purple btn-box btn-sm"  title="Tambahkan ke Daftar Favorit" ><i class="fe fe-star-o"></i></a>
+																				<a href="<?= site_url("surat_master/favorit/$data[id]/$data[favorit]")?>" class="btn btn-outline-info btn-sm"  title="Tambahkan ke Daftar Favorit" ><i class="fe fe-star-o"></i></a>
 																			<?php endif; ?>
 																		<?php elseif ($data['kunci'] == '1'): ?>
 																			<a href="<?= site_url("surat_master/lock/$data[id]/$data[kunci]")?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan Surat"><i class="fe fe-lock"></i></a>
@@ -102,11 +102,11 @@
 																	<td><?= $data['url_surat']?></td>
 																	<td><?= $data['lampiran']?></td>
 																	<td nowrap>
-																		<a href="<?= site_url("surat_master/kode_isian/$p/$o/$data[id]")?>" class="btn btn-social btn-box btn-info btn-sm"  title="Kode Isian"><i class="fe fe-code"></i>Kode Isian</a>
-																		<a href="<?= site_url("surat_master/form_upload/$p/$o/$data[url_surat]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Unggah Template Format Surat" data-title="Unggah Template Format Surat" class="btn btn-social btn-box bg-orange btn-sm"><i class='fe fe-upload'></i> Unggah</a>
+																		<a href="<?= site_url("surat_master/kode_isian/$p/$o/$data[id]")?>" class="btn btn-info btn-sm"  title="Kode Isian"><i class="fe fe-code"></i>Kode Isian</a>
+																		<a href="<?= site_url("surat_master/form_upload/$p/$o/$data[url_surat]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Unggah Template Format Surat" data-title="Unggah Template Format Surat" class="btn bg-orange btn-sm"><i class='fe fe-upload'></i> Unggah</a>
 																		<?php $surat = SuratExport($data[url_surat]); ?>
 																		<?php if ($surat != ""): ?>
-																			<a href="<?= base_url($surat)?>" class="btn btn-social btn-box bg-purple btn-sm"  title="Unduh Template Format Surat"><i class="fe fe-download"></i>Unduh </a>
+																			<a href="<?= base_url($surat)?>" class="btn btn-social btn-boxbtn-outline-info btn-sm"  title="Unduh Template Format Surat"><i class="fe fe-download"></i>Unduh </a>
 																		<?php endif; ?>
 																	</td>
 

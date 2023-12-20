@@ -191,7 +191,7 @@
 										</strong> </p>
 								</li>
 								<li class="user-footer">
-									<div class="pull-left"> <a href="<?= site_url('user_setting'); ?>" data-remote="false" data-toggle="modal" data-tittle="Pengaturan Pengguna" data-target="#modalBox" class="btn bg-purple btn-box btn-sm">Profil</a> </div>
+									<div class="pull-left"> <a href="<?= site_url('user_setting'); ?>" data-remote="false" data-toggle="modal" data-tittle="Pengaturan Pengguna" data-target="#modalBox" class="btn btn-outline-info btn-sm">Profil</a> </div>
 									<div class="pull-right"> <a href="<?= site_url('insidega/logout'); ?>" class="btn bg-maroon btn-box btn-sm">Keluar</a> </div>
 								</li>
 							</ul>

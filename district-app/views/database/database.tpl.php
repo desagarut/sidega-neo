@@ -15,7 +15,7 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<div class="box-body">
 								<div class="row">
 									<div class="col-xs-12">

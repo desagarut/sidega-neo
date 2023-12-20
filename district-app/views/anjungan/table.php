@@ -12,9 +12,9 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
-	        <div class="box-header with-border">
-						<a href="<?=site_url('anjungan/form')?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Anjungan Layanan Mandiri"><i class="fe fe-plus"></i> Tambah Anjungan Layanan Mandiri</a>
+				<div class="card shadow">
+	        <div class="card-header">
+						<a href="<?=site_url('anjungan/form')?>" class="btn bg-olive btn-sm " title="Tambah Anjungan Layanan Mandiri"><i class="fe fe-plus"></i> Tambah Anjungan Layanan Mandiri</a>
 					</div>
 					<div class="card-body">
 						<div class="row">

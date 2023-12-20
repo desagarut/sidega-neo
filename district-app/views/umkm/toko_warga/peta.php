@@ -66,7 +66,7 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<form id="validasi1" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class='modal-body'>
 							<div class="row">
@@ -75,12 +75,12 @@
 								</div>
 							</div>
 							<div class="modal-footer">
-								<div class='col-md-12'>
-									<a href="<?= site_url("toko_warga") ?>" class="pull-left"> <button type="#" class="btn btn-social btn-box btn-primary btn-sm"><i class='fe fe-arrow-left'></i> Kembali</button></a>
+								<div class="col-md-12">
+									<a href="<?= site_url("toko_warga") ?>" class="pull-left"> <button type="#" class="btn btn-primary btn-sm"><i class='fe fe-arrow-left'></i> Kembali</button></a>
 									<input type="text" name="lat" id="lat" value="<?= $toko['lat'] ?>" />
 									<input type="text" name="lng" id="lng" value="<?= $toko['lng'] ?>" />
-									<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-refresh'></i> Reset</button>
-									<button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class='fe fe-check'></i> Simpan</button>
+									<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-refresh'></i> Reset</button>
+									<button type="submit" class="btn btn-success btn-sm"><i class='fe fe-check'></i> Simpan</button>
 								</div>
 							</div>
 						</div>

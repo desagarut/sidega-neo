@@ -21,11 +21,11 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url('keluar/perorangan_clear')?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-archive"></i> Rekam Surat Perorangan</a>
-						<a href="<?= site_url('keluar/graph')?>" class="btn btn-social btn-box bg-orange btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-pie-chart"></i> Pie Surat Keluar</a>
-						<a href="<?= site_url('keluar/dialog_cetak/cetak')?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fe fe-printer"></i> Cetak</a>
-						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fe fe-download"></i> Unduh</a>
-						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan Filter</a>
+						<a href="<?= site_url('keluar/perorangan_clear')?>" class="btn bg-olive btn-sm "><i class="fe fe-archive"></i> Rekam Surat Perorangan</a>
+						<a href="<?= site_url('keluar/graph')?>" class="btn bg-orange btn-sm btn-sm "><i class="fe fe-pie-chart"></i> Pie Surat Keluar</a>
+						<a href="<?= site_url('keluar/dialog_cetak/cetak')?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fe fe-printer"></i> Cetak</a>
+						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn bg-navy btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fe fe-download"></i> Unduh</a>
+						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -114,11 +114,11 @@
 																	<td nowrap>
 																		<?php
 																			if (is_file($theFile)): ?>
-																				<a href="<?= base_url(LOKASI_ARSIP.$berkas)?>" class="btn btn-social btn-box bg-purple btn-sm" title="Unduh Surat" target="_blank"><i class="fe fe-file-word-o"></i> Surat</a>
+																				<a href="<?= base_url(LOKASI_ARSIP.$berkas)?>" class="btn btn-social btn-boxbtn-outline-info btn-sm" title="Unduh Surat" target="_blank"><i class="fe fe-file-word-o"></i> Surat</a>
 																			<?php	endif; ?>
 																		<?php
 																			if (is_file($lampiran)): ?>
-																				<a href="<?= base_url(LOKASI_ARSIP.$data['lampiran'])?>" target="_blank" class="btn btn-social btn-box bg-olive btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip"></i> Lampiran</a>
+																				<a href="<?= base_url(LOKASI_ARSIP.$data['lampiran'])?>" target="_blank" class="btn bg-olive btn-sm" title="Unduh Lampiran"><i class="fe fe-paperclip"></i> Lampiran</a>
 																			<?php	endif; ?>
 																		<a href="<?= site_url("keluar/edit_keterangan/$data[id]")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
 																		<a href="#" data-href="<?= site_url("keluar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>

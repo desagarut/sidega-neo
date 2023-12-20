@@ -19,7 +19,7 @@
                 <?php $this->load->view('web/mandiri/mailbox_menu.php');?>
             </div>
             <div class="col-md-9">
-              <div class="card card-shadow">
+              <div class="card shadow">
                 <div class="box-header">
                     <h3 class="box-title">Balas Pesan</h3>
                     <?php if($pesan) : ?>
@@ -60,9 +60,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class='box-footer'>
-                                            <div class='col-md-12'>
-                                                <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-reply'></i> Balas Pesan</button>
+                                        <div class="card-footer">
+                                            <div class="col-md-12">
+                                                <button type="submit" class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-reply'></i> Balas Pesan</button>
                                             </div>
                                         </div>
                 

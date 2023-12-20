@@ -1,7 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="tab-pane" id="keluarga">
-  <div class="box-header with-border">
+  <div class="card-header">
     <h5><b>Rincian Keluarga</b></h5>
   </div>
   <div class="box-body">
@@ -80,9 +80,9 @@
         </div>
         <div class='modal-body btn-info'> </div>
         <div class='modal-footer'>
-          <button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
           <a class='btn-ok'>
-          <button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-delete"><i class='fe fe-check'></i> Simpan</button>
+          <button type="button" class="btn btn-info btn-sm" id="ok-delete"><i class='fe fe-check'></i> Simpan</button>
           </a> </div>
       </div>
     </div>

@@ -118,9 +118,9 @@
 					'data': function(data) {
 						let urutan_prioritas;
 						if (data.urutan_prioritas == null) {
-							urutan_prioritas = `<a href="<?= site_url('pembangunan/form_ubah_prioritas/') ?>${data.id}" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Lengkapi Data Prioritas " data-title="Lengkapi Data" class="btn btn-social btn-box btn-block btn-sm btn-default"><i class='fe fe-question'></i> Lengkapi Data</a>`
+							urutan_prioritas = `<a href="<?= site_url('pembangunan/form_ubah_prioritas/') ?>${data.id}" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Lengkapi Data Prioritas " data-title="Lengkapi Data" class="btn btn-block btn-sm btn-default"><i class='fe fe-question'></i> Lengkapi Data</a>`
 						} else {
-							urutan_prioritas = `<a href="<?= site_url('pembangunan/form_ubah_prioritas/') ?>${data.id}" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Ubah Data Prioritas " data-title="Ubah Data" class="btn btn-social btn-box btn-block btn-sm btn-success"><i class='fe fe-check'></i> Ubah data</a>`
+							urutan_prioritas = `<a href="<?= site_url('pembangunan/form_ubah_prioritas/') ?>${data.id}" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Ubah Data Prioritas " data-title="Ubah Data" class="btn btn-block btn-sm btn-success"><i class='fe fe-check'></i> Ubah data</a>`
 						}
 
 						let status;
@@ -139,9 +139,9 @@
 
 						let status_vote;
 						if (data.status_vote == 1) {
-							status_vote = `<a href="<?= site_url('pembangunan/unvote/'); ?>${data.id}" class="btn btn-social btn-box btn-block btn-sm btn-success"><i class='fe fe-check'></i> Terdaftar di Prioritas</a>`
+							status_vote = `<a href="<?= site_url('pembangunan/unvote/'); ?>${data.id}" class="btn btn-block btn-sm btn-success"><i class='fe fe-check'></i> Terdaftar di Prioritas</a>`
 						} else {
-							status_vote = `<a href="<?= site_url('pembangunan/vote/'); ?>${data.id}" class="btn btn-social btn-box btn-block btn-sm btn-warning"><i class='fe fe-question'></i> Daftarkan Ke Prioritas</a>`
+							status_vote = `<a href="<?= site_url('pembangunan/vote/'); ?>${data.id}" class="btn btn-block btn-sm btn-warning"><i class='fe fe-question'></i> Daftarkan Ke Prioritas</a>`
 						}
 
 						let status_rkp;

@@ -17,7 +17,7 @@
           <?php $this->load->view('data_sppt/menu.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<div class="box-body">
 							<h4>Keterangan</h4>
 							<p><strong>Modul Data SPPT PBB</strong> adalah modul untuk pengelolaan data tentang kepemilikan lahan, termasuk riwayat kepemilikan.</p>

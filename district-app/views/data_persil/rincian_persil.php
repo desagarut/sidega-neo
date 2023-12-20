@@ -31,9 +31,9 @@
 				<?php $this->load->view('data_persil/menu_kiri.php') ?>
 			</div>
 			<div class="col-md-8 col-lg-9">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
-						<a href="<?= site_url('data_persil/clear') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar PersilA"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Persil</a>
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url('data_persil/clear') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar PersilA"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Persil</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -43,7 +43,7 @@
 										<input type="hidden" name="id" value="<?php echo $this->uri->segment(4) ?>">
 										<div class="row">
 											<div class="col-sm-12">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h3 class="box-title">Rincian Persil</h3>
 												</div>
 												<div class="box-body">
@@ -74,7 +74,7 @@
 											<div class="col-sm-12">
 												<div class="row">
 													<div class="col-sm-9">
-														<div class="box-header with-border">
+														<div class="card-header">
 															<h3 class="box-title">Daftar Mutasi Persil</h3>
 														</div>
 													</div>

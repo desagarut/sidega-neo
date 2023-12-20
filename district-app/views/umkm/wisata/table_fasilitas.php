@@ -29,7 +29,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-warning">
-            <div class="box-header with-border"> <a href="<?= site_url("wisata") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a> </div>
+            <div class="card-header"> <a href="<?= site_url("wisata") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a> </div>
           </div>
 
           <div class="row">
@@ -44,9 +44,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-warning">
-            <div class="box-header with-border"> 
+            <div class="card-header"> 
               <a href="<?= site_url("wisata") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Wisata </a>
-              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Produk"> <i class="fe fe-plus"></i> Tambah Layanan </a>
+              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Produk"> <i class="fe fe-plus"></i> Tambah Layanan </a>
             </div>
           </div>
           <div class="row">
@@ -260,7 +260,7 @@
             </div>
             <div class="col-md-12">
               <div class="box box-warning">
-                <div class="box-header with-border"><i class="fe fe-list"></i>
+                <div class="card-header"><i class="fe fe-list"></i>
                   <h3 class="box-title"><strong>DETAIL FASILITAS</strong></h3>
                   <!-- tools box -->
                   <div class="pull-right box-tools">
@@ -285,9 +285,9 @@
                                 <option value="2" <?php if ($filter == 2) : ?>selected<?php endif ?>>Tidak Aktif</option>
                               </select>
                               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all_fasilitas/$gallery") ?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+                                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all_fasilitas/$gallery") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
                               <?php endif; ?>
-                              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a>
+                              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a>
                             </div>
                             <div class="col-sm-6">
                               <div class="box-tools">

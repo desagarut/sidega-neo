@@ -138,7 +138,7 @@ $(document).ready(function () {
 </style>
 
 <section class="main-wrapper">
-    <div class="card card-shadow">
+    <div class="card shadow">
         <div class="box-body">
             <div class="row">
                 <div class="col-sm-12">

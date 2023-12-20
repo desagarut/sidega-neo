@@ -2,7 +2,7 @@
 
 <a href="<?= site_url('mailbox_web/form') ?>" class="btn btn-success btn-block margin-bottom">Buat Pesan</a>
 <div class="box box-solid">
-  <div class="box-header with-border">
+  <div class="card-header">
     <h4 class="box-title box-warning">Menu</h4>
     <div class="box-tools">
       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i> </button>

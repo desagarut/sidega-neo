@@ -1,7 +1,7 @@
 <?php  defined('BASEPATH') OR exit('No direct script access allowed');?>
 
 <div id="penduduk" class="box box-info <?= ($kategori == 'penduduk') ?: 'collapsed-box'; ?>">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Statistik Penduduk</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa <?= ($kategori == 'penduduk') ? 'fa-minus' : 'fa-plus'; ?>"></i></button>
@@ -16,7 +16,7 @@
 	</div>
 </div>
 <div id="keluarga" class="box box-info <?= ($kategori == 'keluarga') ?: 'collapsed-box'; ?>">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Statistik Keluarga</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa <?= ($kategori == 'keluarga') ? 'fa-minus' : 'fa-plus'; ?>"></i></button>
@@ -31,7 +31,7 @@
 	</div>
 </div>
 <div id="bantuan" class="box box-info <?= ($kategori == 'bantuan') ?: 'collapsed-box'; ?>">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<h3 class="box-title">Statistik Program Bantuan</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa <?= ($kategori == 'bantuan') ? 'fa-minus' : 'fa-plus'; ?>"></i></button>

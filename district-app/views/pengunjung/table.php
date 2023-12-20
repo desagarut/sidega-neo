@@ -62,7 +62,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card shadow">
-								<div class="card-header with-border">
+								<div class="card-header">
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -189,14 +189,14 @@
 										<div class="col-md-12">
 											<div class="row">
 												<div class="col-md-8">
-													<div class="card card-shadow">
+													<div class="card shadow">
 														<!-- Ini Grafik -->
 														<br>
 														<div id="chart"> </div>
 													</div>
 												</div>
 												<div class="col-md-4">
-													<div class="card card-shadow">
+													<div class="card shadow">
 														<!-- Tabel Data -->
 														<div class="table-responsive">
 															<table class="table table-bordered table-striped table-hover nowrap">

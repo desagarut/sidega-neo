@@ -25,7 +25,7 @@
       <!-- /.col -->
 
       <div class="col-md-9">
-        <div class="card card-shadow">
+        <div class="card shadow">
           <div class="box-header">
             <h3 class="box-title">Pesan</h3>
             <div class="box-tools">

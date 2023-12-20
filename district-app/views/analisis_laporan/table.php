@@ -37,11 +37,11 @@
     <?php $this->load->view('analisis_master/left', $data); ?>
   </div>
   <div class="col-md-8 col-lg-9">
-  <div class="card card-shadow">
-  <div class="box-header with-border"> <a href="<?= site_url("analisis_laporan/dialog/$o/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Cetak"><i class="fe fe-printer"></i>Cetak</a> <a href="<?= site_url("analisis_laporan/dialog/$o/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Unduh"><i class="fe fe-download"></i>Unduh</a> <a href="<?= site_url("analisis_laporan/ajax_multi_jawab"); ?>" class="btn btn-social btn-box bg-olive btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Filter Indikator" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Filter Indikator"><i class="fe fe-search"></i>Filter Indikator</a> <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a> <a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar RW"><i class="fe fe-arrow-circle-left "></i>Kembali Ke
+  <div class="card shadow">
+  <div class="card-header"> <a href="<?= site_url("analisis_laporan/dialog/$o/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Cetak"><i class="fe fe-printer"></i>Cetak</a> <a href="<?= site_url("analisis_laporan/dialog/$o/unduh")?>" class="btn bg-navy btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Unduh"><i class="fe fe-download"></i>Unduh</a> <a href="<?= site_url("analisis_laporan/ajax_multi_jawab"); ?>" class="btn bg-olive btn-sm btn-sm " title="Filter Indikator" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Filter Indikator"><i class="fe fe-search"></i>Filter Indikator</a> <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> <a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar RW"><i class="fe fe-arrow-circle-left "></i>Kembali Ke
     <?= $analisis_master['nama']; ?>
     </a> </div>
-  <div class="box-header with-border">
+  <div class="card-header">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-hover tabel-rincian">
         <tr>
@@ -110,7 +110,7 @@
           <?php foreach ($main as $key => $data): ?>
           <tr>
             <td class="padat"><?= ($key + $paging->offset + 1); ?></td>
-            <td class="aksi"><a href="<?= site_url("analisis_laporan/kuisioner/$p/$o/$data[id]"); ?>" class="btn bg-purple btn-box btn-sm" title="Rincian"><i class='fe fe-list'></i></a></td>
+            <td class="aksi"><a href="<?= site_url("analisis_laporan/kuisioner/$p/$o/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian"><i class='fe fe-list'></i></a></td>
             <td><?= $data['uid']; ?></td>
             <?php if($analisis_master['subjek_tipe'] != 4): ?>
             <td><?= $data['kk']; ?></td>

@@ -13,8 +13,8 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<h3 class="box-title">SMS</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -29,10 +29,10 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="<?= site_url('sms/form_grup/0')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Group"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i> Tambah Group</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("sms/delete_all_grup")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="<?= site_url('sms/form_grup/0')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Group"  class="btn btn-success btn-sm "><i class='fe fe-plus'></i> Tambah Group</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("sms/delete_all_grup")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -72,7 +72,7 @@
 																		<td nowrap>
 																			<a href="<?=site_url("sms/form_grup/$data[id_grup]")?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data"><i class="fe fe-edit"></i></a>
 																			<a href="#" data-href="<?=site_url("sms/grup_delete/$data[id_grup]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
-																			<a href="<?=site_url("sms/anggota/$data[id_grup]")?>" class="btn bg-purple btn-box btn-sm" title="Rincian Anggota"><i class="fe fe-list"></i></a>
+																			<a href="<?=site_url("sms/anggota/$data[id_grup]")?>" class="btn btn-outline-info btn-sm" title="Rincian Anggota"><i class="fe fe-list"></i></a>
 																		</td>
                                     <td><?=$data['nama_grup']?></td>
 				 														<td><?=$data['jumlah_anggota']?></td>

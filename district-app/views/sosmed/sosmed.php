@@ -15,8 +15,8 @@
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<h3 class="box-title">Media Sosial</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -33,12 +33,12 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<?php $this->load->view('sosmed/'.$media); ?>
-						<div class='box-footer'>
-							<div class='col-md-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm reset' onclick="reset_form($(this).val());"><i class='fe fe-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
+						<div class="card-footer">
+							<div class="col-md-12">
+								<button type='reset' class='btn btn-danger btn-sm reset' onclick="reset_form($(this).val());"><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

@@ -52,17 +52,17 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="card card-shadow">
+					<div class="card shadow">
 
-						<div class="box-header with-border">
+						<div class="card-header">
 
-							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
 
 								<i class="fe fe-printer"></i>Cetak
 
 							</a>
 
-							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank">
+							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn bg-navy btn-sm btn-sm " title="Unduh" target="_blank">
 
 								<i class="fe fe-download"></i>Unduh
 
@@ -76,7 +76,7 @@
 
 						</div>
 
-						<div class="box-header with-border">
+						<div class="card-header">
 
 							<h5>Analisis Statistik Jawaban - <a href="<?= site_url(); ?>analisis_master/menu/<?= $_SESSION['analisis_master']; ?>"><a href="<?= site_url(); ?>analisis_master/menu/<?= $_SESSION['analisis_master']; ?>"><?= $analisis_master['nama']; ?></a></a></h5>
 

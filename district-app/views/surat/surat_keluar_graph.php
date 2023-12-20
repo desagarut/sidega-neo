@@ -52,7 +52,7 @@
 				<h5 class="mb-2 page-title">Grafik Surat Keluar</h5>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="card card-shadow">
+						<div class="card shadow">
 							<div class="card-body">
 								<div class="row">
 									<div class="col-sm-12">

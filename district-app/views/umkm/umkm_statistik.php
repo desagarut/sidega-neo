@@ -15,7 +15,7 @@ $wisata = $this->db->query('SELECT COUNT(id) AS jumlah FROM tbl_wisata WHERE par
     </section>
 
     <section class='content' id="maincontent">
-        <div class='row'>
+        <div class="row">
             <div id="umkm" class="col-sm-3">
                 <?php $this->load->view('umkm/menu') ?>
             </div>

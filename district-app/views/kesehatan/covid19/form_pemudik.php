@@ -12,16 +12,16 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
+				<div class="card shadow">
+					<div class="card-header">
 						<div class="col-md-12">
-							<a href="<?= site_url('covid19')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Pemudik Saat Covid-19</a>
+							<a href="<?= site_url('covid19')?>" class="btn btn-primary btn-sm " title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Pemudik Saat Covid-19</a>
 						</div>
 					</div>
 					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="box-header with-border">
+								<div class="card-header">
 									<h3 class="box-title">Tambahkan Warga Pemudik</h3>
 								</div>
 								<div class="box-body">
@@ -69,8 +69,8 @@
 									</div>
 									<div class="box-footer">
 										<div class="col-xs-12">
-											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-											<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
+											<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+											<button type="submit" class="btn btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 										</div>
 									</div>
 								</div>
@@ -97,9 +97,9 @@
 				</div>
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
+					<button type="submit" class="btn btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

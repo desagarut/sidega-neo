@@ -15,9 +15,9 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url("rtm/cetak_kk/$id_kk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url("rtm/cetak_kk/$id_kk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " target="_blank"><i class="fe fe-printer "></i> Cetak</a>
 							<a href="<?=site_url("rtm/anggota/$id_kk")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali ke Daftar Anggota Rumah Tangga">
 								<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Anggota Rumah Tangga
 							</a>

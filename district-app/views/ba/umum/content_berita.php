@@ -1,5 +1,5 @@
-<div class="card card-shadow">
-	<div class="box-header with-border">
+<div class="card shadow">
+	<div class="card-header">
 	</div>
 	<div class="box-body">
 		<div class="alert alert-info">

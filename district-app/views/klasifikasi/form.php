@@ -19,7 +19,7 @@
 				<form id="validasi" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card card-shadow">
+							<div class="card shadow">
 								<div class="card-body">
 									<div class="form-group row">
 										<label class="control-label col-sm-4" for="kode">Kode</label>
@@ -41,7 +41,7 @@
 									</div>
 								</div>
 								<div class='card-footer text-center'>
-									<div class='col-md-12'>
+									<div class="col-md-12">
 										<button type='reset' class='btn btn-danger btn-sm'><i class='fe fe-x'></i> Batal</button>
 										<button type='submit' class='btn btn-info btn-sm confirm'><i class='fe fe-check'></i> Simpan</button>
 									</div>

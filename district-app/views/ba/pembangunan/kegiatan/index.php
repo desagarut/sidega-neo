@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
 <form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
-	<div class="card card-shadow">
-		<div class="box-header with-border">
+	<div class="card shadow">
+		<div class="card-header">
 			<div class="row">
 				<div class="col-sm-2">
 					<select class="form-control input-sm select2" id="tahun" name="tahun">
@@ -13,8 +13,8 @@
 					</select>
 				</div>
 				<div class="col-sm-10">
-					<a href="<?= site_url($this->controller . '/dialog/cetak'); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Kegiatan Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Kegiatan Pembangunan"><i class="fe fe-printer "></i> Cetak</a>
-					<a href="<?= site_url($this->controller . '/dialog/unduh'); ?>" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Rencana Kerja Pembangunan"><i class="fe fe-download"></i> Unduh</a>
+					<a href="<?= site_url($this->controller . '/dialog/cetak'); ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Cetak Buku Kegiatan Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Kegiatan Pembangunan"><i class="fe fe-printer "></i> Cetak</a>
+					<a href="<?= site_url($this->controller . '/dialog/unduh'); ?>" class="btn btn-social btn-flat bg-navy btn-sm " title="Unduh Buku Rencana Kerja Pembangunan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Rencana Kerja Pembangunan"><i class="fe fe-download"></i> Unduh</a>
 				</div>
 			</div>
 		</div>

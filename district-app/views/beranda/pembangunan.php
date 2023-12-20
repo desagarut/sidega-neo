@@ -21,7 +21,7 @@
                     
                 </span> RKP <?= ucwords($this->setting->sebutan_desa); ?>
             </a>
-            <a href="<?= site_url('pembangunan/pelaksanaan_durkp') ?>" class="btn btn-app bg-purple" title="Daftar Usulan Rencana Kerja Pemerintah <?= ucwords($this->setting->sebutan_desa); ?>" style="color:purpleviolet">
+            <a href="<?= site_url('pembangunan/pelaksanaan_durkp') ?>" class="btn btn-appbtn-outline-info" title="Daftar Usulan Rencana Kerja Pemerintah <?= ucwords($this->setting->sebutan_desa); ?>" style="color:purpleviolet">
                 <span class="badge bg-maroon">
                     <?php foreach ($durkp_total as $data) : ?>
                         <?= $data['jumlah'] ?>

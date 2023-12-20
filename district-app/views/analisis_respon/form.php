@@ -84,11 +84,11 @@
 
 					<div id="box-full-screen" class="box box-info">
 
-            <div class="box-header with-border">
+            <div class="card-header">
 
 						<?php if (isset($_SESSION['fullscreen'])): ?>
 
-							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn bg-navy btn-sm btn-sm ">
 
 								<i class="fe fe-search-minus"></i>Normal
 
@@ -96,7 +96,7 @@
 
 						<?php else: ?>
 
-							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn bg-navy btn-sm btn-sm ">
 
 								<i class="fe fe-search-plus"></i>Full Screen
 
@@ -104,7 +104,7 @@
 
 						<?php endif; ?>
 
-							<a href="<?= site_url()?>analisis_respon" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
+							<a href="<?= site_url()?>analisis_respon" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
 
 						</div>
 
@@ -200,7 +200,7 @@
 
 																			<td nowrap>
 
-																				<a href="<?= site_url("analisis_respon/kuisioner_child/$p/$o/$id/$idc")?>" class="btn bg-purple btn-box btn-sm"  title="Input Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="<?= $ang['nama']?> - [<?= $ang['nik']?>]"><i class='fe fe-check-square-o'></i></a>
+																				<a href="<?= site_url("analisis_respon/kuisioner_child/$p/$o/$id/$idc")?>" class="btn btn-outline-info btn-sm"  title="Input Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="<?= $ang['nama']?> - [<?= $ang['nik']?>]"><i class='fe fe-check-square-o'></i></a>
 
 																			</td>
 
@@ -444,13 +444,13 @@
 
 					</div>
 
-					<div class='box-footer'>
+					<div class="card-footer">
 
-						<div class='col-md-12'>
+						<div class="col-md-12">
 
-							<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+							<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
 
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 
 							</div>
 

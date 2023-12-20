@@ -23,9 +23,9 @@
 	</section>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
-					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-social btn-box btn-success btn-sm"><i class="fe fe-plus"></i> Tambah Pengguna</a>
+			<div class="card shadow">
+				<div class="card-header">
+					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-success btn-sm"><i class="fe fe-plus"></i> Tambah Pengguna</a>
 				</div>
 				<div class="box-body">
 					<form id="mainform" name="mainform" action="" method="post">
@@ -127,9 +127,9 @@
 										Berikut adalah kode pin yang baru saja di hasilkan, silakan dicatat atau di ingat dengan baik, kode pin ini sangat rahasia, dan hanya bisa dilihat sekali ini lalu setelah itu hanya bisa di reset saja.<br /><h4>Kode PIN : <?= $info['pin']; ?></h4>
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class="fe fe-sign-out"></i> Tutup</button>
+										<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class="fe fe-sign-out"></i> Tutup</button>
 										<?php if (cek_koneksi_internet() && $info['pin'] && $info['telepon']): ?>
-											<button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class="fe fe-whatsapp"></i> Kirim</button>
+											<button type="submit" class="btn btn-success btn-sm"><i class="fe fe-whatsapp"></i> Kirim</button>
 										<?php endif; ?>
 									</div>
 								</form>

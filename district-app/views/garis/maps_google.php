@@ -198,10 +198,10 @@
       </div>
     </div>
     <div class="modal-footer">
-        <a href="<?= site_url('garis')?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>  
-        <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>    
-        <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-        <button type="submit" class="btn btn-social btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fe fe-check'></i> Simpan</button>
+        <a href="<?= site_url('garis')?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>  
+        <a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>    
+        <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+        <button type="submit" class="btn btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fe fe-check'></i> Simpan</button>
     </div>
 	</section>
 </div>

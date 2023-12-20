@@ -13,10 +13,10 @@
 	</section>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
-					<a href="<?=site_url('suplemen/form')?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Suplemen Baru"><i class="fe fe-plus"></i> Tambah Suplemen Baru</a>
-					<a href="<?=site_url('suplemen/panduan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Program Bantuan Baru"><i class="fe fe-question-circle"></i> Panduan</a>
+			<div class="card shadow">
+				<div class="card-header">
+					<a href="<?=site_url('suplemen/form')?>" class="btn bg-olive btn-sm " title="Tambah Suplemen Baru"><i class="fe fe-plus"></i> Tambah Suplemen Baru</a>
+					<a href="<?=site_url('suplemen/panduan')?>" class="btn btn-info btn-sm " title="Tambah Program Bantuan Baru"><i class="fe fe-question-circle"></i> Panduan</a>
 				</div>
 				<div class="box-body">
 					<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -48,7 +48,7 @@
 											<tr>
 												<td class="padat"><?= ($key + 1); ?></td>
 												<td class="aksi">
-													<a href="<?= site_url("suplemen/clear/$item[id]"); ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Data"><i class="fe fe-list-ol"></i></a>
+													<a href="<?= site_url("suplemen/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Data"><i class="fe fe-list-ol"></i></a>
 													<a href="<?= site_url("suplemen/form/$item[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
 													<a
 														<?php if ($item['jml'] <= 0): ?>

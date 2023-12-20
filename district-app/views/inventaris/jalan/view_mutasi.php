@@ -17,9 +17,9 @@
 					<?php $this->load->view('inventaris/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-						<a href="<?= site_url() ?>inventaris_jalan/mutasi" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Mutasi Inventaris Jalan, Irigasi dan Jaringan</a>
+					<div class="card shadow">
+            <div class="card-header">
+						<a href="<?= site_url() ?>inventaris_jalan/mutasi" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Mutasi Inventaris Jalan, Irigasi dan Jaringan</a>
 						</div>
 						<div class="box-body">
 							<div class="row">

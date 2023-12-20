@@ -23,7 +23,7 @@
 					<div class="row">
 						<div class="<?php if ($this->modul_ini <> 15) : ?>col-md-9<?php else : ?>col-md-12<?php endif; ?>">
 							<div class="card shadow">
-								<div class="card-header with-border">
+								<div class="card-header">
 									<a href="<?= site_url("{$this->controller}/form") ?>" class="btn btn-success btn-sm btn-sm mb-1 text-light" title="Tambah Klasifikasi Baru">
 										<i class="fe fe-plus"></i>Tambah Klasifikasi Baru
 									</a>

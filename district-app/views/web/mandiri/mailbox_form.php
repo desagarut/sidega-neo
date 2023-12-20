@@ -21,7 +21,7 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="card card-shadow">
+          <div class="card shadow">
             <div class="box-header">
                 <a href="<?= site_url("mandiri_web/mandiri/1/3")?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
                     <i class="fe fe-arrow-circle-left "></i>Kembali ke halaman Kotak Pesan
@@ -57,9 +57,9 @@
                                 </div>
                             </div>
                         </div>                
-                    <div class='box-footer'>
-                        <div class='col-md-12'>
-                            <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Kirim Pesan</button>
+                    <div class="card-footer">
+                        <div class="col-md-12">
+                            <button type="submit" class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Kirim Pesan</button>
                         </div>
                     </div>
                 </form> 			

@@ -21,15 +21,15 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
+		<div class="card shadow">
+			<div class="card-header">
 				<?php if ($this->CI->cek_hak_akses('h')): ?>
-                	<a href="<?= site_url('rtm/form_old'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Rumah Tangga Per Penduduk" title="Tambah Dari Data Penduduk" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i>Tambah Rumah Tangga</a>
-					<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all"); ?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+                	<a href="<?= site_url('rtm/form_old'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Rumah Tangga Per Penduduk" title="Tambah Dari Data Penduduk" class="btn btn-success btn-sm "><i class='fe fe-plus'></i>Tambah Rumah Tangga</a>
+					<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all"); ?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 				<?php endif; ?>
-				<a href="<?= site_url("rtm/ajax_cetak/$o/cetak"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
-				<a href="<?= site_url("rtm/ajax_cetak/$o/unduh"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
-				<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan Filter</a>
+				<a href="<?= site_url("rtm/ajax_cetak/$o/cetak"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
+				<a href="<?= site_url("rtm/ajax_cetak/$o/unduh"); ?>" class="btn bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+				<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 			</div>
 			<div class="box-body">
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -112,7 +112,7 @@
 												<td class="padat"><input type="checkbox" name="id_cb[]" value="<?= $data['no_kk']?>" /></td>
 												<td class="padat"><?= ($paging->offset + $key + 1) ; ?></td>
 												<td class="aksi">
-													<a href="<?= site_url("rtm/anggota/$data[id]"); ?>" class="btn bg-purple btn-box btn-sm" title="Rincian Anggota Rumah Tangga"><i class="fe fe-list-ol"></i></a>
+													<a href="<?= site_url("rtm/anggota/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Anggota Rumah Tangga"><i class="fe fe-list-ol"></i></a>
 													<?php if ($this->CI->cek_hak_akses('h')): ?>
                                                     <a href="<?= site_url("rtm/ajax_add_anggota/$data[id]"); ?>" title="Tambah Anggota Rumah Tangga" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Rumah Tangga" class="btn btn-success btn-box btn-sm"><i class="fe fe-plus"></i></a>
 													<a href="<?= site_url("rtm/edit_nokk/$data[id]"); ?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Rumah Tangga" class="btn bg-orange btn-box btn-sm"><i class='fe fe-edit'></i></a>

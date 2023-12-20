@@ -13,10 +13,10 @@
 	</section>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
-					<a href="<?= site_url('pemberdayaan_masyarakat/form_kegiatan') ?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Kegiatan"><i class="fe fe-plus"></i> Tambah Kegiatan</a>
-					<a href="<?= site_url('pemberdayaan_masyarakat/panduan') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Panduan Program"><i class="fe fe-question-circle"></i> Panduan</a>
+			<div class="card shadow">
+				<div class="card-header">
+					<a href="<?= site_url('pemberdayaan_masyarakat/form_kegiatan') ?>" class="btn bg-olive btn-sm " title="Tambah Kegiatan"><i class="fe fe-plus"></i> Tambah Kegiatan</a>
+					<a href="<?= site_url('pemberdayaan_masyarakat/panduan') ?>" class="btn btn-info btn-sm " title="Panduan Program"><i class="fe fe-question-circle"></i> Panduan</a>
 				</div>
 				<div class="box-body">
 					<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -52,7 +52,7 @@
 											<tr>
 												<td class="padat"><?= ($key + 1); ?></td>
 												<td class="aksi">
-													<a href="<?= site_url("pemberdayaan_masyarakat/clear/$item[id]"); ?>" class="btn bg-purple btn-box btn-sm" title="daftar peserta Data"><i class="fe fe-list-ol"></i></a>
+													<a href="<?= site_url("pemberdayaan_masyarakat/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="daftar peserta Data"><i class="fe fe-list-ol"></i></a>
 													<a href="<?= site_url("pemberdayaan_masyarakat/form_kegiatan/$item[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
 													<a <?php if ($item['jml'] <= 0) : ?> href="#" data-href="<?= site_url("pemberdayaan_masyarakat/hapus/$item[id]") ?>" data-toggle="modal" data-target="#confirm-delete" <?php endif; ?> class="btn bg-maroon btn-box btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash-o"></i>
 													</a>

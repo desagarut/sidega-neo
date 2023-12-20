@@ -1,5 +1,5 @@
-<div class="card card-shadow">
-	<div class="box-header with-border">
+<div class="card shadow">
+	<div class="card-header">
 		<table id="judul-laporan" width="100%" style="border: solid 0px black; text-align: center;">
 			<tr>
 				<td>

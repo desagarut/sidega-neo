@@ -17,10 +17,10 @@
 					<?php $this->load->view('kategori/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url("menu/ajax_add_sub_menu/$tip/$menu")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Menu"  class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fe fe-plus'></i> Tambah Sub Menu</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("menu/delete_all_sub_menu/$tip/$menu")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url("menu/ajax_add_sub_menu/$tip/$menu")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Menu"  class="btn btn-success btn-sm "><i class='fe fe-plus'></i> Tambah Sub Menu</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("menu/delete_all_sub_menu/$tip/$menu")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 							<a href="<?= site_url("menu")?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
 								<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Menu
 							</a>

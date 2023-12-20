@@ -135,7 +135,7 @@
 							</div>
 						</div>
 						<div class='card-footer'>
-							<div class='col-md-12'>
+							<div class="col-md-12">
 								<div class="form-group">
 									<label class="col-sm-3 control-label" for="lat">Lat</label>
 									<div class="col-sm-9">

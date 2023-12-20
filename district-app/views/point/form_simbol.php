@@ -77,10 +77,10 @@
           <?php $this->load->view('plan/nav.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
-            <div class="box-header with-border">
-							<a href="#" id="btn_ikon" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i>Tambah Simbol Lokasi</a>
-							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Salin Simbol Default">
+					<div class="card shadow">
+            <div class="card-header">
+							<a href="#" id="btn_ikon" class="btn btn-success btn-sm "><i class="fe fe-plus"></i>Tambah Simbol Lokasi</a>
+							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "  title="Salin Simbol Default">
 								<i class="fe fe-copy"></i>Salin Simbol Default
             	</a>
 						</div>
@@ -135,8 +135,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="simpan"><i class='fe fe-check'></i>Simpan</button>
+					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button type="submit" class="btn btn-info btn-sm" id="simpan"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>

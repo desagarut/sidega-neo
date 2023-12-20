@@ -12,15 +12,15 @@
 	<p class='text-danger'><i class='fe fe-comments'></i> Silahkan laporkan perubahan data kependudukan anda.</p>
 
 	<form id="validasi" action="<?= site_url('lapor/insert') ?>" method="POST" onSubmit="return validasi(this);">
-	<div class='form-group'>
+	<div class="form-group">
 		<label>Pengirim</label>
 		<input class="form-control" type="text" readonly="readonly" name="owner" value="<?= $_SESSION['nama']?>"/>
 	</div>
-	<div class='form-group'>
+	<div class="form-group">
 		<label>NIK</label>
 		<input class="form-control" type="text" readonly="readonly" name="email" value="<?= $_SESSION['nik']?>"/>
 	</div>
-	<div class='form-group'>
+	<div class="form-group">
 		<label>Laporan</label>
 		<textarea name="komentar" rows="10" class='form-control'></textarea>
 	</div>

@@ -14,9 +14,9 @@
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
-                <div class='col-md-12'>
-                    <div class="card card-shadow">
-                        <div class="box-header with-border">
+                <div class="col-md-12">
+                    <div class="card shadow">
+                        <div class="card-header">
                             <div class="box-tools pull-right">
                                  <a href="<?=site_url()?>penduduk/clear"><span class="label label-info"> Detail</span></a>
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i>
@@ -26,9 +26,9 @@
                             </div>
                             <h3 class="box-title">Kependudukan</h3>
                         </div>
-                        <div class='box-body'>
+                        <div class="card-body">
                             <div class="col-sm-2 col-xs-6">
-                                <div class="small-box bg-purple">
+                                <div class="small-boxbtn-outline-info">
                                     <div class="inner">
                                         <?php foreach ($dusun as $data): ?>
                                             <h3><?=$data['jumlah']?></h3>
@@ -104,9 +104,9 @@
 					</div>
 				</div>
 
-                <div class='col-md-12'>
+                <div class="col-md-12">
                     <div class="box box-success">
-                        <div class="box-header with-border">
+                        <div class="card-header">
                             <div class="box-tools pull-right">
                                  <a href="<?=site_url()?>program_bantuan"><span class="label label-info"> Detail</span></a>
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i>
@@ -116,7 +116,7 @@
                             </div>
                             <h3 class="box-title">Program Bantuan</h3>
                         </div>
-                        <div class='box-body'>
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-2 col-xs-6">
                                     <div class="small-box bg-yellow">

@@ -11,11 +11,11 @@
 				<div class="card shadow">
 					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url('bidang_bencana_darurat_mendesak/form_kejadian') ?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
+							<a href="<?= site_url('bidang_bencana_darurat_mendesak/form_kejadian') ?>" class="btn bg-olive btn-sm " title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
 						<?php endif; ?>
-						<a href="<?= site_url('bidang_bencana_darurat_mendesak/panduan') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Panduan"><i class="fe fe-question-circle"></i> Panduan</a>
+						<a href="<?= site_url('bidang_bencana_darurat_mendesak/panduan') ?>" class="btn btn-info btn-sm " title="Panduan"><i class="fe fe-question-circle"></i> Panduan</a>
 						<?php if ($tampil != 0) : ?>
-							<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+							<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 						<?php endif; ?>
 					</div>
 					<div class="card-body">
@@ -65,18 +65,18 @@
 																			<a href="#" class="btn btn-social bg-aqua btn-box btn-sm" data-toggle="dropdown" title="Aksi">Aksi <i class="fe fe-arrow-circle-down"></i></a>
 																			<ul class="dropdown-menu" role="menu">
 																				<li class="text-left">
-																					<a href="<?= site_url("bidang_bencana_darurat_mendesak/detail_kejadian/$item[id]") ?>" class="btn btn-social btn-box btn-block btn-sm"><i class="fe fe-eye"></i>Detail Kejadian</a>
+																					<a href="<?= site_url("bidang_bencana_darurat_mendesak/detail_kejadian/$item[id]") ?>" class="btn btn-block btn-sm"><i class="fe fe-eye"></i>Detail Kejadian</a>
 																				</li>
 																				<li>
-																					<a href="<?= site_url("bidang_bencana_darurat_mendesak/warga_terdampak_daftar/$item[id]") ?>" class="btn btn-social btn-box btn-block btn-sm" title="Detail Warga Terdampak"><i class="fe fe-list-ul"></i>Warga terdampak</a>
+																					<a href="<?= site_url("bidang_bencana_darurat_mendesak/warga_terdampak_daftar/$item[id]") ?>" class="btn btn-block btn-sm" title="Detail Warga Terdampak"><i class="fe fe-list-ul"></i>Warga terdampak</a>
 																				</li>
 																				<!--<li>
 																					<?php if ($item['jumlah_korban'] != 0) : ?>
-																						<a href="<?= site_url("bidang_bencana_darurat_mendesak/expor/$item[id]"); ?>" class="btn btn-social btn-box btn-block btn-sm" title="Download"><i class="fe fe-download"></i>Download</a>
+																						<a href="<?= site_url("bidang_bencana_darurat_mendesak/expor/$item[id]"); ?>" class="btn btn-block btn-sm" title="Download"><i class="fe fe-download"></i>Download</a>
 																					<?php endif ?>
 																				</li>
 																				<li>-->
-																					<a href="<?= site_url("bidang_bencana_darurat_mendesak/form_kejadian/$item[id]") ?>" class="btn btn-social btn-box btn-block btn-sm" title="Ubah"><i class="fe fe-edit"></i>Edit Kejadian</a>
+																					<a href="<?= site_url("bidang_bencana_darurat_mendesak/form_kejadian/$item[id]") ?>" class="btn btn-block btn-sm" title="Ubah"><i class="fe fe-edit"></i>Edit Kejadian</a>
 																				</li>
 																				<li>
 																					<?php if ($item['jumlah_korban'] != 0) : ?>

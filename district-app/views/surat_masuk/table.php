@@ -20,12 +20,12 @@
 		});
 	});
 </script>
-<div class="card card-shadow">
-  <div class="box-header with-border">
-		<a href="<?= site_url('surat_masuk/form')?>" title="Tambah Surat Masuk Baru" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Surat Masuk Baru</a>
-		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("surat_masuk/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Masuk"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o")?>" title="Unduh Agenda Surat Keluar" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Masuk"><i class="fe fe-download"></i> Unduh</a>
+<div class="card shadow">
+  <div class="card-header">
+		<a href="<?= site_url('surat_masuk/form')?>" title="Tambah Surat Masuk Baru" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Surat Masuk Baru</a>
+		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("surat_masuk/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Masuk"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o")?>" title="Unduh Agenda Surat Keluar" class="btn bg-navy btn-sm " title="Unduh Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Masuk"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="box-body">
 		<div class="row">
@@ -94,7 +94,7 @@
 													<td class="nostretch">
 														<a href="<?= site_url("surat_masuk/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
 														<?php if ($data['berkas_scan']): ?>
-															<a href="<?= base_url(LOKASI_ARSIP.$data['berkas_scan'])?>" class="btn bg-purple btn-box btn-sm"  title="Unduh Berkas Surat" target="_blank"><i class="fe fe-download"></i></a>
+															<a href="<?= base_url(LOKASI_ARSIP.$data['berkas_scan'])?>" class="btn btn-outline-info btn-sm"  title="Unduh Berkas Surat" target="_blank"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
 														<a href="<?= site_url("surat_masuk/dialog_disposisi/$o/$data[id]")?>" class="btn bg-navy btn-box btn-sm" title="Cetak Lembar Disposisi Surat" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Lembar Disposisi Surat"><i class="fe fe-file-archive-o"></i></a>
 														<a href="#" data-href="<?= site_url("surat_masuk/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>

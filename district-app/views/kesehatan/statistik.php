@@ -15,14 +15,14 @@ $wisata = $this->db->query('SELECT COUNT(id) AS jumlah FROM tbl_wisata WHERE par
     </section>
 
     <section class='content' id="maincontent">
-        <div class='row'>
+        <div class="row">
             <div id="kesehatan" class="col-sm-2">
                 <?php $this->load->view('kesehatan/menu') ?>
             </div>
             <div id="kesehatan" class="col-sm-10">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="box box-primary">
+                        <div class="card shadow">
                             <div class="box-header">
                                 <h7>Data Balita</h7>
                             </div>
@@ -48,7 +48,7 @@ $wisata = $this->db->query('SELECT COUNT(id) AS jumlah FROM tbl_wisata WHERE par
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="box box-primary">
+                        <div class="card shadow">
                         <div class="box-header">
                                 <h7>Data Stunting</h7>
                             </div>

@@ -13,9 +13,9 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
-				<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Kejadian"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Kejadian</a>
+		<div class="card shadow">
+			<div class="card-header">
+				<a href="<?= site_url('bidang_bencana_darurat_mendesak') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Kejadian"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Kejadian</a>
 			</div>
 			<div class="box-body">
 				<div class="row">
@@ -302,7 +302,7 @@
 					</div>
 				</div>
 			</div>
-			<div class='box-footer'>
+			<div class="card-footer">
 			</div>
 		</div>
 	</section>

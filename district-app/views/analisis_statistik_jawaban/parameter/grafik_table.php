@@ -82,7 +82,7 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-9">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<div class="box-body">
 							<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 								<div class="col-sm-12">
@@ -108,7 +108,7 @@
 											<?php endforeach;?>
 										</select>
 									<?php endif; ?>
-									<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
+									<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
 								</div>
 								<div class="col-sm-12">
 									<h5 class="box-title"><b><?= $analisis_statistik_jawaban['pertanyaan']?></b></h5>

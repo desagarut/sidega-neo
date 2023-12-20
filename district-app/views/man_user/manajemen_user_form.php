@@ -14,8 +14,8 @@
 		<div class="row">
 			<form id="validasi" action="<?=$form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<div class="col-md-3">
-					<div class="box box-primary">
-						<div class="box-body box-profile">
+					<div class="card shadow">
+						<div class="card-body card-profile">
 							<?php if ($user['foto']): ?>
 								 <img class="profile-user-img img-responsive img-circle" src="<?=AmbilFoto($user['foto'])?>" alt="Pengguna">
 							<?php else: ?>
@@ -36,9 +36,9 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-primary">
-						<div class="box-header with-border">
-							<a href="<?=site_url()?>man_user" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Manajemen Pengguna</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?=site_url()?>man_user" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Manajemen Pengguna</a>
 						</div>
 						<div class="box-body">
 							<div class="form-group">
@@ -86,10 +86,10 @@
 								</div>
 							</div>
 						</div>
-						<div class='box-footer'>
-							<div class='col-md-12'>
-								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
+						<div class="card-footer">
+							<div class="col-md-12">
+								<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+								<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</div>

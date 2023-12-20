@@ -86,7 +86,7 @@
     </div>
   </div>
   <div class="card-body p-0">
-    <div class='row'>
+    <div class="row">
       <div class="basic-map">
         <div id="map-wilayah-desa" style="height: 275px"></div>
       </div>

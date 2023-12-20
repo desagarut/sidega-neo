@@ -1,12 +1,12 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');?>
 
-<div class="card card-shadow">
-	<div class="box-header with-border">
+<div class="card shadow">
+	<div class="card-header">
 		<?php if ($this->CI->cek_hak_akses('u')): ?>
-			<a href="<?= site_url('ba_tanah_kas_desa/form')?>" class="btn btn-social btn-flat btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data</a>
+			<a href="<?= site_url('ba_tanah_kas_desa/form')?>" class="btn btn-social btn-flat btn-success btn-sm btn-sm " title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data</a>
 		<?php endif; ?>
-		<a href="#" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/cetak'); ?>" data-target="#cetakBox" data-aksi="Cetak" data-title="Buku Tanah Kas Desa"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="#" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/unduh'); ?>" data-target="#cetakBox" data-aksi="Unduh" data-title="Buku Tanah Kas Desa"><i class="fe fe-download"></i> Unduh</a>
+		<a href="#" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Cetak Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/cetak'); ?>" data-target="#cetakBox" data-aksi="Cetak" data-title="Buku Tanah Kas Desa"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="#" class="btn btn-social btn-flat bg-navy btn-sm " title="Unduh Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/unduh'); ?>" data-target="#cetakBox" data-aksi="Unduh" data-title="Buku Tanah Kas Desa"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="box-body">
 		<div class="row">

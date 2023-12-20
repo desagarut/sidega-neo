@@ -21,11 +21,11 @@
 		} );
 	} );
 </script>
-<div class="card card-shadow">
-	<div class="box-header with-border">
-		<a href="<?= site_url($this->controller."/ajax_cetak/$order_by/cetak"); ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Induk Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Induk Penduduk"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url($this->controller."/ajax_cetak/$order_by/unduh"); ?>?>" title="Unduh Buku Induk Penduduk" class="btn btn-social btn-flat bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Induk Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Induk Penduduk"><i class="fe fe-download"></i> Unduh</a>
-		<a href="<?= site_url($this->controller."/clear") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
+<div class="card shadow">
+	<div class="card-header">
+		<a href="<?= site_url($this->controller."/ajax_cetak/$order_by/cetak"); ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Cetak Buku Induk Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Induk Penduduk"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url($this->controller."/ajax_cetak/$order_by/unduh"); ?>?>" title="Unduh Buku Induk Penduduk" class="btn btn-social btn-flat bg-navy btn-sm " title="Unduh Buku Induk Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Induk Penduduk"><i class="fe fe-download"></i> Unduh</a>
+		<a href="<?= site_url($this->controller."/clear") ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 	</div>
 	<div class="box-body">
 		<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">

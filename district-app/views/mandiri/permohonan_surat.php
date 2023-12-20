@@ -22,7 +22,7 @@
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
   <div class="col-md-12">
-  <div class="card card-shadow">
+  <div class="card shadow">
   <div class="box-body">
   <div class="row">
     <div class="col-sm-3">
@@ -152,7 +152,7 @@
         <?=$_SESSION['pin'];?>
       </div>
       <div class='modal-footer'>
-        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>

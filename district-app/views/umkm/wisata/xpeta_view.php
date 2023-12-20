@@ -44,7 +44,7 @@ function initMap() {
 
 <div class="col-sm-3">
   <div class="box box-warning">
-    <div class="box-body box-profile"> <img class="img-responsive img-circle" src=<?= AmbilGaleri($sub['gambar'], 'kecil') ?>>
+    <div class="card-body card-profile"> <img class="avatar-img rounded-circle" src=<?= AmbilGaleri($sub['gambar'], 'kecil') ?>>
       <h3 class="profile-username text-center">
         <?= strtoupper($sub['nama'])?>
       </h3>

@@ -26,12 +26,12 @@
 							<p class="help-block">&emsp;<input type="checkbox" name="rand_kartu_peserta" value="1"/> Acak No. Kartu Peserta Jika Kosong</p>
 						</label>
 						<br/>
-						<a href="<?= base_url("assets/import/format_impor_program_bantuan.xlsx"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block text-center"><i class="fe fe-file-excel-o"></i> Contoh Format Impor Program Bantuan</a>
+						<a href="<?= base_url("assets/import/format_impor_program_bantuan.xlsx"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm  text-center"><i class="fe fe-file-excel-o"></i> Contoh Format Impor Program Bantuan</a>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="reset" class="btn btn-social btn-box btn-danger btn-sm pull-left"><i class="fe fe-times"></i> Batal</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class="fe fe-check"></i> Simpan</button>
+					<button type="reset" class="btn btn-danger btn-sm pull-left"><i class="fe fe-times"></i> Batal</button>
+					<button type="submit" class="btn btn-info btn-sm" id="ok"><i class="fe fe-check"></i> Simpan</button>
 				</div>
 			</form>
 		</div>

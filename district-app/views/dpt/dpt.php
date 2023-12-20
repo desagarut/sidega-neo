@@ -27,10 +27,10 @@
 					<div class="card-header">
 						<div class="col-sm-8 col-lg-9">
 							<div class="row">
-								<a href="<?= site_url("dpt/ajax_cetak/$o/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" ><i class="fe fe-printer "></i> Cetak</a>
-								<a href="<?= site_url("dpt/ajax_cetak/$o/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
-								<a href="<?= site_url("dpt/ajax_adv_search")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Pencarian Spesifik"><i class='fe fe-search'></i> Pencarian Spesifik</a>
-								<a href="<?= site_url("dpt/clear")?>" class="btn btn-social btn-box btn-default btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Bersihkan Pencarian"><i class="fe fe-refresh"></i>Bersihkan</a>
+								<a href="<?= site_url("dpt/ajax_cetak/$o/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" target="_blank" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" ><i class="fe fe-printer "></i> Cetak</a>
+								<a href="<?= site_url("dpt/ajax_cetak/$o/unduh")?>" class="btn bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+								<a href="<?= site_url("dpt/ajax_adv_search")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" class="btn btn-primary btn-sm " title="Pencarian Spesifik"><i class='fe fe-search'></i> Pencarian Spesifik</a>
+								<a href="<?= site_url("dpt/clear")?>" class="btn btn-default btn-sm " title="Bersihkan Pencarian"><i class="fe fe-refresh"></i>Bersihkan</a>
 							</div>
 						</div>
 						<div class="col-sm-4 col-md-3">

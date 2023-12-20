@@ -44,7 +44,7 @@
 									</div>
 								</div>
 
-                                <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
+                                <button type='submit' class='btn btn-info btn-sm pull-right' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
 
 							</div>
 						</div>

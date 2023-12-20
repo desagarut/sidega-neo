@@ -27,7 +27,7 @@
 	<section class="content periksa">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<div class="box-body">
 						<form class="form-horizontal">
 						  <div class="form-group">
@@ -76,7 +76,7 @@
 		</div>
 
 	 	<div class="box box-info" style="margin-top: 10px;">
-	    <div class="box-header with-border">
+	    <div class="card-header">
 	      <h4 class="box-title">Status Kelengkapan Dokumen</h4>
 	      <div class="box-tools">
 	        <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fe fe-minus"></i></button>

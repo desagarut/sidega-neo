@@ -16,8 +16,8 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-3">
-              <div class="box box-primary">
-                <div class="box-body box-profile">
+              <div class="card shadow">
+                <div class="card-body card-profile">
                   <?php if ($penduduk['foto']): ?>
                     <img class="penduduk profile-user-img img-responsive img-circle" src="<?= AmbilFoto($penduduk['foto'])?>" alt="Foto">
                   <?php else: ?>
@@ -38,8 +38,8 @@
               </div>
             </div>
             <div class="col-md-9">
-              <div class='box box-primary'>
-        			  <div class="box-header with-border">
+              <div class="card shadow">
+        			  <div class="card-header">
   								<a href="<?=site_url("keluarga")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Keluarga">
   									<i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
   								</a>
@@ -47,15 +47,15 @@
                     <i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
                   </a>
   							</div>
-                <div class='box-body'>
+                <div class="card-body">
                   <div class="row">
-                    <div class='col-sm-12'>
+                    <div class="col-sm-12">
                       <div class="form-group subtitle_head">
                         <label class="text-right"><strong>DATA KELUARGA :</strong></label>
                       </div>
                     </div>
-                    <div class='col-sm-4'>
-                      <div class='form-group'>
+                    <div class="col-sm-4">
+                      <div class="form-group">
                         <label >No. KK </label>
                         <input class="form-control input-sm" type="text" value="<?= $kk['no_kk']?>" disabled></input>
                         <input name="id_kk" type="hidden" value="<?= $id_kk?>">
@@ -63,19 +63,19 @@
                         <input name="id_cluster" type="hidden" value="<?= $kk['id_cluster']?>">
                       </div>
                     </div>
-                    <div class='col-sm-8'>
-                      <div class='form-group'>
+                    <div class="col-sm-8">
+                      <div class="form-group">
                         <label>Kepala KK</label>
                         <input class="form-control input-sm" type="text" value="<?= $kk['nama']?>" disabled></input>
                       </div>
                     </div>
-                    <div class='col-sm-12'>
-                      <div class='form-group'>
+                    <div class="col-sm-12">
+                      <div class="form-group">
                         <label>Alamat </label>
                         <input class="form-control input-sm" type="text" value="<?= $kk['alamat']?> Dusun <?= $kk['dusun']?> - RW <?= $kk['rw']?> - RT <?= $kk['rt']?>" disabled></input>
                       </div>
                     </div>
-                    <div class='col-sm-12'>
+                    <div class="col-sm-12">
                       <div class="form-group subtitle_head">
                         <label class="text-right"><strong>DATA ANGGOTA :</strong></label>
                       </div>
@@ -83,10 +83,10 @@
                   </div>
                   <?php $this->load->view('sid/kependudukan/penduduk_form_isian_bersama'); ?>
                 </div>
-                <div class='box-footer'>
-                  <div class='col-md-12'>
-                    <button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
-                    <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
+                <div class="card-footer">
+                  <div class="col-md-12">
+                    <button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+                    <button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
                   </div>
                 </div>
                 <div  class="modal fade" id="rumah-penduduk" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -119,7 +119,7 @@
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<form id="validasi1" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class="box-body">
 							<div class="row">
@@ -130,8 +130,8 @@
 								</div>
 							</div>
 						</div>
-						<div class='box-footer'>
-							<div class='col-md-12'>
+						<div class="card-footer">
+							<div class="col-md-12">
 								<div class="form-group">
 									<label class="col-sm-3 control-label" for="lat">Lat</label>
 									<div class="col-sm-9">
@@ -144,8 +144,8 @@
 										<input type="text" class="form-control number" name="lng" id="lng" value="<?= $data->lng ?>" />
 									</div>
 								</div>
-								<a href="<?= site_url('pembangunan') ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-								<a href="#" class="btn btn-social btn-flat btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+								<a href="<?= site_url('pembangunan') ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+								<a href="#" class="btn btn-social btn-flat btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
 								<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
 								<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right' id="simpan_kantor"><i class='fe fe-check'></i> Simpan</button>
 							</div>

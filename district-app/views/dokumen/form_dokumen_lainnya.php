@@ -16,8 +16,8 @@
 	</section>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-			<div class="card card-shadow">
-				<div class="box-header with-border">
+			<div class="card shadow">
+				<div class="card-header">
 					<?php if (in_array($kat, array('2', '3'))): ?>
 						<a href="<?= $kembali_ke ?: site_url("$this->controller/peraturan_desa/$kat"); ?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
 							<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama?>
@@ -75,9 +75,9 @@
 							include ("district-app/views/dokumen/_informasi_publik.php");
 					?>
 				</div>
-				<div class='box-footer'>
-					<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
-					<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
+				<div class="card-footer">
+					<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+					<button type='submit' class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</div>
 		</form>

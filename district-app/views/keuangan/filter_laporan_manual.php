@@ -1,4 +1,4 @@
-			<div class="box-header with-border">
+			<div class="card-header">
 				<div class="col-md-10">
 					<label>Tahun Anggaran: </label>
 					<select name="tahun_anggaran" id="tahun_anggaran" onchange="setData();">

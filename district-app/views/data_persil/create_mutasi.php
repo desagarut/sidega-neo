@@ -18,17 +18,17 @@
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="card card-shadow">
+				<div class="card shadow">
 					<div class="box-body">
-						<div class="box-header with-border">
-							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
+						<div class="card-header">
+							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-primary btn-sm " title="Kembali Ke Rincian Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 							<?php if ($persil): ?>
-								<a href="<?= site_url('letterc/mutasi/'. $letterc[id].'/'.$persil['id'])?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Mutasi Letter-C</a>
+								<a href="<?= site_url('letterc/mutasi/'. $letterc[id].'/'.$persil['id'])?>" class="btn btn-info btn-sm " title="Kembali Ke Rincian Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Rincian Mutasi Letter-C</a>
 							<?php endif; ?>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="box-header with-border">
+								<div class="card-header">
 									<h3 class="box-title">Rincian Letter-C</h3>
 								</div>
 								<div class="box-body">
@@ -68,11 +68,11 @@
 									</div>
 								</div>
 
-								<div class="box-header with-border">
+								<div class="card-header">
 									<h3 class="box-title">Tambah Persil</h3>
 								</div>
 								<div class="panel box box-default">
-									<div class="box-header with-border">
+									<div class="card-header">
 										<h4 class="box-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#persil">Persil</a>
 										</h4>
@@ -95,7 +95,7 @@
 													<div class="form-group" >
 										  			<label class="col-sm-3 control-label">Kalau persil belum ada</label>
 														<div class="col-sm-8">
-															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
 																<i class="fe fe-plus"></i>Tambah Persil
 															</a>
 														</div>
@@ -138,18 +138,18 @@
 								</div>
 
 								<?php if ($persil): ?>
-									<div class="box-header with-border">
+									<div class="card-header">
 										<h3 class="box-title">Tambah Mutasi</h3>
 									</div>
 
 									<?php if (empty($persil['letterc_awal']) and empty($mutasi)): ?>
 										<div id="letterc_awal">
 											<div class="box-body">
-												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fe fe-step-backward"></i>Letter-C Awal</a>
+												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-success btn-sm  col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fe fe-step-backward"></i>Letter-C Awal</a>
 												<span style="padding-left: 10px;">Catat Letter-C ini sebagai pemilik awal keseluruhan persil <?= $persil["nomor"] ?></span>
 											</div>
 											<div class="box-body">
-												<a class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fe fe-plus"></i>Tambah Mutasi</a>
+												<a class="btn btn-success btn-sm  col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fe fe-plus"></i>Tambah Mutasi</a>
 												<span style="padding-left: 10px;">Tambah mutasi Letter-C <?= $letterc['nomor']?> untuk persil <?= $persil['nomor']?></span>
 											</div>
 										</div>
@@ -165,7 +165,7 @@
 											<input type="hidden" name="id_persil" value="<?= $persil["id"] ?>"/>
 
 											<?php if ($mutasi['jenis_mutasi'] != 9): ?>
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h4 class="box-title">
 														<a data-toggle="collapse" data-parent="#accordion" href="#persil">Mutasi - Bidang Tanah</a>
 													</h4>
@@ -192,7 +192,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h4 class="box-title">
 														<a data-toggle="collapse" data-parent="#accordion" href="#mutasi">Mutasi - Sebab Dan Tanggal Perubahan</a>
 													</h4>
@@ -253,7 +253,7 @@
 													</div>
 												</div>
 											<?php else: ?>
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h4 class="box-title">
 														<a data-toggle="collapse" data-parent="#accordion" href="#mutasi">Pemilik Awal Persil</a>
 													</h4>
@@ -278,8 +278,8 @@
 
 											<div class="box-footer">
 												<div class="col-xs-12">
-													<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-													<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
+													<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+													<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 												</div>
 											</div>
 

@@ -38,11 +38,11 @@
     <?php $this->load->view('data_sppt/menu.php')?>
   </div>
   <div class="col-md-8 col-lg-9">
-  <div class="card card-shadow">
+  <div class="card shadow">
   <div class="box-header">
-    <div class="box-header with-border"> <a href="<?=site_url("data_sppt/tagihan_daftar/")?>" class="btn btn-social bg-blue btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Tagihan"> <i class="fe fe-arrow-left"></i>Master Data</a> <a href="<?=site_url("data_sppt/tagihan_cetak")?>" class="btn btn-social bg-green btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"> <i class="fe fe-printer"></i> Cetak </a> 
-    <a href="<?=site_url("data_sppt/tagihan_unduh")?>" class="btn btn-social btn-box bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Tagihan" title="Unduh Data Tagihan"> <i class="fe fe-download"></i>Unduh </a> 
-    <!-- <a href="<?= site_url('data_sppt/import')?>" class="btn btn-social bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fe fe-upload"></i>Unggah </a> --><a href="<?= site_url("data_sppt/clear_tagih")?>" class="btn btn-social bg-yellow btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a> </div>
+    <div class="card-header"> <a href="<?=site_url("data_sppt/tagihan_daftar/")?>" class="btn btn-social bg-blue btn-sm btn-sm "  title="Tambah Tagihan"> <i class="fe fe-arrow-left"></i>Master Data</a> <a href="<?=site_url("data_sppt/tagihan_cetak")?>" class="btn btn-social bg-green btn-sm btn-sm " title="Cetak Data" target="_blank"> <i class="fe fe-printer"></i> Cetak </a> 
+    <a href="<?=site_url("data_sppt/tagihan_unduh")?>" class="btn bg-teal btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Tagihan" title="Unduh Data Tagihan"> <i class="fe fe-download"></i>Unduh </a> 
+    <!-- <a href="<?= site_url('data_sppt/import')?>" class="btn btn-social bg-teal btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fe fe-upload"></i>Unggah </a> --><a href="<?= site_url("data_sppt/clear_tagih")?>" class="btn btn-social bg-yellow btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> </div>
   </div>
   <div class="box-body">
   <div class="row">

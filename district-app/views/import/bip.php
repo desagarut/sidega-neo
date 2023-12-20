@@ -1,7 +1,7 @@
 										<div class="tab-pane <?php if ($act_tab==3): ?> active<?php endif ?>">
 											<div class="row">
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Impor Data Buku Induk Penduduk</strong></h3>
 													</div>
 													<div class="box-body">
@@ -10,11 +10,11 @@
 																<form action="<?= $form_action?>" method="post" enctype="multipart/form-data" id="excell" class="form-horizontal">
 																	<p>Proses ini untuk mengimpor data Buku Induk Penduduk (BIP) yang diperoleh dari Disdukcapil dalam format Excel.</p>
 																	<p>BIP yang dapat dibaca proses ini adalah yang tersusun berdasarkan keluarga, seperti contoh yang dapat dilihat pada tautan berikut :</P>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2012.xls" ><i class="fe fe-download"></i>Contoh BIP 2012</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016.xls" ><i class="fe fe-download"></i>Contoh BIP 2016</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_ektp.xls"><i class="fe fe-download"></i>Contoh BIP eKTP</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016_luwutimur.xls"><i class="fe fe-download"></i>Contoh BIP 2016 Luwu Timur</a>
-																	<a class="btn btn-social btn-box btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_siak.xls"><i class="fe fe-download"></i>Contoh Data SIAK</a>
+																	<a class="btn btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2012.xls" ><i class="fe fe-download"></i>Contoh BIP 2012</a>
+																	<a class="btn btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016.xls" ><i class="fe fe-download"></i>Contoh BIP 2016</a>
+																	<a class="btn btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_ektp.xls"><i class="fe fe-download"></i>Contoh BIP eKTP</a>
+																	<a class="btn btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_bip_2016_luwutimur.xls"><i class="fe fe-download"></i>Contoh BIP 2016 Luwu Timur</a>
+																	<a class="btn btn-info btn-sm btn-margin visible-xs-block visible-sm-block visible-md-inline-block visible-lg-inline-block" href="<?= base_url()?>assets/import/format_siak.xls"><i class="fe fe-download"></i>Contoh Data SIAK</a>
 																	<p></p>
 																	<p>Proses ini mengimpor data keluarga di semua worksheet di berkas BIP. Misalnya, apabila data BIP tersusun menjadi satu worksheet per dusun, proses ini akan mengimpor data semua dusun.</p>
 																	<p class="text-muted text-red well well-sm no-shadow" style="margin-top: 10px;">

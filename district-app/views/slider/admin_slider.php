@@ -13,8 +13,8 @@
 		<form id="mainform" action="<?= site_url('web/update_slider')?>" method="POST" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 								Pilih sumber gambar untuk ditampilkan di slider besar:
 						</div>
 						<div class="box-body">
@@ -46,9 +46,9 @@
 									</div>
 								</div>
 						</div>
-						<div class='box-footer'>
-							<div class='col-md-12'>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
+						<div class="card-footer">
+							<div class="col-md-12">
+								<button type='submit' class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

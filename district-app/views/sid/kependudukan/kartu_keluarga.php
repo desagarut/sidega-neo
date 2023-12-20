@@ -15,10 +15,10 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url("keluarga/cetak_kk/$id_kk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fe fe-printer "></i> Cetak</a>
-							<a href="<?= site_url("keluarga/doc_kk/$id_kk")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fe fe-download"></i> Unduh</a>
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url("keluarga/cetak_kk/$id_kk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "  target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("keluarga/doc_kk/$id_kk")?>" class="btn bg-navy btn-sm "  target="_blank"><i class="fe fe-download"></i> Unduh</a>
 							<a href="<?=site_url("keluarga/anggota/$p/$o/$id_kk")?>" class="btn btn-sm btn-outline-info mb-1"title="Rincian Anggota Keluarga">
 								<i class="fe fe-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
 							</a>

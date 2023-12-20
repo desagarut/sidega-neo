@@ -39,13 +39,13 @@
 				<?php $this->load->view('data_persil/menu_kiri.php') ?>
 			</div>
 			<div class="col-md-8 col-lg-9">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
-						<a href="<?= site_url("letterc/create_mutasi/" . $letterc['id']) ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Persil">
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url("letterc/create_mutasi/" . $letterc['id']) ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Persil">
 							<i class="fe fe-plus"></i>Tambah Mutasi Persil
 						</a>
-						<a href="<?= site_url('letterc') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
-						<a href="<?= site_url("letterc/form_letterc/" . $letterc['id']) ?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+						<a href="<?= site_url('letterc') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
+						<a href="<?= site_url("letterc/form_letterc/" . $letterc['id']) ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
 							<i class="fe fe-printer"></i>Cetak Letter-C
 						</a>
 					</div>
@@ -57,7 +57,7 @@
 										<input type="hidden" name="id" value="<?php echo $this->uri->segment(4) ?>">
 										<div class="row">
 											<div class="col-sm-12">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h3 class="box-title">Rincian Letter-C</h3>
 												</div>
 												<div class="box-body">
@@ -88,8 +88,8 @@
 														</table>
 													</div>
 													<div class="col-md-3">
-														<!--<div class="box box-primary">
-															<div class="box-body box-profile">
+														<!--<div class="card shadow">
+															<div class="card-body card-profile">
 																<img class="img-responsive" src="<?= gambar_desa($main['kantor_desa'], TRUE); ?>" alt="Kantor <?= $desa; ?>">
 																<br />
 																<p class="text-center text-bold">Kantor <?= $desa; ?></p>
@@ -111,7 +111,7 @@
 											<div class="col-sm-12">
 												<div class="row">
 													<div class="col-sm-9">
-														<div class="box-header with-border">
+														<div class="card-header">
 															<h3 class="box-title">Daftar Persil Letter-C</h3>
 														</div>
 													</div>

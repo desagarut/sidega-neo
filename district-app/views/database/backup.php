@@ -1,7 +1,7 @@
 										<div class="tab-pane <?php if ($act_tab==4): ?> active<?php endif ?>">
 											<div class="row">
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Backup Database SID</strong></h3>
 													</div>
 													<div class="box-body">
@@ -13,13 +13,13 @@
 																			<tr>
 																				<td class="col-sm-10"><b>Backup Seluruh Database SID (.sql)</b></td>
 																				<td class="col-sm-2">
-																					<a href="<?= site_url("database/exec_backup")?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fe fe-download"></i> Unduh Database</a>
+																					<a href="<?= site_url("database/exec_backup")?>" class="btn btn-block btn-info btn-sm"><i class="fe fe-download"></i> Unduh Database</a>
 																				</td>
 																			</tr>
 																			<tr>
 																				<td class="col-sm-10"><b>Backup Seluruh Folder Desa SID (.zip)</b> </td>
 																				<td class="col-sm-2">
-																					<a href="<?= site_url("database/desa_backup"); ?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fe fe-download"></i> Unduh Folder Desa</a>
+																					<a href="<?= site_url("database/desa_backup"); ?>" class="btn btn-block btn-info btn-sm"><i class="fe fe-download"></i> Unduh Folder Desa</a>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -37,7 +37,7 @@
 													</div>
 												</div>
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Restore Database SID</strong></h3>
 													</div>
 													<div class="box-body">

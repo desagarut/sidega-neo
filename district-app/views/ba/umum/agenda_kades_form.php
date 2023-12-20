@@ -52,13 +52,13 @@
 		<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-8">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<a href="<?=site_url("web")?>" class="btn btn-sm btn-outline-info mb-1"title="Tambah Artikel">
 								<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Artikel
 							</a>
 							<?php if ($artikel['slug']): ?>
-								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn btn-social btn-box bg-green btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-eye"></i> Lihat Artikel</a>
+								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn bg-green btn-sm "><i class="fe fe-eye"></i> Lihat Artikel</a>
 							<?php endif; ?>
 						</div>
 						<div class="box-body">
@@ -78,7 +78,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="box box-info collapsed-box">
-						<div class="box-header with-border">
+						<div class="card-header">
 							<h3 class="box-title">Unggah Gambar</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-plus"></i></button>
@@ -165,8 +165,8 @@
 					</div>
 					<?php if ($cat == 1000): ?>
 						<input type="hidden" name="id_agenda" value="<?= $artikel['id_agenda']?>">
-						<div class="card card-shadow">
-							<div class="box-header with-border">
+						<div class="card shadow">
+							<div class="card-header">
 								<h3 class="box-title">Pengaturan Agenda Desa</h3>
 								<div class="box-tools">
 									<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -204,8 +204,8 @@
 							</div>
 						</div>
 					<?php endif; ?>
-					<div class="card card-shadow">
-						<div class="box-header with-border">
+					<div class="card shadow">
+						<div class="card-header">
 							<h3 class="box-title">Pengaturan Lainnya</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
@@ -248,11 +248,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<div class="box-body no-padding">
-							<div class='box-footer'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
+							<div class="card-footer">
+								<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+								<button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

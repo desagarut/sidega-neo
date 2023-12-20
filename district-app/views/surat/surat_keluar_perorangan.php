@@ -105,7 +105,7 @@
 													<td><?= $data['no'] ?></td>
 													<td nowrap>
 														<?php if (is_file($data['file_rtf'])) : ?>
-															<a href="<?= base_url($data['file_rtf']) ?>" class="btn btn-flat bg-purple btn-sm" title="Unduh Surat RTF" target="_blank"><i class="fe fe-file-word-o"></i></a>
+															<a href="<?= base_url($data['file_rtf']) ?>" class="btn btn-flatbtn-outline-info btn-sm" title="Unduh Surat RTF" target="_blank"><i class="fe fe-file-word-o"></i></a>
 														<?php endif; ?>
 														<?php if (is_file($data['file_pdf'])) : ?>
 															<a href="<?= base_url($data['file_pdf']) ?>" class="btn btn-flat bg-fuchsia btn-sm" title="Cetak Surat PDF" target="_blank"><i class="fe fe-file-pdf-o"></i></a>

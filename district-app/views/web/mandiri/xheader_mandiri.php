@@ -44,7 +44,7 @@
                   </strong> </p>
               </li>
               <li class="user-footer">
-                <div class="pull-left"> <a href="<?= site_url('mandiri_web/mandiri/1/1'); ?>" class="btn bg-purple btn-box btn-sm">Profil</a> </div>
+                <div class="pull-left"> <a href="<?= site_url('mandiri_web/mandiri/1/1'); ?>" class="btn btn-outline-info btn-sm">Profil</a> </div>
                 <div class="pull-right"> <a href="<?= site_url('first'); ?>" class="btn bg-maroon btn-box btn-sm">Keluar</a> </div>
               </li>
             </ul>

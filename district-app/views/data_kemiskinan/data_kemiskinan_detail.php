@@ -23,11 +23,11 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
-				<a href="<?= site_url("data_kemiskinan/form_terdata/" . $data_kemiskinan['id']) ?>" title="Tambah Data Warga" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Warga Terdata</a>
-				<a href="<?= site_url("data_kemiskinan/dialog_daftar/$data_kemiskinan[id]/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data data_kemiskinan <?= $sasaran[$data_kemiskinan["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
-				<a href="<?= site_url("data_kemiskinan/dialog_daftar/$data_kemiskinan[id]/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data data_kemiskinan <?= $sasaran[$data_kemiskinan["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
+		<div class="card shadow">
+			<div class="card-header">
+				<a href="<?= site_url("data_kemiskinan/form_terdata/" . $data_kemiskinan['id']) ?>" title="Tambah Data Warga" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Warga Terdata</a>
+				<a href="<?= site_url("data_kemiskinan/dialog_daftar/$data_kemiskinan[id]/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data data_kemiskinan <?= $sasaran[$data_kemiskinan["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
+				<a href="<?= site_url("data_kemiskinan/dialog_daftar/$data_kemiskinan[id]/unduh") ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data data_kemiskinan <?= $sasaran[$data_kemiskinan["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
 				<a href="<?= site_url("data_kemiskinan") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Data Kemiskinan">
 					<i class="fe fe-arrow-circle-left "></i>Kembali ke daftar kelompok
 				</a>

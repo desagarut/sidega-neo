@@ -20,8 +20,8 @@
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-3">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
+				<div class="card shadow">
+					<div class="card-header">
 						<h3 class="box-title"><strong>Form Pemantauan</strong></h3>
 					</div>
 					<div class="box-body">
@@ -104,17 +104,17 @@
 					</div>
 					<div class="box-footer">
 						<div class="box-tools pull-right">
-							<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
+							<button type="submit" class="btn btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-9">
-				<div class="card card-shadow">
-					<div class="box-header with-border">
-						<a href="<?= site_url("covid19/daftar/cetak/$filter_tgl/$filter_nik")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
+				<div class="card shadow">
+					<div class="card-header">
+						<a href="<?= site_url("covid19/daftar/cetak/$filter_tgl/$filter_nik")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 						</a>
-						<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
+						<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik")?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 						</a>
 					</div>
 					<div class="box-body">

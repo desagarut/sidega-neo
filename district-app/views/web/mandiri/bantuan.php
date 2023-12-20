@@ -27,10 +27,10 @@
 
 <div class="content-wrapper">
 	<section class='content' id="maincontent">
-        <div class='row'>
-			<div class='col-md-12'>
+        <div class="row">
+			<div class="col-md-12">
                 <div class='box box-info box-solid'>
-                    <div class="box-header with-border">
+                    <div class="card-header">
                         <h3 class="box-title">Program Bantuan</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i>

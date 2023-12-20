@@ -17,9 +17,9 @@
 					<?php $this->load->view('potensi/menu.php')?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="card card-shadow">
-						<div class="box-header with-border">
-							<a href="<?= site_url('potensi_umum/form') ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
+					<div class="card shadow">
+						<div class="card-header">
+							<a href="<?= site_url('potensi_umum/form') ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Data Baru">
 								<i class="fe fe-plus"></i>Tambah Data
 							</a>
 						</div>
@@ -113,7 +113,7 @@
 						return `
 							<a href="<?= site_url('pembangunan/form/'); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i></a>
 							<a href="<?= site_url('pembangunan/lokasi_maps/'); ?>${data.id}" class="btn bg-olive btn-box btn-sm" title="Lokasi Pembangunan"><i class="fe fe-map"></i></a>
-							<a href="<?= site_url('pembangunan_dokumentasi/show/'); ?>${data.id}" class="btn bg-purple btn-box btn-sm" title="Rincian Dokumentasi Kegiatan"><i class="fe fe-list-ol"></i></a>
+							<a href="<?= site_url('pembangunan_dokumentasi/show/'); ?>${data.id}" class="btn btn-outline-info btn-sm" title="Rincian Dokumentasi Kegiatan"><i class="fe fe-list-ol"></i></a>
 							${status}
 							<a href="#" data-href="<?= site_url('pembangunan/delete/'); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
 							<a href="<?= site_url('pembangunan/info_pembangunan/'); ?>${data.id}" target="_blank" class="btn bg-blue btn-box btn-sm" title="Lihat Summary"><i class="fe fe-eye"></i></a>

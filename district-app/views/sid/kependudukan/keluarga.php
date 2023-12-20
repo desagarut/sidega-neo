@@ -47,9 +47,9 @@
 									<span>Aksi terpilih</span>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a href="" class="dropdown-item aksi-terpilih" title="Cetak Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/cetak_kk_all") ?>', '_blank'); return false;"><i class="fe fe-printer"></i> Cetak Kartu Keluarga</a>
-									<a href="" class="dropdown-item aksi-terpilih" title="Unduh Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/doc_kk_all") ?>'); return false;"><i class="fe fe-download"></i> Unduh Kartu Keluarga</a>
-									<a href="<?= site_url("keluarga/search_kumpulan_kk") ?>" class="btn btn-social btn-card btn-block btn-sm" title="Pilihan Kumpulan KK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan KK"><i class="fe fe-search"></i> Pilihan Kumpulan KK</a>
+									<a href="" class="dropdown-item" id="aksi-terpilih" title="Cetak Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/cetak_kk_all") ?>', '_blank'); return false;"><i class="fe fe-printer"></i> Cetak Kartu Keluarga</a>
+									<a href="" class="dropdown-item" id="aksi-terpilih" title="Unduh Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/doc_kk_all") ?>'); return false;"><i class="fe fe-download"></i> Unduh Kartu Keluarga</a>
+									<a href="<?= site_url("keluarga/search_kumpulan_kk") ?>" class="dropdown-item" title="Pilihan Kumpulan KK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan KK"><i class="fe fe-search"></i> Pilihan Kumpulan KK</a>
 									<?php if ($this->CI->cek_hak_akses('h')) : ?>
 										<a href="#confirm-delete" class="dropdown-item hapus-terpilih" title="Hapus Data" onclick="deleteAllcard('mainform', '<?= site_url("keluarga/delete_all") ?>')"><i class="fe fe-trash"></i> Hapus Data Terpilih</a>
 									<?php endif; ?>

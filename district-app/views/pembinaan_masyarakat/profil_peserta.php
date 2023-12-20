@@ -12,9 +12,9 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
-				<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program</a>
+		<div class="card shadow">
+			<div class="card-header">
+				<a href="<?= site_url('pembinaan_masyarakat')?>" class="btn btn-primary btn-sm " title="Kembali Ke Daftar Program"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program</a>
 			</div>
 			<div class="box-body">
 				<?php include('district-app/views/pembinaan_masyarakat/rincian.php'); ?>

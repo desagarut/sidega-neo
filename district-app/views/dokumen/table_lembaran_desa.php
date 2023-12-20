@@ -23,12 +23,12 @@ $(document).ready(function()
 });
 
 </script>
-<div class="card card-shadow">
-  <div class="box-header with-border">
-		<a href="<?= site_url("{$this->controller}/dialog_daftar/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
+<div class="card shadow">
+  <div class="card-header">
+		<a href="<?= site_url("{$this->controller}/dialog_daftar/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm "  title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
 			<i class="fe fe-printer"></i>Cetak
   	</a>
-		<a href="<?= site_url("{$this->controller}/dialog_daftar/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
+		<a href="<?= site_url("{$this->controller}/dialog_daftar/unduh")?>" class="btn bg-navy btn-sm btn-sm "  title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
 			<i class="fe fe-download"></i>Unduh
   	</a>
 	</div>
@@ -108,9 +108,9 @@ $(document).ready(function()
 															<a href="<?= site_url($this->controller.'/lock/'.$data['id'].'/2')?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
                             <?php endif ?>
                             <?php if (!empty($data['satuan'])): ?>
-															<a href='<?= site_url("dokumen/unduh_berkas/{$data[id]}") ?>' class="btn bg-purple btn-box btn-sm" title="Unduh"><i class="fe fe-download"></i></a>
+															<a href='<?= site_url("dokumen/unduh_berkas/{$data[id]}") ?>' class="btn btn-outline-info btn-sm" title="Unduh"><i class="fe fe-download"></i></a>
 														<?php else: ?>
-															<a class="btn bg-purple btn-box btn-sm" disabled title="Unduh"><i class="fe fe-download"></i></a>
+															<a class="btn btn-outline-info btn-sm" disabled title="Unduh"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
 												  </td>
 													<td width="20%"><?= $data['nama']?></td>

@@ -2,10 +2,10 @@
 
 <div class="content-wrapper">
 	<section class='content' id="maincontent">
-        <div class='row'>
-			<div class='col-md-12'>
+        <div class="row">
+			<div class="col-md-12">
                 <div class='box box-warning box-solid'>
-                    <div class="box-header with-border">
+                    <div class="card-header">
                         <h3 class="box-title">Permohonan Surat</h3>
                         <div class="box-tools pull-right">
                             <a href="<?=site_url("mandiri_web/mandiri_surat")?>""><span class="label label-success"> Buat Surat</span></a>
@@ -15,7 +15,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class='box-body'>
+                    <div class="card-body">
                         <input type="hidden" id="tab" value="<?= $tab?>">
                         <div class='box box-solid'>
                           <ul class="nav nav-tabs">

@@ -13,11 +13,11 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-					<a href="<?= site_url("kelompok/anggota/$kelompok"); ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-arrow-circle-left "></i> Kembali Ke Anggota Kelompok</a>
+					<a href="<?= site_url("kelompok/anggota/$kelompok"); ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Anggota Kelompok</a>
 					</div>
 					<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data"  class="form-horizontal">
 						<div class="col-md-3">
-							<div class="box-body box-profile">
+							<div class="card-body card-profile">
 								<img class="profile-user-img img-responsive img-circle" src="<?= $pend['foto'] ? AmbilFoto($pend['foto']) : base_url() . 'assets/files/user_pict/kuser.png'; ?>" alt="Foto">
 								<br/>
 								<p class="text-muted text-center"><code>(Kosongkan jika tidak ingin mengubah foto)</code></p>
@@ -81,8 +81,8 @@
 						</div>
 						<div class="box-footer">
 							<div class="col-xs-12">
-								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
-								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
+								<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+								<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 							</div>
 						</div>
 					</form>

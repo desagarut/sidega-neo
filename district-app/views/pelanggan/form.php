@@ -10,7 +10,7 @@
 	</ol>
 </section>
 <section class="content">
-	<div class="card card-shadow">
+	<div class="card shadow">
 		<div class="box-body">
 			<div class="row">
 				<div class="col-sm-12">

@@ -11,12 +11,12 @@
 				<div class="card shadow">
 					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="<?=site_url('program_bantuan/create')?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
-						<a href="<?=site_url('program_bantuan/impor')?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Program Bantuan" data-target="#impor" data-remote="false" data-toggle="modal" data-backdrop="false" data-keyboard="false"><i class="fe fe-upload"></i> Impor</a>
+                        <a href="<?=site_url('program_bantuan/create')?>" class="btn bg-olive btn-sm " title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
+						<a href="<?=site_url('program_bantuan/impor')?>" class="btn bg-navy btn-sm " title="Impor Program Bantuan" data-target="#impor" data-remote="false" data-toggle="modal" data-backdrop="false" data-keyboard="false"><i class="fe fe-upload"></i> Impor</a>
 						<?php endif;?>
-                        <a href="<?=site_url('program_bantuan/panduan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Panduan"><i class="fe fe-question-circle"></i> Panduan</a>
+                        <a href="<?=site_url('program_bantuan/panduan')?>" class="btn btn-info btn-sm " title="Panduan"><i class="fe fe-question-circle"></i> Panduan</a>
 						<?php if ($tampil != 0): ?>
-							<a href="<?=site_url('program_bantuan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+							<a href="<?=site_url('program_bantuan')?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 						<?php endif; ?>
 					</div>
 					<div class="card-body">
@@ -59,7 +59,7 @@
 																<td class="text-center"><?= $nomer?></td>
 																<?php if ($this->CI->cek_hak_akses('h')): ?>
                                                                 <td nowrap>
-																	<a href="<?= site_url("program_bantuan/detail/$item[id]")?>" class="btn bg-purple btn-box btn-sm" title="Rincian"><i class="fe fe-list"></i></a>
+																	<a href="<?= site_url("program_bantuan/detail/$item[id]")?>" class="btn btn-outline-info btn-sm" title="Rincian"><i class="fe fe-list"></i></a>
 																	<a href="<?= site_url("program_bantuan/edit/$item[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																	<?php if ($item['jml_peserta'] != 0): ?>
 																		<a href="<?= site_url("program_bantuan/expor/$item[id]"); ?>" class="btn bg-navy btn-box btn-sm" title="Expor"><i class="fe fe-download"></i></a>

@@ -20,10 +20,10 @@
 				<div class="card shadow">
 					<div class="card-header">
                     <?php if ($this->CI->cek_hak_akses('h')): ?>
-						<a href="<?= site_url('sid_core/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data"><i class="fe fe-plus"></i> Tambah Dusun</a>
+						<a href="<?= site_url('sid_core/form')?>" class="btn btn-success btn-sm " title="Tambah Data"><i class="fe fe-plus"></i> Tambah Dusun</a>
 					<?php endif; ?>
-                        <a href="<?= site_url("$this->controller/dialog/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer "></i> Cetak</a>
-						<a href="<?= site_url("$this->controller/dialog/unduh")?>" title="Unduh Data" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
+                        <a href="<?= site_url("$this->controller/dialog/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer "></i> Cetak</a>
+						<a href="<?= site_url("$this->controller/dialog/unduh")?>" title="Unduh Data" class="btn bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -75,7 +75,7 @@
 															<tr>
 																<td class="no_urut"><?= $data['no']?></td>
 																<td nowrap>
-																	<a href="<?= site_url("sid_core/sub_rw/$data[id]")?>" class="btn bg-purple btn-box btn-sm" title="Rincian Sub Wilayah"><i class="fe fe-search"></i> RW</a>
+																	<a href="<?= site_url("sid_core/sub_rw/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Rincian Sub Wilayah"><i class="fe fe-search"></i> RW</a>
 																	<?php if ($this->CI->cek_hak_akses('h')): ?>
                                                                     <a href="<?= site_url("sid_core/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
                                                                     <a href="#" data-href="<?= site_url("sid_core/delete/dusun/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>

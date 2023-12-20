@@ -37,24 +37,24 @@
 					<?php $this->load->view('data_persil/menu_kiri.php')?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="card card-shadow">
+					<div class="card shadow">
 						<div class="box-header">
 							<h4 class="text-center"><strong>DAFTAR PERSIL</strong></h4>
 						</div>
 						<div class="box-body">
 							<div class="row">
 								<div class="col-sm-12">
-									<div class="box-header with-border">
-										<a href="<?=site_url("data_persil/form/")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+									<div class="card-header">
+										<a href="<?=site_url("data_persil/form/")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
 											<i class="fe fe-plus"></i>Tambah Persil
 										</a>
-										<a href="<?=site_url("data_persil/dialog_cetak/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Persil" title="Cetak Data">
+										<a href="<?=site_url("data_persil/dialog_cetak/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Persil" title="Cetak Data">
 											<i class="fe fe-printer"></i>Cetak
 										</a>
-										<a href="<?=site_url("data_persil/dialog_cetak/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Persil" title="Unduh Data">
+										<a href="<?=site_url("data_persil/dialog_cetak/unduh")?>" class="btn bg-navy btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Persil" title="Unduh Data">
 											<i class="fe fe-download"></i>Unduh
 										</a>
-										<a href="<?= site_url("data_persil/clear")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-refresh"></i>Bersihkan</a>
+										<a href="<?= site_url("data_persil/clear")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 									</div>
 									<div class="box-body">
 										<div class="row">
@@ -118,9 +118,9 @@
 																					<td><?= $item['no']?></td>
 																					<td nowrap>
 																						<?php if ($item['jml_bidang'] > 0): ?>
-																							<a href="<?= site_url("data_persil/rincian/".$item["id"])?>" class="btn bg-purple btn-box btn-sm" title="Rincian"><i class="fe fe-bars"></i></a>
+																							<a href="<?= site_url("data_persil/rincian/".$item["id"])?>" class="btn btn-outline-info btn-sm" title="Rincian"><i class="fe fe-bars"></i></a>
 																						<?php else: ?>
-																							<a class="btn bg-purple btn-box btn-sm" disabled title="Rincian"><i class="fe fe-bars"></i></a>
+																							<a class="btn btn-outline-info btn-sm" disabled title="Rincian"><i class="fe fe-bars"></i></a>
 																						<?php endif ?>
 																						<a href="<?= site_url("data_persil/form/".$item["id"])?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
 																						<?php if ($item['jml_bidang'] == 0): ?>

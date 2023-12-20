@@ -7,8 +7,8 @@
 		</ol>
 	</section>
 	<section class='content'>
-		<div class='row'>
-			<div class='col-md-12'>
+		<div class="row">
+			<div class="col-md-12">
 				<div class='card card-danger'>
 					<div class='card-body'>
 						<h4>Apa itu SiDeGa</h4>

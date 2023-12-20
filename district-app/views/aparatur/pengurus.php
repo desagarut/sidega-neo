@@ -39,13 +39,13 @@
 							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
-									<a href="<?= site_url("pengurus/bagan") ?>" title="Bagan Tanpa BPD" class="btn btn-social btn-card btn-block btn-sm"><i class="fe fe-sitemap"></i> Bagan Tanpa BPD</a>
+									<a href="<?= site_url("pengurus/bagan") ?>" title="Bagan Tanpa BPD" class="btn btn-block btn-sm"><i class="fe fe-sitemap"></i> Bagan Tanpa BPD</a>
 								</li>
 								<li>
-									<a href="<?= site_url("pengurus/bagan/bpd") ?>" title="Bagan Dengan BPD" class="btn btn-social btn-card btn-block btn-sm"><i class="fe fe-sitemap"></i> Bagan Dengan BPD</a>
+									<a href="<?= site_url("pengurus/bagan/bpd") ?>" title="Bagan Dengan BPD" class="btn btn-block btn-sm"><i class="fe fe-sitemap"></i> Bagan Dengan BPD</a>
 								</li>
 								<li>
-									<a href="<?= site_url("pengurus/atur_bagan_layout") ?>" title="Atur Ukuran Bagan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Atur Ukuran Bagan" class="btn btn-social btn-card btn-block btn-sm"><i class="fe fe-cogs"></i> Atur Ukuran Bagan</a>
+									<a href="<?= site_url("pengurus/atur_bagan_layout") ?>" title="Atur Ukuran Bagan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Atur Ukuran Bagan" class="btn btn-block btn-sm"><i class="fe fe-cogs"></i> Atur Ukuran Bagan</a>
 								</li>
 							</ul>
 						</div>

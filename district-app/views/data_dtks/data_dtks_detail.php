@@ -23,11 +23,11 @@
 		</ol>
 	</section>
 	<section class="content" id="maincontent">
-		<div class="card card-shadow">
-			<div class="box-header with-border">
-				<a href="<?= site_url("data_dtks/form_terdata/" . $data_dtks['id']) ?>" title="Tambah Data Warga" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fe fe-plus"></i> Tambah Warga Terdata</a>
-				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/cetak") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
-				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/unduh") ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
+		<div class="card shadow">
+			<div class="card-header">
+				<a href="<?= site_url("data_dtks/form_terdata/" . $data_dtks['id']) ?>" title="Tambah Data Warga" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Warga Terdata</a>
+				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
+				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/unduh") ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
 				<a href="<?= site_url("data_dtks") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Data Kemiskinan">
 					<i class="fe fe-arrow-circle-left "></i>Kembali ke daftar kelompok
 				</a>
