@@ -100,6 +100,9 @@
 										</div>
 									</div>
 									<div class="col-md-12">
+										<?php if ($judul_statistik) : ?>
+											<h5 class="box-title text-center"><b><?= $judul_statistik; ?></b></h5>
+										<?php endif; ?>
 										<table class="table datatables table-hover table-responsive" id="dataTable-1">
 											<thead>
 												<tr>
@@ -225,7 +228,7 @@
 <script src="<?= base_url() ?>assets/js/messages_id.js"></script>-->
 <script src='<?= base_url() ?>assets/js/jquery.dataTables.min.js'></script>
 <script src='<?= base_url() ?>assets/js/dataTables.bootstrap4.min.js'></script>
-												
+
 <script>
 	$('#dataTable-1').DataTable({
 		autoWidth: true,
