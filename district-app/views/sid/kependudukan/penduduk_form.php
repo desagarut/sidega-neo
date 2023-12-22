@@ -7,7 +7,7 @@
 						<h5 class="mb-2 page-title">Form Biodata Penduduk</h5>
 					</div>
 					<div class="col-auto">
-						<a href="<?= site_url("penduduk/detail/$p/$o/$penduduk[id]"); ?>" class="btn btn-outline-info mb-2" title="Kembali Ke Profil Penduduk"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Profil Penduduk</a>
+						<a href="<?= site_url("penduduk/clear"); ?>" class="btn btn-outline-info mb-2" title="Kembali Ke Daftar Penduduk"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Penduduk</a>
 					</div>
 				</div>
 				<form id="mainform" name="mainform" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" onreset="reset_hamil();">

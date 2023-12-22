@@ -206,22 +206,24 @@
 	<div class="col-sm-4">
 		<div class="form-group">
 			<label for="tanggallahir">Tanggal Lahir</label>
-			<div class="input-group input-group-sm date">
-				<div class="input-group-addon">
-					<i class="fe fe-calendar"></i>
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="00-00-0000" id="tgl_1" name="tanggallahir" value="<?= $penduduk['tanggallahir'] ?>" aria-describedby="button-addon2">
+				<div class="input-group-append">
+					<div class="input-group-text" id="button-addon-date"><span class="fe fe-calendar fe-16"></span></div>
 				</div>
-				<input class="form-control input-sm pull-right required" id="tgl_1" name="tanggallahir" type="text" value="<?= $penduduk['tanggallahir'] ?>">
 			</div>
+			<!--<div class="input-group input-group-sm date">
+				<input class="form-control required" id="tgl_1" type="date" name="tanggallahir" value="<?= $penduduk['tanggallahir'] ?>">
+				<input class="form-control input-sm pull-right required" id="tgl_1" name="tanggallahir" type="text" value="<?= $penduduk['tanggallahir'] ?>">
+			</div>-->
 		</div>
 	</div>
 	<div class="col-sm-4">
 		<div class="form-group">
 			<label for="waktulahir">Waktu Kelahiran </label>
 			<div class="input-group input-group-sm date">
-				<div class="input-group-addon">
-					<i class="fe fe-calendar"></i>
-				</div>
-				<input class="form-control input-sm pull-right" id="jammenit_1" name="waktu_lahir" type="text" value="<?= $penduduk['waktu_lahir'] ?>">
+				<input class="form-control" id="jammenit_1" type="time" name="waktu_lahir" value="<?= $penduduk['waktu_lahir'] ?>">
+				<!--<input class="form-control input-sm pull-right" id="jammenit_1" name="waktu_lahir" type="text" value="<?= $penduduk['waktu_lahir'] ?>">-->
 			</div>
 		</div>
 	</div>
@@ -348,10 +350,7 @@
 		<div class="form-group">
 			<label for="tanggal_akhir_paspor">Tgl Berakhir Paspor</label>
 			<div class="input-group input-group-sm date">
-				<div class="input-group-addon">
-					<i class="fe fe-calendar"></i>
-				</div>
-				<input class="form-control input-sm pull-right" id="tgl_2" name="tanggal_akhir_paspor" type="text" value="<?= $penduduk['tanggal_akhir_paspor'] ?>">
+				<input class="form-control" id="tgl_2" type="date" name="tanggal_akhir_paspor" value="<?= $penduduk['tanggal_akhir_paspor'] ?>">
 			</div>
 		</div>
 	</div>
@@ -410,7 +409,7 @@
 	<?php if (empty($id_kk)) : ?>
 		<div class="row">
 			<div class="col-sm-12">
-				<div class='form-group col-sm-3'>
+				<div class='form-group col-sm-4'>
 					<label><?= ucwords($this->setting->sebutan_dusun) ?> <?php (empty($penduduk['no_kk']) and empty($kk_baru)) or print('KK') ?></label>
 					<select name="dusun" class="form-control input-sm required" onchange="ubah_dusun($(this).val())">
 						<option value="">Pilih <?= ucwords($this->setting->sebutan_dusun) ?></option>
@@ -419,7 +418,7 @@
 						<?php endforeach; ?>
 					</select>
 				</div>
-				<div class='form-group col-sm-2'>
+				<div class='form-group col-sm-4'>
 					<label>RW <?php (empty($penduduk['no_kk']) and empty($kk_baru)) or print('KK') ?></label>
 					<select id="rw" class="form-control input-sm required" name="rw" data-source="<?= site_url() ?>wilayah/list_rw/" data-valueKey="rw" data-displayKey="rw" onchange="ubah_rw($('select[name=dusun]').val(), $(this).val())">
 						<option class="placeholder" value="">Pilih RW</option>
@@ -428,7 +427,7 @@
 						<?php endforeach; ?>
 					</select>
 				</div>
-				<div id='isi_rt' class='form-group col-sm-2'>
+				<div id='isi_rt' class='form-group col-sm-4'>
 					<label>RT <?php (empty($penduduk['no_kk']) and empty($kk_baru)) or print('KK') ?></label>
 					<select id="id_cluster" class="form-control input-sm required" name="id_cluster" data-source="<?= site_url() ?>wilayah/list_rt/" data-valueKey="id" data-displayKey="rt">
 						<option class="placeholder" value="">Pilih RT </option>
@@ -508,10 +507,7 @@
 		<div class="form-group">
 			<label for="tanggalperkawinan">Tanggal Perkawinan <code>(Wajib diisi apabila status KAWIN)</code></label>
 			<div class="input-group input-group-sm date">
-				<div class="input-group-addon">
-					<i class="fe fe-calendar"></i>
-				</div>
-				<input class="form-control input-sm pull-right" id="tgl_3" name="tanggalperkawinan" type="text" value="<?= $penduduk['tanggalperkawinan'] ?>">
+				<input class="form-control" id="tgl_3" type="date" name="tanggalperkawinan" value="<?= $penduduk['tanggalperkawinan'] ?>">
 			</div>
 		</div>
 	</div>
@@ -613,3 +609,149 @@
 		</div>
 	</div>
 </div>
+<script>
+	$('.drgpicker').daterangepicker(
+      {
+        singleDatePicker: true,
+        timePicker: false,
+        showDropdowns: true,
+        locale:
+        {
+          format: 'MM/DD/YYYY'
+        }
+      });
+	$('.time-input').timepicker({
+		'scrollDefault': 'now',
+		'zindex': '9999' /* fix modal open */
+	});
+	/** date range picker */
+	if ($('.datetimes').length) {
+		$('.datetimes').daterangepicker({
+			timePicker: true,
+			startDate: moment().startOf('hour'),
+			endDate: moment().startOf('hour').add(32, 'hour'),
+			locale: {
+				format: 'M/DD hh:mm A'
+			}
+		});
+	}
+	var start = moment().subtract(29, 'days');
+	var end = moment();
+
+	function cb(start, end) {
+		$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+	}
+	$('#reportrange').daterangepicker({
+		startDate: start,
+		endDate: end,
+		ranges: {
+			'Today': [moment(), moment()],
+			'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+			'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+			'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+			'This Month': [moment().startOf('month'), moment().endOf('month')],
+			'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+		}
+	}, cb);
+	cb(start, end);
+	$('.input-placeholder').mask("00/00/0000", {
+		placeholder: "__/__/____"
+	});
+	$('.input-zip').mask('00000-000', {
+		placeholder: "____-___"
+	});
+	$('.input-money').mask("#.##0,00", {
+		reverse: true
+	});
+	$('.input-phoneus').mask('(000) 000-0000');
+	$('.input-mixed').mask('AAA 000-S0S');
+	$('.input-ip').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+		translation: {
+			'Z': {
+				pattern: /[0-9]/,
+				optional: true
+			}
+		},
+		placeholder: "___.___.___.___"
+	});
+	// editor
+	var editor = document.getElementById('editor');
+	if (editor) {
+		var toolbarOptions = [
+			[{
+				'font': []
+			}],
+			[{
+				'header': [1, 2, 3, 4, 5, 6, false]
+			}],
+			['bold', 'italic', 'underline', 'strike'],
+			['blockquote', 'code-block'],
+			[{
+					'header': 1
+				},
+				{
+					'header': 2
+				}
+			],
+			[{
+					'list': 'ordered'
+				},
+				{
+					'list': 'bullet'
+				}
+			],
+			[{
+					'script': 'sub'
+				},
+				{
+					'script': 'super'
+				}
+			],
+			[{
+					'indent': '-1'
+				},
+				{
+					'indent': '+1'
+				}
+			], // outdent/indent
+			[{
+				'direction': 'rtl'
+			}], // text direction
+			[{
+					'color': []
+				},
+				{
+					'background': []
+				}
+			], // dropdown with defaults from theme
+			[{
+				'align': []
+			}],
+			['clean'] // remove formatting button
+		];
+		var quill = new Quill(editor, {
+			modules: {
+				toolbar: toolbarOptions
+			},
+			theme: 'snow'
+		});
+	}
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+		'use strict';
+		window.addEventListener('load', function() {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('needs-validation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', function(event) {
+					if (form.checkValidity() === false) {
+						event.preventDefault();
+						event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+				}, false);
+			});
+		}, false);
+	})();
+</script>
