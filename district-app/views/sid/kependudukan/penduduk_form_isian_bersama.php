@@ -222,8 +222,8 @@
 		<div class="form-group">
 			<label for="waktulahir">Waktu Kelahiran </label>
 			<div class="input-group input-group-sm date">
-				<input class="form-control" id="jammenit_1" type="time" name="waktu_lahir" value="<?= $penduduk['waktu_lahir'] ?>">
-				<!--<input class="form-control input-sm pull-right" id="jammenit_1" name="waktu_lahir" type="text" value="<?= $penduduk['waktu_lahir'] ?>">-->
+				<!--<input class="form-control" id="jammenit_1" type="time" name="waktu_lahir" value="<?= $penduduk['waktu_lahir'] ?>">-->
+				<input class="form-control input-sm pull-right" id="jammenit_1" name="waktu_lahir" type="text" value="<?= $penduduk['waktu_lahir'] ?>">
 			</div>
 		</div>
 	</div>
@@ -349,7 +349,7 @@
 	<div class="col-sm-4">
 		<div class="form-group">
 			<label for="tanggal_akhir_paspor">Tgl Berakhir Paspor</label>
-			<div class="input-group input-group-sm date">
+			<div class="input-group input-group-sm">
 				<input class="form-control" id="tgl_2" type="date" name="tanggal_akhir_paspor" value="<?= $penduduk['tanggal_akhir_paspor'] ?>">
 			</div>
 		</div>
@@ -407,9 +407,10 @@
 		</div>
 	<?php endif; ?>
 	<?php if (empty($id_kk)) : ?>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class='form-group col-sm-4'>
+
+		<div class="col-md-12">
+			<div class="row">
+				<div class='form-group col-auto'>
 					<label><?= ucwords($this->setting->sebutan_dusun) ?> <?php (empty($penduduk['no_kk']) and empty($kk_baru)) or print('KK') ?></label>
 					<select name="dusun" class="form-control input-sm required" onchange="ubah_dusun($(this).val())">
 						<option value="">Pilih <?= ucwords($this->setting->sebutan_dusun) ?></option>
@@ -418,7 +419,7 @@
 						<?php endforeach; ?>
 					</select>
 				</div>
-				<div class='form-group col-sm-4'>
+				<div class='form-group col-auto'>
 					<label>RW <?php (empty($penduduk['no_kk']) and empty($kk_baru)) or print('KK') ?></label>
 					<select id="rw" class="form-control input-sm required" name="rw" data-source="<?= site_url() ?>wilayah/list_rw/" data-valueKey="rw" data-displayKey="rw" onchange="ubah_rw($('select[name=dusun]').val(), $(this).val())">
 						<option class="placeholder" value="">Pilih RW</option>
@@ -427,7 +428,7 @@
 						<?php endforeach; ?>
 					</select>
 				</div>
-				<div id='isi_rt' class='form-group col-sm-4'>
+				<div class='form-group col-auto'>
 					<label>RT <?php (empty($penduduk['no_kk']) and empty($kk_baru)) or print('KK') ?></label>
 					<select id="id_cluster" class="form-control input-sm required" name="id_cluster" data-source="<?= site_url() ?>wilayah/list_rt/" data-valueKey="id" data-displayKey="rt">
 						<option class="placeholder" value="">Pilih RT </option>
@@ -437,321 +438,181 @@
 					</select>
 				</div>
 			</div>
-		</div>
-	<?php endif; ?>
-	<div class="col-sm-4">
-		<div class="form-group">
-			<label for="lokasi">Lokasi Tempat Tinggal </label>
 			<div class="row">
-				<div class="col-sm-12">
-					<a href="<?= site_url("penduduk/ajax_penduduk_maps/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn bg-navy btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-map-marker'></i> Cari Lokasi Tempat Tinggal</a>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="lokasi">Lokasi Tempat Tinggal </label>
+						<div class="row">
+							<div class="col-sm-12">
+								<a href="<?= site_url("penduduk/ajax_penduduk_maps/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn bg-navy btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-map-marker'></i> Cari Lokasi Tempat Tinggal</a>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-12">
-		<div class="form-group">
-			<label for="telepon"> Nomor Telepon </label>
-			<input id="telepon" name="telepon" class="form-control input-sm" type="text" placeholder="Nomor Telepon" size="20" value="<?= $penduduk['telepon'] ?>"></input>
-		</div>
-	</div>
-	<div class="col-sm-12">
-		<div class="form-group">
-			<label for="email"> Alamat Email </label>
-			<input id="email" name="email" class="form-control input-sm email" maxlength="50" placeholder="Alamat Email" size="20" value="<?= $penduduk['email'] ?>"></input>
-		</div>
-	</div>
-	<div class="col-sm-12">
-		<div class="form-group">
-			<label for="alamat_sebelumnya">Alamat Sebelumnya </label>
-			<input id="alamat_sebelumnya" name="alamat_sebelumnya" class="form-control input-sm" maxlength="200" type="text" placeholder="Alamat Sebelumnya" value="<?= strtoupper($penduduk['alamat_sebelumnya']) ?>"></input>
-		</div>
-	</div>
-	<?php if (!$penduduk['no_kk'] and !$kk_baru) : ?>
-		<div class="col-sm-12">
-			<div class="form-group">
-				<label for="alamat_sekarang">Alamat Sekarang </label>
-				<input id="alamat_sekarang" name="alamat_sekarang" class="form-control input-sm" maxlength="200" type="text" placeholder="Alamat Sekarang" value="<?= strtoupper($penduduk['alamat_sekarang']) ?>"></input>
 			</div>
 		</div>
 	<?php endif; ?>
-	<div class="col-sm-12">
-		<div class="form-group subtitle_head">
-			<label class="text-right"><strong>STATUS PERKAWINAN :</strong></label>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="form-group">
-			<label for="status_kawin">Status Perkawinan</label>
-			<select class="form-control input-sm required" name="status_kawin" onchange="disable_kawin_cerai($(this).find(':selected').val())">
-				<option value="">Pilih Status Perkawinan</option>
-				<?php foreach ($kawin as $data) : ?>
-					<option value="<?= $data['id'] ?>" <?php selected($penduduk['status_kawin'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
-				<?php endforeach; ?>
-			</select>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="form-group">
-			<?php if ($penduduk['agama_id'] == 0 or is_null($penduduk['agama_id'])) : ?>
-				<label for="akta_perkawinan">No. Akta Nikah (Buku Nikah)/Perkawinan </label>
-			<?php elseif ($penduduk['agama_id'] == 1) : ?>
-				<label for="akta_perkawinan">No. Akta Nikah (Buku Nikah) </label>
-			<?php else : ?>
-				<label for="akta_perkawinan">No. Akta Perkawinan </label>
-			<?php endif; ?>
-			<input id="akta_perkawinan" name="akta_perkawinan" class="form-control input-sm nomor_sk" type="text" maxlength="40" placeholder="Nomor Akta Perkawinan" value="<?= $penduduk['akta_perkawinan'] ?>"></input>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="form-group">
-			<label for="tanggalperkawinan">Tanggal Perkawinan <code>(Wajib diisi apabila status KAWIN)</code></label>
-			<div class="input-group input-group-sm date">
-				<input class="form-control" id="tgl_3" type="date" name="tanggalperkawinan" value="<?= $penduduk['tanggalperkawinan'] ?>">
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-8">
-		<div class="form-group">
-			<label for="akta_perceraian">Akta Perceraian </label>
-			<input id="akta_perceraian" name="akta_perceraian" class="form-control input-sm nomor_sk" maxlength="40" type="text" placeholder="Akta Perceraian" value="<?= strtoupper($penduduk['akta_perceraian']) ?>"></input>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="form-group">
-			<label for="tanggalperceraian">Tanggal Perceraian <code>(Wajib diisi apabila status CERAI)</code></label>
-			<div class="input-group input-group-sm date">
-				<div class="input-group-addon">
-					<i class="fe fe-calendar"></i>
-				</div>
-				<input class="form-control input-sm pull-right" id="tgl_4" name="tanggalperceraian" type="text" value="<?= $penduduk['tanggalperceraian'] ?>">
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-12">
-		<div class="form-group subtitle_head">
-			<label class="text-right"><strong>DATA KESEHATAN :</strong></label>
-		</div>
-	</div>
-	<div class="col-sm-12">
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="form-group">
-					<label for="golongan_darah_id">Golongan Darah</label>
-					<select class="form-control input-sm required" name="golongan_darah_id">
-						<option value="">Pilih Golongan Darah</option>
-						<?php foreach ($golongan_darah as $data) : ?>
-							<option value="<?= $data['id'] ?>" <?php selected($penduduk['golongan_darah_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
-						<?php endforeach; ?>
-					</select>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group">
-					<label for="cacat_id">Cacat</label>
-					<select class="form-control input-sm" name="cacat_id">
-						<option value="">Pilih Jenis Cacat</option>
-						<?php foreach ($cacat as $data) : ?>
-							<option value="<?= $data['id'] ?>" <?php selected($penduduk['cacat_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
-						<?php endforeach; ?>
-					</select>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group">
-					<label for="sakit_menahun_id">Sakit Menahun</label>
-					<select class="form-control input-sm" name="sakit_menahun_id">
-						<option value="">Pilih Sakit Menahun</option>
-						<?php foreach ($sakit_menahun as $data) : ?>
-							<option value="<?= $data['id'] ?>" <?php selected($penduduk['sakit_menahun_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
-						<?php endforeach; ?>
-					</select>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='col-sm-4' id="akseptor_kb">
-		<div class="form-group">
-			<label for="cara_kb_id">Akseptor KB</label>
-			<select class="form-control input-sm" name="cara_kb_id">
-				<option value="">Pilih Cara KB Saat Ini</option>
-				<?php foreach ($cara_kb as $data) : ?>
-					<option value="<?= $data['id'] ?>" <?php selected($penduduk['cara_kb_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
-				<?php endforeach; ?>
-			</select>
-		</div>
-	</div>
-	<div id='isian_hamil' class='col-sm-4'>
-		<div class="form-group">
-			<label for="hamil">Status Kehamilan </label>
-			<select class="form-control input-sm" name="hamil">
-				<option value="">Pilih Status Kehamilan</option>
-				<option value="0" <?php selected($penduduk['hamil'], '0'); ?>>Tidak Hamil</option>
-				<option value="1" <?php selected($penduduk['hamil'], '1'); ?>>Hamil</option>
-			</select>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="form-group">
-			<label for="id_asuransi">Asuransi </label>
-			<select class="form-control input-sm" name="id_asuransi" onchange="show_hide_asuransi($(this).find(':selected').val());">
-				<option value="">Pilih Asuransi</option>
-				<?php foreach ($pilihan_asuransi as $data) : ?>
-					<option value="<?= $data['id'] ?>" <?php selected($penduduk['id_asuransi'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
-				<?php endforeach; ?>
-			</select>
-		</div>
-	</div>
-	<div id='asuransi_pilihan' class='col-sm-4'>
-		<div class="form-group">
-			<label id="label-no-asuransi" for="no_asuransi">No Asuransi </label>
-			<input id="no_asuransi" name="no_asuransi" class="form-control input-sm" type="text" maxlength="50" placeholder="Nomor Asuransi" value="<?= $penduduk['no_asuransi'] ?>"></input>
-		</div>
-	</div>
-</div>
-<script>
-	$('.drgpicker').daterangepicker(
-      {
-        singleDatePicker: true,
-        timePicker: false,
-        showDropdowns: true,
-        locale:
-        {
-          format: 'MM/DD/YYYY'
-        }
-      });
-	$('.time-input').timepicker({
-		'scrollDefault': 'now',
-		'zindex': '9999' /* fix modal open */
-	});
-	/** date range picker */
-	if ($('.datetimes').length) {
-		$('.datetimes').daterangepicker({
-			timePicker: true,
-			startDate: moment().startOf('hour'),
-			endDate: moment().startOf('hour').add(32, 'hour'),
-			locale: {
-				format: 'M/DD hh:mm A'
-			}
-		});
-	}
-	var start = moment().subtract(29, 'days');
-	var end = moment();
 
-	function cb(start, end) {
-		$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-	}
-	$('#reportrange').daterangepicker({
-		startDate: start,
-		endDate: end,
-		ranges: {
-			'Today': [moment(), moment()],
-			'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-			'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-			'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-			'This Month': [moment().startOf('month'), moment().endOf('month')],
-			'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-		}
-	}, cb);
-	cb(start, end);
-	$('.input-placeholder').mask("00/00/0000", {
-		placeholder: "__/__/____"
-	});
-	$('.input-zip').mask('00000-000', {
-		placeholder: "____-___"
-	});
-	$('.input-money').mask("#.##0,00", {
-		reverse: true
-	});
-	$('.input-phoneus').mask('(000) 000-0000');
-	$('.input-mixed').mask('AAA 000-S0S');
-	$('.input-ip').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
-		translation: {
-			'Z': {
-				pattern: /[0-9]/,
-				optional: true
-			}
-		},
-		placeholder: "___.___.___.___"
-	});
-	// editor
-	var editor = document.getElementById('editor');
-	if (editor) {
-		var toolbarOptions = [
-			[{
-				'font': []
-			}],
-			[{
-				'header': [1, 2, 3, 4, 5, 6, false]
-			}],
-			['bold', 'italic', 'underline', 'strike'],
-			['blockquote', 'code-block'],
-			[{
-					'header': 1
-				},
-				{
-					'header': 2
-				}
-			],
-			[{
-					'list': 'ordered'
-				},
-				{
-					'list': 'bullet'
-				}
-			],
-			[{
-					'script': 'sub'
-				},
-				{
-					'script': 'super'
-				}
-			],
-			[{
-					'indent': '-1'
-				},
-				{
-					'indent': '+1'
-				}
-			], // outdent/indent
-			[{
-				'direction': 'rtl'
-			}], // text direction
-			[{
-					'color': []
-				},
-				{
-					'background': []
-				}
-			], // dropdown with defaults from theme
-			[{
-				'align': []
-			}],
-			['clean'] // remove formatting button
-		];
-		var quill = new Quill(editor, {
-			modules: {
-				toolbar: toolbarOptions
-			},
-			theme: 'snow'
-		});
-	}
-	// Example starter JavaScript for disabling form submissions if there are invalid fields
-	(function() {
-		'use strict';
-		window.addEventListener('load', function() {
-			// Fetch all the forms we want to apply custom Bootstrap validation styles to
-			var forms = document.getElementsByClassName('needs-validation');
-			// Loop over them and prevent submission
-			var validation = Array.prototype.filter.call(forms, function(form) {
-				form.addEventListener('submit', function(event) {
-					if (form.checkValidity() === false) {
-						event.preventDefault();
-						event.stopPropagation();
-					}
-					form.classList.add('was-validated');
-				}, false);
-			});
-		}, false);
-	})();
-</script>
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label for="telepon"> Nomor Telepon </label>
+					<input id="telepon" name="telepon" class="form-control input-sm" type="text" placeholder="Nomor Telepon" size="20" value="<?= $penduduk['telepon'] ?>"></input>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label for="email"> Alamat Email </label>
+					<input id="email" name="email" class="form-control input-sm email" maxlength="50" placeholder="Alamat Email" size="20" value="<?= $penduduk['email'] ?>"></input>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label for="alamat_sebelumnya">Alamat Sebelumnya </label>
+					<input id="alamat_sebelumnya" name="alamat_sebelumnya" class="form-control input-sm" maxlength="200" type="text" placeholder="Alamat Sebelumnya" value="<?= strtoupper($penduduk['alamat_sebelumnya']) ?>"></input>
+				</div>
+			</div>
+			<?php if (!$penduduk['no_kk'] and !$kk_baru) : ?>
+				<div class="col-sm-12">
+					<div class="form-group">
+						<label for="alamat_sekarang">Alamat Sekarang </label>
+						<input id="alamat_sekarang" name="alamat_sekarang" class="form-control input-sm" maxlength="200" type="text" placeholder="Alamat Sekarang" value="<?= strtoupper($penduduk['alamat_sekarang']) ?>"></input>
+					</div>
+				</div>
+			<?php endif; ?>
+			<div class="col-sm-12">
+				<div class="form-group subtitle_head">
+					<label class="text-right"><strong>STATUS PERKAWINAN :</strong></label>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<label for="status_kawin">Status Perkawinan</label>
+					<select class="form-control input-sm required" name="status_kawin" onchange="disable_kawin_cerai($(this).find(':selected').val())">
+						<option value="">Pilih Status Perkawinan</option>
+						<?php foreach ($kawin as $data) : ?>
+							<option value="<?= $data['id'] ?>" <?php selected($penduduk['status_kawin'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<?php if ($penduduk['agama_id'] == 0 or is_null($penduduk['agama_id'])) : ?>
+						<label for="akta_perkawinan">No. Akta Nikah (Buku Nikah)/Perkawinan </label>
+					<?php elseif ($penduduk['agama_id'] == 1) : ?>
+						<label for="akta_perkawinan">No. Akta Nikah (Buku Nikah) </label>
+					<?php else : ?>
+						<label for="akta_perkawinan">No. Akta Perkawinan </label>
+					<?php endif; ?>
+					<input id="akta_perkawinan" name="akta_perkawinan" class="form-control input-sm nomor_sk" type="text" maxlength="40" placeholder="Nomor Akta Perkawinan" value="<?= $penduduk['akta_perkawinan'] ?>"></input>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<label for="tanggalperkawinan">Tanggal Perkawinan <code>(Wajib diisi apabila status KAWIN)</code></label>
+					<input id="tgl_3" name="tanggalperkawinan" class="form-control input-sm required date" maxlength="100" type="date" placeholder="00-00-0000" value="<?= $penduduk['tanggalperkawinan'] ?>"></input>
+					<!--
+					<div class="input-group input-group-sm date">
+						<input class="form-control" id="tgl_3" type="date" name="tanggalperkawinan" value="<?= $penduduk['tanggalperkawinan'] ?>">
+					</div>-->
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="form-group">
+					<label for="akta_perceraian">Akta Perceraian </label>
+					<input id="akta_perceraian" name="akta_perceraian" class="form-control input-sm nomor_sk" maxlength="40" type="text" placeholder="Akta Perceraian" value="<?= strtoupper($penduduk['akta_perceraian']) ?>"></input>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<label for="tanggalperceraian">Tanggal Perceraian <code>(Wajib diisi apabila status CERAI)</code></label>
+					<div class="input-group input-group-sm date">
+						<div class="input-group input-group-sm date">
+							<input class="form-control" id="tgl_4" type="date" name="tanggalperceraian" value="<?= $penduduk['tanggalperceraian'] ?>">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="form-group subtitle_head">
+					<label class="text-right"><strong>DATA KESEHATAN :</strong></label>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="golongan_darah_id">Golongan Darah</label>
+							<select class="form-control input-sm required" name="golongan_darah_id">
+								<option value="">Pilih Golongan Darah</option>
+								<?php foreach ($golongan_darah as $data) : ?>
+									<option value="<?= $data['id'] ?>" <?php selected($penduduk['golongan_darah_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="cacat_id">Cacat</label>
+							<select class="form-control input-sm" name="cacat_id">
+								<option value="">Pilih Jenis Cacat</option>
+								<?php foreach ($cacat as $data) : ?>
+									<option value="<?= $data['id'] ?>" <?php selected($penduduk['cacat_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="sakit_menahun_id">Sakit Menahun</label>
+							<select class="form-control input-sm" name="sakit_menahun_id">
+								<option value="">Pilih Sakit Menahun</option>
+								<?php foreach ($sakit_menahun as $data) : ?>
+									<option value="<?= $data['id'] ?>" <?php selected($penduduk['sakit_menahun_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='col-sm-4' id="akseptor_kb">
+				<div class="form-group">
+					<label for="cara_kb_id">Akseptor KB</label>
+					<select class="form-control input-sm" name="cara_kb_id">
+						<option value="">Pilih Cara KB Saat Ini</option>
+						<?php foreach ($cara_kb as $data) : ?>
+							<option value="<?= $data['id'] ?>" <?php selected($penduduk['cara_kb_id'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+			<div id='isian_hamil' class='col-sm-4'>
+				<div class="form-group">
+					<label for="hamil">Status Kehamilan </label>
+					<select class="form-control input-sm" name="hamil">
+						<option value="">Pilih Status Kehamilan</option>
+						<option value="0" <?php selected($penduduk['hamil'], '0'); ?>>Tidak Hamil</option>
+						<option value="1" <?php selected($penduduk['hamil'], '1'); ?>>Hamil</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<label for="id_asuransi">Asuransi </label>
+					<select class="form-control input-sm" name="id_asuransi" onchange="show_hide_asuransi($(this).find(':selected').val());">
+						<option value="">Pilih Asuransi</option>
+						<?php foreach ($pilihan_asuransi as $data) : ?>
+							<option value="<?= $data['id'] ?>" <?php selected($penduduk['id_asuransi'], $data['id']); ?>><?= strtoupper($data['nama']) ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+			<div id='asuransi_pilihan' class='col-sm-4'>
+				<div class="form-group">
+					<label id="label-no-asuransi" for="no_asuransi">No Asuransi </label>
+					<input id="no_asuransi" name="no_asuransi" class="form-control input-sm" type="text" maxlength="50" placeholder="Nomor Asuransi" value="<?= $penduduk['no_asuransi'] ?>"></input>
+				</div>
+			</div>
+		</div>

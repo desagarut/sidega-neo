@@ -49,7 +49,9 @@
 								</div>
 							</div>
 						</div>
+					</form>
 				</div>
-				</form>
-				</section>
 			</div>
+		</div>
+	</div>
+</main>

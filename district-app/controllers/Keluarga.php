@@ -57,14 +57,16 @@ class Keluarga extends Admin_Controller {
 			$data['dusun'] = $data['rw'] = $data['rt'] = '';
 		}
 
-		$per_page = $this->input->post('per_page');
-		if (isset($per_page))
-			$this->session->per_page = $per_page;
+		//$per_page = $this->input->post('per_page');
+		//if (isset($per_page))
+		//	$this->session->per_page = $per_page;
 
 		$data['func'] = 'index';
-		$data['set_page'] = $this->_set_page;
-		$data['paging'] = $this->keluarga_model->paging($p);
-		$data['main'] = $this->keluarga_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+		//$data['set_page'] = $this->_set_page;
+		//$data['paging'] = $this->keluarga_model->paging($p);
+		//$data['main'] = $this->keluarga_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+
+		$data['main'] = $this->keluarga_model->list_data();
 		$data['list_sex'] = $this->referensi_model->list_data('tweb_penduduk_sex');
 		$data['list_dusun'] = $this->penduduk_model->list_dusun();
 		$this->set_minsidebar(1);

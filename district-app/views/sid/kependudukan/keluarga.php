@@ -18,6 +18,7 @@
 		});
 	});
 </script>
+
 <main role="main" class="main-content">
 	<div class="container-fluid">
 		<div class="row justify-content-center">
@@ -39,21 +40,21 @@
 									</div>
 								<?php endif; ?>
 							</div>
+							<!--
 							<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>"><button type="button" class="btn mb-2 btn-outline-info mr-1" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><span class="fe fe-printer fe-16 mr-2"></span>Cetak</button></a>
 							<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>"><button type="button" class="btn mb-2 btn-outline-info mr-1" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><span class="fe fe-download fe-16 mr-2"></span>Unduh</button></a>
-
+								-->
 							<div class="form-group mr-1 mb-2">
 								<button class="btn btn-outline-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<span>Aksi terpilih</span>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a href="" class="dropdown-item" id="aksi-terpilih" title="Cetak Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/cetak_kk_all") ?>', '_blank'); return false;"><i class="fe fe-printer"></i> Cetak Kartu Keluarga</a>
-									<a href="" class="dropdown-item" id="aksi-terpilih" title="Unduh Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/doc_kk_all") ?>'); return false;"><i class="fe fe-download"></i> Unduh Kartu Keluarga</a>
+									<a href="" class="dropdown-item aksi-terpilih" id="aksi-terpilih" title="Cetak Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/cetak_kk_all") ?>', '_blank'); return false;"><i class="fe fe-printer"></i> Cetak Kartu Keluarga</a>
+									<a href="" class="dropdown-item aksi-terpilih" id="aksi-terpilih" title="Unduh Kartu Keluarga" onclick="formAction('mainform','<?= site_url("keluarga/doc_kk_all") ?>'); return false;"><i class="fe fe-download"></i> Unduh Kartu Keluarga</a>
 									<a href="<?= site_url("keluarga/search_kumpulan_kk") ?>" class="dropdown-item" title="Pilihan Kumpulan KK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan KK"><i class="fe fe-search"></i> Pilihan Kumpulan KK</a>
 									<?php if ($this->CI->cek_hak_akses('h')) : ?>
-										<a href="#confirm-delete" class="dropdown-item hapus-terpilih" title="Hapus Data" onclick="deleteAllcard('mainform', '<?= site_url("keluarga/delete_all") ?>')"><i class="fe fe-trash"></i> Hapus Data Terpilih</a>
+										<a href="#confirm-delete" id="aksi-terpilih" class="dropdown-item hapus-terpilih" title="Hapus Data" onclick="deleteAllcard('mainform', '<?= site_url("keluarga/delete_all") ?>')"><i class="fe fe-trash"></i> Hapus Data Terpilih</a>
 									<?php endif; ?>
-
 								</div>
 							</div>
 							<a href="<?= site_url("{$this->controller}/clear") ?>"><button type="button" class="btn mb-2 btn-outline-info"><span class="fe fe-refresh fe-16 mr-2"></span>Bersihkan Filter</button></a>
@@ -61,11 +62,11 @@
 					</div>
 				</div>
 				<div class="card shadow">
-					<div class="card-header">
+					<div class="card-body">
 						<form id="mainform" name="mainform" action="" method="post">
 							<div class="row">
 								<div class="col-auto mb-2">
-									<select class="form-control row input-sm" name="status_dasar" onchange="formAction('mainform', '<?= site_url('keluarga/filter/status_dasar') ?>')">
+									<select class="form-control input-sm" name="status_dasar" onchange="formAction('mainform', '<?= site_url('keluarga/filter/status_dasar') ?>')">
 										<option value="">Pilih Status KK</option>
 										<option value="1" <?= selected($status_dasar, 1); ?>>KK Aktif</option>
 										<option value="2" <?= selected($status_dasar, 2); ?>>KK Hilang/Pindah/Mati</option>
@@ -73,8 +74,7 @@
 									</select>
 								</div>
 								<div class="col-auto mb-2">
-
-									<select class="form-control row input-sm" name="sex" onchange="formAction('mainform', '<?= site_url('keluarga/filter/sex') ?>')">
+									<select class="form-control input-sm" name="sex" onchange="formAction('mainform', '<?= site_url('keluarga/filter/sex') ?>')">
 										<option value="">Pilih Jenis Kelamin</option>
 										<?php foreach ($list_sex as $data) : ?>
 											<option value="<?= $data['id'] ?>" <?= selected($sex, $data['id']); ?>><?= set_ucwords($data['nama']) ?></option>
@@ -82,7 +82,6 @@
 									</select>
 								</div>
 								<div class="col-auto mb-2">
-
 									<select class="form-control input-sm " name="dusun" onchange="formAction('mainform','<?= site_url('keluarga/dusun') ?>')">
 										<option value="">Pilih <?= ucwords($this->setting->sebutan_dusun) ?></option>
 										<?php foreach ($list_dusun as $data) : ?>
@@ -91,7 +90,6 @@
 									</select>
 								</div>
 								<div class="col-auto mb-2">
-
 									<?php if ($dusun) : ?>
 										<select class="form-control input-sm" name="rw" onchange="formAction('mainform','<?= site_url('keluarga/rw') ?>')">
 											<option value="">Pilih RW</option>
@@ -102,7 +100,6 @@
 									<?php endif; ?>
 								</div>
 								<div class="col-auto mb-2">
-
 									<?php if ($rw) : ?>
 										<select class="form-control input-sm" name="rt" onchange="formAction('mainform','<?= site_url('keluarga/rt') ?>')">
 											<option value="">Pilih RT</option>
@@ -113,11 +110,7 @@
 									<?php endif; ?>
 								</div>
 							</div>
-						</form>
-					</div>
-					<div class="card-body">
-						<form id="mainform" name="mainform" action="" method="post">
-							<div class="row mb-4">
+							<div class="row">
 								<div class="col-md-12">
 									<?php if ($judul_statistik) : ?>
 										<h5 class="card-title text-center"><b><?= $judul_statistik; ?></b></h5>
@@ -128,10 +121,10 @@
 												<th><input type="checkbox" id="checkall" /></th>
 												<th>No</th>
 												<th>Foto</th>
-												<th>No.KK</th>
+												<th>No.KK - NIK</th>
 												<th>Nama KK</th>
-												<th>NIK</th>
-												<th>Tag ID Card</th>
+												<!--<th>NIK</th>
+												<th>Tag ID Card</th>-->
 												<th>Jumlah Anggota</th>
 												<th>Jenis Kelamin</th>
 												<th>Alamat</th>
@@ -152,14 +145,15 @@
 															</div>
 														</div>
 													</td>
-													<td><a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$data[id]") ?>"><?= $data['no_kk'] ?></a></td>
+													<td>No KK: <a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$data[id]") ?>"><?= $data['no_kk'] ?></a>
+												<br/>NIK : <a href="<?= site_url("penduduk/detail/1/0/$data[id_pend]") ?>"><?= strtoupper($data['nik']) ?></a></td>
 													<td nowrap>
 														<label data-rel="popover" data-content="<img width=200 height=230 src=<?= AmbilFoto($data['foto'], '', $data['id_sex']) ?>>">
 															<strong><?= strtoupper($data['kepala_kk']) ?></strong>
 														</label>
 													</td>
-													<td><a href="<?= site_url("penduduk/detail/1/0/$data[id_pend]") ?>"><?= strtoupper($data['nik']) ?></a></td>
-													<td><?= $data['tag_id_card'] ?></td>
+													<!--<td></td>
+													<td><?= $data['tag_id_card'] ?></td>-->
 													<td><a href="<?= site_url("keluarga/anggota/$p/$o/$data[id]") ?>"><?= $data['jumlah_anggota'] ?></a></td>
 													<td><?= strtoupper($data['sex']) ?></td>
 													<td><?= strtoupper($data['alamat']) ?> RT.<?= strtoupper($data['rt']) ?> RW.<?= strtoupper($data['rw']) ?> Wilayah/Dusun <?= strtoupper($data['dusun']) ?></td>

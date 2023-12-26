@@ -19,6 +19,10 @@
 <script src="<?= base_url() ?>assets/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>assets/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>assets/js/select2.min.js"></script>
+<script src='<?= base_url() ?>assets/js/jquery.timepicker.js'></script>
+<script src='<?= base_url() ?>assets/js/dropzone.min.js'></script>
+<script src='<?= base_url() ?>assets/js/uppy.min.js'></script>
+<script src='<?= base_url() ?>assets/js/quill.min.js'></script>
 
 <script>
   /* defind global options */
