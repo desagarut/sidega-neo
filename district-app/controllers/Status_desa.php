@@ -39,7 +39,7 @@ class Status_desa extends Admin_Controller {
 	//	$this->load->view('nav', $nav);
 	//	$this->load->view('home/idm', ['idm' => $idm->body->mapData]);
 	//	$this->load->view('footer');
-	$this->render('home/idm', $data);
+	$this->render('beranda/idm', $data);
 	}
 
     public function perbaharui($tahun)
