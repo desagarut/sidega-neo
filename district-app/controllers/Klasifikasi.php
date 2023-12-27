@@ -36,8 +36,10 @@ class Klasifikasi extends Admin_Controller {
 			$_SESSION['per_page'] = $_POST['per_page'];
 		$data['per_page'] = $_SESSION['per_page'];
 
-		$data['paging'] = $this->klasifikasi_model->paging($p, $o);
-		$data['main'] = $this->klasifikasi_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+		//$data['paging'] = $this->klasifikasi_model->paging($p, $o);
+		//$data['main'] = $this->klasifikasi_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+		$data['main'] = $this->klasifikasi_model->list_data();
+
 		$data['keyword'] = $this->klasifikasi_model->autocomplete();
 
 		$this->render('klasifikasi/table', $data);

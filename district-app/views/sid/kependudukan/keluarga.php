@@ -40,10 +40,6 @@
 									</div>
 								<?php endif; ?>
 							</div>
-							<!--
-							<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>"><button type="button" class="btn mb-2 btn-outline-info mr-1" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><span class="fe fe-printer fe-16 mr-2"></span>Cetak</button></a>
-							<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>"><button type="button" class="btn mb-2 btn-outline-info mr-1" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><span class="fe fe-download fe-16 mr-2"></span>Unduh</button></a>
-								-->
 							<div class="form-group mr-1 mb-2">
 								<button class="btn btn-outline-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<span>Aksi terpilih</span>

@@ -2,127 +2,123 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">
-		<h1>Pengaturan Format Surat Desa</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
-			<li><a href="<?= site_url('surat_master'); ?>"> Format Surat Desa</a></li>
-			<li class="active">Pengaturan Format Surat</li>
-		</ol>
-	</section>
-	<section class="content" id="maincontent">
-		<div class="card shadow">
-			<div class="card-header">
-				<a href="<?= site_url("surat_master"); ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Wilayah">
-					<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Format Surat
-				</a>
-			</div>
-			<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-				<div class="box-body">
-					<div class="form-group">
-						<label class="col-sm-3 control-label" for="kode_surat">Kode/Klasifikasi Surat</label>
-						<div class="col-sm-7">
-							<select class="form-control input-sm select2-tags required" id="kode_surat" name="kode_surat">
-								<?php if ( ! empty($surat_master['kode_surat'])): ?>
-									<option value="<?= $surat_master['kode_surat']; ?>"><?= $surat_master['kode_surat']; ?></option>
-								<?php else: ?>
-									<option value="">-- Pilih Kode/Klasifikasi Surat --</option>
-								<?php endif; ?>
-								<?php foreach ($klasifikasi as $item): ?>
-									<option value="<?= $item['kode']; ?>" <?= selected($item['kode'], $surat_master["kode_surat"]); ?>><?= $item['kode'] . ' - ' . $item['nama']; ?></option>
-								<?php endforeach;?>
-							</select>
-						</div>
+				<div class="row align-items-center mb-2">
+					<div class="col">
+						<h5 class="page-title">Pengaturan Format Surat Desa</h5>
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">Nama Layanan</label>
-						<div class="col-sm-7">
-							<div class="input-group">
-								<span class="input-group-addon input-sm">Surat</span>
-								<input type="text" class="form-control input-sm required" id="nama" name="nama" placeholder="Nama Layanan" value="<?= $surat_master['nama']?>"/>
-							</div>
-						</div>
+					<div class="col-auto">
+						<a href="<?= site_url("surat_master"); ?>" class="btn btn-outline-info mb-2" title="Kembali Ke Daftar Format Surat">Kembali ke Daftar Format Surat</a>
 					</div>
-					<?php if (strpos($form_action, 'insert') !== FALSE): ?>
-						<div class="form-group">
-							<label class="col-sm-3 control-label" for="nama">Pemohon Surat</label>
-							<div class="col-sm-3">
-								<select class="form-control input-sm" id="pemohon_surat" name="pemohon_surat">
-									<option value="warga" selected>Warga</option>
-									<option value="non_warga">Bukan Warga</option>
-								</select>
-							</div>
-						</div>
-					<?php endif; ?>
-					<div class="form-group">
-						<label class="col-sm-3 control-label" for="nama">Masa Berlaku Default</label>
-						<div class="col-sm-3">
-							<div class="row">
-								<div class="col-sm-3">
-									<input type="number" class="form-control input-sm" id="masa_berlaku" name="masa_berlaku" onchange="masaBerlaku()" value="<?= $surat_master['masa_berlaku'] ? $surat_master['masa_berlaku'] : 1; ?>">
-								</div>
-								<div class="col-sm-6">
-									<select class="form-control input-sm" id="satuan_masa_berlaku" name="satuan_masa_berlaku">
-										<?php foreach ($list_ref_masa as $kode_masa => $judul_masa): ?>
-											<option value="<?= $kode_masa; ?>" <?= selected($surat_master['satuan_masa_berlaku'], $kode_masa); ?>><?= $judul_masa; ?></option>
+				</div>
+				<div class="card shadow">
+					<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+						<div class="card-body">
+							<div class="form-group row">
+								<label class="col-sm-3 control-label" for="kode_surat">Kode/Klasifikasi Surat</label>
+								<div class="col-sm-7">
+									<select class="form-control select2 required" id="kode_surat" name="kode_surat">
+										<?php if (!empty($surat_master['kode_surat'])) : ?>
+											<option value="<?= $surat_master['kode_surat']; ?>"><?= $surat_master['kode_surat']; ?></option>
+										<?php else : ?>
+											<option value="">-- Pilih Kode/Klasifikasi Surat --</option>
+										<?php endif; ?>
+										<?php foreach ($klasifikasi as $item) : ?>
+											<option value="<?= $item['kode']; ?>" <?= selected($item['kode'], $surat_master["kode_surat"]); ?>><?= $item['kode'] . ' - ' . $item['nama']; ?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
 							</div>
-							<label class="text-muted text-red">Minimal 1 dan maksimal 31</label>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label" for="mandiri">Sediakan di Layanan Mandiri</label>
-						<div class="btn-group col-xs-12 col-sm-8" data-toggle="buttons">
-							<label id="m1" class="tipe btn btn-info btn-box btn-sm col-xs-12 col-sm-6 col-lg-2 form-check-label <?= jecho($surat_master['mandiri'], 1, 'active'); ?>">
-								<input id="g1" type="radio" name="mandiri" class="form-check-input" type="radio" value="1" <?= jecho($surat_master['mandiri'], 1, 'checked'); ?> autocomplete="off">Ya
-							</label>
-							<label id="m2" class="tipe btn btn-info btn-box btn-sm col-xs-12 col-sm-6 col-lg-2 form-check-label <?= jecho($surat_master['mandiri'] != 1, TRUE, 'active'); ?>">
-								<input id="g2" type="radio" name="mandiri" class="form-check-input" type="radio" value="0" <?= jecho($surat_master['mandiri'] != 1, TRUE, 'checked'); ?> autocomplete="off">Tidak
-							</label>
-						</div>
-					</div>
-					<div class="form-group" id="syarat" <?= jecho($surat_master['mandiri'] != 1, TRUE, 'style="display:none;"'); ?>>
-						<label class="col-sm-3 control-label" for="mandiri">Syarat Surat</label>
-						<div class="col-sm-7">
-							<div class="table-responsive">
-								<table class="table table-bordered dataTable table-striped table-hover tabel-daftar">
-									<thead class="bg-gray disabled color-palette">
-										<tr>
-											<th><input type="checkbox" id="checkall"/></th>
-											<th>No</th>
-											<th>Nama Dokumen</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php if ($list_ref_syarat): ?>
-											<?php foreach ($list_ref_syarat as $key => $ref_syarat): ?>
+							<div class="form-group row">
+								<label class="col-sm-3 control-label">Nama Layanan Surat</label>
+								<div class="col-sm-7">
+									<div class="input-group">
+										<span class="input-group-addon input-sm">Surat </span>&nbsp;
+										<input type="text" class="form-control input-sm required" id="nama" name="nama" placeholder="Nama Surat" value="<?= $surat_master['nama'] ?>" />
+									</div>
+								</div>
+							</div>
+							<?php if (strpos($form_action, 'insert') !== FALSE) : ?>
+								<div class="form-group row">
+									<label class="col-sm-3 control-label" for="nama">Pemohon Surat</label>
+									<div class="col-sm-3">
+										<select class="form-control input-sm" id="pemohon_surat" name="pemohon_surat">
+											<option value="warga" selected>Warga</option>
+											<option value="non_warga">Bukan Warga</option>
+										</select>
+									</div>
+								</div>
+							<?php endif; ?>
+							<div class="form-group row">
+								<label class="col-sm-3 control-label" for="nama">Masa Berlaku Default</label>
+								<div class="col-sm-3">
+									<div class="row">
+										<div class="col-sm-3">
+											<input type="number" class="form-control input-sm" id="masa_berlaku" name="masa_berlaku" onchange="masaBerlaku()" value="<?= $surat_master['masa_berlaku'] ? $surat_master['masa_berlaku'] : 1; ?>">
+										</div>
+										<div class="col-sm-6">
+											<select class="form-control input-sm" id="satuan_masa_berlaku" name="satuan_masa_berlaku">
+												<?php foreach ($list_ref_masa as $kode_masa => $judul_masa) : ?>
+													<option value="<?= $kode_masa; ?>" <?= selected($surat_master['satuan_masa_berlaku'], $kode_masa); ?>><?= $judul_masa; ?></option>
+												<?php endforeach; ?>
+											</select>
+										</div>
+									</div>
+									<label class="text-muted text-red">Minimal 1 dan maksimal 31</label>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 control-label" for="mandiri">Sediakan di Layanan Mandiri</label>
+								<div class="btn-group col-xs-12 col-sm-8" data-toggle="buttons">
+									<label id="m1" class="tipe btn btn-info btn-box btn-sm col-xs-12 col-sm-6 col-lg-2 form-check-label <?= jecho($surat_master['mandiri'], 1, 'active'); ?>">
+										<input id="g1" type="radio" name="mandiri" class="form-check-input" type="radio" value="1" <?= jecho($surat_master['mandiri'], 1, 'checked'); ?> autocomplete="off">Ya
+									</label>
+									<label id="m2" class="tipe btn btn-info btn-box btn-sm col-xs-12 col-sm-6 col-lg-2 form-check-label <?= jecho($surat_master['mandiri'] != 1, TRUE, 'active'); ?>">
+										<input id="g2" type="radio" name="mandiri" class="form-check-input" type="radio" value="0" <?= jecho($surat_master['mandiri'] != 1, TRUE, 'checked'); ?> autocomplete="off">Tidak
+									</label>
+								</div>
+							</div>
+							<div class="form-group row" id="syarat" <?= jecho($surat_master['mandiri'] != 1, TRUE, 'style="display:none;"'); ?>>
+								<label class="col-sm-3 control-label" for="mandiri">Syarat Surat</label>
+								<div class="col-sm-7">
+									<div class="table-responsive">
+										<table class="table table-bordered table-striped table-hover tabel-daftar">
+											<thead class="bg-gray disabled color-palette">
 												<tr>
-													<td class="padat"><input type="checkbox" name="syarat[]" value="<?=$ref_syarat['ref_syarat_id']; ?>" <?php in_array($ref_syarat['ref_syarat_id'], array_column($syarat_surat, 'ref_syarat_id')) and print('checked'); ?>/></td>
-													<td class="padat"><?= ($key + 1); ?></td>
-													<td><?= $ref_syarat['ref_syarat_nama']; ?></td>
+													<th><input type="checkbox" id="checkall" /></th>
+													<th>No</th>
+													<th>Nama Dokumen</th>
 												</tr>
-											<?php endforeach; ?>
-										<?php else: ?>
-											<tr>
-												<td class="text-center" colspan="3">Data Tidak Tersedia</td>
-											</tr>
-										<?php endif; ?>
-									</tbody>
-								</table>
+											</thead>
+											<tbody>
+												<?php if ($list_ref_syarat) : ?>
+													<?php foreach ($list_ref_syarat as $key => $ref_syarat) : ?>
+														<tr>
+															<td class="padat"><input type="checkbox" name="syarat[]" value="<?= $ref_syarat['ref_syarat_id']; ?>" <?php in_array($ref_syarat['ref_syarat_id'], array_column($syarat_surat, 'ref_syarat_id')) and print('checked'); ?> /></td>
+															<td class="padat"><?= ($key + 1); ?></td>
+															<td><?= $ref_syarat['ref_syarat_nama']; ?></td>
+														</tr>
+													<?php endforeach; ?>
+												<?php else : ?>
+													<tr>
+														<td class="text-center" colspan="3">Data Tidak Tersedia</td>
+													</tr>
+												<?php endif; ?>
+											</tbody>
+										</table>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="card-footer">
+							<button type="reset" class="btn btn-danger mb-2" onclick="reset_form($(this).val());">Batal</button>
+							<button type="submit" class="btn btn-info mb-2 pull-right">Simpan</button>
+						</div>
+					</form>
 				</div>
-				<div class="box-footer">
-					<button type="reset" class="btn btn-danger btn-sm" onclick="reset_form($(this).val());"><i class="fe fe-times"></i> Batal</button>
-					<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
-				</div>
-			</form>
+			</div>
 		</div>
-	</section>
-</div>
+	</div>
+</main>
 <script>
 	$('document').ready(function() {
 		syarat($('input[name=mandiri]:checked').val());
@@ -132,17 +128,17 @@
 	});
 
 	function syarat(tipe) {
-		(tipe == '1' || tipe == null) ? $('#syarat').show() : $('#syarat').hide();
+		(tipe == '1' || tipe == null) ? $('#syarat').show(): $('#syarat').hide();
 	}
 
 	function reset_form() {
 		$(".tipe").removeClass("active");
 		$("input[name=mandiri").prop("checked", false);
-		<?php if ($surat_master['mandiri'] == '1'): ?>
+		<?php if ($surat_master['mandiri'] == '1') : ?>
 			$("#m1").addClass('active');
 			$("#g1").prop("checked", true);
 		<?php endif; ?>
-		<?php if ($surat_master['mandiri'] != '1'): ?>
+		<?php if ($surat_master['mandiri'] != '1') : ?>
 			$("#m2").addClass('active');
 			$("#g2").prop("checked", true);
 		<?php endif; ?>

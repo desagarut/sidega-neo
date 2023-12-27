@@ -2,8 +2,8 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<h4 class="modal-title">Cetak Inventaris</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 			<form target="_blank" class="form-horizontal" method="get">
 				<div class="modal-body">
@@ -39,8 +39,8 @@
 
 				</div>
 				<div class="modal-footer">
-					<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button type="submit" class="btn btn-social btn-flat btn-info btn-sm" id="form_cetak" name="form_cetak" data-dismiss="modal"><i class='fe fe-check'></i> Cetak</button>
+					<button type="reset" class="btn btn-danger" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button type="submit" class="btn btn-primary" id="form_cetak" name="form_cetak" data-dismiss="modal"><i class='fe fe-check'></i> Cetak</button>
 				</div>
 			</form>
 		</div>

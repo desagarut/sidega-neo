@@ -17,7 +17,7 @@ class Surat_master extends Admin_Controller
 
 	public function clear($id = 0)
 	{
-		$_SESSION['per_page'] = 20;
+		//$_SESSION['per_page'] = 20;
 		$_SESSION['surat'] = $id;
 		unset($_SESSION['cari']);
 		unset($_SESSION['filter']);
@@ -37,12 +37,7 @@ class Surat_master extends Admin_Controller
 			$data['filter'] = $_SESSION['filter'];
 		else $data['filter'] = '';
 
-		if (isset($_POST['per_page']))
-			$_SESSION['per_page'] = $_POST['per_page'];
-
-		$data['per_page'] = $_SESSION['per_page'];
-		$data['paging'] = $this->surat_master_model->paging($p, $o);
-		$data['main'] = $this->surat_master_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+		$data['main'] = $this->surat_master_model->list_data();
 		$data['keyword'] = $this->surat_master_model->autocomplete();
 		$this->set_minsidebar(1);
 		$this->render('surat_master/table', $data);
