@@ -16,7 +16,7 @@
 				<input type="file" class="hidden" id="file" name="foto">
 				<input type="hidden" name="old_foto" value="<?= $penduduk['foto'] ?>">
 				<span class="input-group-btn">
-					<button type="button" class="btn btn-info btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
+					<button type="button" class="btn btn-primary btn-box" id="file_browser"><i class="fe fe-search"></i> Browse</button>
 				</span>
 			</div>
 		</div>
@@ -32,7 +32,7 @@
 
 				<div class="col-md-12">
 					<button type='reset' class='btn btn-danger btn-sm ajax'><i class='fe fe-times'></i> Batal</button>
-					<button type='submit' class='btn btn-info btn-sm pull-right ajax'><i class='fe fe-check'></i> Simpan</button>
+					<button type='submit' class='btn btn-primary btn-sm pull-right ajax'><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</div>
 		<?php endif; ?>

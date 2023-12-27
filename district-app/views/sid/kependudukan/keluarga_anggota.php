@@ -10,15 +10,15 @@
 						<div class="form-group mr-1 mb-2 ">
 							<div class="btn-group btn-group-vertical">
 								<?php if ($this->CI->cek_hak_akses('h')) : ?>
-									<button class="btn btn-info dropdown-toggle more-vertical" type="button" id="dr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tambah Anggota</button>
+									<button class="btn btn-primary dropdown-toggle more-vertical" type="button" id="dr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tambah Anggota</button>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dr1">
 										<a class="dropdown-item" href="<?= site_url("keluarga/form_a/$p/$o/$kk") ?>">Tambah Penduduk Baru</a>
 										<a href="<?= site_url("keluarga/ajax_add_anggota/$p/$o/$kk") ?>" class="dropdown-item" title="Tambah Anggota Dari Penduduk Yang Sudah Ada" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Keluarga Dari Penduduk">Dari Penduduk Sudah Ada</a>
 									</div>
 								<?php endif; ?>
 							</div>
-							<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk") ?>" class="btn btn-outline-info">Kartu Keluarga</a>
-							<a href="<?= site_url("keluarga/index/$p/$o") ?>" class="btn btn-outline-info" title="Kembali Ke Daftar Keluarga"><i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
+							<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk") ?>" class="btn btn-outline-primary">Kartu Keluarga</a>
+							<a href="<?= site_url("keluarga/index/$p/$o") ?>" class="btn btn-outline-primary" title="Kembali Ke Daftar Keluarga"><i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 							</a>
 						</div>
 					</div>
@@ -121,42 +121,21 @@
 						</div>
 					</div>
 					<!-- Modal Pecah KK & Keluarkan dari KK ini -->
-					<!--
-					<div class="modal fade" id="confirm-status" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-conten">
-								<div class="modal-header">
-									<h5 class="modal-title" id="myModalLabel">Konfirmasi</h5>
-									<!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-					<!--					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Tutup</button>
-									<button type="button" class="btn btn-info btn-sm btn-ok" id="ok-delete">Simpan</button>
-								</div>
-							</div>
-						</div>
-					</div>
-													-->
 					<div class="modal fade" id="confirm-status" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title" id="myModalLabel">Konfimasi</h5>
+									<h5 class="modal-title" id="myModalLabel">Konfirmasi</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
-								<div class="modal-body">
+								<div class="modal-body text-muted">
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Tutup</button>
-									<a class='btn-ok'>
-										<button type="button" class="btn mb-2 btn-primary" id="ok-delete">Simpan</button>
+									<button type="button" class="btn mb-2 btn-danger" data-dismiss="modal">Tutup</button>
+									<a class="btn-ok">
+										<button type="button" class="btn mb-1 btn-primary" id="ok-delete">Simpan</button>
 									</a>
 								</div>
 							</div>

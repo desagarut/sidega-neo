@@ -42,6 +42,4 @@ function initMap() {
   }
 </style>
 
-<div class='body'>
     <div id="map_penduduk"></div>
-</div>

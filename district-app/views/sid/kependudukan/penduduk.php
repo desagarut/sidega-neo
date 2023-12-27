@@ -53,11 +53,11 @@
 						<form class="form-inline">
 							<div class="form-group mb-2 ">
 								<?php if ($this->CI->cek_hak_akses('h')) : ?>
-									<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-info" title="Tambah Data"><i class="fe fe-plus"></i> Penduduk Domisili</a>
+									<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-primary" title="Tambah Data"><i class="fe fe-plus"></i> Penduduk Domisili</a>
 									<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')" class="btn btn-danger hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
 								<?php endif; ?>
 
-								<button class="btn btn-outline-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya <span class="text-muted sr-only">Action</span></button>
+								<button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya <span class="text-muted sr-only">Action</span></button>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer"></i> Cetak</a>
 									<a class="dropdown-item" href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
@@ -65,7 +65,7 @@
 									<a class="dropdown-item" href="<?= site_url("penduduk/search_kumpulan_nik"); ?>" title="Pilihan Kumpulan NIK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan NIK"><i class="fe fe-users"></i> Pilihan Kumpulan NIK</a>
 									<a class="dropdown-item" href="<?= site_url("penduduk_log/clear"); ?>" title="Log Data Penduduk"><i class="fe fe-book"></i> Log Penduduk</a>
 								</div>
-								<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-info"><i class="fe fe-refresh"></i>Bersihkan</a>
+								<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-primary"><i class="fe fe-refresh"></i>Bersihkan</a>
 							</div>
 						</form>
 					</div>
@@ -226,13 +226,13 @@
 				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
 				<h4 class='modal-title' id='myModalLabel'><i class='fe fe-exclamation-triangle text-red'></i> Konfirmasi</h4>
 			</div>
-			<div class='modal-body btn-info'>
+			<div class='modal-body btn-primary'>
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini??
 			</div>
 			<div class='modal-footer'>
 				<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="button" class="btn btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
+					<button type="button" class="btn btn-primary btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
 				</a>
 			</div>
 		</div>
