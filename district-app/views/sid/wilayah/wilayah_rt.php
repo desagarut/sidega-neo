@@ -4,18 +4,21 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">Wilayah Administratif RW <?= $rw ?> <?= ucwords($this->setting->sebutan_dusun) ?> <?= $dusun ?></h5>
-				<p class="text-muted">Informasi ringkas kewilayahan yang memuat batas RT beserta data kependudukan</p>
+				<div class="row align-items-center mb-2">
+					<div class="col">
+						<h5 class="page-title">Wilayah Administratif RW <?= $rw ?> <?= ucwords($this->setting->sebutan_dusun) ?> <?= $dusun ?></h5>
+					</div>
+					<div class="col-auto">
+						<?php if ($this->CI->cek_hak_akses('h')) : ?>
+							<a href="<?= site_url("sid_core/form_rt/$id_dusun/$id_rw") ?>" class="btn btn-primary btn-sm mb-2 text-light" title="Tambah Data"><i class="fe fe-plus fe-16 mr-2 text-light"></i> Tambah</a>
+						<?php endif; ?>
+						<a href="<?= site_url("sid_core/cetak_rt/$id_dusun/$id_rw") ?>" class="btn btn-sm mb-2 btn-outline-primary" title="Cetak Data" target="_blank"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
+						<a href="<?= site_url("sid_core/excel_rt/$id_dusun/$id_rw") ?>" class="btn btn-sm mb-2 btn-outline-primary" title="Unduh Data" target="_blank"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
+						<a href="<?= site_url("sid_core/sub_rw/$id_dusun") ?>" class="btn btn-sm mb-2 btn-outline-primary" title="Kembali Ke Daftar RW"><i class="fe fe-arrow-left fe-16 mr-2"></i>Kembali ke Daftar RW</a>
+					</div>
+				</div>
 				<div class="card shadow">
 					<div class="card-body">
-						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url("sid_core/form_rt/$id_dusun/$id_rw") ?>" class="btn btn-success btn-sm mb-2 text-light" title="Tambah Data"><i class="fe fe-plus fe-16 mr-2 text-light"></i> Tambah</a>
-						<?php endif; ?>
-						<a href="<?= site_url("sid_core/cetak_rt/$id_dusun/$id_rw") ?>" class="btn btn-sm mb-2 btn-outline-info" title="Cetak Data" target="_blank"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
-						<a href="<?= site_url("sid_core/excel_rt/$id_dusun/$id_rw") ?>" class="btn btn-sm mb-2 btn-outline-info" title="Unduh Data" target="_blank"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
-						<a href="<?= site_url("sid_core/sub_rw/$id_dusun") ?>" class="btn btn-sm mb-2 btn-outline-info" title="Kembali Ke Daftar RW">
-							<i class="fe fe-arrow-left fe-16 mr-2"></i>Kembali ke Daftar RW
-						</a>
 						<table class="table datatables" id="dataTable-1">
 							<thead>
 								<tr class="text-muted">
@@ -35,8 +38,17 @@
 									<tr>
 										<td><?= $indeks + 1 ?></td>
 										<td><?= $data['rt'] ?></td>
-										<td><strong><?= $data['nama_ketua'] ?></strong></td>
-										<td><?= $data['nik_ketua'] ?></td>
+										<?php if ($data['rt'] == "-") : ?>
+											<td>
+												-
+											</td>
+											<td>
+												-
+											</td>
+										<?php else : ?>
+											<td><strong><?= $data['nama_ketua'] ?></strong></td>
+											<td><?= $data['nik_ketua'] ?></td>
+										<?php endif; ?>
 										<td><?= $data['jumlah_kk'] ?></td>
 										<td><?= $data['jumlah_warga'] ?></td>
 										<td><?= $data['jumlah_warga_l'] ?></td>

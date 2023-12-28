@@ -4,23 +4,27 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">Wilayah Administratif RW <?= ucwords($this->setting->sebutan_dusun) ?> <?= $dusun ?></h5>
-				<p class="text-muted">Informasi ringkas kewilayahan yang memuat batas RW beserta data kependudukan</p>
+				<div class="row align-items-center mb-2">
+					<div class="col">
+						<h5 class="page-title">Wilayah Administratif RW <?= ucwords($this->setting->sebutan_dusun) ?> <?= $dusun ?></h5>
+					</div>
+					<div class="col-auto">
+						<?php if ($this->CI->cek_hak_akses('h')) : ?>
+							<a href="<?= site_url("sid_core/form_rw/$id_dusun") ?>" class="btn btn-primary btn-sm mb-2 text-light" title="Tambah Data"><i class="fe fe-plus fe-16 mr-2 text-light"></i> Tambah</a>
+						<?php endif; ?>
+						<a href="<?= site_url("sid_core/cetak_rw/$id_dusun") ?>" class="btn btn-outline-primary btn-sm mb-2" title="Cetak Data" target="_blank"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
+						<a href="<?= site_url("sid_core/excel_rw/$id_dusun") ?>" class="btn btn-outline-primary btn-sm mb-2" title="Unduh Data" target="_blank"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
+						<a href="<?= site_url("sid_core") ?>" class="btn btn-outline-primary btn-sm mb-2" title="Kembali Ke Daftar RW"><i class="fe fe-arrow-left fe-16 mr-2"></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun) ?></a>
+					</div>
+				</div>
 				<div class="card shadow">
 					<div class="card-body">
-						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url("sid_core/form_rw/$id_dusun") ?>" class="btn btn-success btn-sm mb-2 text-light" title="Tambah Data"><i class="fe fe-plus fe-16 mr-2 text-light"></i> Tambah</a>
-						<?php endif; ?>
-						<a href="<?= site_url("sid_core/cetak_rw/$id_dusun") ?>" class="btn btn-outline-info btn-sm mb-2" title="Cetak Data" target="_blank"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
-						<a href="<?= site_url("sid_core/excel_rw/$id_dusun") ?>" class="btn btn-outline-info btn-sm mb-2" title="Unduh Data" target="_blank"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
-						<a href="<?= site_url("sid_core") ?>" class="btn btn-outline-info btn-sm mb-2" title="Kembali Ke Daftar RW"><i class="fe fe-arrow-left fe-16 mr-2"></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun) ?></a>
-						<table class="table datatables" id="dataTable-1">
+						<table class="table datatables " id="dataTable-1">
 							<thead>
 								<tr class="text-muted">
 									<th>No</th>
 									<th>RW</th>
 									<th>Ketua RW</th>
-									<th>NIK Ketua RW</th>
 									<th>RT</th>
 									<th>KK</th>
 									<th>L+P</th>
@@ -30,19 +34,19 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($main as $data) : ?>
+								<?php foreach ($main as $indeks => $data) : ?>
 									<tr>
 										<td><?= $data['no'] ?></td>
 										<td>
 											<a href="<?= site_url("sid_core/sub_rt/$id_dusun/$data[id]") ?>" title="Rincian Sub Wilayah RW"><?= $data['rw'] ?></a>
 										</td>
 										<?php if ($data['rw'] == "-") : ?>
-											<td colspan="2">
-												Pergunakan RW ini apabila RT berada langsung di bawah <?= ucwords($this->setting->sebutan_dusun) ?>, yaitu tidak ada RW
+											<td>
+												-
 											</td>
 										<?php else : ?>
-											<td nowrap><strong><?= $data['nama_ketua'] ?></strong></td>
-											<td><?= $data['nik_ketua'] ?></td>
+											<td nowrap><strong><?= $data['nama_ketua'] ?></strong><br />
+												<?= $data['nik_ketua'] ?></td>
 										<?php endif; ?>
 										<td><a href="<?= site_url("sid_core/sub_rt/$id_dusun/$data[id]") ?>" title="Rincian Sub Wilayah"><?= $data['jumlah_rt'] ?></a></td>
 										<td><?= $data['jumlah_kk'] ?></td>
@@ -92,16 +96,11 @@
 	</div>
 </main>
 <?php $this->load->view('global/confirm_delete'); ?>
-<script src="<?= base_url() ?>assets/
-js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/
-js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/
-js/messages_id.js"></script>
-<script src='<?= base_url() ?>assets/
-js/jquery.dataTables.min.js'></script>
-<script src='<?= base_url() ?>assets/
-js/dataTables.bootstrap4.min.js'></script>
+<script src="<?= base_url('assets/js/jquery.validate.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/validasi.js') ?>"></script>
+<script src="<?= base_url('assets/js/messages_id.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/dataTables.bootstrap4.min.js') ?>"></script>
 <script>
 	$('#dataTable-1').DataTable({
 		autoWidth: true,

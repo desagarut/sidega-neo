@@ -61,12 +61,13 @@ class Dpt extends Admin_Controller {
 			$this->session->per_page = $per_page;
 
 		$data['func'] = 'index';
-		$data['set_page'] = $this->set_page;
-		$data['per_page'] = $this->session->per_page;
+	//	$data['set_page'] = $this->set_page;
+	//	$data['per_page'] = $this->session->per_page;
 		$data['list_jenis_kelamin'] = $this->referensi_model->list_data('tweb_penduduk_sex');
 		$data['list_dusun'] = $this->wilayah_model->list_dusun();
-		$data['paging'] = $this->dpt_model->paging($p, $o);
-		$data['main'] = $this->dpt_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+	//	$data['paging'] = $this->dpt_model->paging($p, $o);
+	//	$data['main'] = $this->dpt_model->list_data($o, $data['paging']->offset, $data['paging']->per_page);
+		$data['main'] = $this->dpt_model->list_data();
 		$data['keyword'] = $this->dpt_model->autocomplete();
 
 		$this->set_minsidebar(1);

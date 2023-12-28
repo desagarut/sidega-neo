@@ -84,10 +84,8 @@
 			<button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
 				<i class="fe fe-menu navbar-toggler-icon"></i>
 			</button>
-			<form class="form-inline mr-auto searchform text-muted">
-				<input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="Type something..." aria-label="Search">
-			</form>
 			<ul class="nav">
+				<a class="nav-link text-muted my-2" href="<?= site_url('first'); ?>" target="_blank"><i class="fe fe-monitor fe-16"></i></a>
 				<li class="nav-item">
 					<a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="light">
 						<i class="fe fe-sun fe-16"></i>
@@ -114,7 +112,7 @@
 						</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="<?= site_url('user_setting'); ?>">Profile</a>
+						<a class="dropdown-item" href="<?= site_url('user_setting'); ?>" data-toggle="modal" data-target="#modalBox">Profile</a>
 						<a class="dropdown-item" href="<?= site_url('user_setting'); ?>">Settings</a>
 						<a class="dropdown-item" href="<?= site_url('insidega/logout'); ?>">Logout</a>
 					</div>
@@ -168,19 +166,18 @@
 		</header>
 		<code>$(document).ajaxStart(function() { Pace.restart(); });</code>-->
 		<input id="success-code" type="hidden" value="<?= $_SESSION['success'] ?>">
-		<!-- Untuk menampilkan modal bootstrap umum -->
-		<!--
+
 		<div class="modal fade" id="modalBox" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class='modal-dialog'>
 				<div class='modal-content'>
 					<div class='modal-header'>
-						<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
 						<h4 class='modal-title' id='myModalLabel'> Pengaturan Pengguna</h4>
+						<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
 					</div>
 					<div class="fetched-data"></div>
 				</div>
 			</div>
-		</div>-->
+		</div>
 
 
 		<div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
@@ -234,7 +231,7 @@
 										<div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
 										<small class="badge badge-pill badge-light text-muted">30m ago</small>
 									</div>
-								</div> <!-- / .row -->
+								</div>
 							</div>
 							<div class="list-group-item bg-transparent">
 								<div class="row align-items-center">
@@ -247,8 +244,8 @@
 										<small class="badge badge-pill badge-light text-muted">1h ago</small>
 									</div>
 								</div>
-							</div> <!-- / .row -->
-						</div> <!-- / .list-group -->
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All</button>
@@ -321,33 +318,3 @@
 			</div>
 		</div>
 	</div>
-
-	<!--
-		<div class="card">
-  <div class="card-body">
-    <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('web') ?><?php endif; ?>" title="Tulis Berita">
-      <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-edit"></i>Tulis Berita</button>
-    </a>
-    <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('surat') ?><?php endif; ?>" title="Buat Surat">
-      <button type="button" class="btn btn-outline-primary"><i class="feather mr-2 icon-folder"></i>Buat Surat</button>
-    </a>
-    <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('permohonan_surat_admin') ?><?php endif; ?>" title="permohonan surat online">
-      <button type="button" class="btn btn-outline-success"><i class="feather mr-2 icon-check-circle"></i>Permohonan</button>
-    </a>
-    <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('mailbox') ?><?php endif; ?>" title="Pesan Masuk">
-      <button type="button" class="btn btn-outline-warning"><i class="feather mr-2 icon-message-square"></i>Pesan</button>
-    </a>
-    <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('surat_masuk') ?><?php endif; ?>" title="Surat Masuk">
-      <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-mail"></i>Surat Masuk</button>
-    </a>
-    <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('mandiri') ?><?php endif; ?>" title="Pembuatan PIN Layanan Masyarakat">
-      <button type="button" class="btn btn-outline-danger"><i class="feather mr-2 icon-command"></i>PIN</button>
-    </a>
-    <a class="btn btn-app" href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('komentar') ?><?php endif; ?>">
-        <button type="button" class="btn btn-info"><i class="feather mr-2 icon-info"></i>Info</button>
-      </a>
-	  <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('komentar') ?><?php endif; ?>">
-      <button type="button" class="btn btn-info"><i class="feather mr-2 icon-info"></i>Info</button>
-    </a>
-  </div>
-</div>-->

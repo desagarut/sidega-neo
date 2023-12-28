@@ -130,7 +130,7 @@
 	}
 
 	#container {
-		height: 300px;
+		height: 352px;
 	}
 
 	.highcharts-figure,
@@ -187,7 +187,6 @@
 							<h5 class="page-title">Status IDM <?= ucwords($this->setting->sebutan_desa) . ' ' . $tahun; ?></h5>
 						</div>
 						<div class="col-auto">
-
 						</div>
 					</div>
 					<div class="card shadow">
@@ -211,94 +210,89 @@
 									</div>
 									<div class="row">
 										<div class="col-md-4 mb-4">
-											<div class="card shadow bg-primary text-light mb-4">
-												<div class="card-body">
-													<div class="row align-items-center">
-														<div class="col">
-															<small class="text-white mb-1">Status IDM Saat Ini</small>
-															<h3 class="text-white card-title mb-0"><?= $idm->SUMMARIES->STATUS ?></h3>
-															<p class="small text-white mb-0"><span class="fe fe-arrow-up fe-12 text-white"></span> Skor : <?= number_format($idm->SUMMARIES->SKOR_SAAT_INI, 4) ?></p>
-														</div>
-														<div class="col-6 text-right">
-															<span class="circle circle-sm bg-primary-light">
-																<i class="fe fe-16 fe-shopping-bag text-white mb-0"></i>
-															</span>
-														</div>
+											<div class="card shadow mb-4">
+												<div class="card-body text-center">
+													<a href="#!" class="avatar avatar-lg">
+														<img src="<?= gambar_desa($desa['logo']); ?>" alt="Logo Desa" class="avatar-img rounded-circle">
+													</a>
+													<div class="card-text my-2">
+														<strong class="card-title my-0"><?= $idm->SUMMARIES->STATUS ?></strong>
+														<p class="small text-muted mb-0">Status IDM Saat Ini</p>
+														<p class="small"><span class="badge badge-primary">Skor : <?= number_format($idm->SUMMARIES->SKOR_SAAT_INI, 4) ?></span></p>
 													</div>
 												</div>
 											</div>
-											<div class="card shadow bg-primary text-light mb-4">
-												<div class="card-body">
-													<div class="row align-items-center">
-														<div class="col">
-															<small class="text-white mb-1">Target Status IDM</small>
-															<h3 class="text-white card-title mb-0"><?= $idm->SUMMARIES->TARGET_STATUS ?></h3>
-															<p class="small text-white mb-0"><span class="fe fe-arrow-up fe-12 text-white"></span> Skor : <?= number_format($idm->SUMMARIES->SKOR_MINIMAL, 4) ?></p>
-														</div>
-														<div class="col-6 text-right">
-															<span class="circle circle-sm bg-primary-light">
-																<i class="fe fe-16 fe-shopping-bag text-white mb-0"></i>
-															</span>
-														</div>
+											<div class="card shadow mb-4">
+												<div class="card-body text-center">
+													<a href="#!" class="avatar avatar-lg">
+														<img src="<?= gambar_desa($desa['logo']); ?>" alt="Logo Desa" class="avatar-img rounded-circle">
+													</a>
+													<div class="card-text my-2">
+														<strong class="card-title my-0"><?= $idm->SUMMARIES->TARGET_STATUS ?></strong>
+														<p class="small text-muted mb-0">Target IDM Berikutnya</p>
+														<p class="small"><span class="badge badge-warning">Skor Minimum : <?= number_format($idm->SUMMARIES->SKOR_MINIMAL, 4) ?></span></p>
 													</div>
 												</div>
 											</div>
 										</div>
-
 										<div class="col-md-8 mb-4">
-											<div id="container"></div>
+											<div class="card shadow mb-4">
+												<div class="card-body text-center">
+													<div id="container"></div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-sm-12">
-									<div class="table-">
-										<table class="table table-responsive table-striped dataTable table-hover">
-											<thead class="bg-gray color-palette">
-												<tr>
-													<th rowspan="2" class="padat">NO</th>
-													<th rowspan="2">INDIKATOR IDM</th>
-													<th rowspan="2">SKOR</th>
-													<th rowspan="2">KETERANGAN</th>
-													<th rowspan="2" nowrap>KEGIATAN YANG DAPAT DILAKUKAN</th>
-													<th rowspan="2">+NILAI</th>
-													<th colspan="6" class="text-center">YANG DAPAT MELAKSANAKAN KEGIATAN</th>
+									<table class="table datatables table-hover table-responsive" id="dataTable-1">
+										<thead>
+											<tr>
+												<th rowspan="2" class="padat">NO</th>
+												<th rowspan="2">INDIKATOR IDM</th>
+												<th rowspan="2">SKOR</th>
+												<th rowspan="2">KETERANGAN</th>
+												<th rowspan="2" nowrap>KEGIATAN YANG DAPAT DILAKUKAN</th>
+												<th rowspan="2">+NILAI</th>
+												<th colspan="6" class="text-center">YANG DAPAT MELAKSANAKAN KEGIATAN</th>
+											</tr>
+											<tr>
+												<th>PUSAT</th>
+												<th>PROVINSI</th>
+												<th>KABUPATEN</th>
+												<th>DESA</th>
+												<th>CSR</th>
+												<th>LAINNYA</th>
+											</tr>
+										</thead>
+										<tbody class="text-muted">
+											<?php foreach ($idm->ROW as $data) : ?>
+												<tr class="<?php empty($data->NO) and print('judul'); ?> ">
+													<td class="text-center"><?= $data->NO ?></td>
+													<td style="min-width: 150px;"><?= $data->INDIKATOR ?></td>
+													<td class="padat"><?= $data->SKOR ?></td>
+													<td style="min-width: 250px;"><?= $data->KETERANGAN ?></td>
+													<td><?= $data->KEGIATAN ?></td>
+													<td><?= $data->NILAI ?></td>
+													<td><?= $data->PUSAT ?></td>
+													<td><?= $data->PROV ?></td>
+													<td><?= $data->KAB ?></td>
+													<td><?= $data->DESA ?></td>
+													<td><?= $data->CSR ?></td>
+													<td><?= $data->SKOR[INDIKATOR['IKS 2023']] ?></td>
 												</tr>
-												<tr>
-													<th>PUSAT</th>
-													<th>PROVINSI</th>
-													<th>KABUPATEN</th>
-													<th>DESA</th>
-													<th>CSR</th>
-													<th>LAINNYA</th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php foreach ($idm->ROW as $data) : ?>
-													<tr class="<?php empty($data->NO) and print('judul'); ?> ">
-														<td class="text-center"><?= $data->NO ?></td>
-														<td style="min-width: 150px;"><?= $data->INDIKATOR ?></td>
-														<td class="padat"><?= $data->SKOR ?></td>
-														<td style="min-width: 250px;"><?= $data->KETERANGAN ?></td>
-														<td><?= $data->KEGIATAN ?></td>
-														<td><?= $data->NILAI ?></td>
-														<td><?= $data->PUSAT ?></td>
-														<td><?= $data->PROV ?></td>
-														<td><?= $data->KAB ?></td>
-														<td><?= $data->DESA ?></td>
-														<td><?= $data->CSR ?></td>
-														<td><?= $data->SKOR[INDIKATOR['IKS 2022']] ?></td>
-													</tr>
-												<?php endforeach; ?>
-											</tbody>
-										</table>
-									</div>
+											<?php endforeach; ?>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 </main>
+

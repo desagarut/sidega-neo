@@ -4,16 +4,20 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">Wilayah Administratif <?= ucwords($this->setting->sebutan_dusun) ?></h5>
-				<p class="text-muted">Informasi ringkas kewilayahan yang memuat batas <?= ucwords($this->setting->sebutan_dusun) ?> beserta data kependudukan</p>
+				<div class="row align-items-center mb-2">
+					<div class="col">
+						<h5 class="page-title">Wilayah Administratif <?= ucwords($this->setting->sebutan_dusun) ?></h5>
+					</div>
+					<div class="col-auto">
+						<?php if ($this->CI->cek_hak_akses('h')) : ?>
+							<a href="<?= site_url("sid_core/form") ?>" class="btn mb-2 btn-primary text-light" title="Tambah"><i class="fe fe-plus text-light"></i> Tambah</a>
+						<?php endif; ?>
+						<a href="<?= site_url("sid_core/dialog/cetak") ?>" class="btn mb-2 btn-outline-primary" data-toggle="modal" data-target="#modalBox"><i class="fe fe-printer"></i> Cetak</a>
+						<a href="<?= site_url("sid_core/dialog/unduh") ?>" class="btn mb-2 btn-outline-primary" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
+					</div>
+				</div>
 				<div class="card shadow">
 					<div class="card-body">
-						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url("sid_core/form") ?>" class="btn btn-sm mb-2 btn-success text-light" title="Tambah"><i class="fe fe-plus fe-16 mr-2 text-light"></i> Tambah</a>
-						<?php endif; ?>
-						<a href="<?= site_url("sid_core/dialog/cetak") ?>" class="btn btn-sm mb-2 btn-outline-info" data-toggle="modal" data-target="#modalBox"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
-						<a href="<?= site_url("sid_core/dialog/unduh") ?>" class="btn btn-sm mb-2 btn-outline-info" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
-
 						<table class="table datatables" id="dataTable-1">
 							<thead>
 								<tr class="text-muted">
@@ -43,7 +47,17 @@
 									<tr>
 										<td class="no_urut"><?= $data['no'] ?></td>
 										<td><a href="<?= site_url("sid_core/sub_rw/$data[id]") ?>"><?= strtoupper($this->setting->sebutan_dusun) ?> <?= strtoupper($data['dusun']) ?></a></td>
-										<td nowrap><strong><?= strtoupper($data['nama_kadus']) ?></strong> - <?= $data['nik_kadus'] ?></td>
+										<?php if ($data['rt'] == "-") : ?>
+											<td>
+												-
+											</td>
+											<td>
+												-
+											</td>
+										<?php else : ?>
+											<td nowrap><strong><?= strtoupper($data['nama_kadus']) ?></strong><br />
+												<?= $data['nik_kadus'] ?></td>
+										<?php endif; ?>
 										<td class="bilangan"><a href="<?= site_url("sid_core/sub_rw/$data[id]") ?>" title="Rincian Sub Wilayah"><?= $data['jumlah_rw'] ?></a></td>
 										<td class="bilangan"><?= $data['jumlah_rt'] ?></td>
 										<td class="bilangan"><a href="<?= site_url("sid_core/warga_kk/$data[id]") ?>"><?= $data['jumlah_kk'] ?></a></td>
@@ -95,16 +109,11 @@
 	</div>
 </main>
 <?php $this->load->view('global/confirm_delete'); ?>
-<script src="<?= base_url() ?>assets/
-js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/
-js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/
-js/messages_id.js"></script>
-<script src='<?= base_url() ?>assets/
-js/jquery.dataTables.min.js'></script>
-<script src='<?= base_url() ?>assets/
-js/dataTables.bootstrap4.min.js'></script>
+<script src="<?= base_url('assets/js/jquery.validate.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/validasi.js') ?>"></script>
+<script src="<?= base_url('assets/js/messages_id.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/dataTables.bootstrap4.min.js') ?>"></script>
 <script>
 	$('#dataTable-1').DataTable({
 		autoWidth: true,

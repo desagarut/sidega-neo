@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
 <script>
 	$(document).ready(function() {
@@ -6,8 +6,8 @@
 	});
 
 	$(function() {
-		var keyword = <?= $keyword?> ;
-		$( "#cari" ).autocomplete( {
+		var keyword = <?= $keyword ?>;
+		$("#cari").autocomplete({
 			source: keyword,
 			maxShowItems: 10,
 		});
@@ -17,163 +17,174 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">
-		<h1>Data Calon Pemilih</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
-			<li class="active">Data Calon Pemilih</li>
-		</ol>
+				<div class="row align-items-center mb-2">
+					<div class="col">
+						<h5 class="page-title">Data Calon Pemilih</h5>
+					</div>
+					<div class="col-auto">
+						<a href="<?= site_url("dpt/ajax_cetak/$o/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" target="_blank" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer "></i> Cetak</a>
+						<a href="<?= site_url("dpt/ajax_cetak/$o/unduh") ?>" class="btn bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+						<a href="<?= site_url("dpt/ajax_adv_search") ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" class="btn btn-primary btn-sm " title="Pencarian Spesifik"><i class='fe fe-search'></i> Pencarian Spesifik</a>
+						<a href="<?= site_url("dpt/clear") ?>" class="btn btn-default btn-sm " title="Bersihkan Pencarian"><i class="fe fe-refresh"></i>Bersihkan</a>
+					</div>
+				</div>
 				<div class="card shadow">
 					<div class="card-header">
-						<div class="col-sm-8 col-lg-9">
+						<div class="col-sm-12">
 							<div class="row">
-								<a href="<?= site_url("dpt/ajax_cetak/$o/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" target="_blank" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" ><i class="fe fe-printer "></i> Cetak</a>
-								<a href="<?= site_url("dpt/ajax_cetak/$o/unduh")?>" class="btn bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>
-								<a href="<?= site_url("dpt/ajax_adv_search")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik" class="btn btn-primary btn-sm " title="Pencarian Spesifik"><i class='fe fe-search'></i> Pencarian Spesifik</a>
-								<a href="<?= site_url("dpt/clear")?>" class="btn btn-default btn-sm " title="Bersihkan Pencarian"><i class="fe fe-refresh"></i>Bersihkan</a>
-							</div>
-						</div>
-						<div class="col-sm-4 col-md-3">
-							<form id="tglform" name="tglform" action="<?= site_url('dpt/index/1/'.$o)?>" method="post">
-								<div class="row">
-									<div class="input-group">
-										<span class="input-group-addon input-sm">Tanggal Pemilihan</span>
-										<div class="input-group input-group-sm date">
-											<div class="input-group-addon">
-												<i class="fe fe-calendar"></i>
-											</div>
-											<input class="form-control input-sm datepicker pull-right" onchange="$('#tglform').submit()" name="tanggal_pemilihan" type="text" value="<?= $_SESSION['tanggal_pemilihan']?>">
-										</div>
-									</div>
+								<div class="col-auto mb-2">
+									<select class="form-control input-sm" name="sex" onchange="formAction('mainform', '<?= site_url('dpt/filter/sex') ?>')">
+										<option value="">Jenis Kelamin</option>
+										<?php foreach ($list_jenis_kelamin as $data) : ?>
+											<option value="<?= $data['id'] ?>" <?php selected($sex, $data['id']); ?>><?= set_ucwords($data['nama']) ?></option>
+										<?php endforeach; ?>
+									</select>
 								</div>
-							</form>
-						</div>
-					</div>
-					<div class="box-header">
-						<h4 class="text-center"><strong>DAFTAR CALON PEMILIH UNTUK TANGGAL PEMILIHAN <?= $_SESSION['tanggal_pemilihan']?></strong></h4>
-					</div>
-					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-									<form id="mainform" name="mainform" action="" method="post">
-										<input type="hidden" name="rt" value="">
-										<div class="row">
-											<div class="col-sm-9">
-												<select class="form-control input-sm" name="sex" onchange="formAction('mainform', '<?= site_url('dpt/filter/sex')?>')">
-													<option value="">Jenis Kelamin</option>
-													<?php foreach ($list_jenis_kelamin AS $data): ?>
-														<option value="<?= $data['id']?>" <?php selected($sex, $data['id']); ?>><?= set_ucwords($data['nama'])?></option>
+
+								<form id="mainform" name="mainform" action="" method="post">
+									<div class="row">
+										<div class="col-auto">
+											<select class="form-control" name="dusun" onchange="formAction('mainform','<?= site_url('dpt/dusun') ?>')">
+												<option value="">Pilih <?= ucwords($this->setting->sebutan_dusun) ?></option>
+												<?php foreach ($list_dusun as $data) : ?>
+													<option value="<?= $data['dusun'] ?>" <?php if ($dusun == $data['dusun']) : ?>selected<?php endif ?>><?= set_ucwords($data['dusun']) ?></option>
+												<?php endforeach; ?>
+											</select>
+										</div>
+										<div class="col-auto">
+											<?php if ($dusun) : ?>
+												<select class="form-control" name="rw" onchange="formAction('mainform','<?= site_url('dpt/rw') ?>')">
+													<option value="">Pilih RW</option>
+													<?php foreach ($list_rw as $data) : ?>
+														<option value="<?= $data['rw'] ?>" <?php if ($rw == $data['rw']) : ?>selected<?php endif ?>><?= set_ucwords($data['rw']) ?></option>
 													<?php endforeach; ?>
 												</select>
-												<select class="form-control input-sm " name="dusun" onchange="formAction('mainform','<?= site_url('dpt/dusun')?>')">
-													<option value="">Pilih <?= ucwords($this->setting->sebutan_dusun)?></option>
-													<?php foreach ($list_dusun AS $data): ?>
-														<option value="<?= $data['dusun']?>" <?php if ($dusun == $data['dusun']): ?>selected<?php endif ?>><?= set_ucwords($data['dusun'])?></option>
-													<?php endforeach;?>
-												</select>
-												<?php if ($dusun): ?>
-													<select class="form-control input-sm" name="rw" onchange="formAction('mainform','<?= site_url('dpt/rw')?>')" >
-														<option value="">Pilih RW</option>
-														<?php foreach ($list_rw AS $data): ?>
-															<option value="<?= $data['rw']?>" <?php if ($rw == $data['rw']): ?>selected<?php endif ?>><?= set_ucwords($data['rw'])?></option>
-														<?php endforeach;?>
-													</select>
-												<?php endif; ?>
-												<?php if ($rw): ?>
-													<select class="form-control input-sm" name="rt" onchange="formAction('mainform','<?= site_url('dpt/rt')?>')">
-														<option value="">Pilih RT</option>
-														<?php foreach ($list_rt AS $data): ?>
-															<option value="<?= $data['rt']?>" <?php if ($rt == $data['rt']): ?>selected<?php endif ?>><?= $data['rt']?></option>
-														<?php endforeach;?>
-													</select>
-												<?php endif; ?>
-											</div>
-											<div class="col-sm-3">
-												<div class="input-group input-group-sm pull-right">
-													<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari")?>');$('#'+'mainform').submit();}">
-													<div class="input-group-btn">
-														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
-													</div>
-												</div>
-											</div>
+											<?php endif; ?>
 										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="table-responsive">
-													<table class="table table-bordered dataTable table-striped table-hover nowrap">
-														<thead class="bg-gray disabled color-palette">
-															<tr>
-																<th>No</th>
-																<?php if ($o==2): ?>
-																	<th><a href="<?= site_url("dpt/index/$p/1")?>">NIK <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==1): ?>
-																	<th><a href="<?= site_url("dpt/index/$p/2")?>">NIK <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th><a href="<?= site_url("dpt/index/$p/1")?>">NIK <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-																<?php if ($o==4): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/3")?>">Nama <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==3): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/4")?>">Nama <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/3")?>">Nama <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-																<?php if ($o==6): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/5")?>">No. KK <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==5): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/6")?>">No. KK <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/5")?>">No. KK <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-																<th>Alamat</th>
-																<th><?= ucwords($this->setting->sebutan_dusun); ?></th>
-																<th>RW</th>
-																<th>RT</th>
-																<th nowrap>Pendidikan dalam KK</th>
-																<?php if ($o==8): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/7")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==7): ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/8")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("dpt/index/$p/7")?>">Umur Pada <?= $_SESSION['tanggal_pemilihan']?> <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-																<th nowrap>Pekerjaan</th>
-																<th nowrap>Kawin</th>
-															</tr>
-														</thead>
-														<tbody>
-															<?php foreach ($main as $data): ?>
-																<tr>
-																	<td><?= $data['no']?></td>
-																	<td>
-																		<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]")?>" id="test" name="<?= $data['id']?>"><?= $data['nik']?></a>
-																	</td>
-																	<td><?= strtoupper($data['nama'])?></td>
-																	<td><a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$data[id_kk]")?>"><?= $data['no_kk']?> </a></td>
-																	<td><?= strtoupper($data['alamat'])?></td>
-																	<td><?= strtoupper($data['dusun'])?></td>
-																	<td><?= $data['rw']?></td>
-																	<td><?= $data['rt']?></td>
-																	<td><?= $data['pendidikan']?></td>
-																	<td><?= $data['umur_pada_pemilihan']?></td>
-																	<td><?= $data['pekerjaan']?></td>
-																	<td><?= $data['kawin']?></td>
-																</tr>
-															<?php endforeach; ?>
-														</tbody>
-													</table>
-												</div>
+										<div class="col-auto">
+											<?php if ($rw) : ?>
+												<select class="form-control" name="rt" onchange="formAction('mainform','<?= site_url('dpt/rt') ?>')">
+													<option value="">Pilih RT</option>
+													<?php foreach ($list_rt as $data) : ?>
+														<option value="<?= $data['rt'] ?>" <?php if ($rt == $data['rt']) : ?>selected<?php endif ?>><?= $data['rt'] ?></option>
+													<?php endforeach; ?>
+												</select>
+											<?php endif; ?>
+										</div>
+									</div>
+								</form>
+								<div class="col-md-4 text-right">
+									<form id="tglform" name="tglform" action="<?= site_url('dpt/index/1/' . $o) ?>" method="post">
+										<div class="input-group row">
+											<span class="input-group-addon col-auto ">Tanggal Pemilihan</span>
+											<div class="input-group input-group-sm col-auto date">
+												<input class="form-control datepicker pull-right" onchange="$('#tglform').submit()" name="tanggal_pemilihan" type="text" value="<?= $_SESSION['tanggal_pemilihan'] ?>">
 											</div>
 										</div>
 									</form>
-									<?php $this->load->view('global/paging');?>
 								</div>
+								<!--
+								<div class="col-auto mb-2">
+									<div class="input-group input-group-sm pull-right">
+										<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari") ?>');$('#'+'mainform').submit();}">
+										<div class="input-group-btn">
+											<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("dpt/filter/cari") ?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
+										</div>
+									</div>
+								</div>
+														-->
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="text-center"><strong>DAFTAR CALON PEMILIH UNTUK TANGGAL PEMILIHAN <?= $_SESSION['tanggal_pemilihan'] ?></strong></h4>
+						<div class="row">
+							<div class="col-sm-12">
+								<form id="mainform" name="mainform" action="" method="post">
+									<input type="hidden" name="rt" value="">
+									<div class="row">
+										<div class="col-sm-12">
+											<table class="table datatables table-hover table-responsive" id="dataTable-1">
+												<thead>
+													<tr>
+														<th>No</th>
+														<?php if ($o == 2) : ?>
+															<th><a href="<?= site_url("dpt/index/$p/1") ?>">NIK <i class='fe fe-sort-asc fa-sm'></i></a></th>
+														<?php elseif ($o == 1) : ?>
+															<th><a href="<?= site_url("dpt/index/$p/2") ?>">NIK <i class='fe fe-sort-desc fa-sm'></i></a></th>
+														<?php else : ?>
+															<th><a href="<?= site_url("dpt/index/$p/1") ?>">NIK <i class='fe fe-sort fa-sm'></i></a></th>
+														<?php endif; ?>
+														<?php if ($o == 4) : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/3") ?>">Nama <i class='fe fe-sort-asc fa-sm'></i></a></th>
+														<?php elseif ($o == 3) : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/4") ?>">Nama <i class='fe fe-sort-desc fa-sm'></i></a></th>
+														<?php else : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/3") ?>">Nama <i class='fe fe-sort fa-sm'></i></a></th>
+														<?php endif; ?>
+														<?php if ($o == 6) : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/5") ?>">No. KK <i class='fe fe-sort-asc fa-sm'></i></a></th>
+														<?php elseif ($o == 5) : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/6") ?>">No. KK <i class='fe fe-sort-desc fa-sm'></i></a></th>
+														<?php else : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/5") ?>">No. KK <i class='fe fe-sort fa-sm'></i></a></th>
+														<?php endif; ?>
+														<th>Alamat</th>
+														<th><?= ucwords($this->setting->sebutan_dusun); ?></th>
+														<th>RW</th>
+														<th>RT</th>
+														<th nowrap>Pendidikan dalam KK</th>
+														<?php if ($o == 8) : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/7") ?>">Umur Pada <?= $_SESSION['tanggal_pemilihan'] ?> <i class='fe fe-sort-asc fa-sm'></i></a></th>
+														<?php elseif ($o == 7) : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/8") ?>">Umur Pada <?= $_SESSION['tanggal_pemilihan'] ?> <i class='fe fe-sort-desc fa-sm'></i></a></th>
+														<?php else : ?>
+															<th nowrap><a href="<?= site_url("dpt/index/$p/7") ?>">Umur Pada <?= $_SESSION['tanggal_pemilihan'] ?> <i class='fe fe-sort fa-sm'></i></a></th>
+														<?php endif; ?>
+														<th nowrap>Pekerjaan</th>
+														<th nowrap>Kawin</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php foreach ($main as $data) : ?>
+														<tr>
+															<td><?= $data['no'] ?></td>
+															<td>
+																<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]") ?>" id="test" name="<?= $data['id'] ?>"><?= $data['nik'] ?></a>
+															</td>
+															<td><?= strtoupper($data['nama']) ?></td>
+															<td><a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$data[id_kk]") ?>"><?= $data['no_kk'] ?> </a></td>
+															<td><?= strtoupper($data['alamat']) ?></td>
+															<td><?= strtoupper($data['dusun']) ?></td>
+															<td><?= $data['rw'] ?></td>
+															<td><?= $data['rt'] ?></td>
+															<td><?= $data['pendidikan'] ?></td>
+															<td><?= $data['umur_pada_pemilihan'] ?></td>
+															<td><?= $data['pekerjaan'] ?></td>
+															<td><?= $data['kawin'] ?></td>
+														</tr>
+													<?php endforeach; ?>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-</div>
+	</div>
+</main>
+<script src="<?= base_url('assets/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/dataTables.bootstrap4.min.js') ?>"></script>
+<script>
+	$('#dataTable-1').DataTable({
+		autoWidth: true,
+		"lengthMenu": [
+			[10, 25, 50, -1],
+			[10, 32, 64, "All"]
+		]
+	});
+</script>
