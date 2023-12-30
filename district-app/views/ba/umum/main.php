@@ -15,7 +15,7 @@
 			<div class="col-md-3 mb-4">
 				<?php $this->load->view('ba/umum/side') ?>
 			</div>
-			<div class="col-md-9">
+			<div class="col-md-9 mb-4">
 				<?php $this->load->view($main_content) ?>
 			</div>
 		</div>

@@ -31,7 +31,7 @@
 						<form class="form-inline">
 							<div class="form-group mr-1 mb-2 ">
 								<?php if ($this->CI->cek_hak_akses('h')) : ?>
-									<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<span>Tambah KK Baru</span>
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
@@ -40,8 +40,11 @@
 									</div>
 								<?php endif; ?>
 							</div>
+							<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>" class="btn btn-outline-primary mb-2 mr-1" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print"></i> Cetak</a>
+							<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>" class="btn btn-outline-primary mb-2 mr-1" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
+
 							<div class="form-group mr-1 mb-2">
-								<button class="btn btn-outline-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<span>Aksi terpilih</span>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -53,7 +56,7 @@
 									<?php endif; ?>
 								</div>
 							</div>
-							<a href="<?= site_url("{$this->controller}/clear") ?>"><button type="button" class="btn mb-2 btn-outline-info"><span class="fe fe-refresh fe-16 mr-2"></span>Bersihkan Filter</button></a>
+							<a href="<?= site_url("{$this->controller}/clear") ?>"><button type="button" class="btn mb-2 btn-outline-primary"><span class="fe fe-refresh fe-16 mr-2"></span>Bersihkan Filter</button></a>
 						</form>
 					</div>
 				</div>
@@ -61,7 +64,7 @@
 					<div class="card-body">
 						<form id="mainform" name="mainform" action="" method="post">
 							<div class="row">
-								<div class="col-auto mb-2">
+								<div class="col-auto mb-2 mr-1">
 									<select class="form-control input-sm" name="status_dasar" onchange="formAction('mainform', '<?= site_url('keluarga/filter/status_dasar') ?>')">
 										<option value="">Pilih Status KK</option>
 										<option value="1" <?= selected($status_dasar, 1); ?>>KK Aktif</option>
@@ -69,7 +72,7 @@
 										<option value="3" <?= selected($status_dasar, 3); ?>>KK Kosong</option>
 									</select>
 								</div>
-								<div class="col-auto mb-2">
+								<div class="col-auto mb-2 mr-1">
 									<select class="form-control input-sm" name="sex" onchange="formAction('mainform', '<?= site_url('keluarga/filter/sex') ?>')">
 										<option value="">Pilih Jenis Kelamin</option>
 										<?php foreach ($list_sex as $data) : ?>
@@ -77,7 +80,7 @@
 										<?php endforeach; ?>
 									</select>
 								</div>
-								<div class="col-auto mb-2">
+								<div class="col-auto mb-2 mr-1">
 									<select class="form-control input-sm " name="dusun" onchange="formAction('mainform','<?= site_url('keluarga/dusun') ?>')">
 										<option value="">Pilih <?= ucwords($this->setting->sebutan_dusun) ?></option>
 										<?php foreach ($list_dusun as $data) : ?>
@@ -142,7 +145,8 @@
 														</div>
 													</td>
 													<td>No KK: <a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$data[id]") ?>"><?= $data['no_kk'] ?></a>
-												<br/>NIK : <a href="<?= site_url("penduduk/detail/1/0/$data[id_pend]") ?>"><?= strtoupper($data['nik']) ?></a></td>
+														<br />NIK : <a href="<?= site_url("penduduk/detail/1/0/$data[id_pend]") ?>"><?= strtoupper($data['nik']) ?></a>
+													</td>
 													<td nowrap>
 														<label data-rel="popover" data-content="<img width=200 height=230 src=<?= AmbilFoto($data['foto'], '', $data['id_sex']) ?>>">
 															<strong><?= strtoupper($data['kepala_kk']) ?></strong>

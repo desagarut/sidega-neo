@@ -1,11 +1,8 @@
 <div class="card shadow">
 	<div class="card-header">
-		<h3 class="box-title">Inventaris</h3>
-		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
-		</div>
+		<h5 class="card-title">Inventaris</h5>
 	</div>
-	<div class="box-body no-padding">
+	<div class="card-body">
 		<ul class="nav nav-pills nav-stacked">
 			<?php if ($this->tab_ini == 7): ?>
 				<li <?php if ($tip==1): ?>class="active"<?php endif; ?>><a href="<?=site_url('laporan_inventaris')?>"><i class="fe fe-list"></i> Laporan Semua Asset</a></li>
@@ -21,12 +18,9 @@
 </div>
 <div class="card shadow">
 	<div class="card-header">
-		<h3 class="box-title">Kategori Inventaris</h3>
-		<div class="box-tools">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-minus"></i></button>
-		</div>
+		<h5 class="card-title">Kategori Inventaris</h5>
 	</div>
-	<div class="box-body no-padding">
+	<div class="card-body">
 		<ul class="nav nav-pills nav-stacked">
 			<li class="<?php ($this->tab_ini == 1) and print('active')?>"><a href="<?=site_url('inventaris_tanah')?>"><i class="fe fe-tags"></i> Tanah</a></li>
 			<li class="<?php ($this->tab_ini == 2) and print('active')?>"><a href="<?=site_url('inventaris_peralatan')?>"><i class="fe fe-tags"></i> Peralatan Dan Mesin</a></li>
