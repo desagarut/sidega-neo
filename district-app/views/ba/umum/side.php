@@ -1,5 +1,5 @@
 <?php if ($this->CI->cek_hak_akses('u')) : ?>
-  <div class="card card-shadow my-2">
+  <div class="card shadow">
     <div class="card-header">
       <strong class="card-title">Menu</strong>
     </div>

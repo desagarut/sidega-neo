@@ -30,6 +30,8 @@ class Ba_inventaris_kekayaan extends Admin_Controller
             'sekdes'       => $data['sekdes'] = $pamong,
             'tahun'        => $this->session->tahun,
         ];
+        $this->set_minsidebar(1);
+
         $this->render('ba/umum/main', $data);
     }
 

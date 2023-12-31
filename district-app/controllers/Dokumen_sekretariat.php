@@ -97,7 +97,8 @@ class Dokumen_sekretariat extends Admin_Controller {
 		}
 		$data['kat_nama'] = $this->web_dokumen_model->kat_nama($kat);
 
-		$this->_set_tab($kat);
+		$data['selected_nav'] = ($kat == '3') ? 'peraturan' : 'keputusan';
+		//$this->_set_tab($kat);
 		$this->set_minsidebar(1);
 
 		$this->render('dokumen/form', $data);

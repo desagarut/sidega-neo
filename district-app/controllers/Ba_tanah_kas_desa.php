@@ -31,6 +31,7 @@ class Ba_tanah_kas_desa extends Admin_Controller
                     'data'            => $this->tanah_kas_desa_model->get_data($search)->order_by($order, $dir)->limit($length, $start)->get()->result(),
                 ]));
         }
+		$this->set_minsidebar(1);
 
         $this->render('ba/umum/main', [
             'subtitle'     => 'Buku Tanah Kas Desa',

@@ -7,7 +7,7 @@
 		});
 	});
 </script>
-<div class="card shadow mt-2">
+<div class="card shadow">
 	<div class="card-header">
 		<a href='<?= site_url("{$this->controller}/form") ?>' title="Tambah Surat Keluar Baru" class="btn btn-primary btn-sm mr-1"><i class="fe fe-plus"></i> Tambah Surat Keluar Baru</a>
 		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm mr-1 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
