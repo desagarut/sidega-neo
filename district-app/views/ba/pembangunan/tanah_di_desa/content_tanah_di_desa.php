@@ -2,7 +2,7 @@
 <div class="row mb-2">
 	<div class="col-md-12">
 		<?php if ($this->CI->cek_hak_akses('u')) : ?>
-			<a href="<?= site_url('ba_tanah_desa/form') ?>" class="btn btn-primary btn-sm btn-sm " title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data </a>
+			<a href="<?= site_url('ba_tanah_desa/form') ?>" class="btn btn-primary btn-sm" title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data </a>
 		<?php endif; ?>
 		<a href="#" class="btn btn-outline-primary btn-sm " title="Cetak Buku Tanah di Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_desa/cetak_tanah_desa/cetak'); ?>" data-target="#cetakBox" data-aksi="Cetak" data-title="Buku Tanah di Desa"><i class="fe fe-printer "></i> Cetak</a>
 		<a href="#" class="btn btn-outline-primary btn-sm " title="Unduh Buku Tanah di Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_desa/cetak_tanah_desa/unduh'); ?>" data-target="#cetakBox" data-aksi="Unduh" data-title="Buku Tanah di Desa"><i class="fe fe-download"></i> Unduh</a>
