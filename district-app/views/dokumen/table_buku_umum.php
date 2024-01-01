@@ -18,8 +18,8 @@
 		});
 	});
 </script>
-<div class="card shadow">
-	<div class="card-header">
+<div class="row mb-2">
+	<div class="col-md-12">
 		<a href="<?= site_url("{$this->controller}/form/$kat") ?>" class="btn btn-primary btn-sm" title="Tambah Menu Baru">
 			<i class="fe fe-plus"></i>Tambah <?= $kat_nama ?> Baru
 		</a>
@@ -38,30 +38,34 @@
 			</a>
 		<?php endif; ?>
 	</div>
+</div>
+<div class="card shadow">
+	<div class="card-header">
+		<div class="row">
+			<div class="col-sm-2">
+				<select class="form-control form-control-sm " name="filter" onchange="formAction('mainform','<?= site_url($this->controller . '/filter') ?>')">
+					<option value="">Status</option>
+					<option value="1" <?php selected($this->session->filter, 1); ?>>Aktif</option>
+					<option value="2" <?php selected($this->session->filter, 2); ?>>Tidak Aktif</option>
+				</select>
+			</div>
+			<div class="col-sm-3">
+				<?php if ($kat == 3) : ?>
+					<select class="form-control form-control-sm " name="jenis_peraturan" onchange="formAction('mainform','<?= site_url($this->controller . '/filter/jenis_peraturan') ?>')">
+						<option value="">Jenis Peraturan</option>
+						<?php foreach ($jenis_peraturan as $jenis) : ?>
+							<option value="<?= $jenis ?>" <?php selected($this->session->jenis_peraturan, $jenis) ?>><?= $jenis ?></option>
+						<?php endforeach; ?>
+					</select>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
 	<div class="card-body">
 		<div class="row">
 			<div class="col-sm-12">
 				<form id="mainform" name="mainform" action="" method="post">
 					<input name="kategori" type="hidden" value="<?= $kat ?>">
-					<div class="row mb-2">
-						<div class="col-sm-2">
-							<select class="form-control input-sm " name="filter" onchange="formAction('mainform','<?= site_url($this->controller . '/filter') ?>')">
-								<option value="">Status</option>
-								<option value="1" <?php selected($this->session->filter, 1); ?>>Aktif</option>
-								<option value="2" <?php selected($this->session->filter, 2); ?>>Tidak Aktif</option>
-							</select>
-						</div>
-						<div class="col-sm-3">
-							<?php if ($kat == 3) : ?>
-								<select class="form-control input-sm " name="jenis_peraturan" onchange="formAction('mainform','<?= site_url($this->controller . '/filter/jenis_peraturan') ?>')">
-									<option value="">Jenis Peraturan</option>
-									<?php foreach ($jenis_peraturan as $jenis) : ?>
-										<option value="<?= $jenis ?>" <?php selected($this->session->jenis_peraturan, $jenis) ?>><?= $jenis ?></option>
-									<?php endforeach; ?>
-								</select>
-							<?php endif; ?>
-						</div>
-					</div>
 					<div class="row">
 						<div class="col-sm-12">
 							<table class="table datatables table-hover table-responsive" id="dataTable-1">

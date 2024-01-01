@@ -113,7 +113,7 @@
 					</a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="<?= site_url('user_setting'); ?>" data-toggle="modal" data-target="#modalBox">Profile</a>
-						<a class="dropdown-item" href="<?= site_url('user_setting'); ?>">Settings</a>
+						<a class="dropdown-item" href="<?= site_url('setting'); ?>">Settings</a>
 						<a class="dropdown-item" href="<?= site_url('insidega/logout'); ?>">Logout</a>
 					</div>
 				</li>

@@ -17,6 +17,7 @@
         <a class="nav-link <?php compared_return($selected_nav, "agenda_keluar", "active"); ?>" href="<?= site_url('surat_keluar') ?>">Buku Agenda - Surat Keluar</a>
         <a class="nav-link <?php compared_return($selected_nav, "ekspedisi", "active"); ?>" href="<?= site_url('ekspedisi/clear') ?>">Buku Ekspedisi</a>
         <a class="nav-link <?php compared_return($selected_nav, "lembaran", "active"); ?>" href="<?= site_url('buku_umum/lembaran_desa/clear') ?>">Buku Lembaran Desa dan Berita Desa</a>
+        <a class="nav-link <?php compared_return($selected_nav, "dokumen", "active"); ?>" href="<?= site_url('dokumen') ?>">Buku Informasi Publik</a>
         <a class="nav-link <?php compared_return($selected_nav, "dokumen_lainnya", "active"); ?>" href="<?= site_url('dokumen/dokumen_lainnya') ?>">Buku Peraturan Lainnya</a>
         <a class="nav-link <?php compared_return($selected_nav, "agenda", "active"); ?>" href="<?= site_url('web/tab/1000') ?>">Agenda Desa</a>
       </div>

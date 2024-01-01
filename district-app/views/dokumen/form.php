@@ -12,7 +12,7 @@
 								<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama ?>
 							</a>
 						<?php else : ?>
-							<a href="<?= site_url("$this->controller/index/$kat"); ?>" class="btn btn-sm btn-outline-info mb-1" title="Tambah Artikel">
+							<a href="<?= site_url("$this->controller/index/$kat"); ?>" class="btn btn-sm btn-outline-primary mb-1" title="Tambah Artikel">
 								<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar <?= $kat_nama ?>
 							</a>
 						<?php endif; ?>
@@ -28,13 +28,13 @@
 								<div class="card-body">
 									<div class="form-group row">
 										<label class="control-label col-sm-4" for="nama">Judul Dokumen</label>
-										<div class="col-sm-6">
+										<div class="col-sm-8">
 											<input name="nama" class="form-control input-sm nomor_sk required" type="text" maxlength="200" value="<?= $dokumen['nama'] ?>"></input>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="control-label col-sm-4" for="nama">Nama Dokumen</label>
-										<div class="col-sm-6">
+										<div class="col-sm-8">
 											<input name="nama" class="form-control input-sm nomor_sk required" type="text" maxlength="100" value="<?= $dokumen['nama'] ?>"></input>
 										</div>
 									</div>
@@ -49,8 +49,8 @@
 									<?php endif; ?>
 									<div class="form-group row">
 										<label class="control-label col-sm-4" for="upload">Unggah Dokumen</label>
-										<div class="col-sm-6">
-											<div class="input-group input-group-sm">
+										<div class="col-sm-8">
+											<div class="input-group">
 												<input type="text" class="form-control <?php empty($dokumen) and print('required') ?>" id="file_path" name="satuan">
 												<input id="file" type="file" class="hidden" name="satuan">
 												<span class="input-group-btn">
@@ -62,15 +62,17 @@
 											<?php endif; ?>
 										</div>
 									</div>
-									<input name="kategori" type="hidden" value="<?= $dokumen['kategori'] ?: $kat; ?>">
-									<?php
-									if ($kat == 2 or $dokumen['kategori'] == 2)
-										include("district-app/views/dokumen/_sk_kades.php");
-									elseif ($kat == 3 or $dokumen['kategori'] == 3)
-										include("district-app/views/dokumen/_perdes.php");
-									else
-										include("district-app/views/dokumen/_informasi_publik.php");
-									?>
+									<div class="form-group row">
+										<input name="kategori" type="hidden" value="<?= $dokumen['kategori'] ?: $kat; ?>">
+										<?php
+										if ($kat == 2 or $dokumen['kategori'] == 2)
+											include("district-app/views/dokumen/_sk_kades.php");
+										elseif ($kat == 3 or $dokumen['kategori'] == 3)
+											include("district-app/views/dokumen/_perdes.php");
+										else
+											include("district-app/views/dokumen/_informasi_publik.php");
+										?>
+									</div>
 								</div>
 								<div class="card-footer">
 									<button type='reset' class='btn btn-danger'><i class='fe fe-x'></i> Batal</button>

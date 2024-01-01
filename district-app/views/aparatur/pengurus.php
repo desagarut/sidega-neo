@@ -3,17 +3,17 @@
 <div class="row justify-content-center">
 	<div class="col-12">
 		<form id="mainform" name="mainform" action="" method="post">
-			<div class="row align-items-center my-2">
-				<div class="col-auto">
+			<div class="row align-items-center mb-2">
+				<div class="col">
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
-						<a href="<?= site_url('pengurus/form') ?>"><button type="button" class="btn btn-primary mb-1"><span class="fe fe-filter fe-12 mr-2"></span>Create</button></a>
+						<a href="<?= site_url('pengurus/form') ?>"><button type="button" class="btn btn-primary btn-sm mb-1"><span class="fe fe-filter fe-12 mr-2"></span>Create</button></a>
 						<a href="#confirm-delete" class="hapus-terpilih" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("pengurus/delete_all") ?>')">
-							<button type="button" class="btn btn-danger mb-1"><span class="fe fe-trash fe-12 mr-2"></span>Hapus Data Terpilih</button>
+							<button type="button" class="btn btn-outline-danger btn-sm mb-1"><span class="fe fe-trash fe-12 mr-2"></span>Hapus Data Terpilih</button>
 						</a>
 					<?php endif; ?>
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
-						<div class="btn-group btn-group-vertical">
-							<a class="btn btn-info mb-1 text-light" data-toggle="dropdown"> Aksi Data Terpilih</a>
+						<div class="btn-group btn-group-vertical ">
+							<a class="btn btn-outline-primary mb-1 btn-sm " data-toggle="dropdown"> Aksi Data Terpilih</a>
 							<ul class="dropdown-menu" role="menu">
 
 								<li>
@@ -27,15 +27,15 @@
 						</div>
 					<?php endif; ?>
 					<a href="<?= site_url("pengurus/dialog/cetak") ?>" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data">
-						<button type="button" class="btn btn-outline-primary mb-1"><span class="fe fe-printer fe-12 mr-2"></span>Cetak</button>
+						<button type="button" class="btn btn-outline-primary btn-sm mb-1"><span class="fe fe-printer fe-12 mr-2"></span>Cetak</button>
 					</a>
 					<a href="<?= site_url("pengurus/dialog/unduh") ?>" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data">
-						<button type="button" class="btn btn-outline-info mb-1"><span class="fe fe-download fe-12 mr-2"></span>Unduh</button>
+						<button type="button" class="btn btn-outline-primary btn-sm mb-1"><span class="fe fe-download fe-12 mr-2"></span>Unduh</button>
 					</a>
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
 						<div class="btn-group btn-group-vertical">
 							<a data-toggle="dropdown">
-								<button type="button" class="btn btn-outline-info mb-1"><span class="fe fe-square fe-12 mr-2"></span>Bagan Organisasi</button>
+								<button type="button" class="btn btn-outline-primary btn-sm mb-1"><span class="fe fe-square fe-12 mr-2"></span>Bagan Organisasi</button>
 							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
@@ -50,8 +50,10 @@
 							</ul>
 						</div>
 					<?php endif; ?>
+				</div>
+				<div class="col-auto">
 					<!--<input type="checkbox" id="checkall">-->
-					<select class="form-control input-sm col-md-2" name="status" onchange="formAction('mainform','<?= site_url('pengurus/filter/status') ?>')">
+					<select class="form-control form-control-sm mb-2" name="status" onchange="formAction('mainform','<?= site_url('pengurus/filter/status') ?>')">
 						<option value="">Semua</option>
 						<option value="1" <?php selected($status, 1); ?>>Aktif</option>
 						<option value="2" <?php selected($status, 2); ?>>Tidak Aktif</option>
@@ -123,9 +125,9 @@
 														<a href="<?= site_url("pengurus/lock/$data[pamong_id]/1") ?>" class="dropdown-item" title="Aktifkan"><i class="fe fe-lock fe-12 mr-4"></i>Non Aktif</a>
 													<?php endif ?>
 													<a class="dropdown-item" href="<?= site_url("pengurus/form/$data[pamong_id]") ?>"><i class="fe fe-edit fe-12 mr-4"></i>Ubah</a>
-													<a href="#" data-href="<?= site_url("pengurus/delete/$data[pamong_id]")?>" class="dropdown-item" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-x fe-12 mr-4"></i>Hapus</a>
-													<a class="dropdown-item" href="#confirm-delete" onclick="deleteAllBox('mainform', '<?= site_url('pengurus/delete_all'); ?>')" title="Hapus Data" >
-													<i class="fe fe-x fe-12 mr-4"></i>Hapus Data Terpilih
+													<a href="#" data-href="<?= site_url("pengurus/delete/$data[pamong_id]") ?>" class="dropdown-item" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-x fe-12 mr-4"></i>Hapus</a>
+													<a class="dropdown-item" href="#confirm-delete" onclick="deleteAllBox('mainform', '<?= site_url('pengurus/delete_all'); ?>')" title="Hapus Data">
+														<i class="fe fe-x fe-12 mr-4"></i>Hapus Data Terpilih
 													</a>
 
 												</div>
