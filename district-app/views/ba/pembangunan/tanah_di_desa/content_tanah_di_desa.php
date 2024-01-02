@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 <div class="row mb-2">
-	<div class="col-md-12">
+	<div class="col-md-12 text-right">
 		<?php if ($this->CI->cek_hak_akses('u')) : ?>
 			<a href="<?= site_url('ba_tanah_desa/form') ?>" class="btn btn-primary btn-sm" title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data </a>
 		<?php endif; ?>

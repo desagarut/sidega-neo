@@ -1,29 +1,31 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
-<div class="card shadow">
-	<div class="card-header text-right">
+<div class="row mb-2">
+	<div class="col-md-12  text-right">
 		<?php if ($this->CI->cek_hak_akses('u')) : ?>
 			<a href="<?= site_url('ba_tanah_kas_desa/form') ?>" class="btn btn-primary btn-sm" title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data</a>
 		<?php endif; ?>
 		<a href="#" class="btn btn-outline-primary btn-sm" title="Cetak Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/cetak'); ?>" data-target="#cetakBox" data-aksi="Cetak" data-title="Buku Tanah Kas Desa"><i class="fe fe-printer "></i> Cetak</a>
 		<a href="#" class="btn btn-outline-primary btn-sm" title="Unduh Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/unduh'); ?>" data-target="#cetakBox" data-aksi="Unduh" data-title="Buku Tanah Kas Desa"><i class="fe fe-download"></i> Unduh</a>
 	</div>
+</div>
+<div class="card shadow">
 	<div class="card-body">
 		<div class="row">
 			<div class="col-sm-12">
 				<table id="tabel-tanahkasdesa" class="table table-bordered dataTable table-hover">
 					<thead class="bg-gray">
 						<tr>
-							<th class="text-center">No</th>
-							<th width="120" class="text-center">Aksi</th>
-							<th class="text-center">Asal Tanah</th>
-							<th width="100" class="text-center">Nomor Sertifikat Buku Letter C / <br> Persil</th>
-							<th class="text-center">Kelas</th>
-							<th class="text-center">Luas Total (M<sup>2</sup>)</th>
-							<th class="text-center">Tanggal Perolehan</th>
-							<th class="text-center">Lokasi</th>
-							<th class="text-center">Mutasi</th>
-							<th class="text-center">Keterangan</th>
+							<th class="text-center text-muted">No</th>
+							<th width="120" class="text-center text-muted">Aksi</th>
+							<th class="text-center text-muted">Asal Tanah</th>
+							<th width="100" class="text-center text-muted">Nomor Sertifikat Buku Letter C / <br> Persil</th>
+							<th class="text-center text-muted">Kelas</th>
+							<th class="text-center text-muted">Luas Total (M<sup>2</sup>)</th>
+							<th class="text-center text-muted">Tanggal Perolehan</th>
+							<th class="text-center text-muted">Lokasi</th>
+							<th class="text-center text-muted">Mutasi</th>
+							<th class="text-center text-muted">Keterangan</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -73,11 +75,13 @@
 				},
 				{
 					'data': function(data) {
-						return data.nama.toUpperCase();
+						return `<div class="text-muted">${data.nama.toUpperCase()}</div>`;
 					}
 				},
 				{
-					'data': 'letter_c',
+					'data': function(data) {
+						return `<div class="text-center text-muted">${data.letter_c}</div>`
+					}
 				},
 				{
 					'data': 'kode',

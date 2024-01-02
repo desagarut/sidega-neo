@@ -3,10 +3,10 @@
 <form class="form-horizontal" id="validasi" name="form_tanah" method="post" action="<?= $form_action ?>">
 	<div class="row">
 		<div class="col-md-12">
+			<div class="text-right mb-2">
+				<a href="<?= site_url() ?>ba_tanah_desa" class="btn btn-outline-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Buku Tanah di Desa</a>
+			</div>
 			<div class="card shadow">
-				<div class="card-header">
-					<a href="<?= site_url() ?>ba_tanah_desa" class="btn btn-outline-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Buku Tanah di Desa</a>
-				</div>
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-12">
