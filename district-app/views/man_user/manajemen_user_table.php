@@ -1,9 +1,7 @@
 <script>
-	$(function()
-	{
-		var keyword = <?= $keyword?> ;
-		$( "#cari" ).autocomplete(
-		{
+	$(function() {
+		var keyword = <?= $keyword ?>;
+		$("#cari").autocomplete({
 			source: keyword,
 			maxShowItems: 10,
 		});
@@ -13,156 +11,86 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h5 class="mb-2 page-title">
-		<h1>Manajemen Pengguna</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fe fe-home"></i> Home</a></li>
-			<li class="active">Manajemen Pengguna</li>
-		</ol>
+				<div class="row align-items-center mb-2">
+					<div class="col">
+						<h5 class="page-title">Manajemen Pengguna</h5>
+					</div>
+					<div class="col-auto">
+						<a href="<?= site_url('man_user/form') ?>" class="btn btn-primary mb-2"><i class="fe fe-plus"></i> Tambah Pengguna Baru</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("man_user/delete_all/$p/$o") ?>')" class="btn btn-outline-danger mb-2 hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+					</div>
+				</div>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url('man_user/form')?>" class="btn btn-success btn-sm "><i class="fe fe-plus"></i> Tambah Pengguna Baru</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("man_user/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<select class="form-control input-sm" name="filter" onchange="formAction('mainform','<?= site_url('man_user/filter') ?>')">
+							<option value="">Semua</option>
+							<?php foreach ($user_group as $item) : ?>
+								<option <?php selected($filter, $item['id']); ?> value="<?= $item[id] ?>"><?= $item['nama'] ?></option>
+							<?php endforeach ?>
+						</select>
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-									<form id="mainform" name="mainform" action="" method="post">
-										<div class="row">
-											<div class="col-sm-6">
-												<select class="form-control input-sm" name="filter" onchange="formAction('mainform','<?=site_url('man_user/filter')?>')">
-													<option value="">Semua</option>
-													<?php foreach ($user_group as $item): ?>
-														<option <?php selected($filter, $item['id']); ?> value="<?= $item[id] ?>"><?= $item['nama'] ?></option>
-													<?php endforeach ?>
-												</select>
-											</div>
-											<div class="col-sm-6">
-												<div class="box-tools">
-													<div class="input-group input-group-sm pull-right">
-														<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13) {$('#'+'mainform').attr('action','<?=site_url('man_user/search')?>');$('#'+'mainform').submit();}">
-														<div class="input-group-btn">
-															<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action','<?=site_url("man_user/search")?>');$('#'+'mainform').submit();"><i class="fe fe-search"></i></button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="table-responsive">
-													<table  class="table table-bordered table-striped dataTable table-hover">
-														<thead class="bg-gray disabled color-palette">
-															<tr>
-																<th><input type="checkbox" id="checkall"/></th>
-																<th>No</th>
-																<th>Aksi</th>
-																<?php if ($o==2): ?>
-																	<th nowrap><a href="<?= site_url("man_user/index/$cat/$p/1")?>">Username <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==1): ?>
-																	<th nowrap><a href="<?= site_url("man_user/index/$cat/$p/2")?>">Username <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th nowrap><a href="<?= site_url("man_user/index/$cat/$p/1")?>">Username <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-
-																<?php if ($o==4): ?>
-																	<th width='50%'><a href="<?= site_url("man_user/index/$cat/$p/3")?>">Nama <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==3): ?>
-																	<th width='50%'><a href="<?= site_url("man_user/index/$cat/$p/4")?>">Nama <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th width='50%'><a href="<?= site_url("man_user/index/$cat/$p/3")?>">Nama <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-
-																<?php if ($o==6): ?>
-																	<th><a href="<?= site_url("man_user/index/$cat/$p/5")?>">Group <i class='fe fe-sort-asc fa-sm'></i></a></th>
-																<?php elseif ($o==5): ?>
-																	<th><a href="<?= site_url("man_user/index/$cat/$p/6")?>">Group <i class='fe fe-sort-desc fa-sm'></i></a></th>
-																<?php else: ?>
-																	<th><a href="<?= site_url("man_user/index/$cat/$p/5")?>">Group <i class='fe fe-sort fa-sm'></i></a></th>
-																<?php endif; ?>
-																<th>Login Terakhir</th>
-															</tr>
-														</thead>
-														<tbody>
-															<?php foreach ($main as $data): ?>
-																<tr>
-																	<td>
-																		<?php if ($data['id']!=1): ?>
-																			<input type="checkbox" name="id_cb[]" value="<?=$data['id']?>" />
-																		<?php endif; ?>
-																	</td>
-																	<td><?=$data['no']?></td>
-																	<td nowrap>
-																		<a href="<?=site_url("Man_user/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
-																		<?php if ($data['id']!=1): ?>
-																			<?php if ($data['active'] == '0'): ?>
-																				<a href="<?=site_url('Man_user/user_unlock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan Pengguna"><i class="fe fe-lock">&nbsp;</i></a>
-																			<?php elseif ($data['active'] == '1'): ?>
-																				<a href="<?=site_url('Man_user/user_lock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan Pengguna"><i class="fe fe-unlock"></i></a>
-																			<?php endif; ?>
-																			<a href="#" data-href="<?=site_url("Man_user/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
-																		<?php endif; ?>
-																	</td>
-																	<td><?=$data['username']?></td>
-																	<td><?=$data['nama']?></td>
-																	<td><?=$data['grup']?></td>
-																	<td><?=tgl_indo2($data['last_login'])?></td>
-																</tr>
-															<?php endforeach; ?>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div>
-									</form>
-									<div class="row">
-										<div class="col-sm-6">
-											<div class="dataTables_length">
-												<form id="paging" action="<?= site_url("man_user")?>" method="post" class="form-horizontal">
-													<label>
-														Tampilkan
-														<select name="per_page" class="form-control input-sm" onchange="$('#paging').submit()">
-															<option value="20" <?php selected($per_page,20); ?> >20</option>
-															<option value="50" <?php selected($per_page,50); ?> >50</option>
-															<option value="100" <?php selected($per_page,100); ?> >100</option>
-														</select>
-														Dari
-														<strong><?= $paging->num_rows?></strong>
-														Total Data
-													</label>
-												</form>
-											</div>
-										</div>
-										<div class="col-sm-6">
-											<div class="dataTables_paginate paging_simple_numbers">
-												<ul class="pagination">
-													<?php if ($paging->start_link): ?>
-														<li><a href="<?=site_url("man_user/index/$paging->start_link/$o")?>" aria-label="First"><span aria-hidden="true">Awal</span></a></li>
+							<div class="col-md-12">
+								<table class="table datatables table-hover table-responsive" id="dataTable-1">
+									<thead>
+										<tr>
+											<th><input type="checkbox" id="checkall" /></th>
+											<th>No</th>
+											<th width=20%>Username</th>
+											<th width=30%>Nama</th>
+											<th width=15%>Group</th>
+											<th width=25%>Login Terakhir</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php foreach ($main as $data) : ?>
+											<tr>
+												<td>
+													<?php if ($data['id'] != 1) : ?>
+														<input type="checkbox" name="id_cb[]" value="<?= $data['id'] ?>" />
 													<?php endif; ?>
-													<?php if ($paging->prev): ?>
-														<li><a href="<?=site_url("man_user/index/$paging->prev/$o")?>" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+												</td>
+												<td><?= $data['no'] ?></td>
+												<td><?= $data['username'] ?></td>
+												<td><?= $data['nama'] ?></td>
+												<td><?= $data['grup'] ?></td>
+												<td><?= tgl_indo2($data['last_login']) ?></td>
+												<td nowrap>
+													<a href="<?= site_url("Man_user/form/$p/$o/$data[id]") ?>" class="btn btn-outline-primary btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
+													<?php if ($data['id'] != 1) : ?>
+														<?php if ($data['active'] == '0') : ?>
+															<a href="<?= site_url('Man_user/user_unlock/' . $data['id']) ?>" class="btn btn-secondary btn-sm" title="Aktifkan Pengguna"><i class="fe fe-lock">&nbsp;</i></a>
+														<?php elseif ($data['active'] == '1') : ?>
+															<a href="<?= site_url('Man_user/user_lock/' . $data['id']) ?>" class="btn btn-success btn-sm" title="Non Aktifkan Pengguna"><i class="fe fe-unlock"></i></a>
+														<?php endif; ?>
+														<a href="#" data-href="<?= site_url("Man_user/delete/$p/$o/$data[id]") ?>" class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													<?php endif; ?>
-													<?php for ($i=$paging->start_link;$i<=$paging->end_link;$i++): ?>
-														<li><a href="<?= site_url("man_user/index/$cat/$i/$o")?>"><?= $i?></a></li>
-													<?php endfor; ?>
-													<?php if ($paging->next): ?>
-														<li><a href="<?=site_url("man_user/index/$paging->next/$o")?>" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-													<?php endif; ?>
-													<?php if ($paging->end_link): ?>
-														<li><a href="<?=site_url("man_user/index/$paging->end_link/$o")?>" aria-label="Last"><span aria-hidden="true">Akhir</span></a></li>
-													<?php endif; ?>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
+												</td>
+											</tr>
+										<?php endforeach; ?>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-</div>
-<?php $this->load->view('global/confirm_delete');?>
+	</div>
+	</div>
+</main>
+<?php $this->load->view('global/confirm_delete'); ?>
+<script src='<?= base_url() ?>assets/js/jquery.dataTables.min.js'></script>
+<script src='<?= base_url() ?>assets/js/dataTables.bootstrap4.min.js'></script>
+
+<script>
+	$('#dataTable-1').DataTable({
+		autoWidth: true,
+		"lengthMenu": [
+			[10, 25, 50, -1],
+			[10, 25, 50, "All"]
+		]
+	});
+</script>
