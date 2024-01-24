@@ -13,7 +13,7 @@
 						<?php $this->load->view("surat/form/breadcrumb.php"); ?>
 					</div>
 					<div class="col-auto tdk-permohonan tdk-periksa">
-						<a href="<?= site_url("surat") ?>" class="btn btn-outline-info btn-sm mb-1" title="Kembali Ke Daftar Layanan Surat">
+						<a href="<?= site_url("surat") ?>" class="btn btn-outline-primary" title="Kembali Ke Daftar Layanan Surat">
 							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Layanan Surat
 						</a>
 					</div>
@@ -25,7 +25,6 @@
 							<?php if ($individu) : ?>
 								<?php include("district-app/views/surat/form/konfirmasi_pemohon.php"); ?>
 							<?php endif; ?>
-
 						</form>
 					</div>
 					<div class="card-body">
@@ -55,7 +54,7 @@
 								</div>
 								<?php include("district-app/views/surat/form/tgl_berlaku.php"); ?>
 								<?php include("district-app/views/surat/form/_pamong.php"); ?>
-								<?php //include("district-app/views/surat/form/tampil_foto.php"); 
+								<?php include("district-app/views/surat/form/tampil_foto.php"); 
 								?>
 							</form>
 						</div>
