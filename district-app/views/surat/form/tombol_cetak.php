@@ -12,10 +12,10 @@
 		<button type="button" onclick="$('#validasi').attr('action', '<?= site_url(MANDIRI . '/surat/kirim/' . $permohonan[id])?>'); $('#validasi').submit();" class="btn btn-success  pull-right" style="margin-right: 5px;"><i class="fe fe-file-text"></i> Kirim</button>
 	<?php else: ?>
 		<?php if (SuratExport($url) && function_exists('exec') && $this->setting->libreoffice_path) : ?>
-			<button type="button" onclick="tambah_elemen_cetak('cetak_pdf'); $('#validasi').submit()" class="btn btn-info  pull-right" style="margin-right: 5px;"><i class="fe fe-file-pdf-o"></i> Cetak PDF</button>
+			<button type="button" onclick="tambah_elemen_cetak('cetak_pdf'); $('#validasi').submit()" class="btn btn-primary  pull-right" style="margin-right: 5px;"><i class="fe fe-file-pdf-o"></i> Cetak PDF</button>
 		<?php endif; ?>
 		<?php if (SuratExport($url)): ?>
-			<button type="button" onclick="tambah_elemen_cetak('cetak_rtf'); $('#validasi').submit()" class="btn btn-info  pull-right" style="margin-right: 5px;"><i class="fe fe-download"></i> Cetak RTF</button>
+			<button type="button" onclick="tambah_elemen_cetak('cetak_rtf'); $('#validasi').submit()" class="btn btn-primary  pull-right" style="margin-right: 5px;"><i class="fe fe-download"></i> Cetak RTF</button>
 		<?php endif; ?>
 	<?php endif; ?>
 </div>

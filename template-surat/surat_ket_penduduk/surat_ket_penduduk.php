@@ -6,8 +6,8 @@
 					<div class="col">
 						<?php $this->load->view("surat/form/breadcrumb.php"); ?>
 					</div>
-					<div class="col-auto mb-2 tdk-permohonan tdk-periksa">
-						<a href="<?= site_url("surat") ?>" class="btn btn-outline-primary" title="Kembali Ke Daftar Wilayah">
+					<div class="col-auto tdk-permohonan tdk-periksa">
+						<a href="<?= site_url("surat") ?>" class="btn btn-sm btn-outline-primary" title="Kembali Ke Daftar Wilayah">
 							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Cetak Surat
 						</a>
 					</div>

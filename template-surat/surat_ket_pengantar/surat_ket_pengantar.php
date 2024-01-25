@@ -13,7 +13,7 @@
 						<?php $this->load->view("surat/form/breadcrumb.php"); ?>
 					</div>
 					<div class="col-auto tdk-permohonan tdk-periksa">
-						<a href="<?= site_url("surat") ?>" class="btn btn-outline-primary" title="Kembali Ke Daftar Layanan Surat">
+						<a href="<?= site_url("surat") ?>" class="btn btn-sm btn-outline-primary" title="Kembali Ke Daftar Layanan Surat">
 							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Layanan Surat
 						</a>
 					</div>
