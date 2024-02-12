@@ -40,11 +40,11 @@
 									</div>
 								<?php endif; ?>
 							</div>
-							<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>" class="btn btn-outline-primary mb-2 mr-1" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print"></i> Cetak</a>
-							<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>" class="btn btn-outline-primary mb-2 mr-1" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
+							<a href="<?= site_url("keluarga/ajax_cetak/$o/cetak") ?>" class="btn btn-outline-info btn-sm mb-2 mr-1" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print"></i> Cetak</a>
+							<a href="<?= site_url("keluarga/ajax_cetak/$o/unduh") ?>" class="btn btn-outline-info btn-sm mb-2 mr-1" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
 
 							<div class="form-group mr-1 mb-2">
-								<button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<button class="btn btn-outline-info btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<span>Aksi terpilih</span>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -56,7 +56,7 @@
 									<?php endif; ?>
 								</div>
 							</div>
-							<a href="<?= site_url("{$this->controller}/clear") ?>"><button type="button" class="btn mb-2 btn-outline-primary"><span class="fe fe-refresh fe-16 mr-2"></span>Bersihkan Filter</button></a>
+							<a href="<?= site_url("{$this->controller}/clear") ?>"><button type="button" class="btn mb-2 btn-outline-info btn-sm"><span class="fe fe-refresh fe-16 mr-2"></span>Bersihkan Filter</button></a>
 						</form>
 					</div>
 				</div>

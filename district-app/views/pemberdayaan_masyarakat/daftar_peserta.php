@@ -27,9 +27,9 @@
 	<section class="content" id="maincontent">
 		<div class="card shadow">
 			<div class="card-header">
-				<a href="<?= site_url("pemberdayaan_masyarakat/form_peserta/".$pemberdayaan_masyarakat['id'])?>" title="Tambah Data Warga" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Peserta</a>
-				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
-				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/unduh")?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
+				<a href="<?= site_url("pemberdayaan_masyarakat/form_peserta/".$pemberdayaan_masyarakat['id'])?>" title="Tambah Data Warga" class="btn btn-outline-info btn-sm"><i class="fe fe-plus"></i> Tambah Peserta</a>
+				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/cetak")?>" class="btn btn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
+				<a href="<?= site_url("pemberdayaan_masyarakat/dialog_daftar/$pemberdayaan_masyarakat[id]/unduh")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data <?= $sasaran[$pemberdayaan_masyarakat["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
 				<a href="<?= site_url("pemberdayaan_masyarakat")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali">
 					<i class="fe fe-arrow-circle-left "></i>Kembali
 				</a>
@@ -73,7 +73,7 @@
 												<td class="aksi">
 													<?php if ($this->CI->cek_hak_akses('h')): ?>
 														<a href="<?= site_url("pemberdayaan_masyarakat/edit_peserta_form/$item[id]"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah peserta" title="Ubah peserta" class="btn btn-warning btn-box btn-sm"><i class="fe fe-edit"></i></a>
-														<a href="#" data-href="<?= site_url("pemberdayaan_masyarakat/hapus_peserta/$pemberdayaan_masyarakat[id]/$item[id]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="#" data-href="<?= site_url("pemberdayaan_masyarakat/hapus_peserta/$pemberdayaan_masyarakat[id]/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													<?php endif; ?>
 												</td>
 												<td nowrap><?= $item["peserta_info"]; ?></td>

@@ -72,7 +72,7 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+			<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			<?php if ($penduduk): ?>
 				<button type="submit" class="btn btn-info btn-sm" id="ok"><i class='fe fe-check'></i> Simpan</button>
 			<?php endif; ?>

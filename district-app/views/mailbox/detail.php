@@ -15,7 +15,7 @@
 				<div class="col-md-12">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="<?= site_url("mailbox/index/$kat")?>" class="btn btn-social btn-flat btn-info btn-sm btn-sm "  title="Tambah Artikel">
+							<a href="<?= site_url("mailbox/index/$kat")?>" class="btn btn-social btn-flat btn-info btn-sm"  title="Tambah Artikel">
 								<i class="fe fe-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
             	</a>
 						</div>

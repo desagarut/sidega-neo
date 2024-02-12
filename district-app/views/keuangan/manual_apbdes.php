@@ -51,7 +51,7 @@
 										<!-- TAB PENDAPATAN -->
 										<div role="tabpanel" class="tab-pane active" id="pendapatan_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform" name="mainform" action="" method="post">
 												<div class="row">
@@ -81,7 +81,7 @@
 										<!-- TAB BELANJA -->
 										<div role="tabpanel" class="tab-pane" id="belanja_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_bl" name="mainform_bl" action="" method="post">
 												<div class="row">
@@ -111,7 +111,7 @@
 										<!-- TAB PEMBIAYAAN -->
 										<div role="tabpanel" class="tab-pane" id="pembiayaan_tab">
 											<div class="box-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_by" name="mainform_by" action="" method="post">
 												<div class="row">
@@ -233,7 +233,7 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
 					<button class="btn btn-info btn-sm" id="btn_simpan"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
@@ -327,7 +327,7 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
 					<button class="btn btn-info btn-sm" id="btn_update"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
@@ -355,7 +355,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
 					<button class="btn btn-info btn-sm" id="btn_salin1"><i class='fe fe-check'></i>Salin</button>
 				</div>
 			</form>

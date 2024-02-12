@@ -74,7 +74,7 @@
 										</div>
 									</div>
 									<div class="box-footer">
-										<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+										<button type="reset" class="btn btn-outline-danger btn-sm btn-sm "><i class="fe fe-times"></i> Batal</button>
 										<button id="generate" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 									</div>
 								</form>
@@ -90,9 +90,9 @@
 										<label for="pathqr"></label>
 										<center>
 											<a href="<?= site_url("setting/qrcode/clear"); ?>" class="btn btn-success btn-sm" title="Baru"><i class="fe fe-plus"></i> Baru</a>
-											<a href="<?= site_url("setting/qrcode/hapus/$qrcode[namaqr1]"); ?>" class="btn btn-danger btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Buat Baru"><i class="fe fe-trash"></i> Hapus</a>
-											<a href="<?= site_url("setting/qrcode/unduh/$qrcode[namaqr1]"); ?>" class="btn bg-navy btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Unduh"><i class="fe fe-download"></i> Unduh</a>
-											<a href="#" class="btn btn-social btn-boxbtn-outline-info btn-sm" title="Atur" data-toggle="modal" data-target="#myModal"><i class="fe fe-file"></i> Atur</a>
+											<a href="<?= site_url("setting/qrcode/hapus/$qrcode[namaqr1]"); ?>" class="btn btn-outline-danger btn-sm btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Buat Baru"><i class="fe fe-trash"></i> Hapus</a>
+											<a href="<?= site_url("setting/qrcode/unduh/$qrcode[namaqr1]"); ?>" class="btn btn-outline-info btn-sm<?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Unduh"><i class="fe fe-download"></i> Unduh</a>
+											<a href="#" class="btn btn-outline-info btn-sm" title="Atur" data-toggle="modal" data-target="#myModal"><i class="fe fe-file"></i> Atur</a>
 											<?php if ($qrcode['namaqr1']) : ?>
 												<br><br>
 												<img class="img-thumbnail" src="<?= $qrcode['pathqr']; ?>">

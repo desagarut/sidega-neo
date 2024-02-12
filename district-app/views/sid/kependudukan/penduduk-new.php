@@ -55,7 +55,7 @@ $( function() {
 					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')): ?>
                         	<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-success btn-sm " title="Tambah Data"><i class="fe fe-plus"></i> Penduduk Domisili</a>
-							<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						<?php endif; ?>
 						<div class="btn-group-vertical">
 							<a class="btn btn-info btn-sm" data-toggle="dropdown"><i class='fe fe-arrow-circle-down'></i> Pilih Aksi Lainnya</a>
@@ -77,7 +77,7 @@ $( function() {
 								</li>
 							</ul>
 						</div>
-						<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
+						<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 					</div>
 					<div class="box-body">
 						<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -152,13 +152,13 @@ $( function() {
 														<td class="padat"><?= ($key + $paging->offset + 1); ?></td>
 														<td class="aksi">
                                                         	<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]"); ?>" class="btn bg-green btn-box btn-sm" title="Lihat Detail"><i class="fe fe-search"></i></a>
-                                                        	<!--<a href="<? //= site_url("penduduk/form/$p/$o/$data[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data Penduduk"><i class="fe fe-pencil"></i></a>-->
+                                                        	<!--<a href="<? //= site_url("penduduk/form/$p/$o/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Ubah Data Penduduk"><i class="fe fe-pencil"></i></a>-->
                                                             <div class="btn-group">
-                                                                <a href="#" class="btn bg-aqua btn-box btn-sm" data-toggle="dropdown" title="Lihat Detail"><i class="fe fe-list-ol"></i>Aksi</a>
+                                                                <a href="#" class="btn bg-aqua btn-box btn-sm" data-toggle="dropdown" title="Lihat Detail"><i class="fe fe-list"></i>Aksi</a>
 																<!-- <button type="button" class="btn btn-info btn-sm" data-toggle="dropdown"><i class='fe fe-arrow-circle-down'></i> Pilih Aksi</button>-->
 																<ul class="dropdown-menu" role="menu">
 																	<li>
-																		<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]"); ?>" class="btn btn-block btn-sm"><i class="fe fe-list-ol"></i> Lihat Detail Biodata Penduduk</a>
+																		<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]"); ?>" class="btn btn-block btn-sm"><i class="fe fe-list"></i> Lihat Detail Biodata Penduduk</a>
 																	</li>
 																	<?php if ($data['status_dasar']==9): ?>
 																		<li>
@@ -191,7 +191,7 @@ $( function() {
 																		</li>
 																		<?php if ($this->CI->cek_hak_akses('h')): ?>
 																			<li>
-																				<a href="#" data-href="<?= site_url("penduduk/delete/$p/$o/$data[id]"); ?>" class="btn btn-block btn-sm" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i> Hapus</a>
+																				<a href="#" data-href="<?= site_url("penduduk/delete/$p/$o/$data[id]"); ?>" class="btn btn-block btn-sm" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i> Hapus</a>
 																			</li>
 																		<?php endif; ?>
 																	<?php endif; ?>
@@ -267,7 +267,7 @@ $( function() {
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini?
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
 					<button type="button" class="btn btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
 				</a>

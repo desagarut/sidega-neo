@@ -47,7 +47,7 @@
 																<tr <?php if ($data['jenis']!=1): ?>style='background-color:#f8deb5 !important;'<?php endif; ?>>
 																	<td><?= $i;?></td>
 																	<td class="nostretch">
-																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn bg-olive btn-sm"  title="Buat Surat"><i class="fe fe-file-word-o"></i>Buat Surat</a>
+																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-outline-info btn-sm"  title="Buat Surat"><i class="fe fe-file-word-o"></i>Buat Surat</a>
 																		<a href="<?= site_url("surat/favorit/$data[id]/$data[favorit]")?>" class="btn btn-outline-info btn-sm" title="Keluarkan dari Daftar Favorit" ><i class="fe fe-star"></i></a>
 																	</td>
 																	<td><?= $data['nama']?></td>
@@ -96,7 +96,7 @@
 																<tr <?php if ($data['jenis']!=1): ?>style='background-color:#f8deb5 !important;'<?php endif; ?>>
 																	<td><?= $nomer;?></td>
 																	<td class="nostretch">
-																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-social btn-boxbtn-outline-info btn-sm"  title="Buat Surat"><i class="fe fe-file-word-o"></i>Buat Surat</a>
+																		<a href="<?= site_url()?>surat/form/<?= $data['url_surat']?>" class="btn btn-outline-info btn-sm"  title="Buat Surat"><i class="fe fe-file-word-o"></i>Buat Surat</a>
 																		<a href="<?= site_url("surat/favorit/$data[id]/$data[favorit]")?>" class="btn btn-outline-info btn-sm"  title="Tambahkan ke Daftar Favorit" ><i class="fe fe-star-o"></i></a>
 																	</td>
 																	<td><?= $data['nama']?></td>

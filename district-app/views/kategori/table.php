@@ -29,10 +29,10 @@
 				<div class="col-md-9">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="<?= site_url("kategori/form")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Kategori Baru">
+							<a href="<?= site_url("kategori/form")?>" class="btn btn-success btn-sm"  title="Tambah Kategori Baru">
 								<i class="fe fe-plus"></i>Tambah Kategori Baru
             	</a>
-						  <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("kategori/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						  <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("kategori/delete_all/$p/$o")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -100,7 +100,7 @@
 																				<a href="<?= site_url("kategori/kategori_unlock/".$data['id'])?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
                                         <a href="<?= site_url("kategori/ajax_add_sub_kategori/$data[id]")?>" class="btn bg-olive btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Kategori" title="Tambah Sub Kategori"><i class="fe fe-plus"></i></a>
                                       <?php endif ?>
-																			<a href="#" data-href="<?= site_url("kategori/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("kategori/delete/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																	  </td>
                                     <td width="50%"><?= $data['kategori']?></td>
                                     <td><?= $data['aktif']?></td>

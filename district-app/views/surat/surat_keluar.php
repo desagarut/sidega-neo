@@ -135,7 +135,7 @@
 																		<a href="<?= site_url("keluar/edit_keterangan/{$data['id']}") ?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="dropdown-item btn btn-warning btn-sm"><i class="fe fe-edit"></i> Ubah</a>
 																	<?php endif; ?>
 																	<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																		<a href="#" data-href="<?= site_url("keluar/delete/{$p}/{$o}/{$data['id']}") ?>" class="btn btn-danger btn-sm dropdown-item" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i> Hapus</a>
+																		<a href="#" data-href="<?= site_url("keluar/delete/{$p}/{$o}/{$data['id']}") ?>" class="btn btn-outline-danger btn-sm btn-sm dropdown-item" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i> Hapus</a>
 																	<?php endif; ?>
 																	<?php if (is_file($data['file_rtf'])) : ?>
 																		<a href="<?= site_url("{$this->controller}/unduh/rtf/{$data['id']}"); ?>" class="btn btn-primary btn-sm dropdown-item" title="Unduh Surat RTF" target="_blank"><i class="fe fe-file"></i> Unduh Surat RTF</a>

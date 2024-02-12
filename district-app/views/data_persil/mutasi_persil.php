@@ -32,7 +32,7 @@
 		</ol>
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])."/".$persil['id']?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
+						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])."/".$persil['id']?>" class="btn btn-success btn-sm"  title="Tambah Persil">
 							<i class="fe fe-plus"></i>Tambah Mutasi Persil
 						</a>
 						<a href="<?=site_url('letterc')?>" class="btn btn-primary btn-sm " title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
@@ -137,11 +137,11 @@
 																<tr>
 																	<td class="text-center"><?= $nomer?></td>
 																	<td nowrap class="text-center">
-																		<a href="<?= site_url("letterc/create_mutasi/$item[id_letterc_masuk]/$item[id_persil]/$item[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
+																		<a href="<?= site_url("letterc/create_mutasi/$item[id_letterc_masuk]/$item[id_persil]/$item[id]")?>" class="btn btn-outline-info btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																		<?php if ($item['jenis_mutasi'] != '9'): ?>
-																			<a href="#" data-href="<?= site_url("letterc/hapus_mutasi/$letterc[id]/$item[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("letterc/hapus_mutasi/$letterc[id]/$item[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		<?php else: ?>
-																			<a href="#" data-href="<?= site_url('letterc/awal_persil/'.$letterc['id'].'/' .$persil['id'].'/1')?>" class="btn bg-maroon btn-box btn-sm"  title="Bukan pemilik awal" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url('letterc/awal_persil/'.$letterc['id'].'/' .$persil['id'].'/1')?>" class="btn btn-outline-info btn-sm"  title="Bukan pemilik awal" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		<?php endif; ?>
 																	</td>
 																	<td><?= $item['no_bidang_persil']?></td>
@@ -182,7 +182,7 @@
 									<div class='modal-footer'>
 										<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 										<a class='btn-ok'>
-											<button type="button" class="btn btn-danger btn-sm" id="ok-delete"><i class='fe fe-trash-o'></i> Hapus</button>
+											<button type="button" class="btn btn-outline-danger btn-sm btn-sm " id="ok-delete"><i class='fe fe-trash'></i> Hapus</button>
 										</a>
 									</div>
 								</div>

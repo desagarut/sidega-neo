@@ -27,7 +27,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-status" title="Kembalikan Status" data-body="<?= $pertanyaan; ?>" onclick="aksiBorongan('mainform', '<?=site_url('penduduk_log/kembalikan_status_all')?>')" class="btn btn-social btn-flat btn-success btn-sm  hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
+								<a href="#confirm-status" title="Kembalikan Status" data-body="<?= $pertanyaan; ?>" onclick="aksiBorongan('mainform', '<?=site_url('penduduk_log/kembalikan_status_all')?>')" class="btn btn-outline-info btn-sm  hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
 							<?php endif; ?>
 							<a href="<?= site_url("penduduk_log/ajax_cetak/{$o}/cetak")?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
 							<a href="<?= site_url("penduduk_log/ajax_cetak/{$o}/unduh")?>" class="btn btn-social btn-flat bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fe fe-download"></i> Unduh</a>

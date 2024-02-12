@@ -193,8 +193,8 @@
 				<div class="card shadow">
 					<div class="card-header">
 						<!--<a href="<?= site_url("kesehatan_bumil/form_pantau") ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Form Pantau" title="Form Pantau" class="btn btn-warning btn-box btn-sm"><i class="fe fe-plus"></i>Tambah Data</a>-->
-						<a href="<?= site_url("kesehatan_bumil/daftar/cetak/$filter_tgl/$filter_nik") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
-						<a href="<?= site_url("kesehatan_bumil/daftar/unduh/$filter_tgl/$filter_nik") ?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh</a>
+						<a href="<?= site_url("kesehatan_bumil/daftar/cetak/$filter_tgl/$filter_nik") ?>" class="btn btn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak</a>
+						<a href="<?= site_url("kesehatan_bumil/daftar/unduh/$filter_tgl/$filter_nik") ?>" class="btn btn-outline-info btn-sm" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh</a>
 						<a href="<?= site_url("kesehatan_bumil/index") ?>" class="btn btn-box btn-info btn-sm" title="Data Bumil"> Kembali ke Data Bumil</a>
 					</div>
 					<div class="box-body">
@@ -268,7 +268,7 @@
 																	<td align="center" width="2"><?= $nomer; ?></td>
 																	<td nowrap>
 																		<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																			<a href="#" data-href="<?= site_url("$url_delete_front/$item[id]/$url_delete_rare") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a> <?php endif; ?>
+																			<a href="#" data-href="<?= site_url("$url_delete_front/$item[id]/$url_delete_rare") ?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a> <?php endif; ?>
 																	</td>
 																	<td align=center><?= tgl_indo_out($item["tanggal_terdaftar"]) ?></td>
 																	<td align=center><?= tgl_indo_out($item["tanggal_jam"]) ?></td>

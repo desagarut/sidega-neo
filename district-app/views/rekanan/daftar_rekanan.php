@@ -24,10 +24,10 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url("rekanan/form_rekanan") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Artikel">
+							<a href="<?= site_url("rekanan/form_rekanan") ?>" class="btn btn-success btn-sm" title="Tambah Artikel">
 								<i class="fe fe-plus"></i> Tambah Rekanan
 							</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("rekanan/delete_all/$p/$o") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("rekanan/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -119,7 +119,7 @@
 																				<a href="<?= site_url("rekanan/rekanan_unlock/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Album"><i class="fe fe-unlock"></i></a>
 																			<?php endif ?>
 																			<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																				<a href="#" data-href="<?= site_url("rekanan/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																				<a href="#" data-href="<?= site_url("rekanan/delete/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																			<?php endif; ?>
 																		</td>
 																	</tr>

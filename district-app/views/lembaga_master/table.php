@@ -28,7 +28,7 @@
 						<a href="<?= site_url("{$this->controller}/form"); ?>" title="Tambah Kategori <?= $tipe; ?> Baru" class="btn btn-social btn-flat bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Kategori <?= $tipe; ?> Baru</a>
 					<?php endif; ?>
 					<?php if ($this->CI->cek_hak_akses('h')): ?>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all"); ?>')" class="btn btn-social btn-flat	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all"); ?>')" class="btn btn-social btn-flat	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 					<?php endif; ?>
 					<a href="<?= site_url($tipe); ?>" class="btn btn-social btn-flat btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar <?= $tipe; ?></a>
 				</div>
@@ -68,7 +68,7 @@
 															<a href="<?= site_url("{$this->controller}/form/{$data['id']}")?>" class="btn bg-orange btn-flat btn-sm" title="Ubah Kategori <?= $tipe; ?>"><i class="fe fe-edit"></i></a>
 														<?php endif; ?>
 														<?php if ($this->CI->cek_hak_akses('h')): ?>
-															<a href="#" data-href="<?= site_url("{$this->controller}/delete/{$data['id']}")?>" class="btn bg-maroon btn-flat btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+															<a href="#" data-href="<?= site_url("{$this->controller}/delete/{$data['id']}")?>" class="btn bg-maroon btn-flat btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 														<?php endif; ?>
 													</td>
 													<td nowrap><?= $data['lembaga']?></td>

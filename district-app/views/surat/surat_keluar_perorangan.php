@@ -121,7 +121,7 @@
 															<a href="<?= site_url("keluar/edit_keterangan/{$data['id']}") ?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Keterangan" class="btn bg-orange btn-flat btn-sm"><i class="fe fe-edit"></i></a>
 														<?php endif; ?>
 														<?php if ($this->CI->cek_hak_akses('h')) : ?>
-															<a href="#" data-href="<?= site_url("keluar/delete/{$p}/{$o}/{$data['id']}") ?>" class="btn bg-maroon btn-flat btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+															<a href="#" data-href="<?= site_url("keluar/delete/{$p}/{$o}/{$data['id']}") ?>" class="btn bg-maroon btn-flat btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 														<?php endif; ?>
 													</td>
 													<td><?= $data['kode_surat'] ?></td>

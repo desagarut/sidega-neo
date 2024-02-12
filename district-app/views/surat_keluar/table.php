@@ -10,9 +10,9 @@
 <div class="card shadow">
 	<div class="card-header">
 		<a href='<?= site_url("{$this->controller}/form") ?>' title="Tambah Surat Keluar Baru" class="btn btn-primary btn-sm mr-1"><i class="fe fe-plus"></i> Tambah Surat Keluar Baru</a>
-		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm mr-1 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
-		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o") ?>" class="btn btn-outline-primary btn-sm mr-1" title="Cetak Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Keluar"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o") ?>" title="Unduh Agenda Surat Keluar" class="btn btn-outline-primary btn-sm mr-1" title="Unduh Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Keluar"><i class="fe fe-download"></i> Unduh</a>
+		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm btn-sm  mr-1 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
+		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o") ?>" class="btn btn-outline-info btn-sm btn-sm mr-1" title="Cetak Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Keluar"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o") ?>" title="Unduh Agenda Surat Keluar" class="btn btn-outline-info btn-sm btn-sm mr-1" title="Unduh Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Keluar"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="card-body">
 		<div class="row">
@@ -54,7 +54,7 @@
 													<span class="text-muted sr-only">Action</span>
 												</button>
 												<div class="dropdown-menu dropdown-menu-right">
-													<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class="fe fe-edit"></i></a>
+													<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Ubah Data"><i class="fe fe-edit"></i></a>
 													<?php if ($data['berkas_scan']) : ?>
 														<a href='<?= site_url("{$this->controller}/unduh_berkas_scan/$data[id]") ?>' class="btn btn-outline-info btn-sm" title="Unduh Berkas Surat" target="_blank"><i class="fe fe-download"></i></a>
 													<?php endif; ?>
@@ -63,7 +63,7 @@
 													<?php else : ?>
 														<a href='<?= site_url("{$this->controller}/untuk_ekspedisi/$p/$o/$data[id]") ?>' class="btn bg-blue btn-box btn-sm" title="Tambahkan ke Buku Ekspedisi"><i class="fe fe-envelope-open"></i></a>
 													<?php endif; ?>
-													<a href="#" data-href="<?= site_url("{$this->controller}/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+													<a href="#" data-href="<?= site_url("{$this->controller}/delete/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 												</div>
 											</td>
 										</tr>

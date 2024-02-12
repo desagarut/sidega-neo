@@ -45,16 +45,16 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="card-header">
-										<a href="<?=site_url("data_persil/form/")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
+										<a href="<?=site_url("data_persil/form/")?>" class="btn btn-success btn-sm"  title="Tambah Persil">
 											<i class="fe fe-plus"></i>Tambah Persil
 										</a>
-										<a href="<?=site_url("data_persil/dialog_cetak/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Persil" title="Cetak Data">
+										<a href="<?=site_url("data_persil/dialog_cetak/cetak")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Persil" title="Cetak Data">
 											<i class="fe fe-printer"></i>Cetak
 										</a>
-										<a href="<?=site_url("data_persil/dialog_cetak/unduh")?>" class="btn bg-navy btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Persil" title="Unduh Data">
+										<a href="<?=site_url("data_persil/dialog_cetak/unduh")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Persil" title="Unduh Data">
 											<i class="fe fe-download"></i>Unduh
 										</a>
-										<a href="<?= site_url("data_persil/clear")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
+										<a href="<?= site_url("data_persil/clear")?>" class="btn btn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 									</div>
 									<div class="box-body">
 										<div class="row">
@@ -122,11 +122,11 @@
 																						<?php else: ?>
 																							<a class="btn btn-outline-info btn-sm" disabled title="Rincian"><i class="fe fe-bars"></i></a>
 																						<?php endif ?>
-																						<a href="<?= site_url("data_persil/form/".$item["id"])?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
+																						<a href="<?= site_url("data_persil/form/".$item["id"])?>" class="btn btn-outline-info btn-sm"  title="Ubah Data"><i class="fe fe-edit"></i></a>
 																						<?php if ($item['jml_bidang'] == 0): ?>
-																							<a href="#" data-href="<?= site_url("data_persil/hapus/".$item["id"])?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																							<a href="#" data-href="<?= site_url("data_persil/hapus/".$item["id"])?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																						<?php else: ?>
-																							<a class="btn bg-maroon btn-box btn-sm" disabled><i class="fe fe-trash-o"></i></a>
+																							<a class="btn btn-outline-info btn-sm" disabled><i class="fe fe-trash"></i></a>
 																						<?php endif ?>
 																						</td>
 																						<td><?= $item['nomor'].' : '.$item['nomor_urut_bidang']?></td>

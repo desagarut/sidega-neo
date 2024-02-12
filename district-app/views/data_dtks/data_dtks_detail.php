@@ -25,9 +25,9 @@
 	<section class="content" id="maincontent">
 		<div class="card shadow">
 			<div class="card-header">
-				<a href="<?= site_url("data_dtks/form_terdata/" . $data_dtks['id']) ?>" title="Tambah Data Warga" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Warga Terdata</a>
-				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
-				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/unduh") ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
+				<a href="<?= site_url("data_dtks/form_terdata/" . $data_dtks['id']) ?>" title="Tambah Data Warga" class="btn btn-outline-info btn-sm"><i class="fe fe-plus"></i> Tambah Warga Terdata</a>
+				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/cetak") ?>" class="btn btn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-printer "></i> Cetak</a>
+				<a href="<?= site_url("data_dtks/dialog_daftar/$data_dtks[id]/unduh") ?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data data_dtks <?= $sasaran[$data_dtks["sasaran"]]; ?> "><i class="fe fe-download "></i> Unduh</a>
 				<a href="<?= site_url("data_dtks") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Data Kemiskinan">
 					<i class="fe fe-arrow-circle-left "></i>Kembali ke daftar kelompok
 				</a>
@@ -79,7 +79,7 @@
 													<?php if ($this->CI->cek_hak_akses('h')) : ?>
 														<a href="<?= site_url("data_dtks/data_terdata/$item[id]"); ?>" class="btn bg-green btn-box btn-sm" title="Lihat Detail"><i class="fe fe-search"></i></a>
 														<a href="<?= site_url("data_dtks/edit_terdata_form/$item[id]"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Terdata" title="Ubah Terdata" class="btn btn-warning btn-box btn-sm"><i class="fe fe-edit"></i></a>
-														<a href="#" data-href="<?= site_url("data_dtks/hapus_terdata/$data_dtks[id]/$item[id]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="#" data-href="<?= site_url("data_dtks/hapus_terdata/$data_dtks[id]/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													<?php endif; ?>
 												</td>
 												<td class="padat">

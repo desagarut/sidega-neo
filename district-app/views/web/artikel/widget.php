@@ -26,11 +26,11 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?=site_url("web_widget/form")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Artikel">
+							<a href="<?=site_url("web_widget/form")?>" class="btn btn-success btn-sm"  title="Tambah Artikel">
 								<i class="fe fe-plus"></i> Tambah Widget
 							</a>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("web_widget/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("web_widget/delete_all/$p/$o")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
 						</div>
 						<div class="box-body">
@@ -81,7 +81,7 @@
 																			<a href="<?=site_url("web_widget/urut/$data[id]/1")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a>
 																			<a href="<?=site_url("web_widget/urut/$data[id]/2")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
 																			<?php if ($data['jenis_widget']!=1): ?>
-																				<a href="<?=site_url("web_widget/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
+																				<a href="<?=site_url("web_widget/form/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
 																			<?php endif; ?>
 																			<?php if ($data['form_admin']): ?>
 																				<a href="<?=site_url("$data[form_admin]")?>" class="btn btn-info btn-box btn-sm"  title="Form Admin"><i class="fe fe-sliders"></i></a>
@@ -93,7 +93,7 @@
 																			<?php endif; ?>
 																			<?php if ($this->CI->cek_hak_akses('h')): ?>
 																				<?php if ($data['jenis_widget']!=1): ?>
-																				<a href="#" data-href="<?=site_url("web_widget/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																				<a href="#" data-href="<?=site_url("web_widget/delete/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																				<?php endif; ?>
 																			<?php endif; ?>
 																		</td>

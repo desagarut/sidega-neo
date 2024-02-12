@@ -237,7 +237,7 @@
                       </div>
                     </div>
                     <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                      <button type="reset" class="btn btn-danger btn-sm mb-1" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+                      <button type="reset" class="btn btn-outline-danger btn-sm btn-sm mb-1" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
                       <!--<button type="submit" class="btn btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fe fe-check'></i> Simpan</button>-->
                       <button type="submit" class="btn btn-info btn-sm mb-1"><i class='fe fe-check'></i> Simpan</button>
                       <a href="#" class="btn btn-success btn-sm mb-1" download="SIDeha.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>

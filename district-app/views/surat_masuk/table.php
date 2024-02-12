@@ -18,9 +18,9 @@
 <div class="card shadow">
 	<div class="card-header">
 		<a href="<?= site_url('surat_masuk/form') ?>" title="Tambah Surat Masuk Baru" class="btn btn-primary btn-sm mr-1"><i class="fe fe-plus"></i> Tambah Surat Masuk Baru</a>
-		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("surat_masuk/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm mr-1 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
-		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o") ?>" class="btn btn-outline-primary btn-sm mr-1" title="Cetak Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Masuk"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o") ?>" title="Unduh Agenda Surat Keluar" class="btn btn-outline-primary btn-sm mr-1" title="Unduh Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Masuk"><i class="fe fe-download"></i> Unduh</a>
+		<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("surat_masuk/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm btn-sm  mr-1 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
+		<a href="<?= site_url("{$this->controller}/dialog_cetak/$o") ?>" class="btn btn-outline-info btn-sm btn-sm mr-1" title="Cetak Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Masuk"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog_unduh/$o") ?>" title="Unduh Agenda Surat Keluar" class="btn btn-outline-info btn-sm btn-sm mr-1" title="Unduh Agenda Surat Masuk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Masuk"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="card-body">
 		<div class="row">

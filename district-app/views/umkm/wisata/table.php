@@ -24,7 +24,7 @@
         </div>
         <div id="umkm" class="col-sm-9">
           <div class="card shadow">
-            <div class="card-header"> <a href="<?= site_url("wisata/form") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah"> <i class="fe fe-plus"></i> Tambah </a> <a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all/$p/$o") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> <a href="<?= site_url("first/wisata") ?>" class="btn btn-primary btn-sm btn-sm " target="_blank" title="Lihat Tukang"> <i class="fe fe-eye"></i> Lihat Halaman Depan </a></div>
+            <div class="card-header"> <a href="<?= site_url("wisata/form") ?>" class="btn btn-success btn-sm" title="Tambah"> <i class="fe fe-plus"></i> Tambah </a> <a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a> <a href="<?= site_url("first/wisata") ?>" class="btn btn-primary btn-sm" target="_blank" title="Lihat Tukang"> <i class="fe fe-eye"></i> Lihat Halaman Depan </a></div>
             <div class="box-body">
               <div class="row">
                 <div class="col-sm-12">
@@ -105,7 +105,7 @@
                                       <br />
                                       <a href="<?= site_url("wisata/form/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
                                       <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                        <a href="#" data-href="<?= site_url("wisata/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+                                        <a href="#" data-href="<?= site_url("wisata/delete/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                                       <?php endif; ?>
                                     </td>
                                     <td align="center">
@@ -113,7 +113,7 @@
                                       <a href="https://wa.me/+62<?= $data['no_hp_wisata'] ?>?text=Assalamu'alaikum%2C%20halo%20saya%20tertarik%20dengan%20layanan%20anda%20yang%20ditawarkan%20di%20website%20desa.%20Apakah%20layanannya%20masih%20tersedia%3F" class="btn bg-green btn-box btn-sm" target="_blank" title="Hubungi"><i class="fe fe-whatsapp"></i></a>
                                       <a href="<?= site_url("wisata/lokasi_maps/" . $data['id']); ?>" data-href="#" class="btn bg-primary btn-box btn-sm" title="Lokasi"><i class="fe fe-map"></i></a>
                                       <?php if ($data['enabled'] == '2') : ?>
-                                        <a href="<?= site_url("wisata/wisata_lock/" . $data['id']) ?>" class="btn bg-orange btn-box btn-sm" title="Aktifkan Album"><i class="fe fe-lock"></i></a>
+                                        <a href="<?= site_url("wisata/wisata_lock/" . $data['id']) ?>" class="btn btn-outline-info btn-sm" title="Aktifkan Album"><i class="fe fe-lock"></i></a>
                                       <?php elseif ($data['enabled'] == '1') : ?>
                                         <a href="<?= site_url("wisata/wisata_unlock/" . $data['id']) ?>" class="btn bg-aqua btn-box btn-sm" title="Non Aktifkan Album"><i class="fe fe-unlock"></i></a>
                                       <?php endif ?>

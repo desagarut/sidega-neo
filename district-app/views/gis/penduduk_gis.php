@@ -3,69 +3,74 @@
 <link rel="stylesheet" href="<?= base_url()?>assets/bootstrap/css/bootstrap.min.css" media="screen" type="text/css" />
 -->
 <style type="text/css">
-	.table, th {
-		text-align: center;
-	}
+.table, th {
+	text-align: center;
+}
 </style>
 
-
 <div class="modal-body">
-	<form id="mainform" name="mainform" action="" method="post">
-		<input type="hidden" id="untuk_web" value="<?= $untuk_web?>">
-		<div class="row">
-			<div class="col-md-12">
-				<h4 class="box-title text-center"><b>Data Penduduk Menurut <?= ($stat);?></b></h4>
-				<center>
-					<a class="btn bg-navy btn-sm " title="Grafik Data" onclick="grafikType();"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Grafik Data&nbsp;&nbsp;</a>
-					<a class="btn bg-navy btn-sm " title="Pie Data" onclick="pieType();"><i class="fe fe-pie-chart"></i>&nbsp;&nbsp;Pie Data&nbsp;&nbsp;</a>
-				</center>
-				<hr>
-				<div id="chart" hidden="true"> </div>
-				<div class="table-responsive">
-					<table class="table table-bordered dataTable table-hover nowrap">
-						<thead>
-							<tr>
-								<th class="padat">No</th>
-								<th nowrap>Jenis Kelompok</th>
-								<?php if ($lap<20 OR ($lap>50 AND $program['sasaran']==1)): ?>
-									<th nowrap colspan="2">Laki-Laki</th>
-									<th nowrap colspan="2">Perempuan</th>
-								<?php endif; ?>
-								<th nowrap colspan="2">Jumlah</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ($main as $data): ?>
-								<?php if ($lap>50) $tautan_jumlah = site_url("program_bantuan/detail/1/$lap/1"); ?>
-								<tr>
-									<td class="text-center"><?= $data['no']?></td>
-									<td class="text-left"><?= strtoupper($data['nama']);?></td>
-									<?php if ($lap<20 OR ($lap>50 AND $program['sasaran']==1)): ?>
-										<?php if ($lap<50) $tautan_jumlah = site_url("penduduk/statistik/$lap/$data[id]"); ?>
-										<td class="text-right"><a href="<?= $tautan_jumlah?>/1"><?= $data['laki']?></a></td>
-										<td class="text-right"><?= $data['persen1'];?></td>
-										<td class="text-right"><a href="<?= $tautan_jumlah?>/2"><?= $data['perempuan']?></a></td>
-										<td class="text-right"><?= $data['persen2'];?></td>
-									<?php endif; ?>
-									<td class="text-right">
-										<?php if (in_array($lap, array(21, 22, 23, 24, 25, 26, 27))): ?>
-											<a href="<?= site_url("keluarga/statistik/$lap/$data[id]")?>"><?= $data['jumlah']?></a>
-										<?php else: ?>
-											<?php if ($lap<50) $tautan_jumlah = site_url("penduduk/statistik/$lap/$data[id]"); ?>
-											<a href="<?= $tautan_jumlah ?>/0"><?= $data['jumlah']?></a>
-										<?php endif; ?>
-									</td>
-									<td class="text-right"><?= $data['persen'];?></td>
-								</tr>
-							<?php endforeach; ?>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</form>
+  <form id="mainform" name="mainform" action="" method="post">
+    <input type="hidden" id="untuk_web" value="<?= $untuk_web?>">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="box-title text-center"><b>Data Penduduk Menurut
+          <?= ($stat);?>
+          </b></h4>
+        <center>
+          <a class="btn btn-outline-info btn-sm" title="Grafik Data" onclick="grafikType();"><i class="fe fe-bar-chart"></i>&nbsp;&nbsp;Grafik Data&nbsp;&nbsp;</a> <a class="btn btn-outline-info btn-sm" title="Pie Data" onclick="pieType();"><i class="fe fe-pie-chart"></i>&nbsp;&nbsp;Pie Data&nbsp;&nbsp;</a>
+        </center>
+        <hr>
+        <div id="chart" hidden="true"> </div>
+        <div class="table-responsive">
+          <table class="table table-bordered dataTable table-hover nowrap">
+            <thead>
+              <tr>
+                <th class="padat">No</th>
+                <th nowrap>Jenis Kelompok</th>
+                <?php if ($lap<20 OR ($lap>50 AND $program['sasaran']==1)): ?>
+                <th nowrap colspan="2">Laki-Laki</th>
+                <th nowrap colspan="2">Perempuan</th>
+                <?php endif; ?>
+                <th nowrap colspan="2">Jumlah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($main as $data): ?>
+              <?php if ($lap>50) $tautan_jumlah = site_url("program_bantuan/detail/1/$lap/1"); ?>
+              <tr>
+                <td class="text-center"><?= $data['no']?></td>
+                <td class="text-left"><?= strtoupper($data['nama']);?></td>
+                <?php if ($lap<20 OR ($lap>50 AND $program['sasaran']==1)): ?>
+                <?php if ($lap<50) $tautan_jumlah = site_url("penduduk/statistik/$lap/$data[id]"); ?>
+                <td class="text-right"><a href="<?= $tautan_jumlah?>/1">
+                  <?= $data['laki']?>
+                  </a></td>
+                <td class="text-right"><?= $data['persen1'];?></td>
+                <td class="text-right"><a href="<?= $tautan_jumlah?>/2">
+                  <?= $data['perempuan']?>
+                  </a></td>
+                <td class="text-right"><?= $data['persen2'];?></td>
+                <?php endif; ?>
+                <td class="text-right"><?php if (in_array($lap, array(21, 22, 23, 24, 25, 26, 27))): ?>
+                  <a href="<?= site_url("keluarga/statistik/$lap/$data[id]")?>">
+                  <?= $data['jumlah']?>
+                  </a>
+                  <?php else: ?>
+                  <?php if ($lap<50) $tautan_jumlah = site_url("penduduk/statistik/$lap/$data[id]"); ?>
+                  <a href="<?= $tautan_jumlah ?>/0">
+                  <?= $data['jumlah']?>
+                  </a>
+                  <?php endif; ?></td>
+                <td class="text-right"><?= $data['persen'];?></td>
+              </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
-
 <script type="text/javascript">
 	$('document').ready(function() {
 		// Nonaktfikan tautan di tabel statistik kependudukan untuk tampilan Web
@@ -176,6 +181,6 @@
 
 		$('#chart').removeAttr('hidden');
 	}
-</script>
-<script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
-<script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
+</script> 
+<script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script> 
+<script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script> 

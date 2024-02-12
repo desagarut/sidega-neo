@@ -37,10 +37,10 @@
 							</ul>
 						</div>
 					<?php endif; ?>
-					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("program_bantuan/delete_all/$detail[id]") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
+					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("program_bantuan/delete_all/$detail[id]") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
+					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/cetak") ?>" class="btn btn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 					</a>
-					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/unduh") ?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
+					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/unduh") ?>" class="btn btn-outline-info btn-sm" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 					</a>
 					<a href="<?= site_url('program_bantuan') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan
 					</a>
@@ -98,8 +98,8 @@
 																<td class="padat"><input type="checkbox" name="id_cb[]" value="<?= $item['id'] ?>" /></td>
 																<td class="padat"><?= ($key + $paging->offset + 1); ?></td>
 																<td class="padat">
-																	<a href="<?= site_url("program_bantuan/edit_peserta_form/$item[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Peserta"><i class="fe fe-edit"></i></a>
-																	<a href="#" data-href="<?= site_url("program_bantuan/hapus_peserta/$detail[id]/$item[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																	<a href="<?= site_url("program_bantuan/edit_peserta_form/$item[id]") ?>" class="btn btn-outline-info btn-sm" title="Ubah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Peserta"><i class="fe fe-edit"></i></a>
+																	<a href="#" data-href="<?= site_url("program_bantuan/hapus_peserta/$detail[id]/$item[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																</td>
 																<?php $id_peserta = ($detail['sasaran'] == 4) ? $item['peserta'] : $item['nik'] ?>
 																<td nowrap><a href="<?= site_url("program_bantuan/peserta/$detail[sasaran]/$id_peserta") ?>" title="Daftar program untuk peserta"><?= $item["peserta_nama"] ?></a></td>

@@ -15,11 +15,11 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?=site_url("teks_berjalan/form")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Artikel">
+							<a href="<?=site_url("teks_berjalan/form")?>" class="btn btn-success btn-sm"  title="Tambah Artikel">
 								<i class="fe fe-plus"></i> Tambah Teks
 							</a>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("teks_berjalan/delete_all")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("teks_berjalan/delete_all")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
 						</div>
 						<div class="box-body">
@@ -48,14 +48,14 @@
 																		<td width="5%" nowrap>
 																			<a href="<?=site_url("teks_berjalan/urut/$data[id]/1")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Bawah"><i class="fe fe-arrow-down"></i></a>
 																			<a href="<?=site_url("teks_berjalan/urut/$data[id]/2")?>" class="btn bg-olive btn-box btn-sm"  title="Pindah Posisi Ke Atas"><i class="fe fe-arrow-up"></i></a>
-																			<a href="<?=site_url("teks_berjalan/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
+																			<a href="<?=site_url("teks_berjalan/form/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Ubah"><i class="fe fe-edit"></i></a>
 																			<?php if ($data['status'] == '2'): ?>
 																				<a href="<?=site_url("teks_berjalan/lock/$data[id]/1")?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fe fe-lock">&nbsp;</i></a>
 																			<?php else: ?>
 																				<a href="<?=site_url("teks_berjalan/lock/$data[id]/2")?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
 																			<?php endif; ?>
 																			<?php if ($this->CI->cek_hak_akses('h')): ?>
-																				<a href="#" data-href="<?=site_url("teks_berjalan/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																				<a href="#" data-href="<?=site_url("teks_berjalan/delete/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																			<?php endif; ?>
 																		</td>
 																		<td><?=$data['teks']?> <a href="<?=$data['tautan']?>" target="_blank"><?=$data['judul_tautan']?></a></td>

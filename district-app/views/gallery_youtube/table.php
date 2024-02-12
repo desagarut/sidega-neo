@@ -24,10 +24,10 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url("gallery_youtube/form") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Artikel">
+							<a href="<?= site_url("gallery_youtube/form") ?>" class="btn btn-success btn-sm" title="Tambah Artikel">
 								<i class="fe fe-plus"></i> Add Playlist
 							</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_youtube/delete_all/$p/$o") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_youtube/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -102,7 +102,7 @@
 																			<a href="<?= site_url("gallery_youtube/sub_gallery/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Rincian Album"><i class="fe fe-bars"></i></a></br>
 																			<a href="<?= site_url("gallery_youtube/form/$p/$o/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																			<?php if ($data['slider'] == '1') : ?>
-																				<a href="<?= site_url("gallery_youtube/slider_off/" . $data['id']) ?>" class="btn bg-maroon btn-box btn-sm" title="Keluarkan Dari Slider"><i class="fe fe-play"></i></a>
+																				<a href="<?= site_url("gallery_youtube/slider_off/" . $data['id']) ?>" class="btn btn-outline-info btn-sm" title="Keluarkan Dari Slider"><i class="fe fe-play"></i></a>
 																			<?php else : ?>
 																				<a href="<?= site_url("gallery_youtube/slider_on/" . $data['id']) ?>" class="btn bg-gray btn-box btn-sm" title="Tampilkan Di Slider"><i class="fe fe-eject"></i></a>
 																			<?php endif; ?>
@@ -113,7 +113,7 @@
 																			<?php endif ?>
 																			</br>
 																			<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																				<a href="#" data-href="<?= site_url("gallery_youtube/delete/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																				<a href="#" data-href="<?= site_url("gallery_youtube/delete/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																			<?php endif; ?>
 																		</td>
 																	</tr>

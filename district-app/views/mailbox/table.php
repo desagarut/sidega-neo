@@ -16,7 +16,7 @@
 				<div class="col-md-9">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="<?= site_url('mailbox/form') ?>" class="btn btn-social btn-flat btn-success btn-sm " title="Tulis Pesan"><i class="fe fe-plus"></i> Tulis Pesan</a>
+							<a href="<?= site_url('mailbox/form') ?>" class="btn btn-outline-info btn-sm " title="Tulis Pesan"><i class="fe fe-plus"></i> Tulis Pesan</a>
 							<a href="#confirm-delete" title="Arsipkan Data" <?php if(!$filter_archived) : ?>onclick="deleteAllBox('mainform','<?=site_url("mailbox/archive_all/$kat/$p/$o")?>')"<?php endif ?> class="btn btn-social btn-flat btn-danger btn-sm  hapus-terpilih" <?php $filter_archived and print('disabled') ?>><i class='fe fe-file-archive-o'></i> Arsipkan Data Terpilih</a>
 							<a href="<?= site_url("mailbox/clear/$kat/$p/$o") ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 						</div>

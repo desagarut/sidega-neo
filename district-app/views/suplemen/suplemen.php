@@ -15,7 +15,7 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="card shadow">
 				<div class="card-header">
-					<a href="<?=site_url('suplemen/form')?>" class="btn bg-olive btn-sm " title="Tambah Suplemen Baru"><i class="fe fe-plus"></i> Tambah Suplemen Baru</a>
+					<a href="<?=site_url('suplemen/form')?>" class="btn btn-outline-info btn-sm" title="Tambah Suplemen Baru"><i class="fe fe-plus"></i> Tambah Suplemen Baru</a>
 					<a href="<?=site_url('suplemen/panduan')?>" class="btn btn-info btn-sm " title="Tambah Program Bantuan Baru"><i class="fe fe-question-circle"></i> Panduan</a>
 				</div>
 				<div class="box-body">
@@ -48,13 +48,13 @@
 											<tr>
 												<td class="padat"><?= ($key + 1); ?></td>
 												<td class="aksi">
-													<a href="<?= site_url("suplemen/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Data"><i class="fe fe-list-ol"></i></a>
-													<a href="<?= site_url("suplemen/form/$item[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
+													<a href="<?= site_url("suplemen/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Data"><i class="fe fe-list"></i></a>
+													<a href="<?= site_url("suplemen/form/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
 													<a
 														<?php if ($item['jml'] <= 0): ?>
 															href="#" data-href="<?= site_url("suplemen/hapus/$item[id]")?>" data-toggle="modal" data-target="#confirm-delete"
 														<?php endif; ?>
-														class="btn bg-maroon btn-box btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash-o"></i>
+														class="btn btn-outline-info btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash"></i>
 													</a>
 												</td>
 												<td width="20%"><a href="<?= site_url("suplemen/rincian/$item[id]"); ?>"><?= $item["nama"] ?></a></td>

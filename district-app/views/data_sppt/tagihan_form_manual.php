@@ -138,7 +138,7 @@
                             </div>
             
                             <div class="modal-footer">
-                                <button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+                                <button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
                                 <button class="btn btn-info btn-sm" id="btn_simpan"><i class='fe fe-check'></i>Simpan</button>
                             </div>
                         </form>
@@ -236,7 +236,7 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
 					<button class="btn btn-info btn-sm" id="btn_update"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>
@@ -264,7 +264,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
 					<button class="btn btn-info btn-sm" id="btn_salin1"><i class='fe fe-check'></i>Salin</button>
 				</div>
 			</form>

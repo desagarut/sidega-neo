@@ -17,7 +17,7 @@
 					</div>
 					<div class="col-auto">
 						<a href="<?= site_url('surat_mohon/form') ?>" class="btn btn-success mb-2"><i class="fe fe-plus"></i> Tambah Dokumen Persyaratan</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_mohon/delete_all/$p/$o") ?>')" class="btn btn-danger mb-2 hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_mohon/delete_all/$p/$o") ?>')" class="btn btn-danger mb-2 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 					</div>
 				</div>
 				<div class="card shadow">
@@ -64,8 +64,8 @@
 																	</td>
 																	<td width=3><?= $data['no'] ?></td>
 																	<td width=100 nowrap>
-																		<a href="<?= site_url("surat_mohon/form/$p/$o/$data[ref_syarat_id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
-																		<a href="#" data-href="<?= site_url("surat_mohon/delete/$p/$o/$data[ref_syarat_id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																		<a href="<?= site_url("surat_mohon/form/$p/$o/$data[ref_syarat_id]") ?>" class="btn btn-outline-info btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
+																		<a href="#" data-href="<?= site_url("surat_mohon/delete/$p/$o/$data[ref_syarat_id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																	</td>
 																	<td><?= $data['ref_syarat_nama'] ?></td>
 																</tr>

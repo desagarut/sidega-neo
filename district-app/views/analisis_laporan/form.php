@@ -31,9 +31,9 @@
 				<div class="col-md-8 col-lg-9">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/cetak")?>" class="btn btn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fe fe-printer "></i> Cetak</a>
 
-							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/unduh")?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fe fe-download "></i> Unduh</a>
+							<a href="<?= site_url("analisis_laporan/dialog_kuisioner/$p/$o/$id/unduh")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan Hasil Analisis <?= $asubjek?> <?= $subjek['nama']?> "><i class="fe fe-download "></i> Unduh</a>
 
 							<a href="<?=site_url("analisis_laporan/clear")."/".$analisis_master['id']?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali Ke Laporan Hasil Klasifikasi">
 								<i class="fe fe-arrow-circle-left "></i>Kembali Ke Laporan Hasil Klasifikasi</a>

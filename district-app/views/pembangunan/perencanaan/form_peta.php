@@ -97,7 +97,7 @@
                 </div>
               </div>
               <div class="box-footer text-right">
-                <div class="col-sm-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-boxbtn-outline-info btn-sm" title="Kembali"> Kembali</a>
+                <div class="col-sm-12"> <a href="<?= site_url('pembangunan') ?>" class="btn btn-outline-info btn-sm" title="Kembali"> Kembali</a>
                   <?php if ($this->CI->cek_hak_akses('h')) : ?>
                     <a href="#" class="btn btn-box btn-success btn-sm" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
                     <button type="reset" class="btn btn-box btn-danger btn-sm"><i class='fe fe-sign-out'></i> Tutup</button>

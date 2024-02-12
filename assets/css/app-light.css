@@ -3234,8 +3234,10 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9); }
-
+  /*color: rgba(0, 0, 0, 0.9); }*/
+ color:#FAFCFF; 
+ background-color: #17a2b8}
+ 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
   border-color: rgba(0, 0, 0, 0.1); }
@@ -7543,7 +7545,7 @@ button:focus {
         top: 0;
         bottom: 0;
         width: 2px;
-        background-color: #1b68ff; }
+		background-color: #1b68ff;}
 
 .vertical .topnav,
 .vertical.hover .topnav,
@@ -8061,9 +8063,12 @@ svg.navbar-brand-img {
   fill: #1b68ff; }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #001a4e; }
+  color: #17a2b8; }
   .navbar-light .navbar-nav .nav-link:hover {
-    background: #f8f9fa;
+    background: #17a2b8;
+    color: #FFF; }
+  .navbar-light .navbar-nav .nav-link:active {
+    background: #343a40;
     color: #1b68ff; }
 
 .navbar-dark .navbar-nav .nav-link {

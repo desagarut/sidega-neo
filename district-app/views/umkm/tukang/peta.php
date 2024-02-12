@@ -75,7 +75,7 @@ function initMap() {
                            <a href="<?= site_url("tukang")?>" class="pull-left"> <button type="#" class="btn btn-primary btn-sm"><i class='fe fe-arrow-left'></i> Kembali</button></a>
                             <input type="text" name="lat" id="lat" value="<?= $tukang['lat']?>"/>
                             <input type="text" name="lng" id="lng" value="<?= $tukang['lng']?>" />
-                            <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-refresh'></i> Reset</button>
+                            <button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-refresh'></i> Reset</button>
                             <button type="submit" class="btn btn-success btn-sm"><i class='fe fe-check'></i> Simpan</button>
                         </div>
                     </div>

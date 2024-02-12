@@ -40,7 +40,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="reset" class="btn btn-danger" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
-					<button type="submit" class="btn btn-primary" id="form_download" name="form_cetak" data-dismiss="modal"><i class='fe fe-check'></i> Unduh</button>
+					<button type="submit" class="btn btn-outline-info btn-sm btn-sm" id="form_download" name="form_cetak" data-dismiss="modal"><i class='fe fe-check'></i> Unduh</button>
 				</div>
 			</form>
 		</div>

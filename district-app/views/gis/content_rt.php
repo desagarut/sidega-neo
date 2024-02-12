@@ -5,7 +5,7 @@
 		<div id="isi_popup_rt_<?= $key_rt ?>" style="visibility: hidden;">
 			<div id="content">
 				<center><h5 id="firstHeading" class="firstHeading"><b>Wilayah RT <?= $rt['rt'] ?> RW <?= $rt['rw'] . " " . ucwords($this->setting->sebutan_dusun) . " " . $rt['dusun']; ?></b></h5></center>
-				<p><center><a href="#collapseStatGraph" class="btn bg-navy btn-sm  btn-modal" title="Statistik Penduduk" data-toggle="collapse" data-target="#collapseStatGraph" aria-expanded="false" aria-controls="collapseStatGraph"><i class="fe fe-bar-chart"></i>Statistik Penduduk</a></center></p>
+				<p><center><a href="#collapseStatGraph" class="btn btn-outline-info btn-smbtn-modal" title="Statistik Penduduk" data-toggle="collapse" data-target="#collapseStatGraph" aria-expanded="false" aria-controls="collapseStatGraph"><i class="fe fe-bar-chart"></i>Statistik Penduduk</a></center></p>
 				<div class="collapse box-body no-padding" id="collapseStatGraph">
 					<div id="bodyContent">
 						<div class="card card-body">

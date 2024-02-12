@@ -15,7 +15,7 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="card shadow">
 				<div class="card-header">
-					<a href="<?= site_url('pemberdayaan_masyarakat/form_kegiatan') ?>" class="btn bg-olive btn-sm " title="Tambah Kegiatan"><i class="fe fe-plus"></i> Tambah Kegiatan</a>
+					<a href="<?= site_url('pemberdayaan_masyarakat/form_kegiatan') ?>" class="btn btn-outline-info btn-sm" title="Tambah Kegiatan"><i class="fe fe-plus"></i> Tambah Kegiatan</a>
 					<a href="<?= site_url('pemberdayaan_masyarakat/panduan') ?>" class="btn btn-info btn-sm " title="Panduan Program"><i class="fe fe-question-circle"></i> Panduan</a>
 				</div>
 				<div class="box-body">
@@ -52,9 +52,9 @@
 											<tr>
 												<td class="padat"><?= ($key + 1); ?></td>
 												<td class="aksi">
-													<a href="<?= site_url("pemberdayaan_masyarakat/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="daftar peserta Data"><i class="fe fe-list-ol"></i></a>
-													<a href="<?= site_url("pemberdayaan_masyarakat/form_kegiatan/$item[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
-													<a <?php if ($item['jml'] <= 0) : ?> href="#" data-href="<?= site_url("pemberdayaan_masyarakat/hapus/$item[id]") ?>" data-toggle="modal" data-target="#confirm-delete" <?php endif; ?> class="btn bg-maroon btn-box btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash-o"></i>
+													<a href="<?= site_url("pemberdayaan_masyarakat/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="daftar peserta Data"><i class="fe fe-list"></i></a>
+													<a href="<?= site_url("pemberdayaan_masyarakat/form_kegiatan/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
+													<a <?php if ($item['jml'] <= 0) : ?> href="#" data-href="<?= site_url("pemberdayaan_masyarakat/hapus/$item[id]") ?>" data-toggle="modal" data-target="#confirm-delete" <?php endif; ?> class="btn btn-outline-info btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash"></i>
 													</a>
 												</td>
 												<td width="20%"><a href="<?= site_url("pemberdayaan_masyarakat/daftar_peserta/$item[id]"); ?>"><?= $item["nama_kegiatan"] ?></a></td>

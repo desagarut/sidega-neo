@@ -21,11 +21,11 @@
 				<div class="col-md-8">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url("statistik/form_rentang/0")?>" class="btn bg-olive btn-sm btn-sm " title="Tambah Rentang Umur" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Rentang Umur">
+							<a href="<?= site_url("statistik/form_rentang/0")?>" class="btn btn-outline-info btn-sm" title="Tambah Rentang Umur" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Rentang Umur">
 								<i class="fe fe-plus"></i>Tambah Rentang
 							</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("statistik/delete_all_rentang")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
-							<a href="<?= site_url("statistik/clear/13")?>" class="btn btn-info btn-sm btn-sm ">
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("statistik/delete_all_rentang")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
+							<a href="<?= site_url("statistik/clear/13")?>" class="btn btn-info btn-sm">
 								<i class="fe fe-arrow-circle-left "></i>Kembali ke Data Statistik
 							</a>
 						</div>
@@ -50,8 +50,8 @@
 															<td><input type="checkbox" name="id_cb[]" value="<?=$data['id']?>" /></td>
 															<td class="text-center"><?= $no+1; ?></td>
 															<td nowrap>
-																<a href="<?=site_url("statistik/form_rentang/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Rentang Umur" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Rentang Umur"><i class="fe fe-edit"></i></a>
-																<a href="#" data-href="<?=site_url("statistik/rentang_delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																<a href="<?=site_url("statistik/form_rentang/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Ubah Rentang Umur" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Rentang Umur"><i class="fe fe-edit"></i></a>
+																<a href="#" data-href="<?=site_url("statistik/rentang_delete/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 															</td>
 															<td><?= $data['dari']?> - <?= $data['sampai']?> Tahun</td>
 														</tr>

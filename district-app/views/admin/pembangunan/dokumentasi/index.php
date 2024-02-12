@@ -16,7 +16,7 @@
 					<div class="card shadow">
 						<div class="card-header">
 							<?php if ($this->CI->cek_hak_akses('u')): ?>
-								<a href="<?= site_url("{$this->controller}/dokumentasi_form") ?>" class="btn btn-social btn-flat btn-success btn-sm btn-sm " title="Tambah Data Baru"><i class="fe fe-plus"></i>Tambah Data</a>
+								<a href="<?= site_url("{$this->controller}/dokumentasi_form") ?>" class="btn btn-outline-info btn-sm" title="Tambah Data Baru"><i class="fe fe-plus"></i>Tambah Data</a>
 							<?php endif; ?>
 							<a href="<?= site_url("{$this->controller}/dialog_daftar/{$pembangunan->id}/cetak") ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
 							<a href="<?= site_url("{$this->controller}/dialog_daftar/{$pembangunan->id}/unduh") ?>" class="btn btn-social btn-flat bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $pembangunan->judul ?> "><i class="fe fe-download "></i> Unduh</a>
@@ -113,7 +113,7 @@
 									<a href="<?= site_url("{$this->controller}/dokumentasi_form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-flat btn-sm"><i class="fe fe-edit"></i></a>
 								<?php endif; ?>
 								<?php if ($this->CI->cek_hak_akses('u')): ?>
-									<a href="#" data-href="<?= site_url("{$this->controller}/dokumentasi_delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+									<a href="#" data-href="<?= site_url("{$this->controller}/dokumentasi_delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 								<?php endif; ?>
 							`
 						}, 'class': 'aksi'

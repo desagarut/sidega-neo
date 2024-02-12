@@ -17,7 +17,7 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url("rtm/cetak_kk/$id_kk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("rtm/cetak_kk/$id_kk")?>" class="btn btn-outline-info btn-sm " target="_blank"><i class="fe fe-printer "></i> Cetak</a>
 							<a href="<?=site_url("rtm/anggota/$id_kk")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali ke Daftar Anggota Rumah Tangga">
 								<i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Anggota Rumah Tangga
 							</a>

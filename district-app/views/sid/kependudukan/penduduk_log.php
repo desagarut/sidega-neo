@@ -28,8 +28,8 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?= site_url("penduduk_log/kembalikan_status_all") ?>')" class="btn btn-success btn-sm  hapus-terpilih"><i class='fe fe-undo'></i> Kembalikan Status Terpilih</a>
-									<a href="<?= site_url("penduduk_log/cetak/$o") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
-									<a href="<?= site_url("penduduk_log/excel/$o") ?>" class="btn bg-navy btn-sm " title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
+									<a href="<?= site_url("penduduk_log/cetak/$o") ?>" class="btn btn-outline-info btn-sm " title="Cetak Data" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+									<a href="<?= site_url("penduduk_log/excel/$o") ?>" class="btn btn-outline-info btn-sm" title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
 									<a href="<?= site_url('penduduk/clear') ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
 								</div>
 							</div>
@@ -153,7 +153,7 @@
 																		<input type="checkbox" name="id_cb[]" value="<?= $data['id_log'] ?>" />
 																	</td>
 																	<td nowrap>
-																		<a href="<?= site_url("penduduk_log/edit/$p/$o/$data[id_log]") ?>" class="btn bg-orange btn-box btn-sm" title="Edit Log Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Edit Log Penduduk"><i class="fe fe-edit"></i></a>
+																		<a href="<?= site_url("penduduk_log/edit/$p/$o/$data[id_log]") ?>" class="btn btn-outline-info btn-sm" title="Edit Log Penduduk" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Edit Log Penduduk"><i class="fe fe-edit"></i></a>
 																		<a href="#" data-href="<?= site_url("penduduk_log/kembalikan_status/$data[id_log]") ?>" class="btn bg-olive btn-box btn-sm" title="Kembalikan Status" data-remote="false" data-toggle="modal" data-target="#confirm-status"><i class="fe fe-undo"></i></a>
 																	</td>
 																	<td>
@@ -242,7 +242,7 @@
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini?
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
 					<button type="button" class="btn btn-info btn-sm" id="ok-status"><i class='fe fe-check'></i> Simpan</button>
 				</a>

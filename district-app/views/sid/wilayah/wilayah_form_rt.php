@@ -48,7 +48,7 @@
 						</div>
 						<div class='card-footer'>
 							<div class="col-md-12">
-								<button type='reset' class='btn btn-danger btn-sm mb-1'><i class='fe fe-x'></i> Batal</button>
+								<button type='reset' class='btn btn-outline-danger btn-sm mb-1'><i class='fe fe-x'></i> Batal</button>
 								<button type='submit' class='btn btn-success btn-sm mb-1'><i class='fe fe-check'></i> Simpan</button>
 							</div>
 						</div>

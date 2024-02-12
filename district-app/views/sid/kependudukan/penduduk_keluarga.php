@@ -15,7 +15,7 @@
                         <?php endif; ?>
 					</ul>
 				</div>
-				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-book"></i> Kartu Keluarga</a>
+				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-outline-info btn-sm "><i class="fe fe-book"></i> Kartu Keluarga</a>
 				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Keluarga"><i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 				</a>
 			</div>
@@ -80,10 +80,10 @@
 										<tr>
 											<td class="padat"><?= ($key + 1); ?></td>
 											<td class="aksi">
-												<a href="<?= site_url("penduduk/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah Biodata Penduduk"><i class="fe fe-edit"></i></a>
+												<a href="<?= site_url("penduduk/form/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Ubah Biodata Penduduk"><i class="fe fe-edit"></i></a>
 												<a href="#" data-href="<?= site_url("keluarga/delete_anggota/$p/$o/$kk/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Pecah KK" data-toggle="modal" data-target="#confirm-status" data-body="Apakah Anda yakin ingin memecah Data Keluarga ini?"><i class="fe fe-cut"></i></a>
 												<a href="<?= site_url("keluarga/edit_anggota/$p/$o/$kk/$data[id]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Hubungan Keluarga" title="Ubah Hubungan Keluarga" class="btn bg-navy btn-box btn-sm"><i class='fe fe-link'></i></a>
-												<a href="#" data-href="<?= site_url("keluarga/keluarkan_anggota/$kk/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Bukan anggota keluarga ini" data-toggle="modal" data-target="#confirm-status" data-body="Apakah yakin akan dikeluarkan dari keluarga ini?"><i class="fe fe-times"></i></a>
+												<a href="#" data-href="<?= site_url("keluarga/keluarkan_anggota/$kk/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Bukan anggota keluarga ini" data-toggle="modal" data-target="#confirm-status" data-body="Apakah yakin akan dikeluarkan dari keluarga ini?"><i class="fe fe-times"></i></a>
 											</td>
 											<td><?= $data['nik']?></td>
 											<td nowrap width="45%"><?= strtoupper($data['nama'])?></td>
@@ -108,7 +108,7 @@
 						<div class='modal-body btn-info'>
 						</div>
 						<div class='modal-footer'>
-							<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+							<button type="button" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 							<a class='btn-ok'>
 								<button type="button" class="btn btn-info btn-sm" id="ok-delete"><i class='fe fe-check'></i> Simpan</button>
 							</a>

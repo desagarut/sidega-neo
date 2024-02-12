@@ -1,67 +1,41 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-<script>
 
-	$(function() {
-
-		var keyword = <?= $keyword?> ;
-
-		$("#cari").autocomplete( {
-
-			source: keyword,
-
-			maxShowItems: 10,
-
-		});
-
-	});
-
-</script>
-
-<div class="content-wrapper">
-  <section class="content-header">
-    <h1>Pengelolaan Lembaga</h1>
-    <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda'); ?>"><i class="fe fe-home"></i> Home</a></li>
-      <li class="active">Pengelolaan lembaga</li>
-    </ol>
-  </section>
-  <section class="content" id="maincontent">
+<main role="main" class="main-content">
+<div class="container-fluid">
+  <div class="row justify-content-center mb-2">
+    <div class="col">
+      <h5 class="mb-2 page-title">Pengelolaan Lembaga</h5>
+    </div>
+    <div class="col-auto">
+      <?php if ($this->CI->cek_hak_akses('h')): ?>
+      <a href="<?= site_url('lembaga/form'); ?>" title="Tambah lembaga Baru" class="btn btn-outline-info btn-sm"><i class="fe fe-plus"></i> Tambah lembaga Baru</a> <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("lembaga/delete_all"); ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
+      <?php endif;?>
+      <a href="<?= site_url("lembaga/dialog/cetak"); ?>" class="btn btn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data lembaga"><i class="fe fe-printer "></i> Cetak</a> <a href="<?= site_url("lembaga/dialog/unduh"); ?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data lembaga"><i class="fe fe-download"></i> Unduh</a> <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> </div>
+  </div>
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
   <div class="col-md-3">
-    <div id="bantuan" class="box box-info">
+    <div id="bantuan" class="card card-info">
       <div class="card-header">
-        <h3 class="box-title">Kategori lembaga</h3>
-        <div class="box-tools">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fe fe-plus"></i></button>
-        </div>
+        <h5 class="card-title">Kategori lembaga</h5>
       </div>
-      <div class="box-body no-padding">
+      <div class="card-body">
         <ul class="nav nav-pills nav-stacked">
-        <?php if ($this->CI->cek_hak_akses('h')): ?>
+          <?php if ($this->CI->cek_hak_akses('h')): ?>
           <?php foreach ($list_master AS $data): ?>
           <li <?= jecho($filter, $data['id'], 'class="active"'); ?>> <a href="<?= site_url("lembaga/to_master/$data[id]"); ?>">
             <?= $data['lembaga']; ?>
             </a> </li>
           <?php endforeach; ?>
-          <li> <a class="btn btn-boxbtn-outline-info btn-sm" href="<?= site_url("lembaga_master/clear"); ?>"><i class="fe fe-plus"></i> Kelola Kategori lembaga</a> </li>
-		<?php endif;?>        
+          <li> <a class="btn btn-outline-info btn-sm" href="<?= site_url("lembaga_master/clear"); ?>"><i class="fe fe-plus"></i> Kelola Kategori lembaga</a> </li>
+          <?php endif;?>
         </ul>
       </div>
     </div>
   </div>
   <div class="col-md-9">
   <div class="card shadow">
-  <div class="card-header"> 
-  	<?php if ($this->CI->cek_hak_akses('h')): ?>
-    <a href="<?= site_url('lembaga/form'); ?>" title="Tambah lembaga Baru" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah lembaga Baru</a> 
-    <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("lembaga/delete_all"); ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a> 
-    <?php endif;?>
-    <a href="<?= site_url("lembaga/dialog/cetak"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data lembaga"><i class="fe fe-printer "></i> Cetak</a> 
-    <a href="<?= site_url("lembaga/dialog/unduh"); ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data lembaga"><i class="fe fe-download"></i> Unduh</a> 
-    <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> 
-</div>
-  <div class="box-body">
+  <div class="card-body">
   <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
   <form id="mainform" name="mainform" action="" method="post">
     <div class="row">
@@ -90,9 +64,7 @@
           <tr>
             <th><input type="checkbox" id="checkall"/></th>
             <th>No</th>
-            
             <th>Aksi</th>
-            
             <th>Kode lembaga</th>
             <th width="50%"><?= url_order($o, "{$this->controller}/{$func}/$p", 1, 'Nama lembaga'); ?></th>
             <th><?= url_order($o, "{$this->controller}/{$func}/$p", 3, 'Ketua lembaga'); ?></th>
@@ -106,14 +78,10 @@
           <tr>
             <td class="padat"><input type="checkbox" name="id_cb[]" value="<?= $data['id']; ?>" /></td>
             <td class="padat"><?= ($key + $paging->offset + 1); ?></td>
-            
-            <td class="aksi">
-            	<a href="<?= site_url("lembaga/anggota/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian lembaga"><i class="fe fe-list-ol"></i></a> 
-                <?php if ($this->CI->cek_hak_akses('h')): ?>
-                <a href="<?= site_url("lembaga/form/$p/$o/$data[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data lembaga"><i class='fe fe-edit'></i></a> 
-                <a href="#" data-href="<?= site_url("lembaga/delete/$data[id]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
-                <?php endif;?>
-            </td>
+            <td class="aksi"><a href="<?= site_url("lembaga/anggota/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian lembaga"><i class="fe fe-list"></i></a>
+              <?php if ($this->CI->cek_hak_akses('h')): ?>
+              <a href="<?= site_url("lembaga/form/$p/$o/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Ubah Data lembaga"><i class='fe fe-edit'></i></a> <a href="#" data-href="<?= site_url("lembaga/delete/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
+              <?php endif;?></td>
             <td nowrap><?= $data['kode']; ?></td>
             <td nowrap><?= $data['nama']; ?></td>
             <td nowrap><?= $data['ketua']; ?></td>
@@ -137,6 +105,6 @@
 </div>
 </div>
 </form>
-</section>
 </div>
+</mai>
 <?php $this->load->view('global/confirm_delete'); ?>

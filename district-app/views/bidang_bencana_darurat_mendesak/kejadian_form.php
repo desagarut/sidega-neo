@@ -293,7 +293,7 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<button type='reset' class='btn btn-danger btn-sm'><i class='fe fe-times'></i> Batal</button>
+					<button type='reset' class='btn btn-outline-danger btn-sm '><i class='fe fe-times'></i> Batal</button>
 					<button type='submit' class='btn btn-info btn-sm pull-right confirm'><i class='fe fe-check'></i> Simpan</button>
 				</div>
 			</form>

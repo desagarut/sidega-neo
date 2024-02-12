@@ -69,7 +69,7 @@
 									</div>
 									<div class="box-footer">
 										<div class="col-xs-12">
-											<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+											<button type="reset" class="btn btn-outline-danger btn-sm btn-sm "><i class="fe fe-times"></i> Batal</button>
 											<button type="submit" class="btn btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fe fe-check"></i> Simpan</button>
 										</div>
 									</div>
@@ -99,7 +99,7 @@
 			<div class='modal-footer'>
 				<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="submit" class="btn btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
+					<button type="submit" class="btn btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

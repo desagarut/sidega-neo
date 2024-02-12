@@ -444,7 +444,7 @@
 						<label for="lokasi">Lokasi Tempat Tinggal </label>
 						<div class="row">
 							<div class="col-sm-12">
-								<a href="<?= site_url("penduduk/ajax_penduduk_maps/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn bg-navy btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-map-marker'></i> Cari Lokasi Tempat Tinggal</a>
+								<a href="<?= site_url("penduduk/ajax_penduduk_maps/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-map-marker'></i> Cari Lokasi Tempat Tinggal</a>
 							</div>
 						</div>
 					</div>

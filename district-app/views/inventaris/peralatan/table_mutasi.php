@@ -46,8 +46,8 @@
 																			<a href="<?= site_url('inventaris_peralatan/form_mutasi/'.$data->id); ?>" title="Mutasi Data" class="btn bg-olive btn-box btn-sm"><i class="fe fe-external-link-square"></i></a>
 																		<?php endif; ?>
 																		<a href="<?= site_url('inventaris_peralatan/view_mutasi/'.$data->id); ?>" title="Lihat Data" class="btn bg-info btn-box btn-sm"><i class="fe fe-eye"></i></a>
-																		<a href="<?= site_url('inventaris_peralatan/edit_mutasi/'.$data->id); ?>" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i> </a>
-																		<a href="#" data-href="<?= site_url("api_inventaris_peralatan/delete_mutasi/$data->id")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																		<a href="<?= site_url('inventaris_peralatan/edit_mutasi/'.$data->id); ?>" title="Edit Data"  class="btn btn-outline-info btn-sm"><i class="fe fe-edit"></i> </a>
+																		<a href="#" data-href="<?= site_url("api_inventaris_peralatan/delete_mutasi/$data->id")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																	</td>
 																  <td><?= $data->nama_barang;?></td>
 																	<td><?= $data->kode_barang;?><br><?= $data->register;?></td>
@@ -100,7 +100,7 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 												<button type="submit" class="btn btn-info btn-sm" id="form_download" name="form_download" data-dismiss="modal"><i class='fe fe-check'></i> Simpan</button>
 											</div>
 
@@ -143,7 +143,7 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 												<button type="submit" class="btn btn-info btn-sm" id="form_cetak" name="form_cetak"  data-dismiss="modal"><i class='fe fe-check'></i> Simpan</button>
 											</div>
 										</form>

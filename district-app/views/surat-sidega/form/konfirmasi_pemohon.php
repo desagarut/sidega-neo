@@ -31,10 +31,10 @@
 <div class="form-group konfirmasi tdk-permohonan tdk-periksa">
 	<label for="persyaratan"  class="col-sm-3 control-label">Dokumen Kelengkapan / Syarat</label>
 	<div class="col-sm-8">
-		<a href="<?= site_url("penduduk/dokumen_list/$individu[id]")?>" class="btn btn-success btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Daftar Dokumen">
+		<a href="<?= site_url("penduduk/dokumen_list/$individu[id]")?>" class="btn btn-success btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Daftar Dokumen">
 			<i class='fe fe-book'></i> Daftar Dokumen
 		</a>
-		<a href="<?= site_url("penduduk/dokumen/$individu[id]")?>" class="btn btn-primary btn-sm btn-sm " target="_blank">
+		<a href="<?= site_url("penduduk/dokumen/$individu[id]")?>" class="btn btn-primary btn-sm" target="_blank">
 			<i class="fe fe-gears"></i> Manajemen Dokumen
 		</a>
 	</div>

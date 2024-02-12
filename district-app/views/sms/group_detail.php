@@ -32,7 +32,7 @@
 					<div class="card shadow">
             <div class="card-header">
 							<a href="<?=site_url("sms/form_anggota/$grup[nama_grup]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Group"  class="btn btn-success btn-sm "><i class='fe fe-plus'></i> Tambah Anggota</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("sms/delete_all_anggota/$grup[id_grup]")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("sms/delete_all_anggota/$grup[id_grup]")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -72,7 +72,7 @@
 																		<td><input type="checkbox" name="id_cb[]" value="<?= $data['id_grup_kontak']?>" /></td>
 																		<td><?=$data['no']?></td>
 																		<td nowrap>
-																			<a href="#" data-href="<?=site_url("sms/anggota_delete/$data[id_grup_kontak]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?=site_url("sms/anggota_delete/$data[id_grup_kontak]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		</td>
                                     <td><a href="<?= site_url("penduduk/detail/$p/$o/$data[id]")?>"><?=$data['nama']?></a></td>
 																		<td><?=$data['sex']?></td>

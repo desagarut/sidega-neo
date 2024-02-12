@@ -25,12 +25,12 @@
           </div>
           <div class="col-auto">
             <?php if ($this->CI->cek_hak_akses('h')) : ?>
-              <a href="<?= site_url('kelompok/form'); ?>" title="Tambah kelompok Baru" class="btn btn-primary"><i class="fe fe-plus"></i> Tambah Kelompok Baru</a>
-              <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_all"); ?>')" class="btn btn-outline-danger hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+              <a href="<?= site_url('kelompok/form'); ?>" title="Tambah kelompok Baru" class="btn btn-outline-info btn-sm btn-sm"><i class="fe fe-plus"></i> Tambah Kelompok Baru</a>
+              <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_all"); ?>')" class="btn btn-outline-danger btn-sm btn-sm  hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
             <?php endif; ?>
-            <a href="<?= site_url("kelompok/dialog/cetak"); ?>" class="btn btn-outline-primary" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Kelompok"><i class="fe fe-printer "></i> Cetak</a>
-            <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn btn-outline-primary" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fe fe-download"></i> Unduh</a>
-            <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-info"><i class="fe fe-refresh"></i>Bersihkan</a>
+            <a href="<?= site_url("kelompok/dialog/cetak"); ?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Kelompok"><i class="fe fe-printer "></i> Cetak</a>
+            <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fe fe-download"></i> Unduh</a>
+            <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-outline-info btn-sm"><i class="fe fe-refresh"></i>Bersihkan</a>
           </div>
         </div>
         <form id="mainform" name="mainform" action="" method="post">
@@ -101,7 +101,7 @@
                                     <a href="<?= site_url("kelompok/anggota/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Kelompok"><i class="fe fe-list"></i></a>
                                     <?php if ($this->CI->cek_hak_akses('h')) : ?>
                                       <a href="<?= site_url("kelompok/form/$p/$o/$data[id]"); ?>" class="btn btn-outline-warning btn-sm" title="Ubah Data Kelompok"><i class='fe fe-edit'></i></a>
-                                      <a href="#" data-href="<?= site_url("kelompok/delete/$data[id]"); ?>" class="btn btn-outline-danger btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
+                                      <a href="#" data-href="<?= site_url("kelompok/delete/$data[id]"); ?>" class="btn btn-outline-danger btn-sm btn-sm " title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                                     <?php endif; ?>
                                   </td>
                                 </tr>

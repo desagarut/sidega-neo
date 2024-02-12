@@ -17,8 +17,8 @@
 									</div>
 								<?php endif; ?>
 							</div>
-							<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk") ?>" class="btn btn-outline-primary">Kartu Keluarga</a>
-							<a href="<?= site_url("keluarga/index/$p/$o") ?>" class="btn btn-outline-primary" title="Kembali Ke Daftar Keluarga"><i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
+							<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk") ?>" class="btn btn-outline-info btn-sm ">Kartu Keluarga</a>
+							<a href="<?= site_url("keluarga/index/$p/$o") ?>" class="btn btn-outline-info btn-sm " title="Kembali Ke Daftar Keluarga"><i class="fe fe-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 							</a>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 															<a href="<?= site_url("penduduk/form/$p/$o/$data[id]") ?>" class="btn bg-orange btn-warning btn-sm" title="Ubah Biodata Penduduk"><i class="fe fe-edit"></i></a>
 															<a href="#" data-href="<?= site_url("keluarga/delete_anggota/$p/$o/$kk/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Pecah KK" data-toggle="modal" data-target="#confirm-status" data-body="Apakah Anda yakin ingin memecah Data Keluarga ini?"><i class="fe fe-scissors"></i></a>
 															<a href="<?= site_url("keluarga/edit_anggota/$p/$o/$kk/$data[id]") ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Hubungan Keluarga" title="Ubah Hubungan Keluarga" class="btn bg-navy btn-box btn-sm"><i class='fe fe-link'></i></a>
-															<a href="#" data-href="<?= site_url("keluarga/keluarkan_anggota/$kk/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Bukan anggota keluarga ini" data-toggle="modal" data-target="#confirm-status" data-body="Apakah yakin akan dikeluarkan dari keluarga ini?"><i class="fe fe-times"></i></a>
+															<a href="#" data-href="<?= site_url("keluarga/keluarkan_anggota/$kk/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Bukan anggota keluarga ini" data-toggle="modal" data-target="#confirm-status" data-body="Apakah yakin akan dikeluarkan dari keluarga ini?"><i class="fe fe-times"></i></a>
 													-->
 														</td>
 													<?php endif; ?>

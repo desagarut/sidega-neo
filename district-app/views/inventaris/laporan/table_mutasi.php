@@ -18,10 +18,10 @@
 				<div class="col-md-9">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="#" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
+							<a href="#" class="btn btn-outline-info btn-sm" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
 								<i class="fe fe-printer"></i>Cetak
             	</a>
-							<a href="#" class="btn bg-navy btn-sm btn-sm "  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
+							<a href="#" class="btn btn-outline-info btn-sm"  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
 								<i class="fe fe-download"></i>Unduh
             	</a>
 						</div>
@@ -259,7 +259,7 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 												<button type="submit" class="btn btn-info btn-sm" id="form_download" name="form_download" data-dismiss="modal"><i class='fe fe-check'></i> Unduh</button>
 											</div>
 
@@ -302,7 +302,7 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 												<button type="submit" class="btn btn-info btn-sm" id="form_cetak" name="form_cetak"  data-dismiss="modal"><i class='fe fe-check'></i> Cetak</button>
 											</div>
 										</form>

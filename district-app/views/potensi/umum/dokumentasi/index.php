@@ -15,11 +15,11 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url('potensi_umum_dokumentasi/form') ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Data Baru">
+							<a href="<?= site_url('potensi_umum_dokumentasi/form') ?>" class="btn btn-success btn-sm" title="Tambah Data Baru">
 								<i class="fe fe-plus"></i>Tambah Data
 							</a>
-							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
-							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/unduh")?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fe fe-download "></i> Unduh</a>
+							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/cetak")?>" class="btn btn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/unduh")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fe fe-download "></i> Unduh</a>
 							<a href="<?= site_url('potensi_umum') ?>" class="btn btn-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-left"></i> Kembali </a>
 						</div>
 						<div class="box-body">
@@ -100,8 +100,8 @@
 				{'data': null},
 				{
 					'data': function(data) {
-						return `<a href="<?= site_url("potensi_umum_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i> </a>
-								<a href="#" data-href="<?= site_url("potensi_umum_dokumentasi/delete/{$potensi_umum->id}/"); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+						return `<a href="<?= site_url("potensi_umum_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn btn-outline-info btn-sm"><i class="fe fe-edit"></i> </a>
+								<a href="#" data-href="<?= site_url("potensi_umum_dokumentasi/delete/{$potensi_umum->id}/"); ?>${data.id}" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							   `
 					}, 'class': 'text-center'
 				},

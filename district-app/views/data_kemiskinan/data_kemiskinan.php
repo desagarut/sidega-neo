@@ -16,7 +16,7 @@
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="card shadow">
 				<div class="card-header">
-					<a href="<?=site_url('data_kemiskinan/form')?>" class="btn bg-olive btn-sm " title="Tambah data_kemiskinan Baru"><i class="fe fe-plus"></i> Tambah Kategori Data</a>
+					<a href="<?=site_url('data_kemiskinan/form')?>" class="btn btn-outline-info btn-sm" title="Tambah data_kemiskinan Baru"><i class="fe fe-plus"></i> Tambah Kategori Data</a>
 					<!--<a href="<?=site_url('data_kemiskinan/panduan')?>" class="btn btn-info btn-sm " title="Tambah Program Bantuan Baru"><i class="fe fe-question-circle"></i> Panduan</a>-->
 				</div>
 				<div class="box-body">
@@ -50,13 +50,13 @@
 											<tr>
 												<td class="padat"><?= ($key + 1); ?></td>
 												<td class="aksi">
-													<a href="<?= site_url("data_kemiskinan/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Data"><i class="fe fe-list-ol"></i></a>
-													<a href="<?= site_url("data_kemiskinan/form/$item[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
+													<a href="<?= site_url("data_kemiskinan/clear/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Rincian Data"><i class="fe fe-list"></i></a>
+													<a href="<?= site_url("data_kemiskinan/form/$item[id]"); ?>" class="btn btn-outline-info btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
 													<a
 														<?php if ($item['jml'] <= 0): ?>
 															href="#" data-href="<?= site_url("data_kemiskinan/hapus/$item[id]")?>" data-toggle="modal" data-target="#confirm-delete"
 														<?php endif; ?>
-														class="btn bg-maroon btn-box btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash-o"></i>
+														class="btn btn-outline-info btn-sm" title="Hapus" <?= jecho($item['jml'] > 0, true, 'disabled'); ?>><i class="fe fe-trash"></i>
 													</a>
 												</td>
 												<td class="padat"><?= $item['tahun']?></td>

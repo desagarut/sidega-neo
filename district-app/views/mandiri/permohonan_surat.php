@@ -86,7 +86,7 @@
                   <a href="<?= site_url("{$this->controller}/update_status/$data[id]/4")?>" title="Ubah SUDAH DIAMBIL" class="btn bg-blue btn-box btn-sm"><i class="fe fe-arrow-circle-right"></i> Ambil</a>
                   <?php endif; ?>
                   <?php if (in_array($data['status_id'], array(0, 1))): ?>
-                  <a href="#" data-href="<?=site_url("{$this->controller}/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+                  <a href="#" data-href="<?=site_url("{$this->controller}/delete/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                   <?php endif; ?></td>
               </tr>
               <?php endforeach; ?>

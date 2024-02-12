@@ -15,7 +15,7 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-social btn-flat btn-success btn-sm btn-sm " title="Tambah Data Baru">
+							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-outline-info btn-sm" title="Tambah Data Baru">
 								<i class="fe fe-plus"></i>Tambah Data
 							</a>
 							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/cetak")?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
@@ -106,7 +106,7 @@
 				{
 					'data': function(data) {
 						return `<a href="<?= site_url("pembangunan_dokumentasi/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-flat btn-sm"><i class="fe fe-edit"></i> </a>
-								<a href="#" data-href="<?= site_url("pembangunan_dokumentasi/delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+								<a href="#" data-href="<?= site_url("pembangunan_dokumentasi/delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							   `
 					}, 'class': 'text-center'
 				},

@@ -112,9 +112,9 @@
 			<div class="col-md-9">
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url("covid19/daftar/cetak/$filter_tgl/$filter_nik")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
+						<a href="<?= site_url("covid19/daftar/cetak/$filter_tgl/$filter_nik")?>" class="btn btn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 						</a>
-						<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik")?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
+						<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik")?>" class="btn btn-outline-info btn-sm" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 						</a>
 					</div>
 					<div class="box-body">
@@ -184,7 +184,7 @@
 																<td align="center" width="2"><?= $nomer; ?></td>
 																<td nowrap>
 																	<?php if ($this->CI->cek_hak_akses('h')): ?>
-																	<a href="#" data-href="<?= site_url("$url_delete_front/$item[id]/$url_delete_rare")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>																	<?php endif; ?>
+																	<a href="#" data-href="<?= site_url("$url_delete_front/$item[id]/$url_delete_rare")?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>																	<?php endif; ?>
 																</td>
 																<td><?= "H+".$item["date_diff"] ?></td>
 																<td><?= $item["tanggal_datang"] ?></td>

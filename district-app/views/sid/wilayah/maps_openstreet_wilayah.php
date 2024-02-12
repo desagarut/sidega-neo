@@ -51,7 +51,7 @@
 												<div class="input-group-addon input-sm"> <i></i> </div>
 											</div>
 										</div>
-										<button type='reset' class='btn btn-danger btn-sm mb-1' id="resetme"><i class='fe fe-x'></i> Reset</button>
+										<button type='reset' class='btn btn-outline-danger btn-sm mb-1' id="resetme"><i class='fe fe-x'></i> Reset</button>
 										<button type='submit' class='btn btn-success btn-sm mb-1'><i class='fe fe-check'></i> Simpan</button>
 										<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fe fe-map'></i> Ubah Wilayah</a>&nbsp;-->
 									</div>

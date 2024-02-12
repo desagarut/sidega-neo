@@ -9,7 +9,7 @@
 						<h5 class="page-title">Master Kelompok</h1>
 					</div>
 					<div class="col-auto">
-						<a href="<?= site_url() ?>kelompok" class="btn btn-outline-primary btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar Kelompok</a>
+						<a href="<?= site_url() ?>kelompok" class="btn btn-outline-info btn-sm btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar Kelompok</a>
 					</div>
 				</div>
 				<div class="row">
@@ -60,7 +60,7 @@
 								</div>
 								<div class="card-footer">
 									<div class="col-md-12 text-right">
-										<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-x"></i> Batal</button>
+										<button type="reset" class="btn btn-outline-danger btn-sm btn-sm "><i class="fe fe-x"></i> Batal</button>
 										<button type="submit" class="btn btn-info btn-sm"><i class="fe fe-check"></i> Simpan</button>
 									</div>
 								</div>

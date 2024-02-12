@@ -55,12 +55,12 @@
                       <th width="150px">Status Usulan</th>
                       <td width="20px">:</td>
                       <td><?php if ($musdus->status == "0") { ?>
-                          <button class="btn btn-danger btn-sm" title="Tidak Aktif"> Tidak Aktif</button>
+                          <button class="btn btn-outline-danger btn-sm btn-sm " title="Tidak Aktif"> Tidak Aktif</button>
                         <?php } else { ?>
                           <button class="btn btn-success btn-sm" title="Aktif"> Aktif</button>
                         <?php } ?>
                         <?php if ($musdus->status_usulan == "0") { ?>
-                          <button class="btn btn-danger btn-sm" title="Belum Diusulkan"> Belum Diusulkan</button>
+                          <button class="btn btn-outline-danger btn-sm btn-sm " title="Belum Diusulkan"> Belum Diusulkan</button>
                         <?php } else { ?>
                           <button class="btn btn-success btn-sm" title="Sudah Diusulkan"> Sudah Diusulkan</button>
                         <?php } ?>

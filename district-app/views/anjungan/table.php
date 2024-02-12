@@ -14,7 +14,7 @@
 			<div class="col-md-12">
 				<div class="card shadow">
 	        <div class="card-header">
-						<a href="<?=site_url('anjungan/form')?>" class="btn bg-olive btn-sm " title="Tambah Anjungan Layanan Mandiri"><i class="fe fe-plus"></i> Tambah Anjungan Layanan Mandiri</a>
+						<a href="<?=site_url('anjungan/form')?>" class="btn btn-outline-info btn-sm" title="Tambah Anjungan Layanan Mandiri"><i class="fe fe-plus"></i> Tambah Anjungan Layanan Mandiri</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -34,13 +34,13 @@
 												<tr>
 													<td class="padat"><?= $i + 1 ?></td>
 													<td class="aksi">
-														<a href="<?= site_url("anjungan/form/$data[id]"); ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
+														<a href="<?= site_url("anjungan/form/$data[id]"); ?>" class="btn btn-outline-info btn-sm" title="Ubah Data"><i class='fe fe-edit'></i></a>
 														<?php if ($data['status'] == '1'): ?>
 															<a href="<?= site_url("anjungan/lock/$data[id]/2")?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
 														<?php else: ?>
 															<a href="<?= site_url("anjungan/lock/$data[id]/1")?>" class="btn bg-navy btn-box btn-sm"  title="Aktifkan"><i class="fe fe-lock">&nbsp;</i></a>
 														<?php endif ?>
-														<a href="#" data-href="<?=site_url('anjungan/delete/'.$data[id])?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="#" data-href="<?=site_url('anjungan/delete/'.$data[id])?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													</td>
 													<td><?= $data['ip_address'] ?></td>
 													<td><?= $data['keterangan']; ?></td>

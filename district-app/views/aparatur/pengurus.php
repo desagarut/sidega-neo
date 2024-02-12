@@ -8,12 +8,12 @@
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
 						<a href="<?= site_url('pengurus/form') ?>"><button type="button" class="btn btn-primary btn-sm mb-1"><span class="fe fe-filter fe-12 mr-2"></span>Create</button></a>
 						<a href="#confirm-delete" class="hapus-terpilih" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("pengurus/delete_all") ?>')">
-							<button type="button" class="btn btn-outline-danger btn-sm mb-1"><span class="fe fe-trash fe-12 mr-2"></span>Hapus Data Terpilih</button>
+							<button type="button" class="btn btn-outline-danger btn-sm btn-sm  mb-1"><span class="fe fe-trash fe-12 mr-2"></span>Hapus Data Terpilih</button>
 						</a>
 					<?php endif; ?>
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
 						<div class="btn-group btn-group-vertical ">
-							<a class="btn btn-outline-primary mb-1 btn-sm " data-toggle="dropdown"> Aksi Data Terpilih</a>
+							<a class="btn btn-outline-info btn-sm mb-1 btn-sm " data-toggle="dropdown"> Aksi Data Terpilih</a>
 							<ul class="dropdown-menu" role="menu">
 
 								<li>
@@ -27,15 +27,15 @@
 						</div>
 					<?php endif; ?>
 					<a href="<?= site_url("pengurus/dialog/cetak") ?>" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data">
-						<button type="button" class="btn btn-outline-primary btn-sm mb-1"><span class="fe fe-printer fe-12 mr-2"></span>Cetak</button>
+						<button type="button" class="btn btn-outline-info btn-sm btn-sm mb-1"><span class="fe fe-printer fe-12 mr-2"></span>Cetak</button>
 					</a>
 					<a href="<?= site_url("pengurus/dialog/unduh") ?>" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data">
-						<button type="button" class="btn btn-outline-primary btn-sm mb-1"><span class="fe fe-download fe-12 mr-2"></span>Unduh</button>
+						<button type="button" class="btn btn-outline-info btn-sm btn-sm mb-1"><span class="fe fe-download fe-12 mr-2"></span>Unduh</button>
 					</a>
 					<?php if ($this->CI->cek_hak_akses('h')) : ?>
 						<div class="btn-group btn-group-vertical">
 							<a data-toggle="dropdown">
-								<button type="button" class="btn btn-outline-primary btn-sm mb-1"><span class="fe fe-square fe-12 mr-2"></span>Bagan Organisasi</button>
+								<button type="button" class="btn btn-outline-info btn-sm btn-sm mb-1"><span class="fe fe-square fe-12 mr-2"></span>Bagan Organisasi</button>
 							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>

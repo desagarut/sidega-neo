@@ -22,10 +22,10 @@
 				<div class="col-md-8 col-lg-9">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="<?= site_url("analisis_statistik_jawaban/cetak2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
+							<a href="<?= site_url("analisis_statistik_jawaban/cetak2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-outline-info btn-sm" title="Cetak Data" target="_blank">
 								<i class="fe fe-printer"></i>Cetak
             	</a>
-						  <a href="<?= site_url("analisis_statistik_jawaban/excel2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn bg-navy btn-sm btn-sm " title="Unduh" target="_blank">
+						  <a href="<?= site_url("analisis_statistik_jawaban/excel2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-outline-info btn-sm" title="Unduh" target="_blank">
 								<i class="fe fe-download"></i>Unduh
             	</a>
 							<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>

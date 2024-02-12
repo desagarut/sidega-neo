@@ -30,10 +30,10 @@
 									</li>
 								</ul>
                             </div>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("lembaga/delete_anggota_all/$lembaga[id]"); ?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("lembaga/delete_anggota_all/$lembaga[id]"); ?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 							<?php endif;?>
-                            <a href="<?= site_url("lembaga/dialog_anggota/cetak/$lembaga[id]"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Daftar Anggota lembaga <?= $lembaga['nama']; ?>"><i class="fe fe-printer"></i> Cetak</a>
-							<a href="<?= site_url("lembaga/dialog_anggota/unduh/$lembaga[id]"); ?>" class="btn bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Daftar Anggota lembaga <?= $lembaga['nama']; ?>"><i class="fe fe-download"></i> Unduh</a>
+                            <a href="<?= site_url("lembaga/dialog_anggota/cetak/$lembaga[id]"); ?>" class="btn btn-outline-info btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Daftar Anggota lembaga <?= $lembaga['nama']; ?>"><i class="fe fe-printer"></i> Cetak</a>
+							<a href="<?= site_url("lembaga/dialog_anggota/unduh/$lembaga[id]"); ?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Daftar Anggota lembaga <?= $lembaga['nama']; ?>"><i class="fe fe-download"></i> Unduh</a>
 							<a href="<?= site_url("lembaga"); ?>" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke Daftar lembaga</a>
 						</div>
 						<div class="box-body">
@@ -100,8 +100,8 @@
 													<td class="padat"><?= ($key + 1) ?></td>
 													<?php if ($this->CI->cek_hak_akses('h')): ?>
                                                     <td class="padat">
-														<a href="<?= site_url("lembaga/form_anggota/$lembaga[id]/$data[id_penduduk]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah Anggota" ><i class="fe fe-edit"></i></a>
-														<a href="#" data-href="<?= site_url("lembaga/delete_anggota/$lembaga[id]/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="<?= site_url("lembaga/form_anggota/$lembaga[id]/$data[id_penduduk]")?>" class="btn btn-outline-info btn-sm" title="Ubah Anggota" ><i class="fe fe-edit"></i></a>
+														<a href="#" data-href="<?= site_url("lembaga/delete_anggota/$lembaga[id]/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													</td>
                                                     <?php endif; ?>
 													<td class="text-center">

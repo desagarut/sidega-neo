@@ -39,7 +39,7 @@ Anda belum memiliki lapak, masukan nama toko anda untuk membuatnya,
 						</div>
 					</div>
 				</div>
-				<button class="btn btn-primary" type="submit">Submit</button>
+				<button class="btn btn-outline-info btn-sm btn-sm" type="submit">Submit</button>
 			</form>
 		</div>
 	</div>

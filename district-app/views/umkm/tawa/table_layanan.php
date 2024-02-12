@@ -29,9 +29,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-warning">
-            <div class="card-header"> <a href="<?= site_url("tawa/form_layanan/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah layanan"> <i class="fe fe-plus"></i> Tambah layanan </a>
+            <div class="card-header"> <a href="<?= site_url("tawa/form_layanan/$gallery") ?>" class="btn btn-success btn-sm" title="Tambah layanan"> <i class="fe fe-plus"></i> Tambah layanan </a>
               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tawa/delete_all_layanan/$gallery") ?>')" class="btn btn-danger btn-sm hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tawa/delete_all_layanan/$gallery") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
               <?php endif; ?>
               <a href="<?= site_url("tawa") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali </a>
             </div>
@@ -307,7 +307,7 @@
                                   <?php endif ?>
                                   <br />
                                   <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                    <a href="<?= site_url("tawa/form_layanan/$gallery/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a> <a href="#" data-href="<?= site_url("tawa/delete_layanan/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+                                    <a href="<?= site_url("tawa/form_layanan/$gallery/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a> <a href="#" data-href="<?= site_url("tawa/delete_layanan/$gallery/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                                   <?php endif; ?>
                                 </td>
                                 <td align="center"><label data-rel="popover" data-content="<img width=200 height=200 src=<?= AmbilGaleri($data['gambar'], 'kecil') ?>>"> <img width=50 height=50 class="img-circle" src=<?= AmbilGaleri($data['gambar'], 'kecil') ?>></label></td>

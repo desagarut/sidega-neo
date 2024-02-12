@@ -24,10 +24,10 @@
 			<div class="col-md-10">
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url("covid19/form_pemudik") ?>" title="Tambah Data Warga" class="btn bg-olive btn-sm "><i class="fe fe-plus"></i> Tambah Warga Pemudik</a>
-						<a href="<?= site_url("covid19/daftar/cetak") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
+						<a href="<?= site_url("covid19/form_pemudik") ?>" title="Tambah Data Warga" class="btn btn-outline-info btn-sm"><i class="fe fe-plus"></i> Tambah Warga Pemudik</a>
+						<a href="<?= site_url("covid19/daftar/cetak") ?>" class="btn btn-outline-info btn-sm " title="Cetak" target="_blank"><i class="fe fe-printer"></i> Cetak
 						</a>
-						<a href="<?= site_url("covid19/daftar/unduh") ?>" class="btn bg-navy btn-sm " title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
+						<a href="<?= site_url("covid19/daftar/unduh") ?>" class="btn btn-outline-info btn-sm" title="Unduh" target="_blank"><i class="fe fe-download"></i> Unduh
 						</a>
 					</div>
 					<div class="card-body">
@@ -68,7 +68,7 @@
 																	<td nowrap>
 																		<?php if ($this->CI->cek_hak_akses('h')) : ?>
 																			<a href="<?= site_url("covid19/edit_pemudik_form/$item[id]") ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data Pemudik" title="Ubah Data Pemudik" class="btn btn-warning btn-box btn-sm"><i class="fe fe-edit"></i></a>
-																			<a href="#" data-href="<?= site_url("covid19/hapus_pemudik/$item[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("covid19/hapus_pemudik/$item[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		<?php endif; ?>
 																	</td>
 																	<td><?= $item["terdata_nama"] ?></td>

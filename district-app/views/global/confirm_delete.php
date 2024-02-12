@@ -14,7 +14,7 @@
 				<div class='modal-footer'>
 					<button type="button" class="btn btn-social btn-flat btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 					<a class='btn-ok'>
-						<button type="button" class="btn btn-social btn-flat btn-danger btn-sm" id="ok-delete"><i class='fe fe-trash-o'></i> Hapus</button>
+						<button type="button" class="btn btn-social btn-flat btn-danger btn-sm" id="ok-delete"><i class='fe fe-trash'></i> Hapus</button>
 					</a>
 				</div>
 			</div>

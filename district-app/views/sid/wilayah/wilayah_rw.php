@@ -12,9 +12,9 @@
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
 							<a href="<?= site_url("sid_core/form_rw/$id_dusun") ?>" class="btn btn-primary btn-sm mb-2 text-light" title="Tambah Data"><i class="fe fe-plus fe-16 mr-2 text-light"></i> Tambah</a>
 						<?php endif; ?>
-						<a href="<?= site_url("sid_core/cetak_rw/$id_dusun") ?>" class="btn btn-outline-primary btn-sm mb-2" title="Cetak Data" target="_blank"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
-						<a href="<?= site_url("sid_core/excel_rw/$id_dusun") ?>" class="btn btn-outline-primary btn-sm mb-2" title="Unduh Data" target="_blank"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
-						<a href="<?= site_url("sid_core") ?>" class="btn btn-outline-primary btn-sm mb-2" title="Kembali Ke Daftar RW"><i class="fe fe-arrow-left fe-16 mr-2"></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun) ?></a>
+						<a href="<?= site_url("sid_core/cetak_rw/$id_dusun") ?>" class="btn btn-outline-info btn-sm btn-sm mb-2" title="Cetak Data" target="_blank"><i class="fe fe-printer fe-16 mr-2"></i> Cetak</a>
+						<a href="<?= site_url("sid_core/excel_rw/$id_dusun") ?>" class="btn btn-outline-info btn-sm btn-sm mb-2" title="Unduh Data" target="_blank"><i class="fe fe-download fe-16 mr-2"></i> Unduh</a>
+						<a href="<?= site_url("sid_core") ?>" class="btn btn-outline-info btn-sm btn-sm mb-2" title="Kembali Ke Daftar RW"><i class="fe fe-arrow-left fe-16 mr-2"></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun) ?></a>
 					</div>
 				</div>
 				<div class="card shadow">

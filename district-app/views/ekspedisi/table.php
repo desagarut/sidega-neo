@@ -9,8 +9,8 @@
 </script>
 <div class="card shadow mt-2">
 	<div class="card-header">
-		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o") ?>" class="btn btn-outline-primary btn-sm mr-1" title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o") ?>" title="Unduh Buku Ekspedisi" class="btn btn-outline-primary btn-sm mr-1" title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fe fe-download"></i> Unduh</a>
+		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o") ?>" class="btn btn-outline-info btn-sm btn-sm mr-1" title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o") ?>" title="Unduh Buku Ekspedisi" class="btn btn-outline-info btn-sm btn-sm mr-1" title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 	<div class="card-body">
 		<div class="row">
@@ -56,7 +56,7 @@
 										<tr>
 											<td class="nostretch"><?= $indeks + 1 ?></td>
 											<td class="nostretch">
-												<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data"><i class="fe fe-edit"></i></a>
+												<a href="<?= site_url("{$this->controller}/form/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Ubah Data"><i class="fe fe-edit"></i></a>
 												<?php if ($data['tanda_terima']) : ?>
 													<a href='<?= site_url("{$this->controller}/unduh_tanda_terima/$data[id]") ?>' class="btn btn-outline-info btn-sm" title="Unduh Tanda Terima" target="_blank"><i class="fe fe-download"></i></a>
 												<?php endif; ?>

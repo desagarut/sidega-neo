@@ -28,7 +28,7 @@
 										<div class="col-md-9">
 											<a href="<?= site_url('pembangunan/hasil_prioritas_tk_desa') ?>" class="btn btn-success btn-sm mb-2 mr-2" title="Daftar Penentuan Prioritas"><i class="feather icon-plus"></i> Hasil Penentuan Prioritas</a>
 											<a href="<?= site_url("pembangunan/dialog_daftar/{$desa_musdus->id}/cetak") ?>" class="btn btn-info btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" title="Cetak Data <?= $desa_musdus->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
-											<a href="<?= site_url("pembangunan/dialog_daftar/{$desa_musdus->id}/unduh") ?>" class="btn bg-navy btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_musdus->judul ?> "><i class="fe fe-download "></i> Unduh</a>
+											<a href="<?= site_url("pembangunan/dialog_daftar/{$desa_musdus->id}/unduh") ?>" class="btn btn-outline-info btn-smmb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_musdus->judul ?> "><i class="fe fe-download "></i> Unduh</a>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group input-group-sm pull-right">

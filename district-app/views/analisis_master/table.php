@@ -48,11 +48,11 @@
 
 						<a href="<?= site_url('analisis_master/form')?>" class="btn btn-success btn-sm " title="Tambah Analisis Baru"><i class="fe fe-plus"></i> Tambah Analisis Baru</a>
 
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("analisis_master/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("analisis_master/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 
-						<a href="<?= site_url('analisis_master/import_analisis')?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Impor Analisis" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Analisis"><i class="fe fe-upload"></i> Impor Analisis</a>
+						<a href="<?= site_url('analisis_master/import_analisis')?>" class="btn btn-outline-info btn-sm " title="Impor Analisis" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Analisis"><i class="fe fe-upload"></i> Impor Analisis</a>
 
-						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
+						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 
 					</div>
 
@@ -200,13 +200,13 @@
 
 																	<td nowrap>
 
-																		<a href="<?= site_url("analisis_master/menu/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Rincian Analisis"><i class="fe fe-list-ol"></i></a>
+																		<a href="<?= site_url("analisis_master/menu/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Rincian Analisis"><i class="fe fe-list"></i></a>
 
-																		<a href="<?= site_url("analisis_master/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class='fe fe-edit'></i></a>
+																		<a href="<?= site_url("analisis_master/form/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Ubah Data"><i class='fe fe-edit'></i></a>
 
 																		<?php if ($data['jenis']!=1): ?>
 
-																			<a href="#" data-href="<?= site_url("analisis_master/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("analisis_master/delete/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 
 																		<?php endif; ?>
 

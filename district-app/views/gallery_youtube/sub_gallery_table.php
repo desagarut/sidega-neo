@@ -25,11 +25,11 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="<?= site_url("gallery_youtube/form_sub_gallery/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Album">
+							<a href="<?= site_url("gallery_youtube/form_sub_gallery/$gallery") ?>" class="btn btn-success btn-sm" title="Tambah Album">
 								<i class="fe fe-plus"></i> Add Video
 							</a>
 							<?php if ($this->CI->cek_hak_akses('h')) : ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_youtube/delete_all_sub_gallery/$gallery") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery_youtube/delete_all_sub_gallery/$gallery") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
 							<a href="<?= site_url("gallery_youtube") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album">
 								<i class="fe fe-arrow-circle-left "></i>Back
@@ -124,7 +124,7 @@
 																				<?php elseif ($data['enabled'] == '1') : ?>
 																					<a href="<?= site_url("gallery_youtube/gallery_unlock/" . $data['id'] . "/$gallery") ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Gambar"><i class="fe fe-unlock"></i></a>
 																				<?php endif ?>
-																				<a href="#" data-href="<?= site_url("gallery_youtube/delete_sub_gallery/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																				<a href="#" data-href="<?= site_url("gallery_youtube/delete_sub_gallery/$gallery/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																			<?php endif; ?>
 																		</td>
 																	</tr>

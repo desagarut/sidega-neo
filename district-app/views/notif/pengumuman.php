@@ -40,7 +40,7 @@
 					<?php if ($jenis == 'pengumuman'): ?>
 						<button type="reset" data-dismiss="modal" id="btnSetuju" class="btn btn-warning btn-sm"><i class='fe fe-sign-out'></i> OK</button>
 					<?php else: ?>
-						<button type="reset" data-dismiss="modal" id="btnTidak" class="btn btn-danger btn-sm"><i class='fe fe-sign-out'></i> Tidak</button>
+						<button type="reset" data-dismiss="modal" id="btnTidak" class="btn btn-outline-danger btn-sm btn-sm "><i class='fe fe-sign-out'></i> Tidak</button>
 						<button  type="submit" id="btnSetuju" class="btn btn-warning btn-sm"><i class='fe fe-check'></i> Setuju</button>
 					<?php endif; ?>
 				</div>

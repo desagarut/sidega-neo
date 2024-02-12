@@ -34,7 +34,7 @@
 										<div class="col-sm-3">
 											<a href="<?= site_url('pembangunan_program_masuk_desa/form') ?>" class="btn btn-success btn-sm mb-2 mr-2" title="Tambah Data Baru"><i class="feather icon-plus"></i> Tambah</a>
 											<a href="#" class="btn btn-info btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" title="Cetak Data <?= $desa_musdus->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
-											<a href="#" class="btn bg-navy btn-sm mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_musdus->judul ?> "><i class="fe fe-download "></i> Unduh</a>
+											<a href="#" class="btn btn-outline-info btn-smmb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data " title="Unduh Data <?= $desa_musdus->judul ?> "><i class="fe fe-download "></i> Unduh</a>
 										</div>
 										<div class="col-sm-2">
 											<select class="form-control input-sm select2" disabled hidden id="tahun" name="tahun" style="width:100%;">

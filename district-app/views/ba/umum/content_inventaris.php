@@ -13,10 +13,10 @@
 					</select>
 				</div>
 				<div class="col-sm-10">
-					<a href="#" class="btn btn-social btn-flatbtn-outline-info btn-sm btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
+					<a href="#" class="btn btn-social btn-flatbtn-outline-info btn-sm" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
 						<i class="fe fe-printer"></i>Cetak
 					</a>
-					<a href="#" class="btn btn-social btn-flat bg-navy btn-sm btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
+					<a href="#" class="btn btn-social btn-flat bg-navy btn-sm" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
 						<i class="fe fe-download"></i>Unduh
 					</a>
 				</div>

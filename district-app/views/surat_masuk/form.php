@@ -9,7 +9,7 @@
 						<h5 class="page-title">Disposisi Surat Masuk</h5>
 					</div>
 					<div class="col-auto">
-						<a href="<?= site_url("surat_masuk") ?>" class="btn btn-outline-primary mb-1" title="Kembali Ke Daftar Wilayah">
+						<a href="<?= site_url("surat_masuk") ?>" class="btn btn-outline-info btn-sm mb-1" title="Kembali Ke Daftar Wilayah">
 							<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Surat Masuk
 						</a>
 					</div>

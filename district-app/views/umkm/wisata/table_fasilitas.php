@@ -29,7 +29,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box box-warning">
-            <div class="card-header"> <a href="<?= site_url("wisata") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a> </div>
+            <div class="card-header"> <a href="<?= site_url("wisata") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm" title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a> </div>
           </div>
 
           <div class="row">
@@ -46,7 +46,7 @@
           <div class="box box-warning">
             <div class="card-header"> 
               <a href="<?= site_url("wisata") ?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Album"> <i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Wisata </a>
-              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Produk"> <i class="fe fe-plus"></i> Tambah Layanan </a>
+              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm" title="Tambah Produk"> <i class="fe fe-plus"></i> Tambah Layanan </a>
             </div>
           </div>
           <div class="row">
@@ -285,9 +285,9 @@
                                 <option value="2" <?php if ($filter == 2) : ?>selected<?php endif ?>>Tidak Aktif</option>
                               </select>
                               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all_fasilitas/$gallery") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+                                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all_fasilitas/$gallery") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
                               <?php endif; ?>
-                              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a>
+                              <a href="<?= site_url("wisata/form_fasilitas/$gallery") ?>" class="btn btn-success btn-sm" title="Tambah Fasilitas"> <i class="fe fe-plus"></i> Tambah Fasilitas </a>
                             </div>
                             <div class="col-sm-6">
                               <div class="box-tools">
@@ -348,7 +348,7 @@
                                           <?php endif ?>
                                           <br />
                                           <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                                            <a href="<?= site_url("wisata/form_fasilitas/$gallery/$data[id]") ?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a> <a href="#" data-href="<?= site_url("wisata/delete_fasilitas/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+                                            <a href="<?= site_url("wisata/form_fasilitas/$gallery/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Ubah"><i class="fe fe-edit"></i></a> <a href="#" data-href="<?= site_url("wisata/delete_fasilitas/$gallery/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                                           <?php endif; ?>
                                         </td>
                                         <td class="text-center"><label data-rel="popover" data-content="<img width=200 height=200 src=<?= AmbilGaleri($data['gambar'], 'kecil') ?>>"> <img width=50 height=50 class="img-circle" src=<?= AmbilGaleri($data['gambar'], 'kecil') ?>></label></td>

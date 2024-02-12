@@ -26,7 +26,7 @@
 				<div class="col-md-12">
 					<div class="card shadow">
 						<div class="card-header">
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -100,7 +100,7 @@
 																			<?php elseif ($data['status'] == '1'): ?>
 																			 <a href="<?= site_url('komentar/komentar_unlock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Komentar"><i class="fe fe-unlock"></i></a>
 																			<?php endif ?>
-																			<a href="#" data-href="<?= site_url("komentar/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("komentar/delete/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		</td>
 																		<td nowrap><?= $data['owner']?></td>
 																		<td><?= $data['komentar']?></td>
@@ -175,7 +175,7 @@
 										<div class='modal-footer'>
 											<button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 											<a class='btn-ok'>
-												<button type="button" class="btn btn-danger btn-sm" id="ok-delete"><i class='fe fe-file-archive-o'></i> Arsipkan</button>
+												<button type="button" class="btn btn-outline-danger btn-sm btn-sm " id="ok-delete"><i class='fe fe-file-archive-o'></i> Arsipkan</button>
 											</a>
 										</div>
 									</div>

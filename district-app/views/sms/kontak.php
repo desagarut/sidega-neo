@@ -32,7 +32,7 @@
 					<div class="card shadow">
             <div class="card-header">
 							<a href="<?= site_url('sms/form_kontak/0')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Kontak"  class="btn btn-success btn-sm "><i class='fe fe-plus'></i> Tambah Kontak</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("sms/delete_all_kontak")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("sms/delete_all_kontak")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -72,8 +72,8 @@
 																		<td><input type="checkbox" name="id_cb[]" value="<?=$data['id_kontak']?>" /></td>
 																		<td><?=$data['no']?></td>
 																		<td nowrap>
-																			<a href="<?=site_url("sms/form_kontak/$data[id_kontak]")?>" class="btn bg-orange btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data"><i class="fe fe-edit"></i></a>
-																			<a href="#" data-href="<?=site_url("sms/kontak_delete/$data[id_kontak]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="<?=site_url("sms/form_kontak/$data[id_kontak]")?>" class="btn btn-outline-info btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Data" title="Ubah Data"><i class="fe fe-edit"></i></a>
+																			<a href="#" data-href="<?=site_url("sms/kontak_delete/$data[id_kontak]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                                     </td>
                                     <td><a href="<?=site_url("penduduk/detail/$p/$o/$data[id_pend]")?>"><?=$data['nama']?></a></td>
 																		<td><?=$data['sex']?></td>

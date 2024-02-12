@@ -1,3 +1,5 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
+
 <style type="text/css">
 	.italic {font-style: italic;}
 </style>
@@ -41,7 +43,7 @@
 				<th class="text-center italic">11</th>
 				<th class="text-center italic">12</th>
 			</tr
-		</thead>
+		></thead>
 		<tbody>
 			<tr>
 				<td class="no_urut">1</td>

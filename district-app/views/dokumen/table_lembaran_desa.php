@@ -25,10 +25,10 @@ $(document).ready(function()
 </script>
 <div class="card shadow">
   <div class="card-header">
-		<a href="<?= site_url("{$this->controller}/dialog_daftar/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm "  title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
+		<a href="<?= site_url("{$this->controller}/dialog_daftar/cetak")?>" class="btn btn-outline-info btn-sm"  title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
 			<i class="fe fe-printer"></i>Cetak
   	</a>
-		<a href="<?= site_url("{$this->controller}/dialog_daftar/unduh")?>" class="btn bg-navy btn-sm btn-sm "  title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
+		<a href="<?= site_url("{$this->controller}/dialog_daftar/unduh")?>" class="btn btn-outline-info btn-sm"  title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
 			<i class="fe fe-download"></i>Unduh
   	</a>
 	</div>

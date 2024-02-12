@@ -94,7 +94,7 @@
 													<td class="aksi">
 														<a href="<?= site_url("mandiri/ajax_pin/$data[id_pend]"); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ganti PIN Warga" title="Ganti PIN Warga" class="btn btn-box btn-primary btn-sm"><i class="fe fe-key"></i></a>
 														<a href="<?= site_url("mandiri/ajax_hp/$data[id_pend]"); ?>" data-remote="false"  data-toggle="modal" data-target="#modalBox"  data-title="<?= $data['telepon'] ? 'Ubah' : 'Tambah' ?> Telepon Warga" title="<?= $data['telepon'] ? 'Ubah' : 'Tambah' ?> Telepon" class="btn <?= $data['telepon'] ? 'bg-teal' : 'bg-green' ?> btn-box btn-sm" ><i class="fe fe-phone"></i></a>
-														<a href="#" data-href="<?= site_url("mandiri/delete/$data[id_pend]"); ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="#" data-href="<?= site_url("mandiri/delete/$data[id_pend]"); ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													</td>
 													<td><?= $data['nik']; ?></td>
 													<td><?= $data['nama']; ?></td>

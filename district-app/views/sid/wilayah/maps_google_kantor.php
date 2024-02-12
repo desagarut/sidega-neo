@@ -94,7 +94,7 @@
                                             <div class="col-auto">
                                                 <?php if ($this->CI->cek_hak_akses('h')) : ?>
                                                     <a href="#" class="btn btn-success btn-sm mb-1 text-light" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
-                                                    <button type="reset" class="btn btn-danger btn-sm mb-1" data-dismiss="modal"><i class='fe fe-x'></i> Tutup</button>
+                                                    <button type="reset" class="btn btn-outline-danger btn-sm btn-sm mb-1" data-dismiss="modal"><i class='fe fe-x'></i> Tutup</button>
                                                     <button type="submit" class="btn btn-info btn-sm mb-1"><i class='fe fe-check'></i> Simpan</button>
                                                 <?php endif; ?>
                                                 <a href="<?= site_url('identitas_desa') ?>" class="btn btn-sm btn-outline-info mb-1" title="Kembali"><i class="fe fe-arrow-left"></i> Kembali ke Identitas Desa</a>

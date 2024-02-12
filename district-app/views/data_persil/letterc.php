@@ -44,16 +44,16 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-										<a href='<?= site_url("letterc/create") ?>' class="btn bg-green btn-sm btn-sm " title="Cetak Data">
+										<a href='<?= site_url("letterc/create") ?>' class="btn bg-green btn-sm" title="Cetak Data">
 											<i class="fe fe-plus"></i>Tambah
 										</a>
-										<a href='<?= site_url("letterc/cetak") ?>' class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
+										<a href='<?= site_url("letterc/cetak") ?>' class="btn btn-outline-info btn-sm" title="Cetak Data" target="_blank">
 											<i class="fe fe-printer"></i>Cetak
 										</a>
-										<a href="<?= site_url("letterc/unduh") ?>" class="btn bg-navy btn-sm btn-sm " title="Unduh Data" target="_blank">
+										<a href="<?= site_url("letterc/unduh") ?>" class="btn btn-outline-info btn-sm" title="Unduh Data" target="_blank">
 											<i class="fe fe-download"></i>Unduh
 										</a>
-										<a href="<?= site_url("letterc/clear") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
+										<a href="<?= site_url("letterc/clear") ?>" class="btn btn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a>
 										<form id="mainform" name="mainform" action="" method="post">
 											<div class="row">
 												<div class="col-sm-12">
@@ -94,7 +94,7 @@
 																			<!--<a href="<?= site_url("letterc/form_dokumen/" . $item["id_letterc"]) ?>"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title=" Upload Dokumen" class="btn bg-navy btn-box btn-sm"><i class='fe fe-sign-out'></i> Upload</a>-->
 																			<!--<a href="<?= site_url("letterc/rincian_dokumen/" . $item["id_letterc"]) ?>" class="btn bg-primary btn-box btn-sm" title="Ubah Data">Dokumen</a>-->
 																			<a href="<?= site_url("letterc/create/edit/" . $item["id_letterc"]) ?>" class="btn bg-yellow btn-box btn-sm" title="Ubah Data"><i class="fe fe-edit"></i></a>
-																			<a href="#" data-href="<?= site_url("letterc/hapus/" . $item["id_letterc"]) ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("letterc/hapus/" . $item["id_letterc"]) ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		</td>
 																		<td><?= sprintf("%04s", $item["nomor"]) ?></td>
 																		<td><?= $item['nama_kepemilikan'] ?>

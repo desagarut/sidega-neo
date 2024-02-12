@@ -167,12 +167,12 @@ $keluarga_perempuan = $this->db->query('SELECT COUNT(id) AS jumlah FROM tweb_pen
   </div>
   <div class="row">
     <div class="col-md-12 float-center">
-      <a class="btn btn-outline-primary" href="<?= site_url('statistik') ?>"> <i class="fe fe-pie-chart"></i> Statistik </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('program_bantuan') ?>"> <i class="fe fe-gift"></i> Bantuan </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('program_bantuan') ?>"> <i class="fe fe-users"></i> Pokmas </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('laporan_rentan') ?>"> <i class="fe fe-wheelchair"></i>Rentan</a>
-      <a class="btn btn-outline-primary" href="<?= site_url('dpt') ?>"> <i class="fe fe-hand-o-up"></i> DPT </a>
-      <a class="btn btn-outline-primary" href="<?= site_url('gis') ?>"> <i class="fe fe-gift"></i> Maps </a>
+      <a class="btn btn-outline-info btn-sm " href="<?= site_url('statistik') ?>"> <i class="fe fe-pie-chart"></i> Statistik </a>
+      <a class="btn btn-outline-info btn-sm " href="<?= site_url('program_bantuan') ?>"> <i class="fe fe-gift"></i> Bantuan </a>
+      <a class="btn btn-outline-info btn-sm " href="<?= site_url('program_bantuan') ?>"> <i class="fe fe-users"></i> Pokmas </a>
+      <a class="btn btn-outline-info btn-sm " href="<?= site_url('laporan_rentan') ?>"> <i class="fe fe-wheelchair"></i>Rentan</a>
+      <a class="btn btn-outline-info btn-sm " href="<?= site_url('dpt') ?>"> <i class="fe fe-hand-o-up"></i> DPT </a>
+      <a class="btn btn-outline-info btn-sm " href="<?= site_url('gis') ?>"> <i class="fe fe-gift"></i> Maps </a>
     </div>
   </div>
 </div>-->

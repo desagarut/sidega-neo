@@ -18,13 +18,13 @@
 				<div class="col-md-9">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="<?= site_url('inventaris_kontruksi/form')?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Data Baru">
+							<a href="<?= site_url('inventaris_kontruksi/form')?>" class="btn btn-success btn-sm"  title="Tambah Data Baru">
 								<i class="fe fe-plus"></i>Tambah Data
             	</a>
-							<a href="#" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
+							<a href="#" class="btn btn-outline-info btn-sm" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
 								<i class="fe fe-printer"></i>Cetak
             	</a>
-							<a href="#" class="btn bg-navy btn-sm btn-sm "  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
+							<a href="#" class="btn btn-outline-info btn-sm"  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
 								<i class="fe fe-download"></i>Unduh
             	</a>
 						</div>
@@ -59,8 +59,8 @@
 																<td></td>
 																<td nowrap>
 																	<a href="<?= site_url('inventaris_kontruksi/view/'.$data->id); ?>" title="Lihat Data" class="btn bg-info btn-box btn-sm"><i class="fe fe-eye"></i></a>
-																	<a href="<?= site_url('inventaris_kontruksi/edit/'.$data->id); ?>" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i> </a>
-																	<a href="#" data-href="<?= site_url("api_inventaris_kontruksi/delete/$data->id")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																	<a href="<?= site_url('inventaris_kontruksi/edit/'.$data->id); ?>" title="Edit Data"  class="btn btn-outline-info btn-sm"><i class="fe fe-edit"></i> </a>
+																	<a href="#" data-href="<?= site_url("api_inventaris_kontruksi/delete/$data->id")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																</td>
 																<td><?= $data->nama_barang;?></td>
 																<td><?= $data->kondisi_bangunan;?></td>
@@ -131,7 +131,7 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 												<button type="submit" class="btn btn-info btn-sm" id="form_download" name="form_download" data-dismiss="modal"><i class='fe fe-check'></i> Unduh</button>
 											</div>
 										</form>
@@ -173,7 +173,7 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-												<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+												<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 												<button type="submit" class="btn btn-info btn-sm" id="form_cetak" name="form_cetak"  data-dismiss="modal"><i class='fe fe-check'></i> Cetak</button>
 											</div>
 										</form>

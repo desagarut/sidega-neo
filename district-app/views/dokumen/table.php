@@ -20,20 +20,20 @@
 </script>
 <div class="card shadow">
 	<div class="card-header">
-		<a href="<?= site_url("{$this->controller}/form/$kat") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Menu Baru">
+		<a href="<?= site_url("{$this->controller}/form/$kat") ?>" class="btn btn-success btn-sm" title="Tambah Menu Baru">
 			<i class="fe fe-plus"></i>Tambah <?= $kat_nama ?> Baru
 		</a>
 		<?php if ($this->CI->cek_hak_akses('h')) : ?>
-			<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("{$this->controller}/delete_all/$kat/$p/$o") ?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+			<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("{$this->controller}/delete_all/$kat/$p/$o") ?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 		<?php endif; ?>
-		<a href="<?= site_url("{$this->controller}/dialog_cetak/$kat") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
+		<a href="<?= site_url("{$this->controller}/dialog_cetak/$kat") ?>" class="btn btn-outline-info btn-sm" title="Cetak Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
 			<i class="fe fe-printer"></i>Cetak
 		</a>
-		<a href="<?= site_url("{$this->controller}/dialog_excel/$kat") ?>" class="btn bg-navy btn-sm btn-sm " title="Unduh Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
+		<a href="<?= site_url("{$this->controller}/dialog_excel/$kat") ?>" class="btn btn-outline-info btn-sm" title="Unduh Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
 			<i class="fe fe-download"></i>Unduh
 		</a>
 		<?php if ($kat == 1) : ?>
-			<a href="<?= site_url("informasi_publik/ekspor") ?>" class="btn bg-blue btn-sm btn-sm " title="Ekspor Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ekspor Data Informasi Publik">
+			<a href="<?= site_url("informasi_publik/ekspor") ?>" class="btn bg-blue btn-sm" title="Ekspor Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ekspor Data Informasi Publik">
 				<i class="fe fe-download"></i>Ekspor
 			</a>
 		<?php endif; ?>
@@ -131,7 +131,7 @@
 														<?php else : ?>
 															<a class="btn btn-outline-info btn-sm" disabled title="Unduh"><i class="fe fe-download"></i></a>
 														<?php endif; ?>
-														<a href="#" data-href="<?= site_url("{$this->controller}/delete/$kat/$p/$o/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="#" data-href="<?= site_url("{$this->controller}/delete/$kat/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													</td>
 													<td width="20%"><?= $data['nama'] ?></td>
 													<?php if ($kat == 1) : ?>

@@ -17,10 +17,10 @@
 			<div class="card-header">
 				<?php if ($this->CI->cek_hak_akses('h')): ?>
                 <a href="<?= site_url("rtm/ajax_add_anggota/$kk")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Rumah Tangga" title="Tambah Anggota Dari Penduduk Yang Sudah Ada" class="btn btn-success btn-sm "><i class='fe fe-plus'></i> Tambah Anggota</a>
-				<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all_anggota/$kk")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+				<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all_anggota/$kk")?>')" class="btn btn-social btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 				<?php endif;?>
 
-                <a href="<?= site_url("rtm/kartu_rtm/$kk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-book"></i> Kartu Rumah Tangga</a>
+                <a href="<?= site_url("rtm/kartu_rtm/$kk")?>" class="btn btn-outline-info btn-sm "><i class="fe fe-book"></i> Kartu Rumah Tangga</a>
 				<a href="<?= site_url("rtm/clear")?>" class="btn btn-sm btn-outline-info mb-1"title="Kembali Ke Daftar Rumah Tangga">
 					<i class="fe fe-arrow-circle-left "></i>Kembali ke Daftar Rumah Tangga
 				</a>
@@ -93,7 +93,7 @@
 											<?php if ($this->CI->cek_hak_akses('h')): ?>
                                             <td class="aksi">
 												<a href="<?= site_url("rtm/edit_anggota/$kk/$data[id]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Hubungan Rumah Tangga" title="Ubah Hubungan Rumah Tangga" class="btn bg-navy btn-box btn-sm"><i class="fe fe-link"></i></a>
-												<a href="#" data-href="<?= site_url("rtm/delete_anggota/$kk/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+												<a href="#" data-href="<?= site_url("rtm/delete_anggota/$kk/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 											</td>
                                             <?php endif;?>
 											<td><?= $data['nik']?></td>

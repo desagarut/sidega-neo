@@ -22,8 +22,8 @@
                     <?php if ($this->CI->cek_hak_akses('h')): ?>
 						<a href="<?= site_url('sid_core/form')?>" class="btn btn-success btn-sm " title="Tambah Data"><i class="fe fe-plus"></i> Tambah Dusun</a>
 					<?php endif; ?>
-                        <a href="<?= site_url("$this->controller/dialog/cetak")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer "></i> Cetak</a>
-						<a href="<?= site_url("$this->controller/dialog/unduh")?>" title="Unduh Data" class="btn bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
+                        <a href="<?= site_url("$this->controller/dialog/cetak")?>" class="btn btn-outline-info btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fe fe-printer "></i> Cetak</a>
+						<a href="<?= site_url("$this->controller/dialog/unduh")?>" title="Unduh Data" class="btn btn-outline-info btn-sm" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -77,8 +77,8 @@
 																<td nowrap>
 																	<a href="<?= site_url("sid_core/sub_rw/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Rincian Sub Wilayah"><i class="fe fe-search"></i> RW</a>
 																	<?php if ($this->CI->cek_hak_akses('h')): ?>
-                                                                    <a href="<?= site_url("sid_core/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
-                                                                    <a href="#" data-href="<?= site_url("sid_core/delete/dusun/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+                                                                    <a href="<?= site_url("sid_core/form/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
+                                                                    <a href="#" data-href="<?= site_url("sid_core/delete/dusun/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
                                                                     <a href="<?= site_url("sid_core/ajax_kantor_dusun_maps_google/$data[id]")?>" class="btn btn-info btn-box btn-sm" title="Lokasi Kantor"><i class="fe fe-map-marker"></i></a>
                                                                     <a href="<?= site_url("sid_core/ajax_wilayah_dusun_maps_google/$data[id]")?>" class="btn btn-primary btn-box btn-sm" title="Peta Google"><i class="fe fe-google"></i></a>
                                                                     <a href="<?= site_url("sid_core/ajax_wilayah_dusun_openstreet_maps/$data[id]")?>" class="btn btn-info btn-box btn-sm" title="Peta Openstreet"><i class="fe fe-map-o"></i></a>

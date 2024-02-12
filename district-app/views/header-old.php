@@ -192,7 +192,7 @@
 								</li>
 								<li class="user-footer">
 									<div class="pull-left"> <a href="<?= site_url('user_setting'); ?>" data-remote="false" data-toggle="modal" data-tittle="Pengaturan Pengguna" data-target="#modalBox" class="btn btn-outline-info btn-sm">Profil</a> </div>
-									<div class="pull-right"> <a href="<?= site_url('insidega/logout'); ?>" class="btn bg-maroon btn-box btn-sm">Keluar</a> </div>
+									<div class="pull-right"> <a href="<?= site_url('insidega/logout'); ?>" class="btn btn-outline-info btn-sm">Keluar</a> </div>
 								</li>
 							</ul>
 						</li>
@@ -363,7 +363,7 @@
       <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-edit"></i>Tulis Berita</button>
     </a>
     <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('surat') ?><?php endif; ?>" title="Buat Surat">
-      <button type="button" class="btn btn-outline-primary"><i class="feather mr-2 icon-folder"></i>Buat Surat</button>
+      <button type="button" class="btn btn-outline-info btn-sm "><i class="feather mr-2 icon-folder"></i>Buat Surat</button>
     </a>
     <a href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('permohonan_surat_admin') ?><?php endif; ?>" title="permohonan surat online">
       <button type="button" class="btn btn-outline-success"><i class="feather mr-2 icon-check-circle"></i>Permohonan</button>
@@ -375,7 +375,7 @@
       <button type="button" class="btn btn-outline-info"><i class="feather mr-2 icon-mail"></i>Surat Masuk</button>
     </a>
     <a href="<?php if ($this->CI->cek_hak_akses('h')) : ?><?= site_url('mandiri') ?><?php endif; ?>" title="Pembuatan PIN Layanan Masyarakat">
-      <button type="button" class="btn btn-outline-danger"><i class="feather mr-2 icon-command"></i>PIN</button>
+      <button type="button" class="btn btn-outline-danger btn-sm "><i class="feather mr-2 icon-command"></i>PIN</button>
     </a>
     <a class="btn btn-app" href="<?php if ($this->CI->cek_hak_akses('u')) : ?><?= site_url('komentar') ?><?php endif; ?>">
         <button type="button" class="btn btn-info"><i class="feather mr-2 icon-info"></i>Info</button>

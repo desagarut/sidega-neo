@@ -146,7 +146,7 @@
 							</div>
 							<div class="card-footer">
 								<div class="col-md-12">
-									<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+									<button type='reset' class='btn btn-outline-danger btn-sm ' ><i class='fe fe-times'></i> Batal</button>
 									<button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 								</div>
 							</div>
@@ -222,7 +222,7 @@
 											<tr>
 												<td class="text-center"><?=$data['no']?></td>
 												<td nowrap>
-													<a href="<?=site_url("modul/form/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah Data" ><i class="fe fe-edit"></i></a>
+													<a href="<?=site_url("modul/form/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Ubah Data" ><i class="fe fe-edit"></i></a>
 														<?php if ($data['aktif'] == '1'): ?>
 															<a href="<?= site_url("modul/lock/$data[id]/2")?>" class="btn bg-navy btn-box btn-sm"  title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
 														<?php elseif ($sub_modul AND $sub_modul['aktif'] != '1'): ?>

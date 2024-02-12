@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+			<button type="button" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			<button id="btnSubmit" type="submit" class="btn btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
 		</div>
 	</div>

@@ -16,7 +16,7 @@
 			<div class="col-md-12">
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?=site_url("surat_mohon")?>" class="btn btn-info btn-sm btn-sm ">
+						<a href="<?=site_url("surat_mohon")?>" class="btn btn-info btn-sm">
 							<i class="fe fe-arrow-circle-left "></i>Kembali ke Dokumen Persyaratan Surat
            	</a>
 					</div>
@@ -36,7 +36,7 @@
 							</div>
 							<div class="box-footer">
 								<div class="col-xs-12">
-									<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+									<button type="reset" class="btn btn-outline-danger btn-sm btn-sm "><i class="fe fe-times"></i> Batal</button>
 									<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 								</div>
 							</div>

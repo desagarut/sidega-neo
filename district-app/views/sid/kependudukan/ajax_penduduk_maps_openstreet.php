@@ -148,24 +148,24 @@ window.onload = function()
 								</div>
 								<div class="pull-right">
 								<?php switch ($edit): ?><?php case '0': ?>
-									<a href="<?=site_url("penduduk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+									<a href="<?=site_url("penduduk")?>" class="btn btn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
 									<a href="<?=site_url("penduduk/ajax_penduduk_maps/$p/$o/$id/2")?>" class="btn btn-warning btn-sm " title="Ubah"><i class="fe fe-edit"></i> Ubah</a>
 									<?php break; ?>
 								<?php case '1': ?>
-									<a href="<?=site_url("penduduk/detail/$p/$o/$id/1")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-									<a href="#" class="btn bg-navy btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+									<a href="<?=site_url("penduduk/detail/$p/$o/$id/1")?>" class="btn btn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+									<a href="#" class="btn btn-outline-info btn-sm" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
                                     <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a> 
-									<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+									<button type='reset' class='btn btn-outline-danger btn-sm ' id="resetme"><i class='fe fe-times'></i> Reset</button>
                                     
 									<?php if ($penduduk['status_dasar'] == 1 || !isset($penduduk['status_dasar'])): ?>
 										<button type='submit' class='btn btn-success btn-sm' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
 									<?php endif; ?>
 									<?php break; ?>
 								<?php case '2': ?>
-									<a href="<?=site_url("penduduk")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-									<a href="#" class="btn bg-navy btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+									<a href="<?=site_url("penduduk")?>" class="btn btn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+									<a href="#" class="btn btn-outline-info btn-sm" download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
                                     <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fe fe-google'></i> Ubah di GoogleMap</a> 
-									<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
+									<button type='reset' class='btn btn-outline-danger btn-sm ' id="resetme"><i class='fe fe-times'></i> Reset</button>
 									<?php if ($penduduk['status_dasar'] == 1 || !isset($penduduk['status_dasar'])): ?>
 										<button type='submit' class='btn btn-success btn-sm' id="simpan_penduduk"><i class='fe fe-check'></i> Simpan</button>
 									<?php endif; ?>

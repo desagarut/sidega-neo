@@ -7,7 +7,7 @@
 						<h5 class="page-title">Form Manajemen Pengguna</h5>
 					</div>
 					<div class="col-auto">
-						<a href="<?= site_url() ?>man_user" class="btn btn-outline-primary mb-2"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Manajemen Pengguna</a>
+						<a href="<?= site_url() ?>man_user" class="btn btn-outline-info btn-sm mb-2"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Manajemen Pengguna</a>
 					</div>
 				</div>
 			</div>

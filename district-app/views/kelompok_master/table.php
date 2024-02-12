@@ -19,12 +19,12 @@
 					</div>
 					<div class="col-auto">
 						<?php if ($this->CI->cek_hak_akses('u')) : ?>
-							<a href="<?= site_url("{$this->controller}/form"); ?>" title="Tambah Kategori <?= $tipe; ?> Baru" class="btn btn-primary"><i class="fe fe-plus"></i> Tambah Kategori <?= $tipe; ?> Baru</a>
+							<a href="<?= site_url("{$this->controller}/form"); ?>" title="Tambah Kategori <?= $tipe; ?> Baru" class="btn btn-outline-info btn-sm btn-sm"><i class="fe fe-plus"></i> Tambah Kategori <?= $tipe; ?> Baru</a>
 						<?php endif; ?>
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all"); ?>')" class="btn btn-outline-danger hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all"); ?>')" class="btn btn-outline-danger btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 						<?php endif; ?>
-						<a href="<?= site_url($tipe); ?>" class="btn btn-outline-primary"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar <?= $tipe; ?></a>
+						<a href="<?= site_url($tipe); ?>" class="btn btn-outline-info btn-sm "><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar <?= $tipe; ?></a>
 					</div>
 				</div>
 				<form id="mainform" name="mainform" method="post">
@@ -65,7 +65,7 @@
 																	<a href="<?= site_url("{$this->controller}/form/{$data['id']}") ?>" class="btn bg-orange btn-flat btn-sm" title="Ubah Kategori <?= $tipe; ?>"><i class="fe fe-edit"></i></a>
 																<?php endif; ?>
 																<?php if ($this->CI->cek_hak_akses('h')) : ?>
-																	<a href="#" data-href="<?= site_url("{$this->controller}/delete/{$data['id']}") ?>" class="btn bg-maroon btn-flat btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																	<a href="#" data-href="<?= site_url("{$this->controller}/delete/{$data['id']}") ?>" class="btn bg-maroon btn-flat btn-sm" title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																<?php endif; ?>
 															</td>
 															<td nowrap><?= $data['kelompok'] ?></td>

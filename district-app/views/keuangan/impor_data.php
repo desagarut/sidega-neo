@@ -60,9 +60,9 @@
 														<td><?=$data['no']?></td>
 														<td nowrap>
 															<?php if (count($data['desa_ganda']) > 1): ?>
-																<a href="<?= site_url("keuangan/pilih_desa/{$data['id']}")?>" title="Bersihkan desa ganda" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Bersihkan Desa Ganda" class="btn bg-orange btn-box btn-sm"><i class="fe fe-minus-square"></i></a>
+																<a href="<?= site_url("keuangan/pilih_desa/{$data['id']}")?>" title="Bersihkan desa ganda" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Bersihkan Desa Ganda" class="btn btn-outline-info btn-sm"><i class="fe fe-minus-square"></i></a>
 															<?php endif; ?>
-															<a href="#" data-href="<?= site_url("keuangan/delete/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+															<a href="#" data-href="<?= site_url("keuangan/delete/$data[id]")?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 														<td><?=$data['versi_database']?></td>
 														<td>
 															<?=$data['tahun_anggaran']?>
@@ -99,7 +99,7 @@
 				<p>Apakah anda ingin melanjutkan proses impor untuk menindih datanya?</p>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 				<button type="button" class="btn btn-info btn-sm" onclick="simpanDataUpdate()"><i class='fe fe-check'></i> Lanjutkan impor</button>
 			</div>
 		</div>
@@ -117,7 +117,7 @@
 				<p id="kata_peringatan"></p>
 			</div>
 			<div class="modal-footer">
-				<button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+				<button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
 			</div>
 		</div>
 	</div>

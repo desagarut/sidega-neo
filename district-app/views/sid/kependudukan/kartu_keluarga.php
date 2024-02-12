@@ -8,10 +8,10 @@
 					</div>
 					<div class="col-auto">
 						<div class="form-group mr-1 mb-2 ">
-							<a href="<?= site_url("keluarga/cetak_kk/$id_kk") ?>" class="btn btn-outline-primary" target="_blank"><i class="fe fe-printer "></i> Cetak</a>
-							<a href="<?= site_url("keluarga/doc_kk/$id_kk") ?>" class="btn btn-outline-primary" target="_blank"><i class="fe fe-download"></i> Unduh</a>
-							<a href="<?= site_url("keluarga/anggota/$p/$o/$id_kk") ?>" class="btn btn-outline-primary" title="Rincian Anggota Keluarga">Kembali Ke Daftar Anggota Keluarga</a>
-							<a href="<?= site_url("keluarga") ?>" class="btn btn-outline-primary" title="Kembali Ke Daftar Anggota Keluarga">Kembali Ke Daftar Keluarga</a>
+							<a href="<?= site_url("keluarga/cetak_kk/$id_kk") ?>" class="btn btn-outline-info btn-sm " target="_blank"><i class="fe fe-printer "></i> Cetak</a>
+							<a href="<?= site_url("keluarga/doc_kk/$id_kk") ?>" class="btn btn-outline-info btn-sm " target="_blank"><i class="fe fe-download"></i> Unduh</a>
+							<a href="<?= site_url("keluarga/anggota/$p/$o/$id_kk") ?>" class="btn btn-outline-info btn-sm " title="Rincian Anggota Keluarga">Kembali Ke Daftar Anggota Keluarga</a>
+							<a href="<?= site_url("keluarga") ?>" class="btn btn-outline-info btn-sm " title="Kembali Ke Daftar Anggota Keluarga">Kembali Ke Daftar Keluarga</a>
 						</div>
 					</div>
 				</div>

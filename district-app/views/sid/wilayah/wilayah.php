@@ -10,10 +10,10 @@
 					</div>
 					<div class="col-auto">
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url("sid_core/form") ?>" class="btn mb-2 btn-primary text-light" title="Tambah"><i class="fe fe-plus text-light"></i> Tambah</a>
+							<a href="<?= site_url("sid_core/form") ?>" class="btn mb-2 btn-outline-info btn-sm" title="Tambah"><i class="fe fe-plus"></i> Tambah</a>
 						<?php endif; ?>
-						<a href="<?= site_url("sid_core/dialog/cetak") ?>" class="btn mb-2 btn-outline-primary" data-toggle="modal" data-target="#modalBox"><i class="fe fe-printer"></i> Cetak</a>
-						<a href="<?= site_url("sid_core/dialog/unduh") ?>" class="btn mb-2 btn-outline-primary" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
+						<a href="<?= site_url("sid_core/dialog/cetak") ?>" class="btn mb-2 btn-outline-info btn-sm" data-toggle="modal" data-target="#modalBox"><i class="fe fe-printer"></i> Cetak</a>
+						<a href="<?= site_url("sid_core/dialog/unduh") ?>" class="btn mb-2 btn-outline-info btn-sm" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fe fe-download"></i> Unduh</a>
 					</div>
 				</div>
 				<div class="card shadow">
@@ -74,7 +74,7 @@
 													<a class="dropdown-item" href="<?= site_url("sid_core/ajax_wilayah_dusun_maps_google/$data[id]") ?>">Wilayah - GMaps</a>
 													<a class="dropdown-item" href="<?= site_url("sid_core/ajax_wilayah_dusun_openstreet_maps/$data[id]") ?>">Wilayah - OSM</a>
 													<a class="dropdown-item" href="<?= site_url("sid_core/form/$data[id]") ?>">Ubah</a>
-													<a href="#" data-href="<?= site_url("sid_core/delete/dusun/$data[id]") ?>" class="dropdown-item bg-danger text-light" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i> Hapus</a>
+													<a href="#" data-href="<?= site_url("sid_core/delete/dusun/$data[id]") ?>" class="dropdown-item bg-danger text-light" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i> Hapus</a>
 												<?php endif; ?>
 											</div>
 										</td>

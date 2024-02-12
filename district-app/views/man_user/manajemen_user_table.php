@@ -16,8 +16,8 @@
 						<h5 class="page-title">Manajemen Pengguna</h5>
 					</div>
 					<div class="col-auto">
-						<a href="<?= site_url('man_user/form') ?>" class="btn btn-primary mb-2"><i class="fe fe-plus"></i> Tambah Pengguna Baru</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("man_user/delete_all/$p/$o") ?>')" class="btn btn-outline-danger mb-2 hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="<?= site_url('man_user/form') ?>" class="btn btn-outline-info mb-2"><i class="fe fe-plus"></i> Tambah Pengguna Baru</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("man_user/delete_all/$p/$o") ?>')" class="btn btn-outline-danger btn-sm mb-2 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 					</div>
 				</div>
 				<div class="card shadow">
@@ -58,14 +58,14 @@
 												<td><?= $data['grup'] ?></td>
 												<td><?= tgl_indo2($data['last_login']) ?></td>
 												<td nowrap>
-													<a href="<?= site_url("Man_user/form/$p/$o/$data[id]") ?>" class="btn btn-outline-primary btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
+													<a href="<?= site_url("Man_user/form/$p/$o/$data[id]") ?>" class="btn btn-outline-info btn-sm btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 													<?php if ($data['id'] != 1) : ?>
 														<?php if ($data['active'] == '0') : ?>
 															<a href="<?= site_url('Man_user/user_unlock/' . $data['id']) ?>" class="btn btn-secondary btn-sm" title="Aktifkan Pengguna"><i class="fe fe-lock">&nbsp;</i></a>
 														<?php elseif ($data['active'] == '1') : ?>
 															<a href="<?= site_url('Man_user/user_lock/' . $data['id']) ?>" class="btn btn-success btn-sm" title="Non Aktifkan Pengguna"><i class="fe fe-unlock"></i></a>
 														<?php endif; ?>
-														<a href="#" data-href="<?= site_url("Man_user/delete/$p/$o/$data[id]") ?>" class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
+														<a href="#" data-href="<?= site_url("Man_user/delete/$p/$o/$data[id]") ?>" class="btn btn-outline-danger btn-sm btn-sm " title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													<?php endif; ?>
 												</td>
 											</tr>

@@ -56,13 +56,13 @@
 
 						<div class="card-header">
 
-							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
+							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-outline-info btn-sm" title="Cetak Data" target="_blank">
 
 								<i class="fe fe-printer"></i>Cetak
 
 							</a>
 
-							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn bg-navy btn-sm btn-sm " title="Unduh" target="_blank">
+							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn btn-outline-info btn-sm" title="Unduh" target="_blank">
 
 								<i class="fe fe-download"></i>Unduh
 

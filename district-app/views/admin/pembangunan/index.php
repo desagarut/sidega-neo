@@ -17,7 +17,7 @@
 			<div class="card shadow">
 				<div class="card-header">
 					<?php if ($this->CI->cek_hak_akses('u')): ?>
-						<a href="<?= site_url("{$this->controller}/form")?>" class="btn btn-social btn-flat btn-success btn-sm btn-sm " title="Tambah Data Baru"><i class="fe fe-plus"></i>Tambah Data</a>
+						<a href="<?= site_url("{$this->controller}/form")?>" class="btn btn-outline-info btn-sm" title="Tambah Data Baru"><i class="fe fe-plus"></i>Tambah Data</a>
 					<?php endif; ?>
 				</div>
 				<div class="box-body">
@@ -98,12 +98,12 @@
 								<a href="<?= site_url("{$this->controller}/form/"); ?>${data.id}" title="Ubah Data"  class="btn bg-orange btn-flat btn-sm"><i class="fe fe-edit"></i></a>
 							<?php endif; ?>
 							<a href="<?= site_url($this->controller . '/lokasi_maps/'); ?>${data.id}" class="btn bg-olive btn-flat btn-sm" title="Lokasi Pembangunan"><i class="fe fe-map"></i></a>
-							<a href="<?= site_url($this->controller . '/dokumentasi/'); ?>${data.id}" class="btnbtn-outline-info btn-flat btn-sm" title="Rincian Dokumentasi Kegiatan"><i class="fe fe-list-ol"></i></a>
+							<a href="<?= site_url($this->controller . '/dokumentasi/'); ?>${data.id}" class="btnbtn-outline-info btn-flat btn-sm" title="Rincian Dokumentasi Kegiatan"><i class="fe fe-list"></i></a>
 							<?php if ($this->CI->cek_hak_akses('u')): ?>
 								${status}
 							<?php endif; ?>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#" data-href="<?= site_url($this->controller . '/delete/'); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+								<a href="#" data-href="<?= site_url($this->controller . '/delete/'); ?>${data.id}" class="btn bg-maroon btn-flat btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							<?php endif; ?>
 							<a href="<?= site_url('pembangunan/'); ?>${data.slug}" target="_blank" class="btn bg-blue btn-flat btn-sm" title="Lihat Summary"><i class="fe fe-eye"></i></a>
 							`

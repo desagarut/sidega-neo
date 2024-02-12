@@ -11,8 +11,8 @@
 				<div class="card shadow">
 					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="<?=site_url('pembinaan_masyarakat/create')?>" class="btn bg-olive btn-sm " title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
-						<a href="<?=site_url('pembinaan_masyarakat/impor')?>" class="btn bg-navy btn-sm " title="Impor Program Bantuan" data-target="#impor" data-remote="false" data-toggle="modal" data-backdrop="false" data-keyboard="false"><i class="fe fe-upload"></i> Impor</a>
+                        <a href="<?=site_url('pembinaan_masyarakat/create')?>" class="btn btn-outline-info btn-sm" title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
+						<a href="<?=site_url('pembinaan_masyarakat/impor')?>" class="btn btn-outline-info btn-sm" title="Impor Program Bantuan" data-target="#impor" data-remote="false" data-toggle="modal" data-backdrop="false" data-keyboard="false"><i class="fe fe-upload"></i> Impor</a>
 						<?php endif;?>
                         <a href="<?=site_url('pembinaan_masyarakat/panduan')?>" class="btn btn-info btn-sm " title="Panduan"><i class="fe fe-question-circle"></i> Panduan</a>
 						<?php if ($tampil != 0): ?>
@@ -62,13 +62,13 @@
 																<?php if ($this->CI->cek_hak_akses('h')): ?>
                                                                 <td nowrap>
 																	<a href="<?= site_url("pembinaan_masyarakat/detail/$item[id]")?>" class="btn btn-outline-info btn-sm" title="Rincian"><i class="fe fe-list"></i></a>
-																	<a href="<?= site_url("pembinaan_masyarakat/edit/$item[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
+																	<a href="<?= site_url("pembinaan_masyarakat/edit/$item[id]")?>" class="btn btn-outline-info btn-sm" title="Ubah"><i class="fe fe-edit"></i></a>
 																	<?php if ($item['jml_peserta'] != 0): ?>
 																		<a href="<?= site_url("pembinaan_masyarakat/expor/$item[id]"); ?>" class="btn bg-navy btn-box btn-sm" title="Expor"><i class="fe fe-download"></i></a>
-																		<a href="#" class="btn bg-maroon btn-box btn-sm disabled" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																		<a href="#" class="btn btn-outline-info btn-sm disabled" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																	<?php endif ?>
 																	<?php if ($item['jml_peserta'] == 0): ?>
-																		<a href="#" data-href="<?= site_url("pembinaan_masyarakat/hapus/$item[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																		<a href="#" data-href="<?= site_url("pembinaan_masyarakat/hapus/$item[id]")?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																	<?php endif ?>
 																</td>
                                                                 <?php endif;?>

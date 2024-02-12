@@ -98,7 +98,7 @@
                 </div>
                 <div class="box-footer">
                   <div class="col-xs-12">
-                    <button type="reset" class="btn btn-danger btn-sm invisible"><i class="fe fe-times"></i> Batal</button>
+                    <button type="reset" class="btn btn-outline-danger btn-sm btn-sm invisible"><i class="fe fe-times"></i> Batal</button>
                     <button type="submit" class="btn btn-primary pull-right" id="isi_form"><i class="fe fe-sign-in"></i> Isi Form</button>
                   </div>
                 </div>
@@ -114,7 +114,7 @@
             </div>
           </div>
           <div class="box-body">
-            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn bg-olive btn-sm " id="tambah_dokumen"><i class='fe fe-plus'></i>Tambah Dokumen</button>
+            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-outline-info btn-sm" id="tambah_dokumen"><i class='fe fe-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
                 <thead>
@@ -147,7 +147,7 @@
         <p id="kata_peringatan"></p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+        <button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>
@@ -223,7 +223,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+          <button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
           <button type="submit" class="btn btn-info btn-sm" id="upload_btn"><i class='fe fe-check'></i> Simpan</button>
         </div>
       </form>

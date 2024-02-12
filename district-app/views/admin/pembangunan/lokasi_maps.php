@@ -34,7 +34,7 @@
 						</div>
 					</div>
 					<a href="<?= site_url($this->controller) ?>" class="btn btn-social btn-flatbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
-					<a href="#" class="btn btn-social btn-flat btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
+					<a href="#" class="btn btn-outline-info btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
 					<button type='reset' class='btn btn-social btn-flat btn-danger btn-sm' id="resetme"><i class='fe fe-times'></i> Reset</button>
 					<?php if ($this->CI->cek_hak_akses('u')): ?>
 						<button type='submit' class='btn btn-social btn-flat btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>

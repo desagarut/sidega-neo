@@ -60,9 +60,9 @@ function initMap() {
 	</div>
 	<div class="modal-footer">
         <div class="col-md-12">
-            <a href="<?= site_url('plan')?>" class="btn btn-social btn-boxbtn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
+            <a href="<?= site_url('plan')?>" class="btn btn-outline-info btn-sm " title="Kembali"><i class="fe fe-arrow-circle-o-left"></i> Kembali</a>
             <a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fe fe-download'></i> Export ke GPX</a>
-            <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
+            <button type="reset" class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
             <button type="submit" class="btn btn-info btn-sm"><i class='fe fe-check'></i> Simpan</button>
 		</div>
     </div>

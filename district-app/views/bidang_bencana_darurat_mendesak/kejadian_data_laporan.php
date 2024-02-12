@@ -11,7 +11,7 @@
 				<div class="card shadow">
 					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url('bidang_bencana_darurat_mendesak/form_kejadian') ?>" class="btn bg-olive btn-sm " title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
+							<a href="<?= site_url('bidang_bencana_darurat_mendesak/form_kejadian') ?>" class="btn btn-outline-info btn-sm" title="Tambah Program Bantuan"><i class="fe fe-plus"></i> Tambah</a>
 						<?php endif; ?>
 						<a href="<?= site_url('bidang_bencana_darurat_mendesak/panduan') ?>" class="btn btn-info btn-sm " title="Panduan"><i class="fe fe-question-circle"></i> Panduan</a>
 						<?php if ($tampil != 0) : ?>
@@ -80,14 +80,14 @@
 																				</li>
 																				<li>
 																					<?php if ($item['jumlah_korban'] != 0) : ?>
-																						<a href="#" class="btn bg-maroon btn-social btn-box btn-block btn-sm disabled" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i>Hapus</a>
+																						<a href="#" class="btn bg-maroon btn-social btn-box btn-block btn-sm disabled" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i>Hapus</a>
 																					<?php endif ?>
 																				</li>
 																			</ul>
 																		</div>
 
 																		<?php if ($item['jumlah_korban'] == 0) : ?>
-																			<a href="#" data-href="<?= site_url("bidang_bencana_darurat_mendesak/hapus/$item[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("bidang_bencana_darurat_mendesak/hapus/$item[id]") ?>" class="btn btn-outline-info btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																		<?php endif ?>
 																	</td>
 																<?php endif; ?>

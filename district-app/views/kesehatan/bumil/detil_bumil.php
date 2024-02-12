@@ -121,7 +121,7 @@
       <div class='modal-footer'>
         <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><i class='fe fe-sign-out'></i> Tutup</button>
         <a class='btn-ok'>
-          <button type="submit" class="btn btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash-o'></i> Simpan</button>
+          <button type="submit" class="btn btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fe fe-trash'></i> Simpan</button>
         </a>
       </div>
     </div>

@@ -40,9 +40,9 @@
   <div class="col-md-8 col-lg-9">
   <div class="card shadow">
   <div class="box-header">
-    <div class="card-header"> <a href="<?=site_url("data_sppt/tagihan_daftar/")?>" class="btn btn-social bg-blue btn-sm btn-sm "  title="Tambah Tagihan"> <i class="fe fe-arrow-left"></i>Master Data</a> <a href="<?=site_url("data_sppt/tagihan_cetak")?>" class="btn btn-social bg-green btn-sm btn-sm " title="Cetak Data" target="_blank"> <i class="fe fe-printer"></i> Cetak </a> 
-    <a href="<?=site_url("data_sppt/tagihan_unduh")?>" class="btn bg-teal btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Tagihan" title="Unduh Data Tagihan"> <i class="fe fe-download"></i>Unduh </a> 
-    <!-- <a href="<?= site_url('data_sppt/import')?>" class="btn btn-social bg-teal btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fe fe-upload"></i>Unggah </a> --><a href="<?= site_url("data_sppt/clear_tagih")?>" class="btn btn-social bg-yellow btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> </div>
+    <div class="card-header"> <a href="<?=site_url("data_sppt/tagihan_daftar/")?>" class="btn btn-social bg-blue btn-sm"  title="Tambah Tagihan"> <i class="fe fe-arrow-left"></i>Master Data</a> <a href="<?=site_url("data_sppt/tagihan_cetak")?>" class="btn btn-social bg-green btn-sm" title="Cetak Data" target="_blank"> <i class="fe fe-printer"></i> Cetak </a> 
+    <a href="<?=site_url("data_sppt/tagihan_unduh")?>" class="btn bg-teal btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Tagihan" title="Unduh Data Tagihan"> <i class="fe fe-download"></i>Unduh </a> 
+    <!-- <a href="<?= site_url('data_sppt/import')?>" class="btn btn-social bg-teal btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fe fe-upload"></i>Unggah </a> --><a href="<?= site_url("data_sppt/clear_tagih")?>" class="btn btn-social bg-yellow btn-sm "><i class="fe fe-refresh"></i>Bersihkan</a> </div>
   </div>
   <div class="box-body">
   <div class="row">
@@ -100,21 +100,21 @@
                   <ul class="dropdown-menu" role="menu">
                         <!--<li><a href="<?= site_url("data_sppt/tagihan_ubah_bayar/".$item["id_tagih"])?>" class="btn btn-social bg-green btn-box btn-block btn-sm"  title="Terima Pembayaran Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Terima Pembayaran Pajak"><i class="fe fe-dollar"></i> Bayar</a> </li>-->
                         <li><a href="<?= site_url("data_sppt/tagihan_ubah/".$item["id_tagih"])?>" class="btn btn-social bg-yellow btn-box btn-block btn-sm"  title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Tagihan"><i class="fe fe-edit"></i>Ubah</a> </li>
-                        <li><a href="#" data-href="<?= site_url("data_sppt/hapus_tagih/".$item["id_tagih"])?>" class="btn btn-social bg-red btn-box btn-block btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i>Hapus</a> </li>
+                        <li><a href="#" data-href="<?= site_url("data_sppt/hapus_tagih/".$item["id_tagih"])?>" class="btn btn-social bg-red btn-box btn-block btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i>Hapus</a> </li>
                   </ul>
                   
                   
                   <?php elseif ($item['status'] == "Belum Bayar"):  ?>
-				  <button type="button" href="<?= site_url("data_sppt/tagihan_ubah_bayar/".$item["id_tagih"])?>" class="btn btn-danger btn-sm"  title="Terima Pembayaran Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Terima Pembayaran Pajak"><i class="fe fe-dollar"></i> Bayar</a></button>
+				  <button type="button" href="<?= site_url("data_sppt/tagihan_ubah_bayar/".$item["id_tagih"])?>" class="btn btn-outline-danger btn-sm btn-sm "  title="Terima Pembayaran Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Terima Pembayaran Pajak"><i class="fe fe-dollar"></i> Bayar</a></button>
                   
-                  <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <button type="button" class="btn btn-outline-danger btn-sm btn-sm dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
                   </button>
                   <ul class="dropdown-menu" role="menu">
                         <!--<li><a href="<?= site_url("data_sppt/tagihan_ubah_bayar/".$item["id_tagih"])?>" class="btn btn-social bg-green btn-box btn-block btn-sm"  title="Terima Pembayaran Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Terima Pembayaran Pajak"><i class="fe fe-dollar"></i> Bayar</a> </li>-->
                         <li><a href="<?= site_url("data_sppt/tagihan_ubah/".$item["id_tagih"])?>" class="btn btn-social bg-yellow btn-box btn-block btn-sm"  title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Tagihan"><i class="fe fe-edit"></i>Ubah</a> </li>
-                        <li><a href="#" data-href="<?= site_url("data_sppt/hapus_tagih/".$item["id_tagih"])?>" class="btn btn-social bg-red btn-box btn-block btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i>Hapus</a> </li>
+                        <li><a href="#" data-href="<?= site_url("data_sppt/hapus_tagih/".$item["id_tagih"])?>" class="btn btn-social bg-red btn-box btn-block btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i>Hapus</a> </li>
                   </ul>
 				  <?php endif; ?>
                 </div>

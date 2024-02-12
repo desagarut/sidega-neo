@@ -95,7 +95,7 @@
 													<div class="form-group" >
 										  			<label class="col-sm-3 control-label">Kalau persil belum ada</label>
 														<div class="col-sm-8">
-															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
+															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-success btn-sm"  title="Tambah Persil">
 																<i class="fe fe-plus"></i>Tambah Persil
 															</a>
 														</div>
@@ -278,7 +278,7 @@
 
 											<div class="box-footer">
 												<div class="col-xs-12">
-													<button type="reset" class="btn btn-danger btn-sm"><i class="fe fe-times"></i> Batal</button>
+													<button type="reset" class="btn btn-outline-danger btn-sm btn-sm "><i class="fe fe-times"></i> Batal</button>
 													<button type="submit" class="btn btn-info btn-sm pull-right"><i class="fe fe-check"></i> Simpan</button>
 												</div>
 											</div>

@@ -24,14 +24,14 @@
 						<form id="mainform" name="mainform" action="" method="post">
 							<div class="row">
 								<div class="<?php if ($this->modul_ini <> 15) : ?>col-md-9<?php else : ?>col-md-12<?php endif; ?>">
-									<a href="<?= site_url("{$this->controller}/form") ?>" class="btn btn-primary mb-2" title="Tambah Klasifikasi Baru">
+									<a href="<?= site_url("{$this->controller}/form") ?>" class="btn btn-outline-info mb-2" title="Tambah Klasifikasi Baru">
 										<i class="fe fe-plus"></i>Tambah Klasifikasi Baru
 									</a>
 									<?php if ($this->CI->cek_hak_akses('h')) : ?>
 										<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllcard('mainform', '<?= site_url("{$this->controller}/delete_all/$p/$o") ?>')" class="btn btn-danger mb-2 hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 									<?php endif; ?>
-									<a href="<?= site_url("{$this->controller}/impor") ?>" class="btn btn-outline-primary mb-2" title="Impor Klasifikasi" data-remote="false" data-toggle="modal" data-target="#modalcard" data-title="Impor Klasifikasi"><i class="fe fe-upload "></i> Impor</a>
-									<a href="<?= site_url("{$this->controller}/ekspor") ?>" class="btn btn-outline-primary mb-2" title="Ekspor Klasifikasi"><i class="fe fe-download"></i> Unduh</a>
+									<a href="<?= site_url("{$this->controller}/impor") ?>" class="btn btn-outline-info btn-sm mb-2" title="Impor Klasifikasi" data-remote="false" data-toggle="modal" data-target="#modalcard" data-title="Impor Klasifikasi"><i class="fe fe-upload "></i> Impor</a>
+									<a href="<?= site_url("{$this->controller}/ekspor") ?>" class="btn btn-outline-info btn-sm mb-2" title="Ekspor Klasifikasi"><i class="fe fe-download"></i> Unduh</a>
 								</div>
 							</div>
 						</form>

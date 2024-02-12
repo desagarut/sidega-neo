@@ -72,11 +72,11 @@ th.horizontal {
       <div class="col-md-8 col-lg-9">
         <div class="card shadow">
           <div class="card-header"> 
-            <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Persil">
+            <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-success btn-sm"  title="Tambah Persil">
 							<i class="fe fe-plus"></i>Tambah Mutasi SPPT
 						</a>--> 
             <a href="<?=site_url('data_sppt')?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Daftar SPPT"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar SPPT</a> 
-            <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank"><i class="fe fe-printer"></i>Cetak SPPT</a> </div>
+            <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-outline-info btn-sm" title="Cetak Data" target="_blank"><i class="fe fe-printer"></i>Cetak SPPT</a> </div>
           <div class="box-body">
             <div class="row">
               <div class="col-sm-12">

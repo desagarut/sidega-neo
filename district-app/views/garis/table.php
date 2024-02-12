@@ -31,13 +31,13 @@
 				<div class="col-md-9">
 					<div class="card shadow">
             <div class="card-header">
-							<a href="<?= site_url("garis/form")?>" class="btn btn-success btn-sm btn-sm "  title="Tambah Data Baru">
+							<a href="<?= site_url("garis/form")?>" class="btn btn-success btn-sm"  title="Tambah Data Baru">
 								<i class="fe fe-plus"></i>Tambah Data Baru
             	</a>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("garis/delete_all/$p/$o")?>')" class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("garis/delete_all/$p/$o")?>')" class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
-							<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
+							<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-outline-info btn-sm "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 						</div>
 						<div class="box-body">
 							<div class="row">
@@ -116,7 +116,7 @@
 																			<?php elseif ($data['enabled'] == '1'): ?>
 																				<a href="<?= site_url('garis/garis_unlock/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan"><i class="fe fe-unlock"></i></a>
 																			<?php endif ?>
-																			<a href="#" data-href="<?= site_url("garis/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																			<a href="#" data-href="<?= site_url("garis/delete/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 																	  </td>
 																		<td width="50%"><?= $data['nama']?></td>
 																		<td><?= $data['aktif']?></td>

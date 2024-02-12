@@ -20,7 +20,7 @@
 				<div class="col-md-12">
 					
 						<div class="card-header">
-							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Data Baru">
+							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-success btn-sm" title="Tambah Data Baru">
 								<i class="fe fe-plus"></i>Tambah Data
 							</a>
 							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/cetak")?>" class="btnbg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fe fe-printer "></i> Cetak</a>

@@ -72,7 +72,7 @@
 
 									<?php endif; ?>
 
-									class="btn btn-danger btn-sm  hapus-terpilih"><i class='fe fe-trash-o'></i> Hapus Data Terpilih</a>
+									class="btn btn-outline-danger btn-sm btn-sm hapus-terpilih"><i class='fe fe-trash'></i> Hapus Data Terpilih</a>
 
 								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-info btn-sm "><i class="fe fe-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
 
@@ -278,11 +278,11 @@
 
 																				<?php endif; ?>
 
-																				<a href="<?= site_url("analisis_indikator/form/$p/$o/$data[id]")?>" class="btn bg-orange btn-box btn-sm"  title="Ubah Data"><i class='fe fe-edit'></i></a>
+																				<a href="<?= site_url("analisis_indikator/form/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Ubah Data"><i class='fe fe-edit'></i></a>
 
 																				<?php if ($analisis_master['jenis']!=1): ?>
 
-																					<a href="#" data-href="<?= site_url("analisis_indikator/delete/$p/$o/$data[id]")?>" class="btn bg-maroon btn-box btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+																					<a href="#" data-href="<?= site_url("analisis_indikator/delete/$p/$o/$data[id]")?>" class="btn btn-outline-info btn-sm"  title="Hapus Data" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 
 																				<?php endif; ?>
 

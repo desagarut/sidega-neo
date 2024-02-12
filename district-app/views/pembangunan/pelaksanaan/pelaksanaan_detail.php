@@ -26,7 +26,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="box-header">
-                  <a href="<?= site_url("pembangunan_dok/form/") ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data </a>
+                  <a href="<?= site_url("pembangunan_dok/form/") ?>" class="btn btn-success btn-sm" title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data </a>
                   <a href="<?= site_url("pembangunan/dialog_daftar/{$musdus_dok->id}/cetak") ?>" class="btnbg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Detail Usulan" title="Cetak Detail Usulan <?= $musdus_dok->judul ?> "><i class="fe fe-printer "></i> Cetak</a>
                   <a href="<?= site_url("pembangunan/dialog_daftar/{$musdus_dok->id}/unduh") ?>" class="btnbg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Detail Usulan" title="Unduh Detail Usulan <?= $musdus_dok->judul ?> "><i class="fe fe-download "></i> Unduh</a>
                   <a href="<?= site_url('pembangunan') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Usulan"><i class="fe fe-arrow-circle-left"></i> Kembali Ke Daftar Usulan Masyarakat</a>
@@ -125,8 +125,8 @@
           },
           {
             'data': function(data) {
-              return `<a href="<?= site_url("pembangunan_dok/form/"); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fe fe-edit"></i> </a>
-								<a href="#" data-href="<?= site_url("pembangunan_dok/delete/{$pembangunan->id}/"); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
+              return `<a href="<?= site_url("pembangunan_dok/form/"); ?>${data.id}" title="Edit Data"  class="btn btn-outline-info btn-sm"><i class="fe fe-edit"></i> </a>
+								<a href="#" data-href="<?= site_url("pembangunan_dok/delete/{$pembangunan->id}/"); ?>${data.id}" class="btn btn-outline-info btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							   `
             },
             'class': 'text-center'

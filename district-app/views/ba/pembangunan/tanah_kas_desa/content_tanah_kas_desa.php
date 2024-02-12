@@ -5,8 +5,8 @@
 		<?php if ($this->CI->cek_hak_akses('u')) : ?>
 			<a href="<?= site_url('ba_tanah_kas_desa/form') ?>" class="btn btn-primary btn-sm" title="Tambah Data Baru"> <i class="fe fe-plus"></i>Tambah Data</a>
 		<?php endif; ?>
-		<a href="#" class="btn btn-outline-primary btn-sm" title="Cetak Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/cetak'); ?>" data-target="#cetakBox" data-aksi="Cetak" data-title="Buku Tanah Kas Desa"><i class="fe fe-printer "></i> Cetak</a>
-		<a href="#" class="btn btn-outline-primary btn-sm" title="Unduh Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/unduh'); ?>" data-target="#cetakBox" data-aksi="Unduh" data-title="Buku Tanah Kas Desa"><i class="fe fe-download"></i> Unduh</a>
+		<a href="#" class="btn btn-outline-info btn-sm btn-sm" title="Cetak Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/cetak'); ?>" data-target="#cetakBox" data-aksi="Cetak" data-title="Buku Tanah Kas Desa"><i class="fe fe-printer "></i> Cetak</a>
+		<a href="#" class="btn btn-outline-info btn-sm btn-sm" title="Unduh Buku Tanah Kas Desa" data-remote="false" data-toggle="modal" data-href="<?= site_url('ba_tanah_kas_desa/cetak_tanah_kas_desa/unduh'); ?>" data-target="#cetakBox" data-aksi="Unduh" data-title="Buku Tanah Kas Desa"><i class="fe fe-download"></i> Unduh</a>
 	</div>
 </div>
 <div class="card shadow">
@@ -68,7 +68,7 @@
 								<a href="<?= site_url('ba_tanah_kas_desa/form/') ?>${data.id}" title="Edit Data" class="btn btn-outline-warning btn-sm"><i class="fe fe-edit"></i> </a>
 							<?php endif; ?>
 							<?php if ($this->CI->cek_hak_akses('u')) : ?>
-							<a href="#" data-href="<?= site_url('ba_tanah_kas_desa/delete_tanah_kas_desa/') ?>${data.id}" class="btn bg-maroon btn-flat btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+							<a href="#" data-href="<?= site_url('ba_tanah_kas_desa/delete_tanah_kas_desa/') ?>${data.id}" class="btn bg-maroon btn-flat btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 							<?php endif; ?>
 						`
 					}

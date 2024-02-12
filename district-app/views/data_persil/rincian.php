@@ -41,11 +41,11 @@
 			<div class="col-md-8 col-lg-9">
 				<div class="card shadow">
 					<div class="card-header">
-						<a href="<?= site_url("letterc/create_mutasi/" . $letterc['id']) ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Persil">
+						<a href="<?= site_url("letterc/create_mutasi/" . $letterc['id']) ?>" class="btn btn-success btn-sm" title="Tambah Persil">
 							<i class="fe fe-plus"></i>Tambah Mutasi Persil
 						</a>
 						<a href="<?= site_url('letterc') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Letter-C"><i class="fe fe-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
-						<a href="<?= site_url("letterc/form_letterc/" . $letterc['id']) ?>" class="btn btn-social btn-boxbtn-outline-info btn-sm btn-sm " title="Cetak Data" target="_blank">
+						<a href="<?= site_url("letterc/form_letterc/" . $letterc['id']) ?>" class="btn btn-outline-info btn-sm" title="Cetak Data" target="_blank">
 							<i class="fe fe-printer"></i>Cetak Letter-C
 						</a>
 					</div>
@@ -137,7 +137,7 @@
 																<tr>
 																	<td class="text-center padat"><?= $nomer ?></td>
 																	<td nowrap class="padat">
-																		<a href='<?= site_url("letterc/mutasi/$letterc[id]/$item[id]") ?>' class="btn bg-maroon btn-box btn-sm" title="Daftar Mutasi"><i class="fe fe-exchange"></i></a>
+																		<a href='<?= site_url("letterc/mutasi/$letterc[id]/$item[id]") ?>' class="btn btn-outline-info btn-sm" title="Daftar Mutasi"><i class="fe fe-exchange"></i></a>
 																	</td>
 																	<td>
 																		<a href="<?= site_url("data_persil/rincian/" . $item["id"]) ?>">

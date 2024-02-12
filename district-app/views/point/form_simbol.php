@@ -80,7 +80,7 @@
 					<div class="card shadow">
             <div class="card-header">
 							<a href="#" id="btn_ikon" class="btn btn-success btn-sm "><i class="fe fe-plus"></i>Tambah Simbol Lokasi</a>
-							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-social btn-boxbtn-outline-info btn-sm "  title="Salin Simbol Default">
+							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-outline-info btn-sm "  title="Salin Simbol Default">
 								<i class="fe fe-copy"></i>Salin Simbol Default
             	</a>
 						</div>
@@ -94,7 +94,7 @@
 													<label>
 														<img src="<?= base_url(LOKASI_SIMBOL_LOKASI)?><?= $data['simbol']?>">
 														<span class="glyphicon-class"><?= $data['simbol']?></span>
-														<a href="#" data-href="<?= site_url("point/delete_simbol/$data[id]/$data[simbol]")?>" class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash-o"></i></a>
+														<a href="#" data-href="<?= site_url("point/delete_simbol/$data[id]/$data[simbol]")?>" class="btn btn-outline-danger btn-sm btn-sm " title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fe fe-trash"></i></a>
 													</label>
 												</li>
 											<?php endforeach;?>
@@ -135,7 +135,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
+					<button class="btn btn-outline-danger btn-sm btn-sm " data-dismiss="modal" aria-hidden="true"><i class='fe fe-sign-out'></i> Tutup</button>
 					<button type="submit" class="btn btn-info btn-sm" id="simpan"><i class='fe fe-check'></i>Simpan</button>
 				</div>
 			</form>

@@ -9,22 +9,22 @@
 						<h5 class="mb-2 page-title">Statistik Kependudukan</h5>
 					</div>
 					<div class="col-auto mb-2">
-						<a href="<?= site_url("statistik/dialog/cetak"); ?>" class="btn btn-outline-primary " title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan"><i class="fe fe-printer "></i>Cetak
+						<a href="<?= site_url("statistik/dialog/cetak"); ?>" class="btn btn-outline-info btn-sm btn-sm" title="Cetak Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan"><i class="fe fe-printer "></i>Cetak
 						</a>
-						<a href="<?= site_url("statistik/dialog/unduh"); ?>" class="btn btn-outline-primary " title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan"><i class="fe fe-printer "></i>Unduh
+						<a href="<?= site_url("statistik/dialog/unduh"); ?>" class="btn btn-outline-info btn-sm btn-sm " title="Unduh Laporan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan"><i class="fe fe-printer "></i>Unduh
 						</a>
-						<a class="btn btn-outline-primary  grafikType" title="Grafik Data" id="grafikType" onclick="grafikType();">
+						<a class="btn btn-outline-info btn-sm btn-sm grafikType" title="Grafik Data" id="grafikType" onclick="grafikType();">
 							<i class="fe fe-bar-chart"></i>Grafik Data
 						</a>
-						<a class="btn btn-outline-primary  pieType" title="Pie Data" id="pieType" onclick="pieType();">
+						<a class="btn btn-outline-info btn-sm btn-sm pieType" title="Pie Data" id="pieType" onclick="pieType();">
 							<i class="fe fe-pie-chart"></i>Pie Data
 						</a>
 						<?php if ($lap == '13') : ?>
-							<a href="<?= site_url("statistik/rentang_umur"); ?>" class="btn btn-outline-primary " title="Rentang Umur">
+							<a href="<?= site_url("statistik/rentang_umur"); ?>" class="btn btn-outline-info btn-sm btn-sm" title="Rentang Umur">
 								<i class="fe fe-arrows-h"></i>Rentang Umur
 							</a>
 						<?php endif; ?>
-						<a href="<?= site_url("{$this->controller}/clear/$lap") ?>" class="btn btn-outline-primary "><i class="fe fe-refresh"></i>Bersihkan Filter</a>
+						<a href="<?= site_url("{$this->controller}/clear/$lap") ?>" class="btn btn-outline-info btn-sm btn-sm"><i class="fe fe-refresh"></i>Bersihkan Filter</a>
 					</div>
 					<form id="mainform" name="mainform" action="" method="post">
 						<div class="row">

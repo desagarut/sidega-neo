@@ -88,7 +88,7 @@
 
 						<?php if (isset($_SESSION['fullscreen'])): ?>
 
-							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn bg-navy btn-sm btn-sm ">
+							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-outline-info btn-sm">
 
 								<i class="fe fe-search-minus"></i>Normal
 
@@ -96,7 +96,7 @@
 
 						<?php else: ?>
 
-							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn bg-navy btn-sm btn-sm ">
+							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-outline-info btn-sm">
 
 								<i class="fe fe-search-plus"></i>Full Screen
 
@@ -448,7 +448,7 @@
 
 						<div class="col-md-12">
 
-							<button type='reset' class='btn btn-danger btn-sm' ><i class='fe fe-times'></i> Batal</button>
+							<button type='reset' class='btn btn-outline-danger btn-sm ' ><i class='fe fe-times'></i> Batal</button>
 
 								<button type='submit' class='btn btn-info btn-sm pull-right'><i class='fe fe-check'></i> Simpan</button>
 
