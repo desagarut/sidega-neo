@@ -1,5 +1,5 @@
-<div class="box box-widget widget-user-2">
-  <div class="box-footer no-padding">
+<div class="card box-widget widget-user-2">
+  <div class="card-footer no-padding">
     <ul class="nav nav-stacked">
       <li class="<?php compared_return($selected_nav, "induk", "active"); ?>"><a href="<?= site_url('ba_penduduk_induk/clear') ?>">Buku Induk Penduduk</a></li>
       <li class="<?php compared_return($selected_nav, "mutasi", "active"); ?>"><a href="<?= site_url('ba_penduduk_mutasi/clear') ?>">Buku Mutasi Penduduk Desa</a></li>
