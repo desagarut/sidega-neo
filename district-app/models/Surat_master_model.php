@@ -1,4 +1,4 @@
-<?php require_once 'vendor/simplehtmldom/simplehtmldom/simple_html_dom.php';
+<?php require_once 'vendor/wikia/simplehtmldom/simple_html_dom.php';
 
 class Surat_master_model extends MY_Model {
     protected $table = 'tweb_surat_format';

@@ -23,8 +23,7 @@ use Google\Client;
  * Service definition for Drive (v3).
  *
  * <p>
- * Manages files in Drive including uploading, downloading, searching, detecting
- * changes, and updating sharing permissions.</p>
+ * The Google Drive API allows clients to access resources from Google Drive.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -41,6 +40,9 @@ class Drive extends \Google\Service
   /** See, create, and delete its own configuration data in your Google Drive. */
   const DRIVE_APPDATA =
       "https://www.googleapis.com/auth/drive.appdata";
+  /** View your Google Drive apps. */
+  const DRIVE_APPS_READONLY =
+      "https://www.googleapis.com/auth/drive.apps.readonly";
   /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
   const DRIVE_FILE =
       "https://www.googleapis.com/auth/drive.file";
@@ -61,6 +63,7 @@ class Drive extends \Google\Service
       "https://www.googleapis.com/auth/drive.scripts";
 
   public $about;
+  public $apps;
   public $changes;
   public $channels;
   public $comments;
@@ -97,6 +100,43 @@ class Drive extends \Google\Service
               'path' => 'about',
               'httpMethod' => 'GET',
               'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->apps = new Drive\Resource\Apps(
+        $this,
+        $this->serviceName,
+        'apps',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'apps/{appId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'appId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'apps',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'appFilterExtensions' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'appFilterMimeTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]
@@ -148,6 +188,10 @@ class Drive extends \Google\Service
                 'includeItemsFromAllDrives' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'includePermissionsForView' => [
                   'location' => 'query',
@@ -206,6 +250,10 @@ class Drive extends \Google\Service
                 'includeItemsFromAllDrives' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'includePermissionsForView' => [
                   'location' => 'query',
@@ -382,6 +430,14 @@ class Drive extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'allowItemDeletion' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'useDomainAdminAccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'get' => [
               'path' => 'drives/{driveId}',
@@ -479,6 +535,10 @@ class Drive extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'includePermissionsForView' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -511,6 +571,10 @@ class Drive extends \Google\Service
                 'ignoreDefaultVisibility' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'includePermissionsForView' => [
                   'location' => 'query',
@@ -563,6 +627,10 @@ class Drive extends \Google\Service
               'path' => 'files/trash',
               'httpMethod' => 'DELETE',
               'parameters' => [
+                'driveId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'enforceSingleParent' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -613,6 +681,10 @@ class Drive extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'includePermissionsForView' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -645,6 +717,10 @@ class Drive extends \Google\Service
                 'includeItemsFromAllDrives' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'includePermissionsForView' => [
                   'location' => 'query',
@@ -687,6 +763,34 @@ class Drive extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'listLabels' => [
+              'path' => 'files/{fileId}/listLabels',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'modifyLabels' => [
+              'path' => 'files/{fileId}/modifyLabels',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'update' => [
               'path' => 'files/{fileId}',
               'httpMethod' => 'PATCH',
@@ -703,6 +807,10 @@ class Drive extends \Google\Service
                 'enforceSingleParent' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'includePermissionsForView' => [
                   'location' => 'query',
@@ -745,6 +853,10 @@ class Drive extends \Google\Service
                 'acknowledgeAbuse' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'includeLabels' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'includePermissionsForView' => [
                   'location' => 'query',
