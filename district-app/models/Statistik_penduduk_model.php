@@ -90,7 +90,7 @@ class Penduduk_penerima_bantuan extends Statistik_penduduk_model {
 
 	// hitung jumlah unik penerima bantuan (terkadang satu peserta menerima lebih dari 1 bantuan)
 	// hitung jumlah unik penerima yg bukan penduduk hidup
-	public function hitung_total(&$data)
+	public function hitung_total($data)
 	{
 		$data = $this->db->select('COUNT(DISTINCT(pp.peserta))as jumlah')
 			->select('COUNT(DISTINCT(CASE WHEN p.sex = 1 THEN p.id END)) AS laki')
@@ -185,7 +185,7 @@ class Bantuan_penduduk extends Statistik_penduduk_model {
 		return $this->data_jml_semua_penduduk();
 	}
 
-	public function hitung_total()
+	public function hitung_total($data)
 	{
 		// Ambil data sasaran penduduk
 		$data = $this->db
