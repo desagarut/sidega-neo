@@ -47,7 +47,7 @@
 </head>
 
 <body class="light ">
-	<div class="wrapper vh-100" style="<?php include(''); ?>">
+	<div class="wrapper vh-100">
 		<div class="row align-items-center h-100">
 			<form id="validasi" class="col-lg-3 col-md-4 col-10 mx-auto text-center" action="<?= site_url('insidega/auth') ?>" method="post">
 				<a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="<?= base_url('') ?>">
@@ -61,11 +61,11 @@
 				<?php else : ?>
 					<div class="form-group">
 						<label for="username" class="sr-only">Username</label>
-						<input name="username" type="text" class="form-control" placeholder="username" required="" autofocus="" value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
+						<input name="username" type="text" class="form-control" placeholder="username" required autofocus value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
 					</div>
 					<div class="form-group">
 						<label for="password" class="sr-only">Password</label>
-						<input name="password" id="password" type="password" class="form-control " placeholder="Password" required="" value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
+						<input name="password" id="password" type="password" class="form-control " placeholder="Password" required value="" <?php jecho($this->session->insidega_wait, 1, "disabled") ?>>
 					</div>
 					<div class="checkbox mb-3">
 						<input type="checkbox" id="checkbox" class="form-checkbox"> Tampilkan kata sandi
