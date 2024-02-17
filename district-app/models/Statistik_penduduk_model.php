@@ -142,7 +142,7 @@ class Keluarga_penerima_bantuan extends Statistik_penduduk_model {
 	}
 
 	// hitung jumlah keluarga unik penerima bantuan (terkadang satu keluarga menerima lebih dari 1 bantuan)
-	public function hitung_total()
+	public function hitung_total($data)
 	{
 		$data = $this->db->select('COUNT(DISTINCT(pp.peserta))as jumlah')
 			->select('COUNT(DISTINCT(CASE WHEN p.sex = 1 THEN p.id END)) AS laki')
