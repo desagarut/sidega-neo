@@ -15,7 +15,7 @@
 					text: '<?= ucwords($main['lblx']) ?>'
 				},
 				categories: [
-					<?php foreach ($main['pengunjung'] as $data) : ?> ['<?= ($main['lblx'] == 'Bulan'); ?>'],
+					<?php foreach ($main['pengunjung'] as $data) : ?>['<?= ($main['lblx'] == 'Bulan') ? getBulan($data['Tanggal']) . " " . date('Y') : tgl_indo2($data['Tanggal']); ?>', ],
 					<?php endforeach; ?>
 				]
 			},
