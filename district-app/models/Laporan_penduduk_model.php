@@ -162,7 +162,7 @@ class Laporan_penduduk_model extends MY_Model {
 
 	// -------------------- Siapkan data untuk statistik kependudukan -------------------
 
-	protected function hitung_total(&$data)
+	protected function hitung_total()
 	{
 		$total['no'] = "";
 		$total['id'] = TOTAL;
@@ -492,7 +492,7 @@ class Laporan_penduduk_model extends MY_Model {
 
 		$semua = $namespace->get_data_jml();
 		$semua = $this->persentase_semua($semua);
-		$total = $namespace->hitung_total($data);
+		$total = $namespace->hitung_total();
 
 		$data[] = $this->baris_jumlah($total, $judul_jumlah);
 
