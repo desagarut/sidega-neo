@@ -227,7 +227,7 @@ class Bantuan_keluarga extends Statistik_penduduk_model {
 		return $this->data_jml_semua_keluarga();
 	}
 
-	public function hitung_total()
+	public function hitung_total($data)
 	{
 		// Ambil data sasaran keluarga
 		$data = $this->db
