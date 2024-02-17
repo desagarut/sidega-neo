@@ -22,7 +22,7 @@
     <ul class="navbar-nav flex-fill w-100 mb-2 ">
       <?php foreach ($modul as $mod) : ?>
       <?php if ($this->CI->cek_hak_akses('b', $mod['url'])) : ?>
-      <?php if (count($mod['submodul']) == 0) : ?>
+      <?php if ($mod['submodul'] == 0) : ?>
       <li class="nav-item w-100 <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>"> <a class="nav-link" href="<?= site_url("$mod[url]"); ?>"> <i class="fe <?= $mod['ikon']; ?> fe-16"></i> <span class="ml-3 item-text">
         <?= $mod['modul']; ?>
         </span> 
@@ -40,6 +40,7 @@
           <?php endforeach; ?>
         </ul>
       </li>
+      
       <?php endif; ?>
       <?php endif; ?>
       <?php endforeach; ?>
