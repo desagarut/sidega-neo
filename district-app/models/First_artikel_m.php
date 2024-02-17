@@ -149,7 +149,7 @@ class First_artikel_m extends CI_Model {
 				break;
 
 			default:
-				$this->db->order_by('a.tgl_upload', DESC);
+				$this->db->order_by('a.tgl_upload');
 				break;
 		}
 
