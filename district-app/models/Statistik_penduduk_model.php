@@ -278,7 +278,7 @@ class Bantuan_rumah_tangga extends Statistik_penduduk_model {
 		return $data;
 	}
 
-	public function hitung_total()
+	public function hitung_total($data)
 	{
 		// Ambil data sasaran rumah tangga
 		$data = $this->db
@@ -326,7 +326,7 @@ class Bantuan_kelompok extends Statistik_penduduk_model {
 		return $data;
 	}
 
-	public function hitung_total()
+	public function hitung_total($data)
 	{
 		// Ambil data sasaran kelompok
 		$data = $this->db
