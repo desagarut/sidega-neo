@@ -26,7 +26,6 @@
       <li class="nav-item w-100 <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>"> <a class="nav-link" href="<?= site_url("$mod[url]"); ?>"> <i class="fe <?= $mod['ikon']; ?> fe-16"></i> <span class="ml-3 item-text">
         <?= $mod['modul']; ?>
         </span> 
-        <!--<span class="badge badge-pill badge-primary">New</span>--> 
         </a> </li>
       <?php else : ?>
       <li class="nav-item dropdown <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>"> <a href="#<?= ($mod['url']); ?>" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link"> <i class="fe <?= $mod['ikon']; ?> fe-16"></i> <span class="ml-3 item-text">

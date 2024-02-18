@@ -29,7 +29,7 @@
 						<?php $this->load->view('beranda/umkm.php'); ?>
 					</div>
 					<div class="col-md-4">
-						<?php //$this->load->view('beranda/pengunjung.php'); ?>
+						<?php $this->load->view('beranda/pengunjung.php'); ?>
 					</div>
 				</div>
 				<div class="row">
