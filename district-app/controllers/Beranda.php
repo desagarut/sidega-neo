@@ -113,7 +113,7 @@ class Beranda extends Admin_Controller {
 		$data['rekap_ktp'] = $this->header_model->rekap_ktp('');
         $data['data_ktp'] = $this->header_model->rekap_ktp();
 	
-		$this->set_minsidebar(1);
+		//$this->set_minsidebar(1);
 		$this->render('beranda/beranda', $data);
 	}
 	

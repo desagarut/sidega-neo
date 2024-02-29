@@ -8,14 +8,14 @@
     <form id="mainform" name="mainform" action="" method="post">
       <div class="row">
         <div class="col-sm-3">
-          <select class="form-control select2 input-sm " name="filter_tahun" onchange="formAction('mainform','<?= site_url($this->controller . '/filter/filter_tahun') ?>')">
+          <!--<select class="form-control select2 input-sm " name="filter_tahun" onchange="formAction('mainform','<?//= site_url($this->controller . '/filter/filter_tahun') ?>')">
             <option value="">Pilih Tahun</option>
-            <?php foreach ($list_tahun as $l_tahun) : ?>
-            <option value="<?= $l_tahun['tahun'] ?>" <?php selected($tahun, $l_tahun['tahun']); ?>>
-            <?= $l_tahun['tahun'] ?>
+            <?php //foreach ($list_tahun as $l_tahun) : ?>
+            <option value="<?//= $l_tahun['tahun'] ?>" <?php //selected($tahun, $l_tahun['tahun']); ?>>
+            <?//= $l_tahun['tahun'] ?>
             </option>
-            <?php endforeach; ?>
-          </select>
+            <?php //endforeach; ?>
+          </select>-->
         </div>
         <div class="col-sm-3">
           <select class="form-control select2 input-sm" name="filter_bulan" onchange="formAction('mainform','<?= site_url($this->controller . '/filter/filter_bulan') ?>')" width="100%">
@@ -33,7 +33,7 @@
           <thead>
             <tr>
               <th rowspan="2">Nomor Urut</th>
-              <th rowspan="2" style="width: 5px;"><?= url_order($order_by, "{$this->controller}/{$func}/$paging->page", 3, 'Nama Lengkap / Panggilan'); ?></th>
+              <th rowspan="2" style="width: 5px;">Nama Lengkap / Panggilan</th>
               <th rowspan="2">Jenis Kelamin</th>
               <th rowspan="2">Status Perkawinan</th>
               <th colspan="2">Tempat & Tanggal Lahir</th>
@@ -44,8 +44,8 @@
               <th rowspan="2">Kewarganegaraan</th>
               <th rowspan="2">Alamat Lengkap</th>
               <th rowspan="2">Kedudukan Dlm Keluarga</th>
-              <th rowspan="2"><?= url_order($order_by, "{$this->controller}/{$func}/$paging->page", 1, 'NIK'); ?></th>
-              <th rowspan="2"><?= url_order($order_by, "{$this->controller}/{$func}/$paging->page", 5, 'No. KK'); ?></th>
+              <th rowspan="2">NIK'</th>
+              <th rowspan="2">No. KK'</th>
               <th rowspan="2">Ket</th>
             </tr>
             <tr>
@@ -70,12 +70,12 @@
               <td><?= $data['warganegara'] ?></td>
               <td><?= strtoupper($data['alamat'] . " RT " . $data['rt'] . " / RW " . $data['rw'] . " " . $this->setting->sebutan_dusun . " " . $data['dusun']) ?></td>
               <td><?= $data['hubungan'] ?></td>
-              <td><a href="<?= site_url("penduduk/detail/$paging->page/$order_by/$data[id]"); ?>" name="<?= $data['id']; ?>">
+              <td>
                 <?= $data['nik']; ?>
-                </a></td>
-              <td><a href="<?= site_url("keluarga/kartu_keluarga/$paging->page/$order_by/$data[id_kk]"); ?>">
+                </td>
+              <td>
                 <?= $data['no_kk']; ?>
-                </a></td>
+               </td>
               <td><?= $data['ket'] ?></td>
             </tr>
             <?php endforeach; ?>

@@ -3,7 +3,7 @@
 
 class Ba_penduduk_induk extends Admin_Controller {
 
-	private $_set_page;
+	//private $_set_page;
 	private $_list_session;
 
 	public function __construct()
@@ -15,19 +15,19 @@ class Ba_penduduk_induk extends Admin_Controller {
 		$this->modul_ini = 300;
 		$this->sub_modul_ini = 303;
 
-		$this->_set_page = ['10', '20', '50', '100'];
+		//$this->_set_page = ['10', '20', '50', '100'];
 
 		// Samakan dengan district-app/controllers/Penduduk.php, karena memanggil penduduk_model_ba
 		$this->_list_session = ['filter_tahun', 'filter_bulan', 'status_hanya_tetap', 'jenis_peristiwa', 'filter', 'status_dasar', 'sex', 'agama', 'dusun', 'rw', 'rt', 'cari', 'umur_min', 'umur_max', 'umurx', 'pekerjaan_id', 'status', 'pendidikan_sedang_id', 'pendidikan_kk_id', 'status_penduduk', 'judul_statistik', 'cacat', 'cara_kb_id', 'akta_kelahiran', 'status_ktp', 'id_asuransi', 'status_covid', 'penerima_bantuan', 'log', 'warganegara', 'menahun', 'hubungan', 'golongan_darah', 'hamil', 'kumpulan_nik'];
 
 	}
 
-    public function index($page_number = 1, $order_by = 0)
+    public function index()
     {
-        $per_page = $this->input->post('per_page');
-        if (isset($per_page)) {
-            $this->session->per_page = $per_page;
-        }
+      //  $per_page = $this->input->post('per_page');
+      //  if (isset($per_page)) {
+      //      $this->session->per_page = $per_page;
+     //   }
 
         // Hanya menampilkan data status_dasar HIDUP, HILANG
         $this->session->status_dasar = [1, 4];
@@ -45,10 +45,10 @@ class Ba_penduduk_induk extends Admin_Controller {
             'bulan'        => $this->session->filter_bulan,
             'tahun'        => $this->session->filter_tahun,
             'func'         => 'index',
-            'set_page'     => $this->_set_page,
-            'paging'       => $list_data['paging'],
-            'list_tahun'   => $this->penduduk_log_model->list_tahun(),
-			'main'			=>$this->penduduk_model_ba->list_data($order_by,  $page_number, $data['paging']->offset, $data['paging']->per_page),
+           // 'set_page'     => $this->_set_page,
+           // 'paging'       => $list_data['paging'],
+           // 'list_tahun'   => $this->penduduk_log_model->list_tahun(),
+			'main'			=>$this->penduduk_model_ba->list_data(),
 		];
 
         // TODO : Cari cara agar bisa digabungkan ke array $data = [] (tdk terpisah)
@@ -61,7 +61,7 @@ class Ba_penduduk_induk extends Admin_Controller {
 	private function clear_session()
 	{
 		$this->session->unset_userdata($this->_list_session);
-		$this->session->per_page = $this->_set_page[0];
+		//$this->session->per_page = $this->_set_page[0];
 	}
 
 	public function clear()
@@ -70,7 +70,7 @@ class Ba_penduduk_induk extends Admin_Controller {
 		// Set default filter ke tahun dan bulan sekarang
 		$this->session->filter_tahun = date('Y');
 		$this->session->filter_bulan = date('m');
-		redirect('ba_penduduk_induk');
+		redirect($this->controller);
 	}
 
 	public function ajax_cetak($o = 0, $aksi = '')

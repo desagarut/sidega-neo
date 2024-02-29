@@ -16,12 +16,12 @@ class Penduduk_model_ba extends MY_Model {
 		$this->penolong_kelahiran = array_flip(unserialize(PENOLONG_KELAHIRAN));
 	}
 
-
+/*
 	public function autocomplete($cari='')
 	{
 		return $this->autocomplete_str('nama', 'tweb_penduduk', $cari);
 	}
-
+*/
 	protected function search_sql()
 	{
 		if ($this->session->cari)

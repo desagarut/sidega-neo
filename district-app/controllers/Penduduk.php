@@ -1,13 +1,13 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 class Penduduk extends Admin_Controller
 {
-	private $_set_page;
+	//private $_set_page;
 	private $_list_session;
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('penduduk_model'); 
+		$this->load->model('penduduk_model');
 		$this->load->model('keluarga_model');
 		$this->load->model('wilayah_model');
 		$this->load->model('referensi_model');
@@ -27,7 +27,7 @@ class Penduduk extends Admin_Controller
 	{
 		$this->session->unset_userdata($this->_list_session);
 		$this->session->status_dasar 	= 1; // default status dasar = hidup
-		$this->session->per_page 		= $this->_set_page[0];
+		//$this->session->per_page 		= $this->_set_page[0];
 	}
 
 	public function clear()
@@ -37,10 +37,10 @@ class Penduduk extends Admin_Controller
 		redirect($this->controller);
 	}
 
-	public function index($p = 1, $o = 0)
+	public function index()
 	{
-		$data['p'] = $p;
-		$data['o'] = $o;
+		//$data['p'] = $p;
+		//$data['o'] = $o;
 
 		foreach ($this->_list_session as $list) {
 			if (in_array($list, ['dusun', 'rw', 'rt'])) {
@@ -63,20 +63,20 @@ class Penduduk extends Admin_Controller
 				} else {
 					$data['rt'] = '';
 				}
-			} else { 
+			} else {
 				$data['rw'] = '';
 			}
 		} else {
 			$data['dusun'] = $data['rw'] = $data['rt'] = '';
 		}
 
-		$per_page = $this->input->post('per_page');
-		if (isset($per_page))
-			$this->session->per_page = $per_page;
-
-		//$data['func'] = 'index';
-		$data['set_page'] = $this->_set_page;
-		$data['paging'] = $this->penduduk_model->paging($p, $o);
+		//$per_page = $this->input->post('per_page');
+		//if (isset($per_page))
+		//	$this->session->per_page = $per_page;
+		//
+		$data['func'] = 'index';
+		//$data['set_page'] = $this->_set_page;
+		//$data['paging'] = $this->penduduk_model->paging($p, $o);
 		$data['main'] = $this->penduduk_model->list_data();
 		$data['list_dusun'] = $this->wilayah_model->list_dusun();
 		$data['list_status_dasar'] = $this->referensi_model->list_data('tweb_status_dasar');
@@ -89,12 +89,12 @@ class Penduduk extends Admin_Controller
 	}
 
 	public function form_peristiwa($peristiwa = '')
-    {
-        $this->redirect_hak_akses('u');
-        // Acuan jenis peristiwa berada pada ref_peristiwa
-        $this->session->jenis_peristiwa = $peristiwa;
-        $this->form();
-    }
+	{
+		$this->redirect_hak_akses('u');
+		// Acuan jenis peristiwa berada pada ref_peristiwa
+		$this->session->jenis_peristiwa = $peristiwa;
+		$this->form();
+	}
 
 	public function form($p = 1, $o = 0, $id = '')
 	{

@@ -50,10 +50,8 @@
 </script>
 
 <!-- Highcharts -->
-<script src="<?= base_url(); ?>assets/
-js/highcharts/exporting.js"></script>
-<script src="<?= base_url(); ?>assets/
-js/highcharts/highcharts-more.js"></script>
+<script src="<?= base_url(); ?>assets/js/highcharts/exporting.js"></script>
+<script src="<?= base_url(); ?>assets/js/highcharts/highcharts-more.js"></script>
 
 <div class="card shadow mb-4">
 	<div class="card-header">
