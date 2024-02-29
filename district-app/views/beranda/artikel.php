@@ -13,7 +13,7 @@
             <div class="row align-items-center">
               <div class="col-md-4">
                 <?php if ($data['gambar']) : ?>
-                  <img style="width:100%;height:50px" src="<?= AmbilFotoArtikel($data['gambar'], 'sedang') ?>" alt="<?= $data['nama'] ?>">
+                  <img style="width:100%;height:50px" src="<?= AmbilFotoArtikel($data['gambar'], 'sedang') ?>" style="width:40px" alt="<?= $data['nama'] ?>">
                 <?php else : ?>
                   <img style="width:100%;height:50px" src="<?= base_url() ?>assets/
 files/user_pict/kuser.png" alt="<?= $data['nama'] ?>" style="width:40px">
